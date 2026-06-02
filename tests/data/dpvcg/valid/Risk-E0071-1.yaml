@@ -1,5 +1,5 @@
 # __unmapped__:
 #   skos:broader: risk:DataBreach
-has_consequence: _:nedd69c54c371439e88decff8a9f9aecfb1
+has_consequence: _:nb24f76bd9e794720a42e9e1333bb2e79b1
 has_risk_level: risk:LowRisk
 id: ex:R3DB

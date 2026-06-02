@@ -19,7 +19,7 @@ ex:PDH1 a dpv:Process ;
             # combined with duration - collected sporadically across 6 months
         # optionally, the 'frequency' of sporadic collection can also be
         # expressed as a duration, i.e., a period
-        rdf:value "10"^^xsd:duration ; # 10 times (across 6 months)
+        rdf:value "10"^^xsd:integer ; # 10 times (across 6 months)
     ] ;
     dpv:hasFrequency [
         a dpv:OftenFrequency ; # often is qualitatively more than sporadic

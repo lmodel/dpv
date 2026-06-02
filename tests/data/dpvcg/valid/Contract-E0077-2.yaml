@@ -1,5 +1,5 @@
 has_contractual_fulfilment_status:
-- _:ne2ba0483f13d435e82d510a6ef45143cb5
-- _:ne2ba0483f13d435e82d510a6ef45143cb6
+- _:nf8aa478321cc4d479816690f2326d637b5
+- _:nf8aa478321cc4d479816690f2326d637b6
 - dpv:ContractPartiallyFulfilled
 id: ex:SomeOtherContract

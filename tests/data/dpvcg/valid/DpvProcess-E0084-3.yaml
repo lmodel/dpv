@@ -1,6 +1,6 @@
 has_rule:
-- _:nebbef4542df545ba857d6e6485b254f2b1
-- _:nebbef4542df545ba857d6e6485b254f2b2
+- _:nf657d92a3581440eb52fa2c600d83410b1
+- _:nf657d92a3581440eb52fa2c600d83410b2
 - dpv:Obligation
 has_status: dpv:ObligationFulfilled
 id: ex:SomeProcess

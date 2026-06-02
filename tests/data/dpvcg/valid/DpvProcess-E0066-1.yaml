@@ -1,6 +1,6 @@
-has_permission: _:n09e84a3388d945d499f710bfd8d6c8feb1
+has_permission: _:n181ab0370c134087ada933282fa45d9ab1
 has_process:
-- _:n09e84a3388d945d499f710bfd8d6c8feb3
-- _:n09e84a3388d945d499f710bfd8d6c8feb4
-has_prohibition: _:n09e84a3388d945d499f710bfd8d6c8feb2
+- _:n181ab0370c134087ada933282fa45d9ab3
+- _:n181ab0370c134087ada933282fa45d9ab4
+has_prohibition: _:n181ab0370c134087ada933282fa45d9ab2
 id: ex:PDH

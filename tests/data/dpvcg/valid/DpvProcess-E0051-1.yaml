@@ -1,9 +1,9 @@
-has_duration: _:n1be8523a435d488081c9d625de95ebb7b1
+has_duration: _:n3481e3300f5941d98a1d1f41866e423eb1
 has_frequency:
-- _:n1be8523a435d488081c9d625de95ebb7b2
-- _:n1be8523a435d488081c9d625de95ebb7b3
-- _:n1be8523a435d488081c9d625de95ebb7b4
-- _:n1be8523a435d488081c9d625de95ebb7b5
+- _:n3481e3300f5941d98a1d1f41866e423eb2
+- _:n3481e3300f5941d98a1d1f41866e423eb3
+- _:n3481e3300f5941d98a1d1f41866e423eb4
+- _:n3481e3300f5941d98a1d1f41866e423eb5
 has_personal_data: pd:Location
 has_processing: dpv:Collect
 id: ex:PDH1

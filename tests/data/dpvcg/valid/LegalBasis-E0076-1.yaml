@@ -3,11 +3,11 @@
 #   dct:creator: ex:BetaInc
 #   dct:dateAccepted: '2025-01-01'
 #   dct:format:
-#   - _:nf36103ede25a469ba471f0507e63c556b1
-#   - _:nf36103ede25a469ba471f0507e63c556b2
+#   - _:nca02f7210a85423a9de1c3e2d7c754edb1
+#   - _:nca02f7210a85423a9de1c3e2d7c754edb2
 #   dct:issued: '2025-01-01'
 #   dct:language: en
-#   dct:provenance: _:nf36103ede25a469ba471f0507e63c556b3
+#   dct:provenance: _:nca02f7210a85423a9de1c3e2d7c754edb3
 #   dct:subject: ex:ServiceX
 #   dct:title: Contract for use of Cloud Service X
 #   skos:broader:
@@ -16,12 +16,12 @@
 #   - dpv:ServiceLevelAgreement
 #   - dpv:StandardFormContract
 has_applicable_law: legal-eu:law-GDPR
-has_contract_control: _:nf36103ede25a469ba471f0507e63c556b8
+has_contract_control: _:nca02f7210a85423a9de1c3e2d7c754edb8
 has_data_controller: ex:AcmeInc
 has_data_processor: ex:BetaInc
 has_duration:
-- _:nf36103ede25a469ba471f0507e63c556b6
-- _:nf36103ede25a469ba471f0507e63c556b7
+- _:nca02f7210a85423a9de1c3e2d7c754edb6
+- _:nca02f7210a85423a9de1c3e2d7c754edb7
 has_entity:
 - ex:AcmeInc
 - ex:BetaInc

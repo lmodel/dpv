@@ -2,7 +2,7 @@ has_data_controller:
 - ex:AcmeInc
 - ex:BetaInc
 has_legal_basis:
-- _:n06dd5062c1794b509a7ed2f0f7f2e238b1
+- _:nc1bc3af1f1df4664ac08746224593f0ab1
 - dpv:LegitimateInterest
 - dpv:LegitimateInterestOfController
 has_purpose: dpv:FraudPreventionAndDetection

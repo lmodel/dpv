@@ -1,5 +1,5 @@
 has_algorithmic_logic: ex:SpamDetection
 has_automation_level: dpv:FullAutomation
-has_entity_involvement: _:n12419d824bf446bfb7167c72cbb8175bb1
+has_entity_involvement: _:n9dc66d607029496ba28c481d7e27f27ab1
 has_processing: dpv:Analyse
 id: ex:SpamFilter

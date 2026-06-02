@@ -1,6 +1,6 @@
 has_legal_basis: dpv:ContractPerformance
 has_process:
-- _:nbb798785546041e98919920399cbae7cb1
-- _:nbb798785546041e98919920399cbae7cb2
+- _:n87c78e1944b148e59a440264c8c4c337b1
+- _:n87c78e1944b148e59a440264c8c4c337b2
 has_purpose: dpv:ServiceManagement
 id: ex:Service

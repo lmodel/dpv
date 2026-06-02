@@ -30,7 +30,7 @@ ex:ServiceContract a dpv:LegalBasis ;
     dct:subject ex:ServiceX ; # contract is about ServiceX by BetaInc
     dpv:hasDuration [ # duration of contract i.e. validity
         a dpv:TemporalDuration ;
-        rdf:value "P1Y"^^xsd:date ; # 1year
+        rdf:value "P1Y"^^xsd:duration ; # 1year
     ], [
         a dpv:UntilEventDuration ; # OR a party ends it
         dct:description "A party terminates the contract"@en ;

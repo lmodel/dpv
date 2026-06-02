@@ -1,8 +1,8 @@
 has_data_subject: ex:Alice
 has_notice: ex:ExampleNotice
 has_notice_status:
-- _:nffc96bf539734e40aad5b37bff266e4fb4
-- _:nffc96bf539734e40aad5b37bff266e4fb5
-- _:nffc96bf539734e40aad5b37bff266e4fb6
-- _:nffc96bf539734e40aad5b37bff266e4fb7
+- _:n505fcb9c7e9e4c9dab4c5726ca736239b4
+- _:n505fcb9c7e9e4c9dab4c5726ca736239b5
+- _:n505fcb9c7e9e4c9dab4c5726ca736239b6
+- _:n505fcb9c7e9e4c9dab4c5726ca736239b7
 id: ex:NoticeLog1
