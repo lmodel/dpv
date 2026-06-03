@@ -414,6 +414,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#open-world-modelling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -440,6 +451,45 @@
     <span class="md-ellipsis">
       
         Examples and tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples and tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hand-authored-valid-fixtures-64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hand-authored valid fixtures (64)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hand-authored-invalid-fixtures-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hand-authored invalid fixtures (25)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generated-fixtures-from-dpvcg-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated fixtures (from DPVCG examples)
       
     </span>
   </a>
@@ -553,6 +603,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#open-world-modelling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -579,6 +640,45 @@
     <span class="md-ellipsis">
       
         Examples and tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples and tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hand-authored-valid-fixtures-64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hand-authored valid fixtures (64)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hand-authored-invalid-fixtures-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hand-authored invalid fixtures (25)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generated-fixtures-from-dpvcg-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated fixtures (from DPVCG examples)
       
     </span>
   </a>
@@ -645,67 +745,131 @@
 
 
 <h1 id="about-dpvs">About dpvs</h1>
-<p><strong>dpvs</strong> is a <a href="https://linkml.io">LinkML</a> port of the
-<a href="https://w3c.github.io/dpv/">W3C Data Privacy Vocabulary (DPV) v2.3</a>.
-It re-expresses the upstream OWL release as a single, navigable LinkML
-schema together with curated cross-walks to other privacy, AI, security
-and compliance vocabularies (ISO, NIST, OCSF, OSCAL, ODRL, Gist, CDM, …).</p>
+<p><strong>dpvs</strong> is a <a href="https://linkml.io">LinkML</a> port of the <a href="https://w3c.github.io/dpv/">W3C Data Privacy Vocabulary (DPV) v2.3</a>. It re-expresses the upstream OWL release as a single, navigable LinkM schema together with curated cross-walks to other privacy, AI, security and compliance vocabularies (ISO, NIST, OCSF, OSCAL, ODRL, Gist, CDM, …).</p>
 <h2 id="why-a-linkml-port">Why a LinkML port?</h2>
-<p>The canonical DPV release ships as OWL / RDF and HTML. That form is
-authoritative, but it is awkward to consume from typical data-engineering
-toolchains. By re-expressing DPV in LinkML we get, from a single source
-of truth:</p>
+<p>The canonical DPV release ships as OWL / RDF and HTML. That form is authoritative, but it is awkward to consume from typical data-engineering toolchains. By re-expressing DPV in LinkML we get, from a single source of truth:</p>
 <ul>
-<li>Pydantic / dataclass / SQL / GraphQL / JSON-Schema bindings via
-  <code>gen-project</code>.</li>
-<li>Markdown documentation, DBML diagrams, SPARQL, SHACL, OWL and
-  Pandera artifacts via the standard LinkML generators.</li>
-<li>A simple substrate for authoring SSSOM mappings to adjacent
-  ontologies, so that DPV concepts can be referenced consistently
-  across heterogeneous compliance stacks.</li>
+<li>Pydantic / dataclass / SQL / GraphQL / JSON-Schema bindings via <code>gen-project</code>.</li>
+<li>Markdown documentation, DBML diagrams, SPARQL, SHACL, OWL and Pandera artifacts via the standard LinkML generators.</li>
+<li>A simple substrate for authoring SSSOM mappings to adjacent ontologies, so that DPV concepts can be referenced consistently across heterogeneous compliance stacks.</li>
 <li>Round-trippable example fixtures that double as conformance tests.</li>
 </ul>
 <h2 id="design">Design</h2>
 <h3 id="schema-layout">Schema layout</h3>
 <ul>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/src/dpvs/schema/dpvs.yaml">src/dpvs/schema/dpvs.yaml</a> — top-level
-  schema (prefix <code>dpvs:</code> → <code>https://w3id.org/lmodel/dpvs/</code>). Re-exports
-  the aggregate core schema.</li>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/src/dpvs/schema/dpvs_core.yaml">src/dpvs/schema/dpvs_core.yaml</a> —
-  ~973 classes and ~145 slots covering every term in upstream DPV 2.3
-  (TOM, consent, context, contract, entities, jurisdiction, legal
-  basis, notice, personal data, processing, purposes, rights, risk,
-  rules, status, technical measures, …).</li>
-<li><a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/schema/modules">src/dpvs/schema/modules/</a> — per-module
-  subset schemas. Both standalone-consumable and importable from
-  <code>dpvs.yaml</code>. All imports across the tree use the canonical URI form
-  (e.g. <code>dpvs:schema/dpvs_core</code>) rather than relative file paths, so
-  the same schema files resolve locally during build and over
-  <a href="https://w3id.org/lmodel/">w3id.org/lmodel</a> once published. See
-  <a href="#build-pipeline">Build pipeline</a> for the import-map mechanics.</li>
-<li><a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/mappings">src/dpvs/mappings/</a> — SSSOM cross-walks.</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/blob/main/src/dpvs/schema/dpvs.yaml">src/dpvs/schema/dpvs.yaml</a> - top-level schema (prefix <code>dpvs:</code> -&gt; <code>https://w3id.org/lmodel/dpvs/</code>). Re-exports the aggregate core schema.</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/blob/main/src/dpvs/schema/dpvs_core.yaml">src/dpvs/schema/dpvs_core.yaml</a> - ~1,200 classes and ~145 slots covering every term in upstream DPV 2.3 (TOM, consent, context, contract, entities, jurisdiction, legal basis, notice, personal data, processing, purposes, rights, risk, rules, status, technical measures, …).</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/schema/modules">src/dpvs/schema/modules/</a> - per-module subset schemas. Both standalone-consumable and importable from <code>dpvs.yaml</code>. All imports across the tree use the canonical URI form (e.g. <code>dpvs:schema/dpvs_core</code>) rather than relative file paths, so the same schema files resolve locally during build and over <a href="https://w3id.org/lmodel/">w3id.org/lmodel</a> once published. See <a href="#build-pipeline">Build pipeline</a> for the import-map mechanics.</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/schema/extensions">src/dpvs/schema/extensions/</a> - per-extension schemas mirroring the upstream W3C DPV 2.3 extension family. Each extension has its own <code>id</code>, <code>default_prefix</code>, and decomposed submodule tree. <strong>Generated by <a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpv_extensions_to_linkml.py">scripts/dpv_extensions_to_linkml.py</a></strong>, which reads the vendored OWL/Turtle files under <code>upstream-releases/dpv/</code>, converts each extension and its sub-modules to LinkML YAML, and patches the resulting extension subsets into <code>dpvs_core.yaml</code> via <code>_patch_core_subsets()</code>. Run via <code>just gen-linkml-extensions</code>. See <a href="#extensions">Extensions</a> for the full inventory.</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/mappings">src/dpvs/mappings/</a> - SSSOM cross-walks.</p>
+</li>
 </ul>
+<h3 id="extensions">Extensions</h3>
+<p>The upstream W3C DPV 2.3 release ships as a multi-document family. Each extension is published at its own namespace (e.g. <code>https://w3id.org/dpv/ai#</code>) and contains hundreds of specialised terms layered on top of the core ontology. dpvs mirrors that layout under <a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/schema/extensions">src/dpvs/schema/extensions/</a>, one LinkML sub-schema per extension (each with its own <code>id</code>, <code>default_prefix</code>, and decomposed submodule tree):</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>dpvs path</th>
+<th>Upstream namespace</th>
+<th>Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personal Data (PD)</td>
+<td><code>extensions/pd.yaml</code> + <code>pd/{core,extended}.yaml</code></td>
+<td><code>https://w3id.org/dpv/pd#</code></td>
+<td>Financial, demographic, health, biometric, identifying, tracking, communication, social leaf categories.</td>
+</tr>
+<tr>
+<td>Location (LOC)</td>
+<td><code>extensions/loc.yaml</code> + <code>loc/{locations,memberships,inverse}.yaml</code></td>
+<td><code>https://w3id.org/dpv/loc#</code></td>
+<td>ISO 3166 country &amp; region individuals (EU/EEA member states, US states, UK nations, supranational groupings).</td>
+</tr>
+<tr>
+<td>Technology (TECH)</td>
+<td><code>extensions/tech.yaml</code> + <code>tech/{core,actors,comms,docs,io,provision,status,tools}.yaml</code></td>
+<td><code>https://w3id.org/dpv/tech#</code></td>
+<td>Hardware, software, OS, database, cloud, edge, IoT, deployment models - prerequisite for AI.</td>
+</tr>
+<tr>
+<td>AI</td>
+<td><code>extensions/ai.yaml</code> + <code>ai/{core,risks,systems,lifecycle,techniques,capabilities,data,measures,development}.yaml</code></td>
+<td><code>https://w3id.org/dpv/ai#</code></td>
+<td>LLM, GPAI / GPAIModel, FineTunedModel, AGI, ExpertSystem, EdgeAI; AI lifecycle (Inception→Decommission); AI-specific risks (DataPoisoning, AdversarialAttack, ModelInversion, ExplainabilityRisk, bias subtree); AI techniques, capabilities, measures.</td>
+</tr>
+<tr>
+<td>Risk (extension)</td>
+<td><code>extensions/risk.yaml</code> + <code>risk/{incident,incident_status,risk_controls,risk_levels,risk_matrix,risk_management,risk_taxonomy}.yaml</code></td>
+<td><code>https://w3id.org/dpv/risk#</code></td>
+<td>Typed control verbs (Detection/Intervention/Containment/Identification/Logging/Avoidance/Impact/Elimination/Monitor/Recovery/Remove/Reduction, HaltSource, RemedyControl), Incident / IncidentReport / IncidentStatus lifecycle, concrete consequences (Damage, Detriment, Harm, Injury, Material / NonMaterialDamage, IdentityFraud / Theft …), 5×5 risk matrices, Vulnerability. Distinct from <code>modules/risk</code> (abstract parents only).</td>
+</tr>
+<tr>
+<td>Justifications</td>
+<td><code>extensions/justifications.yaml</code> + <code>justifications/{nonfulfilment,notrequired,exercise,delay}.yaml</code></td>
+<td><code>https://w3id.org/dpv/justifications#</code></td>
+<td>NonFulfilment / NonCompliance / NotRequired / Delay / Exercise justification taxonomy.</td>
+</tr>
+<tr>
+<td>Legal (umbrella)</td>
+<td><code>extensions/legal/</code></td>
+<td><code>https://w3id.org/dpv/legal#</code></td>
+<td>Abstract Law, Authority, Treaty, LegalAgreement classes.</td>
+</tr>
+<tr>
+<td>Legal / EU</td>
+<td><code>extensions/legal/eu.yaml</code> + <code>legal/eu/{gdpr,dga,aiact,rights,ehds,nis2}.yaml</code> (each decomposed into submodule trees, e.g. <code>eu/gdpr/</code> has 15 sub-files, <code>eu/aiact/</code> has 13)</td>
+<td><code>https://w3id.org/dpv/legal/eu*#</code></td>
+<td>EU member-state authorities, GDPR articles &amp; lawful bases (A6-1-a…A6-1-f, A9-2-a…), special-category bases, data-subject rights, DPA roles, breach flows, DPIA; Data Governance Act terms; AI Act roles (Provider/Deployer/Importer/Distributor/AuthRep), risk categories (Prohibited / HighRisk / LimitedRisk / MinimalRisk), system types (GPAI / GPAIWithSystemicRisk), Annex III high-risk areas, conformity-assessment; CFREU fundamental-rights articles; EHDS and NIS2.</td>
+</tr>
+<tr>
+<td>Legal / per-jurisdiction</td>
+<td><code>extensions/legal/&lt;cc&gt;.yaml</code> for 40+ jurisdictions (at, be, bg, cy, cz, de (+ <code>de/gdng</code>), dk, ee, es, fi, fr, gb, gr, hk, hr, hu, ie, in, is, it, jp, kr, li, lt, lu, lv, mo, mt, my, nl, no, ph, pl, pt, ro, se, sg, si, sk, th, tw, us)</td>
+<td><code>https://w3id.org/dpv/legal/&lt;cc&gt;#</code></td>
+<td>Per-jurisdiction laws &amp; authorities (BDSG, DPC Ireland, DPDP Act India, UK GDPR / DPA-2018 / ICO, CCPA / CPRA / HIPAA / GLBA / state AGs, …). Exceeds upstream's published per-country set.</td>
+</tr>
+<tr>
+<td>Sector</td>
+<td><code>extensions/sector/{finance,health,education,law,infra,publicservices}.yaml</code> (+ subdirs)</td>
+<td><code>https://w3id.org/dpv/sector*#</code> (WIP upstream)</td>
+<td>FINOS-relevant sector taxonomies. Marked WIP upstream; shipped here for early consumers.</td>
+</tr>
+<tr>
+<td>Standards</td>
+<td><code>extensions/standards/ieee/</code></td>
+<td>n/a (cross-walks against IEEE)</td>
+<td>IEEE standards alignments.</td>
+</tr>
+</tbody>
+</table>
+<p>All extensions import only <code>linkml:types</code> and <code>dpvs:schema/dpvs_core</code> (for the abstract parents they specialise), so they can be consumed standalone or aggregated.</p>
 <h3 id="open-world-modelling">Open-world modelling</h3>
-<p>DPV is intrinsically open-world: most properties are declared on the
-top-level <code>DpvThing</code> rather than pinned to a specific class, so any
-instance may carry any DPV property that makes sense for it.</p>
-<p>This is preserved in dpvs:</p>
+<p>DPV is intrinsically open-world: most properties are declared on the top-level <code>DpvThing</code> rather than pinned to a specific class, so any instance may carry any DPV property that makes sense for it. This is preserved in dpvs:</p>
 <ul>
-<li><code>DpvThing</code> is the abstract base and declares only <code>id</code>.</li>
-<li>DPV properties are domainless slots that can apply to any descendant.</li>
-<li>Validation is therefore done via <code>linkml.validator.Validator</code> against
-  the merged schema (JSON-Schema semantics), <strong>not</strong> by instantiating
-  the generated closed-world dataclasses. The closed-world Pydantic
-  classes are still emitted for use cases where a stricter contract is
-  desired.</li>
+<li>
+<p><code>DpvThing</code> is the abstract base and declares only <code>id</code>.</p>
+</li>
+<li>
+<p>DPV properties are domainless slots that can apply to any descendant.</p>
+</li>
+<li>
+<p>Validation is therefore done via <code>linkml.validator.Validator</code> against the merged schema (JSON-Schema semantics), <strong>not</strong> by instantiating  the generated closed-world dataclasses. The closed-world Pydantic classes are still emitted for use cases where a stricter contract is desired.</p>
+</li>
 </ul>
 <h3 id="mappings">Mappings</h3>
-<p>Cross-walks live under <a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/mappings">src/dpvs/mappings/</a> as
-<a href="https://mapping-commons.github.io/sssom/">SSSOM</a> TSVs and are merged
-into the schema as <code>exact_mappings</code>, <code>close_mappings</code>,
-<code>related_mappings</code>, etc. by the
-<a href="https://github.com/lmodel/dpvs/blob/main/scripts/apply_sssom_overlay.py">apply_sssom_overlay.py</a> script.
-Current cross-walks:</p>
+<p>Cross-walks live under <a href="https://github.com/lmodel/dpvs/tree/main/src/dpvs/mappings">src/dpvs/mappings/</a> as <a href="https://mapping-commons.github.io/sssom/">SSSOM</a> TSVs and are merged into the schema as <code>exact_mappings</code>, <code>close_mappings</code>, <code>related_mappings</code>, etc. by the <a href="https://github.com/lmodel/dpvs/blob/main/scripts/apply_sssom_overlay.py">apply_sssom_overlay.py</a> script.</p>
+<p>Current cross-walks (26 total - 17 hand-curated- LLM-seeded candidate sets are pending human review):</p>
 <table>
 <thead>
 <tr>
@@ -715,168 +879,473 @@ Current cross-walks:</p>
 </thead>
 <tbody>
 <tr>
-<td><code>dpv-cdm.sssom.tsv</code></td>
+<td><code>dpv-odrl.sssom.tsv</code></td>
+<td>W3C ODRL (legacy)</td>
+</tr>
+<tr>
+<td><code>dpvs-ai-iso42001.sssom.tsv</code></td>
+<td>ISO/IEC 42001 (AI management) - AI extension</td>
+</tr>
+<tr>
+<td><code>dpvs-cdm.sssom.tsv</code></td>
 <td>FINOS Common Domain Model</td>
 </tr>
 <tr>
-<td><code>dpv-gist.sssom.tsv</code></td>
+<td><code>dpvs-gist.sssom.tsv</code></td>
 <td>Semantic Arts Gist</td>
 </tr>
 <tr>
-<td><code>dpv-iso.sssom.tsv</code></td>
+<td><code>dpvs-iso.sssom.tsv</code></td>
 <td>ISO/IEC general privacy terms</td>
 </tr>
 <tr>
-<td><code>dpv-iso22989.sssom.tsv</code></td>
+<td><code>dpvs-iso22989.sssom.tsv</code></td>
 <td>ISO/IEC 22989 (AI concepts)</td>
 </tr>
 <tr>
-<td><code>dpv-iso27001.sssom.tsv</code></td>
+<td><code>dpvs-iso27001.sssom.tsv</code></td>
 <td>ISO/IEC 27001 (ISMS)</td>
 </tr>
 <tr>
-<td><code>dpv-iso29100-lmodel.sssom.tsv</code></td>
+<td><code>dpvs-iso29100-lmodel.sssom.tsv</code></td>
 <td>ISO/IEC 29100 (privacy framework)</td>
 </tr>
 <tr>
-<td><code>dpv-iso42001.sssom.tsv</code></td>
+<td><code>dpvs-iso42001.sssom.tsv</code></td>
 <td>ISO/IEC 42001 (AI management)</td>
 </tr>
 <tr>
-<td><code>dpv-nist-ai-rmf.sssom.tsv</code></td>
+<td><code>dpvs-justifications-oscal.sssom.tsv</code></td>
+<td>NIST OSCAL responsibility statements - <code>justifications</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-aiact-iso42001.sssom.tsv</code></td>
+<td>ISO/IEC 42001 - <code>legal/eu/aiact</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-dga-iso27701.sssom.tsv</code></td>
+<td>ISO/IEC 27701 - <code>legal/eu/dga</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-ehds-iso27701.sssom.tsv</code></td>
+<td>ISO/IEC 27701 - <code>legal/eu/ehds</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-gdpr-iso27701.sssom.tsv</code></td>
+<td>ISO/IEC 27701 - <code>legal/eu/gdpr</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-nis2-nist-csf-v2.sssom.tsv</code></td>
+<td>NIST CSF v2 - <code>legal/eu/nis2</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-legal-eu-rights-cfreu.sssom.tsv</code></td>
+<td>Charter of Fundamental Rights (EU) - <code>legal/eu/rights</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-loc-iso3166.sssom.tsv</code></td>
+<td>ISO 3166 country / subdivision codes - <code>loc</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-nist-ai-rmf.sssom.tsv</code></td>
 <td>NIST AI Risk Management Framework</td>
 </tr>
 <tr>
-<td><code>dpv-nist-csf-v2.sssom.tsv</code></td>
+<td><code>dpvs-nist-csf-v2.sssom.tsv</code></td>
 <td>NIST Cybersecurity Framework v2</td>
 </tr>
 <tr>
-<td><code>dpv-ocsf.sssom.tsv</code></td>
+<td><code>dpvs-ocsf.sssom.tsv</code></td>
 <td>OCSF</td>
 </tr>
 <tr>
-<td><code>dpv-odrl.sssom.tsv</code></td>
+<td><code>dpvs-odrl.sssom.tsv</code></td>
 <td>W3C ODRL</td>
 </tr>
 <tr>
-<td><code>dpv-oscal.sssom.tsv</code></td>
+<td><code>dpvs-oscal.sssom.tsv</code></td>
 <td>NIST OSCAL</td>
+</tr>
+<tr>
+<td><code>dpvs-pd-iso29100.sssom.tsv</code></td>
+<td>ISO/IEC 29100 - <code>pd</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-risk-iso42001.sssom.tsv</code></td>
+<td>ISO/IEC 42001 - <code>risk</code> extension</td>
+</tr>
+<tr>
+<td><code>dpvs-tech-iso22989.sssom.tsv</code></td>
+<td>ISO/IEC 22989 - <code>tech</code> extension</td>
 </tr>
 </tbody>
 </table>
-<p>Mappings are verified by
-<a href="https://github.com/lmodel/dpvs/blob/main/scripts/verify_mappings.py">scripts/verify_mappings.py</a>, which
-project-agnostically auto-discovers schemas by <code>default_prefix</code> and
-checks that every <code>subject_id</code> resolves to an element in some schema.</p>
+<p><strong>LLM-seeded</strong> mapping sets provide candidate alignments where every row carries <code>mapping_justification: semapv:LLMBasedMatching</code> per the <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">Semantic Mapping Vocabulary</a>. They are not curated mappings - they require human review before promotion to <code>semapv:ManualMappingCuration</code>. Per-jurisdiction <code>legal/&lt;cc&gt;</code> extensions intentionally do not ship cross-walks (low cross-vocabulary leverage).</p>
+<p>Mappings are verified by <a href="https://github.com/lmodel/dpvs/blob/main/scripts/verify_mappings.py">scripts/verify_mappings.py</a>, which project-agnostically auto-discovers schemas by <code>default_prefix</code> and checks that every <code>subject_id</code> resolves to an element in some schema.</p>
 <h3 id="examples-and-tests">Examples and tests</h3>
 <ul>
-<li><a href="https://github.com/lmodel/dpvs/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored
-  YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The
-  <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to
-  LinkML YAML by <a href="https://github.com/lmodel/dpvs/blob/main/scripts/ttl_to_yaml.py">scripts/ttl_to_yaml.py</a>.</li>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/tests/test_data.py">tests/test_data.py</a> validates each fixture
-  against the schema using <code>linkml.validator.Validator</code> with
-  <code>SchemaView(..., merge_imports=True)</code> so that the relative
-  <code>./dpvs_core</code> import resolves against the schema directory rather
-  than the test working directory.</li>
-<li>Fixture generation is fully automated: <code>just test</code> (via <code>_test-python</code>)
-  runs <code>_gen-fixtures</code>, which chains three steps:</li>
-<li><code>_extract-example-ttls</code> —
-     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/gen_example_ttls.py">scripts/gen_example_ttls.py</a>
-     parses <code>upstream-releases/dpv/examples/dex.html</code> and writes one
-     <code>examples/E####.ttl</code> per embedded <code>&lt;pre&gt;</code> block. The upstream
-     release does not ship stand-alone <code>E*.ttl</code> files; the Turtle
-     content lives only in the HTML documentation page.</li>
-<li><code>_load-ttl-fixtures</code> —
-     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/load_examples.py">scripts/load_examples.py</a>
-     wraps each <code>examples/E*.ttl</code> in a self-contained Turtle document
-     (prepending the standard DPV prefix preamble) and routes it to
-     <code>tests/data/dpvcg/valid/</code> or <code>problem/</code> based on rdflib parse
-     success.</li>
-<li><code>_gen-fixtures</code> —
-     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/ttl_to_yaml.py">scripts/ttl_to_yaml.py</a>
-     converts each typed root subject into a
-     <code>&lt;ClassName&gt;-&lt;stem&gt;-&lt;n&gt;.yaml</code> fixture that <code>test_data.py</code> picks
-     up automatically via its glob. Idempotent: re-running with
-     unchanged inputs produces byte-identical output.</li>
-<li><code>just _test-examples</code> runs the same fixtures through
-  <code>linkml-run-examples</code> for CLI parity.</li>
+<li><a href="https://github.com/lmodel/dpvs/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to LinkML YAML by <a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a>.</li>
+<li><a href="https://github.com/lmodel/dpvs/blob/main/tests/test_data.py">tests/test_data.py</a> validates each fixture against the pre-merged schema at <code>tmp/dpvs.yaml</code> using <code>linkml.validator.Validator</code> with <code>JsonschemaValidationPlugin</code> (explicit; the linkml <code>Validator</code> performs no validation at all when <code>validation_plugins</code> is omitted). The merged schema is used so no import-map is needed at test time.</li>
+</ul>
+<h4 id="hand-authored-valid-fixtures-64">Hand-authored valid fixtures (64)</h4>
+<p><a href="https://github.com/lmodel/dpvs/tree/main/tests/data/valid">tests/data/valid/</a> exercises the following classes across core, extension, and legal modules:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Fixtures</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AIActRisk</code></td>
+<td><code>valid-high</code></td>
+<td>EU AI Act high-risk classification</td>
+</tr>
+<tr>
+<td><code>AICapability</code></td>
+<td><code>valid-vision</code></td>
+<td>Computer-vision capability</td>
+</tr>
+<tr>
+<td><code>AISystem</code></td>
+<td><code>valid-nlp</code></td>
+<td>NLP system declaration</td>
+</tr>
+<tr>
+<td><code>Algorithm</code></td>
+<td><code>valid-ml</code></td>
+<td>Machine-learning algorithm</td>
+</tr>
+<tr>
+<td><code>Anonymisation</code></td>
+<td><code>valid-measure</code></td>
+<td>TOM anonymisation measure</td>
+</tr>
+<tr>
+<td><code>Authority</code></td>
+<td><code>valid-dpa</code></td>
+<td>Data-protection authority</td>
+</tr>
+<tr>
+<td><code>Consent</code></td>
+<td><code>valid-basic</code>, <code>valid-basis</code>, <code>valid-explicit</code>, <code>valid-with-justification</code></td>
+<td>Consent with and without justification</td>
+</tr>
+<tr>
+<td><code>ConsentJustification</code></td>
+<td><code>valid-explicit</code></td>
+<td>Justification for explicit consent</td>
+</tr>
+<tr>
+<td><code>ConsentRecord</code></td>
+<td><code>valid-basic</code></td>
+<td>Consent audit record</td>
+</tr>
+<tr>
+<td><code>Contract</code></td>
+<td><code>valid-basic</code>, <code>valid-no-optional-fields</code>, <code>valid-with-clause</code></td>
+<td>Minimal and fully-populated contracts</td>
+</tr>
+<tr>
+<td><code>ContractClause</code></td>
+<td><code>valid-processor</code></td>
+<td>Processor-specific contract clause</td>
+</tr>
+<tr>
+<td><code>ContractPerformance</code></td>
+<td><code>valid-basis</code></td>
+<td>Contract-performance legal basis</td>
+</tr>
+<tr>
+<td><code>DataBreach</code></td>
+<td><code>valid-incident</code></td>
+<td>Incident report (risk extension)</td>
+</tr>
+<tr>
+<td><code>DataMinimisation</code></td>
+<td><code>valid-measure</code></td>
+<td>TOM data-minimisation measure</td>
+</tr>
+<tr>
+<td><code>DataProcessRecord</code></td>
+<td><code>valid-ieee</code></td>
+<td>IEEE 7012-aligned processing record</td>
+</tr>
+<tr>
+<td><code>DataProcessor</code></td>
+<td><code>valid-org</code></td>
+<td>Controller/processor role assignment</td>
+</tr>
+<tr>
+<td><code>DataProtectionAuthority</code></td>
+<td><code>valid-gdpr</code></td>
+<td>GDPR supervisory authority</td>
+</tr>
+<tr>
+<td><code>DataSubject</code></td>
+<td><code>valid-natural</code></td>
+<td>Natural-person data-subject</td>
+</tr>
+<tr>
+<td><code>Developer</code></td>
+<td><code>valid-org</code></td>
+<td>AI system developer (AI Act role)</td>
+</tr>
+<tr>
+<td><code>DGARole</code></td>
+<td><code>valid-holder</code></td>
+<td>EU Data Governance Act data holder</td>
+</tr>
+<tr>
+<td><code>EHDSHealthData</code></td>
+<td><code>valid-genomic</code></td>
+<td>European Health Data Space genomic data</td>
+</tr>
+<tr>
+<td><code>Encryption</code></td>
+<td><code>valid-aes</code></td>
+<td>AES encryption TOM</td>
+</tr>
+<tr>
+<td><code>EURight</code></td>
+<td><code>valid-dignity</code></td>
+<td>CFREU Article 1 fundamental right</td>
+</tr>
+<tr>
+<td><code>ExplicitConsent</code></td>
+<td><code>valid-written</code></td>
+<td>Written explicit consent</td>
+</tr>
+<tr>
+<td><code>GDPRPrinciple</code></td>
+<td><code>valid-lawfulness</code></td>
+<td>Article 5 lawfulness principle</td>
+</tr>
+<tr>
+<td><code>HighRisk</code></td>
+<td><code>valid-processing</code></td>
+<td>High-risk processing flag</td>
+</tr>
+<tr>
+<td><code>ImplicitConsent</code></td>
+<td><code>valid-cookie</code></td>
+<td>Cookie-banner implied consent</td>
+</tr>
+<tr>
+<td><code>LawfulnessBasis</code></td>
+<td><code>valid-consent</code></td>
+<td>GDPR Article 6(1)(a) legal basis</td>
+</tr>
+<tr>
+<td><code>Location</code></td>
+<td><code>valid-de</code>, <code>valid-france</code>, <code>valid-japan</code>, <code>valid-us</code></td>
+<td>Country-level location individuals</td>
+</tr>
+<tr>
+<td><code>Marketing</code></td>
+<td><code>valid-direct</code></td>
+<td>Direct-marketing purpose</td>
+</tr>
+<tr>
+<td><code>Model</code></td>
+<td><code>valid-nlp</code></td>
+<td>AI model declaration</td>
+</tr>
+<tr>
+<td><code>NIS2Incident</code></td>
+<td><code>valid-significant</code></td>
+<td>NIS2 significant incident notification</td>
+</tr>
+<tr>
+<td><code>Notice</code></td>
+<td><code>valid-basic</code>, <code>valid-privacy</code></td>
+<td>Privacy notice with and without optional fields</td>
+</tr>
+<tr>
+<td><code>Organisation</code></td>
+<td><code>valid-controller</code></td>
+<td>Data-controller organisation</td>
+</tr>
+<tr>
+<td><code>PersonalData</code></td>
+<td><code>valid-basic</code></td>
+<td>Personal data category reference</td>
+</tr>
+<tr>
+<td><code>PersonalDataCategory</code></td>
+<td><code>valid-biometric</code></td>
+<td>Biometric data category</td>
+</tr>
+<tr>
+<td><code>Processing</code></td>
+<td><code>valid-basic</code>, <code>valid-gdpr</code>, <code>valid-multiple-purposes</code></td>
+<td>Processing activities under different bases</td>
+</tr>
+<tr>
+<td><code>ProcessingActivity</code></td>
+<td><code>valid-automated</code></td>
+<td>Automated decision-making activity</td>
+</tr>
+<tr>
+<td><code>ProcessingStatus</code></td>
+<td><code>valid-ongoing</code></td>
+<td>Ongoing processing status</td>
+</tr>
+<tr>
+<td><code>Purpose</code></td>
+<td><code>valid-marketing</code></td>
+<td>Purpose declaration</td>
+</tr>
+<tr>
+<td><code>Recipient</code></td>
+<td><code>valid-basic</code></td>
+<td>Third-party recipient</td>
+</tr>
+<tr>
+<td><code>Right</code></td>
+<td><code>valid-access</code>, <code>valid-basic</code></td>
+<td>Data-subject access right</td>
+</tr>
+<tr>
+<td><code>RightExercise</code></td>
+<td><code>valid-access</code></td>
+<td>Right-exercise request</td>
+</tr>
+<tr>
+<td><code>RightExerciseStatus</code></td>
+<td><code>valid-fulfilled</code></td>
+<td>Fulfilled right-exercise status</td>
+</tr>
+<tr>
+<td><code>Risk</code></td>
+<td><code>valid-data-breach</code></td>
+<td>Data-breach risk entry</td>
+</tr>
+<tr>
+<td><code>RiskAssessment</code></td>
+<td><code>valid-preliminary</code></td>
+<td>Preliminary DPIA-style risk assessment</td>
+</tr>
+<tr>
+<td><code>RiskMitigationMeasure</code></td>
+<td><code>valid-encryption</code></td>
+<td>Encryption as a risk mitigant</td>
+</tr>
+<tr>
+<td><code>RiskSource</code></td>
+<td><code>valid-infrastructure</code></td>
+<td>Infrastructure risk source</td>
+</tr>
+<tr>
+<td><code>Service</code></td>
+<td><code>valid-delivery</code></td>
+<td>Service declaration</td>
+</tr>
+<tr>
+<td><code>SmallScale</code></td>
+<td><code>valid-context</code></td>
+<td>Small-scale processing context</td>
+</tr>
+<tr>
+<td><code>StandardContractualClauses</code></td>
+<td><code>valid-scc</code></td>
+<td>Standard contractual clauses (SCCs)</td>
+</tr>
+<tr>
+<td><code>Technology</code></td>
+<td><code>valid-basic</code></td>
+<td>Technology component reference</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hand-authored-invalid-fixtures-25">Hand-authored invalid fixtures (25)</h4>
+<p><a href="https://github.com/lmodel/dpvs/tree/main/tests/data/invalid">tests/data/invalid/</a> asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".</p>
+<blockquote>
+<p><strong>Note</strong>: The current schema enforces only one constraint: <code>id</code> is a required string (<code>uriorcurie</code>). All other DPV properties are domainless open-world slots. The 22 fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test <code>id</code>-type violations; their original intent is captured in the "Original intent" column and in fixture comments as a roadmap for schema tightening.</p>
+</blockquote>
+<h3 id="generated-fixtures-from-dpvcg-examples">Generated fixtures (from DPVCG examples)</h3>
+<ul>
+<li>
+<p>Fixture generation is fully automated: <code>just test</code> (via <code>_test-python</code>) runs <code>_gen-fixtures</code>, which chains three steps:</p>
+</li>
+<li>
+<p><code>_extract-example-ttls</code> -
+     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/gen_dpvcg_turtle.py">scripts/gen_dpvcg_turtle.py</a> parses <code>upstream-releases/dpv/examples/dex.html</code> and writes one <code>examples/E####.ttl</code> per embedded <code>&lt;pre&gt;</code> block. The upstream release does not ship stand-alone <code>E*.ttl</code> files; the Turtle content lives only in the HTML documentation page.</p>
+</li>
+<li>
+<p><code>_load-ttl-fixtures</code> -
+     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/load_dpvcg_turtle.py">scripts/load_dpvcg_turtle.py</a> wraps each <code>examples/E*.ttl</code> in a self-contained Turtle document (prepending the standard DPV prefix preamble) and routes it to <code>tests/data/dpvcg/valid/</code> or <code>problem/</code> based on rdflib parse success.</p>
+</li>
+<li>
+<p><code>_gen-fixtures</code> -
+     <a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a> converts each typed root subject into a <code>&lt;ClassName&gt;-&lt;stem&gt;-&lt;n&gt;.yaml</code> fixture that <code>test_data.py</code> picks up automatically via its glob. Idempotent: re-running with unchanged inputs produces byte-identical output.</p>
+</li>
+<li><code>just _test-examples</code> runs the same fixtures through <code>linkml-run-examples</code> for CLI parity.</li>
 </ul>
 <h3 id="build-pipeline">Build pipeline</h3>
 <ul>
-<li><code>just</code> orchestrates everything; common targets include
-  <code>gen-project</code>, <code>_test-python</code>, <code>_test-examples</code>, <code>lint</code>, <code>doc</code>.
-  <code>_test-python</code> depends on <code>_gen-fixtures</code> → <code>_load-ttl-fixtures</code> →
-  <code>_extract-example-ttls</code> so the full fixture pipeline (HTML extraction
-  → TTL wrapping → YAML conversion) always runs before pytest.</li>
-<li>URI imports are resolved at build time via an import map. The
-  source-of-truth <a href="https://github.com/lmodel/dpvs/blob/main/importmap.json"><code>importmap.json</code></a> uses relative
-  paths for portability and IDE consumption; the <code>_importmap</code> recipe
-  materialises an absolute-path copy at <code>tmp/importmap.json</code> (required
-  because <code>SchemaLoader</code> joins import-map values with the importing
-  schema's directory). Set <code>LINKML_IMPORT_MAP=</code> (empty) to fall back
-  to HTTP resolution against <code>w3id.org</code>.</li>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/scripts/merge_schema.py">scripts/merge_schema.py</a> flattens the
-  schema into a self-contained YAML before feeding it to <code>gen-project</code>.
-  This works around a LinkML upstream bug (raised upstream) where
-  SchemaLoader-based sub-generators (<code>python</code>, <code>sqltable</code>, <code>excel</code>)
-  construct a secondary <code>SchemaView</code> without propagating <code>--importmap</code>
-  and therefore HTTP-fetch URI imports they cannot resolve.</li>
-<li><code>gen_dpv_27560.py</code> and the <code>gen_*_patched.py</code> scripts work around
-  several LinkML generator edge-cases that surface on a schema this
-  large (DBML, Pandera, RDF, SPARQL, Markdown data-dictionary).</li>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpv_to_linkml.py">scripts/dpv_to_linkml.py</a> regenerates
-  <code>dpvs_core.yaml</code> from the vendored upstream OWL release under
-  <a href="https://github.com/lmodel/dpvs/tree/main/upstream-releases/dpv">upstream-releases/dpv/</a>.</li>
+<li>
+<p><code>just</code> orchestrates everything; common targets include <code>gen-project</code>, <code>_test-python</code>, <code>_test-examples</code>, <code>lint</code>, <code>doc</code>, <code>_test-python</code> depends on <code>_gen-fixtures</code> -&gt; <code>_load-ttl-fixtures</code> -&gt; <code>_extract-example-ttls</code> so the full fixture pipeline (HTML extraction -&gt; TTL wrapping -&gt; YAML conversion) always runs before pytest.</p>
+</li>
+<li>
+<p>URI imports are resolved at build time via an import map. The source-of-truth <a href="https://github.com/lmodel/dpvs/blob/main/importmap.json"><code>importmap.json</code></a> uses relative paths for portability and IDE consumption; the <code>_importmap</code> recipe materialises an absolute-path copy at <code>tmp/importmap.json</code> (required because <code>SchemaLoader</code> joins import-map values with the importing schema's directory). Set <code>LINKML_IMPORT_MAP=</code> (empty) to fall back to HTTP resolution against <code>w3id.org</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/blob/main/scripts/merge_linkml_schema.py">scripts/merge_linkml_schema.py</a> flattens the schema into a self-contained YAML before feeding it to <code>gen-project</code>. This works around a LinkML upstream bug (raised upstream) where SchemaLoader-based sub-generators (<code>python</code>, <code>sqltable</code>, <code>excel</code>) construct a secondary <code>SchemaView</code> without propagating <code>--importmap</code> and therefore HTTP-fetch URI imports they cannot resolve.</p>
+</li>
+<li>
+<p><code>dpv_27560_to_linkml.py</code> and the <code>gen_*_patched.py</code> scripts work around several LinkML generator edge-cases that surface on a schema this large (DBML, Pandera, RDF, SPARQL, Markdown data-dictionary).</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpv_core_to_linkml.py">scripts/dpv_core_to_linkml.py</a> regenerates <code>dpvs_core.yaml</code> from the vendored upstream OWL release under <a href="https://github.com/lmodel/dpvs/tree/main/upstream-releases/dpv">upstream-releases/dpv/</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/lmodel/dpvs/blob/main/scripts/dpv_extensions_to_linkml.py">scripts/dpv_extensions_to_linkml.py</a> regenerates all extension schemas under <code>src/dpvs/schema/extensions/</code> from the same vendored upstream release. After generating each extension and its sub-modules it calls <code>_patch_core_subsets()</code> to merge the new extension subsets into <code>dpvs_core.yaml</code>, keeping the aggregate subset index in sync with the generated extension tree. Invoked via <code>just gen-linkml-extensions</code>; must run after <code>dpv_core_to_linkml.py</code> because it imports that module for shared utilities.</p>
+</li>
 </ul>
 <h2 id="status">Status</h2>
 <p>This is an early-stage but functional port. Key milestones:</p>
 <ul>
-<li>✅ Full DPV 2.3 surface area (973 classes / 145 slots) generated
-  from upstream OWL.</li>
-<li>✅ Open-world validation honored by <code>tests/test_data.py</code> and the
-  <code>linkml-run-examples</code> CLI path.</li>
-<li>✅ 12 SSSOM cross-walks authored / regenerated; verifier checks every
-  row against the schema.</li>
-<li>✅ Upstream DPV CG examples round-tripped from TTL into LinkML YAML
-  and exercised in CI; unmapped predicates preserved as
-  <code># __unmapped__:</code> provenance comments so nothing is silently dropped.
-  The upstream release ships only a monolithic HTML page (<code>dex.html</code>);
-  <a href="https://github.com/lmodel/dpvs/blob/main/scripts/gen_example_ttls.py">scripts/gen_example_ttls.py</a>
-  extracts 88 individual <code>E####.ttl</code> snippets from it. The full
-  pipeline (HTML → TTL → wrapped TTL → 176 YAML fixtures) is wired
-  into <code>just test</code> via <code>_gen-fixtures</code> — no manual step required.</li>
-<li>✅ URI-style imports (<code>dpvs:schema/...</code>) wired across <code>dpvs.yaml</code>
-  and all 33 module schemas, with build-time resolution via
-  <code>importmap.json</code> and post-publication resolution via
-  <a href="https://w3id.org/lmodel/">w3id.org/lmodel</a>. <code>gen-project</code>,
-  <code>gen-doc</code> and all 12 sub-generators complete cleanly.</li>
-<li>✅ Per-module subsets are first-class in the generated documentation:
-  <code>dpvs_core.yaml</code> declares <code>core_subset</code> plus one <code>&lt;module&gt;_subset</code>
-  per module (35 total), and every class/slot is tagged with its
-  module membership via <code>in_subset</code>. <code>gen-doc</code> renders a dedicated
-  page for each subset. Per-module schemas under <code>modules/</code> remain
-  usable standalone but are intentionally not imported by <code>dpvs.yaml</code>
-  to avoid duplicate <code>from_schema</code> resolution in <code>gen-project</code>.</li>
-<li>✅ Class-name collision avoidance trimmed to the minimum needed:
-  DPV-domain terms (<code>Consent</code>, <code>Contract</code>, <code>Notice</code>, <code>Policy</code>,
-  <code>Purpose</code>, <code>Right</code>, <code>Risk</code>, <code>Rule</code>, <code>Status</code>, <code>Assessment</code>) keep
-  their natural names; only generic primitives that collide with
-  Python typing or common base classes (<code>Agent</code>, <code>Organisation</code>,
-  <code>Person</code>, <code>Process</code>, <code>Service</code>, …) are emitted as <code>Dpv*</code>.</li>
-<li>🚧 Generator patches (<code>gen_*_patched.py</code>) consolidate workarounds for
-  upstream LinkML issues (raised upstream); upstreaming is in progress.</li>
-<li>🚧 Documentation site at
-  <a href="https://lmodel.github.io/dpvs">https://lmodel.github.io/dpvs</a> is
-  generator-driven and tracks <code>main</code>.</li>
+<li>
+<p>✅ Full DPV 2.3 surface area (~1,200 classes / 145 slots) generated from upstream OWL.</p>
+</li>
+<li>
+<p>✅ Open-world validation honored by <code>tests/test_data.py</code> and the
+  <code>linkml-run-examples</code> CLI path; the open-world drop-in runner (<a href="https://github.com/lmodel/dpvs/blob/main/scripts/run_examples_open_world.py">scripts/run_examples_open_world.py</a>) and pytest now share a schema-aware target-class resolver that maps filename targets via class names, <code>class_uri</code> and aliases, falling back to <code>DpvThing</code> when the upstream example references a concept outside the merged schema.</p>
+</li>
+<li>
+<p>✅ 26 SSSOM cross-walks present (17 hand-curated + 9 LLM-seeded candidate sets marked <code>semapv:LLMBasedMatching</code> and pending human review); verifier checks every row against the schema.</p>
+</li>
+<li>
+<p>✅ Upstream DPV CG examples round-tripped from TTL into LinkML YAML and exercised in CI; unmapped predicates preserved as <code># __unmapped__:</code> provenance comments so nothing is silently dropped. The upstream release ships only a monolithic HTML page (<code>dex.html</code>); <a href="https://github.com/lmodel/dpvs/blob/main/scripts/gen_dpvcg_turtle.py">scripts/gen_dpvcg_turtle.py</a> extracts 88 individual <code>E####.ttl</code> snippets from it. The full pipeline (HTML -&gt; TTL -&gt; wrapped TTL -&gt; 180 valid YAML fixtures) is wired into <code>just test</code> via <code>_gen-fixtures</code> - no manual step required.</p>
+</li>
+<li>
+<p>✅ 64 hand-authored valid fixtures covering 54 distinct classes (core, risk, AI, legal/EU, loc, tech, and sector modules) and 25 hand-authored invalid fixtures all exercising the one schema-enforced constraint — <code>id</code> must be a required <code>uriorcurie</code> string — across three violation modes (missing <code>id</code>, null <code>id</code>, integer <code>id</code>). Fixtures carry comments recording the originally-intended semantic constraint (enum values, date formats, cardinality, referential integrity) as a roadmap for future schema tightening. Plus 180 generated YAML fixtures from the upstream DPV CG examples. All exercised by <code>tests/test_data.py</code> (269 passed) and <code>just _test-examples</code>.</p>
+</li>
+<li>
+<p>✅ URI-style imports (<code>dpvs:schema/...</code>) wired across <code>dpvs.yaml</code> and all 33 module schemas, with build-time resolution via <code>importmap.json</code> and post-publication resolution via <a href="https://w3id.org/lmodel/">w3id.org/lmodel</a>. <code>gen-project</code>, <code>gen-doc</code> and all 12 sub-generators complete cleanly.</p>
+</li>
+<li>
+<p>✅ Per-module subsets are first-class in the generated documentation: <code>dpvs_core.yaml</code> declares <code>core_subset</code> plus one <code>&lt;module&gt;_subset</code> per module (35 total), and every class/slot is tagged with its module membership via <code>in_subset</code>. <code>gen-doc</code> renders a dedicated page for each subset. Per-module schemas under <code>modules/</code> remain usable standalone but are intentionally not imported by <code>dpvs.yaml</code> to avoid duplicate <code>from_schema</code> resolution in <code>gen-project</code>.</p>
+</li>
+<li>
+<p>✅ Class-name collision avoidance trimmed to the minimum needed: DPV-domain terms (<code>Consent</code>, <code>Contract</code>, <code>Notice</code>, <code>Policy</code>, <code>Purpose</code>, <code>Right</code>, <code>Risk</code>, <code>Rule</code>, <code>Status</code>, <code>Assessment</code>) keep their natural names; only generic primitives that collide with Python typing or common base classes (<code>Agent</code>, <code>Organisation</code>, <code>Person</code>, <code>Process</code>, <code>Service</code>, …) are emitted as <code>Dpv*</code>.</p>
+</li>
+<li>
+<p>🚧 Generator patches (<code>gen_*_patched.py</code>) consolidate workarounds for upstream LinkML issues (raised upstream); upstreaming is in progress.</p>
+</li>
+<li>
+<p>🚧 Documentation site at <a href="https://lmodel.github.io/dpvs">https://lmodel.github.io/dpvs</a> is generator-driven and tracks <code>main</code>.</p>
+</li>
 </ul>
 <h2 id="see-also">See also</h2>
 <ul>
-<li><a href="https://w3c.github.io/dpv/">W3C DPV</a> — upstream source.</li>
-<li><a href="https://linkml.io">LinkML</a> — the modelling language used here.</li>
-<li><a href="https://mapping-commons.github.io/sssom/">SSSOM</a> — the mapping format
-  used for the cross-walks.</li>
-<li><a href="https://github.com/lmodel/dpvs/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> — how to file changes.</li>
+<li><a href="https://w3c.github.io/dpv/">W3C DPV</a> - upstream source.</li>
+<li><a href="https://linkml.io">LinkML</a> - the modelling language used here.</li>
+<li><a href="https://mapping-commons.github.io/sssom/">SSSOM</a> - the mapping format used for the cross-walks.</li>
+<li><a href="https://github.com/lmodel/dpvs/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> - how to file changes.</li>
 </ul>
 
 
