@@ -4,7 +4,7 @@
       "common_domain_model": "https://w3id.org/lmodel/common-domain-model/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "dcterms": "http://purl.org/dc/terms/",
-      "dpv": "https://github.com/lmodel/dpv/",
+      "dpv": "https://w3id.org/lmodel/dpv/",
       "dpv_owl": "https://w3id.org/dpv/owl#",
       "dpv_upstream": "https://w3id.org/dpv#",
       "foaf": "http://xmlns.com/foaf/0.1/",
@@ -30,7 +30,7 @@
       "svpr": "https://specialprivacy.ercim.eu/vocabs/processing#",
       "svpu": "https://specialprivacy.ercim.eu/vocabs/purposes#",
       "usage_policy": "https://specialprivacy.ercim.eu/langs/usage-policy#",
-      "@vocab": "https://github.com/lmodel/dpv/",
+      "@vocab": "https://w3id.org/lmodel/dpv/",
       "has_active_entity": {
          "@id": "has_active_entity"
       },

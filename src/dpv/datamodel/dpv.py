@@ -1,5 +1,5 @@
 # Auto generated from dpv.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-06-03T20:23:52
+# Generation date: 2026-06-03T22:25:17
 # Schema: dpv
 #
 # id: https://w3id.org/lmodel/dpv
@@ -72,7 +72,7 @@ version = "2.3"
 COMMON_DOMAIN_MODEL = CurieNamespace('common_domain_model', 'https://w3id.org/lmodel/common-domain-model/')
 DCAT = CurieNamespace('dcat', 'http://www.w3.org/ns/dcat#')
 DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')
-DPV = CurieNamespace('dpv', 'https://github.com/lmodel/dpv/')
+DPV = CurieNamespace('dpv', 'https://w3id.org/lmodel/dpv/')
 DPV_OWL = CurieNamespace('dpv_owl', 'https://w3id.org/dpv/owl#')
 DPV_UPSTREAM = CurieNamespace('dpv_upstream', 'https://w3id.org/dpv#')
 FOAF = CurieNamespace('foaf', 'http://xmlns.com/foaf/0.1/')

@@ -15,46 +15,6 @@ Outputs (default): ``src/dpv/schema/``
                                     aggregate ``dpv-owl.ttl`` (1:1 with upstream)
   - ``modules/<module>.yaml``            - one LinkML subset schema per upstream module
 
-100% coverage / compliance goals:
-  - Every ``owl:Class`` in the ``dpv-owl:`` namespace -> LinkML class
-  - Every ``owl:ObjectProperty`` / ``owl:DatatypeProperty`` -> LinkML slot
-  - Every ``rdfs:subClassOf`` named-class link -> LinkML ``is_a`` / ``mixins``
-  - SKOS ``definition``, ``prefLabel``, ``altLabel`` -> description / aliases
-  - SKOS ``scopeNote`` / ``editorialNote`` -> comments
-  - SKOS ``inScheme`` (from canonical graph) -> ``annotations.skos_in_scheme``
-  - ``dct:source`` literal (canonical graph) -> ``annotations.dct_source``
-  - Class names containing ``-`` are sanitised to NCName (``Authentication-ABC``
-    -> ``Authentication_ABC``); upstream identity preserved in ``class_uri``
-    and ``aliases``.
-
-Audit notes (per the linkml-schema skill):
-  - Properties are emitted as first-class top-level ``slots`` by default
-    (declared once, reusable across classes - matches DPV's relational
-    shape). The skill's guidance is "prefer slots over attributes unless
-    names are abstract / open / common and therefore likely to collide
-    with similarly named slots on import"; the script applies exactly
-    that rule via ``_split_collision_slots_to_attributes``: a small set
-    of high-collision names (``id``, ``name``, ``status``, ``type``,
-    ``description``, ...; see ``_COLLISION_PRONE_SLOTS``) are demoted to
-    class-bound ``attributes`` on their ``rdfs:domain`` class so they
-    cannot clash with an importer's own top-level slots.
-  - Subset names use the ``<module>_subset`` suffix so they cannot collide
-    with schema ``name``, class names, slot names, or enum names.
-  - Prefix aliases use canonical NCName forms (``dcterms``, ``prof``,
-    ``usage_policy``) preferred by ``linkml-lint``.
-  - Identity URIs follow the skill's "identity vs. mappings" rule:
-    classes get ``class_uri: dpv:<Name>`` (the RDF type IRI, which
-    ``gen-doc`` renders and downstream RDF/OWL generators emit) and
-    slots get ``definition_uri: dpv:<name>`` rather than ``slot_uri``.
-    Reserving ``slot_uri`` for the empty default lets a downstream
-    overlay later bind a slot to an external predicate (e.g.
-    ``schema:name``, ``dct:title``) without competing with our own
-    namespace IRI; ``definition_uri`` carries the native-schema identity
-    that resolves via the w3id ``lmodel/dpv/`` redirect. The upstream
-    canonical (``dpv:`` = ``https://w3id.org/dpv#``) and OWL
-    (``dpv_owl:`` = ``https://w3id.org/dpv/owl#``) CURIEs are recorded as
-    ``exact_mappings`` so generated RDF/OWL does not shadow W3C IRIs.
-
 Reproducibility:
   - Deterministic: stable sort of subjects, deduplicated lists, no timestamps.
   - Idempotent: re-running with unchanged upstream produces byte-identical YAML.
@@ -90,7 +50,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 # ---------------------------------------------------------------------------
 DPV_OWL_NS = "https://w3id.org/dpv/owl#"           # upstream OWL flavour
 DPV_CAN_NS = "https://w3id.org/dpv#"               # canonical SKOS flavour
-DPV_LOCAL_NS = "https://github.com/lmodel/dpv/"     # this repo namespace
+DPV_LOCAL_NS = "https://w3id.org/lmodel/dpv/"     # this repo namespace
 LMODEL_NS = "https://w3id.org/lmodel/dpv/"        # legacy alias for compatibility
 LMODEL_BASE = "https://w3id.org/lmodel/dpv"
 

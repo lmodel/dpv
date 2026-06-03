@@ -1,6 +1,6 @@
 # metamodel_version: 1.11.0
 # version: 2.3
-BASE <https://github.com/lmodel/dpv/>
+BASE <https://w3id.org/lmodel/dpv/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>

@@ -1,6 +1,6 @@
 # __unmapped__:
-#   https://github.com/lmodel/dpvhasConsequence: _:n20481e5d5c4547ca82789cd17362eb39b1
-#   https://github.com/lmodel/dpvhasStatus: risk:IncidentConcluded
+#   https://w3id.org/lmodel/dpvhasConsequence: _:n6d19715a4b0c4a0cabd615ddccc435c6b1
+#   https://w3id.org/lmodel/dpvhasStatus: risk:IncidentConcluded
 #   skos:broader: risk:DataBreach
 id: ex:IN11
 refers_to_risk: ex:R2DB

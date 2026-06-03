@@ -13,7 +13,7 @@ source: https://w3id.org/dpv/owl#
 version: '2.3'
 
 prefixes:
-  dpv: https://github.com/lmodel/dpv/
+  dpv: https://w3id.org/lmodel/dpv/
   dpv_upstream: https://w3id.org/dpv#
   dpv_owl: https://w3id.org/dpv/owl#
   linkml: https://w3id.org/linkml/

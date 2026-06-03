@@ -3,7 +3,7 @@
 # mapping_set_version: 1.0
 # license: https://creativecommons.org/licenses/by/4.0/
 # curie_map:
-#   dpv: https://github.com/lmodel/dpv/
+#   dpv: https://w3id.org/lmodel/dpv/
 #   dpv_upstream: https://w3id.org/dpv#
 #   skos: http://www.w3.org/2004/02/skos/core#
 #   iso29100: https://w3id.org/lmodel/iso29100/

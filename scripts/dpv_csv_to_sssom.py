@@ -38,7 +38,7 @@ from typing import Iterable
 # Curie map embedded in the SSSOM header. The full IRI for each prefix lets
 # downstream SSSOM tools resolve subject_id / object_id without ambiguity.
 CURIE_MAP = {
-    "dpv": "https://github.com/lmodel/dpv/",
+    "dpv": "https://w3id.org/lmodel/dpv/",
     "dpv_upstream": "https://w3id.org/dpv#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "iso29100": "https://w3id.org/lmodel/iso29100/",

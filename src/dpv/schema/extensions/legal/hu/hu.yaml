@@ -20,7 +20,7 @@ annotations:
   upstream_canonical_namespace: https://w3id.org/dpv/legal/hu#
 
 prefixes:
-  dpv: https://github.com/lmodel/dpv/
+  dpv: https://w3id.org/lmodel/dpv/
   dpv_upstream: https://w3id.org/dpv#
   dpv_owl: https://w3id.org/dpv/owl#
   linkml: https://w3id.org/linkml/

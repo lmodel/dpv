@@ -148,70 +148,13 @@ Mappings are verified by [scripts/verify_mappings.py](https://github.com/lmodel/
 - [tests/data/](https://github.com/lmodel/dpv/tree/main/tests/data) contains hand-authored and vendored YAML fixtures split into `valid/` and `invalid/` subtrees. The `dpvcg/` subtree carries the upstream DPV CG examples converted to LinkML YAML by [scripts/dpvcg_turtle_to_yaml.py](https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py).
 - [tests/test_data.py](https://github.com/lmodel/dpv/blob/main/tests/test_data.py) validates each fixture against the pre-merged schema at `tmp/dpv.yaml` using `linkml.validator.Validator` with `JsonschemaValidationPlugin` (explicit; the linkml `Validator` performs no validation at all when `validation_plugins` is omitted). The merged schema is used so no import-map is needed at test time.
 
-#### Hand-authored valid fixtures (64)
+#### Static fixtures
 
-[tests/data/valid/](https://github.com/lmodel/dpv/tree/main/tests/data/valid) exercises the following classes across core, extension, and legal modules:
+64 [tests/data/valid/](https://github.com/lmodel/dpv/tree/main/tests/data/valid) exercises classes across core, extension, and legal modules.
 
-| Class | Fixtures | Notes |
-| --- | --- | --- |
-| `AIActRisk` | `valid-high` | EU AI Act high-risk classification |
-| `AICapability` | `valid-vision` | Computer-vision capability |
-| `AISystem` | `valid-nlp` | NLP system declaration |
-| `Algorithm` | `valid-ml` | Machine-learning algorithm |
-| `Anonymisation` | `valid-measure` | TOM anonymisation measure |
-| `Authority` | `valid-dpa` | Data-protection authority |
-| `Consent` | `valid-basic`, `valid-basis`, `valid-explicit`, `valid-with-justification` | Consent with and without justification |
-| `ConsentJustification` | `valid-explicit` | Justification for explicit consent |
-| `ConsentRecord` | `valid-basic` | Consent audit record |
-| `Contract` | `valid-basic`, `valid-no-optional-fields`, `valid-with-clause` | Minimal and fully-populated contracts |
-| `ContractClause` | `valid-processor` | Processor-specific contract clause |
-| `ContractPerformance` | `valid-basis` | Contract-performance legal basis |
-| `DataBreach` | `valid-incident` | Incident report (risk extension) |
-| `DataMinimisation` | `valid-measure` | TOM data-minimisation measure |
-| `DataProcessRecord` | `valid-ieee` | IEEE 7012-aligned processing record |
-| `DataProcessor` | `valid-org` | Controller/processor role assignment |
-| `DataProtectionAuthority` | `valid-gdpr` | GDPR supervisory authority |
-| `DataSubject` | `valid-natural` | Natural-person data-subject |
-| `Developer` | `valid-org` | AI system developer (AI Act role) |
-| `DGARole` | `valid-holder` | EU Data Governance Act data holder |
-| `EHDSHealthData` | `valid-genomic` | European Health Data Space genomic data |
-| `Encryption` | `valid-aes` | AES encryption TOM |
-| `EURight` | `valid-dignity` | CFREU Article 1 fundamental right |
-| `ExplicitConsent` | `valid-written` | Written explicit consent |
-| `GDPRPrinciple` | `valid-lawfulness` | Article 5 lawfulness principle |
-| `HighRisk` | `valid-processing` | High-risk processing flag |
-| `ImplicitConsent` | `valid-cookie` | Cookie-banner implied consent |
-| `LawfulnessBasis` | `valid-consent` | GDPR Article 6(1)(a) legal basis |
-| `Location` | `valid-de`, `valid-france`, `valid-japan`, `valid-us` | Country-level location individuals |
-| `Marketing` | `valid-direct` | Direct-marketing purpose |
-| `Model` | `valid-nlp` | AI model declaration |
-| `NIS2Incident` | `valid-significant` | NIS2 significant incident notification |
-| `Notice` | `valid-basic`, `valid-privacy` | Privacy notice with and without optional fields |
-| `Organisation` | `valid-controller` | Data-controller organisation |
-| `PersonalData` | `valid-basic` | Personal data category reference |
-| `PersonalDataCategory` | `valid-biometric` | Biometric data category |
-| `Processing` | `valid-basic`, `valid-gdpr`, `valid-multiple-purposes` | Processing activities under different bases |
-| `ProcessingActivity` | `valid-automated` | Automated decision-making activity |
-| `ProcessingStatus` | `valid-ongoing` | Ongoing processing status |
-| `Purpose` | `valid-marketing` | Purpose declaration |
-| `Recipient` | `valid-basic` | Third-party recipient |
-| `Right` | `valid-access`, `valid-basic` | Data-subject access right |
-| `RightExercise` | `valid-access` | Right-exercise request |
-| `RightExerciseStatus` | `valid-fulfilled` | Fulfilled right-exercise status |
-| `Risk` | `valid-data-breach` | Data-breach risk entry |
-| `RiskAssessment` | `valid-preliminary` | Preliminary DPIA-style risk assessment |
-| `RiskMitigationMeasure` | `valid-encryption` | Encryption as a risk mitigant |
-| `RiskSource` | `valid-infrastructure` | Infrastructure risk source |
-| `Service` | `valid-delivery` | Service declaration |
-| `SmallScale` | `valid-context` | Small-scale processing context |
-| `StandardContractualClauses` | `valid-scc` | Standard contractual clauses (SCCs) |
-| `Technology` | `valid-basic` | Technology component reference |
+48 [tests/data/invalid/](https://github.com/lmodel/dpv/tree/main/tests/data/invalid) asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".
 
-#### Hand-authored invalid fixtures (48)
-
-[tests/data/invalid/](https://github.com/lmodel/dpv/tree/main/tests/data/invalid) asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".
-
-> **Note**: The current schema enforces only one constraint: `id` is a required string (`uriorcurie`). All other DPV properties are domainless open-world slots. Fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test `id`-type violations; their original intent is captured in fixture comments as a roadmap for schema tightening.
+> **Note**: The dpv schema enforces only one constraint: `id` is a required string (`uriorcurie`). All other DPV properties are domainless open-world slots. Fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test `id`-type violations; their original intent is captured in fixture comments as a roadmap for schema tightening.
 
 ### Generated fixtures (from DPVCG examples)
 

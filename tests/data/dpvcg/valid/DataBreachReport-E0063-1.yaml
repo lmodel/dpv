@@ -1,4 +1,4 @@
 # __unmapped__:
-#   https://github.com/lmodel/dpvhasJustification: justifications:RightsFreedomsImpactUnlikely
-#   https://github.com/lmodel/dpvhasStatus: eu-gdpr:BreachNotificationNotNeeded
+#   https://w3id.org/lmodel/dpvhasJustification: justifications:RightsFreedomsImpactUnlikely
+#   https://w3id.org/lmodel/dpvhasStatus: eu-gdpr:BreachNotificationNotNeeded
 id: ex:PDH

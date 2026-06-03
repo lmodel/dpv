@@ -52,7 +52,7 @@ from rdflib import BNode, Graph, Literal, URIRef
 from rdflib.namespace import RDF
 
 # Same local/upstream/OWL DPV namespaces the generator uses.
-DPV_LOCAL_NS = "https://github.com/lmodel/dpv/"
+DPV_LOCAL_NS = "https://w3id.org/lmodel/dpv/"
 DPV_CAN_NS = "https://w3id.org/dpv#"
 DPV_OWL_NS = "https://w3id.org/dpv/owl#"
 LMODEL_DPV_NS = "https://w3id.org/lmodel/dpv/"
