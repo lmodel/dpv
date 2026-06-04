@@ -156,6 +156,22 @@ classes:
       upstream_iri: https://w3id.org/dpv/pd/owl#Internal
       dpv_extension_slug: pd
 
+  PdTracking:
+    is_a: PersonalData
+    class_uri: pd:Tracking
+    description: |-
+      Information used to track an individual or group e.g. location or email
+    aliases:
+      - Tracking
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Tracking
+      - dpv_pd_owl:Tracking
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Tracking
+      dpv_extension_slug: pd
+
   Profile:
     is_a: PersonalData
     class_uri: pd:Profile
@@ -188,22 +204,6 @@ classes:
       - dpv_pd_owl:Social
     annotations:
       upstream_iri: https://w3id.org/dpv/pd/owl#Social
-      dpv_extension_slug: pd
-
-  Tracking:
-    is_a: PersonalData
-    class_uri: pd:Tracking
-    description: |-
-      Information used to track an individual or group e.g. location or email
-    aliases:
-      - Tracking
-    in_subset:
-      - pd_core_subset
-    exact_mappings:
-      - dpv_pd:Tracking
-      - dpv_pd_owl:Tracking
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#Tracking
       dpv_extension_slug: pd
 
   Vulnerability:

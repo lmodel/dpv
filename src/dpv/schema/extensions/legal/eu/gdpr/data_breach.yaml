@@ -72,6 +72,7 @@ imports:
   - linkml:types
   - dpv:schema/dpv_common
   - dpv:schema/dpv_personal_data
+  - dpv:schema/dpv_risk_notice
   - dpv:schema/extensions/legal/eu/gdpr
   - dpv:schema/extensions/justifications
   - dpv:schema/extensions/risk
@@ -140,7 +141,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   ControllerBreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:ControllerBreachNotice
     description: Notice regarding a data breach to the Controller
     aliases:
@@ -265,7 +266,7 @@ classes:
   DPABreachInitialNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABreachInitialNotice
     description: |-
       Notice sent by a Controller within 72 hours of becoming aware of a
@@ -284,7 +285,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   DPABreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABreachNotice
     description: Notice regarding a data breach to the DPA
     aliases:
@@ -320,7 +321,7 @@ classes:
   DPABundledBreachNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABundledBreachNotice
     description: |-
       Notice sent by a Controller to the DPA regarding multiple data breaches
@@ -340,7 +341,7 @@ classes:
   DPAPhasedBreachNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPAPhasedBreachNotice
     description: |-
       Notice sent to a DPA in phases i.e. by providing incremental information
@@ -439,25 +440,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachJustification
       dpv_extension_slug: legal/eu/gdpr
 
-  DataBreachNotice:
-    class_uri: legal_eu_gdpr:DataBreachNotice
-    description: |-
-      Notice associated with data breach providing information in compliance
-      with GDPR
-    aliases:
-      - Data Breach Notice
-    in_subset:
-      - legal_eu_gdpr_data_breach_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataBreachNotice
-      - dpv_legal_eu_gdpr_owl:DataBreachNotice
-    close_mappings:
-      - iso27701:Clause_6_13
-    annotations:
-      dct_source: GDPR Article 33
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachNotice
-      dpv_extension_slug: legal/eu/gdpr
-
   DataBreachNoticeRequirement:
     is_a: AuditStatus
     class_uri: legal_eu_gdpr:DataBreachNoticeRequirement
@@ -549,7 +531,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   DataSubjectBreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DataSubjectBreachNotice
     description: Notice regarding a data breach to the Data Subject
     aliases:
@@ -722,8 +704,27 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA33RiskUnlikely
       dpv_extension_slug: legal/eu/gdpr
 
-  ProcessorBreachNotice:
+  LegalEuGdprDataBreachNotice:
     is_a: DataBreachNotice
+    class_uri: legal_eu_gdpr:DataBreachNotice
+    description: |-
+      Notice associated with data breach providing information in compliance
+      with GDPR
+    aliases:
+      - DataBreachNotice
+      - Data Breach Notice
+    in_subset:
+      - legal_eu_gdpr_data_breach_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataBreachNotice
+      - dpv_legal_eu_gdpr_owl:DataBreachNotice
+    annotations:
+      dct_source: GDPR Article 33
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachNotice
+      dpv_extension_slug: legal/eu/gdpr
+
+  ProcessorBreachNotice:
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:ProcessorBreachNotice
     description: Notice regarding a data breach to the Processor
     aliases:

@@ -5,8 +5,9 @@ description: |-
   LinkML schema generated from the DPV 2.3 extension `ai` (`ai-owl.ttl`),
   enriched with canonical SKOS metadata. Imports the semantic-group
   schema(s) `dpv:schema/dpv_common`, `dpv:schema/dpv_personal_data`,
-  `dpv:schema/dpv_processing` for the abstract parent classes this
-  extension specialises (instead of the full umbrella `dpv:schema/dpv`).
+  `dpv:schema/dpv_processing`, `dpv:schema/dpv_risk_notice` for the
+  abstract parent classes this extension specialises (instead of the full
+  umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/ai
@@ -74,6 +75,7 @@ imports:
   - dpv:schema/dpv_common
   - dpv:schema/dpv_personal_data
   - dpv:schema/dpv_processing
+  - dpv:schema/dpv_risk_notice
   - dpv:schema/extensions/risk
   - dpv:schema/extensions/tech
 
@@ -343,8 +345,9 @@ classes:
       dpv_extension_slug: ai
 
   AIBias:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
       - Bias
@@ -418,8 +421,9 @@ classes:
       dpv_extension_slug: ai
 
   AISystemRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:AISystemRisk
@@ -494,6 +498,46 @@ classes:
       - dpv_ai_owl:Data
     annotations:
       upstream_iri: https://w3id.org/dpv/ai/owl#Data
+      dpv_extension_slug: ai
+
+  AiProfiling:
+    is_a: HumanOrientedCapability
+    mixins:
+      - Capability
+      - Profiling
+    class_uri: ai:Profiling
+    description: |-
+      Capability where AI is used to construct a profile of an individual
+      (human) or a group of individuals
+    aliases:
+      - Profiling
+    in_subset:
+      - ai_subset
+    exact_mappings:
+      - dpv_ai:Profiling
+      - dpv_ai_owl:Profiling
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#Profiling
+      dpv_extension_slug: ai
+
+  AiRiskConcept:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:RiskConcept
+    description: |-
+      Risk concepts such as risk sources, risks, consequences, and impacts
+      associated specifically with development, use, or operation of AI
+    aliases:
+      - RiskConcept
+    in_subset:
+      - ai_subset
+    exact_mappings:
+      - dpv_ai:RiskConcept
+      - dpv_ai_owl:RiskConcept
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#RiskConcept
       dpv_extension_slug: ai
 
   AlgorithmSelectionBias:
@@ -1335,8 +1379,9 @@ classes:
       dpv_extension_slug: ai
 
   DataRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:DataRisk
@@ -2884,8 +2929,9 @@ classes:
       dpv_extension_slug: ai
 
   ModelRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:ModelRisk
@@ -3272,25 +3318,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/ai/owl#PostTimeBiometricIdentification
       dpv_extension_slug: ai
 
-  Profiling:
-    is_a: HumanOrientedCapability
-    mixins:
-      - Capability
-    class_uri: ai:Profiling
-    description: |-
-      Capability where AI is used to construct a profile of an individual
-      (human) or a group of individuals
-    aliases:
-      - Profiling
-    in_subset:
-      - ai_subset
-    exact_mappings:
-      - dpv_ai:Profiling
-      - dpv_ai_owl:Profiling
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#Profiling
-      dpv_extension_slug: ai
-
   QuestionAnswering:
     is_a: LanguageCapability
     mixins:
@@ -3536,25 +3563,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/ai/owl#RetirementStage
       dpv_extension_slug: ai
 
-  RiskConcept:
-    mixins:
-      - PotentialRisk
-      - PotentialRiskSource
-    class_uri: ai:RiskConcept
-    description: |-
-      Risk concepts such as risk sources, risks, consequences, and impacts
-      associated specifically with development, use, or operation of AI
-    aliases:
-      - RiskConcept
-    in_subset:
-      - ai_subset
-    exact_mappings:
-      - dpv_ai:RiskConcept
-      - dpv_ai_owl:RiskConcept
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#RiskConcept
-      dpv_extension_slug: ai
-
   Robot:
     is_a: AISystem
     class_uri: ai:Robot
@@ -3646,8 +3654,9 @@ classes:
       dpv_extension_slug: ai
 
   SecurityAttack:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:SecurityAttack
@@ -4423,8 +4432,9 @@ classes:
       dpv_extension_slug: ai
 
   UserRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:UserRisk

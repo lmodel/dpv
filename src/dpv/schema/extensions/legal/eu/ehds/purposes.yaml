@@ -197,25 +197,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareScientificResearch
       dpv_extension_slug: legal/eu/ehds
 
-  ImproveHealthcare:
-    mixins:
-      - Purpose
-    class_uri: legal_eu_ehds:ImproveHealthcare
-    description: |-
-      Purposes associated with improving healthcare systems, including the
-      delivery of care and the provision and optimisation of treatment
-    aliases:
-      - Improve Healthcare
-    in_subset:
-      - legal_eu_ehds_purposes_subset
-    exact_mappings:
-      - dpv_legal_eu_ehds:ImproveHealthcare
-      - dpv_legal_eu_ehds_owl:ImproveHealthcare
-    annotations:
-      dct_source: EHDS Art.53.1(f)
-      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ImproveHealthcare
-      dpv_extension_slug: legal/eu/ehds
-
   ImproveHealthcareEducation:
     mixins:
       - Purpose
@@ -232,6 +213,48 @@ classes:
     annotations:
       dct_source: EHDS Art.53.1(d)
       upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ImproveHealthcareEducation
+      dpv_extension_slug: legal/eu/ehds
+
+  LegalEuEhdsImproveHealthcare:
+    is_a: ImproveHealthcare
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ImproveHealthcare
+    description: |-
+      Purposes associated with improving healthcare systems, including the
+      delivery of care and the provision and optimisation of treatment
+    aliases:
+      - ImproveHealthcare
+      - Improve Healthcare
+    in_subset:
+      - legal_eu_ehds_purposes_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ImproveHealthcare
+      - dpv_legal_eu_ehds_owl:ImproveHealthcare
+    annotations:
+      dct_source: EHDS Art.53.1(f)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ImproveHealthcare
+      dpv_extension_slug: legal/eu/ehds
+
+  LegalEuEhdsPublicPolicyMaking:
+    is_a: PublicPolicyMaking
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:PublicPolicyMaking
+    description: |-
+      Purposes associated with public policy making policymaking in the
+      healthcare sector
+    aliases:
+      - PublicPolicyMaking
+      - Public Policy Making
+    in_subset:
+      - legal_eu_ehds_purposes_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PublicPolicyMaking
+      - dpv_legal_eu_ehds_owl:PublicPolicyMaking
+    annotations:
+      dct_source: EHDS Art.53.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicPolicyMaking
       dpv_extension_slug: legal/eu/ehds
 
   MedicalDevicesDispensation:
@@ -411,25 +434,6 @@ classes:
     annotations:
       dct_source: EHDS Art.53.1(a)
       upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicInterestRelatedToHealth
-      dpv_extension_slug: legal/eu/ehds
-
-  PublicPolicyMaking:
-    mixins:
-      - Purpose
-    class_uri: legal_eu_ehds:PublicPolicyMaking
-    description: |-
-      Purposes associated with public policy making policymaking in the
-      healthcare sector
-    aliases:
-      - Public Policy Making
-    in_subset:
-      - legal_eu_ehds_purposes_subset
-    exact_mappings:
-      - dpv_legal_eu_ehds:PublicPolicyMaking
-      - dpv_legal_eu_ehds_owl:PublicPolicyMaking
-    annotations:
-      dct_source: EHDS Art.53.1(b)
-      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicPolicyMaking
       dpv_extension_slug: legal/eu/ehds
 
   ReimbursementServicesProvision:

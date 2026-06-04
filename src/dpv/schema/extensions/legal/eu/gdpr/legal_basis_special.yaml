@@ -78,7 +78,7 @@ subsets:
 classes:
 
   A92a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - ExplicitlyExpressedConsent

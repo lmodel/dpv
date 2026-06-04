@@ -68,6 +68,7 @@ imports:
   - linkml:types
   - dpv:schema/dpv_common
   - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_personal_data
   - dpv:schema/extensions/legal/eu/aiact
   - dpv:schema/extensions/tech
 
@@ -77,35 +78,6 @@ subsets:
     description: Entities from the DPV `legal/eu/aiact/modules/misc` submodule.
 
 classes:
-
-  AILiteracy:
-    mixins:
-      - OrganisationalMeasure
-    class_uri: legal_eu_aiact:AILiteracy
-    description: |-
-      Skills, knowledge and understanding that allow providers, deployers and
-      affected persons, taking into account their respective rights and
-      obligations in the context of this Regulation, to make an informed
-      deployment of AI systems, as well as to gain awareness about the
-      opportunities and risks of AI and possible harm it can cause
-    aliases:
-      - AI Literacy
-    comments:
-      - |-
-        AI Literacy should take into account the subject's level of technical
-        knowledge, experience, education and training -- these can be
-        represented through the corresponding concepts in the PD extension
-    in_subset:
-      - legal_eu_aiact_misc_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:AILiteracy
-      - dpv_legal_eu_aiact_owl:AILiteracy
-    related_mappings:
-      - iso42001:AIReferenceControl
-    annotations:
-      dct_source: AIA (Art. 3(56))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AILiteracy
-      dpv_extension_slug: legal/eu/aiact
 
   IntendedPurpose:
     is_a: IntendedUse
@@ -128,7 +100,36 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#IntendedPurpose
       dpv_extension_slug: legal/eu/aiact
 
-  PubliclyAccessibleSpace:
+  LegalEuAiactAILiteracy:
+    is_a: AILiteracy
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_aiact:AILiteracy
+    description: |-
+      Skills, knowledge and understanding that allow providers, deployers and
+      affected persons, taking into account their respective rights and
+      obligations in the context of this Regulation, to make an informed
+      deployment of AI systems, as well as to gain awareness about the
+      opportunities and risks of AI and possible harm it can cause
+    aliases:
+      - AILiteracy
+      - AI Literacy
+    comments:
+      - |-
+        AI Literacy should take into account the subject's level of technical
+        knowledge, experience, education and training -- these can be
+        represented through the corresponding concepts in the PD extension
+    in_subset:
+      - legal_eu_aiact_misc_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AILiteracy
+      - dpv_legal_eu_aiact_owl:AILiteracy
+    annotations:
+      dct_source: AIA (Art. 3(56))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AILiteracy
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactPubliclyAccessibleSpace:
     is_a: PublicLocation
     mixins:
       - DpvLocation
@@ -139,6 +140,7 @@ classes:
       conditions for access may apply, and regardless of the potential
       capacity restrictions
     aliases:
+      - PubliclyAccessibleSpace
       - Publicly Accessible Space
     in_subset:
       - legal_eu_aiact_misc_subset

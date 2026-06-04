@@ -54,7 +54,6 @@ prefixes:
   dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
   dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
 
-  iso27701: https://w3id.org/lmodel/iso27701/
 default_prefix: legal_eu_gdpr
 default_range: string
 id_prefixes:
@@ -193,7 +192,7 @@ slots:
 classes:
 
   ConcernedSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:ConcernedSupervisoryAuthority
     description: |-
       Concerned Supervisory Authority' or 'supervisory authority concerned’
@@ -218,50 +217,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ConcernedSupervisoryAuthority
       dpv_extension_slug: legal/eu/gdpr
 
-  DataProtectionAuthority:
-    class_uri: legal_eu_gdpr:DataProtectionAuthority
-    description: |-
-      ‘Supervisory Authority’ or 'Data Protection Authority' means an
-      independent public authority which is established by a Member State
-      pursuant to Article 51
-    aliases:
-      - Data Protection Authority
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataProtectionAuthority
-      - dpv_legal_eu_gdpr_owl:DataProtectionAuthority
-    close_mappings:
-      - iso27701:SupervisoryAuthority
-    annotations:
-      dct_source: |2-
-         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
-        Version 2.1
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataProtectionAuthority
-      dpv_extension_slug: legal/eu/gdpr
-
-  DataSubject:
-    class_uri: legal_eu_gdpr:DataSubject
-    description: |-
-      Data Subject' means a natural person who can be identified, directly or
-      indirectly, in particular by reference to an identifier such as a name,
-      an identification number, location data, an online identifier or to one
-      or more factors specific to the physical, physiological, genetic,
-      mental, economic, cultural or social identity of that natural person
-    aliases:
-      - Data Subject
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataSubject
-      - dpv_legal_eu_gdpr_owl:DataSubject
-    close_mappings:
-      - iso27701:PIIPrincipal
-    annotations:
-      dct_source: GDPR Art.4-1
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
-      dpv_extension_slug: legal/eu/gdpr
-
   Establishment:
     is_a: DpvOrganisation
     class_uri: legal_eu_gdpr:Establishment
@@ -281,27 +236,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Establishment
       dpv_extension_slug: legal/eu/gdpr
 
-  InternationalOrganisation:
-    class_uri: legal_eu_gdpr:InternationalOrganisation
-    description: |-
-      ‘International Organisation’ means an organisation and its subordinate
-      bodies governed by public international law, or any other body which is
-      set up by, or on the basis of, an agreement between two or more
-      countries
-    aliases:
-      - International Organisation
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:InternationalOrganisation
-      - dpv_legal_eu_gdpr_owl:InternationalOrganisation
-    annotations:
-      dct_source: GDPR Art.4-26
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InternationalOrganisation
-      dpv_extension_slug: legal/eu/gdpr
-
   LeadSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:LeadSupervisoryAuthority
     description: |-
       Authority with the primary responsibility for dealing with a
@@ -342,6 +278,71 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Controller
       dpv_extension_slug: legal/eu/gdpr
 
+  LegalEuGdprDataProtectionAuthority:
+    is_a: DataProtectionAuthority
+    class_uri: legal_eu_gdpr:DataProtectionAuthority
+    description: |-
+      ‘Supervisory Authority’ or 'Data Protection Authority' means an
+      independent public authority which is established by a Member State
+      pursuant to Article 51
+    aliases:
+      - DataProtectionAuthority
+      - Data Protection Authority
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataProtectionAuthority
+      - dpv_legal_eu_gdpr_owl:DataProtectionAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataProtectionAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprDataSubject:
+    is_a: DataSubject
+    class_uri: legal_eu_gdpr:DataSubject
+    description: |-
+      Data Subject' means a natural person who can be identified, directly or
+      indirectly, in particular by reference to an identifier such as a name,
+      an identification number, location data, an online identifier or to one
+      or more factors specific to the physical, physiological, genetic,
+      mental, economic, cultural or social identity of that natural person
+    aliases:
+      - DataSubject
+      - Data Subject
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataSubject
+      - dpv_legal_eu_gdpr_owl:DataSubject
+    annotations:
+      dct_source: GDPR Art.4-1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprInternationalOrganisation:
+    is_a: InternationalOrganisation
+    class_uri: legal_eu_gdpr:InternationalOrganisation
+    description: |-
+      ‘International Organisation’ means an organisation and its subordinate
+      bodies governed by public international law, or any other body which is
+      set up by, or on the basis of, an agreement between two or more
+      countries
+    aliases:
+      - InternationalOrganisation
+      - International Organisation
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:InternationalOrganisation
+      - dpv_legal_eu_gdpr_owl:InternationalOrganisation
+    annotations:
+      dct_source: GDPR Art.4-26
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InternationalOrganisation
+      dpv_extension_slug: legal/eu/gdpr
+
   LegalEuGdprProcessor:
     is_a: DataProcessor
     class_uri: legal_eu_gdpr:Processor
@@ -379,8 +380,49 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Recipient
       dpv_extension_slug: legal/eu/gdpr
 
+  LegalEuGdprRepresentative:
+    is_a: Representative
+    class_uri: legal_eu_gdpr:Representative
+    description: |-
+      Representative’ means a natural or legal person established in the Union
+      who, designated by the controller or processor in writing pursuant to
+      Article 27, represents the controller or processor with regard to their
+      respective obligations under this Regulation
+    aliases:
+      - Representative
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Representative
+      - dpv_legal_eu_gdpr_owl:Representative
+    annotations:
+      dct_source: GDPR Art.4-17
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Representative
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprThirdParty:
+    is_a: ThirdParty
+    class_uri: legal_eu_gdpr:ThirdParty
+    description: |-
+      ‘Third Party’ means a natural or legal person, public authority, agency
+      or body other than the data subject, controller, processor and persons
+      who, under the direct authority of the controller or processor, are
+      authorised to process personal data
+    aliases:
+      - ThirdParty
+      - Third Party
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:ThirdParty
+      - dpv_legal_eu_gdpr_owl:ThirdParty
+    annotations:
+      dct_source: GDPR Art.4-10
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ThirdParty
+      dpv_extension_slug: legal/eu/gdpr
+
   LocalSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:LocalSupervisoryAuthority
     description: |-
       Authority associated with the main or local establishment of an
@@ -429,25 +471,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#MainEstablishment
       dpv_extension_slug: legal/eu/gdpr
 
-  Representative:
-    class_uri: legal_eu_gdpr:Representative
-    description: |-
-      Representative’ means a natural or legal person established in the Union
-      who, designated by the controller or processor in writing pursuant to
-      Article 27, represents the controller or processor with regard to their
-      respective obligations under this Regulation
-    aliases:
-      - Representative
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Representative
-      - dpv_legal_eu_gdpr_owl:Representative
-    annotations:
-      dct_source: GDPR Art.4-17
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Representative
-      dpv_extension_slug: legal/eu/gdpr
-
   SingleEstablishment:
     is_a: Establishment
     class_uri: legal_eu_gdpr:SingleEstablishment
@@ -462,25 +485,4 @@ classes:
     annotations:
       dct_source: GDPR Art.23
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#SingleEstablishment
-      dpv_extension_slug: legal/eu/gdpr
-
-  ThirdParty:
-    class_uri: legal_eu_gdpr:ThirdParty
-    description: |-
-      ‘Third Party’ means a natural or legal person, public authority, agency
-      or body other than the data subject, controller, processor and persons
-      who, under the direct authority of the controller or processor, are
-      authorised to process personal data
-    aliases:
-      - Third Party
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:ThirdParty
-      - dpv_legal_eu_gdpr_owl:ThirdParty
-    close_mappings:
-      - iso27701:ThirdParty
-    annotations:
-      dct_source: GDPR Art.4-10
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ThirdParty
       dpv_extension_slug: legal/eu/gdpr

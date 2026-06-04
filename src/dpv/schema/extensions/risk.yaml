@@ -8805,7 +8805,7 @@ classes:
       dpv_extension_slug: risk
 
   RiskAnalysis:
-    is_a: RiskAssessment
+    is_a: RiskRiskAssessment
     class_uri: risk:RiskAnalysis
     description: |-
       A technique or method used to analyse and identify risk levels, sources,
@@ -8820,24 +8820,6 @@ classes:
       - dpv_risk_owl:RiskAnalysis
     annotations:
       upstream_iri: https://w3id.org/dpv/risk/owl#RiskAnalysis
-      dpv_extension_slug: risk
-
-  RiskAssessment:
-    is_a: RiskManagement
-    class_uri: risk:RiskAssessment
-    description: |-
-      Assessment of risk involving its identification, analysis, and
-      evaluation
-    aliases:
-      - Risk Assessment
-    in_subset:
-      - risk_subset
-    exact_mappings:
-      - dpv_risk:RiskAssessment
-      - dpv_risk_owl:RiskAssessment
-    annotations:
-      dct_source: ISO 31073:2022 Risk management vocabulary
-      upstream_iri: https://w3id.org/dpv/risk/owl#RiskAssessment
       dpv_extension_slug: risk
 
   RiskControl:
@@ -8871,7 +8853,7 @@ classes:
       dpv_extension_slug: risk
 
   RiskEvaluation:
-    is_a: RiskAssessment
+    is_a: RiskRiskAssessment
     class_uri: risk:RiskEvaluation
     description: |-
       Process determining acceptability or tolerance of risk by comparing risk
@@ -8888,7 +8870,7 @@ classes:
       dpv_extension_slug: risk
 
   RiskIdentification:
-    is_a: RiskAssessment
+    is_a: RiskRiskAssessment
     class_uri: risk:RiskIdentification
     description: |-
       Identification of risks involving identification of risk sources,
@@ -9021,6 +9003,25 @@ classes:
       - dpv_risk_owl:RiskPerception
     annotations:
       upstream_iri: https://w3id.org/dpv/risk/owl#RiskPerception
+      dpv_extension_slug: risk
+
+  RiskRiskAssessment:
+    is_a: RiskManagement
+    class_uri: risk:RiskAssessment
+    description: |-
+      Assessment of risk involving its identification, analysis, and
+      evaluation
+    aliases:
+      - RiskAssessment
+      - Risk Assessment
+    in_subset:
+      - risk_subset
+    exact_mappings:
+      - dpv_risk:RiskAssessment
+      - dpv_risk_owl:RiskAssessment
+    annotations:
+      dct_source: ISO 31073:2022 Risk management vocabulary
+      upstream_iri: https://w3id.org/dpv/risk/owl#RiskAssessment
       dpv_extension_slug: risk
 
   RiskSource:

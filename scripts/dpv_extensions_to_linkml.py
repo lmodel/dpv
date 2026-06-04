@@ -428,13 +428,31 @@ def _owner_prefix_for(slug: str, ext: ExtensionSpec) -> str:
     return _slug_to_pascal(slug)
 
 
-def _class_name_for(slug: str, local: str, ext: ExtensionSpec) -> str:
+def _class_name_for(slug: str, local: str, ext: ExtensionSpec,
+                    core_class_names: frozenset[str] = frozenset()) -> str:
     """Resolve a (slug, local) reference to its LinkML class name.
 
     Encapsulates the collision-prone rename: e.g. (``"ai"``, ``"Data"``) ->
     ``AiData`` when ``ext.slug == "ai"``; (``""``, ``"Data"``) -> ``DpvData``.
+
+    ``core_class_names`` enables *dynamic* collision detection: when the
+    reference points at *this* extension's own namespace (``slug == ext.slug``)
+    and the resulting unprefixed name would shadow a core class name
+    (e.g. AI redefines ``RiskConcept`` already declared by
+    ``dpv_risk_notice``), the name is force-prefixed with this extension's
+    pascal prefix (``AiRiskConcept``). This catches DPV-domain collisions
+    that are not in the static ``_COLLISION_PRONE_CLASSES`` list. Names
+    already prefixed by the static rename are left alone.
     """
-    return core.sanitise_class_name(local, owner_prefix=_owner_prefix_for(slug, ext))
+    owner_prefix = _owner_prefix_for(slug, ext)
+    name = core.sanitise_class_name(local, owner_prefix=owner_prefix)
+    if slug == ext.slug and core_class_names:
+        unprefixed = core.ascii_safe_local(local).replace("-", "")
+        # Only fire dynamic rename if the static collision list did NOT already
+        # prefix the name (otherwise we'd double-prefix).
+        if name == unprefixed and unprefixed in core_class_names:
+            return f"{ext.pascal_prefix}{unprefixed}"
+    return name
 
 
 def _extract_classes_ns(
@@ -442,6 +460,7 @@ def _extract_classes_ns(
     g_can: Graph | None,
     ext: ExtensionSpec,
     foreign_log: set[str],
+    core_class_names: frozenset[str] = frozenset(),
 ) -> dict[str, dict]:
     """Extract every owl:Class in ``ext.owl_ns`` as a LinkML class.
 
@@ -467,7 +486,7 @@ def _extract_classes_ns(
         # ``cls_local`` is retained for canonical-NS URI reconstruction
         # (RDF graph lookup) and for traceability via ``aliases``.
         cls_local_safe = core.ascii_safe_local(cls_local)
-        cls_name = core.sanitise_class_name(cls_local, owner_prefix=ext.pascal_prefix)
+        cls_name = _class_name_for(ext.slug, cls_local, ext, core_class_names)
         entry: dict[str, Any] = {}
 
         # ---- description -----------------------------------------------
@@ -491,7 +510,7 @@ def _extract_classes_ns(
 
         if named_parents:
             parent_slug, parent_local = named_parents[0]
-            parent_name = _class_name_for(parent_slug, parent_local, ext)
+            parent_name = _class_name_for(parent_slug, parent_local, ext, core_class_names)
             # Guard: a class can never be its own parent.
             if parent_name and parent_name != cls_name:
                 entry["is_a"] = parent_name
@@ -505,7 +524,7 @@ def _extract_classes_ns(
             if fl is None:
                 continue
             slug, local = fl
-            type_mixins.append(_class_name_for(slug, local, ext))
+            type_mixins.append(_class_name_for(slug, local, ext, core_class_names))
             if slug != ext.slug:
                 foreign_log.add(slug)
 
@@ -517,7 +536,7 @@ def _extract_classes_ns(
                 seen.add(m)
         if len(named_parents) > 1:
             for parent_slug2, local in named_parents[1:]:
-                m = _class_name_for(parent_slug2, local, ext)
+                m = _class_name_for(parent_slug2, local, ext, core_class_names)
                 if m and m not in seen and m != cls_name:
                     dedup_mixins.append(m)
                     seen.add(m)
@@ -618,6 +637,7 @@ def _extract_slots_ns(
     g_can: Graph | None,
     ext: ExtensionSpec,
     foreign_log: set[str],
+    core_class_names: frozenset[str] = frozenset(),
 ) -> dict[str, dict]:
     slots: dict[str, dict] = {}
 
@@ -661,7 +681,7 @@ def _extract_slots_ns(
             if isinstance(o, URIRef):
                 fl = _family_local(o)
                 if fl:
-                    domains.append(_class_name_for(fl[0], fl[1], ext))
+                    domains.append(_class_name_for(fl[0], fl[1], ext, core_class_names))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
         if domains:
@@ -680,7 +700,7 @@ def _extract_slots_ns(
             for o in range_uris:
                 fl = _family_local(o)
                 if fl:
-                    dpv_ranges.append(_class_name_for(fl[0], fl[1], ext))
+                    dpv_ranges.append(_class_name_for(fl[0], fl[1], ext, core_class_names))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
             if len(dpv_ranges) == 1:
@@ -804,6 +824,27 @@ def _build_core_group_index(schema_dir: Path) -> dict[str, str]:
         for name in list(doc.get("classes") or {}) + list(doc.get("slots") or {}):
             index.setdefault(name, group)
     return index
+
+
+def _build_core_class_names(schema_dir: Path) -> frozenset[str]:
+    """Return the set of all class names defined by any core ``dpv_<group>.yaml``.
+
+    Used for dynamic collision detection so an extension class that shadows a
+    core class name (e.g. AI redefines ``RiskConcept`` already declared by
+    ``dpv_risk_notice``) is auto-prefixed with the extension's pascal prefix
+    (``AiRiskConcept``). Without this, the umbrella merge built by
+    ``gen-project`` triggers ``ValueError: Conflicting URIs ... for item: X``.
+    Slot names are intentionally excluded: LinkML slot/class namespaces are
+    independent for ``definition_uri`` purposes.
+    """
+    names: set[str] = set()
+    for group in core.SEMANTIC_GROUPS:
+        f = schema_dir / f"dpv_{group}.yaml"
+        if not f.exists():
+            continue
+        doc = core.yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+        names.update((doc.get("classes") or {}).keys())
+    return frozenset(names)
 
 
 def _referenced_core_groups(
@@ -1072,6 +1113,7 @@ def generate(
     # imports only the groups it specialises. Built from the group schemas the
     # core generator emits into the parent of ``output_dir`` (src/dpv/schema).
     core_index = _build_core_group_index(output_dir.parent)
+    core_class_names = _build_core_class_names(output_dir.parent)
     if not core_index:
         print("   WARNING: no dpv_<group>.yaml schemas found next to "
               f"{output_dir}; run dpv_core_to_linkml.py first. Extensions will "
@@ -1091,8 +1133,8 @@ def generate(
                   file=sys.stderr)
 
         foreign: set[str] = set()
-        classes = _extract_classes_ns(g_owl, g_can, ext, foreign)
-        slots = _extract_slots_ns(g_owl, g_can, ext, foreign)
+        classes = _extract_classes_ns(g_owl, g_can, ext, foreign, core_class_names)
+        slots = _extract_slots_ns(g_owl, g_can, ext, foreign, core_class_names)
         slots, moved = core._split_collision_slots_to_attributes(classes, slots)
         if moved and report:
             print(f"   collision-prone slots moved to attributes: {moved}",
@@ -1140,8 +1182,8 @@ def generate(
             g_owl_s = _parse_ttl(sub.owl_path)
             g_can_s = _parse_ttl(sub.can_path) if sub.can_path else None
             sub_foreign: set[str] = set()
-            sub_classes = _extract_classes_ns(g_owl_s, g_can_s, ext, sub_foreign)
-            sub_slots = _extract_slots_ns(g_owl_s, g_can_s, ext, sub_foreign)
+            sub_classes = _extract_classes_ns(g_owl_s, g_can_s, ext, sub_foreign, core_class_names)
+            sub_slots = _extract_slots_ns(g_owl_s, g_can_s, ext, sub_foreign, core_class_names)
             sub_slots, _ = core._split_collision_slots_to_attributes(
                 sub_classes, sub_slots,
             )

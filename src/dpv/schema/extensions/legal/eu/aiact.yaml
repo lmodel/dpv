@@ -7,8 +7,9 @@ description: |-
   semantic-group schema(s) `dpv:schema/dpv_common`,
   `dpv:schema/dpv_legal_basis`, `dpv:schema/dpv_entities`,
   `dpv:schema/dpv_personal_data`, `dpv:schema/dpv_processing`,
-  `dpv:schema/dpv_risk_notice` for the abstract parent classes this
-  extension specialises (instead of the full umbrella `dpv:schema/dpv`).
+  `dpv:schema/dpv_risk_notice`, `dpv:schema/dpv_consent` for the abstract
+  parent classes this extension specialises (instead of the full umbrella
+  `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/legal/eu/aiact
@@ -85,6 +86,7 @@ imports:
   - dpv:schema/dpv_personal_data
   - dpv:schema/dpv_processing
   - dpv:schema/dpv_risk_notice
+  - dpv:schema/dpv_consent
   - dpv:schema/extensions/ai
   - dpv:schema/extensions/pd
   - dpv:schema/extensions/risk
@@ -326,35 +328,6 @@ classes:
     annotations:
       dct_source: AIA (Art. 3(6))
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIImporter
-      dpv_extension_slug: legal/eu/aiact
-
-  AILiteracy:
-    mixins:
-      - OrganisationalMeasure
-    class_uri: legal_eu_aiact:AILiteracy
-    description: |-
-      Skills, knowledge and understanding that allow providers, deployers and
-      affected persons, taking into account their respective rights and
-      obligations in the context of this Regulation, to make an informed
-      deployment of AI systems, as well as to gain awareness about the
-      opportunities and risks of AI and possible harm it can cause
-    aliases:
-      - AI Literacy
-    comments:
-      - |-
-        AI Literacy should take into account the subject's level of technical
-        knowledge, experience, education and training -- these can be
-        represented through the corresponding concepts in the PD extension
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:AILiteracy
-      - dpv_legal_eu_aiact_owl:AILiteracy
-    related_mappings:
-      - iso42001:AIReferenceControl
-    annotations:
-      dct_source: AIA (Art. 3(56))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AILiteracy
       dpv_extension_slug: legal/eu/aiact
 
   AIOffice:
@@ -1043,28 +1016,6 @@ classes:
     annotations:
       dct_source: ' Annex III'
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#EmploymentSector
-      dpv_extension_slug: legal/eu/aiact
-
-  FRIA:
-    is_a: Assessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: legal_eu_aiact:FRIA
-    description: |-
-      An assessment undertaken to evaluate how the AI use of an AI system
-      might impact fundamental rights
-    aliases:
-      - Fundamental Rights Impact Assessment
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:FRIA
-      - dpv_legal_eu_aiact_owl:FRIA
-    close_mappings:
-      - iso42001:AIRisk
-    annotations:
-      dct_source: AIA(Art. 27)
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#FRIA
       dpv_extension_slug: legal/eu/aiact
 
   GPAIModel:
@@ -2288,28 +2239,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#HumanOverseer
       dpv_extension_slug: legal/eu/aiact
 
-  InformedConsent:
-    mixins:
-      - LegalBasis
-    class_uri: legal_eu_aiact:InformedConsent
-    description: |-
-      Informed consent means a (real world test) subject’s freely given,
-      specific, unambiguous and voluntary expression of his or her willingness
-      to participate in a particular testing in real world conditions, after
-      having been informed of all aspects of the testing that are relevant to
-      the subject’s decision to participate
-    aliases:
-      - Informed Consent
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:InformedConsent
-      - dpv_legal_eu_aiact_owl:InformedConsent
-    annotations:
-      dct_source: AIA (Art. 3(59))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#InformedConsent
-      dpv_extension_slug: legal/eu/aiact
-
   InstructionForUse:
     is_a: Instructions
     mixins:
@@ -2383,6 +2312,140 @@ classes:
     annotations:
       dct_source: ' Annex III'
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#LawEnforcementSector
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactAILiteracy:
+    is_a: AILiteracy
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_aiact:AILiteracy
+    description: |-
+      Skills, knowledge and understanding that allow providers, deployers and
+      affected persons, taking into account their respective rights and
+      obligations in the context of this Regulation, to make an informed
+      deployment of AI systems, as well as to gain awareness about the
+      opportunities and risks of AI and possible harm it can cause
+    aliases:
+      - AILiteracy
+      - AI Literacy
+    comments:
+      - |-
+        AI Literacy should take into account the subject's level of technical
+        knowledge, experience, education and training -- these can be
+        represented through the corresponding concepts in the PD extension
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AILiteracy
+      - dpv_legal_eu_aiact_owl:AILiteracy
+    annotations:
+      dct_source: AIA (Art. 3(56))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AILiteracy
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactFRIA:
+    is_a: Assessment
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_aiact:FRIA
+    description: |-
+      An assessment undertaken to evaluate how the AI use of an AI system
+      might impact fundamental rights
+    aliases:
+      - FRIA
+      - Fundamental Rights Impact Assessment
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:FRIA
+      - dpv_legal_eu_aiact_owl:FRIA
+    annotations:
+      dct_source: AIA(Art. 27)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#FRIA
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactInformedConsent:
+    is_a: InformedConsent
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_aiact:InformedConsent
+    description: |-
+      Informed consent means a (real world test) subject’s freely given,
+      specific, unambiguous and voluntary expression of his or her willingness
+      to participate in a particular testing in real world conditions, after
+      having been informed of all aspects of the testing that are relevant to
+      the subject’s decision to participate
+    aliases:
+      - InformedConsent
+      - Informed Consent
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:InformedConsent
+      - dpv_legal_eu_aiact_owl:InformedConsent
+    annotations:
+      dct_source: AIA (Art. 3(59))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#InformedConsent
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactPubliclyAccessibleSpace:
+    is_a: PublicLocation
+    mixins:
+      - DpvLocation
+    class_uri: legal_eu_aiact:PubliclyAccessibleSpace
+    description: |-
+      Any publicly or privately owned physical place accessible to an
+      undetermined number of natural persons, regardless of whether certain
+      conditions for access may apply, and regardless of the potential
+      capacity restrictions
+    aliases:
+      - PubliclyAccessibleSpace
+      - Publicly Accessible Space
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:PubliclyAccessibleSpace
+      - dpv_legal_eu_aiact_owl:PubliclyAccessibleSpace
+    annotations:
+      dct_source: AIA(Art. 3(44))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PubliclyAccessibleSpace
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactRisk:
+    is_a: Risk
+    class_uri: legal_eu_aiact:Risk
+    description: |-
+      The combination of the probability of an occurrence of harm and the
+      severity of that harm
+    aliases:
+      - Risk
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:Risk
+      - dpv_legal_eu_aiact_owl:Risk
+    annotations:
+      dct_source: AIA (Art. 3(2))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#Risk
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactRiskLevel:
+    is_a: RiskLevel
+    class_uri: legal_eu_aiact:RiskLevel
+    description: |-
+      Enumeration of AI Act's risk-based categorisation which determines the
+      prohibitions and obligations for AI systems
+    aliases:
+      - RiskLevel
+      - Risk Level
+    in_subset:
+      - legal_eu_aiact_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:RiskLevel
+      - dpv_legal_eu_aiact_owl:RiskLevel
+    annotations:
+      dct_source: AI Act
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#RiskLevel
       dpv_extension_slug: legal/eu/aiact
 
   MarketAvailabilityStatus:
@@ -2981,28 +3044,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PublicSector
       dpv_extension_slug: legal/eu/aiact
 
-  PubliclyAccessibleSpace:
-    is_a: PublicLocation
-    mixins:
-      - DpvLocation
-    class_uri: legal_eu_aiact:PubliclyAccessibleSpace
-    description: |-
-      Any publicly or privately owned physical place accessible to an
-      undetermined number of natural persons, regardless of whether certain
-      conditions for access may apply, and regardless of the potential
-      capacity restrictions
-    aliases:
-      - Publicly Accessible Space
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:PubliclyAccessibleSpace
-      - dpv_legal_eu_aiact_owl:PubliclyAccessibleSpace
-    annotations:
-      dct_source: AIA(Art. 3(44))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PubliclyAccessibleSpace
-      dpv_extension_slug: legal/eu/aiact
-
   PutIntoService:
     is_a: ServiceSupplyStatus
     class_uri: legal_eu_aiact:PutIntoService
@@ -3195,48 +3236,10 @@ classes:
         https://w3id.org/dpv/legal/eu/aiact/owl#RemoteBiometricIdentificationSystem
       dpv_extension_slug: legal/eu/aiact
 
-  Risk:
-    class_uri: legal_eu_aiact:Risk
-    description: |-
-      The combination of the probability of an occurrence of harm and the
-      severity of that harm
-    aliases:
-      - Risk
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:Risk
-      - dpv_legal_eu_aiact_owl:Risk
-    close_mappings:
-      - iso42001:AIRisk
-    annotations:
-      dct_source: AIA (Art. 3(2))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#Risk
-      dpv_extension_slug: legal/eu/aiact
-
-  RiskLevel:
-    class_uri: legal_eu_aiact:RiskLevel
-    description: |-
-      Enumeration of AI Act's risk-based categorisation which determines the
-      prohibitions and obligations for AI systems
-    aliases:
-      - Risk Level
-    in_subset:
-      - legal_eu_aiact_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:RiskLevel
-      - dpv_legal_eu_aiact_owl:RiskLevel
-    close_mappings:
-      - iso42001:AIRisk
-    annotations:
-      dct_source: AI Act
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#RiskLevel
-      dpv_extension_slug: legal/eu/aiact
-
   RiskLevelHigh:
     is_a: RiskLevelPermitted
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -3258,7 +3261,7 @@ classes:
   RiskLevelHighA61:
     is_a: RiskLevelHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh-A6-1
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -3279,7 +3282,7 @@ classes:
   RiskLevelHighA62:
     is_a: RiskLevelHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh-A6-2
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -3300,7 +3303,7 @@ classes:
   RiskLevelMinimal:
     is_a: RiskLevelNotHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelMinimal
     description: |-
       Risk Level categorising an AI system as not being prohibited or
@@ -3326,7 +3329,7 @@ classes:
   RiskLevelNotHigh:
     is_a: RiskLevelPermitted
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelNotHigh
     description: |-
       Risk Level categorising an AI system as not being "high-risk" as defined
@@ -3347,7 +3350,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   RiskLevelPermitted:
-    is_a: RiskLevel
+    is_a: LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelPermitted
     description: |-
       Risk Level representing "AI practices" are permitted i.e. not prohibited
@@ -3368,7 +3371,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   RiskLevelProhibited:
-    is_a: RiskLevel
+    is_a: LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelProhibited
     description: |-
       Risk Level prohibiting "AI practices" as defined in the AI Act Article 5
@@ -3389,7 +3392,7 @@ classes:
   RiskLevelTransparencyRequired:
     is_a: RiskLevelNotHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelTransparencyRequired
     description: |-
       Risk Level categorising an AI system as not high-risk but where
@@ -3570,7 +3573,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   SystemicRisk:
-    is_a: Risk
+    is_a: LegalEuAiactRisk
     class_uri: legal_eu_aiact:SystemicRisk
     description: |-
       Q risk that is specific to the high-impact capabilities of

@@ -183,20 +183,6 @@ classes:
         https://w3id.org/dpv/legal/de/gdng/owl#DataProcessingHealthcareFacility
       dpv_extension_slug: legal/de/gdng
 
-  DataSubject:
-    class_uri: legal_de_gdng:DataSubject
-    aliases:
-      - Betroffene Person
-    in_subset:
-      - legal_de_gdng_actors_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:DataSubject
-      - dpv_legal_de_gdng_owl:DataSubject
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
-      dpv_extension_slug: legal/de/gdng
-
   FederalStateCentresForCancerRegistryData:
     is_a: HealthDataHolder
     class_uri: legal_de_gdng:FederalStateCentresForCancerRegistryData
@@ -301,6 +287,36 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
       dpv_extension_slug: legal/de/gdng
 
+  LegalDeGdngDataSubject:
+    class_uri: legal_de_gdng:DataSubject
+    aliases:
+      - DataSubject
+      - Betroffene Person
+    in_subset:
+      - legal_de_gdng_actors_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:DataSubject
+      - dpv_legal_de_gdng_owl:DataSubject
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngThirdParty:
+    class_uri: legal_de_gdng:ThirdParty
+    aliases:
+      - ThirdParty
+      - Dritte
+    in_subset:
+      - legal_de_gdng_actors_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:ThirdParty
+      - dpv_legal_de_gdng_owl:ThirdParty
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ThirdParty
+      dpv_extension_slug: legal/de/gdng
+
   ModelProjectGenomeSequencingPlatform:
     is_a: RegulatedHealthDataHolder
     class_uri: legal_de_gdng:ModelProjectGenomeSequencingPlatform
@@ -381,18 +397,4 @@ classes:
       dct_source: '[[GDNG]] § 3(2) point 4'
       upstream_iri: |-
         https://w3id.org/dpv/legal/de/gdng/owl#ResponsibleDataHoldingAndMediatingBody
-      dpv_extension_slug: legal/de/gdng
-
-  ThirdParty:
-    class_uri: legal_de_gdng:ThirdParty
-    aliases:
-      - Dritte
-    in_subset:
-      - legal_de_gdng_actors_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:ThirdParty
-      - dpv_legal_de_gdng_owl:ThirdParty
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ThirdParty
       dpv_extension_slug: legal/de/gdng

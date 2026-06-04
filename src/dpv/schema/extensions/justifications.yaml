@@ -707,6 +707,26 @@ classes:
       upstream_iri: https://w3id.org/dpv/justifications/owl#JudicialProceedingsImpaired
       dpv_extension_slug: justifications
 
+  JustificationsLegalObligation:
+    is_a: ExerciseJustification
+    mixins:
+      - Justification
+    class_uri: justifications:LegalObligation
+    description: |-
+      Justification that the process should be carried out due to it being a
+      legal obligation
+    aliases:
+      - LegalObligation
+      - Legal Obligation
+    in_subset:
+      - justifications_subset
+    exact_mappings:
+      - dpv_justifications:LegalObligation
+      - dpv_justifications_owl:LegalObligation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/justifications/owl#LegalObligation
+      dpv_extension_slug: justifications
+
   LackOfIntent:
     is_a: NonFulfilmentJustification
     mixins:
@@ -809,27 +829,6 @@ classes:
       - dpv_justifications_owl:LegalClaimImpaired
     annotations:
       upstream_iri: https://w3id.org/dpv/justifications/owl#LegalClaimImpaired
-      dpv_extension_slug: justifications
-
-  LegalObligation:
-    is_a: ExerciseJustification
-    mixins:
-      - Justification
-    class_uri: justifications:LegalObligation
-    description: |-
-      Justification that the process should be carried out due to it being a
-      legal obligation
-    aliases:
-      - Legal Obligation
-    in_subset:
-      - justifications_subset
-    exact_mappings:
-      - dpv_justifications:LegalObligation
-      - dpv_justifications_owl:LegalObligation
-    related_mappings:
-      - oscal:ResponsibilityStatement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/justifications/owl#LegalObligation
       dpv_extension_slug: justifications
 
   LegalObligationImpaired:

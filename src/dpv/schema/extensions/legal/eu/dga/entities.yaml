@@ -391,6 +391,26 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#EuropeanDataInnovationBoard
       dpv_extension_slug: legal/eu/dga
 
+  LegalEuDgaPublicSectorBody:
+    is_a: PublicSectorBody
+    class_uri: legal_eu_dga:PublicSectorBody
+    description: |-
+      ‘Public Sector Body’ means the State, regional or local authorities,
+      bodies governed by public law or associations formed by one or more such
+      authorities, or one or more such bodies governed by public law
+    aliases:
+      - PublicSectorBody
+      - Public Sector Body
+    in_subset:
+      - legal_eu_dga_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:PublicSectorBody
+      - dpv_legal_eu_dga_owl:PublicSectorBody
+    annotations:
+      dct_source: DGA 2.17
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicSectorBody
+      dpv_extension_slug: legal/eu/dga
+
   LegalRepresentative:
     is_a: Representative
     class_uri: legal_eu_dga:LegalRepresentative
@@ -479,26 +499,6 @@ classes:
     annotations:
       dct_source: DGA 2.18
       upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicLawGovernedBody
-      dpv_extension_slug: legal/eu/dga
-
-  PublicSectorBody:
-    class_uri: legal_eu_dga:PublicSectorBody
-    description: |-
-      ‘Public Sector Body’ means the State, regional or local authorities,
-      bodies governed by public law or associations formed by one or more such
-      authorities, or one or more such bodies governed by public law
-    aliases:
-      - Public Sector Body
-    in_subset:
-      - legal_eu_dga_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_dga:PublicSectorBody
-      - dpv_legal_eu_dga_owl:PublicSectorBody
-    related_mappings:
-      - iso27701:PIIController
-    annotations:
-      dct_source: DGA 2.17
-      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicSectorBody
       dpv_extension_slug: legal/eu/dga
 
   RegionalSIPProvider:

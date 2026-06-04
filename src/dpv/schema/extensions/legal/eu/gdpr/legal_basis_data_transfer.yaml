@@ -312,7 +312,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   A491a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - DataTransferLegalBasis

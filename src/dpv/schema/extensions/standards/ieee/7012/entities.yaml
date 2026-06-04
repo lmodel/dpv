@@ -256,13 +256,14 @@ classes:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
       dpv_extension_slug: standards/ieee/7012
 
-  ThirdParty:
+  StandardsIeee7012ThirdParty:
     is_a: LegalEntity
     class_uri: standards_ieee_7012:ThirdParty
     description: |-
       A party other than the Person and Entity as first and second parties
       respectively in the contractual interaction
     aliases:
+      - ThirdParty
       - Third Party
     in_subset:
       - standards_ieee_7012_entities_subset

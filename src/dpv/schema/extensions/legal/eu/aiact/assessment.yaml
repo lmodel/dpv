@@ -67,6 +67,7 @@ imports:
   - dpv:schema/dpv_legal_basis
   - dpv:schema/dpv_entities
   - dpv:schema/dpv_personal_data
+  - dpv:schema/dpv_consent
   - dpv:schema/extensions/legal/eu/aiact
 
 subsets:
@@ -164,28 +165,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#ConformityAssessment
       dpv_extension_slug: legal/eu/aiact
 
-  FRIA:
-    is_a: Assessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: legal_eu_aiact:FRIA
-    description: |-
-      An assessment undertaken to evaluate how the AI use of an AI system
-      might impact fundamental rights
-    aliases:
-      - Fundamental Rights Impact Assessment
-    in_subset:
-      - legal_eu_aiact_assessment_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:FRIA
-      - dpv_legal_eu_aiact_owl:FRIA
-    close_mappings:
-      - iso42001:AIRisk
-    annotations:
-      dct_source: AIA(Art. 27)
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#FRIA
-      dpv_extension_slug: legal/eu/aiact
-
   HighRiskAIAssessment:
     is_a: Assessment
     mixins:
@@ -208,7 +187,29 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#HighRiskAIAssessment
       dpv_extension_slug: legal/eu/aiact
 
-  InformedConsent:
+  LegalEuAiactFRIA:
+    is_a: Assessment
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_aiact:FRIA
+    description: |-
+      An assessment undertaken to evaluate how the AI use of an AI system
+      might impact fundamental rights
+    aliases:
+      - FRIA
+      - Fundamental Rights Impact Assessment
+    in_subset:
+      - legal_eu_aiact_assessment_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:FRIA
+      - dpv_legal_eu_aiact_owl:FRIA
+    annotations:
+      dct_source: AIA(Art. 27)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#FRIA
+      dpv_extension_slug: legal/eu/aiact
+
+  LegalEuAiactInformedConsent:
+    is_a: InformedConsent
     mixins:
       - LegalBasis
     class_uri: legal_eu_aiact:InformedConsent
@@ -219,6 +220,7 @@ classes:
       having been informed of all aspects of the testing that are relevant to
       the subject’s decision to participate
     aliases:
+      - InformedConsent
       - Informed Consent
     in_subset:
       - legal_eu_aiact_assessment_subset

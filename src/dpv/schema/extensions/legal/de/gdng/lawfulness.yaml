@@ -154,9 +154,10 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthcareDataProcessing
       dpv_extension_slug: legal/de/gdng
 
-  LegitimateInterest:
+  LegalDeGdngLegitimateInterest:
     class_uri: legal_de_gdng:LegitimateInterest
     aliases:
+      - LegitimateInterest
       - Berechtigtes Interesse
     in_subset:
       - legal_de_gdng_lawfulness_subset
@@ -166,6 +167,37 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(3) point 3'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#LegitimateInterest
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngNecessity:
+    class_uri: legal_de_gdng:Necessity
+    aliases:
+      - Necessity
+      - Erforderlichkeit
+    in_subset:
+      - legal_de_gdng_lawfulness_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Necessity
+      - dpv_legal_de_gdng_owl:Necessity
+    annotations:
+      dct_source: '[[GDNG]] § 6(3) point 1'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Necessity
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngTransfer:
+    class_uri: legal_de_gdng:Transfer
+    description: Weitergabe von personenbezogenen Daten an Dritte
+    aliases:
+      - Transfer
+      - Weitergabe
+    in_subset:
+      - legal_de_gdng_lawfulness_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Transfer
+      - dpv_legal_de_gdng_owl:Transfer
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Transfer
       dpv_extension_slug: legal/de/gdng
 
   MedicalRehabNursingResearch:
@@ -183,20 +215,6 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(1) point 2'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#MedicalRehabNursingResearch
-      dpv_extension_slug: legal/de/gdng
-
-  Necessity:
-    class_uri: legal_de_gdng:Necessity
-    aliases:
-      - Erforderlichkeit
-    in_subset:
-      - legal_de_gdng_lawfulness_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Necessity
-      - dpv_legal_de_gdng_owl:Necessity
-    annotations:
-      dct_source: '[[GDNG]] § 6(3) point 1'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Necessity
       dpv_extension_slug: legal/de/gdng
 
   P61:
@@ -425,19 +443,4 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(1) point 3'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Statistics
-      dpv_extension_slug: legal/de/gdng
-
-  Transfer:
-    class_uri: legal_de_gdng:Transfer
-    description: Weitergabe von personenbezogenen Daten an Dritte
-    aliases:
-      - Weitergabe
-    in_subset:
-      - legal_de_gdng_lawfulness_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Transfer
-      - dpv_legal_de_gdng_owl:Transfer
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Transfer
       dpv_extension_slug: legal/de/gdng

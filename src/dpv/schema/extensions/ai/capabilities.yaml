@@ -63,6 +63,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_processing
   - dpv:schema/extensions/ai
 
 subsets:
@@ -89,6 +90,26 @@ classes:
     annotations:
       dct_source: ' Defining Artificial Intelligence 2.0'
       upstream_iri: https://w3id.org/dpv/ai/owl#ActionRecognition
+      dpv_extension_slug: ai
+
+  AiProfiling:
+    is_a: HumanOrientedCapability
+    mixins:
+      - Capability
+      - Profiling
+    class_uri: ai:Profiling
+    description: |-
+      Capability where AI is used to construct a profile of an individual
+      (human) or a group of individuals
+    aliases:
+      - Profiling
+    in_subset:
+      - ai_capabilities_subset
+    exact_mappings:
+      - dpv_ai:Profiling
+      - dpv_ai_owl:Profiling
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#Profiling
       dpv_extension_slug: ai
 
   AudioCapability:
@@ -883,25 +904,6 @@ classes:
       - dpv_ai_owl:PostTimeBiometricIdentification
     annotations:
       upstream_iri: https://w3id.org/dpv/ai/owl#PostTimeBiometricIdentification
-      dpv_extension_slug: ai
-
-  Profiling:
-    is_a: HumanOrientedCapability
-    mixins:
-      - Capability
-    class_uri: ai:Profiling
-    description: |-
-      Capability where AI is used to construct a profile of an individual
-      (human) or a group of individuals
-    aliases:
-      - Profiling
-    in_subset:
-      - ai_capabilities_subset
-    exact_mappings:
-      - dpv_ai:Profiling
-      - dpv_ai_owl:Profiling
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#Profiling
       dpv_extension_slug: ai
 
   QuestionAnswering:

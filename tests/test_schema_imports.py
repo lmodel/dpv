@@ -100,3 +100,49 @@ def test_extension_collision_pairs_coexist(
     assert core_name in classes
     assert sv.get_class(own_name).class_uri == own_uri
     assert sv.get_class(core_name).class_uri == core_uri
+
+
+def test_merged_schema_loads_without_collision(
+    importmap: dict[str, str]
+) -> None:
+    """Loading the pre-merged ``tmp/dpv.yaml`` (which flattens every core
+    group AND every extension into a single self-contained schema) must
+    not raise ``ValueError: Conflicting URIs``.
+
+    This is the build artefact ``gen-project`` consumes — it's the only
+    surface where two sibling trees (e.g. a core semantic group and an
+    unrelated extension) end up in the same ``SchemaView``. The
+    per-schema parametrized loads above don't surface cross-tree
+    collisions because each extension's import closure may shadow the
+    colliding core group locally.
+
+    Example of the class this test catches: ``ai:RiskConcept`` vs.
+    ``dpv:RiskConcept`` (both originally emitted as ``RiskConcept`` and
+    only colliding in the merged build).
+    """
+    merged = REPO_ROOT / "tmp" / "dpv.yaml"
+    if not merged.exists():
+        pytest.skip(f"merged schema not built; run `just _merged-schema`: {merged}")
+    sv = _load(str(merged), importmap)
+    classes = sv.all_classes()
+    assert classes, "merged schema resolved no classes"
+
+
+def test_ai_risk_concept_collision_resolved(importmap: dict[str, str]) -> None:
+    """``ai:RiskConcept`` (renamed ``AiRiskConcept``) coexists with core
+    ``dpv:RiskConcept``.
+
+    Reproduces the second collision discovered after the ``DpvData`` fix:
+    AI redefined ``RiskConcept`` locally and ``extensions/ai.yaml`` imports
+    ``dpv:schema/dpv_risk_notice``, so both arrive in the same
+    ``SchemaView``. Pre-fix, this raised
+    ``ValueError: Conflicting URIs ... for item: RiskConcept``. The
+    generator now dynamically detects core class-name shadowing and
+    auto-prefixes such extension classes with the extension's pascal slug.
+    """
+    sv = _load(str(SCHEMA_ROOT / "extensions" / "ai.yaml"), importmap)
+    classes = sv.all_classes()
+    assert "AiRiskConcept" in classes
+    assert "RiskConcept" in classes
+    assert sv.get_class("AiRiskConcept").class_uri == "ai:RiskConcept"
+    assert sv.get_class("RiskConcept").class_uri == "dpv:RiskConcept"

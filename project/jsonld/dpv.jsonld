@@ -41580,9 +41580,9 @@
   ],
   "metamodel_version": "1.11.0",
   "source_file": "dpv.yaml",
-  "source_file_date": "2026-06-04T01:28:27",
+  "source_file_date": "2026-06-04T02:15:55",
   "source_file_size": 854723,
-  "generation_date": "2026-06-04T01:28:32",
+  "generation_date": "2026-06-04T02:16:02",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dpv.context.jsonld",

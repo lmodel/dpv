@@ -63,6 +63,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_risk_notice
   - dpv:schema/extensions/legal/eu/aiact
 
 subsets:
@@ -89,20 +90,20 @@ slots:
 
 classes:
 
-  RiskLevel:
+  LegalEuAiactRiskLevel:
+    is_a: RiskLevel
     class_uri: legal_eu_aiact:RiskLevel
     description: |-
       Enumeration of AI Act's risk-based categorisation which determines the
       prohibitions and obligations for AI systems
     aliases:
+      - RiskLevel
       - Risk Level
     in_subset:
       - legal_eu_aiact_risk_levels_subset
     exact_mappings:
       - dpv_legal_eu_aiact:RiskLevel
       - dpv_legal_eu_aiact_owl:RiskLevel
-    close_mappings:
-      - iso42001:AIRisk
     annotations:
       dct_source: AI Act
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#RiskLevel
@@ -111,7 +112,7 @@ classes:
   RiskLevelHigh:
     is_a: RiskLevelPermitted
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -133,7 +134,7 @@ classes:
   RiskLevelHighA61:
     is_a: RiskLevelHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh-A6-1
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -154,7 +155,7 @@ classes:
   RiskLevelHighA62:
     is_a: RiskLevelHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelHigh-A6-2
     description: |-
       Risk Level categorising an AI system as "high-risk" as defined in the AI
@@ -175,7 +176,7 @@ classes:
   RiskLevelMinimal:
     is_a: RiskLevelNotHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelMinimal
     description: |-
       Risk Level categorising an AI system as not being prohibited or
@@ -201,7 +202,7 @@ classes:
   RiskLevelNotHigh:
     is_a: RiskLevelPermitted
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelNotHigh
     description: |-
       Risk Level categorising an AI system as not being "high-risk" as defined
@@ -222,7 +223,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   RiskLevelPermitted:
-    is_a: RiskLevel
+    is_a: LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelPermitted
     description: |-
       Risk Level representing "AI practices" are permitted i.e. not prohibited
@@ -243,7 +244,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   RiskLevelProhibited:
-    is_a: RiskLevel
+    is_a: LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelProhibited
     description: |-
       Risk Level prohibiting "AI practices" as defined in the AI Act Article 5
@@ -264,7 +265,7 @@ classes:
   RiskLevelTransparencyRequired:
     is_a: RiskLevelNotHigh
     mixins:
-      - RiskLevel
+      - LegalEuAiactRiskLevel
     class_uri: legal_eu_aiact:RiskLevelTransparencyRequired
     description: |-
       Risk Level categorising an AI system as not high-risk but where

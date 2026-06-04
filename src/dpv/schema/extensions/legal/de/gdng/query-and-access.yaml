@@ -145,6 +145,26 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataQueryRecord
       dpv_extension_slug: legal/de/gdng
 
+  LegalDeGdngSecureProcessingEnvironment:
+    class_uri: legal_de_gdng:SecureProcessingEnvironment
+    description: |-
+      Durch die DACO konzeptionierte Maßnahme zur Verbesserung des
+      Datenschutzes und der Datensicherheit im Rahmen der Weiterverarbeitung
+      von Gesundheitsdaten zu Forschungszwecken und weiteren im Gemeinwohl
+      liegenden Zwecken
+    aliases:
+      - SecureProcessingEnvironment
+      - Sichere Verarbeitungsumgebung
+    in_subset:
+      - legal_de_gdng_query-and-access_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:SecureProcessingEnvironment
+      - dpv_legal_de_gdng_owl:SecureProcessingEnvironment
+    annotations:
+      dct_source: '[[GDNG]] § 3(2) point 9'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecureProcessingEnvironment
+      dpv_extension_slug: legal/de/gdng
+
   PublicHealthDataAccessApplicationRegister:
     class_uri: legal_de_gdng:PublicHealthDataAccessApplicationRegister
     description: |-
@@ -182,23 +202,4 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 3(2) point 1'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#PublicMetadataCatalogue
-      dpv_extension_slug: legal/de/gdng
-
-  SecureProcessingEnvironment:
-    class_uri: legal_de_gdng:SecureProcessingEnvironment
-    description: |-
-      Durch die DACO konzeptionierte Maßnahme zur Verbesserung des
-      Datenschutzes und der Datensicherheit im Rahmen der Weiterverarbeitung
-      von Gesundheitsdaten zu Forschungszwecken und weiteren im Gemeinwohl
-      liegenden Zwecken
-    aliases:
-      - Sichere Verarbeitungsumgebung
-    in_subset:
-      - legal_de_gdng_query-and-access_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:SecureProcessingEnvironment
-      - dpv_legal_de_gdng_owl:SecureProcessingEnvironment
-    annotations:
-      dct_source: '[[GDNG]] § 3(2) point 9'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecureProcessingEnvironment
       dpv_extension_slug: legal/de/gdng

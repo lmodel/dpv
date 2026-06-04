@@ -189,7 +189,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/education/owl#ResearchUserStudyManagement
       dpv_extension_slug: sector/education
 
-  ServiceProvision:
+  SectorEducationServiceProvision:
+    is_a: ServiceProvision
     mixins:
       - Purpose
       - EducationManagement
@@ -199,6 +200,7 @@ classes:
       lectures, seminars, laboratory work, and other similar activities within
       the context of provision of education
     aliases:
+      - ServiceProvision
       - Service Provision
     in_subset:
       - sector_education_purposes_subset
@@ -349,7 +351,7 @@ classes:
       dpv_extension_slug: sector/education
 
   StudentAttendanceManagement:
-    is_a: ServiceProvision
+    is_a: SectorEducationServiceProvision
     mixins:
       - Purpose
     class_uri: sector_education:StudentAttendanceManagement
@@ -390,7 +392,7 @@ classes:
       dpv_extension_slug: sector/education
 
   StudentContentDelivery:
-    is_a: ServiceProvision
+    is_a: SectorEducationServiceProvision
     mixins:
       - Purpose
     class_uri: sector_education:StudentContentDelivery
@@ -681,7 +683,7 @@ classes:
       dpv_extension_slug: sector/education
 
   StudentLearningFeedbackManagement:
-    is_a: ServiceProvision
+    is_a: SectorEducationServiceProvision
     mixins:
       - Purpose
     class_uri: sector_education:StudentLearningFeedbackManagement
@@ -865,7 +867,7 @@ classes:
     is_a: Personalisation
     mixins:
       - Purpose
-      - ServiceProvision
+      - SectorEducationServiceProvision
     class_uri: sector_education:StudentPersonalisedContentDelivery
     description: |-
       Purposes associated with personalisation of the content delivery for an
@@ -962,7 +964,7 @@ classes:
       dpv_extension_slug: sector/education
 
   StudentResourceAccessManagement:
-    is_a: ServiceProvision
+    is_a: SectorEducationServiceProvision
     mixins:
       - Purpose
     class_uri: sector_education:StudentResourceAccessManagement

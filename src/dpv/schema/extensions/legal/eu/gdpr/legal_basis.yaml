@@ -76,7 +76,7 @@ subsets:
 classes:
 
   A61a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - ExpressedConsent
@@ -106,7 +106,7 @@ classes:
     is_a: A61a
     mixins:
       - LegalBasis
-      - Consent
+      - LegalEuGdprConsent
       - ExplicitlyExpressedConsent
     class_uri: legal_eu_gdpr:A6-1-a-explicit-consent
     description: |-
@@ -134,7 +134,7 @@ classes:
     is_a: A61a
     mixins:
       - LegalBasis
-      - Consent
+      - LegalEuGdprConsent
       - ExpressedConsent
     class_uri: legal_eu_gdpr:A6-1-a-non-explicit-consent
     description: |-
@@ -451,7 +451,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-f-third-party
       dpv_extension_slug: legal/eu/gdpr
 
-  Consent:
+  LegalEuGdprConsent:
+    is_a: Consent
     mixins:
       - LegalBasis
     class_uri: legal_eu_gdpr:Consent
@@ -467,8 +468,6 @@ classes:
     exact_mappings:
       - dpv_legal_eu_gdpr:Consent
       - dpv_legal_eu_gdpr_owl:Consent
-    close_mappings:
-      - iso27701:Clause_7_2_3
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Consent
       dpv_extension_slug: legal/eu/gdpr

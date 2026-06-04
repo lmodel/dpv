@@ -66,6 +66,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_risk_notice
   - dpv:schema/extensions/ai
   - dpv:schema/extensions/risk
 
@@ -77,8 +78,9 @@ subsets:
 classes:
 
   AIBias:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
       - Bias
@@ -100,8 +102,9 @@ classes:
       dpv_extension_slug: ai
 
   AISystemRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:AISystemRisk
@@ -139,6 +142,26 @@ classes:
       - iso42001:AIIncident
     annotations:
       upstream_iri: https://w3id.org/dpv/ai/owl#AdversarialAttack
+      dpv_extension_slug: ai
+
+  AiRiskConcept:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:RiskConcept
+    description: |-
+      Risk concepts such as risk sources, risks, consequences, and impacts
+      associated specifically with development, use, or operation of AI
+    aliases:
+      - RiskConcept
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:RiskConcept
+      - dpv_ai_owl:RiskConcept
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#RiskConcept
       dpv_extension_slug: ai
 
   AlgorithmSelectionBias:
@@ -282,8 +305,9 @@ classes:
       dpv_extension_slug: ai
 
   DataRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:DataRisk
@@ -888,8 +912,9 @@ classes:
       dpv_extension_slug: ai
 
   ModelRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:ModelRisk
@@ -928,28 +953,10 @@ classes:
       upstream_iri: https://w3id.org/dpv/ai/owl#NonRepresentativeSamplingBias
       dpv_extension_slug: ai
 
-  RiskConcept:
-    mixins:
-      - PotentialRisk
-      - PotentialRiskSource
-    class_uri: ai:RiskConcept
-    description: |-
-      Risk concepts such as risk sources, risks, consequences, and impacts
-      associated specifically with development, use, or operation of AI
-    aliases:
-      - RiskConcept
-    in_subset:
-      - ai_risks_subset
-    exact_mappings:
-      - dpv_ai:RiskConcept
-      - dpv_ai_owl:RiskConcept
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#RiskConcept
-      dpv_extension_slug: ai
-
   SecurityAttack:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:SecurityAttack
@@ -1275,8 +1282,9 @@ classes:
       dpv_extension_slug: ai
 
   UserRisk:
-    is_a: RiskConcept
+    is_a: AiRiskConcept
     mixins:
+      - RiskConcept
       - PotentialRisk
       - PotentialRiskSource
     class_uri: ai:UserRisk

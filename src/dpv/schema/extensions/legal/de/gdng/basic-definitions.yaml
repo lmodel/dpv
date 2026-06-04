@@ -113,12 +113,13 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthData
       dpv_extension_slug: legal/de/gdng
 
-  PersonalData:
+  LegalDeGdngPersonalData:
     class_uri: legal_de_gdng:PersonalData
     description: |-
       Personenbezogene Daten nach GDNG sind personenbezogene Daten im Sinne
       von Artikel 4 der DSGVO [[GDPR]]
     aliases:
+      - PersonalData
       - Personenbezogene Daten
     in_subset:
       - legal_de_gdng_basic-definitions_subset
@@ -128,6 +129,24 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 2 point 2'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#PersonalData
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngSecondaryUse:
+    class_uri: legal_de_gdng:SecondaryUse
+    description: |-
+      Weiterverarbeitung von Gesundheitsdaten zu anderen Zwecken als
+      denjenigen, für die die Daten ursprünglich erhoben wurden
+    aliases:
+      - SecondaryUse
+      - Sekundärdatennutzung
+    in_subset:
+      - legal_de_gdng_basic-definitions_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:SecondaryUse
+      - dpv_legal_de_gdng_owl:SecondaryUse
+    annotations:
+      dct_source: '[[GDNG]] § 2 point 8'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecondaryUse
       dpv_extension_slug: legal/de/gdng
 
   ResearchProject:
@@ -145,21 +164,4 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 2 point 5'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ResearchProject
-      dpv_extension_slug: legal/de/gdng
-
-  SecondaryUse:
-    class_uri: legal_de_gdng:SecondaryUse
-    description: |-
-      Weiterverarbeitung von Gesundheitsdaten zu anderen Zwecken als
-      denjenigen, für die die Daten ursprünglich erhoben wurden
-    aliases:
-      - Sekundärdatennutzung
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:SecondaryUse
-      - dpv_legal_de_gdng_owl:SecondaryUse
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 8'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecondaryUse
       dpv_extension_slug: legal/de/gdng

@@ -1,5 +1,5 @@
 # Auto generated from dpv.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-06-04T01:31:49
+# Generation date: 2026-06-04T02:40:49
 # Schema: dpv
 #
 # id: https://w3id.org/lmodel/dpv

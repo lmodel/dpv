@@ -68,6 +68,7 @@ id_prefixes:
 imports:
   - linkml:types
   - dpv:schema/dpv_common
+  - dpv:schema/dpv_personal_data
   - dpv:schema/dpv_processing
   - dpv:schema/extensions/legal/eu/gdpr
   - dpv:schema/extensions/pd
@@ -191,24 +192,26 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InformationSocietyService
       dpv_extension_slug: legal/eu/gdpr
 
-  PersonalData:
+  LegalEuGdprPersonalData:
+    is_a: PersonalData
     class_uri: legal_eu_gdpr:PersonalData
     description: |-
       Personal Data' means any information relating to an identified or
       identifiable natural person (‘Data Subject’)
     aliases:
+      - PersonalData
       - Personal Data
     in_subset:
       - legal_eu_gdpr_misc_concepts_subset
     exact_mappings:
       - dpv_legal_eu_gdpr:PersonalData
       - dpv_legal_eu_gdpr_owl:PersonalData
-      - iso27701:PII
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#PersonalData
       dpv_extension_slug: legal/eu/gdpr
 
-  Processing:
+  LegalEuGdprProcessing:
+    is_a: Processing
     class_uri: legal_eu_gdpr:Processing
     description: |-
       ‘Processing’ means any operation or set of operations which is performed
@@ -224,14 +227,14 @@ classes:
     exact_mappings:
       - dpv_legal_eu_gdpr:Processing
       - dpv_legal_eu_gdpr_owl:Processing
-      - iso27701:Processing
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processing
       dpv_extension_slug: legal/eu/gdpr
 
-  Profiling:
+  LegalEuGdprProfiling:
+    is_a: Profiling
     mixins:
-      - Processing
+      - LegalEuGdprProcessing
     class_uri: legal_eu_gdpr:Profiling
     description: |-
       ‘Profiling’ means any form of automated processing of personal data
@@ -247,13 +250,12 @@ classes:
     exact_mappings:
       - dpv_legal_eu_gdpr:Profiling
       - dpv_legal_eu_gdpr_owl:Profiling
-    related_mappings:
-      - iso27701:Processing
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Profiling
       dpv_extension_slug: legal/eu/gdpr
 
-  Pseudonymisation:
+  LegalEuGdprPseudonymisation:
+    is_a: Pseudonymisation
     mixins:
       - TechnicalMeasure
     class_uri: legal_eu_gdpr:Pseudonymisation
@@ -271,8 +273,6 @@ classes:
     exact_mappings:
       - dpv_legal_eu_gdpr:Pseudonymisation
       - dpv_legal_eu_gdpr_owl:Pseudonymisation
-    close_mappings:
-      - iso27701:Pseudonymization
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Pseudonymisation
       dpv_extension_slug: legal/eu/gdpr

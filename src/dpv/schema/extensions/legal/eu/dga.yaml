@@ -1164,6 +1164,48 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#EuropeanDataInnovationBoard
       dpv_extension_slug: legal/eu/dga
 
+  LegalEuDgaPublicSectorBody:
+    is_a: PublicSectorBody
+    class_uri: legal_eu_dga:PublicSectorBody
+    description: |-
+      ‘Public Sector Body’ means the State, regional or local authorities,
+      bodies governed by public law or associations formed by one or more such
+      authorities, or one or more such bodies governed by public law
+    aliases:
+      - PublicSectorBody
+      - Public Sector Body
+    in_subset:
+      - legal_eu_dga_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:PublicSectorBody
+      - dpv_legal_eu_dga_owl:PublicSectorBody
+    annotations:
+      dct_source: DGA 2.17
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicSectorBody
+      dpv_extension_slug: legal/eu/dga
+
+  LegalEuDgaSecureProcessingEnvironment:
+    is_a: SecureProcessingEnvironment
+    mixins:
+      - TechnicalMeasure
+    class_uri: legal_eu_dga:SecureProcessingEnvironment
+    description: |-
+      Physical or virtual environment to ensure compliance with EU law and
+      allow the entity providing the secure processing environment to
+      determine and supervise all data processing actions
+    aliases:
+      - SecureProcessingEnvironment
+      - Secure Processing Environment
+    in_subset:
+      - legal_eu_dga_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:SecureProcessingEnvironment
+      - dpv_legal_eu_dga_owl:SecureProcessingEnvironment
+    annotations:
+      dct_source: DGA 2.20
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#SecureProcessingEnvironment
+      dpv_extension_slug: legal/eu/dga
+
   LegalRepresentative:
     is_a: Representative
     class_uri: legal_eu_dga:LegalRepresentative
@@ -1295,26 +1337,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicLawGovernedBody
       dpv_extension_slug: legal/eu/dga
 
-  PublicSectorBody:
-    class_uri: legal_eu_dga:PublicSectorBody
-    description: |-
-      ‘Public Sector Body’ means the State, regional or local authorities,
-      bodies governed by public law or associations formed by one or more such
-      authorities, or one or more such bodies governed by public law
-    aliases:
-      - Public Sector Body
-    in_subset:
-      - legal_eu_dga_subset
-    exact_mappings:
-      - dpv_legal_eu_dga:PublicSectorBody
-      - dpv_legal_eu_dga_owl:PublicSectorBody
-    related_mappings:
-      - iso27701:PIIController
-    annotations:
-      dct_source: DGA 2.17
-      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#PublicSectorBody
-      dpv_extension_slug: legal/eu/dga
-
   RegionalSIPProvider:
     is_a: SIPProvider
     class_uri: legal_eu_dga:RegionalSIPProvider
@@ -1365,28 +1387,6 @@ classes:
       - dpv_legal_eu_dga_owl:SectorialSIPProvider
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#SectorialSIPProvider
-      dpv_extension_slug: legal/eu/dga
-
-  SecureProcessingEnvironment:
-    mixins:
-      - TechnicalMeasure
-    class_uri: legal_eu_dga:SecureProcessingEnvironment
-    description: |-
-      Physical or virtual environment to ensure compliance with EU law and
-      allow the entity providing the secure processing environment to
-      determine and supervise all data processing actions
-    aliases:
-      - Secure Processing Environment
-    in_subset:
-      - legal_eu_dga_subset
-    exact_mappings:
-      - dpv_legal_eu_dga:SecureProcessingEnvironment
-      - dpv_legal_eu_dga_owl:SecureProcessingEnvironment
-    close_mappings:
-      - iso27701:Clause_6_5
-    annotations:
-      dct_source: DGA 2.20
-      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#SecureProcessingEnvironment
       dpv_extension_slug: legal/eu/dga
 
   SingleInformationPoint:

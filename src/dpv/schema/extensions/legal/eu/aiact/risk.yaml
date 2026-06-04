@@ -102,6 +102,24 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#DeployerHumanOversightMeasure
       dpv_extension_slug: legal/eu/aiact
 
+  LegalEuAiactRisk:
+    is_a: Risk
+    class_uri: legal_eu_aiact:Risk
+    description: |-
+      The combination of the probability of an occurrence of harm and the
+      severity of that harm
+    aliases:
+      - Risk
+    in_subset:
+      - legal_eu_aiact_risk_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:Risk
+      - dpv_legal_eu_aiact_owl:Risk
+    annotations:
+      dct_source: AIA (Art. 3(2))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#Risk
+      dpv_extension_slug: legal/eu/aiact
+
   ProviderHumanOversightMeasure:
     is_a: HumanOversight
     mixins:
@@ -173,25 +191,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#ReasonablyForeseeableMisuse
       dpv_extension_slug: legal/eu/aiact
 
-  Risk:
-    class_uri: legal_eu_aiact:Risk
-    description: |-
-      The combination of the probability of an occurrence of harm and the
-      severity of that harm
-    aliases:
-      - Risk
-    in_subset:
-      - legal_eu_aiact_risk_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:Risk
-      - dpv_legal_eu_aiact_owl:Risk
-    close_mappings:
-      - iso42001:AIRisk
-    annotations:
-      dct_source: AIA (Art. 3(2))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#Risk
-      dpv_extension_slug: legal/eu/aiact
-
   RiskManagementSystem:
     is_a: RiskManagement
     class_uri: legal_eu_aiact:RiskManagementSystem
@@ -237,7 +236,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   SystemicRisk:
-    is_a: Risk
+    is_a: LegalEuAiactRisk
     class_uri: legal_eu_aiact:SystemicRisk
     description: |-
       Q risk that is specific to the high-impact capabilities of

@@ -93,7 +93,7 @@ classes:
       dpv_extension_slug: sector/health
 
   AdministrativeServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:AdministrativeServicesProvision
@@ -131,7 +131,7 @@ classes:
       dpv_extension_slug: sector/health
 
   ConsultationManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:ConsultationManagement
@@ -210,7 +210,7 @@ classes:
       dpv_extension_slug: sector/health
 
   DiagnosisManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:DiagnosisManagement
@@ -287,7 +287,7 @@ classes:
       dpv_extension_slug: sector/health
 
   DispensationManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:DispensationManagement
@@ -717,24 +717,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#IdentityFraudManagement
       dpv_extension_slug: sector/health
 
-  ImproveHealthcare:
-    mixins:
-      - Purpose
-    class_uri: sector_health:ImproveHealthcare
-    description: |-
-      Purposes associated with improving healthcare systems, including the
-      delivery of care and the provision and optimisation of treatment
-    aliases:
-      - Improve Healthcare
-    in_subset:
-      - sector_health_purposes_subset
-    exact_mappings:
-      - dpv_sector_health:ImproveHealthcare
-      - dpv_sector_health_owl:ImproveHealthcare
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#ImproveHealthcare
-      dpv_extension_slug: sector/health
-
   ImproveHealthcareEducation:
     is_a: ImprovePublicServices
     mixins:
@@ -864,7 +846,7 @@ classes:
       dpv_extension_slug: sector/health
 
   MedicalDevicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:MedicalDevicesProvision
@@ -934,7 +916,7 @@ classes:
       dpv_extension_slug: sector/health
 
   MedicinalProductsProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:MedicinalProductsProvision
@@ -1105,7 +1087,7 @@ classes:
       dpv_extension_slug: sector/health
 
   PatientMonitoring:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:PatientMonitoring
@@ -1257,7 +1239,7 @@ classes:
       dpv_extension_slug: sector/health
 
   PrescriptionManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:PrescriptionManagement
@@ -1426,24 +1408,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicInterestRelatedToHealth
       dpv_extension_slug: sector/health
 
-  PublicPolicyMaking:
-    mixins:
-      - Purpose
-    class_uri: sector_health:PublicPolicyMaking
-    description: |-
-      Purposes associated with public policy making policymaking in the
-      healthcare sector
-    aliases:
-      - Public Policy Making
-    in_subset:
-      - sector_health_purposes_subset
-    exact_mappings:
-      - dpv_sector_health:PublicPolicyMaking
-      - dpv_sector_health_owl:PublicPolicyMaking
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicPolicyMaking
-      dpv_extension_slug: sector/health
-
   ReferralManagement:
     is_a: HealthcareServiceManagement
     mixins:
@@ -1464,7 +1428,7 @@ classes:
       dpv_extension_slug: sector/health
 
   ReimbursementServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:ReimbursementServicesProvision
@@ -1542,6 +1506,65 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#SecondMedicalOpinion
       dpv_extension_slug: sector/health
 
+  SectorHealthImproveHealthcare:
+    is_a: ImproveHealthcare
+    mixins:
+      - Purpose
+    class_uri: sector_health:ImproveHealthcare
+    description: |-
+      Purposes associated with improving healthcare systems, including the
+      delivery of care and the provision and optimisation of treatment
+    aliases:
+      - ImproveHealthcare
+      - Improve Healthcare
+    in_subset:
+      - sector_health_purposes_subset
+    exact_mappings:
+      - dpv_sector_health:ImproveHealthcare
+      - dpv_sector_health_owl:ImproveHealthcare
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ImproveHealthcare
+      dpv_extension_slug: sector/health
+
+  SectorHealthPublicPolicyMaking:
+    is_a: PublicPolicyMaking
+    mixins:
+      - Purpose
+    class_uri: sector_health:PublicPolicyMaking
+    description: |-
+      Purposes associated with public policy making policymaking in the
+      healthcare sector
+    aliases:
+      - PublicPolicyMaking
+      - Public Policy Making
+    in_subset:
+      - sector_health_purposes_subset
+    exact_mappings:
+      - dpv_sector_health:PublicPolicyMaking
+      - dpv_sector_health_owl:PublicPolicyMaking
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicPolicyMaking
+      dpv_extension_slug: sector/health
+
+  SectorHealthServiceProvision:
+    is_a: ServiceProvision
+    mixins:
+      - Purpose
+      - HealthcareServiceManagement
+    class_uri: sector_health:ServiceProvision
+    description: Purposes associated with provision of healthcare services
+    aliases:
+      - ServiceProvision
+      - Service Provision
+    in_subset:
+      - sector_health_purposes_subset
+    exact_mappings:
+      - dpv_sector_health:ServiceProvision
+      - dpv_sector_health_owl:ServiceProvision
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceProvision
+      dpv_extension_slug: sector/health
+
   SecurityManagement:
     is_a: OrganisationRiskManagement
     mixins:
@@ -1581,25 +1604,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceBillingFraudManagement
       dpv_extension_slug: sector/health
 
-  ServiceProvision:
-    mixins:
-      - Purpose
-      - HealthcareServiceManagement
-    class_uri: sector_health:ServiceProvision
-    description: Purposes associated with provision of healthcare services
-    aliases:
-      - Service Provision
-    in_subset:
-      - sector_health_purposes_subset
-    exact_mappings:
-      - dpv_sector_health:ServiceProvision
-      - dpv_sector_health_owl:ServiceProvision
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceProvision
-      dpv_extension_slug: sector/health
-
   SocialServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:SocialServicesProvision

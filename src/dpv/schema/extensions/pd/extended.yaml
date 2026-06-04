@@ -65,7 +65,6 @@ imports:
   - linkml:types
   - dpv:schema/dpv_legal_basis
   - dpv:schema/dpv_personal_data
-  - dpv:schema/dpv_processing
   - dpv:schema/extensions/pd
 
 subsets:
@@ -551,24 +550,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/pd/owl#Citizenship
       dpv_extension_slug: pd
 
-  City:
-    is_a: PhysicalAddress
-    mixins:
-      - DpvLocation
-      - PersonalData
-    class_uri: pd:City
-    description: Information about city as a location
-    aliases:
-      - City
-    in_subset:
-      - pd_extended_subset
-    exact_mappings:
-      - dpv_pd:City
-      - dpv_pd_owl:City
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#City
-      dpv_extension_slug: pd
-
   Communication:
     is_a: Social
     mixins:
@@ -623,7 +604,7 @@ classes:
       dpv_extension_slug: pd
 
   Contact:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - PersonalData
     class_uri: pd:Contact
@@ -962,7 +943,7 @@ classes:
       dpv_extension_slug: pd
 
   DeviceBased:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - PersonalData
     class_uri: pd:DeviceBased
@@ -1034,7 +1015,7 @@ classes:
       dpv_extension_slug: pd
 
   DigitalFingerprint:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - PersonalData
     class_uri: pd:DigitalFingerprint
@@ -2586,6 +2567,24 @@ classes:
       upstream_iri: https://w3id.org/dpv/pd/owl#PaymentCardNumber
       dpv_extension_slug: pd
 
+  PdCity:
+    is_a: PhysicalAddress
+    mixins:
+      - DpvLocation
+      - PersonalData
+    class_uri: pd:City
+    description: Information about city as a location
+    aliases:
+      - City
+    in_subset:
+      - pd_extended_subset
+    exact_mappings:
+      - dpv_pd:City
+      - dpv_pd_owl:City
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#City
+      dpv_extension_slug: pd
+
   PdCountry:
     is_a: PdLocation
     mixins:
@@ -2605,7 +2604,7 @@ classes:
       dpv_extension_slug: pd
 
   PdIdentifier:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - PersonalData
     class_uri: pd:Identifier
@@ -2622,7 +2621,7 @@ classes:
       dpv_extension_slug: pd
 
   PdLocation:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - DpvLocation
       - PersonalData
@@ -2639,6 +2638,24 @@ classes:
       - svd:Location
     annotations:
       upstream_iri: https://w3id.org/dpv/pd/owl#Location
+      dpv_extension_slug: pd
+
+  PdProfessionalTraining:
+    is_a: Professional
+    mixins:
+      - PersonalData
+    class_uri: pd:ProfessionalTraining
+    description: Information about professional training
+    aliases:
+      - ProfessionalTraining
+      - Professional Training
+    in_subset:
+      - pd_extended_subset
+    exact_mappings:
+      - dpv_pd:ProfessionalTraining
+      - dpv_pd_owl:ProfessionalTraining
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#ProfessionalTraining
       dpv_extension_slug: pd
 
   PdRegion:
@@ -3038,7 +3055,7 @@ classes:
   ProfessionalExperience:
     is_a: Professional
     mixins:
-      - PersonalData
+      - PdPersonalData
     class_uri: pd:ProfessionalExperience
     description: Information about professional experiences
     aliases:
@@ -3067,23 +3084,6 @@ classes:
       - dpv_pd_owl:ProfessionalInterview
     annotations:
       upstream_iri: https://w3id.org/dpv/pd/owl#ProfessionalInterview
-      dpv_extension_slug: pd
-
-  ProfessionalTraining:
-    is_a: Professional
-    mixins:
-      - PersonalData
-    class_uri: pd:ProfessionalTraining
-    description: Information about professional training
-    aliases:
-      - Professional Training
-    in_subset:
-      - pd_extended_subset
-    exact_mappings:
-      - dpv_pd:ProfessionalTraining
-      - dpv_pd_owl:ProfessionalTraining
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#ProfessionalTraining
       dpv_extension_slug: pd
 
   PublicLife:
@@ -3806,7 +3806,7 @@ classes:
       dpv_extension_slug: pd
 
   UserAgent:
-    is_a: Tracking
+    is_a: PdTracking
     mixins:
       - PersonalData
     class_uri: pd:UserAgent

@@ -297,20 +297,6 @@ classes:
         https://w3id.org/dpv/legal/de/gdng/owl#DataProcessingHealthcareFacility
       dpv_extension_slug: legal/de/gdng
 
-  DataSubject:
-    class_uri: legal_de_gdng:DataSubject
-    aliases:
-      - Betroffene Person
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:DataSubject
-      - dpv_legal_de_gdng_owl:DataSubject
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
-      dpv_extension_slug: legal/de/gdng
-
   DeletionPolicy:
     class_uri: legal_de_gdng:DeletionPolicy
     description: |-
@@ -575,9 +561,25 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
       dpv_extension_slug: legal/de/gdng
 
-  LegitimateInterest:
+  LegalDeGdngDataSubject:
+    class_uri: legal_de_gdng:DataSubject
+    aliases:
+      - DataSubject
+      - Betroffene Person
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:DataSubject
+      - dpv_legal_de_gdng_owl:DataSubject
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngLegitimateInterest:
     class_uri: legal_de_gdng:LegitimateInterest
     aliases:
+      - LegitimateInterest
       - Berechtigtes Interesse
     in_subset:
       - legal_de_gdng_subset
@@ -587,6 +589,108 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(3) point 3'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#LegitimateInterest
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngNecessity:
+    class_uri: legal_de_gdng:Necessity
+    aliases:
+      - Necessity
+      - Erforderlichkeit
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Necessity
+      - dpv_legal_de_gdng_owl:Necessity
+    annotations:
+      dct_source: '[[GDNG]] § 6(3) point 1'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Necessity
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngPersonalData:
+    class_uri: legal_de_gdng:PersonalData
+    description: |-
+      Personenbezogene Daten nach GDNG sind personenbezogene Daten im Sinne
+      von Artikel 4 der DSGVO [[GDPR]]
+    aliases:
+      - PersonalData
+      - Personenbezogene Daten
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:PersonalData
+      - dpv_legal_de_gdng_owl:PersonalData
+    annotations:
+      dct_source: '[[GDNG]] § 2 point 2'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#PersonalData
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngSecondaryUse:
+    class_uri: legal_de_gdng:SecondaryUse
+    description: |-
+      Weiterverarbeitung von Gesundheitsdaten zu anderen Zwecken als
+      denjenigen, für die die Daten ursprünglich erhoben wurden
+    aliases:
+      - SecondaryUse
+      - Sekundärdatennutzung
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:SecondaryUse
+      - dpv_legal_de_gdng_owl:SecondaryUse
+    annotations:
+      dct_source: '[[GDNG]] § 2 point 8'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecondaryUse
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngSecureProcessingEnvironment:
+    class_uri: legal_de_gdng:SecureProcessingEnvironment
+    description: |-
+      Durch die DACO konzeptionierte Maßnahme zur Verbesserung des
+      Datenschutzes und der Datensicherheit im Rahmen der Weiterverarbeitung
+      von Gesundheitsdaten zu Forschungszwecken und weiteren im Gemeinwohl
+      liegenden Zwecken
+    aliases:
+      - SecureProcessingEnvironment
+      - Sichere Verarbeitungsumgebung
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:SecureProcessingEnvironment
+      - dpv_legal_de_gdng_owl:SecureProcessingEnvironment
+    annotations:
+      dct_source: '[[GDNG]] § 3(2) point 9'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecureProcessingEnvironment
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngThirdParty:
+    class_uri: legal_de_gdng:ThirdParty
+    aliases:
+      - ThirdParty
+      - Dritte
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:ThirdParty
+      - dpv_legal_de_gdng_owl:ThirdParty
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ThirdParty
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngTransfer:
+    class_uri: legal_de_gdng:Transfer
+    description: Weitergabe von personenbezogenen Daten an Dritte
+    aliases:
+      - Transfer
+      - Weitergabe
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Transfer
+      - dpv_legal_de_gdng_owl:Transfer
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Transfer
       dpv_extension_slug: legal/de/gdng
 
   MedicalRehabNursingResearch:
@@ -625,20 +729,6 @@ classes:
       dct_source: '[[GDNG]] § 2'
       upstream_iri: |-
         https://w3id.org/dpv/legal/de/gdng/owl#ModelProjectGenomeSequencingPlatform
-      dpv_extension_slug: legal/de/gdng
-
-  Necessity:
-    class_uri: legal_de_gdng:Necessity
-    aliases:
-      - Erforderlichkeit
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Necessity
-      - dpv_legal_de_gdng_owl:Necessity
-    annotations:
-      dct_source: '[[GDNG]] § 6(3) point 1'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Necessity
       dpv_extension_slug: legal/de/gdng
 
   P61:
@@ -749,23 +839,6 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(3)'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#P6-3-Statutory
-      dpv_extension_slug: legal/de/gdng
-
-  PersonalData:
-    class_uri: legal_de_gdng:PersonalData
-    description: |-
-      Personenbezogene Daten nach GDNG sind personenbezogene Daten im Sinne
-      von Artikel 4 der DSGVO [[GDPR]]
-    aliases:
-      - Personenbezogene Daten
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:PersonalData
-      - dpv_legal_de_gdng_owl:PersonalData
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 2'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#PersonalData
       dpv_extension_slug: legal/de/gdng
 
   ProcessingRequirementsConformance:
@@ -1001,42 +1074,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#RightsRolesConcept
       dpv_extension_slug: legal/de/gdng
 
-  SecondaryUse:
-    class_uri: legal_de_gdng:SecondaryUse
-    description: |-
-      Weiterverarbeitung von Gesundheitsdaten zu anderen Zwecken als
-      denjenigen, für die die Daten ursprünglich erhoben wurden
-    aliases:
-      - Sekundärdatennutzung
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:SecondaryUse
-      - dpv_legal_de_gdng_owl:SecondaryUse
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 8'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecondaryUse
-      dpv_extension_slug: legal/de/gdng
-
-  SecureProcessingEnvironment:
-    class_uri: legal_de_gdng:SecureProcessingEnvironment
-    description: |-
-      Durch die DACO konzeptionierte Maßnahme zur Verbesserung des
-      Datenschutzes und der Datensicherheit im Rahmen der Weiterverarbeitung
-      von Gesundheitsdaten zu Forschungszwecken und weiteren im Gemeinwohl
-      liegenden Zwecken
-    aliases:
-      - Sichere Verarbeitungsumgebung
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:SecureProcessingEnvironment
-      - dpv_legal_de_gdng_owl:SecureProcessingEnvironment
-    annotations:
-      dct_source: '[[GDNG]] § 3(2) point 9'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecureProcessingEnvironment
-      dpv_extension_slug: legal/de/gdng
-
   Statistics:
     class_uri: legal_de_gdng:Statistics
     description: |-
@@ -1052,33 +1089,4 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6(1) point 3'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Statistics
-      dpv_extension_slug: legal/de/gdng
-
-  ThirdParty:
-    class_uri: legal_de_gdng:ThirdParty
-    aliases:
-      - Dritte
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:ThirdParty
-      - dpv_legal_de_gdng_owl:ThirdParty
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ThirdParty
-      dpv_extension_slug: legal/de/gdng
-
-  Transfer:
-    class_uri: legal_de_gdng:Transfer
-    description: Weitergabe von personenbezogenen Daten an Dritte
-    aliases:
-      - Weitergabe
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Transfer
-      - dpv_legal_de_gdng_owl:Transfer
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Transfer
       dpv_extension_slug: legal/de/gdng

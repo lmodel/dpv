@@ -2633,29 +2633,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/tech/owl#Purchaser
       dpv_extension_slug: tech
 
-  Recommendation:
-    is_a: InputOutput
-    class_uri: tech:Recommendation
-    description: |-
-      A recommendation or suggestion of an action or decision or choice in the
-      context of technologies
-    aliases:
-      - Recommendation
-    comments:
-      - |-
-        Recommendation is a concept referring to activities or tasks in the
-        context of technologies producing or using them as inputs or outputs
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Recommendation
-      - dpv_tech_owl:Recommendation
-    close_mappings:
-      - iso22989:Recommendation
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Recommendation
-      dpv_extension_slug: tech
-
   Smartphone:
     is_a: LocalLocation
     mixins:
@@ -3011,6 +2988,27 @@ classes:
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Provider
+      dpv_extension_slug: tech
+
+  TechRecommendation:
+    is_a: InputOutput
+    class_uri: tech:Recommendation
+    description: |-
+      A recommendation or suggestion of an action or decision or choice in the
+      context of technologies
+    aliases:
+      - Recommendation
+    comments:
+      - |-
+        Recommendation is a concept referring to activities or tasks in the
+        context of technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Recommendation
+      - dpv_tech_owl:Recommendation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Recommendation
       dpv_extension_slug: tech
 
   TechService:

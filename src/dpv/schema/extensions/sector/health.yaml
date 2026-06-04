@@ -4,10 +4,10 @@ title: DPV - Sector - Health
 description: |-
   LinkML schema generated from the DPV 2.3 extension `sector/health`
   (`sector-health-owl.ttl`), enriched with canonical SKOS metadata.
-  Imports the semantic-group schema(s) `dpv:schema/dpv_entities`,
-  `dpv:schema/dpv_personal_data`, `dpv:schema/dpv_processing` for the
-  abstract parent classes this extension specialises (instead of the full
-  umbrella `dpv:schema/dpv`).
+  Imports the semantic-group schema(s) `dpv:schema/dpv_common`,
+  `dpv:schema/dpv_entities`, `dpv:schema/dpv_personal_data`,
+  `dpv:schema/dpv_processing` for the abstract parent classes this
+  extension specialises (instead of the full umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/sector/health
@@ -72,6 +72,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_common
   - dpv:schema/dpv_entities
   - dpv:schema/dpv_personal_data
   - dpv:schema/dpv_processing
@@ -120,7 +121,7 @@ classes:
       dpv_extension_slug: sector/health
 
   AdministrativeServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:AdministrativeServicesProvision
@@ -261,26 +262,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#ClinicalTrialsData
       dpv_extension_slug: sector/health
 
-  CompatibilityUnknown:
-    mixins:
-      - ReuseCompatibility
-    class_uri: sector_health:CompatibilityUnknown
-    description: |-
-      Status indicating the compatibility for reuse of health data for the
-      context is currently unknown
-    aliases:
-      - Compatibility Unknown
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:CompatibilityUnknown
-      - dpv_sector_health_owl:CompatibilityUnknown
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#CompatibilityUnknown
-      dpv_extension_slug: sector/health
-
   ConsultationManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:ConsultationManagement
@@ -359,7 +342,7 @@ classes:
       dpv_extension_slug: sector/health
 
   DiagnosisManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:DiagnosisManagement
@@ -509,7 +492,7 @@ classes:
       dpv_extension_slug: sector/health
 
   DispensationManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:DispensationManagement
@@ -1394,24 +1377,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#IdentityFraudManagement
       dpv_extension_slug: sector/health
 
-  ImproveHealthcare:
-    mixins:
-      - Purpose
-    class_uri: sector_health:ImproveHealthcare
-    description: |-
-      Purposes associated with improving healthcare systems, including the
-      delivery of care and the provision and optimisation of treatment
-    aliases:
-      - Improve Healthcare
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:ImproveHealthcare
-      - dpv_sector_health_owl:ImproveHealthcare
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#ImproveHealthcare
-      dpv_extension_slug: sector/health
-
   ImproveHealthcareEducation:
     is_a: ImprovePublicServices
     mixins:
@@ -1672,7 +1637,7 @@ classes:
       dpv_extension_slug: sector/health
 
   MedicalDevicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:MedicalDevicesProvision
@@ -1812,7 +1777,7 @@ classes:
       dpv_extension_slug: sector/health
 
   MedicinalProductsProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:MedicinalProductsProvision
@@ -2070,7 +2035,7 @@ classes:
       dpv_extension_slug: sector/health
 
   PatientMonitoring:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:PatientMonitoring
@@ -2344,7 +2309,7 @@ classes:
       dpv_extension_slug: sector/health
 
   PrescriptionManagement:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:PrescriptionManagement
@@ -2397,30 +2362,6 @@ classes:
       - dpv_sector_health_owl:PrimaryCareManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#PrimaryCareManagement
-      dpv_extension_slug: sector/health
-
-  PrimaryUse:
-    mixins:
-      - ReuseCompatibility
-    class_uri: sector_health:PrimaryUse
-    description: |-
-      Status indicating the reuse of health is compatible with the original
-      purpose or use i.e. it can be considered as 'Primary Use'
-    aliases:
-      - Primary Use
-    comments:
-      - |-
-        Primary Use refers to an assessment where two contexts are found to be
-        compatible, e.g. if purpose is used to test compatibility, then for two
-        activities the second activity is said be the primary use if its purpose
-        is compatible with the first activity's purpose
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:PrimaryUse
-      - dpv_sector_health_owl:PrimaryUse
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#PrimaryUse
       dpv_extension_slug: sector/health
 
   ProtectAgainstCrossBorderThreatsToHealth:
@@ -2571,24 +2512,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicInterestRelatedToHealth
       dpv_extension_slug: sector/health
 
-  PublicPolicyMaking:
-    mixins:
-      - Purpose
-    class_uri: sector_health:PublicPolicyMaking
-    description: |-
-      Purposes associated with public policy making policymaking in the
-      healthcare sector
-    aliases:
-      - Public Policy Making
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:PublicPolicyMaking
-      - dpv_sector_health_owl:PublicPolicyMaking
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicPolicyMaking
-      dpv_extension_slug: sector/health
-
   ReferralManagement:
     is_a: HealthcareServiceManagement
     mixins:
@@ -2626,7 +2549,7 @@ classes:
       dpv_extension_slug: sector/health
 
   ReimbursementServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:ReimbursementServicesProvision
@@ -2701,7 +2624,114 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#ResourceManagement
       dpv_extension_slug: sector/health
 
-  ReuseCompatibility:
+  SecondMedicalOpinion:
+    is_a: HealthcareServiceManagement
+    mixins:
+      - Purpose
+    class_uri: sector_health:SecondMedicalOpinion
+    description: |-
+      Purposes associated with the management of a consultation with a
+      healthcare professional other than the initial one to review a diagnosis
+      or treatment plan
+    aliases:
+      - Second Medical Opinion
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:SecondMedicalOpinion
+      - dpv_sector_health_owl:SecondMedicalOpinion
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#SecondMedicalOpinion
+      dpv_extension_slug: sector/health
+
+  SectorHealthCompatibilityUnknown:
+    is_a: CompatibilityUnknown
+    mixins:
+      - SectorHealthReuseCompatibility
+    class_uri: sector_health:CompatibilityUnknown
+    description: |-
+      Status indicating the compatibility for reuse of health data for the
+      context is currently unknown
+    aliases:
+      - CompatibilityUnknown
+      - Compatibility Unknown
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:CompatibilityUnknown
+      - dpv_sector_health_owl:CompatibilityUnknown
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#CompatibilityUnknown
+      dpv_extension_slug: sector/health
+
+  SectorHealthImproveHealthcare:
+    is_a: ImproveHealthcare
+    mixins:
+      - Purpose
+    class_uri: sector_health:ImproveHealthcare
+    description: |-
+      Purposes associated with improving healthcare systems, including the
+      delivery of care and the provision and optimisation of treatment
+    aliases:
+      - ImproveHealthcare
+      - Improve Healthcare
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:ImproveHealthcare
+      - dpv_sector_health_owl:ImproveHealthcare
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ImproveHealthcare
+      dpv_extension_slug: sector/health
+
+  SectorHealthPrimaryUse:
+    is_a: PrimaryUse
+    mixins:
+      - SectorHealthReuseCompatibility
+    class_uri: sector_health:PrimaryUse
+    description: |-
+      Status indicating the reuse of health is compatible with the original
+      purpose or use i.e. it can be considered as 'Primary Use'
+    aliases:
+      - PrimaryUse
+      - Primary Use
+    comments:
+      - |-
+        Primary Use refers to an assessment where two contexts are found to be
+        compatible, e.g. if purpose is used to test compatibility, then for two
+        activities the second activity is said be the primary use if its purpose
+        is compatible with the first activity's purpose
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:PrimaryUse
+      - dpv_sector_health_owl:PrimaryUse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PrimaryUse
+      dpv_extension_slug: sector/health
+
+  SectorHealthPublicPolicyMaking:
+    is_a: PublicPolicyMaking
+    mixins:
+      - Purpose
+    class_uri: sector_health:PublicPolicyMaking
+    description: |-
+      Purposes associated with public policy making policymaking in the
+      healthcare sector
+    aliases:
+      - PublicPolicyMaking
+      - Public Policy Making
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:PublicPolicyMaking
+      - dpv_sector_health_owl:PublicPolicyMaking
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicPolicyMaking
+      dpv_extension_slug: sector/health
+
+  SectorHealthReuseCompatibility:
+    is_a: ReuseCompatibility
     class_uri: sector_health:ReuseCompatibility
     description: |-
       Status indicating whether the reuse of health data is compatible for
@@ -2726,34 +2756,16 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#ReuseCompatibility
       dpv_extension_slug: sector/health
 
-  SecondMedicalOpinion:
-    is_a: HealthcareServiceManagement
+  SectorHealthSecondaryUse:
+    is_a: SecondaryUse
     mixins:
-      - Purpose
-    class_uri: sector_health:SecondMedicalOpinion
-    description: |-
-      Purposes associated with the management of a consultation with a
-      healthcare professional other than the initial one to review a diagnosis
-      or treatment plan
-    aliases:
-      - Second Medical Opinion
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:SecondMedicalOpinion
-      - dpv_sector_health_owl:SecondMedicalOpinion
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#SecondMedicalOpinion
-      dpv_extension_slug: sector/health
-
-  SecondaryUse:
-    mixins:
-      - ReuseCompatibility
+      - SectorHealthReuseCompatibility
     class_uri: sector_health:SecondaryUse
     description: |-
       Status indicating the reuse of health is incompatible with the original
       purpose or use i.e. it is considered as 'Secondary Use'
     aliases:
+      - SecondaryUse
       - Secondary Use
     comments:
       - |-
@@ -2768,6 +2780,25 @@ classes:
       - dpv_sector_health_owl:SecondaryUse
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#SecondaryUse
+      dpv_extension_slug: sector/health
+
+  SectorHealthServiceProvision:
+    is_a: ServiceProvision
+    mixins:
+      - Purpose
+      - HealthcareServiceManagement
+    class_uri: sector_health:ServiceProvision
+    description: Purposes associated with provision of healthcare services
+    aliases:
+      - ServiceProvision
+      - Service Provision
+    in_subset:
+      - sector_health_subset
+    exact_mappings:
+      - dpv_sector_health:ServiceProvision
+      - dpv_sector_health_owl:ServiceProvision
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceProvision
       dpv_extension_slug: sector/health
 
   SectorHealthSystem:
@@ -2831,25 +2862,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceBillingFraudManagement
       dpv_extension_slug: sector/health
 
-  ServiceProvision:
-    mixins:
-      - Purpose
-      - HealthcareServiceManagement
-    class_uri: sector_health:ServiceProvision
-    description: Purposes associated with provision of healthcare services
-    aliases:
-      - Service Provision
-    in_subset:
-      - sector_health_subset
-    exact_mappings:
-      - dpv_sector_health:ServiceProvision
-      - dpv_sector_health_owl:ServiceProvision
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#ServiceProvision
-      dpv_extension_slug: sector/health
-
   SocialServicesProvision:
-    is_a: ServiceProvision
+    is_a: SectorHealthServiceProvision
     mixins:
       - Purpose
     class_uri: sector_health:SocialServicesProvision

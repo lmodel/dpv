@@ -1150,7 +1150,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   A491a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - DataTransferLegalBasis
@@ -1361,7 +1361,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   A61a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - ExpressedConsent
@@ -1391,7 +1391,7 @@ classes:
     is_a: A61a
     mixins:
       - LegalBasis
-      - Consent
+      - LegalEuGdprConsent
       - ExplicitlyExpressedConsent
     class_uri: legal_eu_gdpr:A6-1-a-explicit-consent
     description: |-
@@ -1419,7 +1419,7 @@ classes:
     is_a: A61a
     mixins:
       - LegalBasis
-      - Consent
+      - LegalEuGdprConsent
       - ExpressedConsent
     class_uri: legal_eu_gdpr:A6-1-a-non-explicit-consent
     description: |-
@@ -1859,7 +1859,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   A92a:
-    is_a: Consent
+    is_a: LegalEuGdprConsent
     mixins:
       - LegalBasis
       - ExplicitlyExpressedConsent
@@ -2289,7 +2289,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   ConcernedSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:ConcernedSupervisoryAuthority
     description: |-
       Concerned Supervisory Authority' or 'supervisory authority concerned’
@@ -2334,30 +2334,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ConfidentialityBreach
       dpv_extension_slug: legal/eu/gdpr
 
-  Consent:
-    mixins:
-      - LegalBasis
-    class_uri: legal_eu_gdpr:Consent
-    description: |-
-      Consent’ of the data subject means any freely given, specific, informed
-      and unambiguous indication of the data subject’s wishes by which he or
-      she, by a statement or by a clear affirmative action, signifies
-      agreement to the processing of personal data relating to him or her
-    aliases:
-      - Consent
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Consent
-      - dpv_legal_eu_gdpr_owl:Consent
-    close_mappings:
-      - iso27701:Clause_7_2_3
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Consent
-      dpv_extension_slug: legal/eu/gdpr
-
   ControllerBreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:ControllerBreachNotice
     description: Notice regarding a data breach to the Controller
     aliases:
@@ -2505,7 +2483,7 @@ classes:
   DPABreachInitialNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABreachInitialNotice
     description: |-
       Notice sent by a Controller within 72 hours of becoming aware of a
@@ -2524,7 +2502,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   DPABreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABreachNotice
     description: Notice regarding a data breach to the DPA
     aliases:
@@ -2560,7 +2538,7 @@ classes:
   DPABundledBreachNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPABundledBreachNotice
     description: |-
       Notice sent by a Controller to the DPA regarding multiple data breaches
@@ -2580,7 +2558,7 @@ classes:
   DPAPhasedBreachNotice:
     is_a: DPABreachNotice
     mixins:
-      - DataBreachNotice
+      - LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DPAPhasedBreachNotice
     description: |-
       Notice sent to a DPA in phases i.e. by providing incremental information
@@ -3010,25 +2988,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachJustification
       dpv_extension_slug: legal/eu/gdpr
 
-  DataBreachNotice:
-    class_uri: legal_eu_gdpr:DataBreachNotice
-    description: |-
-      Notice associated with data breach providing information in compliance
-      with GDPR
-    aliases:
-      - Data Breach Notice
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataBreachNotice
-      - dpv_legal_eu_gdpr_owl:DataBreachNotice
-    close_mappings:
-      - iso27701:Clause_6_13
-    annotations:
-      dct_source: GDPR Article 33
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachNotice
-      dpv_extension_slug: legal/eu/gdpr
-
   DataBreachNoticeRequirement:
     is_a: AuditStatus
     class_uri: legal_eu_gdpr:DataBreachNoticeRequirement
@@ -3142,52 +3101,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataMinimisationPrinciple
       dpv_extension_slug: legal/eu/gdpr
 
-  DataProtectionAuthority:
-    class_uri: legal_eu_gdpr:DataProtectionAuthority
-    description: |-
-      ‘Supervisory Authority’ or 'Data Protection Authority' means an
-      independent public authority which is established by a Member State
-      pursuant to Article 51
-    aliases:
-      - Data Protection Authority
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataProtectionAuthority
-      - dpv_legal_eu_gdpr_owl:DataProtectionAuthority
-    close_mappings:
-      - iso27701:SupervisoryAuthority
-    annotations:
-      dct_source: |2-
-         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
-        Version 2.1
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataProtectionAuthority
-      dpv_extension_slug: legal/eu/gdpr
-
-  DataSubject:
-    class_uri: legal_eu_gdpr:DataSubject
-    description: |-
-      Data Subject' means a natural person who can be identified, directly or
-      indirectly, in particular by reference to an identifier such as a name,
-      an identification number, location data, an online identifier or to one
-      or more factors specific to the physical, physiological, genetic,
-      mental, economic, cultural or social identity of that natural person
-    aliases:
-      - Data Subject
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:DataSubject
-      - dpv_legal_eu_gdpr_owl:DataSubject
-    close_mappings:
-      - iso27701:PIIPrincipal
-    annotations:
-      dct_source: GDPR Art.4-1
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
-      dpv_extension_slug: legal/eu/gdpr
-
   DataSubjectBreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:DataSubjectBreachNotice
     description: Notice regarding a data breach to the Data Subject
     aliases:
@@ -3538,25 +3453,6 @@ classes:
       dct_source: GDPR Art.5-1f
       upstream_iri: |-
         https://w3id.org/dpv/legal/eu/gdpr/owl#IntegrityConfidentialityPrinciple
-      dpv_extension_slug: legal/eu/gdpr
-
-  InternationalOrganisation:
-    class_uri: legal_eu_gdpr:InternationalOrganisation
-    description: |-
-      ‘International Organisation’ means an organisation and its subordinate
-      bodies governed by public international law, or any other body which is
-      set up by, or on the basis of, an agreement between two or more
-      countries
-    aliases:
-      - International Organisation
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:InternationalOrganisation
-      - dpv_legal_eu_gdpr_owl:InternationalOrganisation
-    annotations:
-      dct_source: GDPR Art.4-26
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InternationalOrganisation
       dpv_extension_slug: legal/eu/gdpr
 
   JustificationA12Complexity:
@@ -4421,7 +4317,7 @@ classes:
       dpv_extension_slug: legal/eu/gdpr
 
   LeadSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:LeadSupervisoryAuthority
     description: |-
       Authority with the primary responsibility for dealing with a
@@ -4438,6 +4334,27 @@ classes:
          Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
         Version 2.1
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#LeadSupervisoryAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprConsent:
+    is_a: Consent
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:Consent
+    description: |-
+      Consent’ of the data subject means any freely given, specific, informed
+      and unambiguous indication of the data subject’s wishes by which he or
+      she, by a statement or by a clear affirmative action, signifies
+      agreement to the processing of personal data relating to him or her
+    aliases:
+      - Consent
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Consent
+      - dpv_legal_eu_gdpr_owl:Consent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Consent
       dpv_extension_slug: legal/eu/gdpr
 
   LegalEuGdprController:
@@ -4462,6 +4379,129 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Controller
       dpv_extension_slug: legal/eu/gdpr
 
+  LegalEuGdprDataBreachNotice:
+    is_a: DataBreachNotice
+    class_uri: legal_eu_gdpr:DataBreachNotice
+    description: |-
+      Notice associated with data breach providing information in compliance
+      with GDPR
+    aliases:
+      - DataBreachNotice
+      - Data Breach Notice
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataBreachNotice
+      - dpv_legal_eu_gdpr_owl:DataBreachNotice
+    annotations:
+      dct_source: GDPR Article 33
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataBreachNotice
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprDataProtectionAuthority:
+    is_a: DataProtectionAuthority
+    class_uri: legal_eu_gdpr:DataProtectionAuthority
+    description: |-
+      ‘Supervisory Authority’ or 'Data Protection Authority' means an
+      independent public authority which is established by a Member State
+      pursuant to Article 51
+    aliases:
+      - DataProtectionAuthority
+      - Data Protection Authority
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataProtectionAuthority
+      - dpv_legal_eu_gdpr_owl:DataProtectionAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataProtectionAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprDataSubject:
+    is_a: DataSubject
+    class_uri: legal_eu_gdpr:DataSubject
+    description: |-
+      Data Subject' means a natural person who can be identified, directly or
+      indirectly, in particular by reference to an identifier such as a name,
+      an identification number, location data, an online identifier or to one
+      or more factors specific to the physical, physiological, genetic,
+      mental, economic, cultural or social identity of that natural person
+    aliases:
+      - DataSubject
+      - Data Subject
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataSubject
+      - dpv_legal_eu_gdpr_owl:DataSubject
+    annotations:
+      dct_source: GDPR Art.4-1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprInternationalOrganisation:
+    is_a: InternationalOrganisation
+    class_uri: legal_eu_gdpr:InternationalOrganisation
+    description: |-
+      ‘International Organisation’ means an organisation and its subordinate
+      bodies governed by public international law, or any other body which is
+      set up by, or on the basis of, an agreement between two or more
+      countries
+    aliases:
+      - InternationalOrganisation
+      - International Organisation
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:InternationalOrganisation
+      - dpv_legal_eu_gdpr_owl:InternationalOrganisation
+    annotations:
+      dct_source: GDPR Art.4-26
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InternationalOrganisation
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprPersonalData:
+    is_a: PersonalData
+    class_uri: legal_eu_gdpr:PersonalData
+    description: |-
+      Personal Data' means any information relating to an identified or
+      identifiable natural person (‘Data Subject’)
+    aliases:
+      - PersonalData
+      - Personal Data
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:PersonalData
+      - dpv_legal_eu_gdpr_owl:PersonalData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#PersonalData
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprProcessing:
+    is_a: Processing
+    class_uri: legal_eu_gdpr:Processing
+    description: |-
+      ‘Processing’ means any operation or set of operations which is performed
+      on personal data or on sets of personal data, whether or not by
+      automated means, such as collection, recording, organisation,
+      structuring, storage, adaptation or alteration, retrieval, consultation,
+      use, disclosure by transmission, dissemination or otherwise making
+      available, alignment or combination, restriction, erasure or destruction
+    aliases:
+      - Processing
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Processing
+      - dpv_legal_eu_gdpr_owl:Processing
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processing
+      dpv_extension_slug: legal/eu/gdpr
+
   LegalEuGdprProcessor:
     is_a: DataProcessor
     class_uri: legal_eu_gdpr:Processor
@@ -4478,6 +4518,52 @@ classes:
     annotations:
       dct_source: GDPR Art.4-8
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processor
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprProfiling:
+    is_a: Profiling
+    mixins:
+      - LegalEuGdprProcessing
+    class_uri: legal_eu_gdpr:Profiling
+    description: |-
+      ‘Profiling’ means any form of automated processing of personal data
+      consisting of the use of personal data to evaluate certain personal
+      aspects relating to a natural person, in particular to analyse or
+      predict aspects concerning that natural person’s performance at work,
+      economic situation, health, personal preferences, interests,
+      reliability, behaviour, location or movements
+    aliases:
+      - Profiling
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Profiling
+      - dpv_legal_eu_gdpr_owl:Profiling
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Profiling
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprPseudonymisation:
+    is_a: Pseudonymisation
+    mixins:
+      - TechnicalMeasure
+    class_uri: legal_eu_gdpr:Pseudonymisation
+    description: |-
+      Pseudonymisation’ means the processing of personal data in such a manner
+      that the personal data can no longer be attributed to a specific data
+      subject without the use of additional information, provided that such
+      additional information is kept separately and is subject to technical
+      and organisational measures to ensure that the personal data are not
+      attributed to an identified or identifiable natural person
+    aliases:
+      - Pseudonymisation
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Pseudonymisation
+      - dpv_legal_eu_gdpr_owl:Pseudonymisation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Pseudonymisation
       dpv_extension_slug: legal/eu/gdpr
 
   LegalEuGdprRecipient:
@@ -4499,8 +4585,49 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Recipient
       dpv_extension_slug: legal/eu/gdpr
 
+  LegalEuGdprRepresentative:
+    is_a: Representative
+    class_uri: legal_eu_gdpr:Representative
+    description: |-
+      Representative’ means a natural or legal person established in the Union
+      who, designated by the controller or processor in writing pursuant to
+      Article 27, represents the controller or processor with regard to their
+      respective obligations under this Regulation
+    aliases:
+      - Representative
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Representative
+      - dpv_legal_eu_gdpr_owl:Representative
+    annotations:
+      dct_source: GDPR Art.4-17
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Representative
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprThirdParty:
+    is_a: ThirdParty
+    class_uri: legal_eu_gdpr:ThirdParty
+    description: |-
+      ‘Third Party’ means a natural or legal person, public authority, agency
+      or body other than the data subject, controller, processor and persons
+      who, under the direct authority of the controller or processor, are
+      authorised to process personal data
+    aliases:
+      - ThirdParty
+      - Third Party
+    in_subset:
+      - legal_eu_gdpr_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:ThirdParty
+      - dpv_legal_eu_gdpr_owl:ThirdParty
+    annotations:
+      dct_source: GDPR Art.4-10
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ThirdParty
+      dpv_extension_slug: legal/eu/gdpr
+
   LocalSupervisoryAuthority:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     class_uri: legal_eu_gdpr:LocalSupervisoryAuthority
     description: |-
       Authority associated with the main or local establishment of an
@@ -4574,46 +4701,8 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#NecessityAssessment
       dpv_extension_slug: legal/eu/gdpr
 
-  PersonalData:
-    class_uri: legal_eu_gdpr:PersonalData
-    description: |-
-      Personal Data' means any information relating to an identified or
-      identifiable natural person (‘Data Subject’)
-    aliases:
-      - Personal Data
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:PersonalData
-      - dpv_legal_eu_gdpr_owl:PersonalData
-      - iso27701:PII
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#PersonalData
-      dpv_extension_slug: legal/eu/gdpr
-
-  Processing:
-    class_uri: legal_eu_gdpr:Processing
-    description: |-
-      ‘Processing’ means any operation or set of operations which is performed
-      on personal data or on sets of personal data, whether or not by
-      automated means, such as collection, recording, organisation,
-      structuring, storage, adaptation or alteration, retrieval, consultation,
-      use, disclosure by transmission, dissemination or otherwise making
-      available, alignment or combination, restriction, erasure or destruction
-    aliases:
-      - Processing
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Processing
-      - dpv_legal_eu_gdpr_owl:Processing
-      - iso27701:Processing
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processing
-      dpv_extension_slug: legal/eu/gdpr
-
   ProcessorBreachNotice:
-    is_a: DataBreachNotice
+    is_a: LegalEuGdprDataBreachNotice
     class_uri: legal_eu_gdpr:ProcessorBreachNotice
     description: Notice regarding a data breach to the Processor
     aliases:
@@ -4643,30 +4732,6 @@ classes:
       dct_source: GDPR Article 33
       upstream_iri: |-
         https://w3id.org/dpv/legal/eu/gdpr/owl#ProcessorBreachNotificationNeeded
-      dpv_extension_slug: legal/eu/gdpr
-
-  Profiling:
-    mixins:
-      - Processing
-    class_uri: legal_eu_gdpr:Profiling
-    description: |-
-      ‘Profiling’ means any form of automated processing of personal data
-      consisting of the use of personal data to evaluate certain personal
-      aspects relating to a natural person, in particular to analyse or
-      predict aspects concerning that natural person’s performance at work,
-      economic situation, health, personal preferences, interests,
-      reliability, behaviour, location or movements
-    aliases:
-      - Profiling
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Profiling
-      - dpv_legal_eu_gdpr_owl:Profiling
-    related_mappings:
-      - iso27701:Processing
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Profiling
       dpv_extension_slug: legal/eu/gdpr
 
   ProportionalityAssessment:
@@ -4727,30 +4792,6 @@ classes:
       - dpv_legal_eu_gdpr_owl:Proportionate
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Proportionate
-      dpv_extension_slug: legal/eu/gdpr
-
-  Pseudonymisation:
-    mixins:
-      - TechnicalMeasure
-    class_uri: legal_eu_gdpr:Pseudonymisation
-    description: |-
-      Pseudonymisation’ means the processing of personal data in such a manner
-      that the personal data can no longer be attributed to a specific data
-      subject without the use of additional information, provided that such
-      additional information is kept separately and is subject to technical
-      and organisational measures to ensure that the personal data are not
-      attributed to an identified or identifiable natural person
-    aliases:
-      - Pseudonymisation
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Pseudonymisation
-      - dpv_legal_eu_gdpr_owl:Pseudonymisation
-    close_mappings:
-      - iso27701:Pseudonymization
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Pseudonymisation
       dpv_extension_slug: legal/eu/gdpr
 
   PurposeCompatibility:
@@ -4861,25 +4902,6 @@ classes:
     annotations:
       dct_source: GDPR Art.5-1b
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#PurposeLimitationPrinciple
-      dpv_extension_slug: legal/eu/gdpr
-
-  Representative:
-    class_uri: legal_eu_gdpr:Representative
-    description: |-
-      Representative’ means a natural or legal person established in the Union
-      who, designated by the controller or processor in writing pursuant to
-      Article 27, represents the controller or processor with regard to their
-      respective obligations under this Regulation
-    aliases:
-      - Representative
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Representative
-      - dpv_legal_eu_gdpr_owl:Representative
-    annotations:
-      dct_source: GDPR Art.4-17
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Representative
       dpv_extension_slug: legal/eu/gdpr
 
   RightsRecipientsNotice:
@@ -5073,27 +5095,6 @@ classes:
       - dpv_legal_eu_gdpr_owl:SupplementaryMeasure
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#SupplementaryMeasure
-      dpv_extension_slug: legal/eu/gdpr
-
-  ThirdParty:
-    class_uri: legal_eu_gdpr:ThirdParty
-    description: |-
-      ‘Third Party’ means a natural or legal person, public authority, agency
-      or body other than the data subject, controller, processor and persons
-      who, under the direct authority of the controller or processor, are
-      authorised to process personal data
-    aliases:
-      - Third Party
-    in_subset:
-      - legal_eu_gdpr_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:ThirdParty
-      - dpv_legal_eu_gdpr_owl:ThirdParty
-    close_mappings:
-      - iso27701:ThirdParty
-    annotations:
-      dct_source: GDPR Art.4-10
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ThirdParty
       dpv_extension_slug: legal/eu/gdpr
 
   TransparencyPrinciple:

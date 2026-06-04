@@ -14102,14 +14102,14 @@ dpv:DpvLocation a owl:Class ;
 dpv:DpvThing a owl:Class ;
     rdfs:label "DpvThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty dpv:id ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dpv:id ],
         [ owl:unionOf ( dpv:Context dpv:ContractualClause dpv:DpvData dpv:DpvEntity dpv:DpvLocation dpv:DpvProcess dpv:ExpectationStatus dpv:Law dpv:LegalBasis dpv:Likelihood dpv:LocationFixture dpv:NoticeIcon dpv:NoticeLayer dpv:Processing dpv:PublicRegisterOfEntities dpv:Purpose dpv:Right dpv:RiskConcept dpv:RiskLevel dpv:Rule dpv:Sector dpv:Severity dpv:TechnicalOrganisationalMeasure dpv:Technology ) ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
+            owl:onProperty dpv:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
             owl:onProperty dpv:id ] ;
     skos:definition """Abstract base class for every DPV entity. Provides a uniform ``id``
 identifier slot. Does NOT enumerate DPV properties: the upstream OWL

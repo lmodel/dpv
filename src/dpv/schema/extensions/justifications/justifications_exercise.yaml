@@ -133,7 +133,7 @@ classes:
         https://w3id.org/dpv/justifications/owl#InformationSocietyServicesOffer
       dpv_extension_slug: justifications
 
-  LegalObligation:
+  JustificationsLegalObligation:
     is_a: ExerciseJustification
     mixins:
       - Justification
@@ -142,14 +142,13 @@ classes:
       Justification that the process should be carried out due to it being a
       legal obligation
     aliases:
+      - LegalObligation
       - Legal Obligation
     in_subset:
       - justifications_justifications_exercise_subset
     exact_mappings:
       - dpv_justifications:LegalObligation
       - dpv_justifications_owl:LegalObligation
-    related_mappings:
-      - oscal:ResponsibilityStatement
     annotations:
       upstream_iri: https://w3id.org/dpv/justifications/owl#LegalObligation
       dpv_extension_slug: justifications

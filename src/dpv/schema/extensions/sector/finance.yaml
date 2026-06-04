@@ -77,25 +77,6 @@ subsets:
 
 classes:
 
-  AccountManagement:
-    is_a: ServiceProvision
-    mixins:
-      - Purpose
-    class_uri: sector_finance:AccountManagement
-    description: |-
-      Purposes associated with management of accounts in relation to financial
-      services
-    aliases:
-      - Account Management
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:AccountManagement
-      - dpv_sector_finance_owl:AccountManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#AccountManagement
-      dpv_extension_slug: sector/finance
-
   AntiMoneyLaunderingCompliance:
     is_a: AntiMoneyLaunderingManagement
     mixins:
@@ -137,7 +118,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   BudgetPlanningAssistance:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:BudgetPlanningAssistance
@@ -253,7 +234,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   DebtManagement:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:DebtManagement
@@ -272,7 +253,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   ExpenseManagement:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:ExpenseManagement
@@ -611,7 +592,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   InvestmentManagement:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:InvestmentManagement
@@ -630,7 +611,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   LoanServiceProvision:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:LoanServiceProvision
@@ -683,7 +664,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   PaymentProcessing:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:PaymentProcessing
@@ -739,7 +720,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   ProductRecommendation:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:ProductRecommendation
@@ -778,6 +759,45 @@ classes:
       upstream_iri: https://w3id.org/dpv/sector/finance/owl#RegulatoryCompliance
       dpv_extension_slug: sector/finance
 
+  SectorFinanceAccountManagement:
+    is_a: SectorFinanceServiceProvision
+    mixins:
+      - Purpose
+    class_uri: sector_finance:AccountManagement
+    description: |-
+      Purposes associated with management of accounts in relation to financial
+      services
+    aliases:
+      - AccountManagement
+      - Account Management
+    in_subset:
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:AccountManagement
+      - dpv_sector_finance_owl:AccountManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#AccountManagement
+      dpv_extension_slug: sector/finance
+
+  SectorFinanceServiceProvision:
+    is_a: ServiceProvision
+    mixins:
+      - Purpose
+      - FinancialServiceManagement
+    class_uri: sector_finance:ServiceProvision
+    description: Purposes associated with provision of financial services
+    aliases:
+      - ServiceProvision
+      - Service Provision
+    in_subset:
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:ServiceProvision
+      - dpv_sector_finance_owl:ServiceProvision
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceProvision
+      dpv_extension_slug: sector/finance
+
   ServiceImprovement:
     is_a: ServiceOptimisation
     mixins:
@@ -796,23 +816,6 @@ classes:
       - dpv_sector_finance_owl:ServiceImprovement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceImprovement
-      dpv_extension_slug: sector/finance
-
-  ServiceProvision:
-    mixins:
-      - Purpose
-      - FinancialServiceManagement
-    class_uri: sector_finance:ServiceProvision
-    description: Purposes associated with provision of financial services
-    aliases:
-      - Service Provision
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:ServiceProvision
-      - dpv_sector_finance_owl:ServiceProvision
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceProvision
       dpv_extension_slug: sector/finance
 
   TaxReportingCompliance:
@@ -875,7 +878,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   WealthManagement:
-    is_a: ServiceProvision
+    is_a: SectorFinanceServiceProvision
     mixins:
       - Purpose
     class_uri: sector_finance:WealthManagement
