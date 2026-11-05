@@ -13,10 +13,10 @@ sources:
     title: agent_id
   - id: dpv_rules.py
     resource: tests/dpv_rules.py
-    title: _term_errors
+    title: the rule on a term's contributor
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:38Z"
 status: draft
 ---
 
@@ -27,4 +27,4 @@ DPV's files hold each person on a blank node, labelled `person-<name>`. A parser
 A term's `contributor` names an agent by that id, and `tests/dpv_rules.py` holds it to a record here.[^dpv_rules.py]
 
 [^converter]: scripts/dpv_to_linkml.py, agent_id
-[^dpv_rules.py]: tests/dpv_rules.py, _term_errors
+[^dpv_rules.py]: tests/dpv_rules.py, the rule on a term's contributor

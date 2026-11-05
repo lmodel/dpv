@@ -2,6 +2,7 @@
 
 ## 2026-11-05
 
+* **Changed**: the note on the contributor rule names it in words.
 * **Changed**: the example data names the catalogue and the schema it exercises.
 * **Changed**: the covenant names the schema it governs and the vocabulary it renders.
 * **Changed**: the security policy names the workflows it describes.
