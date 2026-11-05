@@ -514,10 +514,10 @@ class DpvAgent(ConfiguredBaseModel):
                        'DpvAgent',
                        'DpvTerm',
                        'DpvExample']} })
-    homepage: Optional[str] = Field(default=None, title="Homepage", description="""The element's home page, as DPV writes its address.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent', 'DpvTerm'], 'slot_uri': 'foaf:homepage'} })
     name: str = Field(default=..., title="Name", description="""The agent's name.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent'], 'slot_uri': 'foaf:name'} })
-    hasORCID: Optional[str] = Field(default=None, title="ORCID", description="""The person's ORCID identifier.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent'], 'slot_uri': 'scoro:hasORCID'} })
+    homepage: Optional[str] = Field(default=None, title="Homepage", description="""The element's home page, as DPV writes its address.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent', 'DpvTerm'], 'slot_uri': 'foaf:homepage'} })
     memberOf: Optional[list[str]] = Field(default=None, title="Member Of", description="""The organizations the person belongs to.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent'], 'slot_uri': 'org:memberOf'} })
+    hasORCID: Optional[str] = Field(default=None, title="ORCID", description="""The person's ORCID identifier.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvAgent'], 'slot_uri': 'scoro:hasORCID'} })
 
     @field_validator('id')
     def pattern_id(cls, v):
@@ -554,8 +554,8 @@ class DpvWebPage(ConfiguredBaseModel):
          'from_schema': 'https://w3id.org/lmodel/dpv/dpv_core',
          'title': 'Web Page'})
 
-    page_name: str = Field(default=..., title="Page Name", description="""The page's title.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvWebPage'], 'slot_uri': 'sdo:name'} })
     url: Optional[str] = Field(default=None, title="URL", description="""The page's address.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvWebPage'], 'slot_uri': 'sdo:url'} })
+    page_name: str = Field(default=..., title="Page Name", description="""The page's title.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvWebPage'], 'slot_uri': 'sdo:name'} })
 
 
 class DpvInterval(ConfiguredBaseModel):
@@ -5958,11 +5958,24 @@ class DpvStatement(ConfiguredBaseModel):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/lmodel/dpv/dpv_terms', 'title': 'Statement'})
 
+    datatype: Optional[str] = Field(default=None, title="Datatype", description="""The literal's datatype, as a CURIE.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement']} })
     predicate: str = Field(default=..., title="Predicate", description="""The predicate, as a CURIE or an IRI.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement'], 'slot_uri': 'rdf:predicate'} })
     reference: Optional[str] = Field(default=None, title="Reference", description="""The object, when it names a resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement'], 'slot_uri': 'rdf:object'} })
     literal: Optional[str] = Field(default=None, title="Literal", description="""The object, when it is a literal, in its lexical form.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement'], 'slot_uri': 'rdf:value'} })
-    datatype: Optional[str] = Field(default=None, title="Datatype", description="""The literal's datatype, as a CURIE.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement']} })
     language: Optional[str] = Field(default=None, title="Language", description="""The literal's language tag.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvStatement']} })
+
+    @field_validator('datatype')
+    def pattern_datatype(cls, v):
+        pattern=re.compile(r"^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid datatype format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid datatype format: {v}"
+            raise ValueError(err_msg)
+        return v
 
     @field_validator('predicate')
     def pattern_predicate(cls, v):
@@ -5987,19 +6000,6 @@ class DpvStatement(ConfiguredBaseModel):
                     raise ValueError(err_msg)
         elif isinstance(v, str) and not pattern.search(v):
             err_msg = f"Invalid reference format: {v}"
-            raise ValueError(err_msg)
-        return v
-
-    @field_validator('datatype')
-    def pattern_datatype(cls, v):
-        pattern=re.compile(r"^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$")
-        if isinstance(v, list):
-            for element in v:
-                if isinstance(element, str) and not pattern.search(element):
-                    err_msg = f"Invalid datatype format: {element}"
-                    raise ValueError(err_msg)
-        elif isinstance(v, str) and not pattern.search(v):
-            err_msg = f"Invalid datatype format: {v}"
             raise ValueError(err_msg)
         return v
 
@@ -62036,11 +62036,11 @@ class DpvCatalogue(ConfiguredBaseModel):
          'title': 'Catalogue',
          'tree_root': True})
 
+    concepts: Optional[list[DpvConcept]] = Field(default=None, title="Concepts", description="""The family's concepts, each a record of its kinds.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     edition: str = Field(default=..., title="Edition", description="""The DPV release the part belongs to.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue'], 'slot_uri': 'dcterms:isVersionOf'} })
     family: DpvFamily = Field(default=..., title="Family", description="""Which part of the release this is.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     vocabularies: Optional[list[DpvVocabulary]] = Field(default=None, title="Vocabularies", description="""The family's vocabularies, as each one's Turtle file describes it.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     concept_schemes: Optional[list[DpvConceptScheme]] = Field(default=None, title="Concept Schemes", description="""The lists of terms the family's vocabularies keep.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
-    concepts: Optional[list[DpvConcept]] = Field(default=None, title="Concepts", description="""The family's concepts, each a record of its kind.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     properties: Optional[list[DpvProperty]] = Field(default=None, title="Properties", description="""The family's properties.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     agents: Optional[list[DpvAgent]] = Field(default=None, title="Agents", description="""The people and organizations DPV names as contributors.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })
     examples: Optional[list[DpvExample]] = Field(default=None, title="Examples", description="""DPV's examples.""", json_schema_extra = { "linkml_meta": {'domain_of': ['DpvCatalogue']} })

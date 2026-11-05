@@ -164,10 +164,10 @@ type DpvAdequacyDecision
 type DpvAgent
   {
     id: String!
-    homepage: String
     name: String!
-    hasORCID: String
+    homepage: String
     memberOf: [DpvAgent]
+    hasORCID: String
   }
 
 type DpvAgentNegotiationBehaviour
@@ -724,11 +724,11 @@ type DpvAvailabilityConcept
 
 type DpvCatalogue
   {
+    concepts: [DpvConcept]
     edition: String!
     family: DpvFamily!
     vocabularies: [DpvVocabulary]
     conceptSchemes: [DpvConceptScheme]
-    concepts: [DpvConcept]
     properties: [DpvProperty]
     agents: [DpvAgent]
     examples: [DpvExample]
@@ -6832,10 +6832,10 @@ type DpvSpecialCategoryPersonalData
 
 type DpvStatement
   {
+    datatype: String
     predicate: String!
     reference: String
     literal: String
-    datatype: String
     language: String
   }
 
@@ -7403,6 +7403,6 @@ type DpvVocabulary
 
 type DpvWebPage
   {
-    pageName: String!
     url: String
+    pageName: String!
   }

@@ -158,6 +158,8 @@ classes:
     description: >-
       One part of a DPV release: one namespace family's vocabularies and terms, its contributors or
       its examples.
+    slots:
+      - concepts
     attributes:
       edition:
         title: Edition
@@ -181,12 +183,6 @@ classes:
         range: DpvConceptScheme
         multivalued: true
         inlined_as_list: true
-      concepts:
-        title: Concepts
-        description: The family's concepts, each a record of its kind.
-        range: DpvConcept
-        multivalued: true
-        inlined_as_list: true
       properties:
         title: Properties
         description: The family's properties.
@@ -205,6 +201,15 @@ classes:
         range: DpvExample
         multivalued: true
         inlined_as_list: true
+
+slots:
+
+  concepts:
+    title: Concepts
+    description: The family's concepts, each a record of its kinds.
+    range: DpvConcept
+    multivalued: true
+    inlined_as_list: true
 
 enums:
 

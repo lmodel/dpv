@@ -269,14 +269,14 @@ export interface DpvConceptScheme {
 export interface DpvAgent {
     /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
     id: string,
-    /** The element's home page, as DPV writes its address. */
-    homepage?: string,
     /** The agent's name. */
     name: string,
-    /** The person's ORCID identifier. */
-    hasORCID?: string,
+    /** The element's home page, as DPV writes its address. */
+    homepage?: string,
     /** The organizations the person belongs to. */
     memberOf?: DpvAgentId[],
+    /** The person's ORCID identifier. */
+    hasORCID?: string,
 }
 
 
@@ -284,10 +284,10 @@ export interface DpvAgent {
  * A web page DPV names as a term's source.
  */
 export interface DpvWebPage {
-    /** The page's title. */
-    page_name: string,
     /** The page's address. */
     url?: string,
+    /** The page's title. */
+    page_name: string,
 }
 
 
@@ -1067,14 +1067,14 @@ export interface DpvExample {
  * One statement of a resource that its keys cannot hold: a predicate with no slot, or a value not in the form its slot takes.
  */
 export interface DpvStatement {
+    /** The literal's datatype, as a CURIE. */
+    datatype?: string,
     /** The predicate, as a CURIE or an IRI. */
     predicate: string,
     /** The object, when it names a resource. */
     reference?: string,
     /** The object, when it is a literal, in its lexical form. */
     literal?: string,
-    /** The literal's datatype, as a CURIE. */
-    datatype?: string,
     /** The literal's language tag. */
     language?: string,
 }
@@ -2127,6 +2127,8 @@ export interface DpvTransparencyTerm extends DpvContractualClause {
  * One part of a DPV release: one namespace family's vocabularies and terms, its contributors or its examples.
  */
 export interface DpvCatalogue {
+    /** The family's concepts, each a record of its kinds. */
+    concepts?: DpvConcept[],
     /** The DPV release the part belongs to. */
     edition: string,
     /** Which part of the release this is. */
@@ -2135,8 +2137,6 @@ export interface DpvCatalogue {
     vocabularies?: DpvVocabulary[],
     /** The lists of terms the family's vocabularies keep. */
     concept_schemes?: DpvConceptScheme[],
-    /** The family's concepts, each a record of its kind. */
-    concepts?: DpvConcept[],
     /** The family's properties. */
     properties?: DpvProperty[],
     /** The people and organizations DPV names as contributors. */

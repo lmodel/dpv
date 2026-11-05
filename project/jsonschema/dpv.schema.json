@@ -6551,7 +6551,7 @@
                     ]
                 },
                 "concepts": {
-                    "description": "The family's concepts, each a record of its kind.",
+                    "description": "The family's concepts, each a record of its kinds.",
                     "items": {
                         "$ref": "#/$defs/DpvConcept"
                     },
@@ -69497,7 +69497,7 @@
             ]
         },
         "concepts": {
-            "description": "The family's concepts, each a record of its kind.",
+            "description": "The family's concepts, each a record of its kinds.",
             "items": {
                 "$ref": "#/$defs/DpvConcept"
             },

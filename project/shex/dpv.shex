@@ -100,10 +100,10 @@ linkml:Sparqlpath xsd:string
 }
 
 <DpvAgent> CLOSED {
-    (  $<DpvAgent_tes> (  foaf:homepage @linkml:String ? ;
-          foaf:name @linkml:String ;
-          scoro:hasORCID @linkml:String ? ;
-          org:memberOf @<DpvAgent> *
+    (  $<DpvAgent_tes> (  foaf:name @linkml:String ;
+          foaf:homepage @linkml:String ? ;
+          org:memberOf @<DpvAgent> * ;
+          scoro:hasORCID @linkml:String ?
        ) ;
        rdf:type [ dcterms:Agent ]
     )
@@ -213,7 +213,8 @@ linkml:Sparqlpath xsd:string
 }
 
 <DpvCatalogue> CLOSED {
-    (  $<DpvCatalogue_tes> (  dcterms:isVersionOf @linkml:String ;
+    (  $<DpvCatalogue_tes> (  <concepts> @<DpvConcept> * ;
+          dcterms:isVersionOf @linkml:String ;
           <family> [ <https://w3id.org/lmodel/dpv/DpvFamily#core> <https://w3id.org/lmodel/dpv/DpvFamily#pd>
              <https://w3id.org/lmodel/dpv/DpvFamily#tech> <https://w3id.org/lmodel/dpv/DpvFamily#ai>
              <https://w3id.org/lmodel/dpv/DpvFamily#risk> <https://w3id.org/lmodel/dpv/DpvFamily#justifications>
@@ -222,7 +223,6 @@ linkml:Sparqlpath xsd:string
              <https://w3id.org/lmodel/dpv/DpvFamily#agents> <https://w3id.org/lmodel/dpv/DpvFamily#examples> ] ;
           <vocabularies> @<DpvVocabulary> * ;
           <concept_schemes> @<DpvConceptScheme> * ;
-          <concepts> @<DpvConcept> * ;
           <properties> @<DpvProperty> * ;
           <agents> @<DpvAgent> * ;
           <examples> @<DpvExample> *
@@ -1655,10 +1655,10 @@ linkml:Sparqlpath xsd:string
 }
 
 <DpvStatement> CLOSED {
-    (  $<DpvStatement_tes> (  rdf:predicate @linkml:Uriorcurie ;
+    (  $<DpvStatement_tes> (  <datatype> @linkml:Uriorcurie ? ;
+          rdf:predicate @linkml:Uriorcurie ;
           rdf:object @linkml:Uriorcurie ? ;
           rdf:value @linkml:String ? ;
-          <datatype> @linkml:Uriorcurie ? ;
           <language> @linkml:String ?
        ) ;
        rdf:type [ <DpvStatement> ] ?
@@ -1833,8 +1833,8 @@ linkml:Sparqlpath xsd:string
 }
 
 <DpvWebPage> CLOSED {
-    (  $<DpvWebPage_tes> (  sdo:name @linkml:String ;
-          sdo:url @linkml:String ?
+    (  $<DpvWebPage_tes> (  sdo:url @linkml:String ? ;
+          sdo:name @linkml:String
        ) ;
        rdf:type [ sdo:WebPage ] ?
     )

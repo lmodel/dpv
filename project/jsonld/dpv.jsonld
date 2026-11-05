@@ -893,6 +893,77 @@
   ],
   "slots": [
     {
+      "name": "concepts",
+      "definition_uri": "https://w3id.org/lmodel/dpv/concepts",
+      "description": "The family's concepts, each a record of its kinds.",
+      "title": "Concepts",
+      "from_schema": "https://w3id.org/lmodel/dpv",
+      "slot_uri": "https://w3id.org/lmodel/dpv/concepts",
+      "owner": "DpvCatalogue",
+      "domain_of": [
+        "DpvCatalogue"
+      ],
+      "range": "DpvConcept",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "name",
+      "definition_uri": "https://w3id.org/lmodel/dpv/name",
+      "description": "The agent's name.",
+      "title": "Name",
+      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/name"
+      ],
+      "slot_uri": "http://xmlns.com/foaf/0.1/name",
+      "owner": "DpvAgent",
+      "domain_of": [
+        "DpvAgent"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "memberOf",
+      "definition_uri": "https://w3id.org/lmodel/dpv/memberOf",
+      "description": "The organizations the person belongs to.",
+      "title": "Member Of",
+      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
+      "mappings": [
+        "http://www.w3.org/ns/org#memberOf"
+      ],
+      "slot_uri": "http://www.w3.org/ns/org#memberOf",
+      "owner": "DpvAgent",
+      "domain_of": [
+        "DpvAgent"
+      ],
+      "range": "DpvAgent",
+      "multivalued": true,
+      "pattern": "^dpv_agent:(person|org)-[a-z0-9-]+$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "url",
+      "definition_uri": "https://w3id.org/lmodel/dpv/url",
+      "description": "The page's address.",
+      "title": "URL",
+      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
+      "mappings": [
+        "https://schema.org/url"
+      ],
+      "slot_uri": "https://schema.org/url",
+      "owner": "DpvWebPage",
+      "domain_of": [
+        "DpvWebPage"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "id",
       "definition_uri": "https://w3id.org/lmodel/dpv/id",
       "description": "The element's IRI as a CURIE or whole, or a blank node's label in an example.",
@@ -7677,6 +7748,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "datatype",
+      "definition_uri": "https://w3id.org/lmodel/dpv/datatype",
+      "description": "The literal's datatype, as a CURIE.",
+      "title": "Datatype",
+      "from_schema": "https://w3id.org/lmodel/dpv/dpv_terms",
+      "slot_uri": "https://w3id.org/lmodel/dpv/datatype",
+      "owner": "DpvStatement",
+      "domain_of": [
+        "DpvStatement"
+      ],
+      "range": "uriorcurie",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_+.-]*:\\S*$",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "statements",
       "definition_uri": "https://w3id.org/lmodel/dpv/statements",
       "description": "What the record's keys cannot hold.",
@@ -7761,23 +7847,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dpvCatalogue__concepts",
-      "description": "The family's concepts, each a record of its kind.",
-      "title": "Concepts",
-      "from_schema": "https://w3id.org/lmodel/dpv",
-      "slot_uri": "https://w3id.org/lmodel/dpv/concepts",
-      "alias": "concepts",
-      "owner": "DpvCatalogue",
-      "domain_of": [
-        "DpvCatalogue"
-      ],
-      "range": "DpvConcept",
-      "multivalued": true,
-      "inlined": true,
-      "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "dpvCatalogue__properties",
       "description": "The family's properties.",
       "title": "Properties",
@@ -7829,24 +7898,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dpvAgent__name",
-      "description": "The agent's name.",
-      "title": "Name",
-      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
-      "mappings": [
-        "http://xmlns.com/foaf/0.1/name"
-      ],
-      "slot_uri": "http://xmlns.com/foaf/0.1/name",
-      "alias": "name",
-      "owner": "DpvAgent",
-      "domain_of": [
-        "DpvAgent"
-      ],
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "dpvAgent__hasORCID",
       "description": "The person's ORCID identifier.",
       "title": "ORCID",
@@ -7861,25 +7912,6 @@
         "DpvAgent"
       ],
       "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dpvAgent__memberOf",
-      "description": "The organizations the person belongs to.",
-      "title": "Member Of",
-      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
-      "mappings": [
-        "http://www.w3.org/ns/org#memberOf"
-      ],
-      "slot_uri": "http://www.w3.org/ns/org#memberOf",
-      "alias": "memberOf",
-      "owner": "DpvAgent",
-      "domain_of": [
-        "DpvAgent"
-      ],
-      "range": "DpvAgent",
-      "multivalued": true,
-      "pattern": "^dpv_agent:(person|org)-[a-z0-9-]+$",
       "@type": "SlotDefinition"
     },
     {
@@ -7898,23 +7930,6 @@
       ],
       "range": "string",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dpvWebPage__url",
-      "description": "The page's address.",
-      "title": "URL",
-      "from_schema": "https://w3id.org/lmodel/dpv/dpv_core",
-      "mappings": [
-        "https://schema.org/url"
-      ],
-      "slot_uri": "https://schema.org/url",
-      "alias": "url",
-      "owner": "DpvWebPage",
-      "domain_of": [
-        "DpvWebPage"
-      ],
-      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -8037,21 +8052,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dpvStatement__datatype",
-      "description": "The literal's datatype, as a CURIE.",
-      "title": "Datatype",
-      "from_schema": "https://w3id.org/lmodel/dpv/dpv_terms",
-      "slot_uri": "https://w3id.org/lmodel/dpv/datatype",
-      "alias": "datatype",
-      "owner": "DpvStatement",
-      "domain_of": [
-        "DpvStatement"
-      ],
-      "range": "uriorcurie",
-      "pattern": "^[A-Za-z_][A-Za-z0-9_+.-]*:\\S*$",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "dpvStatement__language",
       "description": "The literal's language tag.",
       "title": "Language",
@@ -8119,11 +8119,11 @@
       "title": "Catalogue",
       "from_schema": "https://w3id.org/lmodel/dpv",
       "slots": [
+        "concepts",
         "dpvCatalogue__edition",
         "dpvCatalogue__family",
         "dpvCatalogue__vocabularies",
         "dpvCatalogue__concept_schemes",
-        "dpvCatalogue__concepts",
         "dpvCatalogue__properties",
         "dpvCatalogue__agents",
         "dpvCatalogue__examples"
@@ -8160,15 +8160,6 @@
           "description": "The lists of terms the family's vocabularies keep.",
           "title": "Concept Schemes",
           "range": "DpvConceptScheme",
-          "multivalued": true,
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "concepts",
-          "description": "The family's concepts, each a record of its kind.",
-          "title": "Concepts",
-          "range": "DpvConcept",
           "multivalued": true,
           "inlined_as_list": true,
           "@type": "SlotDefinition"
@@ -8271,36 +8262,18 @@
       ],
       "slots": [
         "DpvAgent_id",
+        "name",
         "homepage",
-        "dpvAgent__name",
-        "dpvAgent__hasORCID",
-        "dpvAgent__memberOf"
+        "memberOf",
+        "dpvAgent__hasORCID"
       ],
       "slot_usage": {},
       "attributes": [
-        {
-          "name": "name",
-          "description": "The agent's name.",
-          "title": "Name",
-          "slot_uri": "foaf:name",
-          "required": true,
-          "@type": "SlotDefinition"
-        },
         {
           "name": "hasORCID",
           "description": "The person's ORCID identifier.",
           "title": "ORCID",
           "slot_uri": "scoro:hasORCID",
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "memberOf",
-          "description": "The organizations the person belongs to.",
-          "title": "Member Of",
-          "slot_uri": "org:memberOf",
-          "range": "DpvAgent",
-          "multivalued": true,
-          "pattern": "^dpv_agent:(person|org)-[a-z0-9-]+$",
           "@type": "SlotDefinition"
         }
       ],
@@ -8317,8 +8290,8 @@
         "sdo:WebPage"
       ],
       "slots": [
-        "dpvWebPage__page_name",
-        "dpvWebPage__url"
+        "url",
+        "dpvWebPage__page_name"
       ],
       "slot_usage": {},
       "attributes": [
@@ -8328,13 +8301,6 @@
           "title": "Page Name",
           "slot_uri": "sdo:name",
           "required": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "url",
-          "description": "The page's address.",
-          "title": "URL",
-          "slot_uri": "sdo:url",
           "@type": "SlotDefinition"
         }
       ],
@@ -8920,10 +8886,10 @@
       "title": "Statement",
       "from_schema": "https://w3id.org/lmodel/dpv/dpv_terms",
       "slots": [
+        "datatype",
         "dpvStatement__predicate",
         "dpvStatement__reference",
         "dpvStatement__literal",
-        "dpvStatement__datatype",
         "dpvStatement__language"
       ],
       "slot_usage": {},
@@ -8952,14 +8918,6 @@
           "description": "The object, when it is a literal, in its lexical form.",
           "title": "Literal",
           "slot_uri": "rdf:value",
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "datatype",
-          "description": "The literal's datatype, as a CURIE.",
-          "title": "Datatype",
-          "range": "uriorcurie",
-          "pattern": "^[A-Za-z_][A-Za-z0-9_+.-]*:\\S*$",
           "@type": "SlotDefinition"
         },
         {
@@ -17617,8 +17575,8 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "dpv.yaml",
-  "source_file_date": "2026-11-05T14:25:12",
-  "source_file_size": 8871,
+  "source_file_date": "2026-11-05T14:43:17",
+  "source_file_size": 8885,
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dpv.context.jsonld",

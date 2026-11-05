@@ -825,9 +825,9 @@ class DpvCatalogue(YAMLRoot):
 
     edition: str = None
     family: Union[str, "DpvFamily"] = None
+    concepts: Optional[Union[dict[Union[str, DpvConceptId], Union[dict, "DpvConcept"]], list[Union[dict, "DpvConcept"]]]] = empty_dict()
     vocabularies: Optional[Union[dict[Union[str, DpvVocabularyId], Union[dict, "DpvVocabulary"]], list[Union[dict, "DpvVocabulary"]]]] = empty_dict()
     concept_schemes: Optional[Union[list[Union[str, DpvConceptSchemeId]], dict[Union[str, DpvConceptSchemeId], Union[dict, "DpvConceptScheme"]]]] = empty_dict()
-    concepts: Optional[Union[dict[Union[str, DpvConceptId], Union[dict, "DpvConcept"]], list[Union[dict, "DpvConcept"]]]] = empty_dict()
     properties: Optional[Union[dict[Union[str, DpvPropertyId], Union[dict, "DpvProperty"]], list[Union[dict, "DpvProperty"]]]] = empty_dict()
     agents: Optional[Union[dict[Union[str, DpvAgentId], Union[dict, "DpvAgent"]], list[Union[dict, "DpvAgent"]]]] = empty_dict()
     examples: Optional[Union[dict[Union[str, DpvExampleId], Union[dict, "DpvExample"]], list[Union[dict, "DpvExample"]]]] = empty_dict()
@@ -843,11 +843,11 @@ class DpvCatalogue(YAMLRoot):
         if not isinstance(self.family, DpvFamily):
             self.family = DpvFamily(self.family)
 
+        self._normalize_inlined_as_list(slot_name="concepts", slot_type=DpvConcept, key_name="id", keyed=True)
+
         self._normalize_inlined_as_list(slot_name="vocabularies", slot_type=DpvVocabulary, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="concept_schemes", slot_type=DpvConceptScheme, key_name="id", keyed=True)
-
-        self._normalize_inlined_as_list(slot_name="concepts", slot_type=DpvConcept, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="properties", slot_type=DpvProperty, key_name="id", keyed=True)
 
@@ -1019,8 +1019,8 @@ class DpvAgent(YAMLRoot):
     id: Union[str, DpvAgentId] = None
     name: str = None
     homepage: Optional[str] = None
-    hasORCID: Optional[str] = None
     memberOf: Optional[Union[Union[str, DpvAgentId], list[Union[str, DpvAgentId]]]] = empty_list()
+    hasORCID: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1036,12 +1036,12 @@ class DpvAgent(YAMLRoot):
         if self.homepage is not None and not isinstance(self.homepage, str):
             self.homepage = str(self.homepage)
 
-        if self.hasORCID is not None and not isinstance(self.hasORCID, str):
-            self.hasORCID = str(self.hasORCID)
-
         if not isinstance(self.memberOf, list):
             self.memberOf = [self.memberOf] if self.memberOf is not None else []
         self.memberOf = [v if isinstance(v, DpvAgentId) else DpvAgentId(v) for v in self.memberOf]
+
+        if self.hasORCID is not None and not isinstance(self.hasORCID, str):
+            self.hasORCID = str(self.hasORCID)
 
         super().__post_init__(**kwargs)
 
@@ -3013,9 +3013,9 @@ class DpvStatement(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = DPV_LINKML.DpvStatement
 
     predicate: Union[str, URIorCURIE] = None
+    datatype: Optional[Union[str, URIorCURIE]] = None
     reference: Optional[Union[str, URIorCURIE]] = None
     literal: Optional[str] = None
-    datatype: Optional[Union[str, URIorCURIE]] = None
     language: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -3024,14 +3024,14 @@ class DpvStatement(YAMLRoot):
         if not isinstance(self.predicate, URIorCURIE):
             self.predicate = URIorCURIE(self.predicate)
 
+        if self.datatype is not None and not isinstance(self.datatype, URIorCURIE):
+            self.datatype = URIorCURIE(self.datatype)
+
         if self.reference is not None and not isinstance(self.reference, URIorCURIE):
             self.reference = URIorCURIE(self.reference)
 
         if self.literal is not None and not isinstance(self.literal, str):
             self.literal = str(self.literal)
-
-        if self.datatype is not None and not isinstance(self.datatype, URIorCURIE):
-            self.datatype = URIorCURIE(self.datatype)
 
         if self.language is not None and not isinstance(self.language, str):
             self.language = str(self.language)
@@ -6579,6 +6579,19 @@ class DpvTermStatus(EnumDefinitionImpl):
 class slots:
     pass
 
+slots.concepts = Slot(uri=DPV_LINKML.concepts, name="concepts", curie=DPV_LINKML.curie('concepts'),
+                   model_uri=DPV_LINKML.concepts, domain=None, range=Optional[Union[dict[Union[str, DpvConceptId], Union[dict, DpvConcept]], list[Union[dict, DpvConcept]]]])
+
+slots.name = Slot(uri=FOAF.name, name="name", curie=FOAF.curie('name'),
+                   model_uri=DPV_LINKML.name, domain=None, range=str)
+
+slots.memberOf = Slot(uri=ORG.memberOf, name="memberOf", curie=ORG.curie('memberOf'),
+                   model_uri=DPV_LINKML.memberOf, domain=None, range=Optional[Union[Union[str, DpvAgentId], list[Union[str, DpvAgentId]]]],
+                   pattern=re.compile(r'^dpv_agent:(person|org)-[a-z0-9-]+$'))
+
+slots.url = Slot(uri=SDO.url, name="url", curie=SDO.curie('url'),
+                   model_uri=DPV_LINKML.url, domain=None, range=Optional[str])
+
 slots.id = Slot(uri=DPV_LINKML.id, name="id", curie=DPV_LINKML.curie('id'),
                    model_uri=DPV_LINKML.id, domain=None, range=URIRef,
                    pattern=re.compile(r'^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$'))
@@ -7915,6 +7928,10 @@ slots.value = Slot(uri=RDF.value, name="value", curie=RDF.curie('value'),
 slots.source_page = Slot(uri=DCTERMS.source, name="source_page", curie=DCTERMS.curie('source'),
                    model_uri=DPV_LINKML.source_page, domain=None, range=Optional[Union[Union[dict, DpvWebPage], list[Union[dict, DpvWebPage]]]])
 
+slots.datatype = Slot(uri=DPV_LINKML.datatype, name="datatype", curie=DPV_LINKML.curie('datatype'),
+                   model_uri=DPV_LINKML.datatype, domain=None, range=Optional[Union[str, URIorCURIE]],
+                   pattern=re.compile(r'^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$'))
+
 slots.statements = Slot(uri=DPV_LINKML.statements, name="statements", curie=DPV_LINKML.curie('statements'),
                    model_uri=DPV_LINKML.statements, domain=None, range=Optional[Union[Union[dict, DpvStatement], list[Union[dict, DpvStatement]]]])
 
@@ -7930,9 +7947,6 @@ slots.dpvCatalogue__vocabularies = Slot(uri=DPV_LINKML.vocabularies, name="dpvCa
 slots.dpvCatalogue__concept_schemes = Slot(uri=DPV_LINKML.concept_schemes, name="dpvCatalogue__concept_schemes", curie=DPV_LINKML.curie('concept_schemes'),
                    model_uri=DPV_LINKML.dpvCatalogue__concept_schemes, domain=None, range=Optional[Union[list[Union[str, DpvConceptSchemeId]], dict[Union[str, DpvConceptSchemeId], Union[dict, DpvConceptScheme]]]])
 
-slots.dpvCatalogue__concepts = Slot(uri=DPV_LINKML.concepts, name="dpvCatalogue__concepts", curie=DPV_LINKML.curie('concepts'),
-                   model_uri=DPV_LINKML.dpvCatalogue__concepts, domain=None, range=Optional[Union[dict[Union[str, DpvConceptId], Union[dict, DpvConcept]], list[Union[dict, DpvConcept]]]])
-
 slots.dpvCatalogue__properties = Slot(uri=DPV_LINKML.properties, name="dpvCatalogue__properties", curie=DPV_LINKML.curie('properties'),
                    model_uri=DPV_LINKML.dpvCatalogue__properties, domain=None, range=Optional[Union[dict[Union[str, DpvPropertyId], Union[dict, DpvProperty]], list[Union[dict, DpvProperty]]]])
 
@@ -7942,21 +7956,11 @@ slots.dpvCatalogue__agents = Slot(uri=DPV_LINKML.agents, name="dpvCatalogue__age
 slots.dpvCatalogue__examples = Slot(uri=DPV_LINKML.examples, name="dpvCatalogue__examples", curie=DPV_LINKML.curie('examples'),
                    model_uri=DPV_LINKML.dpvCatalogue__examples, domain=None, range=Optional[Union[dict[Union[str, DpvExampleId], Union[dict, DpvExample]], list[Union[dict, DpvExample]]]])
 
-slots.dpvAgent__name = Slot(uri=FOAF.name, name="dpvAgent__name", curie=FOAF.curie('name'),
-                   model_uri=DPV_LINKML.dpvAgent__name, domain=None, range=str)
-
 slots.dpvAgent__hasORCID = Slot(uri=SCORO.hasORCID, name="dpvAgent__hasORCID", curie=SCORO.curie('hasORCID'),
                    model_uri=DPV_LINKML.dpvAgent__hasORCID, domain=None, range=Optional[str])
 
-slots.dpvAgent__memberOf = Slot(uri=ORG.memberOf, name="dpvAgent__memberOf", curie=ORG.curie('memberOf'),
-                   model_uri=DPV_LINKML.dpvAgent__memberOf, domain=None, range=Optional[Union[Union[str, DpvAgentId], list[Union[str, DpvAgentId]]]],
-                   pattern=re.compile(r'^dpv_agent:(person|org)-[a-z0-9-]+$'))
-
 slots.dpvWebPage__page_name = Slot(uri=SDO.name, name="dpvWebPage__page_name", curie=SDO.curie('name'),
                    model_uri=DPV_LINKML.dpvWebPage__page_name, domain=None, range=str)
-
-slots.dpvWebPage__url = Slot(uri=SDO.url, name="dpvWebPage__url", curie=SDO.curie('url'),
-                   model_uri=DPV_LINKML.dpvWebPage__url, domain=None, range=Optional[str])
 
 slots.dpvInterval__hasBeginning = Slot(uri=TIME.hasBeginning, name="dpvInterval__hasBeginning", curie=TIME.curie('hasBeginning'),
                    model_uri=DPV_LINKML.dpvInterval__hasBeginning, domain=None, range=Optional[Union[str, DpvDate]])
@@ -7980,10 +7984,6 @@ slots.dpvStatement__reference = Slot(uri=RDF.object, name="dpvStatement__referen
 
 slots.dpvStatement__literal = Slot(uri=RDF.value, name="dpvStatement__literal", curie=RDF.curie('value'),
                    model_uri=DPV_LINKML.dpvStatement__literal, domain=None, range=Optional[str])
-
-slots.dpvStatement__datatype = Slot(uri=DPV_LINKML.datatype, name="dpvStatement__datatype", curie=DPV_LINKML.curie('datatype'),
-                   model_uri=DPV_LINKML.dpvStatement__datatype, domain=None, range=Optional[Union[str, URIorCURIE]],
-                   pattern=re.compile(r'^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$'))
 
 slots.dpvStatement__language = Slot(uri=DPV_LINKML.language, name="dpvStatement__language", curie=DPV_LINKML.curie('language'),
                    model_uri=DPV_LINKML.dpvStatement__language, domain=None, range=Optional[str])

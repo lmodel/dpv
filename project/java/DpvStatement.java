@@ -16,10 +16,10 @@ import lombok.*;
 @EqualsAndHashCode(callSuper=false)
 public class DpvStatement  {
 
+  private URI datatype;
   private URI predicate;
   private URI reference;
   private String literal;
-  private URI datatype;
   private String language;
 
 

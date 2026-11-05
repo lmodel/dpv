@@ -1074,6 +1074,7 @@ def terms_module(graph: Graph) -> dict:
             "title": "Statement",
             "description": "One statement of a resource that its keys cannot hold: a predicate "
             "with no slot, or a value not in the form its slot takes.",
+            "slots": ["datatype"],
             "attributes": {
                 "predicate": {
                     "title": "Predicate",
@@ -1094,12 +1095,6 @@ def terms_module(graph: Graph) -> dict:
                     "title": "Literal",
                     "description": "The object, when it is a literal, in its lexical form.",
                     "slot_uri": "rdf:value",
-                },
-                "datatype": {
-                    "title": "Datatype",
-                    "description": "The literal's datatype, as a CURIE.",
-                    "range": "uriorcurie",
-                    "pattern": REFERENCE_PATTERN,
                 },
                 "language": {
                     "title": "Language",
@@ -1275,6 +1270,12 @@ def _structural_slots() -> dict:
             "range": "DpvWebPage",
             "multivalued": True,
             "inlined_as_list": True,
+        },
+        "datatype": {
+            "title": "Datatype",
+            "description": "The literal's datatype, as a CURIE.",
+            "range": "uriorcurie",
+            "pattern": REFERENCE_PATTERN,
         },
         "statements": {
             "title": "Statements",

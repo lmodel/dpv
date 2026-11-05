@@ -139,6 +139,10 @@
          "@type": "@id",
          "@id": "risk:causedByVulnerability"
       },
+      "concepts": {
+         "@type": "@id",
+         "@id": "concepts"
+      },
       "conformsTo": {
          "@id": "dcterms:conformsTo"
       },
@@ -165,6 +169,10 @@
       "creator": {
          "@type": "@id",
          "@id": "dcterms:creator"
+      },
+      "datatype": {
+         "@type": "xsd:anyURI",
+         "@id": "datatype"
       },
       "dateAccepted": {
          "@id": "dcterms:dateAccepted"
@@ -199,13 +207,6 @@
       "hasORCID": {
          "@id": "scoro:hasORCID"
       },
-      "memberOf": {
-         "@type": "@id",
-         "@id": "org:memberOf"
-      },
-      "name": {
-         "@id": "foaf:name"
-      },
       "id": "@id",
       "agents": {
          "@type": "@id",
@@ -214,10 +215,6 @@
       "concept_schemes": {
          "@type": "@id",
          "@id": "concept_schemes"
-      },
-      "concepts": {
-         "@type": "@id",
-         "@id": "concepts"
       },
       "edition": {
          "@id": "dcterms:isVersionOf"
@@ -257,10 +254,6 @@
          "@type": "xsd:date",
          "@id": "time:hasEnd"
       },
-      "datatype": {
-         "@type": "xsd:anyURI",
-         "@id": "datatype"
-      },
       "language": {
          "@id": "language"
       },
@@ -277,9 +270,6 @@
       },
       "page_name": {
          "@id": "sdo:name"
-      },
-      "url": {
-         "@id": "sdo:url"
       },
       "eliminates": {
          "@type": "@id",
@@ -1359,6 +1349,10 @@
          "@type": "@id",
          "@id": "risk:logs"
       },
+      "memberOf": {
+         "@type": "@id",
+         "@id": "org:memberOf"
+      },
       "mitigates": {
          "@type": "@id",
          "@id": "risk:mitigates"
@@ -1378,6 +1372,9 @@
       "monitors": {
          "@type": "@id",
          "@id": "risk:monitors"
+      },
+      "name": {
+         "@id": "foaf:name"
       },
       "overrides": {
          "@type": "@id",
@@ -1524,6 +1521,9 @@
       },
       "un_m49": {
          "@id": "loc:un_m49"
+      },
+      "url": {
+         "@id": "sdo:url"
       },
       "valid": {
          "@id": "dcterms:valid"

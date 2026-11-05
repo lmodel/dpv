@@ -115,25 +115,14 @@ classes:
     class_uri: dcterms:Agent
     slots:
       - id
+      - name
       - homepage
+      - memberOf
     attributes:
-      name:
-        title: Name
-        description: The agent's name.
-        slot_uri: foaf:name
-        required: true
       hasORCID:
         title: ORCID
         description: The person's ORCID identifier.
         slot_uri: scoro:hasORCID
-      memberOf:
-        title: Member Of
-        description: The organizations the person belongs to.
-        slot_uri: org:memberOf
-        range: DpvAgent
-        multivalued: true
-        inlined: false
-        pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
     slot_usage:
       id:
         pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
@@ -142,16 +131,14 @@ classes:
     title: Web Page
     description: A web page DPV names as a term's source.
     class_uri: sdo:WebPage
+    slots:
+      - url
     attributes:
       page_name:
         title: Page Name
         description: The page's title.
         slot_uri: sdo:name
         required: true
-      url:
-        title: URL
-        description: The page's address.
-        slot_uri: sdo:url
 
   DpvInterval:
     title: Interval
@@ -171,6 +158,23 @@ classes:
 
 slots:
 
+  name:
+    title: Name
+    description: The agent's name.
+    slot_uri: foaf:name
+    required: true
+  memberOf:
+    title: Member Of
+    description: The organizations the person belongs to.
+    slot_uri: org:memberOf
+    range: DpvAgent
+    multivalued: true
+    inlined: false
+    pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
+  url:
+    title: URL
+    description: The page's address.
+    slot_uri: sdo:url
   id:
     title: ID
     description: The element's IRI as a CURIE or whole, or a blank node's label in an example.

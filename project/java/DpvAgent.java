@@ -17,10 +17,10 @@ import lombok.*;
 public class DpvAgent  {
 
   private URI id;
-  private String homepage;
   private String name;
-  private String hasORCID;
+  private String homepage;
   private List<DpvAgent> memberOf;
+  private String hasORCID;
 
 
 }

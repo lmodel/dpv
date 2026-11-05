@@ -539,6 +539,8 @@ classes:
     title: Statement
     description: 'One statement of a resource that its keys cannot hold: a predicate with no slot, or
       a value not in the form its slot takes.'
+    slots:
+      - datatype
     attributes:
       predicate:
         title: Predicate
@@ -557,11 +559,6 @@ classes:
         title: Literal
         description: The object, when it is a literal, in its lexical form.
         slot_uri: rdf:value
-      datatype:
-        title: Datatype
-        description: The literal's datatype, as a CURIE.
-        range: uriorcurie
-        pattern: ^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$
       language:
         title: Language
         description: The literal's language tag.
@@ -3324,6 +3321,11 @@ slots:
     range: DpvWebPage
     multivalued: true
     inlined_as_list: true
+  datatype:
+    title: Datatype
+    description: The literal's datatype, as a CURIE.
+    range: uriorcurie
+    pattern: ^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$
   statements:
     title: Statements
     description: What the record's keys cannot hold.

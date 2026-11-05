@@ -16,8 +16,8 @@ import lombok.*;
 @EqualsAndHashCode(callSuper=false)
 public class DpvWebPage  {
 
-  private String pageName;
   private String url;
+  private String pageName;
 
 
 }
