@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import collections
 import csv
+import logging
 import re
 import sys
 import unicodedata
@@ -37,8 +38,11 @@ from rdflib import OWL, RDF, RDFS, SKOS, BNode, Graph, Literal, Namespace, URIRe
 from rdflib.compare import to_canonical_graph
 
 # Keep each literal's lexical form as DPV writes it. The examples hold a few that are not
-# valid for their datatype, and rdflib would otherwise warn on each.
+# valid for their datatype, such as a duration of "10" and a date with one dash, and rdflib
+# would otherwise rewrite each. It still logs a traceback for each when it parses them, which
+# is noise about DPV's files and not about this script, so those messages are kept down.
 rdflib.NORMALIZE_LITERALS = False
+logging.getLogger("rdflib.term").setLevel(logging.ERROR)
 
 ROOT = Path(__file__).resolve().parent.parent
 UPSTREAM = ROOT / "upstream"
