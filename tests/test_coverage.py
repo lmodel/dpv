@@ -187,7 +187,9 @@ def test_schema_org_repeats_dcam():
         (C.DCAM.domainIncludes, C.SCHEMA_ORG.domainIncludes),
         (C.DCAM.rangeIncludes, C.SCHEMA_ORG.rangeIncludes),
     ):
-        assert set(graph.subject_objects(dcam)) == set(graph.subject_objects(schema_org))
+        assert set(graph.subject_objects(dcam)) == set(
+            graph.subject_objects(schema_org)
+        )
 
 
 def test_a_term_holds_the_types_its_class_says():
@@ -208,9 +210,7 @@ def test_every_contributor_is_one_agent_and_back():
         for predicate in (C.DCTERMS.contributor, C.DCTERMS.creator)
         for node in graph.objects(None, predicate)
     }
-    members = {
-        C.agent_id(graph, node) for node in graph.objects(None, C.ORG.memberOf)
-    }
+    members = {C.agent_id(graph, node) for node in graph.objects(None, C.ORG.memberOf)}
     assert named | members == set(conversion.records("agents"))
 
 

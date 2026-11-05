@@ -103,7 +103,9 @@ def _term_errors(record, where, known, schemes, vocabularies, examples, agents):
             found.append((f"{where}/inScheme/{position}", f"{value} names no scheme"))
     for position, value in enumerate(record.get("isDefinedBy") or []):
         if C.expand(value) not in vocabularies:
-            found.append((f"{where}/isDefinedBy/{position}", f"{value} names no vocabulary"))
+            found.append(
+                (f"{where}/isDefinedBy/{position}", f"{value} names no vocabulary")
+            )
     for position, value in enumerate(record.get("example") or []):
         if value not in examples:
             found.append((f"{where}/example/{position}", f"{value} names no example"))
@@ -166,16 +168,26 @@ def rule_errors(document: dict, *, whole_edition: bool = True) -> list[tuple[str
     for key in ("concepts", "properties"):
         for index, record in enumerate(document.get(key) or []):
             found += _term_errors(
-                record, f"/{key}/{index}", known, schemes, vocabularies, examples, agents
+                record,
+                f"/{key}/{index}",
+                known,
+                schemes,
+                vocabularies,
+                examples,
+                agents,
             )
     for index, example in enumerate(document.get("examples") or []):
         where = f"/examples/{index}"
         resources = example.get("resources") or []
         if example.get("turtle_fault") and resources:
-            found.append((where, "an example whose file does not parse holds no resources"))
+            found.append(
+                (where, "an example whose file does not parse holds no resources")
+            )
         local = {r["id"] for r in resources}
         for position, resource in enumerate(resources):
-            found += _resource_errors(resource, f"{where}/resources/{position}", known, local)
+            found += _resource_errors(
+                resource, f"{where}/resources/{position}", known, local
+            )
     for index, agent in enumerate(document.get("agents") or []):
         for position, member in enumerate(agent.get("memberOf") or []):
             if member not in agents:

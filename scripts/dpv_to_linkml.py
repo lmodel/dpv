@@ -303,9 +303,7 @@ def expand(value: str) -> URIRef:
 def concept_subjects(graph: Graph) -> set[URIRef]:
     """Every term the vocabularies state as a concept and not as a property."""
     concepts = set(graph.subjects(RDF.type, SKOS.Concept))
-    return {
-        term for term in concepts if (term, RDF.type, RDF.Property) not in graph
-    }
+    return {term for term in concepts if (term, RDF.type, RDF.Property) not in graph}
 
 
 def property_subjects(graph: Graph) -> set[URIRef]:
@@ -364,9 +362,7 @@ def is_text_property(graph: Graph, prop) -> bool:
 
 def _kind_terms(graph: Graph, term) -> list[URIRef]:
     fixed = PROPERTY_TYPES if (term, RDF.type, RDF.Property) in graph else CONCEPT_TYPES
-    return sorted(
-        (o for o in graph.objects(term, RDF.type) if o not in fixed), key=str
-    )
+    return sorted((o for o in graph.objects(term, RDF.type) if o not in fixed), key=str)
 
 
 @cache
@@ -443,7 +439,9 @@ def agent_id(graph: Graph, node: BNode) -> str:
     name = graph.value(node, FOAF.name)
     if name is None:
         raise ValueError(f"an agent has no name: {node}")
-    ascii_name = unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode()
+    ascii_name = (
+        unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode()
+    )
     slug = re.sub(r"[^a-z0-9]+", "-", ascii_name.lower()).strip("-")
     role = "org" if (node, RDF.type, FOAF.Organization) in graph else "person"
     return f"dpv_agent:{role}-{slug}"
@@ -469,7 +467,10 @@ def _interval(graph: Graph, node: BNode) -> dict:
     if types != {TIME.ProperInterval}:
         raise ValueError(f"a period of another type: {types}")
     interval = {}
-    for slot, predicate in (("hasBeginning", TIME.hasBeginning), ("hasEnd", TIME.hasEnd)):
+    for slot, predicate in (
+        ("hasBeginning", TIME.hasBeginning),
+        ("hasEnd", TIME.hasEnd),
+    ):
         instant = graph.value(node, predicate)
         if instant is not None:
             interval[slot] = str(graph.value(instant, TIME.inXSDDate))
@@ -487,7 +488,9 @@ def _sources(graph: Graph, term, record) -> None:
     if text:
         record["source"] = sorted(text)
     if pages:
-        record["source_page"] = sorted(pages, key=lambda p: (p["page_name"], p.get("url", "")))
+        record["source_page"] = sorted(
+            pages, key=lambda p: (p["page_name"], p.get("url", ""))
+        )
 
 
 def term_properties(graph: Graph) -> set[URIRef]:
@@ -655,13 +658,18 @@ def _vocabulary(graph: Graph, subject) -> dict:
         found = sorted(str(n) for n in graph.objects(subject, predicate))
         if not found:
             continue
-        record[name] = found if name in ("conformsTo", "created", "source") else found[0]
+        record[name] = (
+            found if name in ("conformsTo", "created", "source") else found[0]
+        )
     for predicate, name in VOCABULARY_REFERENCES.items():
         found = sorted(str(n) for n in graph.objects(subject, predicate))
         if not found:
             continue
         record[name] = found if name == "isProfileOf" else found[0]
-    for predicate, name in ((DCTERMS.contributor, "contributor"), (DCTERMS.creator, "creator")):
+    for predicate, name in (
+        (DCTERMS.contributor, "contributor"),
+        (DCTERMS.creator, "creator"),
+    ):
         found = _agents(graph, subject, predicate)
         if found:
             record[name] = found
@@ -792,14 +800,18 @@ def resource_records(name: str, graph: Graph, vocabulary: Graph) -> list[dict]:
                 continue
             slot = slots.get(predicate)
             literal = isinstance(node, Literal)
-            plain = literal and node.language is None and (
-                node.datatype is None or node.datatype == XSD.string
+            plain = (
+                literal
+                and node.language is None
+                and (node.datatype is None or node.datatype == XSD.string)
             )
             if slot is None or (slot[1] and not plain) or (not slot[1] and literal):
                 if literal:
                     statements.append(_literal_statement(predicate, node))
                 else:
-                    statements.append({"predicate": curie(predicate), "reference": ref(node)})
+                    statements.append(
+                        {"predicate": curie(predicate), "reference": ref(node)}
+                    )
                 continue
             rows[slot[0]].append(str(node) if literal else ref(node))
         for key in sorted(rows):
@@ -815,7 +827,11 @@ def resource_records(name: str, graph: Graph, vocabulary: Graph) -> list[dict]:
         if statements:
             record["statements"] = sorted(
                 statements,
-                key=lambda s: (s["predicate"], s.get("reference", ""), s.get("literal", "")),
+                key=lambda s: (
+                    s["predicate"],
+                    s.get("reference", ""),
+                    s.get("literal", ""),
+                ),
             )
         records.append(record)
     return records
@@ -823,18 +839,15 @@ def resource_records(name: str, graph: Graph, vocabulary: Graph) -> list[dict]:
 
 def _example_record(graph: Graph, subject) -> dict:
     record = {"id": curie(subject)}
-    known = (
-        set(EXAMPLE_TEXT)
-        | {
-            RDF.type,
-            DCTERMS.contributor,
-            DCTERMS.created,
-            DCTERMS.modified,
-            DCTERMS.subject,
-            DCTERMS.temporal,
-            SW.term_status,
-        }
-    )
+    known = set(EXAMPLE_TEXT) | {
+        RDF.type,
+        DCTERMS.contributor,
+        DCTERMS.created,
+        DCTERMS.modified,
+        DCTERMS.subject,
+        DCTERMS.temporal,
+        SW.term_status,
+    }
     for predicate in graph.predicates(subject, None):
         if predicate not in known:
             raise ValueError(f"{subject} states {predicate}, which no table names")
@@ -1028,7 +1041,8 @@ def terms_module(graph: Graph) -> dict:
                 "reports a value that names nothing, and tests/test_examples.py lists where "
                 "DPV's own examples leave those classes.",
             ],
-            "slots": [name for name in all_names if name not in term_slots] + ["statements"],
+            "slots": [name for name in all_names if name not in term_slots]
+            + ["statements"],
         },
         "DpvExample": {
             "title": "Example",
@@ -1183,7 +1197,9 @@ def _structural_slots() -> dict:
             "Broader", "The terms directly above this one.", "skos:broader"
         ),
         "related": _reference(
-            "Related", "Other vocabularies' terms DPV relates to this one.", "skos:related"
+            "Related",
+            "Other vocabularies' terms DPV relates to this one.",
+            "skos:related",
         ),
         "inScheme": {
             "title": "In Scheme",
@@ -1362,7 +1378,10 @@ def _check_module_order(modules: dict) -> None:
 
 # SKOS's mapping properties for the two kinds of statement DPV's mapping files make. A row
 # reads with DPV's term as its subject, as the files' own statements do.
-ISO_PREDICATES = {"skos:narrower": "skos:broadMatch", "skos:exactMatch": "skos:exactMatch"}
+ISO_PREDICATES = {
+    "skos:narrower": "skos:broadMatch",
+    "skos:exactMatch": "skos:exactMatch",
+}
 ODRL_PREDICATES = {"skos:narrower": "skos:broadMatch", "rdf:type": "rdf:type"}
 MAPPING_PREFIXES = {
     "dpv": "https://w3id.org/dpv#",
@@ -1428,7 +1447,10 @@ def mapping_text(graph: Graph, name: str) -> str:
         "iso": "ISO/IEC 29100:2024 terms DPV's editors align with DPV 2.3.",
         "odrl": "ODRL terms DPV's editors align with DPV 2.3.",
     }[name]
-    wanted = {"iso": ("dpv", "dpv-iso", "semapv", "skos"), "odrl": ("dpv", "odrl", "rdf", "semapv", "skos")}[name]
+    wanted = {
+        "iso": ("dpv", "dpv-iso", "semapv", "skos"),
+        "odrl": ("dpv", "odrl", "rdf", "semapv", "skos"),
+    }[name]
     lines = [
         f"# mapping_set_id: https://w3id.org/lmodel/dpv/mappings/dpv-{name}",
         f"# mapping_set_title: DPV's own {name.upper()} mappings",

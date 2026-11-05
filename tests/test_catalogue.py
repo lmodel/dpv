@@ -135,7 +135,9 @@ def _projected():
     for family, document in conversion.documents().items():
         if family == "examples":
             document = {k: v for k, v in document.items() if k != "examples"}
-        graph.parse(data=json.dumps(dict(document, **{"@context": context})), format="json-ld")
+        graph.parse(
+            data=json.dumps(dict(document, **{"@context": context})), format="json-ld"
+        )
     return graph
 
 
@@ -171,7 +173,9 @@ def _normal(graph, subject):
             found.add((subject, predicate, _interval_of(graph, obj)))
         elif predicate == C.DCTERMS.source and isinstance(obj, BNode):
             name = str(graph.value(obj, C.SCHEMA_ORG.name))
-            found.add((subject, predicate, (name, str(graph.value(obj, C.SCHEMA_ORG.url)))))
+            found.add(
+                (subject, predicate, (name, str(graph.value(obj, C.SCHEMA_ORG.url))))
+            )
         else:
             found.add((subject, predicate, str(obj)))
     return found
@@ -198,7 +202,11 @@ def test_the_json_ld_projection_reproduces_the_turtle_for_every_term():
     The comparison is by set, since a graph isomorphism check on this size does not finish."""
     graph = conversion.graph()
     terms = C.term_subjects(graph)
-    leave_out = {C.SKOS.narrower, C.SCHEMA_ORG.domainIncludes, C.SCHEMA_ORG.rangeIncludes}
+    leave_out = {
+        C.SKOS.narrower,
+        C.SCHEMA_ORG.domainIncludes,
+        C.SCHEMA_ORG.rangeIncludes,
+    }
     upstream = _term_triples(graph, terms, leave_out)
     fixed = C.CONCEPT_TYPES | C.PROPERTY_TYPES
     upstream = {t for t in upstream if not (t[1] == RDF.type and URIRef(t[2]) in fixed)}
@@ -261,7 +269,9 @@ def test_the_docs_example_validates():
     record = yaml.safe_load(block)
     report = validate(record, conversion.SCHEMA, "DpvResource")
     assert not report.results, [r.message for r in report.results]
-    assert not rule_errors({"examples": [{"id": "dex:E0", "title": "x", "resources": [record]}]})
+    assert not rule_errors(
+        {"examples": [{"id": "dex:E0", "title": "x", "resources": [record]}]}
+    )
 
 
 def test_what_the_data_shows_and_the_vocabulary_does_not_say():
@@ -278,7 +288,9 @@ def test_what_the_data_shows_and_the_vocabulary_does_not_say():
         "dpv:hasStatus",
     }
     assert sum(len(r.get("sameAs", ())) for r in terms.values()) == 60
-    no_definition = [r for r in terms.values() if "definition" not in r and "definition_de" not in r]
+    no_definition = [
+        r for r in terms.values() if "definition" not in r and "definition_de" not in r
+    ]
     assert len(no_definition) == 153
     assert Path(C.UPSTREAM).is_dir()
     assert RDFS.Class in C.CONCEPT_TYPES

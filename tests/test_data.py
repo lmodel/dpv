@@ -27,7 +27,9 @@ def definitions():
     """The class definitions of the JSON Schema that linkml-validate generates. Generating
     it once keeps the run short; test_validator_agrees checks that linkml-validate gives the
     same answers."""
-    return json.loads(JsonSchemaGenerator(str(SCHEMA), mergeimports=True).serialize())["$defs"]
+    return json.loads(JsonSchemaGenerator(str(SCHEMA), mergeimports=True).serialize())[
+        "$defs"
+    ]
 
 
 def errors(instance, class_name):
@@ -46,7 +48,9 @@ def class_of(path):
 
 def fails_at(path):
     lines = path.read_text(encoding="utf-8").splitlines()
-    assert lines[1].startswith("# Fails at: "), f"{path.name}: the second line says where"
+    assert lines[1].startswith("# Fails at: "), (
+        f"{path.name}: the second line says where"
+    )
     return lines[1].removeprefix("# Fails at: ").strip()
 
 

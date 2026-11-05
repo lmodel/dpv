@@ -35,9 +35,9 @@ def _answers(watch, pins=None):
             trees.setdefault(head, []).append(
                 {"path": tail, "type": "blob", "sha": sha}
             )
-    root = [
-        {"path": name, "type": "tree", "sha": f"tree-{name}"} for name in trees
-    ] + [{"path": "LICENSE.md", "type": "blob", "sha": pins["LICENSE.md"]}]
+    root = [{"path": name, "type": "tree", "sha": f"tree-{name}"} for name in trees] + [
+        {"path": "LICENSE.md", "type": "blob", "sha": pins["LICENSE.md"]}
+    ]
     answers = {
         "/releases/latest": {"tag_name": watch.PINNED_TAG},
         f"/git/ref/tags/{watch.PINNED_TAG}": {"object": {"sha": watch.PINNED_COMMIT}},
@@ -111,7 +111,9 @@ def test_a_new_turtle_file_is_for_information_only(watch, capsys):
 
 
 def test_a_serialisation_beside_the_pins_stays_quiet(watch, capsys):
-    pins = dict(watch.pins(), **{"2.3/dpv/dpv-owl.ttl": "1" * 40, "2.3/dpv/dpv.csv": "2" * 40})
+    pins = dict(
+        watch.pins(), **{"2.3/dpv/dpv-owl.ttl": "1" * 40, "2.3/dpv/dpv.csv": "2" * 40}
+    )
     code, report = _run(watch, _answers(watch, pins), capsys)
     assert code == 0
     assert "For information" not in report
@@ -168,7 +170,9 @@ def test_a_redirect_off_the_api_is_refused(watch):
     with pytest.raises(ValueError, match="off api.github.com"):
         handler.redirect_request(None, None, 302, "Found", {}, "https://example.com/x")
     with pytest.raises(ValueError, match="off api.github.com"):
-        handler.redirect_request(None, None, 302, "Found", {}, "http://api.github.com/x")
+        handler.redirect_request(
+            None, None, 302, "Found", {}, "http://api.github.com/x"
+        )
 
 
 def test_the_report_file_holds_what_is_printed(watch, capsys, tmp_path):

@@ -261,7 +261,9 @@ def test_the_copy_drops_and_renames_only_what_is_named():
     LOKF's id and type and the keys it renames, and a renamed key keeps its IRI."""
     source, copy = _source(), _load(COPY)
     assert set(copy["classes"]) == set(source["classes"])
-    expected = {RENAMED.get(name, name) for name in source["slots"]} - DROPPED - set(FOLDED)
+    expected = (
+        {RENAMED.get(name, name) for name in source["slots"]} - DROPPED - set(FOLDED)
+    )
     assert set(copy["slots"]) == expected
     expand_source = _expander({"prefixes": source["prefixes"]})
     expand_copy = _expander(copy)
@@ -304,6 +306,7 @@ def test_the_readme_lists_the_concept_types():
 def test_the_schema_states_no_mapping_of_its_own():
     """A term's class is its own IRI, and the only mappings are DPV's own, which sit in
     src/dpv/mappings/, so the copy holds none whose prefix a projection could lack."""
+
     def mappings(node):
         if isinstance(node, dict):
             for key, value in node.items():
@@ -418,6 +421,7 @@ def test_a_resource_concept_holds_any_property():
     schema = {"$ref": "#/$defs/DpvResource", "$defs": definitions}
     validator = jsonschema.validators.validator_for(schema)(schema)
     concept = _concept_from(
-        {"hasPurpose": ["dpv:Marketing"], "hasPersonalData": ["pd:EmailAddress"]}, "DpvResource"
+        {"hasPurpose": ["dpv:Marketing"], "hasPersonalData": ["pd:EmailAddress"]},
+        "DpvResource",
     )
     assert not list(validator.iter_errors(concept))

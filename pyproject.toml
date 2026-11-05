@@ -87,12 +87,13 @@ skip = [
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list.
-ignore-words-list = "linke"
+ignore-words-list = "linke,ehr"
 quiet-level = 3
 
 # Ref.: https://github.com/crate-ci/typos (spell checker)
 [tool.typos.default.extend-words]
 linke = "linke"
+ehr = "ehr"
 
 [tool.typos.files]
 extend-exclude = [

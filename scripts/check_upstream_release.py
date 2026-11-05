@@ -170,12 +170,18 @@ def check_tag() -> tuple[list[str], bool]:
         path
         for path in found
         if path not in pinned
-        and (path.endswith(".ttl") or path.startswith("mappings/") and path.endswith(".csv"))
+        and (
+            path.endswith(".ttl")
+            or path.startswith("mappings/")
+            and path.endswith(".csv")
+        )
         and not any(part in path for part in LEFT_OUT)
     )
     if added:
         shown = ", ".join(_code(path) for path in added[:10])
-        lines.append(f"- For information, {len(added)} files sit beside the pins: {shown}.")
+        lines.append(
+            f"- For information, {len(added)} files sit beside the pins: {shown}."
+        )
     return lines, attention
 
 
@@ -204,7 +210,9 @@ def main(argv: list[str] | None = None) -> int:
         "--report", type=Path, help="Also write the Markdown report to this file"
     )
     args = parser.parse_args(argv)
-    lines = [f"- Pinned edition: DPV {PINNED_EDITION} of {PINNED_DATE}, {PINNED_SOURCE}."]
+    lines = [
+        f"- Pinned edition: DPV {PINNED_EDITION} of {PINNED_DATE}, {PINNED_SOURCE}."
+    ]
     attention = False
     for label, check in CHECKS:
         try:
@@ -212,7 +220,13 @@ def main(argv: list[str] | None = None) -> int:
         # OSError covers a refused or failed request and a timeout, HTTPException and
         # EOFError a connection cut off mid-answer, LookupError and ValueError an answer
         # of another shape or too large.
-        except (OSError, http.client.HTTPException, EOFError, LookupError, ValueError) as err:
+        except (
+            OSError,
+            http.client.HTTPException,
+            EOFError,
+            LookupError,
+            ValueError,
+        ) as err:
             found = [f"- **The {label} check could not finish: {_code(err)}.**"]
             needs = True
         lines += found

@@ -36,7 +36,9 @@ def _header(name):
 
 
 def _csv(name):
-    with (UPSTREAM / name / f"dpv-{name}.csv").open(encoding="utf-8", newline="") as handle:
+    with (UPSTREAM / name / f"dpv-{name}.csv").open(
+        encoding="utf-8", newline=""
+    ) as handle:
         return list(csv.DictReader(handle))
 
 
@@ -97,9 +99,21 @@ def test_the_iso_rows_read_as_dpvs_turtle_says():
     stated = set()
     for subject, predicate, obj in graph:
         if predicate == graph.namespace_manager.expand_curie("skos:narrower"):
-            stated.add((C.curie(obj), "skos:broadMatch", f"dpv-iso:{str(subject).split('#')[1]}"))
+            stated.add(
+                (
+                    C.curie(obj),
+                    "skos:broadMatch",
+                    f"dpv-iso:{str(subject).split('#')[1]}",
+                )
+            )
         elif predicate == graph.namespace_manager.expand_curie("skos:exactMatch"):
-            stated.add((C.curie(obj), "skos:exactMatch", f"dpv-iso:{str(subject).split('#')[1]}"))
+            stated.add(
+                (
+                    C.curie(obj),
+                    "skos:exactMatch",
+                    f"dpv-iso:{str(subject).split('#')[1]}",
+                )
+            )
     held = {(r["subject_id"], r["predicate_id"], r["object_id"]) for r in _rows("iso")}
     assert held == stated
 

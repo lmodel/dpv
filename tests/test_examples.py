@@ -69,7 +69,9 @@ def rebuilt(example: dict) -> Graph:
             else:
                 predicate, text = table[key]
                 for item in value if isinstance(value, list) else [value]:
-                    graph.add((subject, predicate, Literal(item) if text else _node(item)))
+                    graph.add(
+                        (subject, predicate, Literal(item) if text else _node(item))
+                    )
     return graph
 
 
@@ -180,7 +182,9 @@ def departures():
                     continue
                 wanted = set(record.get("rangeIncludes", ()))
                 for value in values:
-                    types = _types_of(value, local) | ({value} if value in conversion.terms() else set())
+                    types = _types_of(value, local) | (
+                        {value} if value in conversion.terms() else set()
+                    )
                     if wanted and types and not _reaches(types, wanted):
                         found["range"].append(f"{example['id']} {key} {value}")
                 domain = set(record.get("domainIncludes", ()))
@@ -203,7 +207,9 @@ def test_the_departures_are_the_listed_ones():
 
 
 def test_the_docs_give_the_departures_numbers():
-    about = (Path(__file__).parent.parent / "docs" / "about.md").read_text(encoding="utf-8")
+    about = (Path(__file__).parent.parent / "docs" / "about.md").read_text(
+        encoding="utf-8"
+    )
     found = departures()
     assert (
         f"{len(found['range'])} values, {len(found['domain'])} subjects and "

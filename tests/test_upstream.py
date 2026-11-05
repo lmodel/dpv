@@ -47,9 +47,7 @@ def test_upstream_holds_only_the_pinned_files():
 def test_copies_match_the_pinned_blobs():
     """Each file has the git object hash the watch pins."""
     wrong = [
-        path
-        for path, sha in _watch().pins().items()
-        if _blob(UPSTREAM / path) != sha
+        path for path, sha in _watch().pins().items() if _blob(UPSTREAM / path) != sha
     ]
     assert not wrong
 
