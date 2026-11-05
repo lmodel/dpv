@@ -1,156 +1,159 @@
+---
+# Each place DPV's own examples leave what a property's rangeIncludes or domainIncludes
+# name, or give a literal where the range names a class. tests/test_examples.py holds this list.
 domain:
-- dex:E0013 isImplementedByEntity _:E0013-1
-- dex:E0023 hasPart exd:63ded36f-4acd-4f3c-991e-6cb636698523
-- dex:E0023 hasRecipient _:E0023-1
-- dex:E0024 hasRecipient ex:TransferCallLogs
-- dex:E0024 isImplementedByEntity ex:AnalyseCalls
-- dex:E0024 isImplementedByEntity ex:BetaProvision
-- dex:E0024 isImplementedByEntity ex:TransferCallLogs
-- dex:E0027 mitigatesRisk ex:SecurityPolicy
-- dex:E0028 hasRule ex:PDH
-- dex:E0029 hasProhibition ex:PDH
-- dex:E0033 isImplementedByEntity ex:PDH
-- dex:E0034 hasRecipient ex:PDH1
-- dex:E0035 hasRecipient ex:PDH
-- dex:E0037 isImplementedByEntity ex:PDH1
-- dex:E0037 isImplementedByEntity ex:PDH2
-- dex:E0055 hasStatus ex:PDH1
-- dex:E0057 hasJustification ex:PDH
-- dex:E0057 hasStatus ex:PDH
-- dex:E0057 isImplementedByEntity _:E0057-1
-- dex:E0058 hasJustification ex:PDH
-- dex:E0058 hasStatus ex:PDH
-- dex:E0060 isImplementedByEntity _:E0060-1
-- dex:E0062 hasJustification ex:PDH
-- dex:E0063 hasJustification ex:PDH
-- dex:E0063 hasStatus ex:PDH
-- dex:E0065 hasJustification _:E0065-1
-- dex:E0065 hasJustification _:E0065-2
-- dex:E0065 hasJustification ex:FraudManagement
-- dex:E0066 hasPermission ex:PDH
-- dex:E0066 hasProhibition ex:PDH
-- dex:E0066 hasRule _:E0066-2
-- dex:E0068 hasImpactOn _:E0068-2
-- dex:E0068 hasImpactOn _:E0068-3
-- dex:E0069 hasImpactOn _:E0069-2
-- dex:E0069 hasImpactOn _:E0069-3
-- dex:E0069 hasStatus _:E0069-1
-- dex:E0069 hasStatus _:E0069-2
-- dex:E0069 hasStatus ex:IN11
-- dex:E0069 refersToRisk ex:IN11
-- dex:E0070 hasStatus ex:IN12
-- dex:E0072 hasRecipient _:E0072-10
-- dex:E0073 hasNoticeStatus ex:Log1
-- dex:E0073 hasNoticeStatus ex:NoticeLog1
-- dex:E0073 hasNoticeStatus ex:SampleProcess1
-- dex:E0076 hasContractControl ex:ServiceContract
-- dex:E0076 hasPart _:E0076-1
-- dex:E0076 hasServiceConsumer ex:ServiceContract
-- dex:E0076 hasServiceProvider ex:ServiceContract
-- dex:E0078 hasContractualClause _:E0078-3
-- dex:E0079 hasStatus _:E0079-1
-- dex:E0080 hasJustification _:E0080-1
-- dex:E0080 hasStatus _:E0080-1
-- dex:E0081 hasStatus _:E0081-1
-- dex:E0082 hasStatus _:E0082-1
-- dex:E0083 hasStatus _:E0083-1
-- dex:E0083 hasStatus _:E0083-2
-- dex:E0084 hasRule ex:SomeProcess
-- dex:E0084 hasStatus _:E0084-2
-- dex:E0084 hasStatus _:E0084-3
-- dex:E0084 hasStatus ex:SomeProcess
-- dex:E0085 isImplementedByEntity ex:SomeProcess
-- dex:E0085 isImplementedByEntity ex:SomeProcessing
-- dex:E0086 hasRecipient _:E0086-4
-- dex:E0087 hasRiskSource ex:ProcessA
-- dex:E0087 hasRiskSource ex:ProcessB
+  - dex:E0013 isImplementedByEntity _:E0013-1
+  - dex:E0023 hasPart exd:63ded36f-4acd-4f3c-991e-6cb636698523
+  - dex:E0023 hasRecipient _:E0023-1
+  - dex:E0024 hasRecipient ex:TransferCallLogs
+  - dex:E0024 isImplementedByEntity ex:AnalyseCalls
+  - dex:E0024 isImplementedByEntity ex:BetaProvision
+  - dex:E0024 isImplementedByEntity ex:TransferCallLogs
+  - dex:E0027 mitigatesRisk ex:SecurityPolicy
+  - dex:E0028 hasRule ex:PDH
+  - dex:E0029 hasProhibition ex:PDH
+  - dex:E0033 isImplementedByEntity ex:PDH
+  - dex:E0034 hasRecipient ex:PDH1
+  - dex:E0035 hasRecipient ex:PDH
+  - dex:E0037 isImplementedByEntity ex:PDH1
+  - dex:E0037 isImplementedByEntity ex:PDH2
+  - dex:E0055 hasStatus ex:PDH1
+  - dex:E0057 hasJustification ex:PDH
+  - dex:E0057 hasStatus ex:PDH
+  - dex:E0057 isImplementedByEntity _:E0057-1
+  - dex:E0058 hasJustification ex:PDH
+  - dex:E0058 hasStatus ex:PDH
+  - dex:E0060 isImplementedByEntity _:E0060-1
+  - dex:E0062 hasJustification ex:PDH
+  - dex:E0063 hasJustification ex:PDH
+  - dex:E0063 hasStatus ex:PDH
+  - dex:E0065 hasJustification _:E0065-1
+  - dex:E0065 hasJustification _:E0065-2
+  - dex:E0065 hasJustification ex:FraudManagement
+  - dex:E0066 hasPermission ex:PDH
+  - dex:E0066 hasProhibition ex:PDH
+  - dex:E0066 hasRule _:E0066-2
+  - dex:E0068 hasImpactOn _:E0068-2
+  - dex:E0068 hasImpactOn _:E0068-3
+  - dex:E0069 hasImpactOn _:E0069-2
+  - dex:E0069 hasImpactOn _:E0069-3
+  - dex:E0069 hasStatus _:E0069-1
+  - dex:E0069 hasStatus _:E0069-2
+  - dex:E0069 hasStatus ex:IN11
+  - dex:E0069 refersToRisk ex:IN11
+  - dex:E0070 hasStatus ex:IN12
+  - dex:E0072 hasRecipient _:E0072-10
+  - dex:E0073 hasNoticeStatus ex:Log1
+  - dex:E0073 hasNoticeStatus ex:NoticeLog1
+  - dex:E0073 hasNoticeStatus ex:SampleProcess1
+  - dex:E0076 hasContractControl ex:ServiceContract
+  - dex:E0076 hasPart _:E0076-1
+  - dex:E0076 hasServiceConsumer ex:ServiceContract
+  - dex:E0076 hasServiceProvider ex:ServiceContract
+  - dex:E0078 hasContractualClause _:E0078-3
+  - dex:E0079 hasStatus _:E0079-1
+  - dex:E0080 hasJustification _:E0080-1
+  - dex:E0080 hasStatus _:E0080-1
+  - dex:E0081 hasStatus _:E0081-1
+  - dex:E0082 hasStatus _:E0082-1
+  - dex:E0083 hasStatus _:E0083-1
+  - dex:E0083 hasStatus _:E0083-2
+  - dex:E0084 hasRule ex:SomeProcess
+  - dex:E0084 hasStatus _:E0084-2
+  - dex:E0084 hasStatus _:E0084-3
+  - dex:E0084 hasStatus ex:SomeProcess
+  - dex:E0085 isImplementedByEntity ex:SomeProcess
+  - dex:E0085 isImplementedByEntity ex:SomeProcessing
+  - dex:E0086 hasRecipient _:E0086-4
+  - dex:E0087 hasRiskSource ex:ProcessA
+  - dex:E0087 hasRiskSource ex:ProcessB
 literal:
-- dex:E0017 dpv:hasNotice
-- dex:E0017 dpv:hasNotice
-- dex:E0019 dpv:hasLocation
-- dex:E0019 dpv:hasLocation
-- dex:E0019 dpv:hasLocation
-- dex:E0022 dpv:hasLocation
-- dex:E0023 dpv:hasDataSubject
-- dex:E0023 dpv:hasDuration
-- dex:E0023 dpv:hasDuration
-- dex:E0023 dpv:hasEntity
-- dex:E0043 dpv:hasSector
-- dex:E0047 dpv:hasDuration
-- dex:E0048 dpv:hasDuration
-- dex:E0050 dpv:hasDuration
-- dex:E0050 dpv:hasDuration
-- dex:E0050 dpv:hasDuration
-- dex:E0050 dpv:hasDuration
-- dex:E0058 dpv:hasDuration
-- dex:E0072 dpv:hasNotice
-- dex:E0072 dpv:isExercisedAt
-- dex:E0073 dpv:hasLocation
-- dex:E0073 dpv:hasLocation
-- dex:E0073 dpv:hasLocation
-- dex:E0076 dpv:hasLocation
-- dex:E0076 dpv:hasLocation
-- dex:E0076 dpv:isExercisedAt
-- dex:E0077 dpv:hasJustification
-- dex:E0082 dpv:hasJustification
-- dex:E0083 dpv:hasJustification
-- dex:E0083 dpv:hasJustification
+  - dex:E0017 dpv:hasNotice
+  - dex:E0017 dpv:hasNotice
+  - dex:E0019 dpv:hasLocation
+  - dex:E0019 dpv:hasLocation
+  - dex:E0019 dpv:hasLocation
+  - dex:E0022 dpv:hasLocation
+  - dex:E0023 dpv:hasDataSubject
+  - dex:E0023 dpv:hasDuration
+  - dex:E0023 dpv:hasDuration
+  - dex:E0023 dpv:hasEntity
+  - dex:E0043 dpv:hasSector
+  - dex:E0047 dpv:hasDuration
+  - dex:E0048 dpv:hasDuration
+  - dex:E0050 dpv:hasDuration
+  - dex:E0050 dpv:hasDuration
+  - dex:E0050 dpv:hasDuration
+  - dex:E0050 dpv:hasDuration
+  - dex:E0058 dpv:hasDuration
+  - dex:E0072 dpv:hasNotice
+  - dex:E0072 dpv:isExercisedAt
+  - dex:E0073 dpv:hasLocation
+  - dex:E0073 dpv:hasLocation
+  - dex:E0073 dpv:hasLocation
+  - dex:E0076 dpv:hasLocation
+  - dex:E0076 dpv:hasLocation
+  - dex:E0076 dpv:isExercisedAt
+  - dex:E0077 dpv:hasJustification
+  - dex:E0082 dpv:hasJustification
+  - dex:E0083 dpv:hasJustification
+  - dex:E0083 dpv:hasJustification
 range:
-- dex:E0003 hasProcessing ex:CU1
-- dex:E0012 hasDataSource dpv:DataController
-- dex:E0012 hasDataSource dpv:DataSubject
-- dex:E0012 hasDataSource dpv:DataSubject
-- dex:E0012 hasDataSource ex:Acme
-- dex:E0023 hasPart _:E0023-3
-- dex:E0024 hasDataExporter ex:Acme
-- dex:E0024 hasDataExporter ex:BetaInc
-- dex:E0024 hasDataImporter ex:Acme
-- dex:E0024 hasDataImporter ex:BetaInc
-- dex:E0024 hasDataSource ex:Acme
-- dex:E0024 hasDataSource ex:BetaInc
-- dex:E0024 hasPersonalData ex:CallStatistics
-- dex:E0024 hasPersonalData ex:CallStatistics
-- dex:E0027 hasConsequence risk:UnauthorisedDataAccess
-- dex:E0027 hasImpact risk:Harm
-- dex:E0029 hasProhibition pd:Health
-- dex:E0039 hasDataSubject dpv:AsylumSeeker
-- dex:E0039 hasDataSubject dpv:Child
-- dex:E0039 hasDataSubject dpv:Consumer
-- dex:E0049 hasDataSubject _:E0049-2
-- dex:E0049 hasDataSubject dpv:SmallScaleOfDataSubjects
-- dex:E0053 hasPersonalData dpv:NotApplicable
-- dex:E0053 hasPersonalData dpv:NotAvailable
-- dex:E0053 hasPersonalData dpv:UnknownApplicability
-- dex:E0060 hasThirdCountry loc:US
-- dex:E0064 tech_hasCapability dpv:AccessControlMethod
-- dex:E0066 hasPermission _:E0066-1
-- dex:E0066 hasProhibition _:E0066-3
-- dex:E0068 hasConsequence _:E0068-1
-- dex:E0068 hasImpact _:E0068-2
-- dex:E0068 hasImpact _:E0068-3
-- dex:E0068 isMitigatedByMeasure dpv:DataBackupProtocols
-- dex:E0068 isMitigatedByMeasure dpv:Encryption
-- dex:E0069 hasConsequence _:E0069-1
-- dex:E0069 hasImpact _:E0069-2
-- dex:E0069 hasImpact _:E0069-3
-- dex:E0071 hasConsequence _:E0071-1
-- dex:E0071 isMitigatedByMeasure dpv:DataBackupProtocols
-- dex:E0071 isMitigatedByMeasure dpv:Encryption
-- dex:E0073 hasDataSubject dpv:User
-- dex:E0074 hasDataSubject dpv:User
-- dex:E0075 hasProcessing _:E0075-5
-- dex:E0075 hasProcessing _:E0075-6
-- dex:E0085 hasPersonalData dpv:Location
-- dex:E0085 hasPersonalData dpv:Location
-- dex:E0087 hasConsequence risk:DataBreach
-- dex:E0087 hasConsequence risk:IntentionalMisuse
-- dex:E0087 hasImpact risk:RightsImpact
-- dex:E0087 hasRisk risk:DataBreach
-- dex:E0087 hasRisk risk:IdentityFraud
-- dex:E0087 hasRisk risk:UnauthorisedDataAccess
-- dex:E0087 hasRiskSource risk:DataBreach
-- dex:E0087 hasRiskSource risk:MalwareAttack
-- dex:E0088 hasImpact _:E0088-1
-- dex:E0088 hasImpact _:E0088-2
-- dex:E0088 hasImpact eu-gdpr:GDPRRightsImpact
-- dex:E0088 hasImpact risk:RightsViolated
+  - dex:E0003 hasProcessing ex:CU1
+  - dex:E0012 hasDataSource dpv:DataController
+  - dex:E0012 hasDataSource dpv:DataSubject
+  - dex:E0012 hasDataSource dpv:DataSubject
+  - dex:E0012 hasDataSource ex:Acme
+  - dex:E0023 hasPart _:E0023-3
+  - dex:E0024 hasDataExporter ex:Acme
+  - dex:E0024 hasDataExporter ex:BetaInc
+  - dex:E0024 hasDataImporter ex:Acme
+  - dex:E0024 hasDataImporter ex:BetaInc
+  - dex:E0024 hasDataSource ex:Acme
+  - dex:E0024 hasDataSource ex:BetaInc
+  - dex:E0024 hasPersonalData ex:CallStatistics
+  - dex:E0024 hasPersonalData ex:CallStatistics
+  - dex:E0027 hasConsequence risk:UnauthorisedDataAccess
+  - dex:E0027 hasImpact risk:Harm
+  - dex:E0029 hasProhibition pd:Health
+  - dex:E0039 hasDataSubject dpv:AsylumSeeker
+  - dex:E0039 hasDataSubject dpv:Child
+  - dex:E0039 hasDataSubject dpv:Consumer
+  - dex:E0049 hasDataSubject _:E0049-2
+  - dex:E0049 hasDataSubject dpv:SmallScaleOfDataSubjects
+  - dex:E0053 hasPersonalData dpv:NotApplicable
+  - dex:E0053 hasPersonalData dpv:NotAvailable
+  - dex:E0053 hasPersonalData dpv:UnknownApplicability
+  - dex:E0060 hasThirdCountry loc:US
+  - dex:E0064 tech_hasCapability dpv:AccessControlMethod
+  - dex:E0066 hasPermission _:E0066-1
+  - dex:E0066 hasProhibition _:E0066-3
+  - dex:E0068 hasConsequence _:E0068-1
+  - dex:E0068 hasImpact _:E0068-2
+  - dex:E0068 hasImpact _:E0068-3
+  - dex:E0068 isMitigatedByMeasure dpv:DataBackupProtocols
+  - dex:E0068 isMitigatedByMeasure dpv:Encryption
+  - dex:E0069 hasConsequence _:E0069-1
+  - dex:E0069 hasImpact _:E0069-2
+  - dex:E0069 hasImpact _:E0069-3
+  - dex:E0071 hasConsequence _:E0071-1
+  - dex:E0071 isMitigatedByMeasure dpv:DataBackupProtocols
+  - dex:E0071 isMitigatedByMeasure dpv:Encryption
+  - dex:E0073 hasDataSubject dpv:User
+  - dex:E0074 hasDataSubject dpv:User
+  - dex:E0075 hasProcessing _:E0075-5
+  - dex:E0075 hasProcessing _:E0075-6
+  - dex:E0085 hasPersonalData dpv:Location
+  - dex:E0085 hasPersonalData dpv:Location
+  - dex:E0087 hasConsequence risk:DataBreach
+  - dex:E0087 hasConsequence risk:IntentionalMisuse
+  - dex:E0087 hasImpact risk:RightsImpact
+  - dex:E0087 hasRisk risk:DataBreach
+  - dex:E0087 hasRisk risk:IdentityFraud
+  - dex:E0087 hasRisk risk:UnauthorisedDataAccess
+  - dex:E0087 hasRiskSource risk:DataBreach
+  - dex:E0087 hasRiskSource risk:MalwareAttack
+  - dex:E0088 hasImpact _:E0088-1
+  - dex:E0088 hasImpact _:E0088-2
+  - dex:E0088 hasImpact eu-gdpr:GDPRRightsImpact
+  - dex:E0088 hasImpact risk:RightsViolated
