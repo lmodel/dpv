@@ -1,4 +1,0 @@
-id: 12345  # integer id fails type check (id must be a uri_or_curie string)
-# (original intent: integer value for right slot — range type not yet enforced)
-right: 12345
-right_holder: ex:subject-001

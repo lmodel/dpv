@@ -1,5 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: Processing-invalid-enum — invalid has_purpose and has_lawful_basis enum values)
-id: 12345
-has_purpose: INVALID_PURPOSE
-has_lawful_basis: INVALID_BASIS

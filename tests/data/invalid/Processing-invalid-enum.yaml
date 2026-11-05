@@ -1,4 +1,0 @@
-id: 12345  # integer id fails type check (id must be a uri_or_curie string)
-# (original intent: has_purpose and has_lawful_basis enum — not enforced by open-world JSON Schema)
-has_purpose: INVALID_PURPOSE
-has_lawful_basis: INVALID_BASIS

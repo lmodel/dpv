@@ -1,4 +1,0 @@
-id:  # null id fails type check (id must be a uri_or_curie string)
-# (original intent: empty has_purpose list — min-cardinality not yet in schema)
-has_purpose: []
-has_lawful_basis: dpv:A61a

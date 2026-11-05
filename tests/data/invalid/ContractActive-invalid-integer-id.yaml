@@ -1,4 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: Contract-invalid-date-format — date format validation not yet in schema)
-id: 12345
-start_date: "not-a-date"

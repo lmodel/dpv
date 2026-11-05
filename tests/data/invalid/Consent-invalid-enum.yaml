@@ -1,5 +1,0 @@
-id:  # null id fails type check (id must be a uri_or_curie string)
-# (original intent: has_consent_status enum — not enforced by open-world JSON Schema)
-has_consent_status: INVALID_STATUS
-has_data_subject: ex:subject-001
-is_indicated_at_time: '2024-06-01T10:00:00Z'

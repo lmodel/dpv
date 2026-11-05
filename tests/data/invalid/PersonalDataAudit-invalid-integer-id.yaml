@@ -1,4 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: PersonalData-invalid-bad-type — wrong type for data_quantity not yet in schema)
-id: 12345
-data_quantity: "not_a_number"

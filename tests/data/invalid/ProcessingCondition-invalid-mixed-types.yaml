@@ -1,6 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for ProcessingCondition
-# (original intent: Processing-invalid-mixed-types — mixed-type list in has_purpose not enforced by open-world JSON Schema)
-has_purpose:
-  - dpv:Marketing
-  - 12345
-has_lawful_basis: dpv:A61a

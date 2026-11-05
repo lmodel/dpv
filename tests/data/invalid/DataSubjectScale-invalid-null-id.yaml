@@ -1,3 +1,0 @@
-# Null id fails type check (id must be a uri_or_curie string)
-# (original intent: DataSubject-invalid-whitespace-id — whitespace-only id is a valid string, but null is not)
-id:

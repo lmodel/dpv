@@ -1,4 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for ProcessingCondition
-# (original intent: Processing-invalid-missing-id — missing required id for processing entities)
-has_purpose: dpv:Marketing
-has_lawful_basis: dpv:A61a

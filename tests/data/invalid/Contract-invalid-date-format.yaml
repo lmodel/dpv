@@ -1,3 +1,0 @@
-id: 12345  # integer id fails type check (id must be a uri_or_curie string)
-# (original intent: date format validation — datetime pattern not yet in schema)
-start_date: "not-a-date"

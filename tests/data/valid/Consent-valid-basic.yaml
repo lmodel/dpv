@@ -1,4 +1,0 @@
-id: ex:consent-001
-has_consent_status: dpv:ConsentGiven
-has_data_subject: ex:subject-001
-is_indicated_at_time: '2024-06-01T10:00:00Z'

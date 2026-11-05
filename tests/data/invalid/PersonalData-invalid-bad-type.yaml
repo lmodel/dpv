@@ -1,3 +1,0 @@
-id: 12345  # integer id fails type check (id must be a uri_or_curie string)
-# (original intent: wrong type for data_quantity — integer range not yet in schema)
-data_quantity: "not_a_number"

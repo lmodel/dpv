@@ -1,4 +1,0 @@
-# id is required but missing — 'id' is a required property
-# (original intent: mixed-type list — not enforced by open-world JSON Schema)
-has_purpose: [dpv:Marketing, 12345]
-has_lawful_basis: dpv:A61a

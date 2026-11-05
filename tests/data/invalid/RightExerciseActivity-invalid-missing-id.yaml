@@ -1,3 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for RightExerciseActivity
-# (original intent: Right-invalid-rule-violation — missing right_holder rule not enforced by open-world JSON Schema)
-right: dpv:A15

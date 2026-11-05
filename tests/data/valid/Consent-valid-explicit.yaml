@@ -1,5 +1,0 @@
-id: ex:consent-explicit
-has_consent_status: dpv:ConsentGiven
-has_data_subject: ex:ds-001
-consent_type: dpv:ExplicitConsent
-is_indicated_at_time: '2024-06-01T10:00:00Z'

@@ -1,2 +1,0 @@
-ex:PDH a dpv:Process ;
-    dpv:hasProhibition pd:Health .

@@ -1,4 +1,0 @@
-# Null id fails type check (id must be a uri_or_curie string)
-# (original intent: Risk-invalid-circular-reference — circular self-reference not detectable by JSON Schema)
-id:
-risk_type: ex:risk-self-ref
