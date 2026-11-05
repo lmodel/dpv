@@ -14,7 +14,7 @@ LINKML_SCHEMA_SOURCE_DIR="src/dpv/schema"
 ###### linkml generator variables, used by justfile
 
 ## gen-project configuration file
-LINKML_GENERATORS_CONFIG_YAML=config.yaml
+LINKML_GENERATORS_CONFIG_YAML=.linkml/generators.yaml
 
 ## LinkML import map (relative to repo root). Maps canonical URI prefixes
 ## (e.g. `dpv:`) to local source directories so that URI-style imports such
