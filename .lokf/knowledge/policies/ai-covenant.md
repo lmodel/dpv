@@ -11,8 +11,12 @@ sources:
     title: A note specific to this project
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:07Z"
 status: draft
+about:
+  - https://w3id.org/lmodel/dpv/knowledge/datasets/dpv-linkml-schema
+references:
+  - https://w3id.org/lmodel/dpv/knowledge/references/dpv-vocabulary
 ---
 
 # AI covenant

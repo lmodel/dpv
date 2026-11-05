@@ -11,8 +11,10 @@ sources:
     title: What executes here
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:07Z"
 status: draft
+references:
+  - https://w3id.org/lmodel/dpv/knowledge/playbooks/knowledge-sources
 ---
 
 # Knowledge librarian (knowledge-librarian.yaml)

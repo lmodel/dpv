@@ -2,6 +2,14 @@
 
 ## 2026-11-05
 
+* **Changed**: the example data names the catalogue and the schema it exercises.
+* **Changed**: the covenant names the schema it governs and the vocabulary it renders.
+* **Changed**: the security policy names the workflows it describes.
+* **Changed**: the librarian workflow names the source map it follows.
+* **Changed**: the registrar workflow names the domain schema it validates against.
+* **Changed**: the sync workflow names the librarian workflow whose pin it reads.
+* **Changed**: the lint workflow names the policy whose word budget it holds.
+* **Changed**: a resource names the module that holds its class.
 * **Added**: Data Privacy Vocabulary (DPV).
 * **Added**: The DPV repository.
 * **Added**: The DPV LinkML schema.

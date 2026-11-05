@@ -11,8 +11,11 @@ sources:
     title: test_counter_examples_fail_where_they_say and test_each_kinds_example_is_a_real_record
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:07Z"
 status: draft
+references:
+  - https://w3id.org/lmodel/dpv/knowledge/datasets/catalogue
+  - https://w3id.org/lmodel/dpv/knowledge/datasets/dpv-linkml-schema
 ---
 
 # The example data

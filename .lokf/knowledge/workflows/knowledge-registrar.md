@@ -11,8 +11,10 @@ sources:
     title: Before opening a pull request
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:07Z"
 status: draft
+references:
+  - https://w3id.org/lmodel/dpv/knowledge/datasets/adapt-copy
 ---
 
 # Knowledge registrar (knowledge-registrar.yaml)

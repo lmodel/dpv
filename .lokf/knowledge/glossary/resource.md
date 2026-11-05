@@ -5,13 +5,14 @@ title: Resource
 description: "A resource: a thing a use case describes with DPV, such as a process. `DpvResource` holds any DPV property, because DPV states none as limited to a class."
 relatedTo:
   - https://w3id.org/lmodel/dpv/knowledge/playbooks/describe-a-use-case
+  - https://w3id.org/lmodel/dpv/knowledge/datasets/terms-module
 sources:
   - id: index.md
     resource: docs/index.md
     title: Describing a use case
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-05T14:59:07Z"
 status: draft
 ---
 
