@@ -1,0 +1,9 @@
+ex:Policy a dpv:Obligation, odrl:Policy ;
+    odrl:profile ex: 
+    odrl:uid <https://example.com/policy/1> ;
+    odrl:obligation [
+        odrl:action ex:Use ;
+        odrl:duty [
+            odrl:action ex:Anonymise
+        ]
+    ] .

@@ -1,0 +1,5 @@
+ex:PDH a dpv:Process ;
+    dpv:hasRule dpv:Permission ;
+    dpv:hasPurpose dpv:ServiceProvision ;
+    dpv:hasPersonalData pd:EmailAddress ;
+    dpv:hasLegalBasis dpv:Consent .

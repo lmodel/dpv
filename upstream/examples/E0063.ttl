@@ -1,0 +1,3 @@
+ex:PDH a eu-gdpr:DataBreachReport ;
+  dpv:hasStatus eu-gdpr:BreachNotificationNotNeeded ;
+  dpv:hasJustification justifications:RightsFreedomsImpactUnlikely .
