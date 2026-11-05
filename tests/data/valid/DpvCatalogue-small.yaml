@@ -1,0 +1,47 @@
+---
+edition: '2.3'
+family: core
+vocabularies:
+  - id: https://w3id.org/dpv
+    versionInfo: '2.3'
+    preferredNamespaceUri: https://w3id.org/dpv#
+concept_schemes:
+  - id: dpv:purposes-classes
+concepts:
+  - id: dpv:Purpose
+    prefLabel: Purpose
+    inScheme:
+      - dpv:purposes-classes
+    isDefinedBy:
+      - 'dpv:'
+    contributor:
+      - dpv_agent:person-example
+  - id: dpv:Process
+    prefLabel: Process
+  - id: dpv:Marketing
+    rdf_type:
+      - dpv:Purpose
+    prefLabel: Marketing
+    broader:
+      - dpv:Purpose
+properties:
+  - id: dpv:hasPurpose
+    prefLabel: has purpose
+    rangeIncludes:
+      - dpv:Purpose
+agents:
+  - id: dpv_agent:person-example
+    name: Example Person
+examples:
+  - id: dex:E0001
+    title: A small example
+    resources:
+      - id: ex:P
+        rdf_type:
+          - dpv:Process
+        hasPurpose:
+          - dpv:Marketing
+          - ex:Q
+      - id: ex:Q
+        rdf_type:
+          - dpv:Purpose

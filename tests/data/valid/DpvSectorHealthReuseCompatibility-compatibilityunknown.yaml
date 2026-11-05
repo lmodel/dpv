@@ -1,0 +1,23 @@
+---
+id: sector-health:CompatibilityUnknown
+rdf_type:
+  - sector-health:ReuseCompatibility
+prefLabel: Compatibility Unknown
+definition: Status indicating the compatibility for reuse of health data for the context is currently
+  unknown
+broader:
+  - dpv:CompatibilityUnknown
+inScheme:
+  - sector-health:status-classes
+isDefinedBy:
+  - 'sector-health:'
+term_status: accepted
+created:
+  - '2025-06-19'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

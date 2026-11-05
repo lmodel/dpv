@@ -1,0 +1,21 @@
+---
+id: eu-gdpr:Profiling
+rdf_type:
+  - eu-gdpr:Processing
+prefLabel: Profiling
+definition: ‘Profiling’ means any form of automated processing of personal data consisting of the use
+  of personal data to evaluate certain personal aspects relating to a natural person, in particular to
+  analyse or predict aspects concerning that natural person’s performance at work, economic situation,
+  health, personal preferences, interests, reliability, behaviour, location or movements
+broader:
+  - dpv:Profiling
+inScheme:
+  - eu-gdpr:misc-concepts-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: modified
+created:
+  - '2024-12-17'
+modified: '2025-07-24'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

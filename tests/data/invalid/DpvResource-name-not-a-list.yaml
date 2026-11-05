@@ -1,0 +1,4 @@
+---
+# Fails at: /hasName
+id: ex:P
+hasName: Acme

@@ -1,0 +1,23 @@
+---
+id: legal-eu:Adequacy-EU-AD
+rdf_type:
+  - eu-gdpr:AdequacyDecision
+prefLabel: EU Adequacy Decision for Andorra
+broader:
+  - eu-gdpr:AdequacyDecision
+inScheme:
+  - legal-eu:eu-classes
+isDefinedBy:
+  - 'legal-eu:'
+term_status: accepted
+created:
+  - '2022-03-30'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-harshvardhan-j-pandit
+homepage: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010D0625?
+temporal:
+  hasBeginning: '2010-10-21'
+hasJurisdiction:
+  - loc:AD
+  - loc:EU

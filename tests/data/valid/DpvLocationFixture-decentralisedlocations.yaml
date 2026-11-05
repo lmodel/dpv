@@ -1,0 +1,18 @@
+---
+id: dpv:DecentralisedLocations
+rdf_type:
+  - dpv:LocationFixture
+prefLabel: Decentralised Locations
+definition: Location that is spread across multiple separate areas with no distinction between their importance
+broader:
+  - dpv:LocationFixture
+inScheme:
+  - dpv:jurisdiction-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+modified: '2020-10-05'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

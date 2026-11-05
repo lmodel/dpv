@@ -1,0 +1,17 @@
+---
+id: eu-gdpr:DPIAIndicatesHighRisk
+rdf_type:
+  - eu-gdpr:DPIARiskStatus
+prefLabel: DPIA Indicates High Risk
+definition: DPIA identifying high risk levels
+broader:
+  - eu-gdpr:DPIARiskStatus
+inScheme:
+  - eu-gdpr:dpia-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2022-06-22'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

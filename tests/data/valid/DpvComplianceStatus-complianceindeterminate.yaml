@@ -1,0 +1,17 @@
+---
+id: dpv:ComplianceIndeterminate
+rdf_type:
+  - dpv:ComplianceStatus
+prefLabel: Compliance Indeterminate
+definition: State where the status of compliance has not been fully assessed, evaluated, or determined
+broader:
+  - dpv:ComplianceStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-09-07'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

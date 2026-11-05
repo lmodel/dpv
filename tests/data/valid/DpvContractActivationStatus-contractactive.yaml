@@ -1,0 +1,23 @@
+---
+id: dpv:ContractActive
+rdf_type:
+  - dpv:ContractActivationStatus
+prefLabel: Contract Active
+definition: Status representing contract that has been fully executed and whose terms are considered active
+  i.e. they are applicable and are required to be performed
+scopeNote:
+  - A contract being active only refers to its terms now being required to be fulfilled, while dpv:ContractBeingPerformed
+    states that they are being performed
+broader:
+  - dpv:ContractActivationStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-01-09'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

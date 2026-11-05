@@ -1,0 +1,6 @@
+---
+# Fails at: /isDefinedBy/0
+id: dpv:Example
+prefLabel: An example
+isDefinedBy:
+  - some thing

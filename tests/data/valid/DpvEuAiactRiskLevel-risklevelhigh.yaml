@@ -1,0 +1,22 @@
+---
+id: eu-aiact:RiskLevelHigh
+rdf_type:
+  - eu-aiact:RiskLevel
+prefLabel: Risk Level - High
+definition: Risk Level categorising an AI system as "high-risk" as defined in the AI Act Article 6
+broader:
+  - eu-aiact:RiskLevelPermitted
+inScheme:
+  - eu-aiact:risk-levels-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2025-04-03'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - AIA(Art.6)

@@ -1,0 +1,21 @@
+---
+id: loc:AD-02
+rdf_type:
+  - dpv:Region
+prefLabel: Canillo (parish)
+definition: Concept representing region Canillo (parish) in country Andorra
+broader:
+  - loc:AD
+inScheme:
+  - loc:locations-classes
+isDefinedBy:
+  - 'loc:'
+exactMatch:
+  - https://www.iso.org/obp/ui/#iso:code:3166:AD-02
+term_status: accepted
+created:
+  - '2024-08-03'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+iso_alpha2:
+  - AD-02

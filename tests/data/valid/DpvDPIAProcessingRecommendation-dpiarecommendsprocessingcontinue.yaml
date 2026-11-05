@@ -1,0 +1,18 @@
+---
+id: eu-gdpr:DPIARecommendsProcessingContinue
+rdf_type:
+  - eu-gdpr:DPIAProcessingRecommendation
+prefLabel: DPIA Recommends Processing Continue
+definition: Recommendation from a DPIA that the processing may continue
+broader:
+  - eu-gdpr:DPIAProcessingRecommendation
+inScheme:
+  - eu-gdpr:dpia-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2022-10-22'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

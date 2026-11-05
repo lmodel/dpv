@@ -1,0 +1,19 @@
+---
+id: ai:DataAggregation
+rdf_type:
+  - dpv:Processing
+prefLabel: Data Aggregation
+definition: Processing operation where data is aggregated, e.g. by combining multiple records into one
+broader:
+  - ai:DataPreparation
+  - dpv:Transform
+inScheme:
+  - ai:development-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2025-11-05'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit

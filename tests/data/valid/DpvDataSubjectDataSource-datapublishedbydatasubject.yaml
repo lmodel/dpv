@@ -1,0 +1,21 @@
+---
+id: dpv:DataPublishedByDataSubject
+rdf_type:
+  - dpv:DataSubjectDataSource
+prefLabel: Data published by Data Subject
+definition: Data is published by the data subject
+scopeNote:
+  - This refers to where that data was made publicly available by the data subject. An example of this
+    would be a social media profile that the data subject has made publicly accessible.
+broader:
+  - dpv:DataSubjectDataSource
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-08-24'
+modified: '2023-12-10'
+contributor:
+  - dpv_agent:person-julian-flake

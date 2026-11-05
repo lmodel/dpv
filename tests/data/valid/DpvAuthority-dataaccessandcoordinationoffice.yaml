@@ -1,0 +1,23 @@
+---
+id: de-gdng:DataAccessAndCoordinationOffice
+rdf_type:
+  - dpv:Authority
+prefLabel: Data Access and Coordination Office (DACO)
+prefLabel_de: Datenzugangs- und Koordinierungsstelle für Gesundheitsdaten (DACO)
+definition: Data Access and Coordination Office for Health Data (DACO), based at the Federal Institute
+  for Drugs and Medical Devices (BfArM)
+definition_de: Datenzugangs- und Koordinierungsstelle für Gesundheitsdaten (DACO), angesiedelt beim Bundesinstitut
+  für Arzneimittel und Medizinprodukte (BfArM)
+broader:
+  - dpv:Authority
+inScheme:
+  - de-gdng:actors-classes
+isDefinedBy:
+  - 'de-gdng:'
+term_status: accepted
+created:
+  - '2025-10-13'
+contributor:
+  - dpv_agent:person-julian-flake
+source:
+  - '[[GDNG]] § 3(1)'

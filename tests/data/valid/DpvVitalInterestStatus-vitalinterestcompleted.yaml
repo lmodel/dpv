@@ -1,0 +1,15 @@
+---
+id: dpv:VitalInterestCompleted
+rdf_type:
+  - dpv:VitalInterestStatus
+prefLabel: Vital Interest Completed
+definition: Status where the vital interest activity has been completed
+broader:
+  - dpv:VitalInterestStatus
+inScheme:
+  - dpv:legal-basis-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

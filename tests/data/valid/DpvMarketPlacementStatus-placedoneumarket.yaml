@@ -1,0 +1,20 @@
+---
+id: eu-aiact:PlacedOnEUMarket
+rdf_type:
+  - eu-aiact:MarketPlacementStatus
+prefLabel: Placed on EU Market
+definition: Status indicating the first making available of an AI system or a general purpose AI model
+  on the Union market
+broader:
+  - eu-aiact:PlacedOnMarket
+inScheme:
+  - eu-aiact:status-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2024-05-17'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA (Art. 3(9))

@@ -1,0 +1,16 @@
+---
+id: ieee-7012:SharingData3PAllowed
+rdf_type:
+  - dpv:Permission
+  - ieee-7012:DataSharingTerm
+prefLabel: Sharing Data with 3rd Party Allowed
+definition: Term that indicates data sharing with third party is allowed
+broader:
+  - ieee-7012:SharingDataAllowed
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

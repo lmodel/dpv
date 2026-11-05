@@ -1,0 +1,20 @@
+---
+id: dpv:NotApplicable
+rdf_type:
+  - dpv:Applicability
+prefLabel: Not Applicable
+definition: Concept indicating the information or context is not applicable
+scopeNote:
+  - This relates to a 'Stop' state as distinct from a 'Halt' state. It makes no comments on whether the
+    Activity can be resumed or continued towards completion.
+broader:
+  - dpv:Applicability
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2023-08-24'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

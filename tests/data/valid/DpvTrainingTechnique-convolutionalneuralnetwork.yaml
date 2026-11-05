@@ -1,0 +1,20 @@
+---
+id: ai:ConvolutionalNeuralNetwork
+rdf_type:
+  - ai:TrainingTechnique
+prefLabel: Convolutional Neural Network (CNN)
+definition: Feed forward neural network using convolution in at least one of its layers
+broader:
+  - ai:NeuralNetwork
+inScheme:
+  - ai:techniques-classes
+isDefinedBy:
+  - 'ai:'
+term_status: modified
+created:
+  - '2024-12-01'
+modified: '2025-07-31'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - ISO/IEC 22989:2022 3.4.2

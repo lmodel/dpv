@@ -1,0 +1,6 @@
+---
+# Fails at: /temporal/hasBeginning
+id: dpv:Example
+prefLabel: An example
+temporal:
+  hasBeginning: soon

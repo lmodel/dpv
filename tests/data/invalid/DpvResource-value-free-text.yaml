@@ -1,0 +1,5 @@
+---
+# Fails at: /hasPurpose/0
+id: ex:P
+hasPurpose:
+  - to market things

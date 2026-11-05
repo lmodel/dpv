@@ -1,0 +1,6 @@
+---
+# Fails at: /concepts/0
+edition: '2.3'
+family: core
+concepts:
+  - prefLabel: x

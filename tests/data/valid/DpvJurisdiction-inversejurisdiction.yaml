@@ -1,0 +1,26 @@
+---
+id: dpv:InverseJurisdiction
+rdf_type:
+  - dpv:Jurisdiction
+prefLabel: Inverse Jurisdiction
+definition: An inverse jurisdiction for a specific jurisdiction is the set of all other jurisdictions
+  that are not part of the specific jurisdiction
+scopeNote:
+  - Inverse Jurisdictions are helpful when asserting and checking rules that involve a concept representing
+    jurisdictions outside of a given jurisdiction. An inverse jurisdiction of an inverse jurisdiction
+    should give back the same original jurisdiction but this is undefined and strongly dissuaded as it
+    could lead to recursive definitions in some use-cases
+broader:
+  - dpv:Jurisdiction
+inScheme:
+  - dpv:jurisdiction-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-05-04'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

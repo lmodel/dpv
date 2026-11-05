@@ -1,0 +1,23 @@
+---
+id: dpv:ActiveRight
+rdf_type:
+  - dpv:Right
+prefLabel: Active Right
+definition: The right(s) applicable, provided, or expected that need to be (actively) exercised
+scopeNote:
+  - Active rights require the entity to expressly exercise them. For example, a Data Subject exercising
+    their right to withdraw their consent.
+broader:
+  - dpv:Right
+inScheme:
+  - dpv:rights-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-10-22'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-paul-ryan

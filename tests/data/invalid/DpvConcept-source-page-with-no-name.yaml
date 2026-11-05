@@ -1,0 +1,6 @@
+---
+# Fails at: /source_page/0
+id: dpv:Example
+prefLabel: An example
+source_page:
+  - url: https://example.com/

@@ -1,0 +1,18 @@
+---
+id: eu-gdpr:DPIAConformant
+rdf_type:
+  - eu-gdpr:DPIAConformity
+prefLabel: DPIA Conformant
+definition: Expressing the specified process is conformant with a DPIA
+broader:
+  - eu-gdpr:DPIAConformity
+inScheme:
+  - eu-gdpr:dpia-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2022-10-22'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,17 @@
+---
+id: risk:IncidentInvestigationCompleted
+rdf_type:
+  - risk:IncidentInvestigationStatus
+prefLabel: Incident Investigation Completed
+definition: Status indicating the investigation has been completed and findings are available
+broader:
+  - risk:IncidentInvestigationStatus
+inScheme:
+  - risk:incident-status-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,17 @@
+---
+id: dpv:Lawful
+rdf_type:
+  - dpv:Lawfulness
+prefLabel: Lawful
+definition: State of being lawful or legally compliant
+broader:
+  - dpv:Lawfulness
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-10-19'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

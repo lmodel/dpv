@@ -1,0 +1,17 @@
+---
+id: dpv:HugeDataVolume
+rdf_type:
+  - dpv:DataVolume
+prefLabel: Huge Data Volume
+definition: Data volume that is considered huge or more than large within the context
+broader:
+  - dpv:DataVolume
+inScheme:
+  - dpv:processing-scale-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

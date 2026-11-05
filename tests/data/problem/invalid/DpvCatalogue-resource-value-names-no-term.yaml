@@ -1,0 +1,11 @@
+---
+# Fails at: /examples/0/resources/0/hasPurpose/0
+edition: '2.3'
+family: core
+examples:
+  - id: dex:E0001
+    title: x
+    resources:
+      - id: ex:P
+        hasPurpose:
+          - dpv:NoSuchTerm

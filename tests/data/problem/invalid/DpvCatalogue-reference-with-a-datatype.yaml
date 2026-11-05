@@ -1,0 +1,13 @@
+---
+# Fails at: /examples/0/resources/0/statements/0
+edition: '2.3'
+family: core
+examples:
+  - id: dex:E0001
+    title: x
+    resources:
+      - id: ex:P
+        statements:
+          - predicate: dcterms:date
+            reference: ex:Y
+            datatype: xsd:date

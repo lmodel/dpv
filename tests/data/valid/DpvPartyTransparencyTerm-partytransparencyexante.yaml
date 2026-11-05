@@ -1,0 +1,18 @@
+---
+id: ieee-7012:PartyTransparencyExAnte
+rdf_type:
+  - dpv:Obligation
+  - ieee-7012:PartyTransparencyTerm
+prefLabel: Party Transparency Ex Ante
+definition: Term that indicates transparency regarding identities and involvement of parties in specific
+  roles is obligated ahead of intended process i.e. ex-ante transparency regarding identities and involvement
+  of parties in specific roles
+broader:
+  - ieee-7012:PartyTransparencyRequired
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

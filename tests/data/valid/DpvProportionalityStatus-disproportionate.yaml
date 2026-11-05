@@ -1,0 +1,22 @@
+---
+id: eu-gdpr:Disproportionate
+rdf_type:
+  - eu-gdpr:ProportionalityStatus
+prefLabel: Disproportionate
+definition: Status representing the activity or context is disproportionate i.e. it is not proportionate
+scopeNote:
+  - A Disproportinate status indicates that the process should not be continued as it risks impacting
+    the rights of the data subject in an unacceptable manner
+broader:
+  - eu-gdpr:ProportionalityStatus
+inScheme:
+  - eu-gdpr:proportionality-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2025-10-10'
+contributor:
+  - dpv_agent:person-efstratios-koulierakis
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

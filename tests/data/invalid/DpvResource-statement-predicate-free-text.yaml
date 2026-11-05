@@ -1,0 +1,6 @@
+---
+# Fails at: /statements/0/predicate
+id: ex:P
+statements:
+  - predicate: a verb
+    literal: x

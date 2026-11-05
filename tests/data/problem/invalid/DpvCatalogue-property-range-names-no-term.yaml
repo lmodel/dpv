@@ -1,0 +1,8 @@
+---
+# Fails at: /properties/0/rangeIncludes/0
+edition: '2.3'
+family: core
+properties:
+  - id: dpv:hasExample
+    rangeIncludes:
+      - dpv:NoSuchTerm

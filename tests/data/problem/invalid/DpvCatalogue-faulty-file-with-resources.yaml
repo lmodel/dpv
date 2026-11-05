@@ -1,0 +1,10 @@
+---
+# Fails at: /examples/0
+edition: '2.3'
+family: core
+examples:
+  - id: dex:E0001
+    title: x
+    turtle_fault: broken
+    resources:
+      - id: ex:P

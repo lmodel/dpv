@@ -1,0 +1,24 @@
+---
+id: eu-aiact:BiometricCategorisationSystem
+rdf_type:
+  - eu-aiact:AISystem
+prefLabel: Biometric Categorisation System
+definition: An AI system for the purpose of assigning natural persons to specific categories on the basis
+  of their biometric data, unless it is ancillary to another commercial service and strictly necessary
+  for objective technical reasons
+broader:
+  - eu-aiact:AISystem
+related:
+  - pd:Biometric
+inScheme:
+  - eu-aiact:system-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: modified
+created:
+  - '2024-04-10'
+modified: '2025-07-30'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA(Art. 3(40))

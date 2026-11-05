@@ -1,0 +1,19 @@
+---
+id: eu-gdpr:DBIAIndicatesHighRisk
+rdf_type:
+  - eu-gdpr:DBIARiskStatus
+prefLabel: DBIA Indicates High Risk
+definition: DBIA identifying high risk levels regarding rights and freedoms of natural persons
+broader:
+  - eu-gdpr:DBIARiskStatus
+inScheme:
+  - eu-gdpr:data-breach-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2024-05-19'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - GDPR Article 33

@@ -1,0 +1,19 @@
+---
+id: dpv:ConfidentialityAgreement
+rdf_type:
+  - dpv:LegalMeasure
+prefLabel: Confidentiality Agreement
+definition: Agreements that enforce confidentiality for e.g. to protect business, professional, or company
+  secrets
+broader:
+  - dpv:LegalAgreement
+inScheme:
+  - dpv:legal-measures-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-02-09'
+modified: '2024-08-27'
+source:
+  - DGA 3.1.a

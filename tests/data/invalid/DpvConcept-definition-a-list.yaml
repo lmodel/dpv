@@ -1,0 +1,6 @@
+---
+# Fails at: /definition
+id: dpv:Example
+prefLabel: An example
+definition:
+  - x

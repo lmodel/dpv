@@ -1,0 +1,21 @@
+---
+id: eu-aiact:CommonSpecification
+rdf_type:
+  - tech:Documentation
+prefLabel: Common Specification
+definition: A set of technical specifications, as defined in point 4 of Article 2 of Regulation (EU) No
+  1025/2012 providing means to comply with certain requirements established under the AI Act
+broader:
+  - tech:Specification
+inScheme:
+  - eu-aiact:docs-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: modified
+created:
+  - '2024-04-10'
+modified: '2024-12-17'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA Art.3-28

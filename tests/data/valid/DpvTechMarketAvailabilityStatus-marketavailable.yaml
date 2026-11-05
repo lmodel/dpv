@@ -1,0 +1,15 @@
+---
+id: tech:MarketAvailable
+rdf_type:
+  - tech:MarketAvailabilityStatus
+prefLabel: Market Available
+definition: Status indicating Technology is available on the market
+broader:
+  - tech:MarketAvailabilityStatus
+inScheme:
+  - tech:status-classes
+isDefinedBy:
+  - 'tech:'
+term_status: accepted
+created:
+  - '2024-05-09'

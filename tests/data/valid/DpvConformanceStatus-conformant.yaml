@@ -1,0 +1,17 @@
+---
+id: dpv:Conformant
+rdf_type:
+  - dpv:ConformanceStatus
+prefLabel: Conformant
+definition: State of being conformant
+broader:
+  - dpv:ConformanceStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-10-22'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

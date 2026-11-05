@@ -1,0 +1,19 @@
+---
+id: ai:Benchmarking
+rdf_type:
+  - dpv:OrganisationalMeasure
+prefLabel: Benchmarking
+definition: Measure where performance and outputs are compared to best practices, gold standards, or other
+  forms of desired quality
+broader:
+  - dpv:DataQualityAssessment
+inScheme:
+  - ai:measures-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2026-02-09'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit

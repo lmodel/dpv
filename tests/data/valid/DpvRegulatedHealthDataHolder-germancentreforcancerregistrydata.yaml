@@ -1,0 +1,22 @@
+---
+id: de-gdng:GermanCentreForCancerRegistryData
+rdf_type:
+  - de-gdng:RegulatedHealthDataHolder
+prefLabel: German Centre for Cancer Registry Data
+prefLabel_de: Zentrum für Krebsregisterdaten beim Robert-Koch-Institut
+definition: German Centre for Cancer Registry Data pursuant § 1 Bundeskrebsregisterdatengesetz
+definition_de: Zentrum für Krebsregisterdaten nach § 1 Bundeskrebsregisterdaten­gesetz
+broader:
+  - de-gdng:RegulatedHealthDataHolder
+inScheme:
+  - de-gdng:actors-classes
+isDefinedBy:
+  - 'de-gdng:'
+term_status: accepted
+created:
+  - '2025-10-13'
+contributor:
+  - dpv_agent:person-christian-draeger
+  - dpv_agent:person-julian-flake
+source:
+  - '[[GDNG]] § 2'

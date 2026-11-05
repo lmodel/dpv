@@ -1,0 +1,20 @@
+---
+id: dpv:AuthorityInformed
+rdf_type:
+  - dpv:EntityInformedStatus
+prefLabel: Authority Informed
+definition: Status indicating Authority has been informed about the specified context
+broader:
+  - dpv:EntityInformed
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-05-10'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-paul-ryan

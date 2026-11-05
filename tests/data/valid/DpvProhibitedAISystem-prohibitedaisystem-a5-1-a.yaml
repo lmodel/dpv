@@ -1,0 +1,26 @@
+---
+id: eu-aiact:ProhibitedAISystem-A5-1-a
+rdf_type:
+  - eu-aiact:ProhibitedAISystem
+prefLabel: Prohibited AI System - Article 5(1a)
+definition: Prohibited AI system according to Article 5(1a) of the AI Act, indicating an AI system that
+  deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive
+  techniques, with the objective, or the effect of materially distorting the behaviour of a person or
+  a group of persons by appreciably impairing their ability to make an informed decision, thereby causing
+  them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably
+  likely to cause that person, another person or group of persons significant harm.
+broader:
+  - eu-aiact:ProhibitedAISystem
+inScheme:
+  - eu-aiact:prohibited-systems-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2026-02-09'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA(Art.5(1a))
+eu_aiact_hasRiskLevel:
+  - eu-aiact:RiskLevelProhibited

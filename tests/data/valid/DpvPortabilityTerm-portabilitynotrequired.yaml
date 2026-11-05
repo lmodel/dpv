@@ -1,0 +1,17 @@
+---
+id: ieee-7012:PortabilityNotRequired
+rdf_type:
+  - dpv:Obligation
+  - ieee-7012:PortabilityTerm
+prefLabel: Portability Not Required
+definition: Term that indicates data portability is not required to be provided
+broader:
+  - dpv:Obligation
+  - ieee-7012:PortabilityTerm
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

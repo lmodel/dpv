@@ -1,0 +1,4 @@
+---
+# Fails at: /family
+edition: '2.3'
+family: other

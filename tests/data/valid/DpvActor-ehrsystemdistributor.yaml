@@ -1,0 +1,19 @@
+---
+id: sector-health:EHRSystemDistributor
+rdf_type:
+  - tech:Actor
+prefLabel: Electronic Health Record System Distributor
+definition: Actor that distributes electronic health record systems
+broader:
+  - tech:Distributor
+inScheme:
+  - sector-health:entities-classes
+isDefinedBy:
+  - 'sector-health:'
+term_status: accepted
+created:
+  - '2026-02-04'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+source:
+  - EHDS Art.33

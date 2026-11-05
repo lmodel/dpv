@@ -1,0 +1,18 @@
+---
+id: dpv:EntityIntendedInvolvement
+rdf_type:
+  - dpv:EntityInvolvementStatus
+prefLabel: Entity Intended Involvement
+definition: Status indicating the involvement of the entity is intended
+broader:
+  - dpv:EntityInvolvement
+  - dpv:Intended
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

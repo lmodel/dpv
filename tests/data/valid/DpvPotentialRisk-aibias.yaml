@@ -1,0 +1,21 @@
+---
+id: ai:AIBias
+rdf_type:
+  - dpv:RiskConcept
+  - risk:PotentialRisk
+  - risk:PotentialRiskSource
+prefLabel: AI Bias
+definition: Bias associated with development, use, or other activities involving an AI technology or system
+broader:
+  - ai:RiskConcept
+  - risk:Bias
+inScheme:
+  - ai:risks-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-09-18'
+contributor:
+  - dpv_agent:person-daniel-doherty
+  - dpv_agent:person-delaram-golpayegani

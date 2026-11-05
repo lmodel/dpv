@@ -1,0 +1,19 @@
+---
+id: dpv:ContractApproved
+rdf_type:
+  - dpv:ContractPreparationStatus
+prefLabel: Contract Approved
+definition: Status representing contract has been approved and can be used for signing
+broader:
+  - dpv:ContractPreparationStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-01-09'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

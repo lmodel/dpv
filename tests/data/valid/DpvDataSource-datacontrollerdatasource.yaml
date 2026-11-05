@@ -1,0 +1,15 @@
+---
+id: dpv:DataControllerDataSource
+rdf_type:
+  - dpv:DataSource
+prefLabel: Data Controller as Data Source
+definition: Data Sourced from Data Controller(s), e.g. a Controller inferring data or generating data
+broader:
+  - dpv:DataSource
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2023-10-12'

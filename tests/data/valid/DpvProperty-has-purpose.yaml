@@ -1,0 +1,23 @@
+---
+id: dpv:hasPurpose
+prefLabel: has purpose
+definition: Indicates association with Purpose
+inScheme:
+  - dpv:purposes-properties
+isDefinedBy:
+  - 'dpv:'
+rangeIncludes:
+  - dpv:Purpose
+term_status: accepted
+created:
+  - '2019-04-04'
+modified: '2020-11-04'
+contributor:
+  - dpv_agent:person-axel-polleres
+  - dpv_agent:person-bud-bruegger
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-javier-fernandez
+  - dpv_agent:person-mark-lizar
+source_page:
+  - page_name: SPECIAL Project
+    url: https://specialprivacy.ercim.eu/

@@ -1,0 +1,6 @@
+---
+# Fails at: /inScheme/0
+id: dpv:Example
+prefLabel: An example
+inScheme:
+  - some thing

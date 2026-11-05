@@ -1,0 +1,21 @@
+---
+id: dpv:ContractualClauseFulfilled
+rdf_type:
+  - dpv:ContractualClauseFulfilmentStatus
+prefLabel: Contractual Clause Fulfilled
+definition: Status indicating the terms of the contractual clause are fulfilled i.e. they have been successfully
+  completed without violation
+broader:
+  - dpv:ContractualClauseFulfilmentStatus
+inScheme:
+  - dpv:contract-clause-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: modified
+created:
+  - '2024-08-27'
+modified: '2025-08-06'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

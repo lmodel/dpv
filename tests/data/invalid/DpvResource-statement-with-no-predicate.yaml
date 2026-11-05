@@ -1,0 +1,5 @@
+---
+# Fails at: /statements/0
+id: ex:P
+statements:
+  - literal: x

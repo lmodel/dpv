@@ -1,0 +1,22 @@
+---
+id: dpv:AutomatedScoringOfIndividuals
+rdf_type:
+  - dpv:ScoringOfIndividuals
+prefLabel: Automated Scoring of Individuals
+definition: Processing that involves automated scoring of individuals
+scopeNote:
+  - Scoring can lead to the action being considered Decision Making if the scoring is itself a decision
+    - see 2023-MAR-16 opinion of Advocate General on Case C 634/21. Therefore, the assessment of whether
+    scoring was automated or not is important given the legal obligations surrounding automated decision
+    making e.g. in GDPR
+broader:
+  - dpv:ScoringOfIndividuals
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-04-14'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,26 @@
+---
+id: dpv:LargeScaleProcessing
+rdf_type:
+  - dpv:ProcessingScale
+prefLabel: Large Scale Processing
+definition: Processing that takes place at large scales (as specified by some criteria)
+scopeNote:
+  - The exact definition of what constitutes "large scale" depends on use of jurisdictional, domain-specific,
+    or other forms of externally defined criteria. Where possible, this should be reflected by extending
+    this term with the appropriate context.
+broader:
+  - dpv:ProcessingScale
+inScheme:
+  - dpv:processing-scale-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2020-11-04'
+modified: '2022-09-07'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-piero-bonatti
+source_page:
+  - page_name: GDPR Art.4-2
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj

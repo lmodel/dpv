@@ -1,0 +1,21 @@
+---
+id: ai:ActionRecognition
+rdf_type:
+  - ai:Capability
+prefLabel: Action Recognition
+definition: Capability to recognise actions
+broader:
+  - ai:BiometricCapability
+  - ai:ComputerVision
+inScheme:
+  - ai:capabilities-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - ' Defining Artificial Intelligence 2.0'
+  - AI Watch

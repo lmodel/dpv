@@ -1,0 +1,5 @@
+---
+# Fails at: /term_status
+id: dpv:Example
+prefLabel: An example
+term_status: proposed

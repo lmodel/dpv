@@ -1,0 +1,16 @@
+---
+id: ieee-7012:PermissiveInterpretation
+rdf_type:
+  - ieee-7012:DeonticInterpretationTerm
+prefLabel: Permissive Interpretation
+definition: Term that indicates a permissive interpretation where if something is not prohibited or if
+  there are no rules governing it, then it is assumed to be permitted
+broader:
+  - ieee-7012:DeonticInterpretationTerm
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

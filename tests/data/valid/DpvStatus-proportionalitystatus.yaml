@@ -1,0 +1,19 @@
+---
+id: eu-gdpr:ProportionalityStatus
+rdf_type:
+  - dpv:Status
+prefLabel: Proportionality Status
+definition: Status indicating whether the specific activity or context is proportionate
+broader:
+  - dpv:Status
+inScheme:
+  - eu-gdpr:proportionality-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2025-10-10'
+contributor:
+  - dpv_agent:person-efstratios-koulierakis
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

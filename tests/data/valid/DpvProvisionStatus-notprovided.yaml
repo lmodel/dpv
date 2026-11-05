@@ -1,0 +1,15 @@
+---
+id: tech:NotProvided
+rdf_type:
+  - tech:ProvisionStatus
+prefLabel: Not Provided
+definition: Status indicating Technology has not been provided
+broader:
+  - tech:ProvisionStatus
+inScheme:
+  - tech:status-classes
+isDefinedBy:
+  - 'tech:'
+term_status: accepted
+created:
+  - '2024-05-09'

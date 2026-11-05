@@ -1,0 +1,6 @@
+---
+# Fails at: /related/0
+id: dpv:Example
+prefLabel: An example
+related:
+  - some thing

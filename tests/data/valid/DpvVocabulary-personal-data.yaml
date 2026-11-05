@@ -1,0 +1,48 @@
+---
+id: https://w3id.org/dpv/pd
+bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram Golpayegani,
+  Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G., et al. The Semantic
+  Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+description: Extension to the Data Privacy Vocabulary (DPV) providing additional categories of personal
+  data
+identifier: https://w3id.org/dpv/pd
+title: Personal Data Categories
+doi: 10.5281/zenodo.12505841
+bibo_status: http://purl.org/ontology/bibo/status/published
+preferredNamespacePrefix: pd
+preferredNamespaceUri: https://w3id.org/dpv/pd#
+rdfs_Label: PD
+versionInfo: '2.3'
+schema_version: '2.3'
+created:
+  - '2022-04-02'
+issued: '2022-04-02'
+modified: '2026-02-25'
+conformsTo:
+  - http://www.w3.org/2000/01/rdf-schema
+  - http://www.w3.org/2004/02/skos/core
+source:
+  - https://www.w3.org/groups/cg/dpvcg/
+license: https://www.w3.org/copyright/document-license-2023/
+publisher: https://www.w3.org/
+versionIRI: https://w3id.org/dpv/2.3/pd
+isProfileOf:
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2004/02/skos/core#
+  - https://w3id.org/dpv
+logo: https://w3id.org/dpv/media/logo.png
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-elmar-kiesling
+  - dpv_agent:person-fajar-ekaputra
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-paul-ryan
+  - dpv_agent:person-rudy-jacob
+creator:
+  - dpv_agent:person-axel-polleres
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

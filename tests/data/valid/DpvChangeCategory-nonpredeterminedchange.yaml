@@ -1,0 +1,21 @@
+---
+id: eu-aiact:NonpredeterminedChange
+rdf_type:
+  - eu-aiact:ChangeCategory
+prefLabel: Non-Predetermined Change
+definition: Change associated with the AI system that has not been pre-determined
+scopeNote:
+  - What is considered "pre-determined" is not defined with this concept or within the AI Act, therefore
+    if there are specific interpretations of "pre-determined", such as within a jurisdiction, sector,
+    or for a particular technology, then this concept should be extended accordingly
+broader:
+  - eu-aiact:ChangeCategory
+inScheme:
+  - eu-aiact:status-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

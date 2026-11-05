@@ -1,0 +1,6 @@
+---
+# Fails at: /memberOf/0
+id: dpv_agent:person-example
+name: Example
+memberOf:
+  - A University

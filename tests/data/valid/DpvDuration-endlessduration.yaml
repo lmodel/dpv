@@ -1,0 +1,18 @@
+---
+id: dpv:EndlessDuration
+rdf_type:
+  - dpv:Duration
+prefLabel: Endless Duration
+definition: Duration that is (known or intended to be) open ended or without an end
+broader:
+  - dpv:Duration
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+modified: '2020-10-05'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

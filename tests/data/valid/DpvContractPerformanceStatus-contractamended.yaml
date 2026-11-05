@@ -1,0 +1,20 @@
+---
+id: dpv:ContractAmended
+rdf_type:
+  - dpv:ContractPerformanceStatus
+prefLabel: Contract Amended
+definition: Status representing contract that has been fully executed and whose terms have been amended
+  through mutual agreement or other means such that the contract is still required to be performed
+broader:
+  - dpv:ContractPerformanceStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-01-09'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

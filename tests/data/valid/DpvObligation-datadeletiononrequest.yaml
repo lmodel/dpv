@@ -1,0 +1,17 @@
+---
+id: ieee-7012:DataDeletionOnRequest
+rdf_type:
+  - dpv:Obligation
+  - ieee-7012:DataDeletionTerm
+prefLabel: Data Deletion on Request
+definition: Term that indicates deletion of data is required upon request
+broader:
+  - dpv:Obligation
+  - ieee-7012:DataDeletionTerm
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2025-04-09'
