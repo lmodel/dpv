@@ -28,6 +28,11 @@ exclude = [
   # connection or a timeout on every retry while serving 200 elsewhere; not
   # a dead link. Drop the exclusion if CI reaches it again.
   '^https://www\.conventionalcommits\.org/',
+  # iso.org answers automated clients with 403, from a CI runner and from a
+  # workstation alike, while serving the page to a browser. Not a dead link.
+  # README.md links the edition DPV's mapping names. Re-check it by hand when
+  # DPV's mapping moves to another edition.
+  '^https://www\.iso\.org/',
   # A Zenodo DOI, such as the copier template's in the README's credits,
   # resolves through zenodo.org, which timed out for a CI runner on every
   # retry. It answers elsewhere in about 14 seconds, close to lychee's
