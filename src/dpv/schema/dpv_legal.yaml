@@ -1,0 +1,148 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_legal
+name: dpv_legal
+title: 'DPV kinds: laws and authorities'
+description: 'The kinds of term DPV''s vocabularies of laws and authorities state: each a concept that
+  terms are instances of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  de-gdng: https://w3id.org/dpv/legal/de/gdng#
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  eu-aiact: https://w3id.org/dpv/legal/eu/aiact#
+  eu-gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  linkml: https://w3id.org/linkml/
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+  - ./dpv_tech
+classes:
+  DpvAISystem:
+    title: AI System
+    is_a: DpvTechnology
+    description: A machine-based system designed to operate with varying levels of autonomy and that may
+      exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from
+      the input it receives, how to generate outputs such as predictions, content, recommendations, or
+      decisions that can influence physical or virtual environments.
+    class_uri: eu-aiact:AISystem
+  DpvAdequacyDecision:
+    title: Adequacy Decision
+    is_a: DpvLegalBasis
+    description: An adequacy decision as per GDPR Art.45(3) for the transfer of data to a third country
+      or an international organisation
+    class_uri: eu-gdpr:AdequacyDecision
+  DpvChangeCategory:
+    title: Change Category
+    is_a: DpvConcept
+    description: A categorisation of the change associated with the AI system
+    class_uri: eu-aiact:ChangeCategory
+  DpvDBIARiskStatus:
+    title: DBIA Risk Status
+    is_a: DpvAuditStatus
+    description: Status reflecting the status of risk associated with a DBIA regarding rights and freedoms
+      of natural persons
+    class_uri: eu-gdpr:DBIARiskStatus
+  DpvDPIAConformity:
+    title: DPIA Conformity
+    is_a: DpvConformanceStatus
+    description: Conformity of a process with a DPIA
+    class_uri: eu-gdpr:DPIAConformity
+  DpvDPIANecessityStatus:
+    title: DPIA Necessity Status
+    is_a: DpvAuditStatus
+    description: Status reflecting whether a DPIA is necessary
+    class_uri: eu-gdpr:DPIANecessityStatus
+  DpvDPIAOutcomeStatus:
+    title: DPIA Outcome Status
+    is_a: DpvAuditStatus
+    description: Status reflecting the outcomes of a DPIA
+    class_uri: eu-gdpr:DPIAOutcomeStatus
+  DpvDPIAProcessingRecommendation:
+    title: DPIA Processing Recommendation
+    is_a: DpvAuditStatus
+    description: Recommendation from the DPIA regarding processing
+    class_uri: eu-gdpr:DPIAProcessingRecommendation
+  DpvDPIARiskStatus:
+    title: DPIA Risk Status
+    is_a: DpvAuditStatus
+    description: Status reflecting the status of risk associated with a DPIA
+    class_uri: eu-gdpr:DPIARiskStatus
+  DpvDataBreachNotice:
+    title: Data Breach Notice
+    is_a: DpvOrganisationalMeasure
+    description: Notice associated with data breach providing information in compliance with GDPR
+    class_uri: eu-gdpr:DataBreachNotice
+  DpvDataBreachNoticeRequirement:
+    title: Data Breach Notice Requirement
+    is_a: DpvAuditStatus
+    description: Whether a Data Breach notification is required
+    class_uri: eu-gdpr:DataBreachNoticeRequirement
+  DpvEuAiactMarketAvailabilityStatus:
+    title: Market Availability Status
+    is_a: DpvTechMarketAvailabilityStatus
+    description: Status associated with whether the AI system or GPAI Model is available for distribution
+      or use on the market in the course of a commercial activity
+    class_uri: eu-aiact:MarketAvailabilityStatus
+  DpvEuAiactRiskLevel:
+    title: Risk Level
+    is_a: DpvRiskLevel
+    description: Enumeration of AI Act's risk-based categorisation which determines the prohibitions and
+      obligations for AI systems
+    class_uri: eu-aiact:RiskLevel
+  DpvEuGdprDataProtectionAuthority:
+    title: Data Protection Authority
+    is_a: DpvDataProtectionAuthority
+    description: ‘Supervisory Authority’ or 'Data Protection Authority' means an independent public authority
+      which is established by a Member State pursuant to Article 51
+    class_uri: eu-gdpr:DataProtectionAuthority
+  DpvEuGdprProcessing:
+    title: Processing
+    is_a: DpvProcessing
+    description: ‘Processing’ means any operation or set of operations which is performed on personal
+      data or on sets of personal data, whether or not by automated means, such as collection, recording,
+      organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure
+      by transmission, dissemination or otherwise making available, alignment or combination, restriction,
+      erasure or destruction
+    class_uri: eu-gdpr:Processing
+  DpvHighRiskAISystem:
+    title: High Risk AI System
+    is_a: DpvAISystem
+    description: High-risk AI system according to the AI Act
+    class_uri: eu-aiact:HighRiskAISystem
+  DpvMarketPlacementStatus:
+    title: Market Placement Status
+    is_a: DpvTechMarketAvailabilityStatus
+    description: Status associated with whether the AI system or GPAI Model has been 'first' made available
+      on the market
+    class_uri: eu-aiact:MarketPlacementStatus
+  DpvProhibitedAISystem:
+    title: Prohibited AI System
+    is_a: DpvAISystem
+    description: Prohibited AI system according to Article 5, AI Act
+    class_uri: eu-aiact:ProhibitedAISystem
+  DpvProportionalityStatus:
+    title: Proportionality Status
+    is_a: DpvStatus
+    description: Status indicating whether the specific activity or context is proportionate
+    class_uri: eu-gdpr:ProportionalityStatus
+  DpvRegulatedHealthDataHolder:
+    title: Gesetzlich geregelte datenhaltende Stelle
+    is_a: DpvConcept
+    description: Solche datenhaltenden Stellen, die gesetzlich geregelt sind, wie das Forschungsdatenzentrum
+      Gesundheit, das Zentrum für Krebregisterdaten beim RKI und die Plattform nach §64e Abs.9 des fünften
+      Buches Sozialgesetzbuch
+    class_uri: de-gdng:RegulatedHealthDataHolder
+  DpvServiceSupplyStatus:
+    title: Service Supply Status
+    is_a: DpvProvisionStatus
+    description: Status associated with whether the AI system has been supplied for use or put in to service
+      or been recalled or withdrawn
+    class_uri: eu-aiact:ServiceSupplyStatus

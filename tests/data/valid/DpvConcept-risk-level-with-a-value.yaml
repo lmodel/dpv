@@ -1,0 +1,22 @@
+---
+id: risk:HighLikelihood
+rdf_type:
+  - dpv:Likelihood
+prefLabel: High Likelihood
+definition: Level where Likelihood is High
+scopeNote:
+  - The suggested quantitative value for this concept is 0.75 on a scale of 0 to 1
+broader:
+  - risk:3LikelihoodLevels
+  - risk:5LikelihoodLevels
+  - risk:7LikelihoodLevels
+inScheme:
+  - risk:risk-levels-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2022-08-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+value: 0.75

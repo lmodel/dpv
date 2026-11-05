@@ -1,0 +1,27 @@
+---
+id: dpv:AssistiveAutomation
+rdf_type:
+  - dpv:AutomationLevel
+prefLabel: Assistive Automation
+definition: Level of automation corresponding to Level 1 in ISO/IEC 22989:2022 where automation is limited
+  to parts of the system or a specific part of the system in a manner that does not change the control
+  of the human in using/driving the system
+scopeNote:
+  - Human Involvement is implied here, specifically the ability to make decisions regarding operations,
+    but also possibly for intervention, oversight, and verification
+broader:
+  - dpv:AutomationLevel
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2023-12-10'
+modified: '2024-04-20'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit
+source_page:
+  - page_name: ISO/IEC 22989:2022 Artificial intelligence concepts and terminology
+    url: https://www.iso.org/standard/74296.html

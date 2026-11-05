@@ -1,3388 +1,2026 @@
 {
    "@context": {
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "common_domain_model": "https://w3id.org/lmodel/common-domain-model/",
+      "ai": "https://w3id.org/dpv/ai#",
+      "bibo": "http://purl.org/ontology/bibo/",
+      "dcam": "http://purl.org/dc/dcam/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "dcterms": "http://purl.org/dc/terms/",
-      "dpv": "https://w3id.org/lmodel/dpv/",
-      "dpv_owl": "https://w3id.org/dpv/owl#",
-      "dpv_upstream": "https://w3id.org/dpv#",
+      "de-gdng": "https://w3id.org/dpv/legal/de/gdng#",
+      "dex": "https://w3id.org/dpv/examples#",
+      "dpv": "https://w3id.org/dpv#",
+      "dpv_agent": "https://w3id.org/lmodel/dpv/agents/",
+      "dpv_linkml": "https://w3id.org/lmodel/dpv/",
+      "eu-aiact": "https://w3id.org/dpv/legal/eu/aiact#",
+      "eu-dga": "https://w3id.org/dpv/legal/eu/dga#",
+      "eu-ehds": "https://w3id.org/dpv/legal/eu/ehds#",
+      "eu-gdpr": "https://w3id.org/dpv/legal/eu/gdpr#",
+      "eu-nis2": "https://w3id.org/dpv/legal/eu/nis2#",
+      "eu-rights": "https://w3id.org/dpv/rights/eu#",
+      "ex": "http://example.com#",
+      "exA": "http://example.com/exA#",
+      "exB": "http://example.com/exB#",
+      "exd": "http://example.com/default#",
       "foaf": "http://xmlns.com/foaf/0.1/",
-      "gist": "https://w3id.org/lmodel/gist/",
-      "gists": "http://example.org/UNKNOWN/gists/",
-      "iso22989": "https://w3id.org/lmodel/iso22989/",
-      "iso27001": "https://w3id.org/lmodel/iso27001/",
-      "iso29100": "https://w3id.org/lmodel/iso29100/",
-      "iso42001": "https://w3id.org/lmodel/iso42001/",
+      "ieee-7012": "https://w3id.org/dpv/standards/ieee/7012#",
+      "justifications": "https://w3id.org/dpv/justifications#",
+      "legal": "https://w3id.org/dpv/legal#",
+      "legal-at": "https://w3id.org/dpv/legal/at#",
+      "legal-be": "https://w3id.org/dpv/legal/be#",
+      "legal-bg": "https://w3id.org/dpv/legal/bg#",
+      "legal-cy": "https://w3id.org/dpv/legal/cy#",
+      "legal-cz": "https://w3id.org/dpv/legal/cz#",
+      "legal-de": "https://w3id.org/dpv/legal/de#",
+      "legal-dk": "https://w3id.org/dpv/legal/dk#",
+      "legal-ee": "https://w3id.org/dpv/legal/ee#",
+      "legal-es": "https://w3id.org/dpv/legal/es#",
+      "legal-eu": "https://w3id.org/dpv/legal/eu#",
+      "legal-fi": "https://w3id.org/dpv/legal/fi#",
+      "legal-fr": "https://w3id.org/dpv/legal/fr#",
+      "legal-gb": "https://w3id.org/dpv/legal/gb#",
+      "legal-gr": "https://w3id.org/dpv/legal/gr#",
+      "legal-hk": "https://w3id.org/dpv/legal/hk#",
+      "legal-hr": "https://w3id.org/dpv/legal/hr#",
+      "legal-hu": "https://w3id.org/dpv/legal/hu#",
+      "legal-ie": "https://w3id.org/dpv/legal/ie#",
+      "legal-in": "https://w3id.org/dpv/legal/in#",
+      "legal-is": "https://w3id.org/dpv/legal/is#",
+      "legal-it": "https://w3id.org/dpv/legal/it#",
+      "legal-jp": "https://w3id.org/dpv/legal/jp#",
+      "legal-kr": "https://w3id.org/dpv/legal/kr#",
+      "legal-li": "https://w3id.org/dpv/legal/li#",
+      "legal-lt": "https://w3id.org/dpv/legal/lt#",
+      "legal-lu": "https://w3id.org/dpv/legal/lu#",
+      "legal-lv": "https://w3id.org/dpv/legal/lv#",
+      "legal-mo": "https://w3id.org/dpv/legal/mo#",
+      "legal-mt": "https://w3id.org/dpv/legal/mt#",
+      "legal-my": "https://w3id.org/dpv/legal/my#",
+      "legal-nl": "https://w3id.org/dpv/legal/nl#",
+      "legal-no": "https://w3id.org/dpv/legal/no#",
+      "legal-ph": "https://w3id.org/dpv/legal/ph#",
+      "legal-pl": "https://w3id.org/dpv/legal/pl#",
+      "legal-pt": "https://w3id.org/dpv/legal/pt#",
+      "legal-ro": "https://w3id.org/dpv/legal/ro#",
+      "legal-se": "https://w3id.org/dpv/legal/se#",
+      "legal-sg": "https://w3id.org/dpv/legal/sg#",
+      "legal-si": "https://w3id.org/dpv/legal/si#",
+      "legal-sk": "https://w3id.org/dpv/legal/sk#",
+      "legal-th": "https://w3id.org/dpv/legal/th#",
+      "legal-tw": "https://w3id.org/dpv/legal/tw#",
+      "legal-us": "https://w3id.org/dpv/legal/us#",
       "linkml": "https://w3id.org/linkml/",
-      "nist_ai_rmf": "https://w3id.org/lmodel/nist-ai-rmf/",
-      "nist_csf_v2": "https://w3id.org/lmodel/nist-csf-v2/",
-      "ocsf": "https://w3id.org/lmodel/ocsf/",
+      "loc": "https://w3id.org/dpv/loc#",
+      "nace": "http://data.europa.eu/ux2/nace2.1/",
+      "odrl": "http://www.w3.org/ns/odrl/2/",
       "org": "http://www.w3.org/ns/org#",
-      "oscal": "https://w3id.org/lmodel/oscal/",
       "owl": "http://www.w3.org/2002/07/owl#",
+      "pd": "https://w3id.org/dpv/pd#",
       "prof": "http://www.w3.org/ns/dx/prof/",
+      "profile": "http://www.w3.org/ns/dx/prof/",
+      "prov": "http://www.w3.org/ns/prov#",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "schema": "http://schema.org/",
-      "shex": "http://www.w3.org/ns/shex#",
+      "risk": "https://w3id.org/dpv/risk#",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "scoro": "http://purl.org/spar/scoro/",
+      "sdo": "https://schema.org/",
+      "sector": "https://w3id.org/dpv/sector#",
+      "sector-education": "https://w3id.org/dpv/sector/education#",
+      "sector-finance": "https://w3id.org/dpv/sector/finance#",
+      "sector-health": "https://w3id.org/dpv/sector/health#",
+      "sector-infra": "https://w3id.org/dpv/sector/infra#",
+      "sector-law": "https://w3id.org/dpv/sector/law#",
+      "sector-publicservices": "https://w3id.org/dpv/sector/publicservices#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
+      "spl": "https://specialprivacy.ercim.eu/langs/usage-policy#",
       "svd": "https://specialprivacy.ercim.eu/vocabs/data#",
       "svpr": "https://specialprivacy.ercim.eu/vocabs/processing#",
       "svpu": "https://specialprivacy.ercim.eu/vocabs/purposes#",
-      "usage_policy": "https://specialprivacy.ercim.eu/langs/usage-policy#",
+      "sw": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+      "tech": "https://w3id.org/dpv/tech#",
+      "time": "http://www.w3.org/2006/time#",
+      "vann": "http://purl.org/vocab/vann/",
       "@vocab": "https://w3id.org/lmodel/dpv/",
-      "has_active_entity": {
-         "@id": "has_active_entity"
+      "accessRights": {
+         "@type": "@id",
+         "@id": "dcterms:accessRights"
       },
-      "has_activity_status": {
-         "@id": "has_activity_status"
+      "ai_hasCapability": {
+         "@type": "@id",
+         "@id": "ai:hasCapability"
       },
-      "has_address": {
-         "@id": "has_address"
+      "ai_hasData": {
+         "@type": "@id",
+         "@id": "ai:hasData"
       },
-      "has_algorithmic_logic": {
-         "@id": "has_algorithmic_logic"
+      "ai_hasModel": {
+         "@type": "@id",
+         "@id": "ai:hasModel"
       },
-      "has_applicability": {
-         "@id": "has_applicability"
+      "avoids": {
+         "@type": "@id",
+         "@id": "risk:avoids"
       },
-      "has_applicable_law": {
-         "@id": "has_applicable_law"
+      "bibliographicCitation": {
+         "@id": "dcterms:bibliographicCitation"
       },
-      "has_assessment": {
-         "@id": "has_assessment"
+      "bibo_status": {
+         "@id": "bibo:status"
       },
-      "has_audit_status": {
-         "@id": "has_audit_status"
+      "broader": {
+         "@type": "@id",
+         "@id": "skos:broader"
       },
-      "has_authority": {
-         "@id": "has_authority"
+      "causedByThreat": {
+         "@type": "@id",
+         "@id": "risk:causedByThreat"
       },
-      "has_automation_level": {
-         "@id": "has_automation_level"
+      "causedByVulnerability": {
+         "@type": "@id",
+         "@id": "risk:causedByVulnerability"
       },
-      "has_compliance_status": {
-         "@id": "has_compliance_status"
+      "concepts": {
+         "@type": "@id",
+         "@id": "concepts"
       },
-      "has_conformance_status": {
-         "@id": "has_conformance_status"
+      "conformsTo": {
+         "@id": "dcterms:conformsTo"
       },
-      "has_consent_control": {
-         "@id": "has_consent_control"
+      "contains": {
+         "@type": "@id",
+         "@id": "risk:contains"
       },
-      "has_consent_status": {
-         "@id": "has_consent_status"
+      "contributor": {
+         "@type": "@id",
+         "@id": "dcterms:contributor"
       },
-      "has_consequence": {
-         "@id": "has_consequence"
+      "controls": {
+         "@type": "@id",
+         "@id": "risk:controls"
       },
-      "has_consequence_on": {
-         "@id": "has_consequence_on"
+      "coverage": {
+         "@type": "@id",
+         "@id": "dcterms:coverage"
       },
-      "has_contact": {
-         "@id": "has_contact"
+      "created": {
+         "@type": "xsd:date",
+         "@id": "dcterms:created"
       },
-      "has_context": {
-         "@id": "has_context"
+      "creator": {
+         "@type": "@id",
+         "@id": "dcterms:creator"
       },
-      "has_contract_control": {
-         "@id": "has_contract_control"
+      "datatype": {
+         "@type": "xsd:anyURI",
+         "@id": "datatype"
       },
-      "has_contract_status": {
-         "@id": "has_contract_status"
+      "dateAccepted": {
+         "@id": "dcterms:dateAccepted"
       },
-      "has_contractual_clause": {
-         "@id": "has_contractual_clause"
+      "dateSubmitted": {
+         "@id": "dcterms:dateSubmitted"
       },
-      "has_contractual_fulfilment_status": {
-         "@id": "has_contractual_fulfilment_status"
+      "de_gdng_hasDataHolder": {
+         "@type": "@id",
+         "@id": "de-gdng:hasDataHolder"
       },
-      "has_country": {
-         "@id": "has_country"
+      "definition": {
+         "@id": "skos:definition"
       },
-      "has_data": {
-         "@id": "has_data"
+      "definition_de": {
+         "@id": "skos:definition"
       },
-      "has_data_controller": {
-         "@id": "has_data_controller"
+      "description": {
+         "@id": "dcterms:description"
       },
-      "has_data_exporter": {
-         "@id": "has_data_exporter"
+      "detects": {
+         "@type": "@id",
+         "@id": "risk:detects"
       },
-      "has_data_importer": {
-         "@id": "has_data_importer"
+      "doi": {
+         "@id": "bibo:doi"
       },
-      "has_data_processor": {
-         "@id": "has_data_processor"
-      },
-      "has_data_protection_officer": {
-         "@id": "has_data_protection_officer"
-      },
-      "has_data_source": {
-         "@id": "has_data_source"
-      },
-      "has_data_subject": {
-         "@id": "has_data_subject"
-      },
-      "has_data_subject_scale": {
-         "@id": "has_data_subject_scale"
-      },
-      "has_data_volume": {
-         "@id": "has_data_volume"
-      },
-      "has_deterrence": {
-         "@id": "has_deterrence"
-      },
-      "has_duration": {
-         "@id": "has_duration"
-      },
-      "has_entity": {
-         "@id": "has_entity"
-      },
-      "has_entity_control": {
-         "@id": "has_entity_control"
-      },
-      "has_entity_involvement": {
-         "@id": "has_entity_involvement"
-      },
-      "has_expectation": {
-         "@id": "has_expectation"
-      },
-      "has_fee": {
-         "@id": "has_fee"
-      },
-      "has_frequency": {
-         "@id": "has_frequency"
-      },
-      "has_fulfilment_status": {
-         "@id": "has_fulfilment_status"
-      },
-      "has_geographic_coverage": {
-         "@id": "has_geographic_coverage"
-      },
-      "has_human_involvement": {
-         "@id": "has_human_involvement"
-      },
-      "has_human_subject": {
-         "@id": "has_human_subject"
-      },
-      "has_identifier": {
-         "@id": "has_identifier"
-      },
-      "has_impact": {
-         "@id": "has_impact"
-      },
-      "has_impact_assessment": {
-         "@id": "has_impact_assessment"
-      },
-      "has_impact_on": {
-         "@id": "has_impact_on"
-      },
-      "has_importance": {
-         "@id": "has_importance"
-      },
-      "has_indication_method": {
-         "@id": "has_indication_method"
-      },
-      "has_informed_status": {
-         "@id": "has_informed_status"
-      },
-      "has_intention": {
-         "@id": "has_intention"
-      },
-      "has_inverse_jurisdiction": {
-         "@id": "has_inverse_jurisdiction"
-      },
-      "has_involvement": {
-         "@id": "has_involvement"
-      },
-      "has_joint_data_controllers": {
-         "@id": "has_joint_data_controllers"
-      },
-      "has_jurisdiction": {
-         "@id": "has_jurisdiction"
-      },
-      "has_justification": {
-         "@id": "has_justification"
-      },
-      "has_lawfulness": {
-         "@id": "has_lawfulness"
-      },
-      "has_legal_basis": {
-         "@id": "has_legal_basis"
-      },
-      "has_legal_measure": {
-         "@id": "has_legal_measure"
-      },
-      "has_likelihood": {
-         "@id": "has_likelihood"
-      },
-      "has_location": {
-         "@id": "has_location"
-      },
-      "has_name": {
-         "@id": "has_name"
-      },
-      "has_necessity": {
-         "@id": "has_necessity"
-      },
-      "has_non_involved_entity": {
-         "@id": "has_non_involved_entity"
-      },
-      "has_non_personal_data_process": {
-         "@id": "has_non_personal_data_process"
-      },
-      "has_notice": {
-         "@id": "has_notice"
-      },
-      "has_notice_icon": {
-         "@id": "has_notice_icon"
-      },
-      "has_notice_layer": {
-         "@id": "has_notice_layer"
-      },
-      "has_notice_status": {
-         "@id": "has_notice_status"
-      },
-      "has_notification_status": {
-         "@id": "has_notification_status"
-      },
-      "has_obligation": {
-         "@id": "has_obligation"
-      },
-      "has_organisational_measure": {
-         "@id": "has_organisational_measure"
-      },
-      "has_organisational_unit": {
-         "@id": "has_organisational_unit"
-      },
-      "has_outcome": {
-         "@id": "has_outcome"
-      },
-      "has_party": {
-         "@id": "has_party"
-      },
-      "has_passive_entity": {
-         "@id": "has_passive_entity"
-      },
-      "has_permission": {
-         "@id": "has_permission"
-      },
-      "has_personal_data": {
-         "@id": "has_personal_data"
-      },
-      "has_personal_data_handling": {
-         "@id": "has_personal_data_handling"
-      },
-      "has_personal_data_process": {
-         "@id": "has_personal_data_process"
-      },
-      "has_physical_measure": {
-         "@id": "has_physical_measure"
-      },
-      "has_policy": {
-         "@id": "has_policy"
-      },
-      "has_process": {
-         "@id": "has_process"
-      },
-      "has_processing": {
-         "@id": "has_processing"
-      },
-      "has_processing_condition": {
-         "@id": "has_processing_condition"
-      },
-      "has_processing_scale": {
-         "@id": "has_processing_scale"
-      },
-      "has_prohibition": {
-         "@id": "has_prohibition"
-      },
-      "has_purpose": {
-         "@id": "has_purpose"
-      },
-      "has_recipient": {
-         "@id": "has_recipient"
-      },
-      "has_recipient_data_controller": {
-         "@id": "has_recipient_data_controller"
-      },
-      "has_recipient_third_party": {
-         "@id": "has_recipient_third_party"
-      },
-      "has_recommendation": {
-         "@id": "has_recommendation"
-      },
-      "has_record_of_activity": {
-         "@id": "has_record_of_activity"
-      },
-      "has_relation_with_data_subject": {
-         "@id": "has_relation_with_data_subject"
-      },
-      "has_representative": {
-         "@id": "has_representative"
-      },
-      "has_request_status": {
-         "@id": "has_request_status"
-      },
-      "has_residual_risk": {
-         "@id": "has_residual_risk"
-      },
-      "has_responsible_entity": {
-         "@id": "has_responsible_entity"
-      },
-      "has_reuse_compatibility": {
-         "@id": "has_reuse_compatibility"
-      },
-      "has_right": {
-         "@id": "has_right"
-      },
-      "has_risk": {
-         "@id": "has_risk"
-      },
-      "has_risk_assessment": {
-         "@id": "has_risk_assessment"
-      },
-      "has_risk_level": {
-         "@id": "has_risk_level"
-      },
-      "has_rule": {
-         "@id": "has_rule"
-      },
-      "has_scale": {
-         "@id": "has_scale"
-      },
-      "has_scope": {
-         "@id": "has_scope"
-      },
-      "has_sector": {
-         "@id": "has_sector"
-      },
-      "has_sensitivity_level": {
-         "@id": "has_sensitivity_level"
-      },
-      "has_service": {
-         "@id": "has_service"
-      },
-      "has_service_consumer": {
-         "@id": "has_service_consumer"
-      },
-      "has_service_provider": {
-         "@id": "has_service_provider"
-      },
-      "has_severity": {
-         "@id": "has_severity"
-      },
-      "has_status": {
-         "@id": "has_status"
-      },
-      "has_storage_condition": {
-         "@id": "has_storage_condition"
-      },
-      "has_subsidiary": {
-         "@id": "has_subsidiary"
-      },
-      "has_technical_measure": {
-         "@id": "has_technical_measure"
-      },
-      "has_technical_organisational_measure": {
-         "@id": "has_technical_organisational_measure"
-      },
-      "has_third_country": {
-         "@id": "has_third_country"
-      },
-      "has_third_party": {
-         "@id": "has_third_party"
-      },
-      "has_uncategorised_data": {
-         "@id": "has_uncategorised_data"
-      },
-      "has_unstructured_data": {
-         "@id": "has_unstructured_data"
+      "domainIncludes": {
+         "@type": "@id",
+         "@id": "dcam:domainIncludes"
+      },
+      "hasORCID": {
+         "@id": "scoro:hasORCID"
       },
       "id": "@id",
-      "is_after": {
-         "@id": "is_after"
+      "agents": {
+         "@type": "@id",
+         "@id": "agents"
       },
-      "is_applicable_for": {
-         "@id": "is_applicable_for"
+      "concept_schemes": {
+         "@type": "@id",
+         "@id": "concept_schemes"
       },
-      "is_authority_for": {
-         "@id": "is_authority_for"
+      "edition": {
+         "@id": "dcterms:isVersionOf"
       },
-      "is_before": {
-         "@id": "is_before"
+      "examples": {
+         "@type": "@id",
+         "@id": "examples"
       },
-      "is_determined_by_entity": {
-         "@id": "is_determined_by_entity"
+      "family": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "family"
       },
-      "is_during": {
-         "@id": "is_during"
+      "properties": {
+         "@type": "@id",
+         "@id": "properties"
       },
-      "is_exercised_at": {
-         "@id": "is_exercised_at"
+      "vocabularies": {
+         "@type": "@id",
+         "@id": "vocabularies"
       },
-      "is_implemented_by_entity": {
-         "@id": "is_implemented_by_entity"
+      "resources": {
+         "@type": "@id",
+         "@id": "resources"
       },
-      "is_implemented_using_technology": {
-         "@id": "is_implemented_using_technology"
+      "turtle_fault": {
+         "@id": "turtle_fault"
       },
-      "is_indicated_at_time": {
-         "@id": "is_indicated_at_time"
+      "hasBeginning": {
+         "@type": "xsd:date",
+         "@id": "time:hasBeginning"
       },
-      "is_indicated_by": {
-         "@id": "is_indicated_by"
+      "hasEnd": {
+         "@type": "xsd:date",
+         "@id": "time:hasEnd"
       },
-      "is_mitigated_by_measure": {
-         "@id": "is_mitigated_by_measure"
+      "language": {
+         "@id": "language"
       },
-      "is_not_applicable_for": {
-         "@id": "is_not_applicable_for"
+      "literal": {
+         "@id": "rdf:value"
       },
-      "is_organisational_unit_of": {
-         "@id": "is_organisational_unit_of"
+      "predicate": {
+         "@type": "xsd:anyURI",
+         "@id": "rdf:predicate"
       },
-      "is_outside_of_location": {
-         "@id": "is_outside_of_location"
+      "reference": {
+         "@type": "xsd:anyURI",
+         "@id": "rdf:object"
       },
-      "is_policy_for": {
-         "@id": "is_policy_for"
+      "page_name": {
+         "@id": "sdo:name"
       },
-      "is_representative_for": {
-         "@id": "is_representative_for"
+      "eliminates": {
+         "@type": "@id",
+         "@id": "risk:eliminates"
       },
-      "is_residual_risk_of": {
-         "@id": "is_residual_risk_of"
+      "eu_aiact_hasRiskLevel": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasRiskLevel"
       },
-      "is_subsidiary_of": {
-         "@id": "is_subsidiary_of"
+      "eu_dga_hasDataHolder": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataHolder"
       },
-      "mitigates_risk": {
-         "@id": "mitigates_risk"
+      "exactMatch": {
+         "@type": "xsd:anyURI",
+         "@id": "skos:exactMatch"
       },
-      "supports_compliance_with": {
-         "@id": "supports_compliance_with"
+      "example": {
+         "@type": "@id",
+         "@id": "vann:example"
       },
-      "AcademicResearch": {
-         "@id": "AcademicResearch"
+      "exploitsVulnerability": {
+         "@type": "@id",
+         "@id": "risk:exploitsVulnerability"
       },
-      "AcademicScientificOrganisation": {
-         "@id": "AcademicScientificOrganisation"
+      "format": {
+         "@id": "dcterms:format"
       },
-      "AcceptableRule": {
-         "@id": "AcceptableRule"
+      "hasActiveEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasActiveEntity"
       },
-      "AcceptableUsePolicy": {
-         "@id": "AcceptableUsePolicy"
+      "hasActivityStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasActivityStatus"
       },
-      "AcceptContract": {
-         "@id": "AcceptContract"
+      "hasActor": {
+         "@type": "@id",
+         "@id": "tech:hasActor"
       },
-      "Access": {
-         "@id": "Access"
+      "hasAddress": {
+         "@id": "dpv:hasAddress"
       },
-      "AccessControlMethod": {
-         "@id": "AccessControlMethod"
+      "hasAgent": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgent"
       },
-      "AccountManagement": {
-         "@id": "AccountManagement"
+      "hasAgentBehaviour": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgentBehaviour"
       },
-      "Acquire": {
-         "@id": "Acquire"
+      "hasAgreement": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreement"
       },
-      "ActivelyInvolved": {
-         "@id": "ActivelyInvolved"
+      "hasAgreementPreference": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreementPreference"
       },
-      "ActiveRight": {
-         "@id": "ActiveRight"
+      "hasAgreementRegistry": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreementRegistry"
       },
-      "ActivityCompleted": {
-         "@id": "ActivityCompleted"
+      "hasAI": {
+         "@type": "@id",
+         "@id": "ai:hasAI"
       },
-      "ActivityHalted": {
-         "@id": "ActivityHalted"
+      "hasAISystem": {
+         "@type": "@id",
+         "@id": "ai:hasAISystem"
       },
-      "ActivityMonitoring": {
-         "@id": "ActivityMonitoring"
+      "hasAlgorithm": {
+         "@type": "@id",
+         "@id": "tech:hasAlgorithm"
       },
-      "ActivityNotCompleted": {
-         "@id": "ActivityNotCompleted"
+      "hasAlgorithmicLogic": {
+         "@type": "@id",
+         "@id": "dpv:hasAlgorithmicLogic"
       },
-      "ActivityOngoing": {
-         "@id": "ActivityOngoing"
+      "hasAPI": {
+         "@type": "@id",
+         "@id": "tech:hasAPI"
       },
-      "ActivityPlanned": {
-         "@id": "ActivityPlanned"
+      "hasApplicability": {
+         "@type": "@id",
+         "@id": "dpv:hasApplicability"
       },
-      "ActivityProposed": {
-         "@id": "ActivityProposed"
+      "hasApplicableLaw": {
+         "@type": "@id",
+         "@id": "dpv:hasApplicableLaw"
       },
-      "ActivityStatus": {
-         "@id": "ActivityStatus"
+      "hasApplication": {
+         "@type": "@id",
+         "@id": "tech:hasApplication"
       },
-      "Adapt": {
-         "@id": "Adapt"
+      "hasAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasAssessment"
       },
-      "Adult": {
-         "@id": "Adult"
+      "hasAuditor": {
+         "@type": "@id",
+         "@id": "tech:hasAuditor"
       },
-      "Advertising": {
-         "@id": "Advertising"
+      "hasAuditStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasAuditStatus"
       },
-      "AgeVerification": {
-         "@id": "AgeVerification"
+      "hasAuthority": {
+         "@type": "@id",
+         "@id": "dpv:hasAuthority"
       },
-      "Aggregate": {
-         "@id": "Aggregate"
+      "hasAutomationLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasAutomationLevel"
       },
-      "AIGovernance": {
-         "@id": "AIGovernance"
+      "hasChangeCategory": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasChangeCategory"
       },
-      "AILiteracy": {
-         "@id": "AILiteracy"
+      "hasChangeDescription": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasChangeDescription"
       },
-      "AINotice": {
-         "@id": "AINotice"
+      "hasCommunicationMechanism": {
+         "@type": "@id",
+         "@id": "tech:hasCommunicationMechanism"
       },
-      "AlgorithmicLogic": {
-         "@id": "AlgorithmicLogic"
+      "hasComplianceStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasComplianceStatus"
       },
-      "Align": {
-         "@id": "Align"
+      "hasComponent": {
+         "@type": "@id",
+         "@id": "tech:hasComponent"
       },
-      "Alter": {
-         "@id": "Alter"
+      "hasConcernedSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasConcernedSA"
       },
-      "AmbulanceProvider": {
-         "@id": "AmbulanceProvider"
+      "hasConflictResolution": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasConflictResolution"
       },
-      "Analyse": {
-         "@id": "Analyse"
+      "hasConformanceStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasConformanceStatus"
       },
-      "Anonymisation": {
-         "@id": "Anonymisation"
+      "hasConsentControl": {
+         "@type": "@id",
+         "@id": "dpv:hasConsentControl"
       },
-      "Anonymise": {
-         "@id": "Anonymise"
+      "hasConsentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasConsentStatus"
       },
-      "AnonymisedData": {
-         "@id": "AnonymisedData"
+      "hasConsequence": {
+         "@type": "@id",
+         "@id": "dpv:hasConsequence"
       },
-      "Applicability": {
-         "@id": "Applicability"
+      "hasConsequenceOn": {
+         "@type": "@id",
+         "@id": "dpv:hasConsequenceOn"
       },
-      "Applicant": {
-         "@id": "Applicant"
+      "hasContact": {
+         "@id": "dpv:hasContact"
       },
-      "ApprovalProcedure": {
-         "@id": "ApprovalProcedure"
+      "hasContext": {
+         "@type": "@id",
+         "@id": "dpv:hasContext"
       },
-      "Assess": {
-         "@id": "Assess"
+      "hasContractControl": {
+         "@type": "@id",
+         "@id": "dpv:hasContractControl"
       },
-      "Assessment": {
-         "@id": "Assessment"
+      "hasContractStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasContractStatus"
       },
-      "AssetManagementProcedures": {
-         "@id": "AssetManagementProcedures"
+      "hasContractualClause": {
+         "@type": "@id",
+         "@id": "dpv:hasContractualClause"
       },
-      "AssistiveAutomation": {
-         "@id": "AssistiveAutomation"
+      "hasContractualFulfilmentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasContractualFulfilmentStatus"
       },
-      "AsylumSeeker": {
-         "@id": "AsylumSeeker"
+      "hasControl": {
+         "@type": "@id",
+         "@id": "risk:hasControl"
       },
-      "AsymmetricCryptography": {
-         "@id": "AsymmetricCryptography"
+      "hasCountry": {
+         "@type": "@id",
+         "@id": "dpv:hasCountry"
       },
-      "AsymmetricEncryption": {
-         "@id": "AsymmetricEncryption"
+      "hasCustomer": {
+         "@type": "@id",
+         "@id": "tech:hasCustomer"
       },
-      "Audit": {
-         "@id": "Audit"
+      "hasDAO": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDAO"
       },
-      "AuditApproved": {
-         "@id": "AuditApproved"
+      "hasData": {
+         "@type": "@id",
+         "@id": "dpv:hasData"
       },
-      "AuditConditionallyApproved": {
-         "@id": "AuditConditionallyApproved"
+      "hasDataController": {
+         "@type": "@id",
+         "@id": "dpv:hasDataController"
       },
-      "AuditNotRequired": {
-         "@id": "AuditNotRequired"
+      "hasDataExporter": {
+         "@type": "@id",
+         "@id": "dpv:hasDataExporter"
       },
-      "AuditRejected": {
-         "@id": "AuditRejected"
+      "hasDataImporter": {
+         "@type": "@id",
+         "@id": "dpv:hasDataImporter"
       },
-      "AuditRequested": {
-         "@id": "AuditRequested"
+      "hasDataProcessor": {
+         "@type": "@id",
+         "@id": "dpv:hasDataProcessor"
       },
-      "AuditRequired": {
-         "@id": "AuditRequired"
+      "hasDataProtectionOfficer": {
+         "@type": "@id",
+         "@id": "dpv:hasDataProtectionOfficer"
       },
-      "AuditStatus": {
-         "@id": "AuditStatus"
+      "hasDataReuseAssistant": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataReuseAssistant"
       },
-      "AuthenticationABC": {
-         "@id": "Authentication-ABC"
+      "hasDataSharingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasDataSharingTerm"
       },
-      "AuthenticationPABC": {
-         "@id": "Authentication-PABC"
+      "hasDataSource": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSource"
       },
-      "AuthenticationProtocols": {
-         "@id": "AuthenticationProtocols"
+      "hasDataSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSubject"
       },
-      "AuthorisationProcedure": {
-         "@id": "AuthorisationProcedure"
+      "hasDataSubjectScale": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSubjectScale"
       },
-      "AuthorisationProtocols": {
-         "@id": "AuthorisationProtocols"
+      "hasDataUser": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataUser"
       },
-      "AuthorityInformed": {
-         "@id": "AuthorityInformed"
+      "hasDataVolume": {
+         "@type": "@id",
+         "@id": "dpv:hasDataVolume"
       },
-      "AuthorityUninformed": {
-         "@id": "AuthorityUninformed"
+      "hasDeonticInterpretation": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasDeonticInterpretation"
       },
-      "AutomatedDecisionMaking": {
-         "@id": "AutomatedDecisionMaking"
+      "hasDeployer": {
+         "@type": "@id",
+         "@id": "tech:hasDeployer"
       },
-      "AutomatedScoringOfIndividuals": {
-         "@id": "AutomatedScoringOfIndividuals"
+      "hasDeploymentLocation": {
+         "@type": "@id",
+         "@id": "tech:hasDeploymentLocation"
       },
-      "AutomationLevel": {
-         "@id": "AutomationLevel"
+      "hasDesigner": {
+         "@type": "@id",
+         "@id": "tech:hasDesigner"
       },
-      "Autonomous": {
-         "@id": "Autonomous"
+      "hasDeterrence": {
+         "@type": "@id",
+         "@id": "dpv:hasDeterrence"
       },
-      "B2B2CContract": {
-         "@id": "B2B2CContract"
+      "hasDeveloper": {
+         "@type": "@id",
+         "@id": "tech:hasDeveloper"
       },
-      "B2BContract": {
-         "@id": "B2BContract"
+      "hasDevice": {
+         "@type": "@id",
+         "@id": "tech:hasDevice"
       },
-      "B2CContract": {
-         "@id": "B2CContract"
+      "hasDISP": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDISP"
       },
-      "BackgroundChecks": {
-         "@id": "BackgroundChecks"
+      "hasDocumentation": {
+         "@type": "@id",
+         "@id": "tech:hasDocumentation"
       },
-      "BiometricAuthentication": {
-         "@id": "BiometricAuthentication"
+      "hasDuration": {
+         "@type": "@id",
+         "@id": "dpv:hasDuration"
       },
-      "C2BContract": {
-         "@id": "C2BContract"
+      "hasEndpoint": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasEndpoint"
       },
-      "C2CContract": {
-         "@id": "C2CContract"
+      "hasEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasEntity"
       },
-      "CannotChallengeProcess": {
-         "@id": "CannotChallengeProcess"
+      "hasEntityControl": {
+         "@type": "@id",
+         "@id": "dpv:hasEntityControl"
       },
-      "CannotChallengeProcessInput": {
-         "@id": "CannotChallengeProcessInput"
+      "hasEntityInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasEntityInvolvement"
       },
-      "CannotChallengeProcessOutput": {
-         "@id": "CannotChallengeProcessOutput"
+      "hasEstablishment": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasEstablishment"
       },
-      "CannotCorrectProcess": {
-         "@id": "CannotCorrectProcess"
+      "hasEvaluator": {
+         "@type": "@id",
+         "@id": "tech:hasEvaluator"
       },
-      "CannotCorrectProcessInput": {
-         "@id": "CannotCorrectProcessInput"
+      "hasExpectation": {
+         "@type": "@id",
+         "@id": "dpv:hasExpectation"
       },
-      "CannotCorrectProcessOutput": {
-         "@id": "CannotCorrectProcessOutput"
+      "hasFee": {
+         "@type": "@id",
+         "@id": "dpv:hasFee"
       },
-      "CannotObjectToProcess": {
-         "@id": "CannotObjectToProcess"
+      "hasFirstParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasFirstParty"
       },
-      "CannotOptInToProcess": {
-         "@id": "CannotOptInToProcess"
+      "hasFrequency": {
+         "@type": "@id",
+         "@id": "dpv:hasFrequency"
       },
-      "CannotOptOutFromProcess": {
-         "@id": "CannotOptOutFromProcess"
+      "hasFulfilmentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasFulfilmentStatus"
       },
-      "CannotReverseProcessEffects": {
-         "@id": "CannotReverseProcessEffects"
+      "hasFunction": {
+         "@type": "@id",
+         "@id": "tech:hasFunction"
       },
-      "CannotReverseProcessInput": {
-         "@id": "CannotReverseProcessInput"
+      "hasGeographicCoverage": {
+         "@type": "@id",
+         "@id": "dpv:hasGeographicCoverage"
       },
-      "CannotReverseProcessOutput": {
-         "@id": "CannotReverseProcessOutput"
+      "hasGPAIModel": {
+         "@type": "@id",
+         "@id": "ai:hasGPAIModel"
       },
-      "CannotWithdrawFromProcess": {
-         "@id": "CannotWithdrawFromProcess"
+      "hasHardware": {
+         "@type": "@id",
+         "@id": "tech:hasHardware"
       },
-      "Certification": {
-         "@id": "Certification"
+      "hasHumanDescription": {
+         "@id": "ieee-7012:hasHumanDescription"
       },
-      "CertificationSeal": {
-         "@id": "CertificationSeal"
+      "hasHumanInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasHumanInvolvement"
       },
-      "ChallengingProcess": {
-         "@id": "ChallengingProcess"
+      "hasHumanReadableFormat": {
+         "@id": "ieee-7012:hasHumanReadableFormat"
       },
-      "ChallengingProcessInput": {
-         "@id": "ChallengingProcessInput"
+      "hasHumanSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasHumanSubject"
       },
-      "ChallengingProcessOutput": {
-         "@id": "ChallengingProcessOutput"
+      "hasIdentifier": {
+         "@id": "dpv:hasIdentifier"
       },
-      "CharityOrganisation": {
-         "@id": "CharityOrganisation"
+      "hasImpact": {
+         "@type": "@id",
+         "@id": "dpv:hasImpact"
       },
-      "Child": {
-         "@id": "Child"
+      "hasImpactAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasImpactAssessment"
       },
-      "Citizen": {
-         "@id": "Citizen"
+      "hasImpactOn": {
+         "@type": "@id",
+         "@id": "dpv:hasImpactOn"
       },
-      "City": {
-         "@id": "City"
+      "hasImportance": {
+         "@type": "@id",
+         "@id": "dpv:hasImportance"
       },
-      "Client": {
-         "@id": "Client"
+      "hasIncident": {
+         "@type": "@id",
+         "@id": "risk:hasIncident"
       },
-      "Clinic": {
-         "@id": "Clinic"
+      "hasIndicationMethod": {
+         "@type": "@id",
+         "@id": "dpv:hasIndicationMethod"
       },
-      "CloudLocation": {
-         "@id": "CloudLocation"
+      "hasInformedStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasInformedStatus"
       },
-      "CodeOfConduct": {
-         "@id": "CodeOfConduct"
+      "hasInfrastructure": {
+         "@type": "@id",
+         "@id": "tech:hasInfrastructure"
       },
-      "Collect": {
-         "@id": "Collect"
+      "hasInput": {
+         "@type": "@id",
+         "@id": "tech:hasInput"
       },
-      "CollectedData": {
-         "@id": "CollectedData"
+      "hasInputAction": {
+         "@type": "@id",
+         "@id": "tech:hasInputAction"
       },
-      "CollectedPersonalData": {
-         "@id": "CollectedPersonalData"
+      "hasInputData": {
+         "@type": "@id",
+         "@id": "tech:hasInputData"
       },
-      "CombatClimateChange": {
-         "@id": "CombatClimateChange"
+      "hasInstaller": {
+         "@type": "@id",
+         "@id": "tech:hasInstaller"
       },
-      "Combine": {
-         "@id": "Combine"
+      "hasIntendedUse": {
+         "@type": "@id",
+         "@id": "tech:hasIntendedUse"
       },
-      "CommerciallyConfidentialData": {
-         "@id": "CommerciallyConfidentialData"
+      "hasIntention": {
+         "@type": "@id",
+         "@id": "dpv:hasIntention"
       },
-      "CommercialPurpose": {
-         "@id": "CommercialPurpose"
+      "hasInverseJurisdiction": {
+         "@type": "@id",
+         "@id": "dpv:hasInverseJurisdiction"
       },
-      "CommercialResearch": {
-         "@id": "CommercialResearch"
+      "hasInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasInvolvement"
       },
-      "CommunicationForCustomerCare": {
-         "@id": "CommunicationForCustomerCare"
+      "hasJointDataControllers": {
+         "@type": "@id",
+         "@id": "dpv:hasJointDataControllers"
       },
-      "CommunicationManagement": {
-         "@id": "CommunicationManagement"
+      "hasJurisdiction": {
+         "@type": "@id",
+         "@id": "dpv:hasJurisdiction"
       },
-      "CompatibilityUnknown": {
-         "@id": "CompatibilityUnknown"
+      "hasJustification": {
+         "@type": "@id",
+         "@id": "dpv:hasJustification"
       },
-      "ComplianceAssessment": {
-         "@id": "ComplianceAssessment"
+      "hasLawfulness": {
+         "@type": "@id",
+         "@id": "dpv:hasLawfulness"
       },
-      "ComplianceIndeterminate": {
-         "@id": "ComplianceIndeterminate"
+      "hasLeadSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasLeadSA"
       },
-      "ComplianceMonitoring": {
-         "@id": "ComplianceMonitoring"
+      "hasLegalBasis": {
+         "@type": "@id",
+         "@id": "dpv:hasLegalBasis"
       },
-      "ComplianceStatus": {
-         "@id": "ComplianceStatus"
+      "hasLegalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasLegalMeasure"
       },
-      "ComplianceUnknown": {
-         "@id": "ComplianceUnknown"
+      "hasLicense": {
+         "@type": "@id",
+         "@id": "tech:hasLicense"
       },
-      "ComplianceViolation": {
-         "@id": "ComplianceViolation"
+      "hasLifecycleStage": {
+         "@type": "@id",
+         "@id": "tech:hasLifecycleStage"
       },
-      "Compliant": {
-         "@id": "Compliant"
+      "hasLikelihood": {
+         "@type": "@id",
+         "@id": "dpv:hasLikelihood"
       },
-      "ConditionalAutomation": {
-         "@id": "ConditionalAutomation"
+      "hasLocalSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasLocalSA"
       },
-      "ConfidentialData": {
-         "@id": "ConfidentialData"
+      "hasLocation": {
+         "@type": "@id",
+         "@id": "dpv:hasLocation"
       },
-      "ConfidentialityAgreement": {
-         "@id": "ConfidentialityAgreement"
+      "hasMachineReadableFormat": {
+         "@id": "ieee-7012:hasMachineReadableFormat"
       },
-      "ConformanceAssessment": {
-         "@id": "ConformanceAssessment"
+      "hasMainEstablishment": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasMainEstablishment"
       },
-      "ConformanceStatus": {
-         "@id": "ConformanceStatus"
+      "hasMaintainer": {
+         "@type": "@id",
+         "@id": "tech:hasMaintainer"
       },
-      "Conformant": {
-         "@id": "Conformant"
+      "hasManufacturer": {
+         "@type": "@id",
+         "@id": "tech:hasManufacturer"
       },
-      "Consent": {
-         "@id": "Consent"
+      "hasMarketAvailabilityStatus": {
+         "@type": "@id",
+         "@id": "tech:hasMarketAvailabilityStatus"
       },
-      "ConsentControl": {
-         "@id": "ConsentControl"
+      "hasName": {
+         "@id": "dpv:hasName"
       },
-      "ConsentExpired": {
-         "@id": "ConsentExpired"
+      "hasNecessity": {
+         "@type": "@id",
+         "@id": "dpv:hasNecessity"
       },
-      "ConsentGiven": {
-         "@id": "ConsentGiven"
+      "hasNonInvolvedEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasNonInvolvedEntity"
       },
-      "ConsentInvalidated": {
-         "@id": "ConsentInvalidated"
+      "hasNonPersonalDataProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasNonPersonalDataProcess"
       },
-      "ConsentManagement": {
-         "@id": "ConsentManagement"
+      "hasNotice": {
+         "@type": "@id",
+         "@id": "dpv:hasNotice"
       },
-      "ConsentNotice": {
-         "@id": "ConsentNotice"
+      "hasNoticeIcon": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeIcon"
       },
-      "ConsentReceipt": {
-         "@id": "ConsentReceipt"
+      "hasNoticeLayer": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeLayer"
       },
-      "ConsentRecord": {
-         "@id": "ConsentRecord"
+      "hasNoticeStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeStatus"
       },
-      "ConsentRefused": {
-         "@id": "ConsentRefused"
+      "hasNotificationStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasNotificationStatus"
       },
-      "ConsentRequestDeferred": {
-         "@id": "ConsentRequestDeferred"
+      "hasObligation": {
+         "@type": "@id",
+         "@id": "dpv:hasObligation"
       },
-      "ConsentRequested": {
-         "@id": "ConsentRequested"
+      "hasOperatingEnvironment": {
+         "@type": "@id",
+         "@id": "tech:hasOperatingEnvironment"
       },
-      "ConsentRevoked": {
-         "@id": "ConsentRevoked"
+      "hasOperatingFactor": {
+         "@type": "@id",
+         "@id": "tech:hasOperatingFactor"
       },
-      "ConsentStatus": {
-         "@id": "ConsentStatus"
+      "hasOrganisationalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasOrganisationalMeasure"
       },
-      "ConsentStatusInvalidForProcessing": {
-         "@id": "ConsentStatusInvalidForProcessing"
+      "hasOrganisationalUnit": {
+         "@type": "@id",
+         "@id": "dpv:hasOrganisationalUnit"
       },
-      "ConsentStatusValidForProcessing": {
-         "@id": "ConsentStatusValidForProcessing"
+      "hasOutcome": {
+         "@type": "@id",
+         "@id": "dpv:hasOutcome"
       },
-      "ConsentUnknown": {
-         "@id": "ConsentUnknown"
+      "hasOutput": {
+         "@type": "@id",
+         "@id": "tech:hasOutput"
       },
-      "ConsentWithdrawn": {
-         "@id": "ConsentWithdrawn"
+      "hasOutputAction": {
+         "@type": "@id",
+         "@id": "tech:hasOutputAction"
       },
-      "Consequence": {
-         "@id": "Consequence"
+      "hasOutputData": {
+         "@type": "@id",
+         "@id": "tech:hasOutputData"
       },
-      "ConsequenceAsSideEffect": {
-         "@id": "ConsequenceAsSideEffect"
+      "hasOwner": {
+         "@type": "@id",
+         "@id": "tech:hasOwner"
       },
-      "ConsequenceOfFailure": {
-         "@id": "ConsequenceOfFailure"
+      "hasPart": {
+         "@type": "@id",
+         "@id": "dcterms:hasPart"
       },
-      "ConsequenceOfSuccess": {
-         "@id": "ConsequenceOfSuccess"
+      "hasPartner": {
+         "@type": "@id",
+         "@id": "tech:hasPartner"
       },
-      "Consult": {
-         "@id": "Consult"
+      "hasParty": {
+         "@type": "@id",
+         "@id": "dpv:hasParty"
       },
-      "Consultation": {
-         "@id": "Consultation"
+      "hasPassiveEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasPassiveEntity"
       },
-      "ConsultationWithAuthority": {
-         "@id": "ConsultationWithAuthority"
+      "hasPermission": {
+         "@type": "@id",
+         "@id": "dpv:hasPermission"
       },
-      "ConsultationWithDataSubject": {
-         "@id": "ConsultationWithDataSubject"
+      "hasPersonalData": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalData"
       },
-      "ConsultationWithDataSubjectRepresentative": {
-         "@id": "ConsultationWithDataSubjectRepresentative"
+      "hasPersonalDataHandling": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalDataHandling"
       },
-      "ConsultationWithDPO": {
-         "@id": "ConsultationWithDPO"
+      "hasPersonalDataProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalDataProcess"
       },
-      "ConsumerStandardFormContract": {
-         "@id": "ConsumerStandardFormContract"
+      "hasPhysicalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasPhysicalMeasure"
       },
-      "Context": {
-         "@id": "Context"
+      "hasPlatform": {
+         "@type": "@id",
+         "@id": "tech:hasPlatform"
       },
-      "ContextuallyAnonymisedData": {
-         "@id": "ContextuallyAnonymisedData"
+      "hasPolicy": {
+         "@type": "@id",
+         "@id": "dpv:hasPolicy"
       },
-      "ContinuousFrequency": {
-         "@id": "ContinuousFrequency"
+      "hasPortabilityTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasPortabilityTerm"
       },
-      "Contract": {
-         "@id": "Contract"
+      "hasPreferenceApplicability": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasPreferenceApplicability"
       },
-      "ContractActivationStatus": {
-         "@id": "ContractActivationStatus"
+      "hasProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasProcess"
       },
-      "ContractActive": {
-         "@id": "ContractActive"
+      "hasProcessing": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessing"
       },
-      "ContractAmended": {
-         "@id": "ContractAmended"
+      "hasProcessingCondition": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessingCondition"
       },
-      "ContractAmendmentClause": {
-         "@id": "ContractAmendmentClause"
+      "hasProcessingScale": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessingScale"
       },
-      "ContractApproved": {
-         "@id": "ContractApproved"
+      "hasProducer": {
+         "@type": "@id",
+         "@id": "tech:hasProducer"
       },
-      "ContractBeingPerformed": {
-         "@id": "ContractBeingPerformed"
+      "hasProfilingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasProfilingTerm"
       },
-      "ContractBreached": {
-         "@id": "ContractBreached"
+      "hasProhibition": {
+         "@type": "@id",
+         "@id": "dpv:hasProhibition"
       },
-      "ContractByDomain": {
-         "@id": "ContractByDomain"
+      "hasProvider": {
+         "@type": "@id",
+         "@id": "tech:hasProvider"
       },
-      "ContractByEntityType": {
-         "@id": "ContractByEntityType"
+      "hasProvisionMethod": {
+         "@type": "@id",
+         "@id": "tech:hasProvisionMethod"
       },
-      "ContractByNegotiationType": {
-         "@id": "ContractByNegotiationType"
+      "hasProvisionStatus": {
+         "@type": "@id",
+         "@id": "tech:hasProvisionStatus"
       },
-      "ContractConfidentialityClause": {
-         "@id": "ContractConfidentialityClause"
+      "hasPurchaser": {
+         "@type": "@id",
+         "@id": "tech:hasPurchaser"
       },
-      "ContractControl": {
-         "@id": "ContractControl"
+      "hasPurpose": {
+         "@type": "@id",
+         "@id": "dpv:hasPurpose"
       },
-      "ContractDefinitions": {
-         "@id": "ContractDefinitions"
+      "hasRecipient": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipient"
       },
-      "ContractDisputed": {
-         "@id": "ContractDisputed"
+      "hasRecipientDataController": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipientDataController"
       },
-      "ContractDisputeResolutionClause": {
-         "@id": "ContractDisputeResolutionClause"
+      "hasRecipientThirdParty": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipientThirdParty"
       },
-      "ContractDrafted": {
-         "@id": "ContractDrafted"
+      "hasRecommendation": {
+         "@type": "@id",
+         "@id": "dpv:hasRecommendation"
       },
-      "ContractExecutionStatus": {
-         "@id": "ContractExecutionStatus"
+      "hasRecordOfActivity": {
+         "@type": "@id",
+         "@id": "dpv:hasRecordOfActivity"
       },
-      "ContractExpired": {
-         "@id": "ContractExpired"
+      "hasRelationWithDataSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasRelationWithDataSubject"
       },
-      "ContractExtended": {
-         "@id": "ContractExtended"
+      "hasRepresentative": {
+         "@type": "@id",
+         "@id": "dpv:hasRepresentative"
       },
-      "ContractFulfilled": {
-         "@id": "ContractFulfilled"
+      "hasRequestStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasRequestStatus"
       },
-      "ContractFulfilmentStatus": {
-         "@id": "ContractFulfilmentStatus"
+      "hasResidualRisk": {
+         "@type": "@id",
+         "@id": "dpv:hasResidualRisk"
       },
-      "ContractFullyExecuted": {
-         "@id": "ContractFullyExecuted"
+      "hasResponsibleEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasResponsibleEntity"
       },
-      "ContractFullySigned": {
-         "@id": "ContractFullySigned"
+      "hasReuseCompatibility": {
+         "@type": "@id",
+         "@id": "dpv:hasReuseCompatibility"
       },
-      "ContractInactive": {
-         "@id": "ContractInactive"
+      "hasRight": {
+         "@type": "@id",
+         "@id": "dpv:hasRight"
       },
-      "ContractJurisdictionClause": {
-         "@id": "ContractJurisdictionClause"
+      "hasRisk": {
+         "@type": "@id",
+         "@id": "dpv:hasRisk"
       },
-      "ContractNegotiated": {
-         "@id": "ContractNegotiated"
+      "hasRiskAcceptance": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAcceptance"
       },
-      "ContractNotFulfilled": {
-         "@id": "ContractNotFulfilled"
+      "hasRiskAnalysis": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAnalysis"
       },
-      "ContractOffered": {
-         "@id": "ContractOffered"
+      "hasRiskAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasRiskAssessment"
       },
-      "ContractPartiallyFulfilled": {
-         "@id": "ContractPartiallyFulfilled"
+      "hasRiskCriteria": {
+         "@type": "@id",
+         "@id": "risk:hasRiskCriteria"
       },
-      "ContractPartiallySigned": {
-         "@id": "ContractPartiallySigned"
+      "hasRiskEvaluation": {
+         "@type": "@id",
+         "@id": "risk:hasRiskEvaluation"
       },
-      "ContractPerformance": {
-         "@id": "ContractPerformance"
+      "hasRiskIdentification": {
+         "@type": "@id",
+         "@id": "risk:hasRiskIdentification"
       },
-      "ContractPerformanceStatus": {
-         "@id": "ContractPerformanceStatus"
+      "hasRiskLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasRiskLevel"
       },
-      "ContractPreamble": {
-         "@id": "ContractPreamble"
+      "hasRiskManagement": {
+         "@type": "@id",
+         "@id": "risk:hasRiskManagement"
       },
-      "ContractPreparationStatus": {
-         "@id": "ContractPreparationStatus"
+      "hasRiskOwner": {
+         "@type": "@id",
+         "@id": "risk:hasRiskOwner"
       },
-      "ContractRejected": {
-         "@id": "ContractRejected"
+      "hasRiskPerception": {
+         "@type": "@id",
+         "@id": "risk:hasRiskPerception"
       },
-      "ContractRenewed": {
-         "@id": "ContractRenewed"
+      "hasRiskSource": {
+         "@type": "@id",
+         "@id": "risk:hasRiskSource"
       },
-      "ContractSignedByParty": {
-         "@id": "ContractSignedByParty"
+      "hasRiskTreatment": {
+         "@type": "@id",
+         "@id": "risk:hasRiskTreatment"
       },
-      "ContractStatus": {
-         "@id": "ContractStatus"
+      "hasRule": {
+         "@type": "@id",
+         "@id": "dpv:hasRule"
       },
-      "ContractTemporarilySuspended": {
-         "@id": "ContractTemporarilySuspended"
+      "hasScale": {
+         "@type": "@id",
+         "@id": "dpv:hasScale"
       },
-      "ContractTerminated": {
-         "@id": "ContractTerminated"
+      "hasScope": {
+         "@type": "@id",
+         "@id": "dpv:hasScope"
       },
-      "ContractTerminationClause": {
-         "@id": "ContractTerminationClause"
+      "hasSecondParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasSecondParty"
       },
-      "ContractTerminationStatus": {
-         "@id": "ContractTerminationStatus"
+      "hasSector": {
+         "@type": "@id",
+         "@id": "dpv:hasSector"
       },
-      "ContractualClause": {
-         "@id": "ContractualClause"
+      "hasSensitivityLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasSensitivityLevel"
       },
-      "ContractualClauseFulfilled": {
-         "@id": "ContractualClauseFulfilled"
+      "hasService": {
+         "@type": "@id",
+         "@id": "dpv:hasService"
       },
-      "ContractualClauseFulfilmentStatus": {
-         "@id": "ContractualClauseFulfilmentStatus"
+      "hasServiceConsumer": {
+         "@type": "@id",
+         "@id": "dpv:hasServiceConsumer"
       },
-      "ContractualClauseNotFulfilled": {
-         "@id": "ContractualClauseNotFulfilled"
+      "hasServiceProvider": {
+         "@type": "@id",
+         "@id": "dpv:hasServiceProvider"
       },
-      "ContractualClausePartiallyFulfilled": {
-         "@id": "ContractualClausePartiallyFulfilled"
+      "hasSeverity": {
+         "@type": "@id",
+         "@id": "dpv:hasSeverity"
       },
-      "ContractualClauseViolated": {
-         "@id": "ContractualClauseViolated"
+      "hasSoftware": {
+         "@type": "@id",
+         "@id": "tech:hasSoftware"
       },
-      "ContractualTerms": {
-         "@id": "ContractualTerms"
+      "hasStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasStatus"
       },
-      "ContractUnderNegotiation": {
-         "@id": "ContractUnderNegotiation"
+      "hasStorageCondition": {
+         "@type": "@id",
+         "@id": "dpv:hasStorageCondition"
       },
-      "ContractUnderReview": {
-         "@id": "ContractUnderReview"
+      "hasSubject": {
+         "@type": "@id",
+         "@id": "tech:hasSubject"
       },
-      "ContractViolated": {
-         "@id": "ContractViolated"
+      "hasSubsidiary": {
+         "@type": "@id",
+         "@id": "dpv:hasSubsidiary"
       },
-      "ControllerDataSubjectAgreement": {
-         "@id": "ControllerDataSubjectAgreement"
+      "hasSupplier": {
+         "@type": "@id",
+         "@id": "tech:hasSupplier"
       },
-      "ControllerInformed": {
-         "@id": "ControllerInformed"
+      "hasSystem": {
+         "@type": "@id",
+         "@id": "tech:hasSystem"
       },
-      "ControllerProcessorAgreement": {
-         "@id": "ControllerProcessorAgreement"
+      "hasSystemIntegrator": {
+         "@type": "@id",
+         "@id": "tech:hasSystemIntegrator"
       },
-      "ControllerUninformed": {
-         "@id": "ControllerUninformed"
+      "hasTechnicalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasTechnicalMeasure"
       },
-      "Copy": {
-         "@id": "Copy"
+      "hasTechnicalOrganisationalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasTechnicalOrganisationalMeasure"
       },
-      "CorrectingProcess": {
-         "@id": "CorrectingProcess"
+      "hasTechnique": {
+         "@type": "@id",
+         "@id": "ai:hasTechnique"
       },
-      "CorrectingProcessInput": {
-         "@id": "CorrectingProcessInput"
+      "hasTestingData": {
+         "@type": "@id",
+         "@id": "ai:hasTestingData"
       },
-      "CorrectingProcessOutput": {
-         "@id": "CorrectingProcessOutput"
+      "hasThirdCountry": {
+         "@type": "@id",
+         "@id": "dpv:hasThirdCountry"
       },
-      "CounterMoneyLaundering": {
-         "@id": "CounterMoneyLaundering"
+      "hasThirdParty": {
+         "@type": "@id",
+         "@id": "dpv:hasThirdParty"
       },
-      "Counterterrorism": {
-         "@id": "Counterterrorism"
+      "hasThreatSource": {
+         "@type": "@id",
+         "@id": "risk:hasThreatSource"
       },
-      "CredentialManagement": {
-         "@id": "CredentialManagement"
+      "hasTrackingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasTrackingTerm"
       },
-      "CrossBorderTransfer": {
-         "@id": "CrossBorderTransfer"
+      "hasTrainingData": {
+         "@type": "@id",
+         "@id": "ai:hasTrainingData"
       },
-      "CryptographicAuthentication": {
-         "@id": "CryptographicAuthentication"
+      "hasTransparencyTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasTransparencyTerm"
       },
-      "CryptographicKeyManagement": {
-         "@id": "CryptographicKeyManagement"
+      "hasTRL": {
+         "@type": "@id",
+         "@id": "tech:hasTRL"
       },
-      "CryptographicMethods": {
-         "@id": "CryptographicMethods"
+      "hasUncategorisedData": {
+         "@type": "@id",
+         "@id": "dpv:hasUncategorisedData"
       },
-      "CustomerCare": {
-         "@id": "CustomerCare"
+      "hasUnstructuredData": {
+         "@type": "@id",
+         "@id": "dpv:hasUnstructuredData"
       },
-      "CustomerClaimsManagement": {
-         "@id": "CustomerClaimsManagement"
+      "hasUser": {
+         "@type": "@id",
+         "@id": "tech:hasUser"
       },
-      "CustomerManagement": {
-         "@id": "CustomerManagement"
+      "hasValidationData": {
+         "@type": "@id",
+         "@id": "ai:hasValidationData"
       },
-      "CustomerOrderManagement": {
-         "@id": "CustomerOrderManagement"
+      "hasVulnerability": {
+         "@type": "@id",
+         "@id": "risk:hasVulnerability"
       },
-      "CustomerRelationshipManagement": {
-         "@id": "CustomerRelationshipManagement"
+      "homepage": {
+         "@id": "foaf:homepage"
       },
-      "CustomerSolvencyMonitoring": {
-         "@id": "CustomerSolvencyMonitoring"
+      "identifier": {
+         "@id": "dcterms:identifier"
       },
-      "CybersecurityAssessment": {
-         "@id": "CybersecurityAssessment"
+      "identifies": {
+         "@type": "@id",
+         "@id": "risk:identifies"
       },
-      "CybersecurityTraining": {
-         "@id": "CybersecurityTraining"
+      "ieee_7012_hasParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasParty"
       },
-      "DashboardNotice": {
-         "@id": "DashboardNotice"
+      "ieee_7012_hasThirdParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasThirdParty"
       },
-      "DataAltruism": {
-         "@id": "DataAltruism"
+      "inScheme": {
+         "@type": "@id",
+         "@id": "skos:inScheme"
       },
-      "DataAvailabilityAssessment": {
-         "@id": "DataAvailabilityAssessment"
+      "interrupts": {
+         "@type": "@id",
+         "@id": "risk:interrupts"
       },
-      "DataBackupProtocols": {
-         "@id": "DataBackupProtocols"
+      "intervenes": {
+         "@type": "@id",
+         "@id": "risk:intervenes"
       },
-      "DataBreachImpactAssessment": {
-         "@id": "DataBreachImpactAssessment"
+      "investigates": {
+         "@type": "@id",
+         "@id": "risk:investigates"
       },
-      "DataBreachNotice": {
-         "@id": "DataBreachNotice"
+      "isAfter": {
+         "@type": "@id",
+         "@id": "dpv:isAfter"
       },
-      "DataBreachNotification": {
-         "@id": "DataBreachNotification"
+      "isApplicableFor": {
+         "@type": "@id",
+         "@id": "dpv:isApplicableFor"
       },
-      "DataBreachRecord": {
-         "@id": "DataBreachRecord"
+      "isAuthorityFor": {
+         "@type": "@id",
+         "@id": "dpv:isAuthorityFor"
       },
-      "DataController": {
-         "@id": "DataController"
+      "isBefore": {
+         "@type": "@id",
+         "@id": "dpv:isBefore"
       },
-      "DataControllerContract": {
-         "@id": "DataControllerContract"
+      "isComponentOf": {
+         "@type": "@id",
+         "@id": "tech:isComponentOf"
       },
-      "DataControllerDataSource": {
-         "@id": "DataControllerDataSource"
+      "isDefinedBy": {
+         "@type": "@id",
+         "@id": "rdfs:isDefinedBy"
       },
-      "DataDeletionPolicy": {
-         "@id": "DataDeletionPolicy"
+      "isDeterminedByEntity": {
+         "@type": "@id",
+         "@id": "dpv:isDeterminedByEntity"
       },
-      "DataErasurePolicy": {
-         "@id": "DataErasurePolicy"
+      "isDuring": {
+         "@type": "@id",
+         "@id": "dpv:isDuring"
       },
-      "DataExporter": {
-         "@id": "DataExporter"
+      "isExercisedAt": {
+         "@type": "@id",
+         "@id": "dpv:isExercisedAt"
       },
-      "DataGovernance": {
-         "@id": "DataGovernance"
+      "isExploitedBy": {
+         "@type": "@id",
+         "@id": "risk:isExploitedBy"
       },
-      "DataHandlingClause": {
-         "@id": "DataHandlingClause"
+      "isImplementedByEntity": {
+         "@type": "@id",
+         "@id": "dpv:isImplementedByEntity"
       },
-      "DataImporter": {
-         "@id": "DataImporter"
+      "isImplementedUsingTechnology": {
+         "@type": "@id",
+         "@id": "dpv:isImplementedUsingTechnology"
       },
-      "DataInteroperabilityAssessment": {
-         "@id": "DataInteroperabilityAssessment"
+      "isIndicatedAtTime": {
+         "@id": "dpv:isIndicatedAtTime"
       },
-      "DataInteroperabilityImprovement": {
-         "@id": "DataInteroperabilityImprovement"
+      "isIndicatedBy": {
+         "@type": "@id",
+         "@id": "dpv:isIndicatedBy"
       },
-      "DataInteroperabilityManagement": {
-         "@id": "DataInteroperabilityManagement"
+      "isMainEstablishmentFor": {
+         "@type": "@id",
+         "@id": "eu-gdpr:isMainEstablishmentFor"
       },
-      "DataInventoryManagement": {
-         "@id": "DataInventoryManagement"
+      "isMitigatedByMeasure": {
+         "@type": "@id",
+         "@id": "dpv:isMitigatedByMeasure"
       },
-      "DataJurisdictionPolicy": {
-         "@id": "DataJurisdictionPolicy"
+      "isNotApplicableFor": {
+         "@type": "@id",
+         "@id": "dpv:isNotApplicableFor"
       },
-      "DataLiteracy": {
-         "@id": "DataLiteracy"
+      "iso_alpha2": {
+         "@id": "loc:iso_alpha2"
       },
-      "DataProcessingAgreement": {
-         "@id": "DataProcessingAgreement"
+      "iso_alpha3": {
+         "@id": "loc:iso_alpha3"
       },
-      "DataProcessingPolicy": {
-         "@id": "DataProcessingPolicy"
+      "iso_numeric": {
+         "@id": "loc:iso_numeric"
       },
-      "DataProcessingRecord": {
-         "@id": "DataProcessingRecord"
+      "isOrganisationalUnitOf": {
+         "@type": "@id",
+         "@id": "dpv:isOrganisationalUnitOf"
       },
-      "DataProcessor": {
-         "@id": "DataProcessor"
+      "isOutsideOfLocation": {
+         "@type": "@id",
+         "@id": "dpv:isOutsideOfLocation"
       },
-      "DataProcessorContract": {
-         "@id": "DataProcessorContract"
+      "isPartOf": {
+         "@type": "@id",
+         "@id": "dcterms:isPartOf"
       },
-      "DataProtectionAuthority": {
-         "@id": "DataProtectionAuthority"
+      "isPolicyFor": {
+         "@type": "@id",
+         "@id": "dpv:isPolicyFor"
       },
-      "DataProtectionOfficer": {
-         "@id": "DataProtectionOfficer"
+      "isProfileOf": {
+         "@type": "xsd:anyURI",
+         "@id": "prof:isProfileOf"
       },
-      "DataProtectionTraining": {
-         "@id": "DataProtectionTraining"
+      "isRepresentativeFor": {
+         "@type": "@id",
+         "@id": "dpv:isRepresentativeFor"
       },
-      "DataPublishedByDataSubject": {
-         "@id": "DataPublishedByDataSubject"
+      "isResidualRiskOf": {
+         "@type": "@id",
+         "@id": "dpv:isResidualRiskOf"
       },
-      "DataQualityAssessment": {
-         "@id": "DataQualityAssessment"
+      "isSubsidiaryOf": {
+         "@type": "@id",
+         "@id": "dpv:isSubsidiaryOf"
       },
-      "DataQualityImprovement": {
-         "@id": "DataQualityImprovement"
+      "issued": {
+         "@type": "xsd:date",
+         "@id": "dcterms:issued"
       },
-      "DataQualityManagement": {
-         "@id": "DataQualityManagement"
+      "isVersionOf": {
+         "@type": "@id",
+         "@id": "dcterms:isVersionOf"
       },
-      "DataRedaction": {
-         "@id": "DataRedaction"
+      "isVulnerabilityOf": {
+         "@type": "@id",
+         "@id": "risk:isVulnerabilityOf"
       },
-      "DataRestorationPolicy": {
-         "@id": "DataRestorationPolicy"
+      "license": {
+         "@type": "xsd:anyURI",
+         "@id": "dcterms:license"
       },
-      "DataReusePolicy": {
-         "@id": "DataReusePolicy"
+      "logo": {
+         "@type": "xsd:anyURI",
+         "@id": "foaf:logo"
       },
-      "DataSanitisationTechnique": {
-         "@id": "DataSanitisationTechnique"
+      "logs": {
+         "@type": "@id",
+         "@id": "risk:logs"
       },
-      "DataSecurityManagement": {
-         "@id": "DataSecurityManagement"
+      "memberOf": {
+         "@type": "@id",
+         "@id": "org:memberOf"
       },
-      "DataSource": {
-         "@id": "DataSource"
+      "mitigates": {
+         "@type": "@id",
+         "@id": "risk:mitigates"
       },
-      "DataStoragePolicy": {
-         "@id": "DataStoragePolicy"
+      "mitigatesRisk": {
+         "@type": "@id",
+         "@id": "dpv:mitigatesRisk"
       },
-      "DataSubject": {
-         "@id": "DataSubject"
+      "modified": {
+         "@type": "xsd:date",
+         "@id": "dcterms:modified"
       },
-      "DataSubjectContract": {
-         "@id": "DataSubjectContract"
+      "modifies": {
+         "@type": "@id",
+         "@id": "risk:modifies"
       },
-      "DataSubjectDataSource": {
-         "@id": "DataSubjectDataSource"
+      "monitors": {
+         "@type": "@id",
+         "@id": "risk:monitors"
       },
-      "DataSubjectInformed": {
-         "@id": "DataSubjectInformed"
+      "name": {
+         "@id": "foaf:name"
       },
-      "DataSubjectRight": {
-         "@id": "DataSubjectRight"
+      "overrides": {
+         "@type": "@id",
+         "@id": "risk:overrides"
       },
-      "DataSubjectRightsManagement": {
-         "@id": "DataSubjectRightsManagement"
+      "page": {
+         "@type": "@id",
+         "@id": "foaf:page"
       },
-      "DataSubjectScale": {
-         "@id": "DataSubjectScale"
+      "preferredNamespacePrefix": {
+         "@id": "vann:preferredNamespacePrefix"
       },
-      "DataSubjectUninformed": {
-         "@id": "DataSubjectUninformed"
+      "preferredNamespaceUri": {
+         "@id": "vann:preferredNamespaceUri"
       },
-      "DataSubProcessor": {
-         "@id": "DataSubProcessor"
+      "prefLabel": {
+         "@id": "skos:prefLabel"
       },
-      "DataSuitabilityAssessment": {
-         "@id": "DataSuitabilityAssessment"
+      "prefLabel_de": {
+         "@id": "skos:prefLabel"
       },
-      "DataTransferImpactAssessment": {
-         "@id": "DataTransferImpactAssessment"
+      "publisher": {
+         "@type": "xsd:anyURI",
+         "@id": "dcterms:publisher"
       },
-      "DataTransferLegalBasis": {
-         "@id": "DataTransferLegalBasis"
+      "rangeIncludes": {
+         "@type": "@id",
+         "@id": "dcam:rangeIncludes"
       },
-      "DataTransferNotice": {
-         "@id": "DataTransferNotice"
+      "rdf_type": {
+         "@type": "@id",
+         "@id": "rdf:type"
       },
-      "DataTransferRecord": {
-         "@id": "DataTransferRecord"
+      "rdfs_Label": {
+         "@id": "rdfs:Label"
       },
-      "DataVolume": {
-         "@id": "DataVolume"
+      "recovers": {
+         "@type": "@id",
+         "@id": "risk:recovers"
       },
-      "DecentralisedLocations": {
-         "@id": "DecentralisedLocations"
+      "reduces": {
+         "@type": "@id",
+         "@id": "risk:reduces"
       },
-      "DecisionMaking": {
-         "@id": "DecisionMaking"
+      "refersToRisk": {
+         "@type": "@id",
+         "@id": "risk:refersToRisk"
       },
-      "Deidentification": {
-         "@id": "Deidentification"
+      "related": {
+         "@type": "@id",
+         "@id": "skos:related"
       },
-      "Delete": {
-         "@id": "Delete"
+      "remedies": {
+         "@type": "@id",
+         "@id": "risk:remedies"
       },
-      "DeliveryOfGoods": {
-         "@id": "DeliveryOfGoods"
+      "resolves": {
+         "@type": "@id",
+         "@id": "risk:resolves"
       },
-      "Derive": {
-         "@id": "Derive"
+      "reverses": {
+         "@type": "@id",
+         "@id": "risk:reverses"
       },
-      "DerivedData": {
-         "@id": "DerivedData"
+      "risk_hasRiskAssessment": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAssessment"
       },
-      "DerivedPersonalData": {
-         "@id": "DerivedPersonalData"
+      "sameAs": {
+         "@type": "@id",
+         "@id": "skos:sameAs"
       },
-      "DesignStandard": {
-         "@id": "DesignStandard"
+      "schema_version": {
+         "@id": "sdo:version"
       },
-      "Destruct": {
-         "@id": "Destruct"
+      "scopeNote": {
+         "@id": "skos:scopeNote"
       },
-      "DeterministicPseudonymisation": {
-         "@id": "DeterministicPseudonymisation"
+      "shares": {
+         "@type": "@id",
+         "@id": "risk:shares"
       },
-      "Deterrence": {
-         "@id": "Deterrence"
+      "source": {
+         "@id": "dcterms:source"
       },
-      "DeterrenceFollowed": {
-         "@id": "DeterrenceFollowed"
+      "source_page": {
+         "@type": "@id",
+         "@id": "dcterms:source"
       },
-      "DeterrenceNotFollowed": {
-         "@id": "DeterrenceNotFollowed"
+      "statements": {
+         "@type": "@id",
+         "@id": "statements"
       },
-      "DeviceNotice": {
-         "@id": "DeviceNotice"
+      "subClassOf": {
+         "@type": "@id",
+         "@id": "rdfs:subClassOf"
       },
-      "DifferentialPrivacy": {
-         "@id": "DifferentialPrivacy"
+      "subject": {
+         "@type": "@id",
+         "@id": "dcterms:subject"
       },
-      "DigitalLiteracy": {
-         "@id": "DigitalLiteracy"
+      "subPropertyOf": {
+         "@type": "@id",
+         "@id": "rdfs:subPropertyOf"
       },
-      "DigitalRightsManagement": {
-         "@id": "DigitalRightsManagement"
+      "substitutes": {
+         "@type": "@id",
+         "@id": "risk:substitutes"
       },
-      "DigitalSignatures": {
-         "@id": "DigitalSignatures"
+      "supportsComplianceWith": {
+         "@type": "@id",
+         "@id": "dpv:supportsComplianceWith"
       },
-      "DirectMarketing": {
-         "@id": "DirectMarketing"
+      "tech_hasCapability": {
+         "@type": "@id",
+         "@id": "tech:hasCapability"
       },
-      "DisasterRecoveryProcedures": {
-         "@id": "DisasterRecoveryProcedures"
+      "tech_hasModel": {
+         "@type": "@id",
+         "@id": "tech:hasModel"
       },
-      "Disclose": {
-         "@id": "Disclose"
+      "tech_hasService": {
+         "@type": "@id",
+         "@id": "tech:hasService"
       },
-      "DiscloseByTransmission": {
-         "@id": "DiscloseByTransmission"
+      "temporal": {
+         "@type": "@id",
+         "@id": "dcterms:temporal"
       },
-      "Display": {
-         "@id": "Display"
+      "term_status": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "sw:term_status"
       },
-      "DisputeManagement": {
-         "@id": "DisputeManagement"
+      "title": {
+         "@id": "dcterms:title"
       },
-      "Disseminate": {
-         "@id": "Disseminate"
+      "transfers": {
+         "@type": "@id",
+         "@id": "risk:transfers"
       },
-      "DistributedSystemSecurity": {
-         "@id": "DistributedSystemSecurity"
+      "un_m49": {
+         "@id": "loc:un_m49"
       },
-      "DistributionAgreement": {
-         "@id": "DistributionAgreement"
+      "url": {
+         "@id": "sdo:url"
       },
-      "DocumentRandomisedPseudonymisation": {
-         "@id": "DocumentRandomisedPseudonymisation"
+      "valid": {
+         "@id": "dcterms:valid"
       },
-      "DocumentSecurity": {
-         "@id": "DocumentSecurity"
+      "value": {
+         "@type": "xsd:decimal",
+         "@id": "rdf:value"
       },
-      "Download": {
-         "@id": "Download"
+      "versionInfo": {
+         "@id": "owl:versionInfo"
       },
-      "DPIA": {
-         "@id": "DPIA"
+      "versionIRI": {
+         "@type": "xsd:anyURI",
+         "@id": "owl:versionIRI"
+      },
+      "DpvActivityStatus": {
+         "@id": "dpv:ActivityStatus"
+      },
+      "DpvActor": {
+         "@id": "tech:Actor"
+      },
+      "DpvAdequacyDecision": {
+         "@id": "eu-gdpr:AdequacyDecision"
       },
       "DpvAgent": {
-         "@id": "Agent"
+         "@id": "dcterms:Agent"
+      },
+      "DpvAgentNegotiationBehaviour": {
+         "@id": "ieee-7012:AgentNegotiationBehaviour"
+      },
+      "DpvAgentRequestBehaviour": {
+         "@id": "ieee-7012:AgentRequestBehaviour"
+      },
+      "DpvAggregatedData": {
+         "@id": "dpv:AggregatedData"
+      },
+      "DpvAgreement": {
+         "@id": "ieee-7012:Agreement"
+      },
+      "DpvAgreementNegotiationStatus": {
+         "@id": "ieee-7012:AgreementNegotiationStatus"
+      },
+      "DpvAiCapability": {
+         "@id": "ai:Capability"
+      },
+      "DpvAISystem": {
+         "@id": "eu-aiact:AISystem"
+      },
+      "DpvApplicability": {
+         "@id": "dpv:Applicability"
+      },
+      "DpvAuditStatus": {
+         "@id": "dpv:AuditStatus"
       },
       "DpvAuthority": {
-         "@id": "Authority"
+         "@id": "dpv:Authority"
       },
-      "DpvConsumer": {
-         "@id": "Consumer"
+      "DpvAutomationLevel": {
+         "@id": "dpv:AutomationLevel"
+      },
+      "DpvAvailabilityConcept": {
+         "@id": "risk:AvailabilityConcept"
+      },
+      "DpvCatalogue": {
+         "@id": "DpvCatalogue"
+      },
+      "DpvChangeCategory": {
+         "@id": "eu-aiact:ChangeCategory"
+      },
+      "DpvCommunicationMechanism": {
+         "@id": "tech:CommunicationMechanism"
+      },
+      "DpvComplianceStatus": {
+         "@id": "dpv:ComplianceStatus"
+      },
+      "DpvConcept": {
+         "@id": "skos:Concept"
+      },
+      "DpvConceptScheme": {
+         "@id": "skos:ConceptScheme"
+      },
+      "DpvConfidentialityConcept": {
+         "@id": "risk:ConfidentialityConcept"
+      },
+      "DpvConflictResolutionTerm": {
+         "@id": "ieee-7012:ConflictResolutionTerm"
+      },
+      "DpvConformanceStatus": {
+         "@id": "dpv:ConformanceStatus"
+      },
+      "DpvConsentStatus": {
+         "@id": "dpv:ConsentStatus"
+      },
+      "DpvContractActivationStatus": {
+         "@id": "dpv:ContractActivationStatus"
+      },
+      "DpvContractExecutionStatus": {
+         "@id": "dpv:ContractExecutionStatus"
+      },
+      "DpvContractFulfilmentStatus": {
+         "@id": "dpv:ContractFulfilmentStatus"
+      },
+      "DpvContractPerformanceStatus": {
+         "@id": "dpv:ContractPerformanceStatus"
+      },
+      "DpvContractPreparationStatus": {
+         "@id": "dpv:ContractPreparationStatus"
+      },
+      "DpvContractTerminationStatus": {
+         "@id": "dpv:ContractTerminationStatus"
+      },
+      "DpvContractualClause": {
+         "@id": "dpv:ContractualClause"
+      },
+      "DpvContractualClauseFulfilmentStatus": {
+         "@id": "dpv:ContractualClauseFulfilmentStatus"
       },
       "DpvCountry": {
-         "@id": "Country"
+         "@id": "dpv:Country"
       },
-      "DpvCustomer": {
-         "@id": "Customer"
+      "DpvDataBreachNotice": {
+         "@id": "eu-gdpr:DataBreachNotice"
       },
-      "DpvData": {
-         "@id": "Data"
+      "DpvDataBreachNoticeRequirement": {
+         "@id": "eu-gdpr:DataBreachNoticeRequirement"
+      },
+      "DpvDataDeletionTerm": {
+         "@id": "ieee-7012:DataDeletionTerm"
+      },
+      "DpvDataProtectionAuthority": {
+         "@id": "dpv:DataProtectionAuthority"
+      },
+      "DpvDataSharingTerm": {
+         "@id": "ieee-7012:DataSharingTerm"
+      },
+      "DpvDataSource": {
+         "@id": "dpv:DataSource"
+      },
+      "DpvDataSubjectDataSource": {
+         "@id": "dpv:DataSubjectDataSource"
+      },
+      "DpvDataSubjectScale": {
+         "@id": "dpv:DataSubjectScale"
+      },
+      "DpvDataTransparencyTerm": {
+         "@id": "ieee-7012:DataTransparencyTerm"
+      },
+      "DpvDataVolume": {
+         "@id": "dpv:DataVolume"
+      },
+      "DpvDBIARiskStatus": {
+         "@id": "eu-gdpr:DBIARiskStatus"
+      },
+      "DpvDeonticInterpretationTerm": {
+         "@id": "ieee-7012:DeonticInterpretationTerm"
+      },
+      "DpvDocumentation": {
+         "@id": "tech:Documentation"
+      },
+      "DpvDPIAConformity": {
+         "@id": "eu-gdpr:DPIAConformity"
+      },
+      "DpvDPIANecessityStatus": {
+         "@id": "eu-gdpr:DPIANecessityStatus"
+      },
+      "DpvDPIAOutcomeStatus": {
+         "@id": "eu-gdpr:DPIAOutcomeStatus"
+      },
+      "DpvDPIAProcessingRecommendation": {
+         "@id": "eu-gdpr:DPIAProcessingRecommendation"
+      },
+      "DpvDPIARiskStatus": {
+         "@id": "eu-gdpr:DPIARiskStatus"
       },
       "DpvDuration": {
-         "@id": "Duration"
+         "@id": "dpv:Duration"
       },
-      "DpvEntity": {
-         "@id": "Entity"
+      "DpvEntityInformedStatus": {
+         "@id": "dpv:EntityInformedStatus"
+      },
+      "DpvEntityInvolvementStatus": {
+         "@id": "dpv:EntityInvolvementStatus"
+      },
+      "DpvEntityNonPermissiveInvolvement": {
+         "@id": "dpv:EntityNonPermissiveInvolvement"
+      },
+      "DpvEntityPermissiveInvolvement": {
+         "@id": "dpv:EntityPermissiveInvolvement"
+      },
+      "DpvEuAiactMarketAvailabilityStatus": {
+         "@id": "eu-aiact:MarketAvailabilityStatus"
+      },
+      "DpvEuAiactRiskLevel": {
+         "@id": "eu-aiact:RiskLevel"
+      },
+      "DpvEuGdprDataProtectionAuthority": {
+         "@id": "eu-gdpr:DataProtectionAuthority"
+      },
+      "DpvEuGdprProcessing": {
+         "@id": "eu-gdpr:Processing"
+      },
+      "DpvEvaluationScoring": {
+         "@id": "dpv:EvaluationScoring"
+      },
+      "DpvExample": {
+         "@id": "dex:Example"
+      },
+      "DpvExpectationStatus": {
+         "@id": "dpv:ExpectationStatus"
+      },
+      "DpvFeeRequirement": {
+         "@id": "dpv:FeeRequirement"
+      },
+      "DpvFrequency": {
+         "@id": "dpv:Frequency"
+      },
+      "DpvGeographicCoverage": {
+         "@id": "dpv:GeographicCoverage"
+      },
+      "DpvHighRiskAISystem": {
+         "@id": "eu-aiact:HighRiskAISystem"
+      },
+      "DpvHumanInvolvement": {
+         "@id": "dpv:HumanInvolvement"
+      },
+      "DpvHumanSubject": {
+         "@id": "dpv:HumanSubject"
+      },
+      "DpvImportance": {
+         "@id": "dpv:Importance"
+      },
+      "DpvIncidentInvestigationStatus": {
+         "@id": "risk:IncidentInvestigationStatus"
+      },
+      "DpvIncidentNotice": {
+         "@id": "risk:IncidentNotice"
+      },
+      "DpvIncidentStatus": {
+         "@id": "risk:IncidentStatus"
+      },
+      "DpvInnovativeUseOfTechnology": {
+         "@id": "dpv:InnovativeUseOfTechnology"
+      },
+      "DpvIntegrityConcept": {
+         "@id": "risk:IntegrityConcept"
+      },
+      "DpvIntentionStatus": {
+         "@id": "dpv:IntentionStatus"
+      },
+      "DpvInterval": {
+         "@id": "time:ProperInterval"
+      },
+      "DpvInverseJurisdiction": {
+         "@id": "dpv:InverseJurisdiction"
+      },
+      "DpvInvolvementStatus": {
+         "@id": "dpv:InvolvementStatus"
       },
       "DpvJurisdiction": {
-         "@id": "Jurisdiction"
+         "@id": "dpv:Jurisdiction"
+      },
+      "DpvJustification": {
+         "@id": "dpv:Justification"
+      },
+      "DpvLaw": {
+         "@id": "dpv:Law"
+      },
+      "DpvLawfulness": {
+         "@id": "dpv:Lawfulness"
+      },
+      "DpvLegalBasis": {
+         "@id": "dpv:LegalBasis"
+      },
+      "DpvLegalEntity": {
+         "@id": "dpv:LegalEntity"
+      },
+      "DpvLegalMeasure": {
+         "@id": "dpv:LegalMeasure"
+      },
+      "DpvLegalObligationStatus": {
+         "@id": "dpv:LegalObligationStatus"
+      },
+      "DpvLegitimateInterestStatus": {
+         "@id": "dpv:LegitimateInterestStatus"
+      },
+      "DpvLifecycleStage": {
+         "@id": "ai:LifecycleStage"
+      },
+      "DpvLikelihood": {
+         "@id": "dpv:Likelihood"
       },
       "DpvLocation": {
-         "@id": "Location"
+         "@id": "dpv:Location"
       },
-      "DpvOptional": {
-         "@id": "Optional"
+      "DpvLocationFixture": {
+         "@id": "dpv:LocationFixture"
       },
-      "DpvOrganisation": {
-         "@id": "Organisation"
+      "DpvMarketPlacementStatus": {
+         "@id": "eu-aiact:MarketPlacementStatus"
       },
-      "DpvProcess": {
-         "@id": "Process"
+      "DpvNecessity": {
+         "@id": "dpv:Necessity"
       },
-      "DpvRecipient": {
-         "@id": "Recipient"
+      "DpvNonPersonalData": {
+         "@id": "dpv:NonPersonalData"
       },
-      "DpvRecord": {
-         "@id": "Record"
+      "DpvNoticeStatus": {
+         "@id": "dpv:NoticeStatus"
+      },
+      "DpvNotificationStatus": {
+         "@id": "dpv:NotificationStatus"
+      },
+      "DpvObligation": {
+         "@id": "dpv:Obligation"
+      },
+      "DpvOfficialAuthorityExerciseStatus": {
+         "@id": "dpv:OfficialAuthorityExerciseStatus"
+      },
+      "DpvOrganisationalMeasure": {
+         "@id": "dpv:OrganisationalMeasure"
+      },
+      "DpvPartyTransparencyTerm": {
+         "@id": "ieee-7012:PartyTransparencyTerm"
+      },
+      "DpvPdPersonalData": {
+         "@id": "pd:PersonalData"
+      },
+      "DpvPermission": {
+         "@id": "dpv:Permission"
+      },
+      "DpvPersonalData": {
+         "@id": "dpv:PersonalData"
+      },
+      "DpvPhysicalMeasure": {
+         "@id": "dpv:PhysicalMeasure"
+      },
+      "DpvPortabilityTerm": {
+         "@id": "ieee-7012:PortabilityTerm"
+      },
+      "DpvPotentialConsequence": {
+         "@id": "risk:PotentialConsequence"
+      },
+      "DpvPotentialImpact": {
+         "@id": "risk:PotentialImpact"
+      },
+      "DpvPotentialRisk": {
+         "@id": "risk:PotentialRisk"
+      },
+      "DpvPotentialRiskSource": {
+         "@id": "risk:PotentialRiskSource"
+      },
+      "DpvPreferenceApplicability": {
+         "@id": "ieee-7012:PreferenceApplicability"
+      },
+      "DpvProcessing": {
+         "@id": "dpv:Processing"
+      },
+      "DpvProcessingContext": {
+         "@id": "dpv:ProcessingContext"
+      },
+      "DpvProcessingScale": {
+         "@id": "dpv:ProcessingScale"
+      },
+      "DpvProfilingTerm": {
+         "@id": "ieee-7012:ProfilingTerm"
+      },
+      "DpvProhibitedAISystem": {
+         "@id": "eu-aiact:ProhibitedAISystem"
+      },
+      "DpvProhibition": {
+         "@id": "dpv:Prohibition"
+      },
+      "DpvProperty": {
+         "@id": "rdf:Property"
+      },
+      "DpvProportionalityStatus": {
+         "@id": "eu-gdpr:ProportionalityStatus"
+      },
+      "DpvProvisionMethod": {
+         "@id": "tech:ProvisionMethod"
+      },
+      "DpvProvisionStatus": {
+         "@id": "tech:ProvisionStatus"
+      },
+      "DpvPublicInterestStatus": {
+         "@id": "dpv:PublicInterestStatus"
+      },
+      "DpvPublicRegisterOfEntities": {
+         "@id": "dpv:PublicRegisterOfEntities"
+      },
+      "DpvPurpose": {
+         "@id": "dpv:Purpose"
+      },
+      "DpvPurposeTransparencyTerm": {
+         "@id": "ieee-7012:PurposeTransparencyTerm"
       },
       "DpvRegion": {
-         "@id": "Region"
+         "@id": "dpv:Region"
       },
-      "DpvService": {
-         "@id": "Service"
+      "DpvRegulatedHealthDataHolder": {
+         "@id": "de-gdng:RegulatedHealthDataHolder"
       },
-      "DpvThing": {
-         "@id": "DpvThing"
+      "DpvRequestStatus": {
+         "@id": "dpv:RequestStatus"
       },
-      "DpvUser": {
-         "@id": "User"
+      "DpvResource": {
+         "@id": "rdfs:Resource"
       },
-      "EconomicUnion": {
-         "@id": "EconomicUnion"
+      "DpvReuseCompatibility": {
+         "@id": "dpv:ReuseCompatibility"
       },
-      "EducationalOrganisation": {
-         "@id": "EducationalOrganisation"
+      "DpvRight": {
+         "@id": "dpv:Right"
       },
-      "EducationalTraining": {
-         "@id": "EducationalTraining"
+      "DpvRiskAnalysis": {
+         "@id": "risk:RiskAnalysis"
       },
-      "EffectivenessDeterminationProcedures": {
-         "@id": "EffectivenessDeterminationProcedures"
+      "DpvRiskConcept": {
+         "@id": "dpv:RiskConcept"
       },
-      "ElderlyDataSubject": {
-         "@id": "ElderlyDataSubject"
+      "DpvRiskControl": {
+         "@id": "risk:RiskControl"
       },
-      "ElderlyHuman": {
-         "@id": "ElderlyHuman"
+      "DpvRiskLevel": {
+         "@id": "dpv:RiskLevel"
       },
-      "EmergencyHealthcareProvider": {
-         "@id": "EmergencyHealthcareProvider"
+      "DpvRule": {
+         "@id": "dpv:Rule"
       },
-      "EmergencyServiceProvider": {
-         "@id": "EmergencyServiceProvider"
+      "DpvRuleFulfilmentStatus": {
+         "@id": "dpv:RuleFulfilmentStatus"
       },
-      "Employee": {
-         "@id": "Employee"
+      "DpvScoringOfIndividuals": {
+         "@id": "dpv:ScoringOfIndividuals"
       },
-      "EmploymentContract": {
-         "@id": "EmploymentContract"
+      "DpvSector": {
+         "@id": "dpv:Sector"
       },
-      "Encryption": {
-         "@id": "Encryption"
+      "DpvSectorHealthReuseCompatibility": {
+         "@id": "sector-health:ReuseCompatibility"
       },
-      "EncryptionAtRest": {
-         "@id": "EncryptionAtRest"
+      "DpvSensitivePersonalData": {
+         "@id": "dpv:SensitivePersonalData"
       },
-      "EncryptionInTransfer": {
-         "@id": "EncryptionInTransfer"
+      "DpvServiceSupplyStatus": {
+         "@id": "eu-aiact:ServiceSupplyStatus"
       },
-      "EncryptionInUse": {
-         "@id": "EncryptionInUse"
+      "DpvSeverity": {
+         "@id": "dpv:Severity"
       },
-      "EndlessDuration": {
-         "@id": "EndlessDuration"
+      "DpvSpecialCategoryPersonalData": {
+         "@id": "dpv:SpecialCategoryPersonalData"
       },
-      "EndToEndEncryption": {
-         "@id": "EndToEndEncryption"
+      "DpvStatement": {
+         "@id": "DpvStatement"
       },
-      "EnforceAccessControl": {
-         "@id": "EnforceAccessControl"
+      "DpvStatus": {
+         "@id": "dpv:Status"
       },
-      "EnforceSecurity": {
-         "@id": "EnforceSecurity"
+      "DpvSupraNationalUnion": {
+         "@id": "dpv:SupraNationalUnion"
       },
-      "EnterIntoContract": {
-         "@id": "EnterIntoContract"
+      "DpvTechCapability": {
+         "@id": "tech:Capability"
       },
-      "EntityActiveInvolvement": {
-         "@id": "EntityActiveInvolvement"
+      "DpvTechMarketAvailabilityStatus": {
+         "@id": "tech:MarketAvailabilityStatus"
       },
-      "EntityInformed": {
-         "@id": "EntityInformed"
+      "DpvTechnicalMeasure": {
+         "@id": "dpv:TechnicalMeasure"
       },
-      "EntityInformedStatus": {
-         "@id": "EntityInformedStatus"
+      "DpvTechnique": {
+         "@id": "ai:Technique"
       },
-      "EntityIntendedInvolvement": {
-         "@id": "EntityIntendedInvolvement"
+      "DpvTechnology": {
+         "@id": "dpv:Technology"
       },
-      "EntityInvolved": {
-         "@id": "EntityInvolved"
+      "DpvTerm": {
+         "@id": "DpvTerm"
       },
-      "EntityInvolvement": {
-         "@id": "EntityInvolvement"
+      "DpvTrackingTerm": {
+         "@id": "ieee-7012:TrackingTerm"
       },
-      "EntityInvolvementStatus": {
-         "@id": "EntityInvolvementStatus"
+      "DpvTrainingTechnique": {
+         "@id": "ai:TrainingTechnique"
       },
-      "EntityNonInvolvement": {
-         "@id": "EntityNonInvolvement"
+      "DpvTransparencyTerm": {
+         "@id": "ieee-7012:TransparencyTerm"
       },
-      "EntityNonPermissiveInvolvement": {
-         "@id": "EntityNonPermissiveInvolvement"
+      "DpvVitalInterestStatus": {
+         "@id": "dpv:VitalInterestStatus"
       },
-      "EntityNotInvolved": {
-         "@id": "EntityNotInvolved"
+      "DpvVocabulary": {
+         "@id": "owl:Ontology"
       },
-      "EntityPassiveInvolvement": {
-         "@id": "EntityPassiveInvolvement"
-      },
-      "EntityPermissiveInvolvement": {
-         "@id": "EntityPermissiveInvolvement"
-      },
-      "EntityUninformed": {
-         "@id": "EntityUninformed"
-      },
-      "EntityUnintendedInvolvement": {
-         "@id": "EntityUnintendedInvolvement"
-      },
-      "EnvironmentalProtection": {
-         "@id": "EnvironmentalProtection"
-      },
-      "Erase": {
-         "@id": "Erase"
-      },
-      "EstablishContractualAgreement": {
-         "@id": "EstablishContractualAgreement"
-      },
-      "EULA": {
-         "@id": "EULA"
-      },
-      "EvaluationOfIndividuals": {
-         "@id": "EvaluationOfIndividuals"
-      },
-      "EvaluationScoring": {
-         "@id": "EvaluationScoring"
-      },
-      "ExpectationStatus": {
-         "@id": "ExpectationStatus"
-      },
-      "Expected": {
-         "@id": "Expected"
-      },
-      "ExplicitlyExpressedConsent": {
-         "@id": "ExplicitlyExpressedConsent"
-      },
-      "Export": {
-         "@id": "Export"
-      },
-      "ExpressedConsent": {
-         "@id": "ExpressedConsent"
-      },
-      "FailSafeProtocols": {
-         "@id": "FailSafeProtocols"
-      },
-      "FederatedLocations": {
-         "@id": "FederatedLocations"
-      },
-      "FeeNotRequired": {
-         "@id": "FeeNotRequired"
-      },
-      "FeeRequired": {
-         "@id": "FeeRequired"
-      },
-      "FeeRequirement": {
-         "@id": "FeeRequirement"
-      },
-      "FileSystemSecurity": {
-         "@id": "FileSystemSecurity"
-      },
-      "Filter": {
-         "@id": "Filter"
-      },
-      "FireDepartment": {
-         "@id": "FireDepartment"
-      },
-      "FixedLocation": {
-         "@id": "FixedLocation"
-      },
-      "FixedMultipleLocations": {
-         "@id": "FixedMultipleLocations"
-      },
-      "FixedOccurrencesDuration": {
-         "@id": "FixedOccurrencesDuration"
-      },
-      "FixedSingularLocation": {
-         "@id": "FixedSingularLocation"
-      },
-      "Format": {
-         "@id": "Format"
-      },
-      "ForProfitOrganisation": {
-         "@id": "ForProfitOrganisation"
-      },
-      "FraudPreventionAndDetection": {
-         "@id": "FraudPreventionAndDetection"
-      },
-      "Frequency": {
-         "@id": "Frequency"
-      },
-      "FRIA": {
-         "@id": "FRIA"
-      },
-      "FulfilmentOfContractualObligation": {
-         "@id": "FulfilmentOfContractualObligation"
-      },
-      "FulfilmentOfObligation": {
-         "@id": "FulfilmentOfObligation"
-      },
-      "FullAutomation": {
-         "@id": "FullAutomation"
-      },
-      "FullyRandomisedPseudonymisation": {
-         "@id": "FullyRandomisedPseudonymisation"
-      },
-      "G2BContract": {
-         "@id": "G2BContract"
-      },
-      "G2CContract": {
-         "@id": "G2CContract"
-      },
-      "G2GContract": {
-         "@id": "G2GContract"
-      },
-      "Generate": {
-         "@id": "Generate"
-      },
-      "GeneratedData": {
-         "@id": "GeneratedData"
-      },
-      "GeneratedPersonalData": {
-         "@id": "GeneratedPersonalData"
-      },
-      "GeographicCoverage": {
-         "@id": "GeographicCoverage"
-      },
-      "GlobalScale": {
-         "@id": "GlobalScale"
-      },
-      "GovernanceProcedures": {
-         "@id": "GovernanceProcedures"
-      },
-      "GovernmentalOrganisation": {
-         "@id": "GovernmentalOrganisation"
-      },
-      "GraphicalNotice": {
-         "@id": "GraphicalNotice"
-      },
-      "GuardianOfDataSubject": {
-         "@id": "GuardianOfDataSubject"
-      },
-      "GuardianOfHuman": {
-         "@id": "GuardianOfHuman"
-      },
-      "Guideline": {
-         "@id": "Guideline"
-      },
-      "GuidelinesPrinciple": {
-         "@id": "GuidelinesPrinciple"
-      },
-      "HardwareSecurityProtocols": {
-         "@id": "HardwareSecurityProtocols"
-      },
-      "HashFunctions": {
-         "@id": "HashFunctions"
-      },
-      "HashMessageAuthenticationCode": {
-         "@id": "HashMessageAuthenticationCode"
-      },
-      "HealthcareOrganisation": {
-         "@id": "HealthcareOrganisation"
-      },
-      "HighAutomation": {
-         "@id": "HighAutomation"
-      },
-      "HomomorphicEncryption": {
-         "@id": "HomomorphicEncryption"
-      },
-      "Hospital": {
-         "@id": "Hospital"
-      },
-      "HugeDataVolume": {
-         "@id": "HugeDataVolume"
-      },
-      "HugeScaleOfDataSubjects": {
-         "@id": "HugeScaleOfDataSubjects"
-      },
-      "HumanInvolved": {
-         "@id": "HumanInvolved"
-      },
-      "HumanInvolvement": {
-         "@id": "HumanInvolvement"
-      },
-      "HumanInvolvementForControl": {
-         "@id": "HumanInvolvementForControl"
-      },
-      "HumanInvolvementForDecision": {
-         "@id": "HumanInvolvementForDecision"
-      },
-      "HumanInvolvementForInput": {
-         "@id": "HumanInvolvementForInput"
-      },
-      "HumanInvolvementForIntervention": {
-         "@id": "HumanInvolvementForIntervention"
-      },
-      "HumanInvolvementForOversight": {
-         "@id": "HumanInvolvementForOversight"
-      },
-      "HumanInvolvementForVerification": {
-         "@id": "HumanInvolvementForVerification"
-      },
-      "HumanNotInvolved": {
-         "@id": "HumanNotInvolved"
-      },
-      "HumanOversight": {
-         "@id": "HumanOversight"
-      },
-      "HumanResourceManagement": {
-         "@id": "HumanResourceManagement"
-      },
-      "HumanSubject": {
-         "@id": "HumanSubject"
-      },
-      "HybridPublicPrivateSpace": {
-         "@id": "HybridPublicPrivateSpace"
-      },
-      "IdentifyingPersonalData": {
-         "@id": "IdentifyingPersonalData"
-      },
-      "IdentityAuthentication": {
-         "@id": "IdentityAuthentication"
-      },
-      "IdentityManagementMethod": {
-         "@id": "IdentityManagementMethod"
-      },
-      "IdentityVerification": {
-         "@id": "IdentityVerification"
-      },
-      "Immigrant": {
-         "@id": "Immigrant"
-      },
-      "Impact": {
-         "@id": "Impact"
-      },
-      "ImpactAssessment": {
-         "@id": "ImpactAssessment"
-      },
-      "ImpliedConsent": {
-         "@id": "ImpliedConsent"
-      },
-      "Importance": {
-         "@id": "Importance"
-      },
-      "ImproveExistingProductsAndServices": {
-         "@id": "ImproveExistingProductsAndServices"
-      },
-      "ImproveHealthcare": {
-         "@id": "ImproveHealthcare"
-      },
-      "ImproveInternalCRMProcesses": {
-         "@id": "ImproveInternalCRMProcesses"
-      },
-      "ImprovePublicServices": {
-         "@id": "ImprovePublicServices"
-      },
-      "ImproveTransportMobility": {
-         "@id": "ImproveTransportMobility"
-      },
-      "IncidentManagementProcedures": {
-         "@id": "IncidentManagementProcedures"
-      },
-      "IncidentReportingCommunication": {
-         "@id": "IncidentReportingCommunication"
-      },
-      "IncorrectData": {
-         "@id": "IncorrectData"
-      },
-      "IncreaseServiceRobustness": {
-         "@id": "IncreaseServiceRobustness"
-      },
-      "IndeterminateDuration": {
-         "@id": "IndeterminateDuration"
-      },
-      "IndustryConsortium": {
-         "@id": "IndustryConsortium"
-      },
-      "Infer": {
-         "@id": "Infer"
-      },
-      "InferredData": {
-         "@id": "InferredData"
-      },
-      "InferredPersonalData": {
-         "@id": "InferredPersonalData"
-      },
-      "InformationAudit": {
-         "@id": "InformationAudit"
-      },
-      "InformationFlowControl": {
-         "@id": "InformationFlowControl"
-      },
-      "InformationSecurityPolicy": {
-         "@id": "InformationSecurityPolicy"
-      },
-      "InformedConsent": {
-         "@id": "InformedConsent"
-      },
-      "InnovativeUseOfExistingTechnology": {
-         "@id": "InnovativeUseOfExistingTechnology"
-      },
-      "InnovativeUseOfNewTechnologies": {
-         "@id": "InnovativeUseOfNewTechnologies"
-      },
-      "InnovativeUseOfTechnology": {
-         "@id": "InnovativeUseOfTechnology"
-      },
-      "IntellectualPropertyData": {
-         "@id": "IntellectualPropertyData"
-      },
-      "Intended": {
-         "@id": "Intended"
-      },
-      "IntentionStatus": {
-         "@id": "IntentionStatus"
-      },
-      "InternalResourceOptimisation": {
-         "@id": "InternalResourceOptimisation"
-      },
-      "InternationalOrganisation": {
-         "@id": "InternationalOrganisation"
-      },
-      "IntrusionDetectionSystem": {
-         "@id": "IntrusionDetectionSystem"
-      },
-      "InverseJurisdiction": {
-         "@id": "InverseJurisdiction"
-      },
-      "InvolvementStatus": {
-         "@id": "InvolvementStatus"
-      },
-      "IPRManagement": {
-         "@id": "IPRManagement"
-      },
-      "JITNotice": {
-         "@id": "JITNotice"
-      },
-      "JobApplicant": {
-         "@id": "JobApplicant"
-      },
-      "JointDataControllers": {
-         "@id": "JointDataControllers"
-      },
-      "JointDataControllersAgreement": {
-         "@id": "JointDataControllersAgreement"
-      },
-      "JudicialOrganisation": {
-         "@id": "JudicialOrganisation"
-      },
-      "Justification": {
-         "@id": "Justification"
-      },
-      "LargeDataVolume": {
-         "@id": "LargeDataVolume"
-      },
-      "LargeScaleOfDataSubjects": {
-         "@id": "LargeScaleOfDataSubjects"
-      },
-      "LargeScaleProcessing": {
-         "@id": "LargeScaleProcessing"
-      },
-      "Law": {
-         "@id": "Law"
-      },
-      "LawEnforcementOrganisation": {
-         "@id": "LawEnforcementOrganisation"
-      },
-      "Lawful": {
-         "@id": "Lawful"
-      },
-      "Lawfulness": {
-         "@id": "Lawfulness"
-      },
-      "LawfulnessUnknown": {
-         "@id": "LawfulnessUnknown"
-      },
-      "LayeredNotice": {
-         "@id": "LayeredNotice"
-      },
-      "LegalAgent": {
-         "@id": "LegalAgent"
-      },
-      "LegalAgreement": {
-         "@id": "LegalAgreement"
-      },
-      "LegalBasis": {
-         "@id": "LegalBasis"
-      },
-      "LegalCompliance": {
-         "@id": "LegalCompliance"
-      },
-      "LegalComplianceAssessment": {
-         "@id": "LegalComplianceAssessment"
-      },
-      "LegalComplianceAudit": {
-         "@id": "LegalComplianceAudit"
-      },
-      "LegalEntity": {
-         "@id": "LegalEntity"
-      },
-      "LegalMeasure": {
-         "@id": "LegalMeasure"
-      },
-      "LegalObligation": {
-         "@id": "LegalObligation"
-      },
-      "LegalObligationCompleted": {
-         "@id": "LegalObligationCompleted"
-      },
-      "LegalObligationOngoing": {
-         "@id": "LegalObligationOngoing"
-      },
-      "LegalObligationPending": {
-         "@id": "LegalObligationPending"
-      },
-      "LegalObligationStatus": {
-         "@id": "LegalObligationStatus"
-      },
-      "LegitimateInterest": {
-         "@id": "LegitimateInterest"
-      },
-      "LegitimateInterestAssessment": {
-         "@id": "LegitimateInterestAssessment"
-      },
-      "LegitimateInterestInformed": {
-         "@id": "LegitimateInterestInformed"
-      },
-      "LegitimateInterestNotObjected": {
-         "@id": "LegitimateInterestNotObjected"
-      },
-      "LegitimateInterestObjected": {
-         "@id": "LegitimateInterestObjected"
-      },
-      "LegitimateInterestOfController": {
-         "@id": "LegitimateInterestOfController"
-      },
-      "LegitimateInterestOfDataSubject": {
-         "@id": "LegitimateInterestOfDataSubject"
-      },
-      "LegitimateInterestOfThirdParty": {
-         "@id": "LegitimateInterestOfThirdParty"
-      },
-      "LegitimateInterestStatus": {
-         "@id": "LegitimateInterestStatus"
-      },
-      "LegitimateInterestUninformed": {
-         "@id": "LegitimateInterestUninformed"
-      },
-      "LicenseAgreement": {
-         "@id": "LicenseAgreement"
-      },
-      "Likelihood": {
-         "@id": "Likelihood"
-      },
-      "LocalEnvironmentScale": {
-         "@id": "LocalEnvironmentScale"
-      },
-      "LocalityScale": {
-         "@id": "LocalityScale"
-      },
-      "LocalLocation": {
-         "@id": "LocalLocation"
-      },
-      "LocationFixture": {
-         "@id": "LocationFixture"
-      },
-      "LocationLocality": {
-         "@id": "LocationLocality"
-      },
-      "LoggingPolicy": {
-         "@id": "LoggingPolicy"
-      },
-      "MaintainFraudDatabase": {
-         "@id": "MaintainFraudDatabase"
-      },
-      "MakeAvailable": {
-         "@id": "MakeAvailable"
-      },
-      "ManageConsent": {
-         "@id": "ManageConsent"
-      },
-      "ManagementStandard": {
-         "@id": "ManagementStandard"
-      },
-      "Marketing": {
-         "@id": "Marketing"
-      },
-      "Match": {
-         "@id": "Match"
-      },
-      "MediumDataVolume": {
-         "@id": "MediumDataVolume"
-      },
-      "MediumScaleOfDataSubjects": {
-         "@id": "MediumScaleOfDataSubjects"
-      },
-      "MediumScaleProcessing": {
-         "@id": "MediumScaleProcessing"
-      },
-      "Member": {
-         "@id": "Member"
-      },
-      "MemberPartnerManagement": {
-         "@id": "MemberPartnerManagement"
-      },
-      "MentallyVulnerableDataSubject": {
-         "@id": "MentallyVulnerableDataSubject"
-      },
-      "MentallyVulnerableHuman": {
-         "@id": "MentallyVulnerableHuman"
-      },
-      "MessageAuthenticationCodes": {
-         "@id": "MessageAuthenticationCodes"
-      },
-      "MetadataManagement": {
-         "@id": "MetadataManagement"
-      },
-      "MisusePreventionAndDetection": {
-         "@id": "MisusePreventionAndDetection"
-      },
-      "MobilePlatformSecurity": {
-         "@id": "MobilePlatformSecurity"
-      },
-      "Modify": {
-         "@id": "Modify"
-      },
-      "Monitor": {
-         "@id": "Monitor"
-      },
-      "MonitoringPolicy": {
-         "@id": "MonitoringPolicy"
-      },
-      "MonotonicCounterPseudonymisation": {
-         "@id": "MonotonicCounterPseudonymisation"
-      },
-      "Move": {
-         "@id": "Move"
-      },
-      "MultiFactorAuthentication": {
-         "@id": "MultiFactorAuthentication"
-      },
-      "MultiNationalScale": {
-         "@id": "MultiNationalScale"
-      },
-      "NationalAuthority": {
-         "@id": "NationalAuthority"
-      },
-      "NationalScale": {
-         "@id": "NationalScale"
-      },
-      "NaturalPerson": {
-         "@id": "NaturalPerson"
-      },
-      "NDA": {
-         "@id": "NDA"
-      },
-      "NearlyGlobalScale": {
-         "@id": "NearlyGlobalScale"
-      },
-      "Necessity": {
-         "@id": "Necessity"
-      },
-      "NegotiateContract": {
-         "@id": "NegotiateContract"
-      },
-      "NegotiatedContract": {
-         "@id": "NegotiatedContract"
-      },
-      "NetworkProxyRouting": {
-         "@id": "NetworkProxyRouting"
-      },
-      "NetworkSecurityProtocols": {
-         "@id": "NetworkSecurityProtocols"
-      },
-      "NonCitizen": {
-         "@id": "NonCitizen"
-      },
-      "NonCommercialPurpose": {
-         "@id": "NonCommercialPurpose"
-      },
-      "NonCommercialResearch": {
-         "@id": "NonCommercialResearch"
-      },
-      "NonCompliant": {
-         "@id": "NonCompliant"
-      },
-      "NonConformant": {
-         "@id": "NonConformant"
-      },
-      "NonGovernmentalOrganisation": {
-         "@id": "NonGovernmentalOrganisation"
-      },
-      "NonPersonalData": {
-         "@id": "NonPersonalData"
-      },
-      "NonPersonalDataProcess": {
-         "@id": "NonPersonalDataProcess"
-      },
-      "NonProfitOrganisation": {
-         "@id": "NonProfitOrganisation"
-      },
-      "NonPublicDataSource": {
-         "@id": "NonPublicDataSource"
-      },
-      "NotApplicable": {
-         "@id": "NotApplicable"
-      },
-      "NotAutomated": {
-         "@id": "NotAutomated"
-      },
-      "NotAvailable": {
-         "@id": "NotAvailable"
-      },
-      "Notice": {
-         "@id": "Notice"
-      },
-      "NoticeCommunicated": {
-         "@id": "NoticeCommunicated"
-      },
-      "NoticeGenerated": {
-         "@id": "NoticeGenerated"
-      },
-      "NoticeIcon": {
-         "@id": "NoticeIcon"
-      },
-      "NoticeLatest": {
-         "@id": "NoticeLatest"
-      },
-      "NoticeLayer": {
-         "@id": "NoticeLayer"
-      },
-      "NoticeStale": {
-         "@id": "NoticeStale"
-      },
-      "NoticeStatus": {
-         "@id": "NoticeStatus"
-      },
-      "NoticeUnused": {
-         "@id": "NoticeUnused"
-      },
-      "NoticeUpdated": {
-         "@id": "NoticeUpdated"
-      },
-      "NoticeUsed": {
-         "@id": "NoticeUsed"
-      },
-      "Notification": {
-         "@id": "Notification"
-      },
-      "NotificationCompleted": {
-         "@id": "NotificationCompleted"
-      },
-      "NotificationFailed": {
-         "@id": "NotificationFailed"
-      },
-      "NotificationNotNeeded": {
-         "@id": "NotificationNotNeeded"
-      },
-      "NotificationOngoing": {
-         "@id": "NotificationOngoing"
-      },
-      "NotificationPlanned": {
-         "@id": "NotificationPlanned"
-      },
-      "NotificationStatus": {
-         "@id": "NotificationStatus"
-      },
-      "NotInvolved": {
-         "@id": "NotInvolved"
-      },
-      "NotRequired": {
-         "@id": "NotRequired"
-      },
-      "ObjectingToProcess": {
-         "@id": "ObjectingToProcess"
-      },
-      "Obligation": {
-         "@id": "Obligation"
-      },
-      "ObligationFulfilled": {
-         "@id": "ObligationFulfilled"
-      },
-      "ObligationUnfulfilled": {
-         "@id": "ObligationUnfulfilled"
-      },
-      "ObligationViolated": {
-         "@id": "ObligationViolated"
-      },
-      "Observe": {
-         "@id": "Observe"
-      },
-      "ObservedData": {
-         "@id": "ObservedData"
-      },
-      "ObservedPersonalData": {
-         "@id": "ObservedPersonalData"
-      },
-      "Obtain": {
-         "@id": "Obtain"
-      },
-      "ObtainConsent": {
-         "@id": "ObtainConsent"
-      },
-      "OfferContract": {
-         "@id": "OfferContract"
-      },
-      "OfficialAuthorityExerciseCompleted": {
-         "@id": "OfficialAuthorityExerciseCompleted"
-      },
-      "OfficialAuthorityExerciseOngoing": {
-         "@id": "OfficialAuthorityExerciseOngoing"
-      },
-      "OfficialAuthorityExercisePending": {
-         "@id": "OfficialAuthorityExercisePending"
-      },
-      "OfficialAuthorityExerciseStatus": {
-         "@id": "OfficialAuthorityExerciseStatus"
-      },
-      "OfficialAuthorityOfController": {
-         "@id": "OfficialAuthorityOfController"
-      },
-      "OftenFrequency": {
-         "@id": "OftenFrequency"
-      },
-      "OperatingSystemSecurity": {
-         "@id": "OperatingSystemSecurity"
-      },
-      "OptimisationForConsumer": {
-         "@id": "OptimisationForConsumer"
-      },
-      "OptimisationForController": {
-         "@id": "OptimisationForController"
-      },
-      "OptimiseUserInterface": {
-         "@id": "OptimiseUserInterface"
-      },
-      "OptingInToProcess": {
-         "@id": "OptingInToProcess"
-      },
-      "OptingOutFromProcess": {
-         "@id": "OptingOutFromProcess"
-      },
-      "OralNotice": {
-         "@id": "OralNotice"
-      },
-      "OrganisationalMeasure": {
-         "@id": "OrganisationalMeasure"
-      },
-      "OrganisationalUnit": {
-         "@id": "OrganisationalUnit"
-      },
-      "OrganisationComplianceManagement": {
-         "@id": "OrganisationComplianceManagement"
-      },
-      "OrganisationGovernance": {
-         "@id": "OrganisationGovernance"
-      },
-      "OrganisationRiskManagement": {
-         "@id": "OrganisationRiskManagement"
-      },
-      "Organise": {
-         "@id": "Organise"
-      },
-      "ParentLegalEntity": {
-         "@id": "ParentLegalEntity"
-      },
-      "ParentOfDataSubject": {
-         "@id": "ParentOfDataSubject"
-      },
-      "ParentOfHuman": {
-         "@id": "ParentOfHuman"
-      },
-      "PartialAutomation": {
-         "@id": "PartialAutomation"
-      },
-      "PartiallyCompliant": {
-         "@id": "PartiallyCompliant"
-      },
-      "Participant": {
-         "@id": "Participant"
-      },
-      "PassivelyInvolved": {
-         "@id": "PassivelyInvolved"
-      },
-      "PassiveRight": {
-         "@id": "PassiveRight"
-      },
-      "PasswordAuthentication": {
-         "@id": "PasswordAuthentication"
-      },
-      "Patient": {
-         "@id": "Patient"
-      },
-      "PaymentManagement": {
-         "@id": "PaymentManagement"
-      },
-      "PenetrationTestingMethods": {
-         "@id": "PenetrationTestingMethods"
-      },
-      "Permission": {
-         "@id": "Permission"
-      },
-      "PermissionManagement": {
-         "@id": "PermissionManagement"
-      },
-      "PermissionNotUtilised": {
-         "@id": "PermissionNotUtilised"
-      },
-      "PermissionUtilised": {
-         "@id": "PermissionUtilised"
-      },
-      "PersonalData": {
-         "@id": "PersonalData"
-      },
-      "PersonalDataAudit": {
-         "@id": "PersonalDataAudit"
-      },
-      "PersonalDataHandling": {
-         "@id": "PersonalDataHandling"
-      },
-      "PersonalDataProcess": {
-         "@id": "PersonalDataProcess"
-      },
-      "Personalisation": {
-         "@id": "Personalisation"
-      },
-      "PersonalisedAdvertising": {
-         "@id": "PersonalisedAdvertising"
-      },
-      "PersonalisedBenefits": {
-         "@id": "PersonalisedBenefits"
-      },
-      "PersonalSpace": {
-         "@id": "PersonalSpace"
-      },
-      "PersonnelBehaviourMonitoring": {
-         "@id": "PersonnelBehaviourMonitoring"
-      },
-      "PersonnelHiring": {
-         "@id": "PersonnelHiring"
-      },
-      "PersonnelManagement": {
-         "@id": "PersonnelManagement"
-      },
-      "PersonnelMonitoring": {
-         "@id": "PersonnelMonitoring"
-      },
-      "PersonnelOffboarding": {
-         "@id": "PersonnelOffboarding"
-      },
-      "PersonnelOnboarding": {
-         "@id": "PersonnelOnboarding"
-      },
-      "PersonnelPayment": {
-         "@id": "PersonnelPayment"
-      },
-      "PersonnelPerformanceEvaluation": {
-         "@id": "PersonnelPerformanceEvaluation"
-      },
-      "PersonnelPerformanceManagement": {
-         "@id": "PersonnelPerformanceManagement"
-      },
-      "PersonnelPerformanceMonitoring": {
-         "@id": "PersonnelPerformanceMonitoring"
-      },
-      "PersonnelPerformancePrediction": {
-         "@id": "PersonnelPerformancePrediction"
-      },
-      "PersonnelPromotionManagement": {
-         "@id": "PersonnelPromotionManagement"
-      },
-      "PersonnelTerminationManagement": {
-         "@id": "PersonnelTerminationManagement"
-      },
-      "PersonnelWorkloadManagement": {
-         "@id": "PersonnelWorkloadManagement"
-      },
-      "PhysicalAccessControlMethod": {
-         "@id": "PhysicalAccessControlMethod"
-      },
-      "PhysicalAuthentication": {
-         "@id": "PhysicalAuthentication"
-      },
-      "PhysicalAuthorisation": {
-         "@id": "PhysicalAuthorisation"
-      },
-      "PhysicalDeviceSecurity": {
-         "@id": "PhysicalDeviceSecurity"
-      },
-      "PhysicalInterceptionProtection": {
-         "@id": "PhysicalInterceptionProtection"
-      },
-      "PhysicalInterruptionProtection": {
-         "@id": "PhysicalInterruptionProtection"
-      },
-      "PhysicalMeasure": {
-         "@id": "PhysicalMeasure"
-      },
-      "PhysicalNetworkSecurity": {
-         "@id": "PhysicalNetworkSecurity"
-      },
-      "PhysicalSecureStorage": {
-         "@id": "PhysicalSecureStorage"
-      },
-      "PhysicalSupplySecurity": {
-         "@id": "PhysicalSupplySecurity"
-      },
-      "PhysicalSurveillance": {
-         "@id": "PhysicalSurveillance"
-      },
-      "PIA": {
-         "@id": "PIA"
-      },
-      "Policy": {
-         "@id": "Policy"
-      },
-      "PoliticalCampaign": {
-         "@id": "PoliticalCampaign"
-      },
-      "PostedNotice": {
-         "@id": "PostedNotice"
-      },
-      "PostQuantumCryptography": {
-         "@id": "PostQuantumCryptography"
-      },
-      "PrimaryImportance": {
-         "@id": "PrimaryImportance"
-      },
-      "PrimaryUse": {
-         "@id": "PrimaryUse"
-      },
-      "Principle": {
-         "@id": "Principle"
-      },
-      "PrintedNotice": {
-         "@id": "PrintedNotice"
-      },
-      "PrivacyByDefault": {
-         "@id": "PrivacyByDefault"
-      },
-      "PrivacyByDesign": {
-         "@id": "PrivacyByDesign"
-      },
-      "PrivacyNotice": {
-         "@id": "PrivacyNotice"
-      },
-      "PrivacyPreservingProtocol": {
-         "@id": "PrivacyPreservingProtocol"
-      },
-      "PrivateCommunalSpace": {
-         "@id": "PrivateCommunalSpace"
-      },
-      "PrivateInformationRetrieval": {
-         "@id": "PrivateInformationRetrieval"
-      },
-      "PrivateLocation": {
-         "@id": "PrivateLocation"
-      },
-      "PrivatelyOperatedPublicSpace": {
-         "@id": "PrivatelyOperatedPublicSpace"
-      },
-      "PrivatelyOwnedPublicSpace": {
-         "@id": "PrivatelyOwnedPublicSpace"
-      },
-      "PrivatelyOwnedSpace": {
-         "@id": "PrivatelyOwnedSpace"
-      },
-      "PrivateSectorBody": {
-         "@id": "PrivateSectorBody"
-      },
-      "PrivateSpace": {
-         "@id": "PrivateSpace"
-      },
-      "Processing": {
-         "@id": "Processing"
-      },
-      "ProcessingCondition": {
-         "@id": "ProcessingCondition"
-      },
-      "ProcessingContext": {
-         "@id": "ProcessingContext"
-      },
-      "ProcessingDuration": {
-         "@id": "ProcessingDuration"
-      },
-      "ProcessingLocation": {
-         "@id": "ProcessingLocation"
-      },
-      "ProcessingScale": {
-         "@id": "ProcessingScale"
-      },
-      "ProfessionalConfidentialData": {
-         "@id": "ProfessionalConfidentialData"
-      },
-      "ProfessionalTraining": {
-         "@id": "ProfessionalTraining"
-      },
-      "Profiling": {
-         "@id": "Profiling"
-      },
-      "Prohibition": {
-         "@id": "Prohibition"
-      },
-      "ProhibitionUnviolated": {
-         "@id": "ProhibitionUnviolated"
-      },
-      "ProhibitionViolated": {
-         "@id": "ProhibitionViolated"
-      },
-      "ProtectionOfIPR": {
-         "@id": "ProtectionOfIPR"
-      },
-      "ProtectionOfNationalSecurity": {
-         "@id": "ProtectionOfNationalSecurity"
-      },
-      "ProtectionOfPublicSecurity": {
-         "@id": "ProtectionOfPublicSecurity"
-      },
-      "ProvideConsent": {
-         "@id": "ProvideConsent"
-      },
-      "ProvidedData": {
-         "@id": "ProvidedData"
-      },
-      "ProvidedPersonalData": {
-         "@id": "ProvidedPersonalData"
-      },
-      "ProvideEventRecommendations": {
-         "@id": "ProvideEventRecommendations"
-      },
-      "ProvideOfficialStatistics": {
-         "@id": "ProvideOfficialStatistics"
-      },
-      "ProvidePersonalisedRecommendations": {
-         "@id": "ProvidePersonalisedRecommendations"
-      },
-      "ProvideProductRecommendations": {
-         "@id": "ProvideProductRecommendations"
-      },
-      "ProviderStandardFormContract": {
-         "@id": "ProviderStandardFormContract"
-      },
-      "Pseudonymisation": {
-         "@id": "Pseudonymisation"
-      },
-      "Pseudonymise": {
-         "@id": "Pseudonymise"
-      },
-      "PseudonymisedData": {
-         "@id": "PseudonymisedData"
-      },
-      "PublicBenefit": {
-         "@id": "PublicBenefit"
-      },
-      "PublicDataSource": {
-         "@id": "PublicDataSource"
-      },
-      "PublicInterest": {
-         "@id": "PublicInterest"
-      },
-      "PublicInterestCompleted": {
-         "@id": "PublicInterestCompleted"
-      },
-      "PublicInterestObjected": {
-         "@id": "PublicInterestObjected"
-      },
-      "PublicInterestOngoing": {
-         "@id": "PublicInterestOngoing"
-      },
-      "PublicInterestPending": {
-         "@id": "PublicInterestPending"
-      },
-      "PublicInterestStatus": {
-         "@id": "PublicInterestStatus"
-      },
-      "PublicLocation": {
-         "@id": "PublicLocation"
-      },
-      "PubliclyAccessibleSpace": {
-         "@id": "PubliclyAccessibleSpace"
-      },
-      "PubliclyOwnedSpace": {
-         "@id": "PubliclyOwnedSpace"
-      },
-      "PublicPolicyMaking": {
-         "@id": "PublicPolicyMaking"
-      },
-      "PublicRegisterOfEntities": {
-         "@id": "PublicRegisterOfEntities"
-      },
-      "PublicRelations": {
-         "@id": "PublicRelations"
-      },
-      "PublicSectorBody": {
-         "@id": "PublicSectorBody"
-      },
-      "PublicSpace": {
-         "@id": "PublicSpace"
-      },
-      "Purpose": {
-         "@id": "Purpose"
-      },
-      "QuantumCryptography": {
-         "@id": "QuantumCryptography"
-      },
-      "Query": {
-         "@id": "Query"
-      },
-      "RandomLocation": {
-         "@id": "RandomLocation"
-      },
-      "ReaffirmConsent": {
-         "@id": "ReaffirmConsent"
-      },
-      "RecertificationPolicy": {
-         "@id": "RecertificationPolicy"
-      },
-      "RecipientInformed": {
-         "@id": "RecipientInformed"
-      },
-      "RecipientUninformed": {
-         "@id": "RecipientUninformed"
-      },
-      "Recommendation": {
-         "@id": "Recommendation"
-      },
-      "RecommendationFollowed": {
-         "@id": "RecommendationFollowed"
-      },
-      "RecommendationNotFollowed": {
-         "@id": "RecommendationNotFollowed"
-      },
-      "RecordManagement": {
-         "@id": "RecordManagement"
-      },
-      "RecordsOfActivities": {
-         "@id": "RecordsOfActivities"
-      },
-      "RecruitmentAdvertising": {
-         "@id": "RecruitmentAdvertising"
-      },
-      "RecruitmentApplicantBackgroundCheck": {
-         "@id": "RecruitmentApplicantBackgroundCheck"
-      },
-      "RecruitmentApplicantCriminalBackgroundCheck": {
-         "@id": "RecruitmentApplicantCriminalBackgroundCheck"
-      },
-      "RecruitmentApplicantInformationAuthentication": {
-         "@id": "RecruitmentApplicantInformationAuthentication"
-      },
-      "RecruitmentApplicantSelection": {
-         "@id": "RecruitmentApplicantSelection"
-      },
-      "RecruitmentApplicationAnalysis": {
-         "@id": "RecruitmentApplicationAnalysis"
-      },
-      "RecruitmentApplicationManagement": {
-         "@id": "RecruitmentApplicationManagement"
-      },
-      "RecruitmentApplicationScreening": {
-         "@id": "RecruitmentApplicationScreening"
-      },
-      "RecruitmentInterviewAnalysis": {
-         "@id": "RecruitmentInterviewAnalysis"
-      },
-      "RecruitmentInterviewAssessment": {
-         "@id": "RecruitmentInterviewAssessment"
-      },
-      "RecruitmentInterviewManagement": {
-         "@id": "RecruitmentInterviewManagement"
-      },
-      "RecruitmentInterviewScheduling": {
-         "@id": "RecruitmentInterviewScheduling"
-      },
-      "RecruitmentManagement": {
-         "@id": "RecruitmentManagement"
-      },
-      "RecruitmentTargetedAdvertising": {
-         "@id": "RecruitmentTargetedAdvertising"
-      },
-      "Reformat": {
-         "@id": "Reformat"
-      },
-      "RefuseConsent": {
-         "@id": "RefuseConsent"
-      },
-      "RefuseContract": {
-         "@id": "RefuseContract"
-      },
-      "RegionalAuthority": {
-         "@id": "RegionalAuthority"
-      },
-      "RegionalScale": {
-         "@id": "RegionalScale"
-      },
-      "RegulatorySandbox": {
-         "@id": "RegulatorySandbox"
-      },
-      "ReligiousAssociations": {
-         "@id": "ReligiousAssociations"
-      },
-      "RemoteLocation": {
-         "@id": "RemoteLocation"
-      },
-      "Remove": {
-         "@id": "Remove"
-      },
-      "RenewedConsentGiven": {
-         "@id": "RenewedConsentGiven"
-      },
-      "RepairImpairments": {
-         "@id": "RepairImpairments"
-      },
-      "Representative": {
-         "@id": "Representative"
-      },
-      "RequestAccepted": {
-         "@id": "RequestAccepted"
-      },
-      "RequestAcknowledged": {
-         "@id": "RequestAcknowledged"
-      },
-      "RequestActionDelayed": {
-         "@id": "RequestActionDelayed"
-      },
-      "RequestedServiceProvision": {
-         "@id": "RequestedServiceProvision"
-      },
-      "RequestFulfilled": {
-         "@id": "RequestFulfilled"
-      },
-      "RequestInitiated": {
-         "@id": "RequestInitiated"
-      },
-      "RequestRejected": {
-         "@id": "RequestRejected"
-      },
-      "RequestRequiredActionPerformed": {
-         "@id": "RequestRequiredActionPerformed"
-      },
-      "RequestRequiresAction": {
-         "@id": "RequestRequiresAction"
-      },
-      "RequestStatus": {
-         "@id": "RequestStatus"
-      },
-      "RequestStatusQuery": {
-         "@id": "RequestStatusQuery"
-      },
-      "RequestUnfulfilled": {
-         "@id": "RequestUnfulfilled"
-      },
-      "Required": {
-         "@id": "Required"
-      },
-      "ResearchAndDevelopment": {
-         "@id": "ResearchAndDevelopment"
-      },
-      "ResidualRisk": {
-         "@id": "ResidualRisk"
-      },
-      "Restrict": {
-         "@id": "Restrict"
-      },
-      "Retrieve": {
-         "@id": "Retrieve"
-      },
-      "ReuseCompatibility": {
-         "@id": "ReuseCompatibility"
-      },
-      "ReversingProcessEffects": {
-         "@id": "ReversingProcessEffects"
-      },
-      "ReversingProcessInput": {
-         "@id": "ReversingProcessInput"
-      },
-      "ReversingProcessOutput": {
-         "@id": "ReversingProcessOutput"
-      },
-      "ReviewImpactAssessment": {
-         "@id": "ReviewImpactAssessment"
-      },
-      "ReviewProcedure": {
-         "@id": "ReviewProcedure"
-      },
-      "Right": {
-         "@id": "Right"
-      },
-      "RightExerciseActivity": {
-         "@id": "RightExerciseActivity"
-      },
-      "RightExerciseNotice": {
-         "@id": "RightExerciseNotice"
-      },
-      "RightExerciseRecord": {
-         "@id": "RightExerciseRecord"
-      },
-      "RightFulfilmentNotice": {
-         "@id": "RightFulfilmentNotice"
-      },
-      "RightNonFulfilmentNotice": {
-         "@id": "RightNonFulfilmentNotice"
-      },
-      "RightNotice": {
-         "@id": "RightNotice"
-      },
-      "RightsFulfilment": {
-         "@id": "RightsFulfilment"
-      },
-      "RightsImpactAssessment": {
-         "@id": "RightsImpactAssessment"
-      },
-      "RightsManagement": {
-         "@id": "RightsManagement"
-      },
-      "Risk": {
-         "@id": "Risk"
-      },
-      "RiskAssessment": {
-         "@id": "RiskAssessment"
-      },
-      "RiskConcept": {
-         "@id": "RiskConcept"
-      },
-      "RiskLevel": {
-         "@id": "RiskLevel"
-      },
-      "RiskMitigationMeasure": {
-         "@id": "RiskMitigationMeasure"
-      },
-      "RNGPseudonymisation": {
-         "@id": "RNGPseudonymisation"
-      },
-      "ROPA": {
-         "@id": "ROPA"
-      },
-      "Rule": {
-         "@id": "Rule"
-      },
-      "RuleFulfilled": {
-         "@id": "RuleFulfilled"
-      },
-      "RuleFulfilmentStatus": {
-         "@id": "RuleFulfilmentStatus"
-      },
-      "RuleUnfulfilled": {
-         "@id": "RuleUnfulfilled"
-      },
-      "RuleViolated": {
-         "@id": "RuleViolated"
-      },
-      "Safeguard": {
-         "@id": "Safeguard"
-      },
-      "SafeguardForDataTransfer": {
-         "@id": "SafeguardForDataTransfer"
-      },
-      "Scale": {
-         "@id": "Scale"
-      },
-      "ScientificResearch": {
-         "@id": "ScientificResearch"
-      },
-      "Scope": {
-         "@id": "Scope"
-      },
-      "ScoringOfIndividuals": {
-         "@id": "ScoringOfIndividuals"
-      },
-      "Screen": {
-         "@id": "Screen"
-      },
-      "Seal": {
-         "@id": "Seal"
-      },
-      "SearchFunctionalities": {
-         "@id": "SearchFunctionalities"
-      },
-      "SecondaryImportance": {
-         "@id": "SecondaryImportance"
-      },
-      "SecondaryUse": {
-         "@id": "SecondaryUse"
-      },
-      "SecretSharingSchemes": {
-         "@id": "SecretSharingSchemes"
-      },
-      "Sector": {
-         "@id": "Sector"
-      },
-      "SecureMultiPartyComputation": {
-         "@id": "SecureMultiPartyComputation"
-      },
-      "SecureProcessingEnvironment": {
-         "@id": "SecureProcessingEnvironment"
-      },
-      "SecurityAssessment": {
-         "@id": "SecurityAssessment"
-      },
-      "SecurityAudit": {
-         "@id": "SecurityAudit"
-      },
-      "SecurityIncidentNotice": {
-         "@id": "SecurityIncidentNotice"
-      },
-      "SecurityIncidentNotification": {
-         "@id": "SecurityIncidentNotification"
-      },
-      "SecurityIncidentRecord": {
-         "@id": "SecurityIncidentRecord"
-      },
-      "SecurityKnowledgeTraining": {
-         "@id": "SecurityKnowledgeTraining"
-      },
-      "SecurityMethod": {
-         "@id": "SecurityMethod"
-      },
-      "SecurityProcedure": {
-         "@id": "SecurityProcedure"
-      },
-      "SecurityRoleProcedures": {
-         "@id": "SecurityRoleProcedures"
-      },
-      "SellDataToThirdParties": {
-         "@id": "SellDataToThirdParties"
-      },
-      "SellInsightsFromData": {
-         "@id": "SellInsightsFromData"
-      },
-      "SellProducts": {
-         "@id": "SellProducts"
-      },
-      "SellProductsToDataSubject": {
-         "@id": "SellProductsToDataSubject"
-      },
-      "SemiPrivateSpace": {
-         "@id": "SemiPrivateSpace"
-      },
-      "SensitiveData": {
-         "@id": "SensitiveData"
-      },
-      "SensitiveNonPersonalData": {
-         "@id": "SensitiveNonPersonalData"
-      },
-      "SensitivePersonalData": {
-         "@id": "SensitivePersonalData"
-      },
-      "SensitivityLevel": {
-         "@id": "SensitivityLevel"
-      },
-      "ServiceAccessDetermination": {
-         "@id": "ServiceAccessDetermination"
-      },
-      "ServiceConsumer": {
-         "@id": "ServiceConsumer"
-      },
-      "ServiceLevelAgreement": {
-         "@id": "ServiceLevelAgreement"
-      },
-      "ServiceManagement": {
-         "@id": "ServiceManagement"
-      },
-      "ServiceMonitoring": {
-         "@id": "ServiceMonitoring"
-      },
-      "ServiceOptimisation": {
-         "@id": "ServiceOptimisation"
-      },
-      "ServicePersonalisation": {
-         "@id": "ServicePersonalisation"
-      },
-      "ServiceProvider": {
-         "@id": "ServiceProvider"
-      },
-      "ServiceProvision": {
-         "@id": "ServiceProvision"
-      },
-      "ServiceRegistration": {
-         "@id": "ServiceRegistration"
-      },
-      "ServiceUsageAnalytics": {
-         "@id": "ServiceUsageAnalytics"
-      },
-      "Severity": {
-         "@id": "Severity"
-      },
-      "Share": {
-         "@id": "Share"
-      },
-      "SingleSignOn": {
-         "@id": "SingleSignOn"
-      },
-      "SingularDataVolume": {
-         "@id": "SingularDataVolume"
-      },
-      "SingularFrequency": {
-         "@id": "SingularFrequency"
-      },
-      "SingularScaleOfDataSubjects": {
-         "@id": "SingularScaleOfDataSubjects"
-      },
-      "SmallDataVolume": {
-         "@id": "SmallDataVolume"
-      },
-      "SmallScaleOfDataSubjects": {
-         "@id": "SmallScaleOfDataSubjects"
-      },
-      "SmallScaleProcessing": {
-         "@id": "SmallScaleProcessing"
-      },
-      "SMEOrganisation": {
-         "@id": "SMEOrganisation"
-      },
-      "SocialMediaMarketing": {
-         "@id": "SocialMediaMarketing"
-      },
-      "SpecialCategoryPersonalData": {
-         "@id": "SpecialCategoryPersonalData"
-      },
-      "SporadicDataVolume": {
-         "@id": "SporadicDataVolume"
-      },
-      "SporadicFrequency": {
-         "@id": "SporadicFrequency"
-      },
-      "SporadicScaleOfDataSubjects": {
-         "@id": "SporadicScaleOfDataSubjects"
-      },
-      "StaffTraining": {
-         "@id": "StaffTraining"
-      },
-      "Standard": {
-         "@id": "Standard"
-      },
-      "StandardFormContract": {
-         "@id": "StandardFormContract"
-      },
-      "StandardsConformance": {
-         "@id": "StandardsConformance"
-      },
-      "StartupOrganisation": {
-         "@id": "StartupOrganisation"
-      },
-      "StatisticalConfidentialityAgreement": {
-         "@id": "StatisticalConfidentialityAgreement"
-      },
-      "StatisticallyConfidentialData": {
-         "@id": "StatisticallyConfidentialData"
-      },
-      "Status": {
-         "@id": "Status"
-      },
-      "StorageCondition": {
-         "@id": "StorageCondition"
-      },
-      "StorageDeletion": {
-         "@id": "StorageDeletion"
-      },
-      "StorageDuration": {
-         "@id": "StorageDuration"
-      },
-      "StorageLocation": {
-         "@id": "StorageLocation"
-      },
-      "StorageRestoration": {
-         "@id": "StorageRestoration"
-      },
-      "Store": {
-         "@id": "Store"
-      },
-      "Structure": {
-         "@id": "Structure"
-      },
-      "Student": {
-         "@id": "Student"
-      },
-      "SubProcessorAgreement": {
-         "@id": "SubProcessorAgreement"
-      },
-      "Subscriber": {
-         "@id": "Subscriber"
-      },
-      "SubsidiaryLegalEntity": {
-         "@id": "SubsidiaryLegalEntity"
-      },
-      "SupportContractNegotiation": {
-         "@id": "SupportContractNegotiation"
-      },
-      "SupportEntityDecisionMaking": {
-         "@id": "SupportEntityDecisionMaking"
-      },
-      "SupportExchangeOfViews": {
-         "@id": "SupportExchangeOfViews"
-      },
-      "SupportInformedConsentDecision": {
-         "@id": "SupportInformedConsentDecision"
-      },
-      "SupraNationalAuthority": {
-         "@id": "SupraNationalAuthority"
-      },
-      "SupraNationalUnion": {
-         "@id": "SupraNationalUnion"
-      },
-      "SymmetricCryptography": {
-         "@id": "SymmetricCryptography"
-      },
-      "SymmetricEncryption": {
-         "@id": "SymmetricEncryption"
-      },
-      "SyntheticData": {
-         "@id": "SyntheticData"
-      },
-      "SystematicMonitoring": {
-         "@id": "SystematicMonitoring"
-      },
-      "TargetedAdvertising": {
-         "@id": "TargetedAdvertising"
-      },
-      "TechnicalMeasure": {
-         "@id": "TechnicalMeasure"
-      },
-      "TechnicalOrganisationalMeasure": {
-         "@id": "TechnicalOrganisationalMeasure"
-      },
-      "TechnicalServiceProvision": {
-         "@id": "TechnicalServiceProvision"
-      },
-      "TechnicalStandard": {
-         "@id": "TechnicalStandard"
-      },
-      "Technology": {
-         "@id": "Technology"
-      },
-      "TemporalDuration": {
-         "@id": "TemporalDuration"
-      },
-      "TerminateContract": {
-         "@id": "TerminateContract"
-      },
-      "TermsOfService": {
-         "@id": "TermsOfService"
-      },
-      "ThirdCountry": {
-         "@id": "ThirdCountry"
-      },
-      "ThirdParty": {
-         "@id": "ThirdParty"
-      },
-      "ThirdPartyAgreement": {
-         "@id": "ThirdPartyAgreement"
-      },
-      "ThirdPartyContract": {
-         "@id": "ThirdPartyContract"
-      },
-      "ThirdPartyDataSource": {
-         "@id": "ThirdPartyDataSource"
-      },
-      "ThirdPartySecurityProcedures": {
-         "@id": "ThirdPartySecurityProcedures"
-      },
-      "Tourist": {
-         "@id": "Tourist"
-      },
-      "Tracking": {
-         "@id": "Tracking"
-      },
-      "TrackingByFirstParty": {
-         "@id": "TrackingByFirstParty"
-      },
-      "TrackingByThirdParty": {
-         "@id": "TrackingByThirdParty"
-      },
-      "Transfer": {
-         "@id": "Transfer"
-      },
-      "Transform": {
-         "@id": "Transform"
-      },
-      "Transmit": {
-         "@id": "Transmit"
-      },
-      "TrustedComputing": {
-         "@id": "TrustedComputing"
-      },
-      "TrustedExecutionEnvironment": {
-         "@id": "TrustedExecutionEnvironment"
-      },
-      "UnacceptableRule": {
-         "@id": "UnacceptableRule"
-      },
-      "UncategorisedData": {
-         "@id": "UncategorisedData"
-      },
-      "Unexpected": {
-         "@id": "Unexpected"
-      },
-      "UninformedConsent": {
-         "@id": "UninformedConsent"
-      },
-      "Unintended": {
-         "@id": "Unintended"
-      },
-      "UnknownApplicability": {
-         "@id": "UnknownApplicability"
-      },
-      "Unlawful": {
-         "@id": "Unlawful"
-      },
-      "UnstructuredData": {
-         "@id": "UnstructuredData"
-      },
-      "UntilEventDuration": {
-         "@id": "UntilEventDuration"
-      },
-      "UntilTimeDuration": {
-         "@id": "UntilTimeDuration"
-      },
-      "UnverifiedData": {
-         "@id": "UnverifiedData"
-      },
-      "UsageControl": {
-         "@id": "UsageControl"
-      },
-      "Use": {
-         "@id": "Use"
-      },
-      "UserInterfacePersonalisation": {
-         "@id": "UserInterfacePersonalisation"
-      },
-      "UseSyntheticData": {
-         "@id": "UseSyntheticData"
-      },
-      "VariableLocation": {
-         "@id": "VariableLocation"
-      },
-      "VendorManagement": {
-         "@id": "VendorManagement"
-      },
-      "VendorPayment": {
-         "@id": "VendorPayment"
-      },
-      "VendorRecordsManagement": {
-         "@id": "VendorRecordsManagement"
-      },
-      "VendorSelectionAssessment": {
-         "@id": "VendorSelectionAssessment"
-      },
-      "Verification": {
-         "@id": "Verification"
-      },
-      "VerifiedData": {
-         "@id": "VerifiedData"
-      },
-      "VirtualisationSecurity": {
-         "@id": "VirtualisationSecurity"
-      },
-      "Visitor": {
-         "@id": "Visitor"
-      },
-      "VitalInterest": {
-         "@id": "VitalInterest"
-      },
-      "VitalInterestCompleted": {
-         "@id": "VitalInterestCompleted"
-      },
-      "VitalInterestObjected": {
-         "@id": "VitalInterestObjected"
-      },
-      "VitalInterestOfDataSubject": {
-         "@id": "VitalInterestOfDataSubject"
-      },
-      "VitalInterestOfNaturalPerson": {
-         "@id": "VitalInterestOfNaturalPerson"
-      },
-      "VitalInterestOngoing": {
-         "@id": "VitalInterestOngoing"
-      },
-      "VitalInterestPending": {
-         "@id": "VitalInterestPending"
-      },
-      "VitalInterestStatus": {
-         "@id": "VitalInterestStatus"
-      },
-      "VulnerabilityTestingMethods": {
-         "@id": "VulnerabilityTestingMethods"
-      },
-      "VulnerableDataSubject": {
-         "@id": "VulnerableDataSubject"
-      },
-      "VulnerableHuman": {
-         "@id": "VulnerableHuman"
-      },
-      "WebBrowserSecurity": {
-         "@id": "WebBrowserSecurity"
-      },
-      "WebSecurityProtocols": {
-         "@id": "WebSecurityProtocols"
-      },
-      "WirelessSecurityProtocols": {
-         "@id": "WirelessSecurityProtocols"
-      },
-      "WithdrawConsent": {
-         "@id": "WithdrawConsent"
-      },
-      "WithdrawingFromProcess": {
-         "@id": "WithdrawingFromProcess"
-      },
-      "WithinDevice": {
-         "@id": "WithinDevice"
-      },
-      "WithinPhysicalEnvironment": {
-         "@id": "WithinPhysicalEnvironment"
-      },
-      "WithinVirtualEnvironment": {
-         "@id": "WithinVirtualEnvironment"
-      },
-      "ZeroKnowledgeAuthentication": {
-         "@id": "ZeroKnowledgeAuthentication"
+      "DpvWebPage": {
+         "@id": "sdo:WebPage"
       }
    }
 }

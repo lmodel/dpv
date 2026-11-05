@@ -1,6 +1,0 @@
-# __unmapped__:
-#   https://w3id.org/lmodel/dpvhasConsequence: _:n4bb9a7f6797942c18145c4b63a7d3287b1
-#   https://w3id.org/lmodel/dpvhasStatus: risk:IncidentConcluded
-#   skos:broader: risk:DataBreach
-id: ex:IN11
-refers_to_risk: ex:R2DB

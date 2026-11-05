@@ -1,5 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: Processing-invalid-curie — invalid CURIE prefix validation not yet in schema)
-id: 12345
-has_purpose: invalid_prefix:concept
-has_lawful_basis: dpv:A61a

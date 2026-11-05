@@ -1,0 +1,5 @@
+---
+# Fails at: /prefLabel
+id: dpv:Example
+prefLabel:
+  - An example

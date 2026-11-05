@@ -1,0 +1,17 @@
+---
+id: pd:ProfessionalExperience
+rdf_type:
+  - pd:PersonalData
+prefLabel: Professional Experience
+definition: Information about professional experiences
+broader:
+  - pd:Professional
+inScheme:
+  - pd:extended-classes
+isDefinedBy:
+  - 'pd:'
+term_status: accepted
+created:
+  - '2026-02-09'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

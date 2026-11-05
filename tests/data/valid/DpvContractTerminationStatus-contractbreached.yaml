@@ -1,0 +1,20 @@
+---
+id: dpv:ContractBreached
+rdf_type:
+  - dpv:ContractTerminationStatus
+prefLabel: Contract Breached
+definition: Status representing contract being breached where its terms are not fulfilled or are violated
+  with legal consequences
+broader:
+  - dpv:ContractTerminationStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-01-09'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

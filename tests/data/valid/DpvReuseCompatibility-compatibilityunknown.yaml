@@ -1,0 +1,23 @@
+---
+id: dpv:CompatibilityUnknown
+rdf_type:
+  - dpv:ReuseCompatibility
+prefLabel: Compatibility Unknown
+definition: Status indicating the compatibility of the context with an earlier context is currently unknown
+broader:
+  - dpv:ReuseCompatibility
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: modified
+created:
+  - '2025-06-19'
+modified: '2026-02-07'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

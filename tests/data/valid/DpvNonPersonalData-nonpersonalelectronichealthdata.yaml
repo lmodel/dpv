@@ -1,0 +1,19 @@
+---
+id: eu-ehds:NonPersonalElectronicHealthData
+rdf_type:
+  - dpv:NonPersonalData
+prefLabel: Non-Personal Electronic Health Data
+definition: Information about electronic health data that is not personal data, including anonymised data
+broader:
+  - sector-health:NonPersonalElectronicHealthData
+inScheme:
+  - eu-ehds:data-classes
+isDefinedBy:
+  - 'eu-ehds:'
+term_status: accepted
+created:
+  - '2025-10-28'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+source:
+  - EHDS Art.2.2(b)

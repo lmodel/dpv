@@ -1,0 +1,15 @@
+---
+id: dpv:LegalObligationCompleted
+rdf_type:
+  - dpv:LegalObligationStatus
+prefLabel: Legal ObligationCompleted
+definition: Status where the legal obligation has been completed
+broader:
+  - dpv:LegalObligationStatus
+inScheme:
+  - dpv:legal-basis-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

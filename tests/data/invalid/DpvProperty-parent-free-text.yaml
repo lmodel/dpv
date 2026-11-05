@@ -1,0 +1,5 @@
+---
+# Fails at: /subPropertyOf/0
+id: dpv:hasExample
+subPropertyOf:
+  - a parent

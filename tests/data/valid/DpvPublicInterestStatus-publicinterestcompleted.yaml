@@ -1,0 +1,15 @@
+---
+id: dpv:PublicInterestCompleted
+rdf_type:
+  - dpv:PublicInterestStatus
+prefLabel: Public Interest Completed
+definition: Status where the public interest activity has been completed
+broader:
+  - dpv:PublicInterestStatus
+inScheme:
+  - dpv:legal-basis-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

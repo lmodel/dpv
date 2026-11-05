@@ -1,3 +1,0 @@
-id:  # null id fails type check (id must be a uri_or_curie string)
-# (original intent: circular self-reference — graph cycle not detectable by JSON Schema)
-risk_type: ex:risk-self-ref

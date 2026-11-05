@@ -1,0 +1,17 @@
+---
+id: risk:3RiskLevels
+rdf_type:
+  - dpv:RiskLevel
+prefLabel: 3 Risk Levels
+definition: Scale with 3 Risk Levels from High to Low
+broader:
+  - dpv:RiskLevel
+inScheme:
+  - risk:risk-levels-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2022-08-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

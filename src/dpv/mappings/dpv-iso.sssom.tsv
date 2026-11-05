@@ -1,18 +1,17 @@
 # mapping_set_id: https://w3id.org/lmodel/dpv/mappings/dpv-iso
-# mapping_set_description: DPV ↔ ISO/IEC 29100:2024 term alignments (curated upstream).
-# mapping_set_version: 1.0
-# license: https://creativecommons.org/licenses/by/4.0/
+# mapping_set_title: DPV's own ISO mappings
+# mapping_set_description: ISO/IEC 29100:2024 terms DPV's editors align with DPV 2.3.
+# mapping_set_version: "2.3"
+# mapping_set_source: https://w3id.org/dpv/mappings/iso
+# license: https://www.w3.org/copyright/software-license-2023/
 # curie_map:
-#   dpv: https://w3id.org/lmodel/dpv/
-#   dpv_upstream: https://w3id.org/dpv#
-#   skos: http://www.w3.org/2004/02/skos/core#
-#   iso29100: https://w3id.org/lmodel/iso29100/
-#   odrl: http://www.w3.org/ns/odrl/2/
+#   dpv: https://w3id.org/dpv#
+#   dpv-iso: https://w3id.org/dpv/mappings/iso#
 #   semapv: https://w3id.org/semapv/vocab/
-
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	mapping_source
-dpv:DataController		skos:exactMatch	iso29100:PIIController	PII Controller	semapv:ManualMappingCuration	ISO/IEC 29100:2024
-dpv:DataProcessor		skos:exactMatch	iso29100:PIIProcessor	PII Processor	semapv:ManualMappingCuration	ISO/IEC 29100:2024
-dpv:DataSubject		skos:exactMatch	iso29100:PIIPrincipal	PII Principal	semapv:ManualMappingCuration	ISO/IEC 29100:2024
-dpv:InformedConsent		skos:exactMatch	iso29100:Consent	Consent	semapv:ManualMappingCuration	ISO/IEC 29100:2024
-dpv:PersonalData		skos:broader	iso29100:PII	Personally Identifiable Information (PII)	semapv:ManualMappingCuration	ISO/IEC 29100:2024
+#   skos: http://www.w3.org/2004/02/skos/core#
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	comment
+dpv:DataController	Data Controller	skos:exactMatch	dpv-iso:PIIController	PII Controller	semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	DPV names the source as ISO/IEC 29100:2024.
+dpv:DataProcessor	Data Processor	skos:exactMatch	dpv-iso:PIIProcessor	PII Processor	semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	DPV names the source as ISO/IEC 29100:2024.
+dpv:DataSubject	Data Subject	skos:exactMatch	dpv-iso:PIIPrincipal	PII Principal	semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	DPV names the source as ISO/IEC 29100:2024.
+dpv:InformedConsent	Informed Consent	skos:exactMatch	dpv-iso:Consent	Consent	semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	DPV names the source as ISO/IEC 29100:2024.
+dpv:PersonalData	Personal Data	skos:broadMatch	dpv-iso:PII	Personally Identifiable Information (PII)	semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	DPV names the source as ISO/IEC 29100:2024.

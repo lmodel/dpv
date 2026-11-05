@@ -1,0 +1,25 @@
+---
+id: eu-aiact:HighRiskAISystem-AnnexI-1
+rdf_type:
+  - eu-aiact:HighRiskAISystem
+prefLabel: High-Risk AI System - Annex I(1)
+definition: 'High-risk AI system according to Annex I, point 1: AI system that is intended to be used
+  as a safety component of a product, or the AI system is itself a product, covered by Directive 2006/42/EC
+  of the European Parliament and of the Council of 17 May 2006 on machinery, and amending Directive 95/16/EC
+  (OJ L 157, 9.6.2006, p. 24)'
+broader:
+  - eu-aiact:HighRiskAISystem-A6-1
+inScheme:
+  - eu-aiact:highrisk-systems-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2026-02-09'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - AIA(Anx.I)
+eu_aiact_hasRiskLevel:
+  - eu-aiact:RiskLevelHigh-A6-1

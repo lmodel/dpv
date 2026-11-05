@@ -1,0 +1,15 @@
+---
+id: ieee-7012:AgentAllowsRequests
+rdf_type:
+  - ieee-7012:AgentRequestBehaviour
+prefLabel: Agent Allows Requests
+definition: Term that indicates the Agent should allow requests to be made
+broader:
+  - ieee-7012:AgentRequestBehaviour
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

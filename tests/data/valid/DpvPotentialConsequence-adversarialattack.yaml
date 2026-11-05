@@ -1,0 +1,21 @@
+---
+id: ai:AdversarialAttack
+rdf_type:
+  - dpv:RiskConcept
+  - risk:IntegrityConcept
+  - risk:PotentialConsequence
+  - risk:PotentialRisk
+  - risk:PotentialRiskSource
+prefLabel: Adversarial Attack
+definition: Inputs designed to cause the model to make a mistake
+broader:
+  - ai:SecurityAttack
+inScheme:
+  - ai:risks-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

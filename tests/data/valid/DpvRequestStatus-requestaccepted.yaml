@@ -1,0 +1,17 @@
+---
+id: dpv:RequestAccepted
+rdf_type:
+  - dpv:RequestStatus
+prefLabel: Request Accepted
+definition: State of a request being accepted towards fulfilment
+broader:
+  - dpv:RequestStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-11-30'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

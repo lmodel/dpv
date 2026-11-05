@@ -1,0 +1,132 @@
+Data Privacy Vocabulary (DPV) LinkML Schema (dpv)
+Copyright 2026 Noel McLoughlin
+
+The code in this repository is licensed under the Apache License,
+Version 2.0 (see LICENSE). Some of the content it carries is third-party
+work under its own terms, listed below.
+
+Data Privacy Vocabulary (DPV)
+-----------------------------
+
+This repository includes material copied from and derived from the Data
+Privacy Vocabulary (DPV) 2.3, https://w3id.org/dpv/2.3, of the W3C Data Privacy
+Vocabularies and Controls Community Group, whose files name their contributors
+and the citation they ask for. Copyright (c) 2026 World Wide Web Consortium.
+https://www.w3.org/copyright/software-license-2023/
+
+This project is not endorsed by the Community Group or by W3C.
+
+upstream/ holds the release's Turtle files, examples, two mapping folders'
+files and LICENSE.md, unchanged, at the tag dpv-2.3, commit cbcd215. A DPV
+vocabulary header names the W3C Document License
+(https://www.w3.org/copyright/document-license-2023/), and the repository's
+LICENSE.md names the W3C Software and Document License, reproduced below.
+
+The changes this project made in what it derives from those files:
+
+- src/dpv/data/ restates each vocabulary, concept scheme, term and example as
+  a YAML record. It leaves out the statements that say how DPV's site publishes
+  a file (prof:hasResource and the resource descriptors), skos:narrower and
+  schema:domainIncludes and schema:rangeIncludes, which tests/test_coverage.py
+  shows follow from what the records hold.
+- src/dpv/data/dpv-2.3-examples.yaml also restates each example file's
+  statements as records. An example file declares no prefixes, so this project
+  supplies them, and a blank node takes a label of this project's. Three files
+  that do not parse hold a note of the fault and no statements.
+- src/dpv/schema/ gives each DPV property a slot and each kind of term a class,
+  with DPV's own label and definition. dpv_core.yaml and the converter's tables
+  add this project's own titles and descriptions.
+- src/dpv/mappings/ restates DPV's ISO and ODRL mapping files as SSSOM.
+- The source of a term's text is DPV. DPV's definitions may cite or follow the
+  laws and standards they describe, and those keep their own terms. The location
+  vocabulary's codes and addresses are as DPV publishes them, and this project
+  read no ISO publication in making any of this.
+
+The licence DPV's LICENSE.md reproduces reads:
+
+  By obtaining and/or copying this work, you (the licensee) agree that you
+  have read, understood, and will comply with the following terms and
+  conditions.
+
+  Permission to copy, modify, and distribute this work, with or without
+  modification, for any purpose and without fee or royalty is hereby
+  granted, provided that you include the following on ALL copies of the work
+  or portions thereof, including modifications:
+
+  - The full text of this NOTICE in a location viewable to users of the
+  redistributed or derivative work.
+
+  - Any pre-existing intellectual property disclaimers, notices, or terms
+  and conditions. If none exist, the W3C software and document short notice
+  (https://www.w3.org/Consortium/Legal/2023/copyright-software-short-
+  notice.html) should be included.
+
+  - Notice of any changes or modifications, through a copyright statement on
+  the new code or document such as "This software or document includes
+  material copied from or derived from [title and URI of the W3C document].
+  Copyright © [$year-of-document] World Wide Web Consortium
+  (https://www.w3.org/). <https://www.w3.org/copyright/software-
+  license-2023/>"
+
+  THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO
+  REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+  LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR
+  PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENT WILL NOT INFRINGE ANY
+  THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+
+  COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+  CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
+
+  The name and trademarks of copyright holders may NOT be used in
+  advertising or publicity pertaining to the work without specific, written
+  prior permission. Title to copyright in this work will at all times remain
+  with copyright holders.
+
+linkml-project-copier
+---------------------
+
+This project was generated from linkml-project-copier
+(https://github.com/linkml/linkml-project-copier), and its justfile,
+configuration and documentation scaffolding derive from that template:
+
+  The MIT License (MIT)
+  Copyright (c) 2025 David Linke
+
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to permit
+  persons to whom the Software is furnished to do so, subject to the
+  following conditions:
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+  NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+  DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+  USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Knowledge bundle
+----------------
+
+This product maintains its documentation as a Linked Open Knowledge Format
+(LOKF) bundle under .lokf/: https://lokf.nolan-nichols.com/specification/
+
+LOKF is a semantic profile of the Open Knowledge Format (OKF) specification
+by Google Cloud Platform:
+https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md
+
+The scripts under .lokf/scripts/ and .lokf/m365/ and the
+knowledge-librarian, knowledge-registrar, knowledge-release and
+knowledge-sync workflows under .github/workflows/ are copies of the
+ktl-sidecar templates in knowledge-trust-ladder
+(https://github.com/noelmcloughlin/knowledge-trust-ladder). The site under
+website/ and the knowledge-website workflow derive from the ktl-website
+templates in the same repository, and website/NOTICE lists the part
+adapted from the LOKF toolkit's site. All of them are licensed under the
+Apache License, Version 2.0.

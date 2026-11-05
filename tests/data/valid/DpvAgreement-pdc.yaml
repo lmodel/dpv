@@ -1,0 +1,15 @@
+---
+id: ieee-7012:PDC
+rdf_type:
+  - ieee-7012:Agreement
+prefLabel: Personal Data Contribution
+definition: Term that indicates access is proactively provided by the person
+broader:
+  - ieee-7012:Agreement
+inScheme:
+  - ieee-7012:agreement-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

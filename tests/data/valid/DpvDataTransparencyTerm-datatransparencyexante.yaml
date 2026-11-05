@@ -1,0 +1,17 @@
+---
+id: ieee-7012:DataTransparencyExAnte
+rdf_type:
+  - dpv:Obligation
+  - ieee-7012:DataTransparencyTerm
+prefLabel: Data Transparency Ex Ante
+definition: Term that indicates transparency regarding data involved and its source is obligated ahead
+  of intended process i.e. ex-ante transparency regarding data involved and its source
+broader:
+  - ieee-7012:DataTransparencyRequired
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

@@ -1,0 +1,8 @@
+---
+# Fails at: /concepts/0/inScheme/0
+edition: '2.3'
+family: core
+concepts:
+  - id: dpv:Purpose
+    inScheme:
+      - dpv:no-such-classes

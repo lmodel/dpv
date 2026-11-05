@@ -1,0 +1,20 @@
+---
+id: loc:EEA
+rdf_type:
+  - dpv:SupraNationalUnion
+prefLabel: European Economic Area (EEA)
+definition: Concept representing the latest membership of European Economic Area (EEA)
+broader:
+  - dpv:SupraNationalUnion
+inScheme:
+  - loc:inverse-classes
+  - loc:memberships-classes
+isDefinedBy:
+  - 'loc:'
+term_status: accepted
+created:
+  - '2022-03-30'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+hasInverseJurisdiction:
+  - loc:non-EEA

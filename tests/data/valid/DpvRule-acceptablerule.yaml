@@ -1,0 +1,27 @@
+---
+id: dpv:AcceptableRule
+rdf_type:
+  - dpv:Rule
+prefLabel: Acceptable Rule
+definition: A rule that is acceptable where it is either desirable if it occurs or it is not unacceptable
+  if it does
+scopeNote:
+  - Acceptable is a subjective concept that enables distinguishing with "unacceptable". By itself it does
+    not signal any permission or obligation - for which further specific concepts are defined
+broader:
+  - dpv:Rule
+inScheme:
+  - dpv:rules-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-06-19'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake
+  - dpv_agent:person-paul-ryan

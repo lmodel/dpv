@@ -1,0 +1,26 @@
+---
+id: dpv:ConsentExpired
+rdf_type:
+  - dpv:ConsentStatus
+prefLabel: Consent Expired
+definition: The state where the temporal or contextual validity of consent has 'expired'
+scopeNote:
+  - An example of this state is when the obtained consent has been assigned a duration - which has lapsed
+    or 'expired', making it invalid to be used further for processing data
+broader:
+  - dpv:ConsentStatusInvalidForProcessing
+inScheme:
+  - dpv:consent-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-22'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake
+  - dpv_agent:person-paul-ryan
+source_page:
+  - page_name: GConsent
+    url: https://w3id.org/GConsent

@@ -1,0 +1,23 @@
+---
+id: eu-dga:A27-Impact
+rdf_type:
+  - dpv:RiskConcept
+  - risk:PotentialConsequence
+  - risk:PotentialImpact
+  - risk:PotentialRisk
+prefLabel: Impact on A27 Right to Lodge Complaint
+definition: Something that acts as or is considered as an impact on Right of natural and legal persons
+  to lodge a complaint
+broader:
+  - eu-dga:DGARightsImpact
+inScheme:
+  - eu-dga:rights-impacts-classes
+isDefinedBy:
+  - 'eu-dga:'
+term_status: accepted
+created:
+  - '2024-12-17'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - DGA 27

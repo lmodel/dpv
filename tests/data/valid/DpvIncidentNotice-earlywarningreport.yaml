@@ -1,0 +1,23 @@
+---
+id: eu-nis2:EarlyWarningReport
+rdf_type:
+  - risk:IncidentNotice
+prefLabel: Early Warning Report
+definition: Report sent within 24 hours of detection containing cause of the incident and whether it was
+  unlawful or malicious and whether there is cross-border impact
+broader:
+  - risk:IncidentNotice
+inScheme:
+  - eu-nis2:notice-classes
+isDefinedBy:
+  - 'eu-nis2:'
+term_status: modified
+created:
+  - '2024-05-19'
+modified: '2025-08-05'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - NIS2 Article 23(4)(a)

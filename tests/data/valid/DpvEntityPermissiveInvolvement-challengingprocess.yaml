@@ -1,0 +1,22 @@
+---
+id: dpv:ChallengingProcess
+rdf_type:
+  - dpv:EntityPermissiveInvolvement
+prefLabel: Challenging Process
+definition: Involvement where entity can challenge the process of specified context
+scopeNote:
+  - Challenge refers to raising questions about validity, necessity, correctness, or other similar 'trustworthiness'
+    attributes regarding the process or plan or implementation
+broader:
+  - dpv:EntityPermissiveInvolvement
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-05-11'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-steve-hickman

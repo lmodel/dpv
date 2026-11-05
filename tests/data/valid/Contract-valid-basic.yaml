@@ -1,4 +1,0 @@
-id: ex:contract-001
-has_duration: P30D
-has_processing: ex:processing-001
-has_temporal_status: dpv:Ongoing

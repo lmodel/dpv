@@ -1,0 +1,16 @@
+---
+id: ieee-7012:ResolveAcrossContexts
+rdf_type:
+  - ieee-7012:ConflictResolutionTerm
+prefLabel: Resolve Across Contexts
+definition: Term that indicates this conflict method should be used to resolve all conflicts across contexts
+  i.e. other contexts that have their own conflict resolution method should be overridden
+broader:
+  - ieee-7012:ConflictResolutionTerm
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

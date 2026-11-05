@@ -1,70 +1,255 @@
+---
 id: https://w3id.org/lmodel/dpv
 name: dpv
 title: Data Privacy Vocabulary (DPV)
-description: |-
-  Top-level umbrella LinkML schema for the W3C Data Privacy Vocabulary (DPV) version 2.3. Re-exports the eight semantic-group schemas (common, legal_basis, entities, personal_data, processing, risk_notice, rights, consent), which together provide 1:1 coverage of every class and slot in the upstream DPV 2.3 OWL release.
-
-  Each DPV semantic groups (i.e. `dpv_consent`) imports only its direct upstream module dependencies (i.e. `dpv_common`), avoiding the load cost of a single monolithic schema.
-
-  DPV modules (under `./modules/`) remain usable as standalone scheama,and are intentionally NOT imported here to avoid duplicate class declarations during generation (each shared class would otherwise arrive with two conflicting `from_Schema` URIs).
-
-  DPV extensions (under `./extensions/`, e.g. `ai`, `risk`, `pd``tech`, `legal/*`, `sector/*`) also remain usable as standalone schema, and are intentially NOT imported. This design aims to help consumers import only what they needed, not everything.
-license: CC-BY-4.0
+description: >-
+  A LinkML model of the Data Privacy Vocabulary (DPV) 2.3 of the W3C Data Privacy Vocabularies and
+  Controls Community Group. DPV states each concept as a class and as an instance of a broader
+  concept, so the model holds its terms as records: each concept that terms are instances of is a
+  class, each property is a slot under its own IRI, and every term of DPV's vocabularies is a record
+  that validates against them.
+version: "2.3"
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+keywords:
+  - privacy
+  - data protection
+  - personal data
+  - DPV
+  - GDPR
+  - vocabulary
 see_also:
+  - https://lmodel.github.io/dpv
   - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
-version: '2.3'
 annotations:
-  semantic_groups: |-
-    common, legal_basis, entities, personal_data, processing, risk_notice,
-    rights, consent
-  design_note: |-
-    Decomposed into 8 semantic groups rather than a single monolithic
-    schema. Each group imports only its direct upstream module dependencies,
-    reducing downstream transitive import overhead.
-
+  upstream_tag: dpv-2.3
+  upstream_commit: cbcd21567808812677eeb3bb0f05b2ff2c2211a5
+  upstream_release_date: "2026-02-28"
+  upstream_copyright: Copyright the Contributors to the Data Privacy Vocabulary (DPV)
+  upstream_license: https://www.w3.org/copyright/software-license-2023/
+comments:
+  - >-
+    The version is the DPV release the schema renders. upstream/ holds its Turtle files unchanged,
+    scripts/dpv_to_linkml.py writes the terms, the kinds and the catalogue from them, and
+    scripts/check_upstream_release.py reports when they move.
+# Every prefix the data's CURIEs use. The JSON-LD context takes its prefixes from this file
+# alone, and a record's CURIE under any other would not expand.
 prefixes:
-  dpv: https://w3id.org/lmodel/dpv/
-  dpv_upstream: https://w3id.org/dpv#
-  dpv_owl: https://w3id.org/dpv/owl#
+  ai: https://w3id.org/dpv/ai#
+  bibo: http://purl.org/ontology/bibo/
+  dcam: http://purl.org/dc/dcam/
+  dcat: http://www.w3.org/ns/dcat#
+  dcterms: http://purl.org/dc/terms/
+  de-gdng: https://w3id.org/dpv/legal/de/gdng#
+  dex: https://w3id.org/dpv/examples#
+  dpv: https://w3id.org/dpv#
+  dpv_agent: https://w3id.org/lmodel/dpv/agents/
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  eu-aiact: https://w3id.org/dpv/legal/eu/aiact#
+  eu-dga: https://w3id.org/dpv/legal/eu/dga#
+  eu-ehds: https://w3id.org/dpv/legal/eu/ehds#
+  eu-gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  eu-nis2: https://w3id.org/dpv/legal/eu/nis2#
+  eu-rights: https://w3id.org/dpv/rights/eu#
+  ex: http://example.com#
+  exA: http://example.com/exA#
+  exB: http://example.com/exB#
+  exd: http://example.com/default#
+  foaf: http://xmlns.com/foaf/0.1/
+  ieee-7012: https://w3id.org/dpv/standards/ieee/7012#
+  justifications: https://w3id.org/dpv/justifications#
+  legal: https://w3id.org/dpv/legal#
+  legal-at: https://w3id.org/dpv/legal/at#
+  legal-be: https://w3id.org/dpv/legal/be#
+  legal-bg: https://w3id.org/dpv/legal/bg#
+  legal-cy: https://w3id.org/dpv/legal/cy#
+  legal-cz: https://w3id.org/dpv/legal/cz#
+  legal-de: https://w3id.org/dpv/legal/de#
+  legal-dk: https://w3id.org/dpv/legal/dk#
+  legal-ee: https://w3id.org/dpv/legal/ee#
+  legal-es: https://w3id.org/dpv/legal/es#
+  legal-eu: https://w3id.org/dpv/legal/eu#
+  legal-fi: https://w3id.org/dpv/legal/fi#
+  legal-fr: https://w3id.org/dpv/legal/fr#
+  legal-gb: https://w3id.org/dpv/legal/gb#
+  legal-gr: https://w3id.org/dpv/legal/gr#
+  legal-hk: https://w3id.org/dpv/legal/hk#
+  legal-hr: https://w3id.org/dpv/legal/hr#
+  legal-hu: https://w3id.org/dpv/legal/hu#
+  legal-ie: https://w3id.org/dpv/legal/ie#
+  legal-in: https://w3id.org/dpv/legal/in#
+  legal-is: https://w3id.org/dpv/legal/is#
+  legal-it: https://w3id.org/dpv/legal/it#
+  legal-jp: https://w3id.org/dpv/legal/jp#
+  legal-kr: https://w3id.org/dpv/legal/kr#
+  legal-li: https://w3id.org/dpv/legal/li#
+  legal-lt: https://w3id.org/dpv/legal/lt#
+  legal-lu: https://w3id.org/dpv/legal/lu#
+  legal-lv: https://w3id.org/dpv/legal/lv#
+  legal-mo: https://w3id.org/dpv/legal/mo#
+  legal-mt: https://w3id.org/dpv/legal/mt#
+  legal-my: https://w3id.org/dpv/legal/my#
+  legal-nl: https://w3id.org/dpv/legal/nl#
+  legal-no: https://w3id.org/dpv/legal/no#
+  legal-ph: https://w3id.org/dpv/legal/ph#
+  legal-pl: https://w3id.org/dpv/legal/pl#
+  legal-pt: https://w3id.org/dpv/legal/pt#
+  legal-ro: https://w3id.org/dpv/legal/ro#
+  legal-se: https://w3id.org/dpv/legal/se#
+  legal-sg: https://w3id.org/dpv/legal/sg#
+  legal-si: https://w3id.org/dpv/legal/si#
+  legal-sk: https://w3id.org/dpv/legal/sk#
+  legal-th: https://w3id.org/dpv/legal/th#
+  legal-tw: https://w3id.org/dpv/legal/tw#
+  legal-us: https://w3id.org/dpv/legal/us#
   linkml: https://w3id.org/linkml/
+  loc: https://w3id.org/dpv/loc#
+  nace: http://data.europa.eu/ux2/nace2.1/
+  odrl: http://www.w3.org/ns/odrl/2/
+  org: http://www.w3.org/ns/org#
+  owl: http://www.w3.org/2002/07/owl#
+  pd: https://w3id.org/dpv/pd#
+  profile: http://www.w3.org/ns/dx/prof/
+  prov: http://www.w3.org/ns/prov#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  xsd: http://www.w3.org/2001/XMLSchema#
-  owl: http://www.w3.org/2002/07/owl#
+  risk: https://w3id.org/dpv/risk#
+  role: http://www.w3.org/ns/dx/prof/role/
+  scoro: http://purl.org/spar/scoro/
+  sdo: https://schema.org/
+  sector: https://w3id.org/dpv/sector#
+  sector-education: https://w3id.org/dpv/sector/education#
+  sector-finance: https://w3id.org/dpv/sector/finance#
+  sector-health: https://w3id.org/dpv/sector/health#
+  sector-infra: https://w3id.org/dpv/sector/infra#
+  sector-law: https://w3id.org/dpv/sector/law#
+  sector-publicservices: https://w3id.org/dpv/sector/publicservices#
   skos: http://www.w3.org/2004/02/skos/core#
-  dcterms: http://purl.org/dc/terms/
-  dcat: http://www.w3.org/ns/dcat#
-  schema: http://schema.org/
-  foaf: http://xmlns.com/foaf/0.1/
-  org: http://www.w3.org/ns/org#
-  prof: http://www.w3.org/ns/dx/prof/
+  spl: https://specialprivacy.ercim.eu/langs/usage-policy#
   svd: https://specialprivacy.ercim.eu/vocabs/data#
   svpr: https://specialprivacy.ercim.eu/vocabs/processing#
   svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
-  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
-  shex: http://www.w3.org/ns/shex#
-  common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gist: https://w3id.org/lmodel/gist/
-  iso22989: https://w3id.org/lmodel/iso22989/
-  iso27001: https://w3id.org/lmodel/iso27001/
-  iso29100: https://w3id.org/lmodel/iso29100/
-  iso42001: https://w3id.org/lmodel/iso42001/
-  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
-  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
-  ocsf: https://w3id.org/lmodel/ocsf/
-  oscal: https://w3id.org/lmodel/oscal/
-
-default_prefix: dpv
+  sw: http://www.w3.org/2003/06/sw-vocab-status/ns#
+  tech: https://w3id.org/dpv/tech#
+  time: http://www.w3.org/2006/time#
+  vann: http://purl.org/vocab/vann/
+  xsd: http://www.w3.org/2001/XMLSchema#
+default_prefix: dpv_linkml
 default_range: string
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_common
-  - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
-  - dpv:schema/dpv_personal_data
-  - dpv:schema/dpv_processing
-  - dpv:schema/dpv_risk_notice
-  - dpv:schema/dpv_rights
-  - dpv:schema/dpv_consent
+  - ./dpv_core
+  - ./dpv_terms
+  - ./dpv_kinds
+  - ./dpv_pd
+  - ./dpv_tech
+  - ./dpv_ai
+  - ./dpv_risk
+  - ./dpv_legal
+  - ./dpv_sector
+  - ./dpv_standards
+
+classes:
+
+  DpvCatalogue:
+    title: Catalogue
+    tree_root: true
+    description: >-
+      One part of a DPV release: one namespace family's vocabularies and terms, its contributors or
+      its examples.
+    slots:
+      - concepts
+    attributes:
+      edition:
+        title: Edition
+        description: The DPV release the part belongs to.
+        required: true
+        slot_uri: dcterms:isVersionOf
+      family:
+        title: Family
+        description: Which part of the release this is.
+        required: true
+        range: DpvFamily
+      vocabularies:
+        title: Vocabularies
+        description: The family's vocabularies, as each one's Turtle file describes it.
+        range: DpvVocabulary
+        multivalued: true
+        inlined_as_list: true
+      concept_schemes:
+        title: Concept Schemes
+        description: The lists of terms the family's vocabularies keep.
+        range: DpvConceptScheme
+        multivalued: true
+        inlined_as_list: true
+      properties:
+        title: Properties
+        description: The family's properties.
+        range: DpvProperty
+        multivalued: true
+        inlined_as_list: true
+      agents:
+        title: Agents
+        description: The people and organizations DPV names as contributors.
+        range: DpvAgent
+        multivalued: true
+        inlined_as_list: true
+      examples:
+        title: Examples
+        description: DPV's examples.
+        range: DpvExample
+        multivalued: true
+        inlined_as_list: true
+
+slots:
+
+  concepts:
+    title: Concepts
+    description: The family's concepts, each a record of its kinds.
+    range: DpvConcept
+    multivalued: true
+    inlined_as_list: true
+
+enums:
+
+  DpvFamily:
+    title: Family
+    description: The parts of a release, one file each.
+    permissible_values:
+      core:
+        title: Core
+        description: The vocabulary at https://w3id.org/dpv and the terms it adopts from others.
+      pd:
+        title: Personal Data
+        description: The personal data vocabulary.
+      tech:
+        title: Technology
+        description: The technology vocabulary.
+      ai:
+        title: Artificial Intelligence
+        description: The artificial intelligence vocabulary.
+      risk:
+        title: Risk
+        description: The risk vocabulary.
+      justifications:
+        title: Justifications
+        description: The justifications vocabulary.
+      loc:
+        title: Locations
+        description: The locations vocabulary.
+      legal:
+        title: Laws and Authorities
+        description: The legal vocabularies, of each jurisdiction and each EU law.
+      sector:
+        title: Sectors
+        description: The sector vocabularies.
+      standards:
+        title: Standards
+        description: The vocabularies of other standards.
+      agents:
+        title: Agents
+        description: The contributors.
+      examples:
+        title: Examples
+        description: The examples.

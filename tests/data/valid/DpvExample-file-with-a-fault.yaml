@@ -1,0 +1,17 @@
+---
+id: dex:E0030
+title: Rule combining DPV with ODRL
+description: <p>In this example, DPV is complemented with ODRL, following the ODRL implementation best
+  practices, to assert an obligation to Anonymise data in order to use it:</p>
+format:
+  - text/turtle
+source:
+  - E0030.ttl
+subject:
+  - dpv:Rule
+created:
+  - '2024-06-10'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+term_status: accepted
+turtle_fault: A semicolon is missing after `odrl:profile ex:`.

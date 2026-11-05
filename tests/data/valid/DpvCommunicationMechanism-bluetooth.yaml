@@ -1,0 +1,17 @@
+---
+id: tech:Bluetooth
+rdf_type:
+  - tech:CommunicationMechanism
+prefLabel: Bluetooth
+definition: Technology utilising bluetooth
+broader:
+  - tech:Networking
+inScheme:
+  - tech:comms-classes
+isDefinedBy:
+  - 'tech:'
+term_status: accepted
+created:
+  - '2024-05-09'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

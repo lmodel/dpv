@@ -1,0 +1,18 @@
+---
+id: tech:ProvidedAsAlgorithmic
+rdf_type:
+  - tech:ProvisionMethod
+prefLabel: Provided as AlgorithmicProvision
+definition: Technology provided as an algorithm or method
+broader:
+  - tech:ProvisionMethod
+inScheme:
+  - tech:provision-classes
+isDefinedBy:
+  - 'tech:'
+term_status: modified
+created:
+  - '2022-06-15'
+modified: '2024-12-01'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

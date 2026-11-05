@@ -1,0 +1,18 @@
+---
+id: dpv:ContinuousFrequency
+rdf_type:
+  - dpv:Frequency
+prefLabel: Continuous Frequency
+definition: Frequency where occurrences are continuous
+broader:
+  - dpv:Frequency
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+modified: '2020-10-05'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

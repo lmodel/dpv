@@ -1,0 +1,6 @@
+---
+# Fails at: /rdf_type/0
+id: dpv:Example
+prefLabel: An example
+rdf_type:
+  - Purpose

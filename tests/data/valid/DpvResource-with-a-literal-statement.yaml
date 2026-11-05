@@ -1,0 +1,12 @@
+---
+id: ex:Acme
+rdf_type:
+  - dpv:DataController
+hasName:
+  - Acme Inc
+statements:
+  - predicate: dpv:hasLocation
+    literal: Ireland
+  - predicate: dcterms:date
+    literal: '2024-01-01'
+    datatype: xsd:date

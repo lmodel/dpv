@@ -1,0 +1,24 @@
+---
+id: eu-aiact:BiometricCategorisation
+rdf_type:
+  - tech:Capability
+prefLabel: Biometric Categorisation
+definition: Capability where assigning natural persons to specific categories happens on the basis of
+  their biometric data unless ancillary to another commercial service and strictly necessary for objective
+  technical reasons
+broader:
+  - ai:BiometricCategorisation
+related:
+  - pd:Biometric
+inScheme:
+  - eu-aiact:capability-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: modified
+created:
+  - '2024-04-10'
+modified: '2025-07-30'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA Art. 3(40)

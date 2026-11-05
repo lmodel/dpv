@@ -1,0 +1,19 @@
+---
+id: dpv:HumanInvolved
+rdf_type:
+  - dpv:HumanInvolvement
+prefLabel: Human involved
+definition: Humans are involved in the specified context
+scopeNote:
+  - This concept only indicates that humans are involved. For specific involvement, see specialised concepts
+    e.g. involved for input, oversight.
+broader:
+  - dpv:HumanInvolvement
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-09-03'
+modified: '2023-12-10'

@@ -3,31 +3,32 @@ requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dpv"
-description = "Data Privacy Vocabulary (DPV) - LinkML Schema"
+# Named like lmodel/slsa's slsa-linkml, so the PyPI name says what it holds;
+# the import package stays dpv. PyPI publishing is off.
+name = "dpv-linkml"
+description = "Data Privacy Vocabulary (DPV) 2.3 (LinkML)"
 authors = [
   {name = "Noel McLoughlin", email = "noel.mcloughlin@gmail.com"},
 ]
 license = "Apache-2.0"
-license-files = ["LICENSE"]
+license-files = ["LICENSE", "NOTICE"]
 readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["version"]
 
 dependencies = [
   "linkml-runtime >=1.9.4",
-  "ruamel-yaml>=0.19.1",
 ]
 
 [dependency-groups]
 dev = [
-    "linkml>=1.9.3",
-    "mkdocs-material>=8.2.8",
-    "mkdocs-mermaid2-plugin>=1.1.1",
-    "mkdocs-pymdownx-material-extras>=2.5.6",
-    "jupyter>=1.0.0",
-    "mknotebooks>= 0.8.0",
+    "jsonschema>=4.26.0",
+    "linkml>=1.12.1",
+    "rdflib>=7",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dpv"]
 
 # See https://hatch.pypa.io/latest/config/build/#file-selection for how to
 # explicitly include files other than default into the build distributions.
@@ -57,20 +58,42 @@ target-version = "py310"
 [tool.codespell]
 skip = [
   "LICENSE",
+  "NOTICE",
   "pyproject.toml",
   "uv.lock",
   "project/*",
   "src/dpv/datamodel/dpv_pydantic.py",
   "src/dpv/datamodel/dpv.py",
+  # The upstream's files, copied as published; the neighbours' adapt copies,
+  # copied as released; and files copied in by the KTL sidecar sync or written
+  # by npm, not by hand.
+  "upstream/*",
+  "tests/neighbours/*",
+  # DPV's own words, written from upstream/ by scripts/dpv_to_linkml.py.
+  "src/dpv/data/*",
+  "src/dpv/mappings/*",
+  "src/dpv/schema/dpv_ai.yaml",
+  "src/dpv/schema/dpv_kinds.yaml",
+  "src/dpv/schema/dpv_legal.yaml",
+  "src/dpv/schema/dpv_pd.yaml",
+  "src/dpv/schema/dpv_risk.yaml",
+  "src/dpv/schema/dpv_sector.yaml",
+  "src/dpv/schema/dpv_standards.yaml",
+  "src/dpv/schema/dpv_tech.yaml",
+  "src/dpv/schema/dpv_terms.yaml",
+  "tests/data/*",
+  ".lokf/scripts/*",
+  "website/package-lock.json",
 ]
 
-# Reminder: words have to be lowercased for the ignore-words-list
-ignore-words-list = "linke"
+# Reminder: words have to be lowercased for the ignore-words-list.
+ignore-words-list = "linke,ehr"
 quiet-level = 3
 
 # Ref.: https://github.com/crate-ci/typos (spell checker)
 [tool.typos.default.extend-words]
 linke = "linke"
+ehr = "ehr"
 
 [tool.typos.files]
 extend-exclude = [
@@ -80,4 +103,20 @@ extend-exclude = [
   "project/*",
   "src/dpv/datamodel/dpv_pydantic.py",
   "src/dpv/datamodel/dpv.py",
+  "upstream/*",
+  "tests/neighbours/*",
+  "src/dpv/data/*",
+  "src/dpv/mappings/*",
+  "src/dpv/schema/dpv_ai.yaml",
+  "src/dpv/schema/dpv_kinds.yaml",
+  "src/dpv/schema/dpv_legal.yaml",
+  "src/dpv/schema/dpv_pd.yaml",
+  "src/dpv/schema/dpv_risk.yaml",
+  "src/dpv/schema/dpv_sector.yaml",
+  "src/dpv/schema/dpv_standards.yaml",
+  "src/dpv/schema/dpv_tech.yaml",
+  "src/dpv/schema/dpv_terms.yaml",
+  "tests/data/*",
+  ".lokf/scripts/*",
+  "website/package-lock.json",
 ]

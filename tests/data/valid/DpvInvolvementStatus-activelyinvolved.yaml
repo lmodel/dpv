@@ -1,0 +1,22 @@
+---
+id: dpv:ActivelyInvolved
+rdf_type:
+  - dpv:InvolvementStatus
+prefLabel: Actively Involved
+definition: Status indicating the specified context is 'actively' involved
+scopeNote:
+  - An example of active involvement is a person directly using a system to enter information
+broader:
+  - dpv:InvolvementStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-05-10'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-paul-ryan

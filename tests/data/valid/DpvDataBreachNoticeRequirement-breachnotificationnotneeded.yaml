@@ -1,0 +1,17 @@
+---
+id: eu-gdpr:BreachNotificationNotNeeded
+rdf_type:
+  - eu-gdpr:DataBreachNoticeRequirement
+prefLabel: Breach Notification Not Needed
+definition: Data Breach notifications to DPA or Data Subjects are not required
+broader:
+  - eu-gdpr:DataBreachNoticeRequirement
+inScheme:
+  - eu-gdpr:data-breach-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2024-05-19'
+source:
+  - GDPR Article 33

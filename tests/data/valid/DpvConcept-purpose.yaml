@@ -1,0 +1,38 @@
+---
+id: dpv:Purpose
+prefLabel: Purpose
+definition: Purpose or (broader) Goal associated with data or technology
+scopeNote:
+  - The purpose or goal here is intended to sufficiently describe the intention or objective of why the
+    data or technology is being used, and should be broader than mere technical descriptions of achieving
+    a capability. For example, "Analyse Data" is an abstract purpose with no indication of what the analyses
+    is for as compared to a purpose such as "Marketing" or "Service Provision" which provide clarity and
+    comprehension of the 'purpose' and can be enhanced with additional descriptions. Such modelling is
+    in line with regulatory requirements regarding the specificity of purposes, for example in GDPR
+related:
+  - spl:AnyPurpose
+inScheme:
+  - dpv:purposes-classes
+isDefinedBy:
+  - 'dpv:'
+example:
+  - dex:E0003
+  - dex:E0004
+  - dex:E0007
+  - dex:E0008
+  - dex:E0040
+  - dex:E0041
+  - dex:E0042
+  - dex:E0043
+term_status: accepted
+created:
+  - '2019-04-05'
+modified: '2024-04-14'
+contributor:
+  - dpv_agent:person-axel-polleres
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-javier-fernandez
+source_page:
+  - page_name: SPECIAL Project
+    url: https://specialprivacy.ercim.eu/

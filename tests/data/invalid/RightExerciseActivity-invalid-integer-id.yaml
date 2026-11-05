@@ -1,5 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: Right-invalid-type-mismatch — integer value for right slot range not yet enforced)
-id: 12345
-right: 12345
-right_holder: ex:subject-001

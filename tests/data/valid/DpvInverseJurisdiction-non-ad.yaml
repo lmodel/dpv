@@ -1,0 +1,13 @@
+---
+id: loc:non-AD
+rdf_type:
+  - dpv:InverseJurisdiction
+prefLabel: non-AD
+definition: Set of jurisdictions that are not in AD
+inScheme:
+  - loc:inverse-classes
+isDefinedBy:
+  - 'loc:'
+term_status: accepted
+created:
+  - '2025-07-31'

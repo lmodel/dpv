@@ -1,0 +1,29 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_sector
+name: dpv_sector
+title: 'DPV kinds: sectors'
+description: 'The kinds of term DPV''s vocabularies of sectors state: each a concept that terms are instances
+  of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+  sector-health: https://w3id.org/dpv/sector/health#
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+classes:
+  DpvSectorHealthReuseCompatibility:
+    title: ReuseCompatibility
+    is_a: DpvReuseCompatibility
+    description: Status indicating whether the reuse of health data is compatible for given context
+    class_uri: sector-health:ReuseCompatibility

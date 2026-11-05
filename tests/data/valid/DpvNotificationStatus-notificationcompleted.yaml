@@ -1,0 +1,17 @@
+---
+id: dpv:NotificationCompleted
+rdf_type:
+  - dpv:NotificationStatus
+prefLabel: Notification Completed
+definition: Status indicating notification(s) are completed
+broader:
+  - dpv:NotificationStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-05-19'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

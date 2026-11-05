@@ -1,0 +1,4811 @@
+---
+# DPV 2.3: personal data. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: pd
+vocabularies:
+  - id: https://w3id.org/dpv/pd
+    bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram
+      Golpayegani, Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G.,
+      et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer,
+      Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+    description: Extension to the Data Privacy Vocabulary (DPV) providing additional categories of personal
+      data
+    identifier: https://w3id.org/dpv/pd
+    title: Personal Data Categories
+    doi: 10.5281/zenodo.12505841
+    bibo_status: http://purl.org/ontology/bibo/status/published
+    preferredNamespacePrefix: pd
+    preferredNamespaceUri: https://w3id.org/dpv/pd#
+    rdfs_Label: PD
+    versionInfo: '2.3'
+    schema_version: '2.3'
+    created:
+      - '2022-04-02'
+    issued: '2022-04-02'
+    modified: '2026-02-25'
+    conformsTo:
+      - http://www.w3.org/2000/01/rdf-schema
+      - http://www.w3.org/2004/02/skos/core
+    source:
+      - https://www.w3.org/groups/cg/dpvcg/
+    license: https://www.w3.org/copyright/document-license-2023/
+    publisher: https://www.w3.org/
+    versionIRI: https://w3id.org/dpv/2.3/pd
+    isProfileOf:
+      - http://www.w3.org/2000/01/rdf-schema#
+      - http://www.w3.org/2004/02/skos/core#
+      - https://w3id.org/dpv
+    logo: https://w3id.org/dpv/media/logo.png
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-paul-ryan
+      - dpv_agent:person-rudy-jacob
+    creator:
+      - dpv_agent:person-axel-polleres
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+concept_schemes:
+  - id: pd:core-classes
+  - id: pd:extended-classes
+  - id: pd:specialcategory-classes
+concepts:
+  - id: pd:Accent
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Accent
+    definition: Information about linguistic and speech accents
+    broader:
+      - pd:Language
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:AccountIdentifier
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Account Identifier
+    definition: Information about financial account identifier
+    broader:
+      - pd:FinancialAccount
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Acquaintance
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Acquaintance
+    definition: Information about acquaintances in a social network
+    broader:
+      - pd:SocialNetwork
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Age
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Age
+    definition: Information about age
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:AgeExact
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Age Exact
+    definition: Information about the exact age (i.e. to some degree within a year, month, or day)
+    broader:
+      - pd:AgeRange
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:AgeRange
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Age Range
+    definition: Information about age range i.e. inexact age to some degree (i.e. some years)
+    broader:
+      - pd:Age
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:ApartmentOwned
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Apartment Owned
+    definition: Information about apartment(s) owned and its history
+    broader:
+      - pd:HouseOwned
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Association
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Association
+    definition: Information about associations in a social network with other individuals, groups, or
+      entities e.g. friend of a friend
+    broader:
+      - pd:SocialNetwork
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Attitude
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Attitude
+    definition: Information about attitude
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Authenticating
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Authenticating
+    definition: Information about authentication and information used for authenticating
+    broader:
+      - pd:Internal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:AuthenticationHistory
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Authentication History
+    definition: Information about prior authentication and its outcomes such as login attempts or location
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2020-11-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-georg-p-krog
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:BankAccount
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Bank Account
+    definition: Information about bank accounts
+    broader:
+      - pd:FinancialAccount
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Behavioural
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Behavioural
+    definition: Information about behaviour or activity
+    broader:
+      - pd:External
+    related:
+      - svd:Activity
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Biometric
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Biometric
+    definition: Information about biometrics and biometric characteristics.
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:Identifying
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:BirthCountry
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Birth Country
+    definition: Information about country of birth
+    broader:
+      - pd:BirthPlace
+      - pd:Country
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2024-07-31'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:BirthDate
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Birth Date
+    definition: Information about birth date
+    broader:
+      - pd:Age
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:BirthPlace
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Birth Place
+    definition: Information about birth place
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-04-20'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:BloodType
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Blood Type
+    definition: Information about blood type
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:BrowserFingerprint
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Browser Fingerprint
+    definition: Information about the web browser which is used as a 'fingerprint'
+    broader:
+      - pd:DeviceBased
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:BrowserHistory
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Browser History
+    definition: Information about and including web browsing history
+    broader:
+      - pd:BrowsingBehaviour
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:BrowsingBehaviour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Browsing Behaviour
+    definition: Information about browsing behaviour
+    broader:
+      - pd:Behavioural
+    related:
+      - svd:OnlineActivity
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:BrowsingReferral
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Browsing Referral
+    definition: Information about web browsing referrer or referral, which can be based on location, targeted
+      referrals, direct, organic search, social media or actions, campaigns.
+    broader:
+      - pd:BrowsingBehaviour
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2020-11-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-georg-p-krog
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:CallLog
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Call Log
+    definition: Information about the calls that an individual has made
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CarOwned
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Car Owned
+    definition: Information about cars ownership and ownership history
+    broader:
+      - pd:Ownership
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Character
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Character
+    definition: Information about character in the public sphere
+    broader:
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Citizenship
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Citizenship
+    definition: Information about citizenship
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:City
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: City
+    definition: Information about city as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:Communication
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Communication
+    definition: Information communicated from or to an individual
+    broader:
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CommunicationsMetadata
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Communications Metadata
+    definition: Information about communication metadata in the public sphere
+    broader:
+      - pd:PublicLife
+    related:
+      - svd:Interactive
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Connection
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Connection
+    definition: Information about and including connections in a social network
+    broader:
+      - pd:SocialNetwork
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Contact
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Contact
+    definition: Information about contacts or used for contacting e.g. email address or phone number
+    broader:
+      - pd:Tracking
+    related:
+      - svd:Physical
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Country
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Country
+    definition: Information about country e.g. residence, travel
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Credit
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit
+    definition: Information about reputation with regards to money
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditCapacity
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Capacity
+    definition: Information about credit capacity
+    broader:
+      - pd:Credit
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditCardNumber
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Card Number
+    definition: Information about credit card number
+    broader:
+      - pd:PaymentCardNumber
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditRecord
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Record
+    definition: Information about credit record
+    broader:
+      - pd:Credit
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditScore
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Score
+    definition: Information about credit score
+    broader:
+      - pd:CreditWorthiness
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditStanding
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Standing
+    definition: Information about credit standing
+    broader:
+      - pd:Credit
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CreditWorthiness
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Credit Worthiness
+    definition: Information about credit worthiness
+    broader:
+      - pd:Credit
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Criminal
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Criminal
+    definition: Information about criminal activity e.g. criminal convictions or jail time
+    broader:
+      - pd:Social
+    related:
+      - svd:Judicial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CriminalCharge
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Criminal Charge
+    definition: Information about criminal charges
+    broader:
+      - pd:Criminal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CriminalConviction
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Criminal Conviction
+    definition: Information about criminal convictions
+    broader:
+      - pd:Criminal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CriminalOffence
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Criminal Offence
+    definition: Information about criminal offences
+    broader:
+      - pd:Criminal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-10-22'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:CriminalPardon
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Criminal Pardon
+    definition: Information about criminal pardons
+    broader:
+      - pd:Criminal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:CurrentEmployment
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Current Employment
+    definition: Information about current employment
+    broader:
+      - pd:EmploymentHistory
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:CurrentLocation
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Current Location
+    definition: Information about a person's current location (e.g. by asking the address, using GPS)
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-10'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:DNACode
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: DNA Code
+    definition: Information about DNA
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Demeanour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Demeanour
+    definition: Information about demeanour
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Demographic
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Demographic
+    definition: Information about demography and demographic characteristics
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:DeviceApplications
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Device Applications
+    definition: Information about applications or application-like software on a device
+    broader:
+      - pd:DeviceSoftware
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-paul-ryan
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:DeviceBased
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Device Based
+    definition: Information about devices
+    broader:
+      - pd:Tracking
+    related:
+      - svd:Computer
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:DeviceOperatingSystem
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Device Operating System
+    definition: Information about the operating system (OS) or system software that manages hardware or
+      software resources.
+    broader:
+      - pd:DeviceSoftware
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-paul-ryan
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:DeviceSoftware
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Device Software
+    definition: Information about software on or related to a device
+    broader:
+      - pd:DeviceBased
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-paul-ryan
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:Dialect
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Dialect
+    definition: Information about linguistic dialects
+    broader:
+      - pd:Language
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:DigitalFingerprint
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Digital Fingerprint
+    definition: Information about a 'digital fingerprint' created for identification
+    broader:
+      - pd:Tracking
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Disability
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Disability
+    definition: Information about disabilities
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:DisciplinaryAction
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Disciplinary Action
+    definition: Information about disciplinary actions and its history
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Dislike
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Dislike
+    definition: Information about dislikes or preferences regarding repulsions
+    broader:
+      - pd:Interest
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Divorce
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Divorce
+    definition: Information about divorce(s)
+    broader:
+      - pd:FamilyStructure
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Domicile
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Domicile
+    definition: Information about domicile status e.g. which region or country a person is domiciled in
+    scopeNote:
+      - Parent changed to pd:Location
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2024-04-20'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:DrugTestResult
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Drug Test Result
+    definition: Information about drug test results
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Education
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Education
+    definition: Information about education
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EducationExperience
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Education Experience
+    definition: Information about education experience e.g. attending a university
+    broader:
+      - pd:Education
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EducationQualification
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Education Qualification
+    definition: Information about educational qualifications
+    broader:
+      - pd:Education
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EducationTraining
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Education Training
+    definition: Information about training as education
+    broader:
+      - pd:Education
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EmailAddress
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Email Address
+    definition: Information about email address
+    broader:
+      - pd:Contact
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:EmailAddressPersonal
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Email Address Personal
+    definition: Information about email address used in personal capacity
+    broader:
+      - pd:EmailAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EmailAddressWork
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Email Address Work
+    definition: Information about email address used for work or in professional capacity
+    broader:
+      - pd:EmailAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:EmailContent
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Email Content
+    definition: Information about the contents of emails sent or received
+    broader:
+      - pd:Communication
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Emotion
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Emotion
+    definition: Information about emotion
+    broader:
+      - pd:Internal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+  - id: pd:EmploymentHistory
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Employment History
+    definition: Information about employment history
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:EthnicOrigin
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Ethnic Origin
+    definition: Information about ethnic origin
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:Ethnicity
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Ethnicity
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Ethnicity
+    definition: Information about ethnic origins and lineage
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:External
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: External
+    definition: Information about external characteristics that can be observed
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FacialExpression
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Facial Expression
+    definition: Information about facial expression
+    broader:
+      - pd:Biometric
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+  - id: pd:FacialPrint
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Facial Print
+    definition: Information about facial print or pattern
+    broader:
+      - pd:Biometric
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Family
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Family
+    definition: Information about family and relationships
+    broader:
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FamilyHealthHistory
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Family Health History
+    definition: Information about family health history
+    broader:
+      - pd:HealthHistory
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FamilyStructure
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Family Structure
+    definition: Information about family and familial structure
+    broader:
+      - pd:Family
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Favourite
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Favourite
+    definition: Information about favourites
+    broader:
+      - pd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FavouriteColour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Favourite Colour
+    definition: Information about favourite colour
+    broader:
+      - pd:Favourite
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FavouriteFood
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Favourite Food
+    definition: Information about favourite food
+    broader:
+      - pd:Favourite
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FavouriteMusic
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Favourite Music
+    definition: Information about favourite music
+    broader:
+      - pd:Favourite
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Fetish
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Fetish
+    definition: Information about an individual's sexual fetishes
+    broader:
+      - pd:Sexual
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Financial
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Financial
+    definition: Information about finance including monetary characteristics and transactions
+    broader:
+      - dpv:PersonalData
+    related:
+      - svd:Financial
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FinancialAccount
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Financial Account
+    definition: Information about financial accounts
+    broader:
+      - pd:Financial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FinancialAccountNumber
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Financial Account Number
+    definition: Information about financial account number
+    broader:
+      - pd:AccountIdentifier
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:FinancialStatus
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Financial Status
+    definition: Information about financial status or standing
+    broader:
+      - pd:Financial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Fingerprint
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Fingerprint
+    definition: Information about fingerprint used for biometric purposes
+    broader:
+      - pd:Biometric
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Friend
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Friend
+    definition: Information about friends in a social network, including aspects of friendships such as
+      years together or nature of friendship
+    broader:
+      - pd:SocialNetwork
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:GPSCoordinate
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: GPS Coordinate
+    definition: Information about location expressed using Global Position System coordinates (GPS)
+    broader:
+      - pd:CurrentLocation
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Gender
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Gender
+    definition: Information about gender
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:GeneralReputation
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: General Reputation
+    definition: Information about reputation in the public sphere
+    broader:
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Genetic
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Genetic
+    definition: Information about inherited or acquired genetic characteristics
+    broader:
+      - pd:Health
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-05-18'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Geographic
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Geographic
+    definition: Information about location or based on geography (e.g. home address)
+    broader:
+      - pd:Demographic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:GroupMembership
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Group Membership
+    definition: Information about groups and memberships included or associated with a social network
+    broader:
+      - pd:SocialNetwork
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:GroupProfile
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Group Profile
+    definition: Group profile or category profile is information and representation of characteristics
+      associated with a group or category of individuals
+    broader:
+      - pd:Profile
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:HairColour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Hair Colour
+    definition: Information about hair colour
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Health
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Health
+    definition: Information about health
+    broader:
+      - pd:MedicalHealth
+    related:
+      - svd:Health
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:HealthHistory
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Health History
+    definition: Information about health history
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:HealthRecord
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Health Record
+    definition: Information about health record
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Height
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Height
+    definition: Information about physical height
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Historical
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Historical
+    definition: Information about historical data related to or relevant regarding history or past events
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:HomeLocation
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Home Place
+    definition: Information about a person's home place, including their location, address, and locality
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-10'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:HouseNumber
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: House Number
+    definition: Information about house or apartment number as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:HouseOwned
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: House Owned
+    definition: Information about house(s) owned and ownership history
+    broader:
+      - pd:Ownership
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Household
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Household
+    definition: Information about personal or household activities
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:IPAddress
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: IP Address
+    definition: Information about the Internet Protocol (IP) address of a device
+    broader:
+      - pd:DeviceBased
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Identifier
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Identifier
+    definition: Information about an identifier or name used for identification
+    broader:
+      - pd:Tracking
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Identifying
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Identifying
+    definition: Information that uniquely or semi-uniquely identifies an individual or a group
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Income
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Income
+    definition: Information about financial income e.g. for individual or household or family
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:IncomeBracket
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Income Bracket
+    definition: Information about income bracket
+    broader:
+      - pd:Demographic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:IndividualHealthHistory
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Individual Health History
+    definition: Information about information health history
+    broader:
+      - pd:HealthHistory
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:IndividualProfile
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Individual Profile
+    definition: Individual profile or user profile is information and representation of characteristics
+      associated with a specific individual
+    broader:
+      - pd:Profile
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Insurance
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Insurance
+    definition: Information about Insurance
+    broader:
+      - pd:Financial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Intention
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Intention
+    definition: Information about intentions
+    broader:
+      - pd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Interaction
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Interaction
+    definition: Information about interactions in the public sphere
+    broader:
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Interest
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Interest
+    definition: Information about interests
+    broader:
+      - pd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Internal
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Internal
+    definition: Information about internal characteristics that cannot be seen or observed
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Job
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Job
+    definition: Information about professional jobs
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:KnowledgeBelief
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Knowledge and Beliefs
+    definition: Information about knowledge and beliefs
+    broader:
+      - pd:Internal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Language
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Language
+    definition: Information about language and lingual history
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    modified: '2022-04-20'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:LifeHistory
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Life History
+    definition: Information about personal history regarding events or activities - including their occurrences
+      that might be directly related or have had an influence (e.g. World War, 9/11)
+    broader:
+      - pd:Historical
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Like
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Like
+    definition: Information about likes or preferences regarding attractions
+    broader:
+      - pd:Interest
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:LinkClicked
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Link Clicked
+    definition: Information about the links that an individual has clicked
+    broader:
+      - pd:Behavioural
+    related:
+      - svd:Navigation
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:LoanRecord
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Loan Record
+    definition: Information about loans, whether applied, provided or rejected, and its history
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Locality
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Locality
+    definition: Information about locality e.g. city, village, town, portion of a city as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:Location
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Location
+    definition: Information about location
+    broader:
+      - pd:Tracking
+    related:
+      - svd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:MACAddress
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: MAC Address
+    definition: Information about the Media Access Control (MAC) address of a device
+    broader:
+      - pd:DeviceBased
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:MaritalStatus
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Marital Status
+    definition: Information about marital status and history
+    broader:
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Marriage
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Marriage
+    definition: Information about marriage(s)
+    broader:
+      - pd:FamilyStructure
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:MedicalHealth
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Medical Health
+    definition: Information about health, medical conditions or health care
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:MentalHealth
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Mental Health
+    definition: Information about mental health
+    broader:
+      - pd:Health
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Mood
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Mood
+    definition: Information about mood
+    broader:
+      - pd:Internal
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+  - id: pd:Name
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Name
+    definition: Information about names associated or used as given name or nickname
+    broader:
+      - pd:Identifying
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Nationality
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Nationality
+    definition: Information about nationality
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+  - id: pd:OfficialID
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Official ID
+    definition: Information about an official identifier or identification document
+    broader:
+      - pd:Identifying
+    related:
+      - svd:Government
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Offspring
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Offspring
+    definition: Information about offspring(s)
+    broader:
+      - pd:FamilyStructure
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Opinion
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Opinion
+    definition: Information about opinions
+    broader:
+      - pd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Ownership
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Ownership
+    definition: Information about ownership and history, including renting, borrowing, possessions
+    broader:
+      - pd:Financial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PINCode
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: PIN Code
+    definition: Information about personal identification number (PIN), which is usually used in the process
+      of authenticating the individual as an user accessing a system
+    broader:
+      - pd:Authenticating
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Parent
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Parent
+    definition: Information about parent(s)
+    broader:
+      - pd:FamilyStructure
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Passport
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Passport
+    definition: Information about passport
+    broader:
+      - pd:OfficialID
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Password
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Password
+    definition: Information about password used in the process of authenticating the individual as an
+      user accessing a system.
+    broader:
+      - pd:Authenticating
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PastEmployment
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Past Employment
+    definition: Information about past employment
+    broader:
+      - pd:EmploymentHistory
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-04-20'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:PaymentCard
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Payment Card
+    definition: Information about payment card such as credit and debit cards
+    broader:
+      - pd:FinancialAccount
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:PaymentCardExpiry
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Payment Card Expiry
+    definition: Information about payment card expiry such as a date
+    broader:
+      - pd:PaymentCard
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:PaymentCardNumber
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Payment Card Number
+    definition: Information about payment card number
+    broader:
+      - pd:AccountIdentifier
+      - pd:PaymentCard
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2020-11-04'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+    source_page:
+      - page_name: DPVCG
+        url: https://www.w3.org/community/dpvcg/
+  - id: pd:PerformanceAtWork
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Performance at Work
+    definition: Information about performance at work or within work environments
+    broader:
+      - pd:Behavioural
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:PersonalDocuments
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Personal Documents
+    definition: Information about and including personal documents e.g. diaries or journals
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:PersonalPossession
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Personal Possession
+    definition: Information about personal possessions
+    broader:
+      - pd:Ownership
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Personality
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Personality
+    definition: Information about personality (e.g., categorization in terms of the Big Five personality
+      traits)
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PhilosophicalBelief
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Philosophical Belief
+    definition: Information about philosophical beliefs
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:KnowledgeBelief
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PhysicalAddress
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Physical Address
+    definition: Information about physical address
+    broader:
+      - pd:Contact
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PhysicalCharacteristic
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Physical Characteristic
+    definition: Information about physical characteristics
+    broader:
+      - pd:External
+    related:
+      - svd:Demographic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PhysicalHealth
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Physical Health
+    definition: Information about physical health
+    broader:
+      - pd:Health
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PhysicalTrait
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Physical Trait
+    definition: Information about defining traits or features regarding the body
+    broader:
+      - pd:Demographic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Picture
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Picture
+    definition: Information about visual representation or image e.g. profile photo
+    broader:
+      - pd:Identifying
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Piercing
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Piercing
+    definition: Information about piercings
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PoliticalAffiliation
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Political Affiliation
+    definition: Information about political affiliation and history
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:PublicLife
+    related:
+      - svd:Political
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PoliticalOpinion
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Political Opinion
+    definition: Information about opinions regarding politics and political topics
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-05-18'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:PostalCode
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Postal Code
+    definition: Information about postal code as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:Preference
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Preference
+    definition: Information about preferences or interests
+    broader:
+      - pd:Internal
+    related:
+      - svd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Prescription
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Prescription
+    definition: Information about medical and pharmaceutical prescriptions
+    broader:
+      - pd:MedicalHealth
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PrivacyPreference
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Privacy Preference
+    definition: Information about privacy preferences
+    broader:
+      - pd:Preference
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Proclivity
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Proclivity
+    definition: Information about proclivities in a sexual context
+    broader:
+      - pd:Sexual
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    modified: '2024-06-16'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Professional
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Professional
+    definition: Information about educational or professional career
+    broader:
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ProfessionalCertification
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Professional Certification
+    definition: Information about professional certifications
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ProfessionalEvaluation
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Professional Evaluation
+    definition: Information about professional evaluations
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ProfessionalExperience
+    rdf_type:
+      - pd:PersonalData
+    prefLabel: Professional Experience
+    definition: Information about professional experiences
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: pd:ProfessionalInterview
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Professional Interview
+    definition: Information about professional interviews
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ProfessionalTraining
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Professional Training
+    definition: Information about professional training
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Profile
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Profile
+    definition: Profile or user profile is information and representation of characteristics associated
+      with person(s) or group(s)
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:PublicLife
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Public Life
+    definition: Information about public life
+    broader:
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PubliclyAvailableSocialMedia
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Publicly Available Social Media
+    definition: Information about social media that is publicly available
+    broader:
+      - pd:SocialMedia
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Purchase
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Purchase
+    definition: Information about purchases such as items bought e.g. grocery or clothing
+    broader:
+      - pd:Transactional
+    related:
+      - svd:Purchase
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:PurchasesAndSpendingHabit
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Purchases and Spending Habit
+    definition: Information about analysis of purchases made and money spent expressed as a habit e.g.
+      monthly shopping trends
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Race
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Race
+    definition: Information about race or racial history
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:Ethnicity
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Reference
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Reference
+    definition: Information about references in the professional context
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Region
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Region
+    definition: Information about region as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:Relationship
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Relationship
+    definition: Information about relationships and relationship history
+    broader:
+      - pd:Family
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Reliability
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Reliability
+    definition: Information about reliability (e.g. of a person)
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Religion
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Religion
+    definition: Information about religion, religious inclinations, and religious history.
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ReligiousBelief
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Religious Belief
+    definition: Information about religion and religious beliefs
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:KnowledgeBelief
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Residency
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Residency
+    definition: Information about residency e.g. which region or country a person is resident in
+    scopeNote:
+      - Parent changed to pd:Location
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2024-04-20'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Retina
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Retina
+    definition: Information about retina and the retinal patterns
+    broader:
+      - pd:Biometric
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:RoomNumber
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Room Number
+    definition: Information about location expressed as room number or similar numbering systems
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Salary
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Salary
+    definition: Information about salary
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Sale
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Sale
+    definition: Information about sales e.g. selling of goods or services
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:School
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: School
+    definition: Information about school such as name of school, conduct, or grades obtained
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SecretText
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Secret Text
+    definition: Information about secret text used in the process of authenticating the individual as
+      an user accessing a system, e.g., when recovering a lost password
+    broader:
+      - pd:Authenticating
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:ServiceConsumptionBehaviour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Service Consumption Behaviour
+    definition: Information about the consumption of a service, e.g. time and duration of consumption
+    broader:
+      - pd:Behavioural
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-11-26'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-rudy-jacob
+    source_page:
+      - page_name: SPECIAL project
+        url: https://specialprivacy.ercim.eu/
+  - id: pd:Sexual
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Sexual
+    definition: Information about sexuality and sexual history
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SexualHistory
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Sexual History
+    definition: Information about sexual history
+    broader:
+      - pd:Sexual
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SexualPreference
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Sexual Preference
+    definition: Information about sexual preferences
+    broader:
+      - pd:Sexual
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Sibling
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Sibling
+    definition: Information about sibling(s)
+    broader:
+      - pd:FamilyStructure
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SkinTone
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Skin Tone
+    definition: Information about skin tone
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Social
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social
+    definition: Information about social aspects such as family, public life, or professional networks
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SocialBehaviour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social Behaviour
+    definition: Information about social behaviour(s)
+    broader:
+      - pd:Behavioural
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: pd:SocialMedia
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social Media
+    definition: Information about social media
+    broader:
+      - pd:Communication
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:SocialMediaCommunication
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social Media Communication
+    definition: Information about social media communication, including the communication itself and metadata
+    broader:
+      - pd:Communication
+    related:
+      - svd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SocialNetwork
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social Network
+    definition: Information about friends or connections expressed as a social network
+    broader:
+      - pd:Social
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:SocialStatus
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Social Status
+    definition: Information about social status
+    broader:
+      - pd:PublicLife
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Street
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Street
+    definition: Information about street as a location
+    broader:
+      - pd:PhysicalAddress
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-06-04'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+  - id: pd:TVViewingBehaviour
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: TV Viewing Behaviour
+    definition: Information about TV viewing behaviour, such as timestamps of channel change, duration
+      of viewership, content consumed
+    broader:
+      - pd:ServiceConsumptionBehaviour
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2019-11-26'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-rudy-jacob
+    source_page:
+      - page_name: SPECIAL project
+        url: https://specialprivacy.ercim.eu/
+  - id: pd:Tattoo
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Tattoo
+    definition: Information about tattoos
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Tax
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Tax
+    definition: Information about financial tax e.g. tax records or tax due
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:TechnicalKnowledge
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Technical Knowledge
+    definition: Information about the technical knowledge
+    broader:
+      - pd:KnowledgeBelief
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: pd:TelephoneNumber
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Telephone Number
+    definition: Information about telephone number
+    broader:
+      - pd:Contact
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Thought
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Thought
+    definition: Information about thoughts
+    broader:
+      - pd:KnowledgeBelief
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Tracking
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Tracking
+    definition: Information used to track an individual or group e.g. location or email
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:TradeUnionMembership
+    rdf_type:
+      - dpv:PersonalData
+      - dpv:SpecialCategoryPersonalData
+    prefLabel: Trade Union Membership
+    definition: Information about trade union memberships and related topics
+    broader:
+      - dpv:SpecialCategoryPersonalData
+      - pd:GroupMembership
+    inScheme:
+      - pd:extended-classes
+      - pd:specialcategory-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-05-18'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Transaction
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Transaction
+    definition: Information about financial transactions e.g. bank transfers
+    broader:
+      - pd:Transactional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Transactional
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Transactional
+    definition: Information about a purchasing, spending or income
+    broader:
+      - pd:Financial
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:TravelHistory
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Travel History
+    definition: Information about travel history
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-04-20'
+    modified: '2026-02-10'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:UID
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: UID
+    definition: Information about unique identifiers
+    broader:
+      - pd:Identifying
+    related:
+      - svd:UniqueId
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:UserAgent
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: User agent
+    definition: Information about software acting on behalf of users e.g. web browser
+    broader:
+      - pd:Tracking
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-georg-p-krog
+  - id: pd:Username
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Username
+    definition: Information about usernames
+    broader:
+      - pd:Identifying
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:VehicalLicenseNumber
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Vehicle License Number
+    definition: Information about vehicle license number
+    broader:
+      - pd:VehicleLicense
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:VehicalLicenseRegistration
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Vehicle License Registration
+    definition: Information about vehicle license registration
+    broader:
+      - pd:VehicleLicense
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Vehicle
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Vehicle
+    definition: Information about vehicles
+    broader:
+      - pd:External
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:VehicleLicense
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Vehicle License
+    definition: Information about vehicle license
+    broader:
+      - pd:Identifying
+      - pd:Vehicle
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:VehicleUsage
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Vehicle Usage
+    definition: Information about usage of vehicles, e.g. driving statistics
+    broader:
+      - pd:Behavioural
+      - pd:Vehicle
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:VoiceCommunicationRecording
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Voice Communication Recording
+    definition: Information about vocal recorded communication (e.g. telephony, VoIP)
+    broader:
+      - pd:Communication
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:VoiceMail
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Voice Mail
+    definition: Information about voice mail messages
+    broader:
+      - pd:Communication
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:Vulnerability
+    rdf_type:
+      - dpv:SensitivePersonalData
+    prefLabel: Vulnerability
+    definition: Information about vulnerability of a person or group
+    broader:
+      - dpv:SensitivePersonalData
+    inScheme:
+      - pd:core-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:Weight
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Weight
+    definition: Information about physical weight
+    broader:
+      - pd:PhysicalCharacteristic
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:WorkEnvironment
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Work Environment
+    definition: Information about work environments
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: pd:WorkExperience
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Work Experience
+    definition: Information about work experiences
+    broader:
+      - pd:ProfessionalExperience
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: pd:WorkHistory
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Work History
+    definition: Information about work history in a professional context
+    broader:
+      - pd:Professional
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2019-06-04'
+    contributor:
+      - dpv_agent:person-elmar-kiesling
+      - dpv_agent:person-fajar-ekaputra
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: EnterPrivacy Categories of Personal Information
+        url: https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf
+  - id: pd:WorkLocation
+    rdf_type:
+      - dpv:Location
+      - dpv:PersonalData
+    prefLabel: Work Place
+    definition: Information about a person's work place, including their location, address, and locality
+    broader:
+      - pd:Location
+    inScheme:
+      - pd:extended-classes
+    isDefinedBy:
+      - 'pd:'
+    term_status: accepted
+    created:
+      - '2026-02-10'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit

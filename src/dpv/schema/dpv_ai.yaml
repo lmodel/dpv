@@ -1,0 +1,46 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_ai
+name: dpv_ai
+title: 'DPV kinds: artificial intelligence'
+description: 'The kinds of term DPV''s vocabularies of artificial intelligence state: each a concept that
+  terms are instances of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  ai: https://w3id.org/dpv/ai#
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+classes:
+  DpvAiCapability:
+    title: Capability
+    is_a: DpvTechnology
+    description: Capability or use of AI to achieve a technical goal or objective
+    class_uri: ai:Capability
+  DpvLifecycleStage:
+    title: Lifecycle Stage
+    is_a: DpvConcept
+    description: A stage in the lifecycle of AI
+    class_uri: ai:LifecycleStage
+  DpvTechnique:
+    title: Technique
+    is_a: DpvTechnology
+    description: The underlying technological algorithm, method, or process that forms the technique for
+      using or applying AI
+    class_uri: ai:Technique
+  DpvTrainingTechnique:
+    title: Training Technique
+    is_a: DpvProcessing
+    description: Process to determine or to improve the parameters of a machine learning model based on
+      a machine learning algorithm by using training data
+    class_uri: ai:TrainingTechnique

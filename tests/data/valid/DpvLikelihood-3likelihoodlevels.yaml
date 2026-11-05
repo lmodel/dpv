@@ -1,0 +1,17 @@
+---
+id: risk:3LikelihoodLevels
+rdf_type:
+  - dpv:Likelihood
+prefLabel: 3 Likelihood Levels
+definition: Scale with 3 Likelihood Levels from High to Low
+broader:
+  - dpv:Likelihood
+inScheme:
+  - risk:risk-levels-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2022-08-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

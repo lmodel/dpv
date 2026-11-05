@@ -1,0 +1,5 @@
+---
+# Fails at: /datatype
+predicate: dcterms:date
+literal: x
+datatype: a date

@@ -1,0 +1,15 @@
+---
+id: ieee-7012:AgentAllowsNegotiation
+rdf_type:
+  - ieee-7012:AgentNegotiationBehaviour
+prefLabel: Agent Allows Negotiation
+definition: Term that indicates the Agent should allow negotiations
+broader:
+  - ieee-7012:AgentNegotiationBehaviour
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

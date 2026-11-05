@@ -1,0 +1,21 @@
+---
+id: dpv:SystematicMonitoring
+rdf_type:
+  - dpv:ProcessingContext
+prefLabel: Systematic Monitoring
+definition: Processing that involves systematic monitoring of individuals
+broader:
+  - dpv:ProcessingContext
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2020-11-04'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-piero-bonatti
+source_page:
+  - page_name: GDPR Art.4-2
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_2/oj

@@ -1,6 +1,0 @@
-# Null id fails type check (id must be a uri_or_curie string)
-# (original intent: Processing-invalid-timestamp — date without time component, datetime pattern not yet in schema)
-id:
-has_purpose: dpv:Marketing
-has_lawful_basis: dpv:A61a
-started_at: "2024-06-01"

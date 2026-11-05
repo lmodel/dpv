@@ -1,0 +1,18 @@
+---
+id: ieee-7012:PurposeTransparencyExAnte
+rdf_type:
+  - dpv:Obligation
+  - ieee-7012:PurposeTransparencyTerm
+prefLabel: Purpose Transparency Ex Ante
+definition: Term that indicates transparency regarding purposes involved for processing of data and technologies
+  is obligated ahead of intended process i.e. ex-ante transparency regarding purposes involved for processing
+  of data and technologies
+broader:
+  - ieee-7012:PurposeTransparencyRequired
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

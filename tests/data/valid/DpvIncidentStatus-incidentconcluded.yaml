@@ -1,0 +1,18 @@
+---
+id: risk:IncidentConcluded
+rdf_type:
+  - risk:IncidentStatus
+prefLabel: Incident Concluded
+definition: The incident has stopped or finished or concluded without any active mitigation and with a
+  low likelihood of resuming or recurring
+broader:
+  - risk:IncidentStatus
+inScheme:
+  - risk:incident-status-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2024-02-14'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,17 @@
+---
+id: ai:MachineLearningPlatform
+rdf_type:
+  - dpv:Technology
+prefLabel: Machine Learning Platform
+definition: Technology platform for developing, deploying, and managing machine learning models and resources
+broader:
+  - tech:Platform
+inScheme:
+  - ai:systems-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

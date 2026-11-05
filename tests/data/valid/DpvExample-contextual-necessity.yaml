@@ -1,0 +1,48 @@
+---
+id: dex:E0026
+title: Example of Contextual Necessity
+description: <p>In this example, a <code>Process</code> instance consists of two nested <code>Process</code>
+  instances for each of the optional and required parts. The personal data category 'Account Identifier'
+  is indicated as being required for 'Communication for Customer Care', while the use of 'Email' is optional
+  for the same purpose.</p>
+format:
+  - text/turtle
+source:
+  - E0026.ttl
+subject:
+  - dpv:Necessity
+created:
+  - '2024-06-10'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+term_status: accepted
+resources:
+  - id: exd:PDH1
+    hasPersonalData:
+      - pd:AccountIdentifier
+      - pd:EmailAddressPersonal
+    hasProcess:
+      - exd:PDH2
+      - exd:PDH3
+    hasPurpose:
+      - dpv:CommunicationForCustomerCare
+    rdf_type:
+      - dpv:Process
+  - id: exd:PDH2
+    hasContext:
+      - dpv:Optional
+    hasPersonalData:
+      - pd:EmailAddressPersonal
+    hasPurpose:
+      - dpv:CommunicationForCustomerCare
+    rdf_type:
+      - dpv:Process
+  - id: exd:PDH3
+    hasContext:
+      - dpv:Required
+    hasPersonalData:
+      - pd:AccountIdentifier
+    hasPurpose:
+      - dpv:CommunicationForCustomerCare
+    rdf_type:
+      - dpv:Process

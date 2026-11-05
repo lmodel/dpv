@@ -1,0 +1,25 @@
+---
+id: dpv:AcademicResearch
+rdf_type:
+  - dpv:Purpose
+prefLabel: Academic Research
+definition: Purposes associated with conducting or assisting with research conducted in an academic context
+  e.g. within universities
+broader:
+  - dpv:ResearchAndDevelopment
+related:
+  - svpu:Education
+inScheme:
+  - dpv:purposes-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2019-04-05'
+contributor:
+  - dpv_agent:person-axel-polleres
+  - dpv_agent:person-elmar-kiesling
+  - dpv_agent:person-fajar-ekaputra
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-javier-fernandez
+  - dpv_agent:person-simon-steyskal

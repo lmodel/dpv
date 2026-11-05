@@ -1,2584 +1,1565 @@
-export type AcceptableRuleId = string;
-export type ActivelyInvolvedId = string;
-export type ActivityCompletedId = string;
-export type ActivityHaltedId = string;
-export type ActivityNotCompletedId = string;
-export type ActivityOngoingId = string;
-export type ActivityPlannedId = string;
-export type ActivityProposedId = string;
-export type ActivityStatusId = string;
-export type ApplicabilityId = string;
-export type AuditApprovedId = string;
-export type AuditConditionallyApprovedId = string;
-export type AuditNotRequiredId = string;
-export type AuditRejectedId = string;
-export type AuditRequestedId = string;
-export type AuditRequiredId = string;
-export type AuditStatusId = string;
-export type AuthorityInformedId = string;
-export type AuthorityUninformedId = string;
-export type CompatibilityUnknownId = string;
-export type ComplianceIndeterminateId = string;
-export type ComplianceStatusId = string;
-export type ComplianceUnknownId = string;
-export type ComplianceViolationId = string;
-export type CompliantId = string;
-export type ConformanceStatusId = string;
-export type ConformantId = string;
-export type ContextId = string;
-export type ContinuousFrequencyId = string;
-export type ControllerInformedId = string;
-export type ControllerUninformedId = string;
-export type DataSubjectInformedId = string;
-export type DataSubjectUninformedId = string;
-export type DeterrenceId = string;
-export type DeterrenceFollowedId = string;
-export type DeterrenceNotFollowedId = string;
-export type DpvDurationId = string;
-export type DpvOptionalId = string;
-export type DpvThingId = string;
-export type EndlessDurationId = string;
-export type EntityInformedId = string;
-export type EntityInformedStatusId = string;
-export type EntityUninformedId = string;
-export type ExpectationStatusId = string;
-export type ExpectedId = string;
-export type FeeNotRequiredId = string;
-export type FeeRequiredId = string;
-export type FeeRequirementId = string;
-export type FixedOccurrencesDurationId = string;
-export type FrequencyId = string;
-export type ImportanceId = string;
-export type IndeterminateDurationId = string;
-export type IntendedId = string;
-export type IntentionStatusId = string;
-export type InvolvementStatusId = string;
-export type JustificationId = string;
-export type LawfulId = string;
-export type LawfulnessId = string;
-export type LawfulnessUnknownId = string;
-export type LegalMeasureId = string;
-export type NecessityId = string;
-export type NonCompliantId = string;
-export type NonConformantId = string;
-export type NotApplicableId = string;
-export type NotAvailableId = string;
-export type NotInvolvedId = string;
-export type NotRequiredId = string;
-export type NotificationCompletedId = string;
-export type NotificationFailedId = string;
-export type NotificationNotNeededId = string;
-export type NotificationOngoingId = string;
-export type NotificationPlannedId = string;
-export type NotificationStatusId = string;
-export type ObligationId = string;
-export type ObligationFulfilledId = string;
-export type ObligationUnfulfilledId = string;
-export type ObligationViolatedId = string;
-export type OftenFrequencyId = string;
-export type OrganisationalMeasureId = string;
-export type PartiallyCompliantId = string;
-export type PassivelyInvolvedId = string;
-export type PermissionId = string;
-export type PermissionNotUtilisedId = string;
-export type PermissionUtilisedId = string;
-export type PhysicalMeasureId = string;
-export type PrimaryImportanceId = string;
-export type PrimaryUseId = string;
-export type ProhibitionId = string;
-export type ProhibitionUnviolatedId = string;
-export type ProhibitionViolatedId = string;
-export type RecipientInformedId = string;
-export type RecipientUninformedId = string;
-export type RecommendationId = string;
-export type RecommendationFollowedId = string;
-export type RecommendationNotFollowedId = string;
-export type RequestAcceptedId = string;
-export type RequestAcknowledgedId = string;
-export type RequestActionDelayedId = string;
-export type RequestFulfilledId = string;
-export type RequestInitiatedId = string;
-export type RequestRejectedId = string;
-export type RequestRequiredActionPerformedId = string;
-export type RequestRequiresActionId = string;
-export type RequestStatusId = string;
-export type RequestStatusQueryId = string;
-export type RequestUnfulfilledId = string;
-export type RequiredId = string;
-export type ReuseCompatibilityId = string;
-export type RuleId = string;
-export type RuleFulfilledId = string;
-export type RuleFulfilmentStatusId = string;
-export type RuleUnfulfilledId = string;
-export type RuleViolatedId = string;
-export type ScopeId = string;
-export type SecondaryImportanceId = string;
-export type SecondaryUseId = string;
-export type SingularFrequencyId = string;
-export type SporadicFrequencyId = string;
-export type StatusId = string;
-export type TechnicalMeasureId = string;
-export type TechnicalOrganisationalMeasureId = string;
-export type TemporalDurationId = string;
-export type UnacceptableRuleId = string;
-export type UnexpectedId = string;
-export type UnintendedId = string;
-export type UnknownApplicabilityId = string;
-export type UnlawfulId = string;
-export type UntilEventDurationId = string;
-export type UntilTimeDurationId = string;
-export type AcceptContractId = string;
-export type B2B2CContractId = string;
-export type B2BContractId = string;
-export type B2CContractId = string;
-export type C2BContractId = string;
-export type C2CContractId = string;
-export type CityId = string;
-export type CloudLocationId = string;
-export type ConfidentialityAgreementId = string;
-export type ConsentId = string;
-export type ConsumerStandardFormContractId = string;
-export type ContractId = string;
-export type ContractActivationStatusId = string;
-export type ContractActiveId = string;
-export type ContractAmendedId = string;
-export type ContractAmendmentClauseId = string;
-export type ContractApprovedId = string;
-export type ContractBeingPerformedId = string;
-export type ContractBreachedId = string;
-export type ContractByDomainId = string;
-export type ContractByEntityTypeId = string;
-export type ContractByNegotiationTypeId = string;
-export type ContractConfidentialityClauseId = string;
-export type ContractControlId = string;
-export type ContractDefinitionsId = string;
-export type ContractDisputeResolutionClauseId = string;
-export type ContractDisputedId = string;
-export type ContractDraftedId = string;
-export type ContractExecutionStatusId = string;
-export type ContractExpiredId = string;
-export type ContractExtendedId = string;
-export type ContractFulfilledId = string;
-export type ContractFulfilmentStatusId = string;
-export type ContractFullyExecutedId = string;
-export type ContractFullySignedId = string;
-export type ContractInactiveId = string;
-export type ContractJurisdictionClauseId = string;
-export type ContractNegotiatedId = string;
-export type ContractNotFulfilledId = string;
-export type ContractOfferedId = string;
-export type ContractPartiallyFulfilledId = string;
-export type ContractPartiallySignedId = string;
-export type ContractPerformanceId = string;
-export type ContractPerformanceStatusId = string;
-export type ContractPreambleId = string;
-export type ContractPreparationStatusId = string;
-export type ContractRejectedId = string;
-export type ContractRenewedId = string;
-export type ContractSignedByPartyId = string;
-export type ContractStatusId = string;
-export type ContractTemporarilySuspendedId = string;
-export type ContractTerminatedId = string;
-export type ContractTerminationClauseId = string;
-export type ContractTerminationStatusId = string;
-export type ContractUnderNegotiationId = string;
-export type ContractUnderReviewId = string;
-export type ContractViolatedId = string;
-export type ContractualClauseId = string;
-export type ContractualClauseFulfilledId = string;
-export type ContractualClauseFulfilmentStatusId = string;
-export type ContractualClauseNotFulfilledId = string;
-export type ContractualClausePartiallyFulfilledId = string;
-export type ContractualClauseViolatedId = string;
-export type ContractualTermsId = string;
-export type ControllerDataSubjectAgreementId = string;
-export type ControllerProcessorAgreementId = string;
-export type DataControllerContractId = string;
-export type DataHandlingClauseId = string;
-export type DataProcessingAgreementId = string;
-export type DataProcessorContractId = string;
-export type DataSubjectContractId = string;
-export type DataTransferLegalBasisId = string;
-export type DecentralisedLocationsId = string;
-export type DistributionAgreementId = string;
-export type DpvCountryId = string;
-export type DpvJurisdictionId = string;
-export type DpvLocationId = string;
-export type DpvRegionId = string;
-export type EULAId = string;
-export type EconomicUnionId = string;
-export type EmploymentContractId = string;
-export type EnterIntoContractId = string;
-export type FederatedLocationsId = string;
-export type FixedLocationId = string;
-export type FixedMultipleLocationsId = string;
-export type FixedSingularLocationId = string;
-export type G2BContractId = string;
-export type G2CContractId = string;
-export type G2GContractId = string;
-export type HybridPublicPrivateSpaceId = string;
-export type InverseJurisdictionId = string;
-export type JointDataControllersAgreementId = string;
-export type LawId = string;
-export type LegalAgreementId = string;
-export type LegalBasisId = string;
-export type LegalObligationId = string;
-export type LegalObligationCompletedId = string;
-export type LegalObligationOngoingId = string;
-export type LegalObligationPendingId = string;
-export type LegalObligationStatusId = string;
-export type LegitimateInterestId = string;
-export type LegitimateInterestInformedId = string;
-export type LegitimateInterestNotObjectedId = string;
-export type LegitimateInterestObjectedId = string;
-export type LegitimateInterestOfControllerId = string;
-export type LegitimateInterestOfDataSubjectId = string;
-export type LegitimateInterestOfThirdPartyId = string;
-export type LegitimateInterestStatusId = string;
-export type LegitimateInterestUninformedId = string;
-export type LicenseAgreementId = string;
-export type LocalLocationId = string;
-export type LocationFixtureId = string;
-export type LocationLocalityId = string;
-export type NDAId = string;
-export type NegotiateContractId = string;
-export type NegotiatedContractId = string;
-export type OfferContractId = string;
-export type OfficialAuthorityExerciseCompletedId = string;
-export type OfficialAuthorityExerciseOngoingId = string;
-export type OfficialAuthorityExercisePendingId = string;
-export type OfficialAuthorityExerciseStatusId = string;
-export type OfficialAuthorityOfControllerId = string;
-export type PersonalSpaceId = string;
-export type PrivateCommunalSpaceId = string;
-export type PrivateLocationId = string;
-export type PrivateSpaceId = string;
-export type PrivatelyOperatedPublicSpaceId = string;
-export type PrivatelyOwnedPublicSpaceId = string;
-export type PrivatelyOwnedSpaceId = string;
-export type ProviderStandardFormContractId = string;
-export type PublicInterestId = string;
-export type PublicInterestCompletedId = string;
-export type PublicInterestObjectedId = string;
-export type PublicInterestOngoingId = string;
-export type PublicInterestPendingId = string;
-export type PublicInterestStatusId = string;
-export type PublicLocationId = string;
-export type PublicSpaceId = string;
-export type PubliclyAccessibleSpaceId = string;
-export type PubliclyOwnedSpaceId = string;
-export type RandomLocationId = string;
-export type RefuseContractId = string;
-export type RemoteLocationId = string;
-export type SemiPrivateSpaceId = string;
-export type ServiceLevelAgreementId = string;
-export type StandardFormContractId = string;
-export type StatisticalConfidentialityAgreementId = string;
-export type SubProcessorAgreementId = string;
-export type SupraNationalUnionId = string;
-export type TerminateContractId = string;
-export type TermsOfServiceId = string;
-export type ThirdCountryId = string;
-export type ThirdPartyAgreementId = string;
-export type ThirdPartyContractId = string;
-export type VariableLocationId = string;
-export type VitalInterestId = string;
-export type VitalInterestCompletedId = string;
-export type VitalInterestObjectedId = string;
-export type VitalInterestOfDataSubjectId = string;
-export type VitalInterestOfNaturalPersonId = string;
-export type VitalInterestOngoingId = string;
-export type VitalInterestPendingId = string;
-export type VitalInterestStatusId = string;
-export type WithinDeviceId = string;
-export type WithinPhysicalEnvironmentId = string;
-export type WithinVirtualEnvironmentId = string;
-export type AcademicScientificOrganisationId = string;
-export type AdultId = string;
-export type AmbulanceProviderId = string;
-export type ApplicantId = string;
-export type AsylumSeekerId = string;
-export type CharityOrganisationId = string;
-export type ChildId = string;
-export type CitizenId = string;
-export type ClientId = string;
-export type ClinicId = string;
-export type DataControllerId = string;
-export type DataExporterId = string;
-export type DataImporterId = string;
-export type DataProcessorId = string;
-export type DataProtectionAuthorityId = string;
-export type DataProtectionOfficerId = string;
-export type DataSubProcessorId = string;
-export type DataSubjectId = string;
+export type DpvVocabularyId = string;
+export type DpvConceptSchemeId = string;
 export type DpvAgentId = string;
+export type DpvTermId = string;
+export type DpvConceptId = string;
+export type DpvPropertyId = string;
+export type DpvResourceId = string;
+export type DpvExampleId = string;
+export type DpvActivityStatusId = string;
+export type DpvAggregatedDataId = string;
+export type DpvApplicabilityId = string;
+export type DpvAuditStatusId = string;
 export type DpvAuthorityId = string;
-export type DpvConsumerId = string;
-export type DpvCustomerId = string;
-export type DpvEntityId = string;
-export type DpvOrganisationId = string;
-export type DpvRecipientId = string;
-export type DpvUserId = string;
-export type EducationalOrganisationId = string;
-export type ElderlyDataSubjectId = string;
-export type ElderlyHumanId = string;
-export type EmergencyHealthcareProviderId = string;
-export type EmergencyServiceProviderId = string;
-export type EmployeeId = string;
-export type FireDepartmentId = string;
-export type ForProfitOrganisationId = string;
-export type GovernmentalOrganisationId = string;
-export type GuardianOfDataSubjectId = string;
-export type GuardianOfHumanId = string;
-export type HealthcareOrganisationId = string;
-export type HospitalId = string;
-export type HumanSubjectId = string;
-export type ImmigrantId = string;
-export type IndustryConsortiumId = string;
-export type InternationalOrganisationId = string;
-export type JobApplicantId = string;
-export type JointDataControllersId = string;
-export type JudicialOrganisationId = string;
-export type LawEnforcementOrganisationId = string;
-export type LegalAgentId = string;
-export type LegalEntityId = string;
-export type MemberId = string;
-export type MentallyVulnerableDataSubjectId = string;
-export type MentallyVulnerableHumanId = string;
-export type NationalAuthorityId = string;
-export type NaturalPersonId = string;
-export type NonCitizenId = string;
-export type NonGovernmentalOrganisationId = string;
-export type NonProfitOrganisationId = string;
-export type OrganisationalUnitId = string;
-export type ParentLegalEntityId = string;
-export type ParentOfDataSubjectId = string;
-export type ParentOfHumanId = string;
-export type ParticipantId = string;
-export type PatientId = string;
-export type PrivateSectorBodyId = string;
-export type PublicRegisterOfEntitiesId = string;
-export type PublicSectorBodyId = string;
-export type RegionalAuthorityId = string;
-export type ReligiousAssociationsId = string;
-export type RepresentativeId = string;
-export type SMEOrganisationId = string;
-export type ServiceConsumerId = string;
-export type ServiceProviderId = string;
-export type StartupOrganisationId = string;
-export type StudentId = string;
-export type SubscriberId = string;
-export type SubsidiaryLegalEntityId = string;
-export type SupraNationalAuthorityId = string;
-export type ThirdPartyId = string;
-export type TouristId = string;
-export type VisitorId = string;
-export type VulnerableDataSubjectId = string;
-export type VulnerableHumanId = string;
-export type AIGovernanceId = string;
-export type AILiteracyId = string;
-export type AINoticeId = string;
-export type AcceptableUsePolicyId = string;
-export type AccessControlMethodId = string;
-export type ActivityMonitoringId = string;
-export type AnonymisationId = string;
-export type AnonymisedDataId = string;
-export type ApprovalProcedureId = string;
-export type AssessmentId = string;
-export type AssetManagementProceduresId = string;
-export type AsymmetricCryptographyId = string;
-export type AsymmetricEncryptionId = string;
-export type AuditId = string;
-export type AuthenticationABCId = string;
-export type AuthenticationPABCId = string;
-export type AuthenticationProtocolsId = string;
-export type AuthorisationProcedureId = string;
-export type AuthorisationProtocolsId = string;
-export type BackgroundChecksId = string;
-export type BiometricAuthenticationId = string;
-export type CertificationId = string;
-export type CertificationSealId = string;
-export type CodeOfConductId = string;
-export type CollectedDataId = string;
-export type CollectedPersonalDataId = string;
-export type CommerciallyConfidentialDataId = string;
-export type ComplianceAssessmentId = string;
-export type ComplianceMonitoringId = string;
-export type ConfidentialDataId = string;
-export type ConformanceAssessmentId = string;
-export type ConsentManagementId = string;
-export type ConsentReceiptId = string;
-export type ConsentRecordId = string;
-export type ConsultationId = string;
-export type ConsultationWithAuthorityId = string;
-export type ConsultationWithDPOId = string;
-export type ConsultationWithDataSubjectId = string;
-export type ConsultationWithDataSubjectRepresentativeId = string;
-export type ContextuallyAnonymisedDataId = string;
-export type CredentialManagementId = string;
-export type CryptographicAuthenticationId = string;
-export type CryptographicKeyManagementId = string;
-export type CryptographicMethodsId = string;
-export type CybersecurityTrainingId = string;
-export type DataAvailabilityAssessmentId = string;
-export type DataBackupProtocolsId = string;
-export type DataBreachNotificationId = string;
-export type DataBreachRecordId = string;
-export type DataDeletionPolicyId = string;
-export type DataErasurePolicyId = string;
-export type DataGovernanceId = string;
-export type DataInteroperabilityAssessmentId = string;
-export type DataInteroperabilityImprovementId = string;
-export type DataInteroperabilityManagementId = string;
-export type DataInventoryManagementId = string;
-export type DataJurisdictionPolicyId = string;
-export type DataLiteracyId = string;
-export type DataProcessingPolicyId = string;
-export type DataProcessingRecordId = string;
-export type DataProtectionTrainingId = string;
-export type DataQualityAssessmentId = string;
-export type DataQualityImprovementId = string;
-export type DataQualityManagementId = string;
-export type DataRedactionId = string;
-export type DataRestorationPolicyId = string;
-export type DataReusePolicyId = string;
-export type DataSanitisationTechniqueId = string;
-export type DataSecurityManagementId = string;
-export type DataStoragePolicyId = string;
-export type DataSubjectRightsManagementId = string;
-export type DataSuitabilityAssessmentId = string;
-export type DataTransferRecordId = string;
-export type DeidentificationId = string;
-export type DerivedDataId = string;
-export type DerivedPersonalDataId = string;
-export type DesignStandardId = string;
-export type DeterministicPseudonymisationId = string;
-export type DifferentialPrivacyId = string;
-export type DigitalLiteracyId = string;
-export type DigitalRightsManagementId = string;
-export type DigitalSignaturesId = string;
-export type DisasterRecoveryProceduresId = string;
-export type DistributedSystemSecurityId = string;
-export type DocumentRandomisedPseudonymisationId = string;
-export type DocumentSecurityId = string;
-export type DpvDataId = string;
-export type EducationalTrainingId = string;
-export type EffectivenessDeterminationProceduresId = string;
-export type EncryptionId = string;
-export type EncryptionAtRestId = string;
-export type EncryptionInTransferId = string;
-export type EncryptionInUseId = string;
-export type EndToEndEncryptionId = string;
-export type EnvironmentalProtectionId = string;
-export type FailSafeProtocolsId = string;
-export type FileSystemSecurityId = string;
-export type FullyRandomisedPseudonymisationId = string;
-export type GeneratedDataId = string;
-export type GeneratedPersonalDataId = string;
-export type GovernanceProceduresId = string;
-export type GuidelineId = string;
-export type GuidelinesPrincipleId = string;
-export type HardwareSecurityProtocolsId = string;
-export type HashFunctionsId = string;
-export type HashMessageAuthenticationCodeId = string;
-export type HomomorphicEncryptionId = string;
-export type HumanOversightId = string;
-export type IPRManagementId = string;
-export type IdentifyingPersonalDataId = string;
-export type IdentityManagementMethodId = string;
-export type IncidentManagementProceduresId = string;
-export type IncidentReportingCommunicationId = string;
-export type IncorrectDataId = string;
-export type InferredDataId = string;
-export type InferredPersonalDataId = string;
-export type InformationAuditId = string;
-export type InformationFlowControlId = string;
-export type InformationSecurityPolicyId = string;
-export type IntellectualPropertyDataId = string;
-export type IntrusionDetectionSystemId = string;
-export type LegalComplianceAssessmentId = string;
-export type LegalComplianceAuditId = string;
-export type LegitimateInterestAssessmentId = string;
-export type LoggingPolicyId = string;
-export type ManagementStandardId = string;
-export type MessageAuthenticationCodesId = string;
-export type MetadataManagementId = string;
-export type MobilePlatformSecurityId = string;
-export type MonitoringPolicyId = string;
-export type MonotonicCounterPseudonymisationId = string;
-export type MultiFactorAuthenticationId = string;
-export type NetworkProxyRoutingId = string;
-export type NetworkSecurityProtocolsId = string;
-export type NonPersonalDataId = string;
-export type NotificationId = string;
-export type ObservedDataId = string;
-export type ObservedPersonalDataId = string;
-export type OperatingSystemSecurityId = string;
-export type PasswordAuthenticationId = string;
-export type PenetrationTestingMethodsId = string;
-export type PermissionManagementId = string;
-export type PersonalDataId = string;
-export type PersonalDataAuditId = string;
-export type PhysicalAccessControlMethodId = string;
-export type PhysicalAuthenticationId = string;
-export type PhysicalAuthorisationId = string;
-export type PhysicalDeviceSecurityId = string;
-export type PhysicalInterceptionProtectionId = string;
-export type PhysicalInterruptionProtectionId = string;
-export type PhysicalNetworkSecurityId = string;
-export type PhysicalSecureStorageId = string;
-export type PhysicalSupplySecurityId = string;
-export type PhysicalSurveillanceId = string;
-export type PolicyId = string;
-export type PostQuantumCryptographyId = string;
-export type PrincipleId = string;
-export type PrivacyByDefaultId = string;
-export type PrivacyByDesignId = string;
-export type PrivacyPreservingProtocolId = string;
-export type PrivateInformationRetrievalId = string;
-export type ProfessionalConfidentialDataId = string;
-export type ProfessionalTrainingId = string;
-export type ProvidedDataId = string;
-export type ProvidedPersonalDataId = string;
-export type PseudonymisationId = string;
-export type PseudonymisedDataId = string;
-export type QuantumCryptographyId = string;
-export type RNGPseudonymisationId = string;
-export type ROPAId = string;
-export type RecertificationPolicyId = string;
-export type RecordsOfActivitiesId = string;
-export type RegulatorySandboxId = string;
-export type ReviewImpactAssessmentId = string;
-export type ReviewProcedureId = string;
-export type RightsManagementId = string;
-export type SafeguardId = string;
-export type SafeguardForDataTransferId = string;
-export type SealId = string;
-export type SecretSharingSchemesId = string;
-export type SecureMultiPartyComputationId = string;
-export type SecureProcessingEnvironmentId = string;
-export type SecurityAuditId = string;
-export type SecurityIncidentNotificationId = string;
-export type SecurityIncidentRecordId = string;
-export type SecurityKnowledgeTrainingId = string;
-export type SecurityMethodId = string;
-export type SecurityProcedureId = string;
-export type SecurityRoleProceduresId = string;
-export type SensitiveDataId = string;
-export type SensitiveNonPersonalDataId = string;
-export type SensitivePersonalDataId = string;
-export type SingleSignOnId = string;
-export type SpecialCategoryPersonalDataId = string;
-export type StaffTrainingId = string;
-export type StandardId = string;
-export type StandardsConformanceId = string;
-export type StatisticallyConfidentialDataId = string;
-export type SupportContractNegotiationId = string;
-export type SupportEntityDecisionMakingId = string;
-export type SupportExchangeOfViewsId = string;
-export type SupportInformedConsentDecisionId = string;
-export type SymmetricCryptographyId = string;
-export type SymmetricEncryptionId = string;
-export type SyntheticDataId = string;
-export type TechnicalStandardId = string;
-export type ThirdPartySecurityProceduresId = string;
-export type TrustedComputingId = string;
-export type TrustedExecutionEnvironmentId = string;
-export type UncategorisedDataId = string;
-export type UnstructuredDataId = string;
-export type UnverifiedDataId = string;
-export type UsageControlId = string;
-export type UseSyntheticDataId = string;
-export type VerifiedDataId = string;
-export type VirtualisationSecurityId = string;
-export type VulnerabilityTestingMethodsId = string;
-export type WebBrowserSecurityId = string;
-export type WebSecurityProtocolsId = string;
-export type WirelessSecurityProtocolsId = string;
-export type ZeroKnowledgeAuthenticationId = string;
-export type AcademicResearchId = string;
-export type AccessId = string;
-export type AccountManagementId = string;
-export type AcquireId = string;
-export type AdaptId = string;
-export type AdvertisingId = string;
-export type AgeVerificationId = string;
-export type AggregateId = string;
-export type AlgorithmicLogicId = string;
-export type AlignId = string;
-export type AlterId = string;
-export type AnalyseId = string;
-export type AnonymiseId = string;
-export type AssessId = string;
-export type AssistiveAutomationId = string;
-export type AutomatedDecisionMakingId = string;
-export type AutomatedScoringOfIndividualsId = string;
-export type AutomationLevelId = string;
-export type AutonomousId = string;
-export type CannotChallengeProcessId = string;
-export type CannotChallengeProcessInputId = string;
-export type CannotChallengeProcessOutputId = string;
-export type CannotCorrectProcessId = string;
-export type CannotCorrectProcessInputId = string;
-export type CannotCorrectProcessOutputId = string;
-export type CannotObjectToProcessId = string;
-export type CannotOptInToProcessId = string;
-export type CannotOptOutFromProcessId = string;
-export type CannotReverseProcessEffectsId = string;
-export type CannotReverseProcessInputId = string;
-export type CannotReverseProcessOutputId = string;
-export type CannotWithdrawFromProcessId = string;
-export type ChallengingProcessId = string;
-export type ChallengingProcessInputId = string;
-export type ChallengingProcessOutputId = string;
-export type CollectId = string;
-export type CombatClimateChangeId = string;
-export type CombineId = string;
-export type CommercialPurposeId = string;
-export type CommercialResearchId = string;
-export type CommunicationForCustomerCareId = string;
-export type CommunicationManagementId = string;
-export type ConditionalAutomationId = string;
-export type ConsultId = string;
-export type CopyId = string;
-export type CorrectingProcessId = string;
-export type CorrectingProcessInputId = string;
-export type CorrectingProcessOutputId = string;
-export type CounterMoneyLaunderingId = string;
-export type CounterterrorismId = string;
-export type CrossBorderTransferId = string;
-export type CustomerCareId = string;
-export type CustomerClaimsManagementId = string;
-export type CustomerManagementId = string;
-export type CustomerOrderManagementId = string;
-export type CustomerRelationshipManagementId = string;
-export type CustomerSolvencyMonitoringId = string;
-export type DataAltruismId = string;
-export type DataControllerDataSourceId = string;
-export type DataPublishedByDataSubjectId = string;
-export type DataSourceId = string;
-export type DataSubjectDataSourceId = string;
-export type DataSubjectScaleId = string;
-export type DataVolumeId = string;
-export type DecisionMakingId = string;
-export type DeleteId = string;
-export type DeliveryOfGoodsId = string;
-export type DeriveId = string;
-export type DestructId = string;
-export type DirectMarketingId = string;
-export type DiscloseId = string;
-export type DiscloseByTransmissionId = string;
-export type DisplayId = string;
-export type DisputeManagementId = string;
-export type DisseminateId = string;
-export type DownloadId = string;
-export type DpvProcessId = string;
-export type DpvRecordId = string;
-export type DpvServiceId = string;
-export type EnforceAccessControlId = string;
-export type EnforceSecurityId = string;
-export type EntityActiveInvolvementId = string;
-export type EntityIntendedInvolvementId = string;
-export type EntityInvolvedId = string;
-export type EntityInvolvementId = string;
-export type EntityInvolvementStatusId = string;
-export type EntityNonInvolvementId = string;
-export type EntityNonPermissiveInvolvementId = string;
-export type EntityNotInvolvedId = string;
-export type EntityPassiveInvolvementId = string;
-export type EntityPermissiveInvolvementId = string;
-export type EntityUnintendedInvolvementId = string;
-export type EraseId = string;
-export type EstablishContractualAgreementId = string;
-export type EvaluationOfIndividualsId = string;
-export type EvaluationScoringId = string;
-export type ExportId = string;
-export type FilterId = string;
-export type FormatId = string;
-export type FraudPreventionAndDetectionId = string;
-export type FulfilmentOfContractualObligationId = string;
-export type FulfilmentOfObligationId = string;
-export type FullAutomationId = string;
-export type GenerateId = string;
-export type GeographicCoverageId = string;
-export type GlobalScaleId = string;
-export type HighAutomationId = string;
-export type HugeDataVolumeId = string;
-export type HugeScaleOfDataSubjectsId = string;
-export type HumanInvolvedId = string;
-export type HumanInvolvementId = string;
-export type HumanInvolvementForControlId = string;
-export type HumanInvolvementForDecisionId = string;
-export type HumanInvolvementForInputId = string;
-export type HumanInvolvementForInterventionId = string;
-export type HumanInvolvementForOversightId = string;
-export type HumanInvolvementForVerificationId = string;
-export type HumanNotInvolvedId = string;
-export type HumanResourceManagementId = string;
-export type IdentityAuthenticationId = string;
-export type IdentityVerificationId = string;
-export type ImproveExistingProductsAndServicesId = string;
-export type ImproveHealthcareId = string;
-export type ImproveInternalCRMProcessesId = string;
-export type ImprovePublicServicesId = string;
-export type ImproveTransportMobilityId = string;
-export type IncreaseServiceRobustnessId = string;
-export type InferId = string;
-export type InnovativeUseOfExistingTechnologyId = string;
-export type InnovativeUseOfNewTechnologiesId = string;
-export type InnovativeUseOfTechnologyId = string;
-export type InternalResourceOptimisationId = string;
-export type LargeDataVolumeId = string;
-export type LargeScaleOfDataSubjectsId = string;
-export type LargeScaleProcessingId = string;
-export type LegalComplianceId = string;
-export type LocalEnvironmentScaleId = string;
-export type LocalityScaleId = string;
-export type MaintainFraudDatabaseId = string;
-export type MakeAvailableId = string;
-export type MarketingId = string;
-export type MatchId = string;
-export type MediumDataVolumeId = string;
-export type MediumScaleOfDataSubjectsId = string;
-export type MediumScaleProcessingId = string;
-export type MemberPartnerManagementId = string;
-export type MisusePreventionAndDetectionId = string;
-export type ModifyId = string;
-export type MonitorId = string;
-export type MoveId = string;
-export type MultiNationalScaleId = string;
-export type NationalScaleId = string;
-export type NearlyGlobalScaleId = string;
-export type NonCommercialPurposeId = string;
-export type NonCommercialResearchId = string;
-export type NonPersonalDataProcessId = string;
-export type NonPublicDataSourceId = string;
-export type NotAutomatedId = string;
-export type ObjectingToProcessId = string;
-export type ObserveId = string;
-export type ObtainId = string;
-export type OptimisationForConsumerId = string;
-export type OptimisationForControllerId = string;
-export type OptimiseUserInterfaceId = string;
-export type OptingInToProcessId = string;
-export type OptingOutFromProcessId = string;
-export type OrganisationComplianceManagementId = string;
-export type OrganisationGovernanceId = string;
-export type OrganisationRiskManagementId = string;
-export type OrganiseId = string;
-export type PartialAutomationId = string;
-export type PaymentManagementId = string;
-export type PersonalDataHandlingId = string;
-export type PersonalDataProcessId = string;
-export type PersonalisationId = string;
-export type PersonalisedAdvertisingId = string;
-export type PersonalisedBenefitsId = string;
-export type PersonnelBehaviourMonitoringId = string;
-export type PersonnelHiringId = string;
-export type PersonnelManagementId = string;
-export type PersonnelMonitoringId = string;
-export type PersonnelOffboardingId = string;
-export type PersonnelOnboardingId = string;
-export type PersonnelPaymentId = string;
-export type PersonnelPerformanceEvaluationId = string;
-export type PersonnelPerformanceManagementId = string;
-export type PersonnelPerformanceMonitoringId = string;
-export type PersonnelPerformancePredictionId = string;
-export type PersonnelPromotionManagementId = string;
-export type PersonnelTerminationManagementId = string;
-export type PersonnelWorkloadManagementId = string;
-export type PoliticalCampaignId = string;
-export type ProcessingId = string;
-export type ProcessingConditionId = string;
-export type ProcessingContextId = string;
-export type ProcessingDurationId = string;
-export type ProcessingLocationId = string;
-export type ProcessingScaleId = string;
-export type ProfilingId = string;
-export type ProtectionOfIPRId = string;
-export type ProtectionOfNationalSecurityId = string;
-export type ProtectionOfPublicSecurityId = string;
-export type ProvideEventRecommendationsId = string;
-export type ProvideOfficialStatisticsId = string;
-export type ProvidePersonalisedRecommendationsId = string;
-export type ProvideProductRecommendationsId = string;
-export type PseudonymiseId = string;
-export type PublicBenefitId = string;
-export type PublicDataSourceId = string;
-export type PublicPolicyMakingId = string;
-export type PublicRelationsId = string;
-export type PurposeId = string;
-export type QueryId = string;
-export type RecordManagementId = string;
-export type RecruitmentAdvertisingId = string;
-export type RecruitmentApplicantBackgroundCheckId = string;
-export type RecruitmentApplicantCriminalBackgroundCheckId = string;
-export type RecruitmentApplicantInformationAuthenticationId = string;
-export type RecruitmentApplicantSelectionId = string;
-export type RecruitmentApplicationAnalysisId = string;
-export type RecruitmentApplicationManagementId = string;
-export type RecruitmentApplicationScreeningId = string;
-export type RecruitmentInterviewAnalysisId = string;
-export type RecruitmentInterviewAssessmentId = string;
-export type RecruitmentInterviewManagementId = string;
-export type RecruitmentInterviewSchedulingId = string;
-export type RecruitmentManagementId = string;
-export type RecruitmentTargetedAdvertisingId = string;
-export type ReformatId = string;
-export type RegionalScaleId = string;
-export type RemoveId = string;
-export type RepairImpairmentsId = string;
-export type RequestedServiceProvisionId = string;
-export type ResearchAndDevelopmentId = string;
-export type RestrictId = string;
-export type RetrieveId = string;
-export type ReversingProcessEffectsId = string;
-export type ReversingProcessInputId = string;
-export type ReversingProcessOutputId = string;
-export type RightsFulfilmentId = string;
-export type ScaleId = string;
-export type ScientificResearchId = string;
-export type ScoringOfIndividualsId = string;
-export type ScreenId = string;
-export type SearchFunctionalitiesId = string;
-export type SectorId = string;
-export type SellDataToThirdPartiesId = string;
-export type SellInsightsFromDataId = string;
-export type SellProductsId = string;
-export type SellProductsToDataSubjectId = string;
-export type ServiceAccessDeterminationId = string;
-export type ServiceManagementId = string;
-export type ServiceMonitoringId = string;
-export type ServiceOptimisationId = string;
-export type ServicePersonalisationId = string;
-export type ServiceProvisionId = string;
-export type ServiceRegistrationId = string;
-export type ServiceUsageAnalyticsId = string;
-export type ShareId = string;
-export type SingularDataVolumeId = string;
-export type SingularScaleOfDataSubjectsId = string;
-export type SmallDataVolumeId = string;
-export type SmallScaleOfDataSubjectsId = string;
-export type SmallScaleProcessingId = string;
-export type SocialMediaMarketingId = string;
-export type SporadicDataVolumeId = string;
-export type SporadicScaleOfDataSubjectsId = string;
-export type StorageConditionId = string;
-export type StorageDeletionId = string;
-export type StorageDurationId = string;
-export type StorageLocationId = string;
-export type StorageRestorationId = string;
-export type StoreId = string;
-export type StructureId = string;
-export type SystematicMonitoringId = string;
-export type TargetedAdvertisingId = string;
-export type TechnicalServiceProvisionId = string;
-export type TechnologyId = string;
-export type ThirdPartyDataSourceId = string;
-export type TrackingId = string;
-export type TrackingByFirstPartyId = string;
-export type TrackingByThirdPartyId = string;
-export type TransferId = string;
-export type TransformId = string;
-export type TransmitId = string;
-export type UseId = string;
-export type UserInterfacePersonalisationId = string;
-export type VendorManagementId = string;
-export type VendorPaymentId = string;
-export type VendorRecordsManagementId = string;
-export type VendorSelectionAssessmentId = string;
-export type VerificationId = string;
-export type WithdrawingFromProcessId = string;
-export type ConsentNoticeId = string;
-export type ConsequenceId = string;
-export type ConsequenceAsSideEffectId = string;
-export type ConsequenceOfFailureId = string;
-export type ConsequenceOfSuccessId = string;
-export type CybersecurityAssessmentId = string;
-export type DPIAId = string;
-export type DashboardNoticeId = string;
-export type DataBreachImpactAssessmentId = string;
-export type DataBreachNoticeId = string;
-export type DataTransferImpactAssessmentId = string;
-export type DataTransferNoticeId = string;
-export type DeviceNoticeId = string;
-export type FRIAId = string;
-export type GraphicalNoticeId = string;
-export type ImpactId = string;
-export type ImpactAssessmentId = string;
-export type JITNoticeId = string;
-export type LayeredNoticeId = string;
-export type LikelihoodId = string;
-export type NoticeId = string;
-export type NoticeCommunicatedId = string;
-export type NoticeGeneratedId = string;
-export type NoticeIconId = string;
-export type NoticeLatestId = string;
-export type NoticeLayerId = string;
-export type NoticeStaleId = string;
-export type NoticeStatusId = string;
-export type NoticeUnusedId = string;
-export type NoticeUpdatedId = string;
-export type NoticeUsedId = string;
-export type OralNoticeId = string;
-export type PIAId = string;
-export type PostedNoticeId = string;
-export type PrintedNoticeId = string;
-export type PrivacyNoticeId = string;
-export type ResidualRiskId = string;
-export type RightsImpactAssessmentId = string;
-export type RiskId = string;
-export type RiskAssessmentId = string;
-export type RiskConceptId = string;
-export type RiskLevelId = string;
-export type RiskMitigationMeasureId = string;
-export type SecurityAssessmentId = string;
-export type SecurityIncidentNoticeId = string;
-export type SensitivityLevelId = string;
-export type SeverityId = string;
-export type ActiveRightId = string;
-export type DataSubjectRightId = string;
-export type PassiveRightId = string;
-export type RightId = string;
-export type RightExerciseActivityId = string;
-export type RightExerciseNoticeId = string;
-export type RightExerciseRecordId = string;
-export type RightFulfilmentNoticeId = string;
-export type RightNonFulfilmentNoticeId = string;
-export type RightNoticeId = string;
-export type ConsentControlId = string;
-export type ConsentExpiredId = string;
-export type ConsentGivenId = string;
-export type ConsentInvalidatedId = string;
-export type ConsentRefusedId = string;
-export type ConsentRequestDeferredId = string;
-export type ConsentRequestedId = string;
-export type ConsentRevokedId = string;
-export type ConsentStatusId = string;
-export type ConsentStatusInvalidForProcessingId = string;
-export type ConsentStatusValidForProcessingId = string;
-export type ConsentUnknownId = string;
-export type ConsentWithdrawnId = string;
-export type ExplicitlyExpressedConsentId = string;
-export type ExpressedConsentId = string;
-export type ImpliedConsentId = string;
-export type InformedConsentId = string;
-export type ManageConsentId = string;
-export type ObtainConsentId = string;
-export type ProvideConsentId = string;
-export type ReaffirmConsentId = string;
-export type RefuseConsentId = string;
-export type RenewedConsentGivenId = string;
-export type UninformedConsentId = string;
-export type WithdrawConsentId = string;
+export type DpvAutomationLevelId = string;
+export type DpvComplianceStatusId = string;
+export type DpvConformanceStatusId = string;
+export type DpvConsentStatusId = string;
+export type DpvContractActivationStatusId = string;
+export type DpvContractExecutionStatusId = string;
+export type DpvContractFulfilmentStatusId = string;
+export type DpvContractPerformanceStatusId = string;
+export type DpvContractPreparationStatusId = string;
+export type DpvContractTerminationStatusId = string;
+export type DpvContractualClauseId = string;
+export type DpvContractualClauseFulfilmentStatusId = string;
+export type DpvCountryId = string;
+export type DpvDataProtectionAuthorityId = string;
+export type DpvDataSourceId = string;
+export type DpvDataSubjectDataSourceId = string;
+export type DpvDataSubjectScaleId = string;
+export type DpvDataVolumeId = string;
+export type DpvDurationId = string;
+export type DpvEntityInformedStatusId = string;
+export type DpvEntityInvolvementStatusId = string;
+export type DpvEntityNonPermissiveInvolvementId = string;
+export type DpvEntityPermissiveInvolvementId = string;
+export type DpvEvaluationScoringId = string;
+export type DpvExpectationStatusId = string;
+export type DpvFeeRequirementId = string;
+export type DpvFrequencyId = string;
+export type DpvGeographicCoverageId = string;
+export type DpvHumanInvolvementId = string;
+export type DpvHumanSubjectId = string;
+export type DpvImportanceId = string;
+export type DpvInnovativeUseOfTechnologyId = string;
+export type DpvIntentionStatusId = string;
+export type DpvInverseJurisdictionId = string;
+export type DpvInvolvementStatusId = string;
+export type DpvJurisdictionId = string;
+export type DpvJustificationId = string;
+export type DpvLawId = string;
+export type DpvLawfulnessId = string;
+export type DpvLegalBasisId = string;
+export type DpvLegalEntityId = string;
+export type DpvLegalMeasureId = string;
+export type DpvLegalObligationStatusId = string;
+export type DpvLegitimateInterestStatusId = string;
+export type DpvLikelihoodId = string;
+export type DpvLocationId = string;
+export type DpvLocationFixtureId = string;
+export type DpvNecessityId = string;
+export type DpvNonPersonalDataId = string;
+export type DpvNoticeStatusId = string;
+export type DpvNotificationStatusId = string;
+export type DpvObligationId = string;
+export type DpvOfficialAuthorityExerciseStatusId = string;
+export type DpvOrganisationalMeasureId = string;
+export type DpvPermissionId = string;
+export type DpvPersonalDataId = string;
+export type DpvPhysicalMeasureId = string;
+export type DpvProcessingId = string;
+export type DpvProcessingContextId = string;
+export type DpvProcessingScaleId = string;
+export type DpvProhibitionId = string;
+export type DpvPublicInterestStatusId = string;
+export type DpvPublicRegisterOfEntitiesId = string;
+export type DpvPurposeId = string;
+export type DpvRegionId = string;
+export type DpvRequestStatusId = string;
+export type DpvReuseCompatibilityId = string;
+export type DpvRightId = string;
+export type DpvRiskConceptId = string;
+export type DpvRiskLevelId = string;
+export type DpvRuleId = string;
+export type DpvRuleFulfilmentStatusId = string;
+export type DpvScoringOfIndividualsId = string;
+export type DpvSectorId = string;
+export type DpvSensitivePersonalDataId = string;
+export type DpvSeverityId = string;
+export type DpvSpecialCategoryPersonalDataId = string;
+export type DpvStatusId = string;
+export type DpvSupraNationalUnionId = string;
+export type DpvTechnicalMeasureId = string;
+export type DpvTechnologyId = string;
+export type DpvVitalInterestStatusId = string;
+export type DpvPdPersonalDataId = string;
+export type DpvActorId = string;
+export type DpvCommunicationMechanismId = string;
+export type DpvDocumentationId = string;
+export type DpvProvisionMethodId = string;
+export type DpvProvisionStatusId = string;
+export type DpvTechCapabilityId = string;
+export type DpvTechMarketAvailabilityStatusId = string;
+export type DpvAiCapabilityId = string;
+export type DpvLifecycleStageId = string;
+export type DpvTechniqueId = string;
+export type DpvTrainingTechniqueId = string;
+export type DpvAvailabilityConceptId = string;
+export type DpvConfidentialityConceptId = string;
+export type DpvIncidentInvestigationStatusId = string;
+export type DpvIncidentNoticeId = string;
+export type DpvIncidentStatusId = string;
+export type DpvIntegrityConceptId = string;
+export type DpvPotentialConsequenceId = string;
+export type DpvPotentialImpactId = string;
+export type DpvPotentialRiskId = string;
+export type DpvPotentialRiskSourceId = string;
+export type DpvRiskAnalysisId = string;
+export type DpvRiskControlId = string;
+export type DpvAISystemId = string;
+export type DpvAdequacyDecisionId = string;
+export type DpvChangeCategoryId = string;
+export type DpvDBIARiskStatusId = string;
+export type DpvDPIAConformityId = string;
+export type DpvDPIANecessityStatusId = string;
+export type DpvDPIAOutcomeStatusId = string;
+export type DpvDPIAProcessingRecommendationId = string;
+export type DpvDPIARiskStatusId = string;
+export type DpvDataBreachNoticeId = string;
+export type DpvDataBreachNoticeRequirementId = string;
+export type DpvEuAiactMarketAvailabilityStatusId = string;
+export type DpvEuAiactRiskLevelId = string;
+export type DpvEuGdprDataProtectionAuthorityId = string;
+export type DpvEuGdprProcessingId = string;
+export type DpvHighRiskAISystemId = string;
+export type DpvMarketPlacementStatusId = string;
+export type DpvProhibitedAISystemId = string;
+export type DpvProportionalityStatusId = string;
+export type DpvRegulatedHealthDataHolderId = string;
+export type DpvServiceSupplyStatusId = string;
+export type DpvSectorHealthReuseCompatibilityId = string;
+export type DpvAgentNegotiationBehaviourId = string;
+export type DpvAgentRequestBehaviourId = string;
+export type DpvAgreementId = string;
+export type DpvAgreementNegotiationStatusId = string;
+export type DpvConflictResolutionTermId = string;
+export type DpvDataDeletionTermId = string;
+export type DpvDataSharingTermId = string;
+export type DpvDataTransparencyTermId = string;
+export type DpvDeonticInterpretationTermId = string;
+export type DpvPartyTransparencyTermId = string;
+export type DpvPortabilityTermId = string;
+export type DpvPreferenceApplicabilityId = string;
+export type DpvProfilingTermId = string;
+export type DpvPurposeTransparencyTermId = string;
+export type DpvTrackingTermId = string;
+export type DpvTransparencyTermId = string;
+/**
+* How DPV's editors mark a term's standing.
+*/
+export enum DpvTermStatus {
+    
+    /** The Community Group has accepted the term. */
+    Accepted = "accepted",
+    /** The term changed in a recent release. */
+    Modified = "modified",
+    /** The term is on its way out of the vocabulary. */
+    Sunset = "sunset",
+};
+/**
+* The parts of a release, one file each.
+*/
+export enum DpvFamily {
+    
+    /** The vocabulary at https://w3id.org/dpv and the terms it adopts from others. */
+    Core = "core",
+    /** The personal data vocabulary. */
+    Personal_Data = "pd",
+    /** The technology vocabulary. */
+    Technology = "tech",
+    /** The artificial intelligence vocabulary. */
+    Artificial_Intelligence = "ai",
+    /** The risk vocabulary. */
+    Risk = "risk",
+    /** The justifications vocabulary. */
+    Justifications = "justifications",
+    /** The locations vocabulary. */
+    Locations = "loc",
+    /** The legal vocabularies, of each jurisdiction and each EU law. */
+    Laws_and_Authorities = "legal",
+    /** The sector vocabularies. */
+    Sectors = "sector",
+    /** The vocabularies of other standards. */
+    Standards = "standards",
+    /** The contributors. */
+    Agents = "agents",
+    /** The examples. */
+    Examples = "examples",
+};
 
 
 /**
- * A rule that is acceptable where it is either desirable if it occurs or
-it is not unacceptable if it does
+ * One of DPV's vocabularies, as its own Turtle file's header describes it.
  */
-export interface AcceptableRule extends Rule {
+export interface DpvVocabulary {
+    /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
+    id: string,
+    /** The element's name. */
+    title?: string,
+    /** What the element says about itself, as DPV writes it. */
+    description?: string,
+    /** The identifier DPV gives the element. */
+    identifier?: string,
+    /** How DPV asks to be cited. */
+    bibliographicCitation?: string,
+    /** What the element conforms to, as DPV writes it. */
+    conformsTo?: string[],
+    /** The dates DPV gives for the element's creation. */
+    created?: string[],
+    /** The date of the element's publication. */
+    issued?: string,
+    /** The date of the element's last change. */
+    modified?: string,
+    /** The people DPV names as the element's editors. */
+    creator?: DpvAgentId[],
+    /** The people DPV names as contributors to the element. */
+    contributor?: DpvAgentId[],
+    /** The element's publisher. */
+    publisher?: string,
+    /** The address of the element's licence. */
+    license?: string,
+    /** Where the element comes from, as text or as an address. */
+    source?: string[],
+    /** The vocabulary's digital object identifier. */
+    doi?: string,
+    /** The vocabulary's publication status. */
+    bibo_status?: string,
+    /** The prefix DPV uses for the vocabulary's namespace. */
+    preferredNamespacePrefix?: string,
+    /** The vocabulary's namespace. */
+    preferredNamespaceUri?: string,
+    /** A short label, under rdfs:Label as DPV writes it, which is not the term rdfs:label. */
+    rdfs_Label?: string,
+    /** The IRI of this edition of the vocabulary. */
+    versionIRI?: string,
+    /** The edition of the vocabulary. */
+    versionInfo: string,
+    /** The edition of the vocabulary, under schema.org's term. */
+    schema_version?: string,
+    /** The specifications the vocabulary profiles. */
+    isProfileOf?: string[],
+    /** The address of the vocabulary's logo. */
+    logo?: string,
 }
 
 
 /**
- * Status indicating the specified context is 'actively' involved
+ * A list of terms DPV keeps within a vocabulary. DPV states nothing else about one.
  */
-export interface ActivelyInvolved extends InvolvementStatus {
+export interface DpvConceptScheme {
+    /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
+    id: string,
 }
 
 
 /**
- * State of an activity that has completed i.e. is fully in the past
+ * A person or an organization DPV names as a contributor, as DPV's files describe them.
  */
-export interface ActivityCompleted extends ActivityStatus {
+export interface DpvAgent {
+    /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
+    id: string,
+    /** The agent's name. */
+    name: string,
+    /** The element's home page, as DPV writes its address. */
+    homepage?: string,
+    /** The organizations the person belongs to. */
+    memberOf?: DpvAgentId[],
+    /** The person's ORCID identifier. */
+    hasORCID?: string,
 }
 
 
 /**
- * State of an activity that was occurring in the past, and has been halted
-or paused or stopped
+ * A web page DPV names as a term's source.
  */
-export interface ActivityHalted extends ActivityStatus {
+export interface DpvWebPage {
+    /** The page's address. */
+    url?: string,
+    /** The page's title. */
+    page_name: string,
 }
 
 
 /**
- * State of an activity that could not be completed, but has reached some
-end state
+ * A period of time, with the dates that start and end it.
  */
-export interface ActivityNotCompleted extends ActivityStatus {
+export interface DpvInterval {
+    /** The date the period starts. */
+    hasBeginning?: string,
+    /** The date the period ends. */
+    hasEnd?: string,
 }
 
 
 /**
- * State of an activity occurring in continuation i.e. currently ongoing
+ * One thing DPV's vocabularies state, or a thing a use case describes with them, as a record under its own IRI.
  */
-export interface ActivityOngoing extends ActivityStatus {
+export interface DpvTerm {
+    /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
+    id: string,
+    /** The concepts DPV states the term is an instance of. A concept is also an rdfs:Class and a skos:Concept, and a property an rdf:Property and a skos:Concept. */
+    rdf_type?: DpvTermId[],
+    /** The term's label, in English where DPV states a language. */
+    prefLabel?: string,
+    /** The term's German label, which the German health data law states. */
+    prefLabel_de?: string,
+    /** The term's definition, in English where DPV states a language. */
+    definition?: string,
+    /** The term's German definition, which the German health data law states. */
+    definition_de?: string,
+    /** What DPV says about the term's scope. */
+    scopeNote?: string[],
+    /** The terms directly above this one. */
+    broader?: DpvTermId[],
+    /** Other vocabularies' terms DPV relates to this one. */
+    related?: DpvTermId[],
+    /** The concept schemes that list the term. */
+    inScheme?: DpvConceptSchemeId[],
+    /** A term DPV states as the same as this one, under skos:sameAs, which is not a SKOS term. */
+    sameAs?: DpvTermId[],
+    /** The namespace of the vocabulary that defines the term. */
+    isDefinedBy?: DpvVocabularyId[],
+    /** The classes directly above the term. */
+    subClassOf?: DpvTermId[],
+    /** The DPV examples that show the term in use. */
+    example?: DpvExampleId[],
+    /** The address of the same thing elsewhere, as DPV writes it, typed xsd:anyURI. */
+    exactMatch?: string[],
+    /** How DPV's editors mark the term's standing. */
+    term_status?: string,
+    /** The dates DPV gives for the element's creation. */
+    created?: string[],
+    /** The date of the element's last change. */
+    modified?: string,
+    /** The people DPV names as contributors to the element. */
+    contributor?: DpvAgentId[],
+    /** Where the element comes from, as text or as an address. */
+    source?: string[],
+    /** The web pages DPV names as sources of the term. */
+    source_page?: DpvWebPage[],
+    /** The element's home page, as DPV writes its address. */
+    homepage?: string,
+    /** The number DPV gives a level on a risk scale. */
+    value?: string,
+    /** The period the term applies over, such as an adequacy decision's. */
+    temporal?: DpvInterval,
 }
 
 
 /**
- * State of an activity being planned with concrete plans for
-implementation
+ * A term DPV states as a concept and a class. Its rdf_type names the concepts it is an instance of, each a class of this schema, where DPV states one.
  */
-export interface ActivityPlanned extends ActivityStatus {
+export interface DpvConcept extends DpvTerm {
+    /** Indicates the risk level of the AI system under the AI Act */
+    eu_aiact_hasRiskLevel?: DpvTermId[],
+    /** Indicates applicability of a Law */
+    hasApplicableLaw?: DpvTermId[],
+    /** Indicates applicability of authority for a jurisdiction */
+    hasAuthority?: DpvTermId[],
+    /** A description intended for humans */
+    hasHumanDescription?: string[],
+    /** Indicates the inverse jurisdiction for a given jurisdiction */
+    hasInverseJurisdiction?: DpvTermId[],
+    /** Indicates applicability of specified jurisdiction */
+    hasJurisdiction?: DpvTermId[],
+    /** Indicates a justification for specified concept or context */
+    hasJustification?: DpvTermId[],
+    /** Indicates the likelihood associated with a concept */
+    hasLikelihood?: DpvTermId[],
+    /** Specifies applicability or inclusion of an obligation rule within specified context */
+    hasObligation?: DpvTermId[],
+    /** Specifies applicability or inclusion of a permission rule within specified context */
+    hasPermission?: DpvTermId[],
+    /** Specifies applicability or inclusion of a prohibition rule within specified context */
+    hasProhibition?: DpvTermId[],
+    /** Indicates use or applicability of Right */
+    hasRight?: DpvTermId[],
+    /** Indicates the associated risk level associated with a risk */
+    hasRiskLevel?: DpvTermId[],
+    /** Indicates the severity associated with a concept */
+    hasSeverity?: DpvTermId[],
+    /** The ISO-Alpha2 code for a given region */
+    iso_alpha2?: string[],
+    /** The ISO-Alpha3 code for a given region */
+    iso_alpha3?: string[],
+    /** The ISO-Numeric code for a given region */
+    iso_numeric?: string[],
+    /** The UN-M49 code for a given region */
+    un_m49?: string[],
 }
 
 
 /**
- * State of an activity being proposed without any concrete plans for
-implementation
+ * A property DPV states, with the classes it names as its usual subjects and values. Every property is also a slot of DpvResource.
  */
-export interface ActivityProposed extends ActivityStatus {
+export interface DpvProperty extends DpvTerm {
+    /** The properties directly above this one. */
+    subPropertyOf?: DpvTermId[],
+    /** Classes DPV names as usual subjects of the property, not as the only ones. */
+    domainIncludes?: DpvTermId[],
+    /** Classes DPV names as usual values of the property, not as the only ones. */
+    rangeIncludes?: DpvTermId[],
+}
+
+
+/**
+ * A thing a use case describes with DPV, such as a process, holding any DPV property, because DPV states none as limited to a class.
+ */
+export interface DpvResource extends DpvTerm {
+    /** The property dcterms:accessRights. */
+    accessRights?: DpvTermId[],
+    /** Indicates the use of AI capability for the associated context */
+    ai_hasCapability?: DpvTermId[],
+    /** Associates data with an AI system or model or implementation */
+    ai_hasData?: DpvTermId[],
+    /** Indicates the use of an AI model for the associated context */
+    ai_hasModel?: DpvTermId[],
+    /** Indicates the event or action is avoided by the specified control */
+    avoids?: DpvTermId[],
+    /** Indicates the cause of associated context (subject) was the indicated threat (object) */
+    causedByThreat?: DpvTermId[],
+    /** Indicates the associated context (subject) is caused by the indicated vulnerability (object) */
+    causedByVulnerability?: DpvTermId[],
+    /** What the element conforms to, as DPV writes it. */
+    conformsTo?: string[],
+    /** Indicates the specified event or action is contained by this control */
+    contains?: DpvTermId[],
+    /** Indicates this control manages specified risk concept event or action, such as for risk sources, risks, consequences, and impacts */
+    controls?: DpvTermId[],
+    /** The property dcterms:coverage. */
+    coverage?: DpvTermId[],
+    /** The property dcterms:dateAccepted. */
+    dateAccepted?: string[],
+    /** The property dcterms:dateSubmitted. */
+    dateSubmitted?: string[],
+    /** something is related to a data holder */
+    de_gdng_hasDataHolder?: DpvTermId[],
+    /** What the element says about itself, as DPV writes it. */
+    description?: string,
+    /** Indicates the specified event or action is detected by this control */
+    detects?: DpvTermId[],
+    /** Indicates the specified event or action is eliminated by this control */
+    eliminates?: DpvTermId[],
+    /** Indicates the risk level of the AI system under the AI Act */
+    eu_aiact_hasRiskLevel?: DpvTermId[],
+    /** Indicates association with data holder */
+    eu_dga_hasDataHolder?: DpvTermId[],
+    /** Indicates the threat (subject) exploits the indicated vulnerability (object) */
+    exploitsVulnerability?: DpvTermId[],
+    /** The property dcterms:format. */
+    format?: string[],
+    /** Indicates the use of AI for the associated context */
+    hasAI?: DpvTermId[],
+    /** Indicates the use of AI system for the associated context */
+    hasAISystem?: DpvTermId[],
+    /** Indicates the technology has or uses the associated api */
+    hasAPI?: DpvTermId[],
+    /** indicates the entity is actively involved in specified context */
+    hasActiveEntity?: DpvTermId[],
+    /** Indicates the status of activity of specified concept */
+    hasActivityStatus?: DpvTermId[],
+    /** Indicates an actor associated with technology */
+    hasActor?: DpvTermId[],
+    /** Specifies address of a legal entity such as street address or pin code */
+    hasAddress?: string[],
+    /** Specifies the agent that represents a party and can act on behalf */
+    hasAgent?: DpvTermId[],
+    /** Relation that indicates the behaviour of Privacy Agents */
+    hasAgentBehaviour?: DpvTermId[],
+    /** Indicates the inclusion or applicability of the specified Privacy Term */
+    hasAgreement?: DpvTermId[],
+    /** Indicates the inclusion or applicability of the specified Privacy Preference */
+    hasAgreementPreference?: DpvTermId[],
+    /** Indicates the inclusion or applicability of the specified Privacy Term Registry */
+    hasAgreementRegistry?: DpvTermId[],
+    /** Indicates the technology has or uses the associated algorithm */
+    hasAlgorithm?: DpvTermId[],
+    /** Indicates the logic used in processing such as for automated decision making */
+    hasAlgorithmicLogic?: DpvTermId[],
+    /** Indicates situations where the context is not applicable, information is not available, or this is unknown. An appropriate instance of dpv:Applicability should be used with this relation to express the situation */
+    hasApplicability?: DpvTermId[],
+    /** Indicates applicability of a Law */
+    hasApplicableLaw?: DpvTermId[],
+    /** Indicates the technology has or uses the associated application */
+    hasApplication?: DpvTermId[],
+    /** Indicates a relevant assessment associated with the specific context */
+    hasAssessment?: DpvTermId[],
+    /** Indicates the status of audit associated with specified concept */
+    hasAuditStatus?: DpvTermId[],
+    /** Indicates technology auditor */
+    hasAuditor?: DpvTermId[],
+    /** Indicates applicability of authority for a jurisdiction */
+    hasAuthority?: DpvTermId[],
+    /** Indicates the level of automation involved in implementation of the specified context */
+    hasAutomationLevel?: DpvTermId[],
+    /** Associates the category of change to the AI */
+    hasChangeCategory?: DpvTermId[],
+    /** Associates the change description to AI */
+    hasChangeDescription?: DpvTermId[],
+    /** Indicates communication mechanisms used or provided by technology */
+    hasCommunicationMechanism?: DpvTermId[],
+    /** Indicates the status of compliance of specified concept */
+    hasComplianceStatus?: DpvTermId[],
+    /** Indicates the system has or uses the associated component */
+    hasComponent?: DpvTermId[],
+    /** Indicates a concerned supervisory authority */
+    hasConcernedSA?: DpvTermId[],
+    /** Relation that indicates the Conflict Resolution Term that should be used */
+    hasConflictResolution?: DpvTermId[],
+    /** Indicates the status of being conformant or non-conformant */
+    hasConformanceStatus?: DpvTermId[],
+    /** Specific a control associated with consent */
+    hasConsentControl?: DpvTermId[],
+    /** Specifies the state or status of consent */
+    hasConsentStatus?: DpvTermId[],
+    /** Indicates consequence(s) possible or arising from specified concept */
+    hasConsequence?: DpvTermId[],
+    /** Indicates the thing (e.g. plan, process, or entity) affected by a consequence */
+    hasConsequenceOn?: DpvTermId[],
+    /** Specifies contact details of a legal entity such as phone or email */
+    hasContact?: string[],
+    /** Indicates a purpose is restricted to the specified context(s) */
+    hasContext?: DpvTermId[],
+    /** Indicates the contract to be used with a contract */
+    hasContractControl?: DpvTermId[],
+    /** Indicates the status of the contract */
+    hasContractStatus?: DpvTermId[],
+    /** Indicates the association or involvement of specified contractual clause */
+    hasContractualClause?: DpvTermId[],
+    /** Indicates the fulfilment status of a contract or a contractual clause */
+    hasContractualFulfilmentStatus?: DpvTermId[],
+    /** Indicates the use of specified control */
+    hasControl?: DpvTermId[],
+    /** Indicates applicability of specified country */
+    hasCountry?: DpvTermId[],
+    /** Indicates technology customer */
+    hasCustomer?: DpvTermId[],
+    /** Indicates association with data altruism organisation */
+    hasDAO?: DpvTermId[],
+    /** Indicates association with data intermediation service provider */
+    hasDISP?: DpvTermId[],
+    /** Indicates associated with Data (may or may not be personal) */
+    hasData?: DpvTermId[],
+    /** Indicates association with Data Controller */
+    hasDataController?: DpvTermId[],
+    /** Indicates inclusion or applicability of a LegalEntity in the role of Data Exporter */
+    hasDataExporter?: DpvTermId[],
+    /** Indicates inclusion or applicability of a LegalEntity in the role of Data Importer */
+    hasDataImporter?: DpvTermId[],
+    /** Indicates inclusion or applicability of a Data Processor */
+    hasDataProcessor?: DpvTermId[],
+    /** Specifies an associated data protection officer */
+    hasDataProtectionOfficer?: DpvTermId[],
+    /** Indicates association with competent body designated by the Member State to assist Public Bodies in activities related to data reuse */
+    hasDataReuseAssistant?: DpvTermId[],
+    /** Relation that associates a Data Sharing Term */
+    hasDataSharingTerm?: DpvTermId[],
+    /** Indicates the source or origin of data being processed */
+    hasDataSource?: DpvTermId[],
+    /** Indicates association with Data Subject */
+    hasDataSubject?: DpvTermId[],
+    /** Indicates the scale of data subjects */
+    hasDataSubjectScale?: DpvTermId[],
+    /** Indicates association with data user */
+    hasDataUser?: DpvTermId[],
+    /** Indicates the volume of data */
+    hasDataVolume?: DpvTermId[],
+    /** Relation that indicates the Deontic Interpretation Term that should be used */
+    hasDeonticInterpretation?: DpvTermId[],
+    /** Indicates technology deployer */
+    hasDeployer?: DpvTermId[],
+    /** Specifies the location of technology deployment and use */
+    hasDeploymentLocation?: DpvTermId[],
+    /** Indicates technology designer */
+    hasDesigner?: DpvTermId[],
+    /** Specifies applicability or inclusion of a deterrence rule within specified context */
+    hasDeterrence?: DpvTermId[],
+    /** Indicates technology developer */
+    hasDeveloper?: DpvTermId[],
+    /** Indicates the technology has or uses the associated device */
+    hasDevice?: DpvTermId[],
+    /** Indicates documentation associated with technology */
+    hasDocumentation?: DpvTermId[],
+    /** Indicates information about duration */
+    hasDuration?: DpvTermId[],
+    /** Indicates the endpoint, such as a URL or an address, where 7012 related communications and interactions can be made */
+    hasEndpoint?: DpvTermId[],
+    /** Indicates inclusion or applicability of an entity to some concept */
+    hasEntity?: DpvTermId[],
+    /** Indicates a control or measure provided for an entity to perform the specified action */
+    hasEntityControl?: DpvTermId[],
+    /** Indicates involvement of an entity in specified context */
+    hasEntityInvolvement?: DpvTermId[],
+    /** Indicates an establishment associated with a legal entity */
+    hasEstablishment?: DpvTermId[],
+    /** Indicates technology evaluator */
+    hasEvaluator?: DpvTermId[],
+    /** Indicates whether the specified context was expected or unexpected */
+    hasExpectation?: DpvTermId[],
+    /** Indicates whether a fee is required for the specified context */
+    hasFee?: DpvTermId[],
+    /** Specifies the human individual or Person involved as the first party */
+    hasFirstParty?: DpvTermId[],
+    /** Indicates the frequency with which something takes place */
+    hasFrequency?: DpvTermId[],
+    /** Specifies the fulfillment status associated with a rule */
+    hasFulfilmentStatus?: DpvTermId[],
+    /** Indicates the function of the technology */
+    hasFunction?: DpvTermId[],
+    /** Indicates the use of an GPAI model for the associated context */
+    hasGPAIModel?: DpvTermId[],
+    /** Indicates the geographic coverage (of specified context) */
+    hasGeographicCoverage?: DpvTermId[],
+    /** Indicates the technology has or uses the associated hardware */
+    hasHardware?: DpvTermId[],
+    /** A description intended for humans */
+    hasHumanDescription?: string[],
+    /** Indicates Involvement of humans in processing such as within automated decision making process */
+    hasHumanInvolvement?: DpvTermId[],
+    /** Indicates the specified resource is a human readable format of the subject */
+    hasHumanReadableFormat?: string[],
+    /** Indicates association with Human Subject */
+    hasHumanSubject?: DpvTermId[],
+    /** Indicates an identifier associated for identification or reference */
+    hasIdentifier?: string[],
+    /** Indicates impact(s) possible or arising as consequences from specified concept */
+    hasImpact?: DpvTermId[],
+    /** Indicates an impact assessment associated with the specific context */
+    hasImpactAssessment?: DpvTermId[],
+    /** Indicates the thing (e.g. plan, process, or entity) affected by an impact */
+    hasImpactOn?: DpvTermId[],
+    /** Indicates the importance for specified context or criteria */
+    hasImportance?: DpvTermId[],
+    /** Indicates an incident is associated with the specified context */
+    hasIncident?: DpvTermId[],
+    /** Specifies the method by which an entity has indicated the specific context */
+    hasIndicationMethod?: DpvTermId[],
+    /** Indicates whether an entity was informed or uninformed */
+    hasInformedStatus?: DpvTermId[],
+    /** Indicates the technology has or uses the associated infrastructure */
+    hasInfrastructure?: DpvTermId[],
+    /** Indicates the input associated with the technology */
+    hasInput?: DpvTermId[],
+    /** Indicates the input action associated with the technology */
+    hasInputAction?: DpvTermId[],
+    /** Indicates the input data associated with the technology */
+    hasInputData?: DpvTermId[],
+    /** Indicates technology installer */
+    hasInstaller?: DpvTermId[],
+    /** Indicates the intended use of technology */
+    hasIntendedUse?: DpvTermId[],
+    /** Indicates whether the specified context was intended or unintended */
+    hasIntention?: DpvTermId[],
+    /** Indicates the inverse jurisdiction for a given jurisdiction */
+    hasInverseJurisdiction?: DpvTermId[],
+    /** Indicates the involvement status for the specified context */
+    hasInvolvement?: DpvTermId[],
+    /** Indicates inclusion or applicability of a Joint Data Controller */
+    hasJointDataControllers?: DpvTermId[],
+    /** Indicates applicability of specified jurisdiction */
+    hasJurisdiction?: DpvTermId[],
+    /** Indicates a justification for specified concept or context */
+    hasJustification?: DpvTermId[],
+    /** Indicates the status of being lawful or legally compliant */
+    hasLawfulness?: DpvTermId[],
+    /** Indicates the lead supervisory authority */
+    hasLeadSA?: DpvTermId[],
+    /** Indicates use or applicability of a Legal Basis */
+    hasLegalBasis?: DpvTermId[],
+    /** Indicates use or applicability of Legal measure */
+    hasLegalMeasure?: DpvTermId[],
+    /** Indicates the license associated with the technology */
+    hasLicense?: DpvTermId[],
+    /** Indicates the lifecycle stage associated with the technology */
+    hasLifecycleStage?: DpvTermId[],
+    /** Indicates the likelihood associated with a concept */
+    hasLikelihood?: DpvTermId[],
+    /** Indicates the local supervisory authority */
+    hasLocalSA?: DpvTermId[],
+    /** Indicates information about location */
+    hasLocation?: DpvTermId[],
+    /** Indicates the specified resource is a machine readable format of the subject */
+    hasMachineReadableFormat?: string[],
+    /** Indicates the legal entity has specified establishment as its main establishment */
+    hasMainEstablishment?: DpvTermId[],
+    /** Indicates technology maintainer */
+    hasMaintainer?: DpvTermId[],
+    /** Indicates technology manufacturer */
+    hasManufacturer?: DpvTermId[],
+    /** Indicates whether the technology is available on the market */
+    hasMarketAvailabilityStatus?: DpvTermId[],
+    /** Specifies name of a legal entity */
+    hasName?: string[],
+    /** Indicates the necessity for specified context or criteria */
+    hasNecessity?: DpvTermId[],
+    /** indicates the entity is not involved in specified context */
+    hasNonInvolvedEntity?: DpvTermId[],
+    /** Indicates association with a Non-Personal Data Process */
+    hasNonPersonalDataProcess?: DpvTermId[],
+    /** Indicates the use or applicability of a Notice for the specified context */
+    hasNotice?: DpvTermId[],
+    /** Indicates the concept can be represented graphically using the specified icon */
+    hasNoticeIcon?: DpvTermId[],
+    /** Indicates the use of a notice layer within a notice or to associate a layer with another layer */
+    hasNoticeLayer?: DpvTermId[],
+    /** Indicates the status of the associated notice */
+    hasNoticeStatus?: DpvTermId[],
+    /** Indicates the status associated with a notice */
+    hasNotificationStatus?: DpvTermId[],
+    /** Specifies applicability or inclusion of an obligation rule within specified context */
+    hasObligation?: DpvTermId[],
+    /** Indicates the operating environment for the technology */
+    hasOperatingEnvironment?: DpvTermId[],
+    /** Indicates the operating factor for the technology */
+    hasOperatingFactor?: DpvTermId[],
+    /** Indicates use or applicability of Organisational measure */
+    hasOrganisationalMeasure?: DpvTermId[],
+    /** Indicates the specified entity is a unit of the organisation */
+    hasOrganisationalUnit?: DpvTermId[],
+    /** Indicates an outcome of specified concept or context */
+    hasOutcome?: DpvTermId[],
+    /** Indicates the output associated with the technology */
+    hasOutput?: DpvTermId[],
+    /** Indicates the output action associated with the technology */
+    hasOutputAction?: DpvTermId[],
+    /** Indicates the output data associated with the technology */
+    hasOutputData?: DpvTermId[],
+    /** Indicates technology owner */
+    hasOwner?: DpvTermId[],
+    /** The property dcterms:hasPart. */
+    hasPart?: DpvTermId[],
+    /** Indicates technology partner */
+    hasPartner?: DpvTermId[],
+    /** Indicates a legal entity involved as a party in a contract */
+    hasParty?: DpvTermId[],
+    /** indicates the entity is passively involved in specified context */
+    hasPassiveEntity?: DpvTermId[],
+    /** Specifies applicability or inclusion of a permission rule within specified context */
+    hasPermission?: DpvTermId[],
+    /** Indicates association with Personal Data */
+    hasPersonalData?: DpvTermId[],
+    /** Indicates association with Personal Data Handling */
+    hasPersonalDataHandling?: DpvTermId[],
+    /** Indicates association with a Personal Data Process */
+    hasPersonalDataProcess?: DpvTermId[],
+    /** Indicates use or applicability of Physical measure */
+    hasPhysicalMeasure?: DpvTermId[],
+    /** Indicates the technology has or uses the associated platform */
+    hasPlatform?: DpvTermId[],
+    /** Indicates policy applicable or used */
+    hasPolicy?: DpvTermId[],
+    /** Relation that associates a Portability Term */
+    hasPortabilityTerm?: DpvTermId[],
+    /** Relation that indicates the applicability of Privacy Preference(s) */
+    hasPreferenceApplicability?: DpvTermId[],
+    /** Indicates association with a Process */
+    hasProcess?: DpvTermId[],
+    /** Indicates association with Processing */
+    hasProcessing?: DpvTermId[],
+    /** Indicates information about processing condition */
+    hasProcessingCondition?: DpvTermId[],
+    /** Indicates the scale of processing operations */
+    hasProcessingScale?: DpvTermId[],
+    /** Indicates technology producer */
+    hasProducer?: DpvTermId[],
+    /** Relation that associates a Profiling Term */
+    hasProfilingTerm?: DpvTermId[],
+    /** Specifies applicability or inclusion of a prohibition rule within specified context */
+    hasProhibition?: DpvTermId[],
+    /** Indicates technology provider */
+    hasProvider?: DpvTermId[],
+    /** Specifies the provision or usage method of technology */
+    hasProvisionMethod?: DpvTermId[],
+    /** Indicates whether the technology has been provided */
+    hasProvisionStatus?: DpvTermId[],
+    /** Indicates technology purchaser */
+    hasPurchaser?: DpvTermId[],
+    /** Indicates association with Purpose */
+    hasPurpose?: DpvTermId[],
+    /** Indicates Recipient of Data */
+    hasRecipient?: DpvTermId[],
+    /** Indicates inclusion or applicability of a Data Controller as a Recipient of personal data */
+    hasRecipientDataController?: DpvTermId[],
+    /** Indicates inclusion or applicability of a Third Party as a Recipient of personal data */
+    hasRecipientThirdParty?: DpvTermId[],
+    /** Specifies applicability or inclusion of a recommendation rule within specified context */
+    hasRecommendation?: DpvTermId[],
+    /** Indicates a relevant record of activity */
+    hasRecordOfActivity?: DpvTermId[],
+    /** Indicates the relation between specified Entity and Data Subject */
+    hasRelationWithDataSubject?: DpvTermId[],
+    /** Specifies representative of the legal entity */
+    hasRepresentative?: DpvTermId[],
+    /** Indicates the status associated with a request */
+    hasRequestStatus?: DpvTermId[],
+    /** Indicates the associated risk is the remaining or residual risk from applying mitigation measures or treatments to this risk */
+    hasResidualRisk?: DpvTermId[],
+    /** Specifies the indicated entity is responsible within some context */
+    hasResponsibleEntity?: DpvTermId[],
+    /** Indicates the reuse compatibility for the specified context */
+    hasReuseCompatibility?: DpvTermId[],
+    /** Indicates use or applicability of Right */
+    hasRight?: DpvTermId[],
+    /** Indicates applicability of Risk for this concept */
+    hasRisk?: DpvTermId[],
+    /** Associates the risk acceptance plan or process or criteria */
+    hasRiskAcceptance?: DpvTermId[],
+    /** Associates the risk analysis */
+    hasRiskAnalysis?: DpvTermId[],
+    /** Indicates an associated risk assessment */
+    hasRiskAssessment?: DpvTermId[],
+    /** Associates the risk criteria */
+    hasRiskCriteria?: DpvTermId[],
+    /** Associates the risk evaluation plan or process or criteria */
+    hasRiskEvaluation?: DpvTermId[],
+    /** Associates the risk identification plan or process or criteria */
+    hasRiskIdentification?: DpvTermId[],
+    /** Indicates the associated risk level associated with a risk */
+    hasRiskLevel?: DpvTermId[],
+    /** Associates the risk management plan or process */
+    hasRiskManagement?: DpvTermId[],
+    /** Indicates the risk owner */
+    hasRiskOwner?: DpvTermId[],
+    /** Associates the risk perception plan or process or criteria */
+    hasRiskPerception?: DpvTermId[],
+    /** Indicates the risk (subject) has the indicated risk source (object) */
+    hasRiskSource?: DpvTermId[],
+    /** Associates the risk treatment plan or process or criteria */
+    hasRiskTreatment?: DpvTermId[],
+    /** Specifies applicability or inclusion of a rule within specified context */
+    hasRule?: DpvTermId[],
+    /** Indicates the scale of specified concept */
+    hasScale?: DpvTermId[],
+    /** Indicates the scope of specified concept or context */
+    hasScope?: DpvTermId[],
+    /** Specifies the entity organisation involved as the second party */
+    hasSecondParty?: DpvTermId[],
+    /** Indicates the purpose is associated with activities in the indicated (Economic) Sector(s) */
+    hasSector?: DpvTermId[],
+    /** Indicates the associated level of sensitivity */
+    hasSensitivityLevel?: DpvTermId[],
+    /** Indicates associated with the specified service */
+    hasService?: DpvTermId[],
+    /** Indicates the entity that consumes or receives the associated service */
+    hasServiceConsumer?: DpvTermId[],
+    /** Indicates the entity that provides the associated service */
+    hasServiceProvider?: DpvTermId[],
+    /** Indicates the severity associated with a concept */
+    hasSeverity?: DpvTermId[],
+    /** Indicates the technology has or uses the associated software */
+    hasSoftware?: DpvTermId[],
+    /** Indicates the status of specified concept */
+    hasStatus?: DpvTermId[],
+    /** Indicates information about storage condition */
+    hasStorageCondition?: DpvTermId[],
+    /** Indicates technology subject */
+    hasSubject?: DpvTermId[],
+    /** Indicates this entity has the specified entity as its subsidiary */
+    hasSubsidiary?: DpvTermId[],
+    /** Indicates technology supplier */
+    hasSupplier?: DpvTermId[],
+    /** Indicates the technology has or uses the associated system */
+    hasSystem?: DpvTermId[],
+    /** Indicates technology system integrator */
+    hasSystemIntegrator?: DpvTermId[],
+    /** Indicates technology maturity level */
+    hasTRL?: DpvTermId[],
+    /** Indicates use or applicability of Technical measure */
+    hasTechnicalMeasure?: DpvTermId[],
+    /** Indicates use or applicability of Technical or Organisational measure */
+    hasTechnicalOrganisationalMeasure?: DpvTermId[],
+    /** Indicates the use of AI technique for the associated context */
+    hasTechnique?: DpvTermId[],
+    /** Associates the data used for testing AI */
+    hasTestingData?: DpvTermId[],
+    /** Indicates applicability or relevance of a 'third country' */
+    hasThirdCountry?: DpvTermId[],
+    /** Indicates association with Third Party */
+    hasThirdParty?: DpvTermId[],
+    /** Indicates the threat (subject) has the indicated source (object) */
+    hasThreatSource?: DpvTermId[],
+    /** Relation that associates a Tracking Term */
+    hasTrackingTerm?: DpvTermId[],
+    /** Associates the data used for training AI */
+    hasTrainingData?: DpvTermId[],
+    /** Relation that associates a Transparency Term */
+    hasTransparencyTerm?: DpvTermId[],
+    /** Indicates association with the specified uncategorised data */
+    hasUncategorisedData?: DpvTermId[],
+    /** Indicates association with the specified unstructured data */
+    hasUnstructuredData?: DpvTermId[],
+    /** Indicates technology user */
+    hasUser?: DpvTermId[],
+    /** Associates the data used for validating AI */
+    hasValidationData?: DpvTermId[],
+    /** Indicates the associated context (subject) has indicated vulnerability (object) */
+    hasVulnerability?: DpvTermId[],
+    /** The identifier DPV gives the element. */
+    identifier?: string,
+    /** Indicates the specified event or action is identified by this control */
+    identifies?: DpvTermId[],
+    /** Specifies that an entity is a party to the context i.e. it has decision making abilities or has obligations and responsibilities */
+    ieee_7012_hasParty?: DpvTermId[],
+    /** Specifies the a party other than the person or Entity that is involved */
+    ieee_7012_hasThirdParty?: DpvTermId[],
+    /** Indicates the specified event or action is interrupted by this control */
+    interrupts?: DpvTermId[],
+    /** Indicates the specified event or action is intervened by this control */
+    intervenes?: DpvTermId[],
+    /** Indicates the specified event or action is investigated by this control */
+    investigates?: DpvTermId[],
+    /** Indicates the specified concepts is 'after' this concept in some context */
+    isAfter?: DpvTermId[],
+    /** Indicates the concept or information is applicable for specified context */
+    isApplicableFor?: DpvTermId[],
+    /** Indicates area, scope, or applicability of an Authority */
+    isAuthorityFor?: DpvTermId[],
+    /** Indicates the specified concepts is 'before' this concept in some context */
+    isBefore?: DpvTermId[],
+    /** Indicates the component is part of the associated system */
+    isComponentOf?: DpvTermId[],
+    /** Indicates the context is determined by the specified entity */
+    isDeterminedByEntity?: DpvTermId[],
+    /** Indicates the specified concepts occur 'during' this concept in some context */
+    isDuring?: DpvTermId[],
+    /** Indicates context or information about exercising a right */
+    isExercisedAt?: DpvTermId[],
+    /** Indicates the vulnerability (subject) is exploited by the indicated threat (object) */
+    isExploitedBy?: DpvTermId[],
+    /** Indicates implementation details such as entities or agents */
+    isImplementedByEntity?: DpvTermId[],
+    /** Indicates implementation details such as technologies or processes */
+    isImplementedUsingTechnology?: DpvTermId[],
+    /** Specifies the temporal information for when the entity has indicated the specific context */
+    isIndicatedAtTime?: string[],
+    /** Specifies entity who indicates the specific context */
+    isIndicatedBy?: DpvTermId[],
+    /** Indicates the main establishment for specific legal entity */
+    isMainEstablishmentFor?: DpvTermId[],
+    /** Indicate a risk is mitigated by specified measure */
+    isMitigatedByMeasure?: DpvTermId[],
+    /** Indicates the concept or information is not applicable for specified context */
+    isNotApplicableFor?: DpvTermId[],
+    /** Indicates this entity is an organisational unit of the specified entity */
+    isOrganisationalUnitOf?: DpvTermId[],
+    /** Indicates the interpretation where the location being referenced is outside of the indicated concept */
+    isOutsideOfLocation?: DpvTermId[],
+    /** The property dcterms:isPartOf. */
+    isPartOf?: DpvTermId[],
+    /** Indicates the context or application of policy */
+    isPolicyFor?: DpvTermId[],
+    /** Indicates the entity is a representative for specified entity */
+    isRepresentativeFor?: DpvTermId[],
+    /** Indicates this risk is the remaining or residual risk from applying mitigation measures or treatments to specified risk */
+    isResidualRiskOf?: DpvTermId[],
+    /** Indicates this entity is the subsidiary of the specified entity */
+    isSubsidiaryOf?: DpvTermId[],
+    /** The property dcterms:isVersionOf. */
+    isVersionOf?: DpvTermId[],
+    /** Indicates the vulnerability (subject) is associated with indicated context (object) */
+    isVulnerabilityOf?: DpvTermId[],
+    /** The ISO-Alpha2 code for a given region */
+    iso_alpha2?: string[],
+    /** The ISO-Alpha3 code for a given region */
+    iso_alpha3?: string[],
+    /** The ISO-Numeric code for a given region */
+    iso_numeric?: string[],
+    /** Indicates the specified event or action is logged by this control */
+    logs?: DpvTermId[],
+    /** Indicates the specified event or action is mitigated by this control */
+    mitigates?: DpvTermId[],
+    /** Indicates risks mitigated by this concept */
+    mitigatesRisk?: DpvTermId[],
+    /** Indicates the specified event or action is modified by this control */
+    modifies?: DpvTermId[],
+    /** Indicates the specified event or action is monitored by this control */
+    monitors?: DpvTermId[],
+    /** Indicates the specified event or action is overridden by this control */
+    overrides?: DpvTermId[],
+    /** The property foaf:page. */
+    page?: DpvTermId[],
+    /** Indicates the specified event or action is recovered from by this control */
+    recovers?: DpvTermId[],
+    /** Indicates the specified event or action is reduced by this control */
+    reduces?: DpvTermId[],
+    /** Indicates the incident (subject) is a materialisation of the indicated risk (object) */
+    refersToRisk?: DpvTermId[],
+    /** Indicates the specified event or action is remedied by this control */
+    remedies?: DpvTermId[],
+    /** Indicates the specified event or action is resolved by this control */
+    resolves?: DpvTermId[],
+    /** Indicates the specified event or action is reversed by this control */
+    reverses?: DpvTermId[],
+    /** Associates the risk assessment */
+    risk_hasRiskAssessment?: DpvTermId[],
+    /** Indicates the specified event or action is shared with another context or entity by this control */
+    shares?: DpvTermId[],
+    /** The property dcterms:subject. */
+    subject?: DpvTermId[],
+    /** Indicates the specified event or action is substituted by this control */
+    substitutes?: DpvTermId[],
+    /** Indicate the measure is required for meeting specified requirement or satisfying specified condition/constraint */
+    supportsComplianceWith?: DpvTermId[],
+    /** Indicates the capability of the technology */
+    tech_hasCapability?: DpvTermId[],
+    /** Indicates the technology has or uses the associated model */
+    tech_hasModel?: DpvTermId[],
+    /** Indicates the technology has or uses the associated service */
+    tech_hasService?: DpvTermId[],
+    /** The element's name. */
+    title?: string,
+    /** Indicates the specified event or action is transferred to another context or entity by this control */
+    transfers?: DpvTermId[],
+    /** The UN-M49 code for a given region */
+    un_m49?: string[],
+    /** The property dcterms:valid. */
+    valid?: string[],
+    /** What the record's keys cannot hold. */
+    statements?: DpvStatement[],
+}
+
+
+/**
+ * One of DPV's examples: what it shows, and the statements its Turtle file makes, as one resource per subject.
+ */
+export interface DpvExample {
+    /** The element's IRI as a CURIE or whole, or a blank node's label in an example. */
+    id: string,
+    /** The element's name. */
+    title: string,
+    /** What the element says about itself, as DPV writes it. */
+    description?: string,
+    /** The property dcterms:format. */
+    format?: string[],
+    /** Where the element comes from, as text or as an address. */
+    source?: string[],
+    /** The property dcterms:subject. */
+    subject?: DpvTermId[],
+    /** The dates DPV gives for the element's creation. */
+    created?: string[],
+    /** The date of the element's last change. */
+    modified?: string,
+    /** The period the term applies over, such as an adequacy decision's. */
+    temporal?: DpvInterval,
+    /** The people DPV names as contributors to the element. */
+    contributor?: DpvAgentId[],
+    /** How DPV's editors mark the term's standing. */
+    term_status?: string,
+    /** What stops a parser reading the example's file, where the file does not parse. */
+    turtle_fault?: string,
+    /** Each subject the example's file states, with what it says about it. */
+    resources?: DpvResource[],
+}
+
+
+/**
+ * One statement of a resource that its keys cannot hold: a predicate with no slot, or a value not in the form its slot takes.
+ */
+export interface DpvStatement {
+    /** The literal's datatype, as a CURIE. */
+    datatype?: string,
+    /** The predicate, as a CURIE or an IRI. */
+    predicate: string,
+    /** The object, when it names a resource. */
+    reference?: string,
+    /** The object, when it is a literal, in its lexical form. */
+    literal?: string,
+    /** The literal's language tag. */
+    language?: string,
 }
 
 
 /**
  * Status associated with activity operations and lifecycles
  */
-export interface ActivityStatus extends Status {
+export interface DpvActivityStatus extends DpvStatus {
 }
 
 
 /**
- * Concept provided to represent indication of cases where the information
-or context is not applicable (N/A) or not available or this is not known
-or determined yet. If the information is applicable and available, this
-concept should not be used.
+ * A kind of term DPV names as dpv:AggregatedData and does not define.
  */
-export interface Applicability extends Context {
+export interface DpvAggregatedData extends DpvConcept {
 }
 
 
 /**
- * State of being approved through the audit
+ * Concept provided to represent indication of cases where the information or context is not applicable (N/A) or not available or this is not known or determined yet. If the information is applicable and available, this concept should not be used.
  */
-export interface AuditApproved extends AuditStatus {
-}
-
-
-/**
- * State of being conditionally approved through the audit
- */
-export interface AuditConditionallyApproved extends AuditStatus {
-}
-
-
-/**
- * State where an audit is determined as not being required
- */
-export interface AuditNotRequired extends AuditStatus {
-}
-
-
-/**
- * State of not being approved or being rejected through the audit
- */
-export interface AuditRejected extends AuditStatus {
-}
-
-
-/**
- * State of an audit being requested whose outcome is not yet known
- */
-export interface AuditRequested extends AuditStatus {
-}
-
-
-/**
- * State where an audit is determined as being required but has not been
-conducted
- */
-export interface AuditRequired extends AuditStatus {
+export interface DpvApplicability extends DpvConcept {
 }
 
 
 /**
  * Status associated with Auditing or Investigation
  */
-export interface AuditStatus extends Status {
+export interface DpvAuditStatus extends DpvStatus {
 }
 
 
 /**
- * Status indicating Authority has been informed about the specified
-context
+ * An authority with the power to create or enforce laws, or determine their compliance.
  */
-export interface AuthorityInformed extends EntityInformed, EntityInformedStatus {
+export interface DpvAuthority extends DpvLegalEntity {
 }
 
 
 /**
- * Status indicating Authority is uninformed i.e. has not been informed
-about the specified context
+ * Indication of degree or level of automation associated with specified context
  */
-export interface AuthorityUninformed extends EntityUninformed, EntityInformedStatus {
+export interface DpvAutomationLevel extends DpvProcessingContext {
 }
 
 
 /**
- * Status indicating the compatibility of the context with an earlier
-context is currently unknown
+ * Status associated with Compliance with some norms, objectives, or requirements
  */
-export interface CompatibilityUnknown extends ReuseCompatibility {
+export interface DpvComplianceStatus extends DpvStatus {
 }
 
 
 /**
- * State where the status of compliance has not been fully assessed,
-evaluated, or determined
+ * Status associated with conformance to a standard, guideline, code, or recommendation
  */
-export interface ComplianceIndeterminate extends ComplianceStatus {
+export interface DpvConformanceStatus extends DpvStatus {
 }
 
 
 /**
- * Status associated with Compliance with some norms, objectives, or
-requirements
+ * The state or status of 'consent' that provides information reflecting its operational status and validity for processing data
  */
-export interface ComplianceStatus extends Status {
+export interface DpvConsentStatus extends DpvStatus {
 }
 
 
 /**
- * State where the status of compliance is unknown
+ * Status associated with activation of a contract i.e. whether its terms are active and are required to be performed
  */
-export interface ComplianceUnknown extends ComplianceStatus {
+export interface DpvContractActivationStatus extends DpvStatus {
 }
 
 
 /**
- * State where compliance cannot be achieved due to requirements being
-violated
+ * Status associated with execution of a contract (i.e. signing and procedural aspects before the contract terms come in to effect)
  */
-export interface ComplianceViolation extends ComplianceStatus {
-}
-
-
-/**
- * State of being fully compliant
- */
-export interface Compliant extends ComplianceStatus {
-}
-
-
-/**
- * Status associated with conformance to a standard, guideline, code, or
-recommendation
- */
-export interface ConformanceStatus extends Status {
-}
-
-
-/**
- * State of being conformant
- */
-export interface Conformant extends ConformanceStatus {
-}
-
-
-/**
- * Contextually relevant information
- */
-export interface Context extends DpvThing {
-}
-
-
-/**
- * Frequency where occurrences are continuous
- */
-export interface ContinuousFrequency extends Frequency {
-}
-
-
-/**
- * Status indicating Controller has been informed about the specified
-context
- */
-export interface ControllerInformed extends EntityInformed, EntityInformedStatus {
-}
-
-
-/**
- * Status indicating Controller is uninformed i.e. has not been informed
-about the specified context
- */
-export interface ControllerUninformed extends EntityUninformed, EntityInformedStatus {
-}
-
-
-/**
- * Status indicating DataSubject has been informed about the specified
-context
- */
-export interface DataSubjectInformed extends EntityInformed, EntityInformedStatus {
-}
-
-
-/**
- * Status indicating DataSubject is uninformed i.e. has not been informed
-about the specified context
- */
-export interface DataSubjectUninformed extends EntityUninformed, EntityInformedStatus {
-}
-
-
-/**
- * A rule describing a deterrence for performing an activity
- */
-export interface Deterrence extends UnacceptableRule, Rule {
-}
-
-
-/**
- * Status indicating a deterrence has been followed i.e. the activity
-stated as being deterred has not been carried out
- */
-export interface DeterrenceFollowed extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating a deterrence has not been followed i.e. the activity
-stated as being deterred has been carried out
- */
-export interface DeterrenceNotFollowed extends RuleUnfulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * The duration or temporal limitation
- */
-export interface DpvDuration extends Context {
-}
-
-
-/**
- * Indication of 'optional' or 'voluntary'
- */
-export interface DpvOptional extends Necessity {
-}
-
-
-/**
- * Abstract base class for every DPV entity. Provides a uniform ``id``
-identifier slot. Does NOT enumerate DPV properties: the upstream OWL
-declares no ``rdfs:domain`` triples, so any DPV property is semantically
-applicable to any DPV class (open-world). Generators that need a
-closed-world property list per class should consume the W3C DPV OWL
-release directly rather than this LinkML projection.
- */
-export interface DpvThing {
-    /** Stable identifier for the instance. Typically a CURIE or IRI naming the
-RDF subject this LinkML instance corresponds to. */
-    id: string,
-}
-
-
-/**
- * Duration that is (known or intended to be) open ended or without an end
- */
-export interface EndlessDuration extends DpvDuration {
-}
-
-
-/**
- * Status indicating entity has been informed about specified context
- */
-export interface EntityInformed extends EntityInformedStatus {
-}
-
-
-/**
- * Status indicating whether an entity is informed or uninformed about
-specified context
- */
-export interface EntityInformedStatus extends Status {
-}
-
-
-/**
- * Status indicating entity is uninformed i.e. has been not been informed
-about specified context
- */
-export interface EntityUninformed extends EntityInformedStatus {
-}
-
-
-/**
- * Status indicating whether the specified context was intended or
-unintended
- */
-export interface ExpectationStatus extends DpvThing {
-}
-
-
-/**
- * Status indicating the specified context was expected
- */
-export interface Expected extends ExpectationStatus {
-}
-
-
-/**
- * Concept indicating a fee is not required. This is distinct from a Fee of
-zero as it indicates a fee is not applicable in the context
- */
-export interface FeeNotRequired extends FeeRequirement {
-}
-
-
-/**
- * Concept indicating a fee is required. The value of the fee should be
-specified using rdf:value or an another relevant means
- */
-export interface FeeRequired extends FeeRequirement {
-}
-
-
-/**
- * Concept indicating whether a fee is required
- */
-export interface FeeRequirement extends Context {
-}
-
-
-/**
- * Duration that takes place a fixed number of times e.g. 3 times
- */
-export interface FixedOccurrencesDuration extends DpvDuration {
-}
-
-
-/**
- * The frequency or information about periods and repetitions in terms of
-recurrence.
- */
-export interface Frequency extends Context {
-}
-
-
-/**
- * An indication of 'importance' within a context
- */
-export interface Importance extends Context {
-}
-
-
-/**
- * Duration that is indeterminate or cannot be determined
- */
-export interface IndeterminateDuration extends DpvDuration {
-}
-
-
-/**
- * Status indicating the specified context was intended
- */
-export interface Intended extends IntentionStatus {
-}
-
-
-/**
- * Status indicating whether the specified context was intended or
-unintended
- */
-export interface IntentionStatus extends Status {
-}
-
-
-/**
- * Status indicating whether the involvement of specified context
- */
-export interface InvolvementStatus extends Status {
-}
-
-
-/**
- * A form of documentation providing reasons, explanations, or
-justifications
- */
-export interface Justification extends Context {
-}
-
-
-/**
- * State of being lawful or legally compliant
- */
-export interface Lawful extends Lawfulness {
-}
-
-
-/**
- * Status associated with expressing lawfulness or legal compliance
- */
-export interface Lawfulness extends ComplianceStatus {
-}
-
-
-/**
- * State of the lawfulness not being known
- */
-export interface LawfulnessUnknown extends Lawfulness {
-}
-
-
-/**
- * Legal measures used to safeguard and ensure good practices in connection
-with data and technologies
- */
-export interface LegalMeasure extends TechnicalOrganisationalMeasure {
-}
-
-
-/**
- * An indication of 'necessity' within a context
- */
-export interface Necessity extends Context {
-}
-
-
-/**
- * State of non-compliance where objectives have not been met, but have not
-been violated
- */
-export interface NonCompliant extends ComplianceStatus {
-}
-
-
-/**
- * State of being non-conformant
- */
-export interface NonConformant extends ConformanceStatus {
-}
-
-
-/**
- * Concept indicating the information or context is not applicable
- */
-export interface NotApplicable extends Applicability {
-}
-
-
-/**
- * Concept indicating the information or context is applicable but
-information is not yet available
- */
-export interface NotAvailable extends Applicability {
-}
-
-
-/**
- * Status indicating the specified context is 'not' involved
- */
-export interface NotInvolved extends InvolvementStatus {
-}
-
-
-/**
- * Indication of neither being required nor optional i.e. not relevant or
-needed
- */
-export interface NotRequired extends Necessity {
-}
-
-
-/**
- * Status indicating notification(s) are completed
- */
-export interface NotificationCompleted extends NotificationStatus {
-}
-
-
-/**
- * Status indicating notification(s) could not be completed due to a
-failure
- */
-export interface NotificationFailed extends NotificationStatus {
-}
-
-
-/**
- * Status indicating notification(s) are not needed
- */
-export interface NotificationNotNeeded extends NotificationStatus {
-}
-
-
-/**
- * Status indicating notification(s) are ongoing
- */
-export interface NotificationOngoing extends NotificationStatus {
-}
-
-
-/**
- * Status indicating notification(s) are planned
- */
-export interface NotificationPlanned extends NotificationStatus {
-}
-
-
-/**
- * Status indicating whether notification(s) are planned, completed, or
-failed
- */
-export interface NotificationStatus extends Status {
-}
-
-
-/**
- * A rule describing an obligation for performing an activity
- */
-export interface Obligation extends AcceptableRule, Rule {
-}
-
-
-/**
- * Status indicating an obligation has been fulfilled i.e. the activity
-stated as being required to be carried out has been successfully
-completed
- */
-export interface ObligationFulfilled extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating an obligation has not been fulfilled i.e. the activity
-stated as being required to be carried out has not been carried out but
-this is not considered as a violation e.g. there is still time to
-conduct the activity
- */
-export interface ObligationUnfulfilled extends RuleUnfulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating an obligation has been violated i.e. the activity
-stated as being required to be carried out has not been carried out and
-this is considered as a violation i.e. the activity can no longer be
-carried out to fulfil the obligation
- */
-export interface ObligationViolated extends RuleViolated, RuleFulfilmentStatus {
-}
-
-
-/**
- * Frequency where occurrences are often or frequent, but not continuous
- */
-export interface OftenFrequency extends Frequency {
-}
-
-
-/**
- * Organisational measures used to safeguard and ensure good practices in
-connection with data and technologies
- */
-export interface OrganisationalMeasure extends TechnicalOrganisationalMeasure {
-}
-
-
-/**
- * State of partially being compliant i.e. only some objectives have been
-met, and others have not been in violation
- */
-export interface PartiallyCompliant extends ComplianceStatus {
-}
-
-
-/**
- * Status indicating the specified context is 'passively' involved
- */
-export interface PassivelyInvolved extends InvolvementStatus {
-}
-
-
-/**
- * A rule describing a permission to perform an activity
- */
-export interface Permission extends AcceptableRule, Rule {
-}
-
-
-/**
- * Status indicating a permission has not been utilised i.e. the activity
-stated as being permitted has not been carried out
- */
-export interface PermissionNotUtilised extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating a permission has been utilised i.e. the activity
-stated as being permitted has been carried out
- */
-export interface PermissionUtilised extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Physical measures used to safeguard and ensure good practices in
-connection with data and technologies
- */
-export interface PhysicalMeasure extends TechnicalOrganisationalMeasure {
-}
-
-
-/**
- * Indication of 'primary' or 'main' or 'core' importance
- */
-export interface PrimaryImportance extends Importance {
-}
-
-
-/**
- * Status indicating compatibility based on the use being either the
-original context or something that is compatible with it
- */
-export interface PrimaryUse extends ReuseCompatibility {
-}
-
-
-/**
- * A rule describing a prohibition to perform an activity
- */
-export interface Prohibition extends UnacceptableRule, Rule {
-}
-
-
-/**
- * Status indicating a prohibition has not been violated i.e. the activity
-stated as being prohibited has not been carried out
- */
-export interface ProhibitionUnviolated extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating a prohibition has been violated i.e. the activity
-stated as being prohibited has been carried out
- */
-export interface ProhibitionViolated extends RuleViolated, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating Recipient has been informed about the specified
-context
- */
-export interface RecipientInformed extends EntityInformed, EntityInformedStatus {
-}
-
-
-/**
- * Status indicating Recipient is uninformed i.e. has not been informed
-about the specified context
- */
-export interface RecipientUninformed extends EntityUninformed, EntityInformedStatus {
-}
-
-
-/**
- * A rule describing a recommendation for performing an activity
- */
-export interface Recommendation extends AcceptableRule, Rule {
-}
-
-
-/**
- * Status indicating a recommendation has been followed i.e. the activity
-stated as being recommended has been carried out
- */
-export interface RecommendationFollowed extends RuleFulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating a recommendation has not been followed i.e. the
-activity stated as being recommended has not been carried out
- */
-export interface RecommendationNotFollowed extends RuleUnfulfilled, RuleFulfilmentStatus {
-}
-
-
-/**
- * State of a request being accepted towards fulfilment
- */
-export interface RequestAccepted extends RequestStatus {
-}
-
-
-/**
- * State of a request being acknowledged
- */
-export interface RequestAcknowledged extends RequestStatus {
-}
-
-
-/**
- * State of a request being delayed towards fulfilment
- */
-export interface RequestActionDelayed extends RequestStatus {
-}
-
-
-/**
- * State of a request being fulfilled
- */
-export interface RequestFulfilled extends RequestStatus {
-}
-
-
-/**
- * State of a request being initiated
- */
-export interface RequestInitiated extends RequestStatus {
-}
-
-
-/**
- * State of a request being rejected towards non-fulfilment
- */
-export interface RequestRejected extends RequestStatus {
-}
-
-
-/**
- * State of a request's required action having been performed by the other
-party
- */
-export interface RequestRequiredActionPerformed extends RequestStatus {
-}
-
-
-/**
- * State of a request requiring an action to be performed from another
-party
- */
-export interface RequestRequiresAction extends RequestStatus {
-}
-
-
-/**
- * Status associated with requests
- */
-export interface RequestStatus extends Status {
-}
-
-
-/**
- * State of a request's status being queried
- */
-export interface RequestStatusQuery extends RequestStatus {
-}
-
-
-/**
- * State of a request being unfulfilled
- */
-export interface RequestUnfulfilled extends RequestStatus {
-}
-
-
-/**
- * Indication of 'required' or 'necessary'
- */
-export interface Required extends Necessity {
-}
-
-
-/**
- * Status indicating whether the specified context is compatible with
-another earlier context
- */
-export interface ReuseCompatibility extends Status {
-}
-
-
-/**
- * A rule describing a process or control that directs or determines if and
-how an activity should be conducted
- */
-export interface Rule extends DpvThing {
-}
-
-
-/**
- * Status indicating a rule has been fulfilled, completed, or satisfied
- */
-export interface RuleFulfilled extends RuleFulfilmentStatus {
-}
-
-
-/**
- * Status associated with a rule for indicating whether it is applicable,
-or has been utilised, and whether the requirements of the rule have been
-fulfilled or violated
- */
-export interface RuleFulfilmentStatus extends Status {
-}
-
-
-/**
- * Status indicating a rule has not been fulfilled nor violated
- */
-export interface RuleUnfulfilled extends RuleFulfilmentStatus {
-}
-
-
-/**
- * Status indicating a rule has been violated, breached, broken, or
-infracted
- */
-export interface RuleViolated extends RuleFulfilmentStatus {
-}
-
-
-/**
- * Indication of the extent or range or boundaries associated with(in) a
-context
- */
-export interface Scope extends Context {
-}
-
-
-/**
- * Indication of 'secondary' or 'minor' or 'auxiliary' importance
- */
-export interface SecondaryImportance extends Importance {
-}
-
-
-/**
- * Status indicating incompatibility based on the use not being compatible
-with an earlier context
- */
-export interface SecondaryUse extends ReuseCompatibility {
-}
-
-
-/**
- * Frequency where occurrences are singular i.e. they take place only once
- */
-export interface SingularFrequency extends Frequency {
-}
-
-
-/**
- * Frequency where occurrences are sporadic or infrequent or sparse
- */
-export interface SporadicFrequency extends Frequency {
-}
-
-
-/**
- * The status or state of something
- */
-export interface Status extends Context {
-}
-
-
-/**
- * Technical measures used to safeguard and ensure good practices in
-connection with data and technologies
- */
-export interface TechnicalMeasure extends TechnicalOrganisationalMeasure {
-}
-
-
-/**
- * Technical and Organisational measures used to safeguard and ensure good
-practices in connection with data and technologies
- */
-export interface TechnicalOrganisationalMeasure extends DpvThing {
-}
-
-
-/**
- * Duration that has a fixed temporal duration e.g. 6 months
- */
-export interface TemporalDuration extends DpvDuration {
-}
-
-
-/**
- * A rule that is unacceptable where it is not desirable if it occurs
- */
-export interface UnacceptableRule extends Rule {
-}
-
-
-/**
- * Status indicating the specified context was unexpected i.e. not expected
- */
-export interface Unexpected extends ExpectationStatus {
-}
-
-
-/**
- * Status indicating the specified context was unintended i.e. not intended
- */
-export interface Unintended extends IntentionStatus {
-}
-
-
-/**
- * Concept indicating information or context availability is unknown i.e.
-it is not known if the information exists or is applicable and therefore
-statements about its availability cannot be made (yet)
- */
-export interface UnknownApplicability extends Applicability {
-}
-
-
-/**
- * State of being unlawful or legally non-compliant
- */
-export interface Unlawful extends Lawfulness {
-}
-
-
-/**
- * Duration that takes place until a specific event occurs e.g. Account
-Closure
- */
-export interface UntilEventDuration extends DpvDuration {
-}
-
-
-/**
- * Duration that has a fixed end date e.g. 2022-12-31
- */
-export interface UntilTimeDuration extends DpvDuration {
-}
-
-
-/**
- * Control for accepting a contract
- */
-export interface AcceptContract extends ContractControl {
-}
-
-
-/**
- * A contract between two businesses who partner together to provide
-services to a consumer
- */
-export interface B2B2CContract extends B2BContract, LegalBasis, B2CContract {
-}
-
-
-/**
- * A contract between two businesses
- */
-export interface B2BContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A contract between a business and a consumer where the business provides
-goods or services to the consumer
- */
-export interface B2CContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A contract between a consumer and a business where the business
-purchases goods or services from the consumer
- */
-export interface C2BContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A contract between two consumers
- */
-export interface C2CContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A region consisting of urban population and commerce
- */
-export interface City extends DpvRegion {
-}
-
-
-/**
- * Location that is in the 'cloud' i.e. a logical location operated over
-the internet
- */
-export interface CloudLocation extends RemoteLocation, DpvLocation {
-}
-
-
-/**
- * Agreements that enforce confidentiality for e.g. to protect business,
-professional, or company secrets
- */
-export interface ConfidentialityAgreement extends LegalAgreement, LegalMeasure {
-}
-
-
-/**
- * Consent of the Data Subject for specified process or activity
- */
-export interface Consent extends LegalBasis {
-}
-
-
-/**
- * A contract where the terms and conditions are determined by parties in
-the role of a 'consumer' - whether an entity or an individual, and the
-other parties have negligible or no ability to negotiate the terms and
-conditions
- */
-export interface ConsumerStandardFormContract extends StandardFormContract, LegalBasis {
-}
-
-
-/**
- * Creation, completion, fulfilment, or performance of a contract involving
-specified processing of data or technologies
- */
-export interface Contract extends LegalBasis {
-}
-
-
-/**
- * Status associated with activation of a contract i.e. whether its terms
-are active and are required to be performed
- */
-export interface ContractActivationStatus extends ContractStatus {
-}
-
-
-/**
- * Status representing contract that has been fully executed and whose
-terms are considered active i.e. they are applicable and are required to
-be performed
- */
-export interface ContractActive extends ContractActivationStatus {
-}
-
-
-/**
- * Status representing contract that has been fully executed and whose
-terms have been amended through mutual agreement or other means such
-that the contract is still required to be performed
- */
-export interface ContractAmended extends ContractPerformanceStatus {
-}
-
-
-/**
- * A provision describing how changes or modifications to the contract can
-be made and the process for implementing them
- */
-export interface ContractAmendmentClause extends ContractualClause {
-}
-
-
-/**
- * Status representing contract has been approved and can be used for
-signing
- */
-export interface ContractApproved extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract that has been fully executed and whose
-terms are being carried out i.e. the contract is being performed
- */
-export interface ContractBeingPerformed extends ContractPerformanceStatus {
-}
-
-
-/**
- * Status representing contract being breached where its terms are not
-fulfilled or are violated with legal consequences
- */
-export interface ContractBreached extends ContractTerminationStatus {
-}
-
-
-/**
- * A generic concept representing contracts categorised by specific domains
-which dictate the drafting and interpretation of contracts
- */
-export interface ContractByDomain extends Contract, LegalBasis {
-}
-
-
-/**
- * A generic concept representing contracts categorised by the type of
-entities involved - such as Businesses (B), Consumers (C), and
-Governments (G)
- */
-export interface ContractByEntityType extends Contract, LegalBasis {
-}
-
-
-/**
- * A generic concept representing contracts categorised based on their use
-or absence of negotiation in the contract forming process
- */
-export interface ContractByNegotiationType extends Contract, LegalBasis {
-}
-
-
-/**
- * A provision requiring parties to keep certain information confidential
-and not disclose it to third parties
- */
-export interface ContractConfidentialityClause extends ContractualClause {
-}
-
-
-/**
- * The control or activity associated with accepting, refusing, and other
-actions associated with a contract
- */
-export interface ContractControl extends EntityInvolvement {
-}
-
-
-/**
- * A section specifying the meanings of key terms and phrases used
-throughout the contract
- */
-export interface ContractDefinitions extends ContractualClause {
-}
-
-
-/**
- * A provision detailing the methods and procedures for resolving
-disagreements or conflicts arising from the contract
- */
-export interface ContractDisputeResolutionClause extends ContractualClause {
-}
-
-
-/**
- * Status representing contract being disputed where one or more parties
-have an issue regarding the interpretation and performance of the
-contract
- */
-export interface ContractDisputed extends ContractTerminationStatus {
-}
-
-
-/**
- * Status representing the drafting of contract text has been completed and
-it can now be offered for signing
- */
-export interface ContractDrafted extends ContractPreparationStatus {
-}
-
-
-/**
- * Status associated with execution of a contract (i.e. signing and
-procedural aspects before the contract terms come in to effect)
- */
-export interface ContractExecutionStatus extends ContractStatus {
-}
-
-
-/**
- * Status representing reaching the expiry defined in the contract, such as
-when the stated duration or the stated obligations have been completed
- */
-export interface ContractExpired extends ContractTerminationStatus {
-}
-
-
-/**
- * Status representing the duration associated with a contract being
-extended through mutual agreement or by a party
- */
-export interface ContractExtended extends ContractTerminationStatus {
-}
-
-
-/**
- * Status representing contract where all its terms have been fulfilled in
-a manner that does not constitute a violation or breach of the contract
- */
-export interface ContractFulfilled extends ContractFulfilmentStatus {
+export interface DpvContractExecutionStatus extends DpvStatus {
 }
 
 
 /**
  * Status associated with fulfilment of a contract
  */
-export interface ContractFulfilmentStatus extends ContractStatus {
-}
-
-
-/**
- * Status representing contract has been fully executed i.e. it has been
-signed by all parties and all other procedural aspects such as exchange
-of signed contract copies have been completed
- */
-export interface ContractFullyExecuted extends ContractExecutionStatus {
-}
-
-
-/**
- * Status representing contract has been signed by all concerned parties
- */
-export interface ContractFullySigned extends ContractExecutionStatus {
-}
-
-
-/**
- * Status representing contract that has been fully executed and whose
-terms are not yet active i.e. they need to be performed at a later time
- */
-export interface ContractInactive extends ContractActivationStatus {
-}
-
-
-/**
- * A provision specifying the legal jurisdiction or court where disputes
-related to the contract will be resolved
- */
-export interface ContractJurisdictionClause extends ContractualClause {
-}
-
-
-/**
- * Status representing contract has been successfully negotiated by
-involved parties
- */
-export interface ContractNegotiated extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract where none of its terms have been fulfilled
-in a manner that does not constitute a violation or breach of the
-contract i.e. there is still time and opportunity to complete the terms
- */
-export interface ContractNotFulfilled extends ContractFulfilmentStatus {
-}
-
-
-/**
- * Status representing contract has been offered to a party or to parties
-for reviewing and signing
- */
-export interface ContractOffered extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract where some of its terms have been
-fulfilled, and others are yet to be fulfilled in a manner that does not
-constitute a violation or breach of the contract i.e. there is still
-time and opportunity to complete the terms
- */
-export interface ContractPartiallyFulfilled extends ContractFulfilmentStatus {
-}
-
-
-/**
- * Status representing contract has been partially signed by parties i.e.
-some parties have signed the contract and others are yet to make a
-decision to sign it
- */
-export interface ContractPartiallySigned extends ContractExecutionStatus {
-}
-
-
-/**
- * Fulfilment or performance of a contract involving specified processing
-of data or technologies
- */
-export interface ContractPerformance extends Contract, LegalBasis {
+export interface DpvContractFulfilmentStatus extends DpvStatus {
 }
 
 
 /**
  * Status associated with performance of a contract
  */
-export interface ContractPerformanceStatus extends ContractStatus {
+export interface DpvContractPerformanceStatus extends DpvStatus {
 }
 
 
 /**
- * An introductory section outlining the background, context, and purpose
-of the contract
+ * Status associated with preparation of contracts before they are signed or accepted or executed
  */
-export interface ContractPreamble extends ContractualClause {
-}
-
-
-/**
- * Status associated with preparation of contracts before they are signed
-or accepted or executed
- */
-export interface ContractPreparationStatus extends ContractStatus {
-}
-
-
-/**
- * Status representing contract has been rejected and cannot be used for
-signing
- */
-export interface ContractRejected extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract being renewed with new duration and/or
-applicability where the contract has been fully executed in the past
- */
-export interface ContractRenewed extends ContractPerformanceStatus {
-}
-
-
-/**
- * Status representing contract has been signed by the indicated signing
-party
- */
-export interface ContractSignedByParty extends ContractExecutionStatus {
-}
-
-
-/**
- * Status associated with a contract
- */
-export interface ContractStatus extends Status {
-}
-
-
-/**
- * Status representing contract that has been temporarily suspended through
-mutual agreement or by some parties
- */
-export interface ContractTemporarilySuspended extends ContractPerformanceStatus {
-}
-
-
-/**
- * Status representing contract being terminated by one or more parties
- */
-export interface ContractTerminated extends ContractTerminationStatus {
-}
-
-
-/**
- * A provision outlining the conditions under which the contract can be
-terminated before its completion, including any penalties or obligations
- */
-export interface ContractTerminationClause extends ContractualClause {
+export interface DpvContractPreparationStatus extends DpvStatus {
 }
 
 
 /**
  * Status associated with termination of a contract
  */
-export interface ContractTerminationStatus extends ContractStatus {
-}
-
-
-/**
- * Status representing contract is under negotiation between parties
- */
-export interface ContractUnderNegotiation extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract is under review and is being considered for
-signing
- */
-export interface ContractUnderReview extends ContractPreparationStatus {
-}
-
-
-/**
- * Status representing contract where one or more terms have not been
-fulfilled or have been fulfilled, where either is considered a violation
-of the terms
- */
-export interface ContractViolated extends ContractFulfilmentStatus {
+export interface DpvContractTerminationStatus extends DpvStatus {
 }
 
 
 /**
  * A part or component within a contract that outlines its specifics
  */
-export interface ContractualClause extends DpvThing {
-}
-
-
-/**
- * Status indicating the terms of the contractual clause are fulfilled i.e.
-they have been successfully completed without violation
- */
-export interface ContractualClauseFulfilled extends ContractualClauseFulfilmentStatus {
+export interface DpvContractualClause extends DpvConcept {
 }
 
 
 /**
  * Status associated with fulfilment of a contractual clause
  */
-export interface ContractualClauseFulfilmentStatus extends ContractStatus {
+export interface DpvContractualClauseFulfilmentStatus extends DpvStatus {
 }
 
 
 /**
- * Status indicating the terms of the contractual clause have not yet been
-fulfilled in a manner that does not constitute a violation i.e. there is
-still an opportunity to complete them
- */
-export interface ContractualClauseNotFulfilled extends ContractualClauseFulfilmentStatus {
-}
-
-
-/**
- * Status indicating some of the terms of the contractual clause have been
-fulfilled, and others have not yet been fulfilled in a manner that does
-not constitute a violation i.e. there is still an opportunity to
-complete them
- */
-export interface ContractualClausePartiallyFulfilled extends ContractualClauseFulfilmentStatus {
-}
-
-
-/**
- * Status indicating the terms of the contractual clause have been violated
- */
-export interface ContractualClauseViolated extends ContractualClauseFulfilmentStatus {
-}
-
-
-/**
- * Contractual terms governing data handling within or with an entity
- */
-export interface ContractualTerms extends LegalMeasure {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
-between a Data Controller and a Data Subject
- */
-export interface ControllerDataSubjectAgreement extends DataSubjectContract, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
-between a Data Controller and a Data Processor
- */
-export interface ControllerProcessorAgreement extends DataProcessorContract, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * Creation, completion, fulfilment, or performance of a contract, with
-Data Controllers as parties being Joint Data Controllers, and involving
-specified processing of data or technologies. NOTE: This concept is
-being deprecated - use dpv:JointDataControllersAgreement which has a
-more explicit definition of the entities involved and the intent of the
-contract
- */
-export interface DataControllerContract extends DataProcessingAgreement, LegalBasis {
-}
-
-
-/**
- * Contractual clauses governing handling of data within or by an entity
- */
-export interface DataHandlingClause extends ContractualTerms, LegalMeasure {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
- */
-export interface DataProcessingAgreement extends Contract, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * Creation, completion, fulfilment, or performance of a contract, with the
-Data Controller and Data Processor as parties, and involving specified
-processing of data or technologies. NOTE: This concept is being
-deprecated - use dpv:ControllerProcessorAgreement which has a more
-explicit definition of the entities involved and the intent of the
-contract
- */
-export interface DataProcessorContract extends DataProcessingAgreement, LegalBasis {
-}
-
-
-/**
- * Creation, completion, fulfilment, or performance of a contract, with the
-Data Controller and Data Subject as parties, and involving specified
-processing of data or technologies. NOTE: This concept is being
-deprecated - use dpv:ControllerDataSubjectAgreement which has a more
-explicit definition of the entities involved and the intent of the
-contract
- */
-export interface DataSubjectContract extends DataProcessingAgreement, LegalBasis {
-}
-
-
-/**
- * Specific or special categories and instances of legal basis intended for
-justifying data transfers
- */
-export interface DataTransferLegalBasis extends LegalBasis {
-}
-
-
-/**
- * Location that is spread across multiple separate areas with no
-distinction between their importance
- */
-export interface DecentralisedLocations extends LocationFixture {
-}
-
-
-/**
- * A contract regarding supply of data or technologies between a
-distributor and a supplier
- */
-export interface DistributionAgreement extends ContractByDomain, LegalBasis {
-}
-
-
-/**
- * A political entity indicative of a sovereign or non-sovereign
-territorial state comprising of distinct geographical areas
+ * A political entity indicative of a sovereign or non-sovereign territorial state comprising of distinct geographical areas
  */
 export interface DpvCountry extends DpvJurisdiction {
 }
 
 
 /**
- * A jurisdiction represents the locations that define the extent of
-authority (or control) claimed, granted, or asserted by a legal entity
-(in particular a legal authority) to govern or enforce rules
+ * An authority tasked with overseeing legal compliance regarding privacy and data protection laws.
+ */
+export interface DpvDataProtectionAuthority extends DpvAuthority {
+}
+
+
+/**
+ * The source or origin of data
+ */
+export interface DpvDataSource extends DpvProcessingContext {
+}
+
+
+/**
+ * Data Sourced from Data Subject(s), e.g. when data is collected via a form or observed from their activities
+ */
+export interface DpvDataSubjectDataSource extends DpvDataSource {
+}
+
+
+/**
+ * Scale of Data Subject(s)
+ */
+export interface DpvDataSubjectScale extends DpvProcessingContext {
+}
+
+
+/**
+ * Volume or Scale of Data
+ */
+export interface DpvDataVolume extends DpvProcessingContext {
+}
+
+
+/**
+ * The duration or temporal limitation
+ */
+export interface DpvDuration extends DpvConcept {
+}
+
+
+/**
+ * Status indicating whether an entity is informed or uninformed about specified context
+ */
+export interface DpvEntityInformedStatus extends DpvStatus {
+}
+
+
+/**
+ * Status indicating whether an entity is involved
+ */
+export interface DpvEntityInvolvementStatus extends DpvStatus {
+}
+
+
+/**
+ * Involvement of an entity in specific context where it is not permitted or able to do something
+ */
+export interface DpvEntityNonPermissiveInvolvement extends DpvProcessingContext {
+}
+
+
+/**
+ * Involvement of an entity in specific context where it is permitted or able to do something
+ */
+export interface DpvEntityPermissiveInvolvement extends DpvProcessingContext {
+}
+
+
+/**
+ * Processing that involves evaluation and scoring of individuals
+ */
+export interface DpvEvaluationScoring extends DpvProcessingContext {
+}
+
+
+/**
+ * Status indicating whether the specified context was intended or unintended
+ */
+export interface DpvExpectationStatus extends DpvConcept {
+}
+
+
+/**
+ * Concept indicating whether a fee is required
+ */
+export interface DpvFeeRequirement extends DpvConcept {
+}
+
+
+/**
+ * The frequency or information about periods and repetitions in terms of recurrence.
+ */
+export interface DpvFrequency extends DpvConcept {
+}
+
+
+/**
+ * Indicate of scale in terms of geographic coverage
+ */
+export interface DpvGeographicCoverage extends DpvProcessingContext {
+}
+
+
+/**
+ * The involvement of humans in specified context
+ */
+export interface DpvHumanInvolvement extends DpvProcessingContext {
+}
+
+
+/**
+ * The individual (or category of individuals) that is the subject within some context such as personal data (dpv:DataSubject) or technology (tech:Subject)
+ */
+export interface DpvHumanSubject extends DpvLegalEntity {
+}
+
+
+/**
+ * An indication of 'importance' within a context
+ */
+export interface DpvImportance extends DpvConcept {
+}
+
+
+/**
+ * Indicates that technology is being used in an innovative manner
+ */
+export interface DpvInnovativeUseOfTechnology extends DpvProcessingContext {
+}
+
+
+/**
+ * Status indicating whether the specified context was intended or unintended
+ */
+export interface DpvIntentionStatus extends DpvStatus {
+}
+
+
+/**
+ * An inverse jurisdiction for a specific jurisdiction is the set of all other jurisdictions that are not part of the specific jurisdiction
+ */
+export interface DpvInverseJurisdiction extends DpvJurisdiction {
+}
+
+
+/**
+ * Status indicating whether the involvement of specified context
+ */
+export interface DpvInvolvementStatus extends DpvStatus {
+}
+
+
+/**
+ * A jurisdiction represents the locations that define the extent of authority (or control) claimed, granted, or asserted by a legal entity (in particular a legal authority) to govern or enforce rules
  */
 export interface DpvJurisdiction extends DpvLocation {
 }
 
 
 /**
+ * A form of documentation providing reasons, explanations, or justifications
+ */
+export interface DpvJustification extends DpvConcept {
+}
+
+
+/**
+ * A law is a set of rules created by government or authorities
+ */
+export interface DpvLaw extends DpvConcept {
+}
+
+
+/**
+ * Status associated with expressing lawfulness or legal compliance
+ */
+export interface DpvLawfulness extends DpvComplianceStatus {
+}
+
+
+/**
+ * Legal basis used to justify processing of data or use of technology in accordance with a law
+ */
+export interface DpvLegalBasis extends DpvConcept {
+}
+
+
+/**
+ * A human or non-human 'thing' that constitutes as an entity and which is recognised and defined in law
+ */
+export interface DpvLegalEntity extends DpvConcept {
+}
+
+
+/**
+ * Legal measures used to safeguard and ensure good practices in connection with data and technologies
+ */
+export interface DpvLegalMeasure extends DpvConcept {
+}
+
+
+/**
+ * Status associated with use of Legal Obligation as a legal basis
+ */
+export interface DpvLegalObligationStatus extends DpvStatus {
+}
+
+
+/**
+ * Status associated with use of Legitimate Interest as a legal basis
+ */
+export interface DpvLegitimateInterestStatus extends DpvStatus {
+}
+
+
+/**
+ * The likelihood or probability or chance of something taking place or occurring
+ */
+export interface DpvLikelihood extends DpvConcept {
+}
+
+
+/**
  * A location is a position, site, or area where something is located
  */
-export interface DpvLocation extends DpvThing {
+export interface DpvLocation extends DpvConcept {
+}
+
+
+/**
+ * The fixture of location refers to whether the location is fixed
+ */
+export interface DpvLocationFixture extends DpvConcept {
+}
+
+
+/**
+ * An indication of 'necessity' within a context
+ */
+export interface DpvNecessity extends DpvConcept {
+}
+
+
+/**
+ * Data that is not Personal Data
+ */
+export interface DpvNonPersonalData extends DpvConcept {
+}
+
+
+/**
+ * Status associated with notice provision, use, and management
+ */
+export interface DpvNoticeStatus extends DpvStatus {
+}
+
+
+/**
+ * Status indicating whether notification(s) are planned, completed, or failed
+ */
+export interface DpvNotificationStatus extends DpvStatus {
+}
+
+
+/**
+ * A rule describing an obligation for performing an activity
+ */
+export interface DpvObligation extends DpvRule {
+}
+
+
+/**
+ * Status associated with use of Official Authority as a legal basis
+ */
+export interface DpvOfficialAuthorityExerciseStatus extends DpvStatus {
+}
+
+
+/**
+ * Organisational measures used to safeguard and ensure good practices in connection with data and technologies
+ */
+export interface DpvOrganisationalMeasure extends DpvConcept {
+}
+
+
+/**
+ * A rule describing a permission to perform an activity
+ */
+export interface DpvPermission extends DpvRule {
+}
+
+
+/**
+ * Data directly or indirectly associated or related to an individual
+ */
+export interface DpvPersonalData extends DpvConcept {
+}
+
+
+/**
+ * Physical measures used to safeguard and ensure good practices in connection with data and technologies
+ */
+export interface DpvPhysicalMeasure extends DpvConcept {
+}
+
+
+/**
+ * Operations or 'processing' performed on data
+ */
+export interface DpvProcessing extends DpvConcept {
+}
+
+
+/**
+ * Context or conditions within which processing takes place
+ */
+export interface DpvProcessingContext extends DpvConcept {
+}
+
+
+/**
+ * Scale of Processing
+ */
+export interface DpvProcessingScale extends DpvProcessingContext {
+}
+
+
+/**
+ * A rule describing a prohibition to perform an activity
+ */
+export interface DpvProhibition extends DpvRule {
+}
+
+
+/**
+ * Status associated with use of Public Interest as a legal basis
+ */
+export interface DpvPublicInterestStatus extends DpvStatus {
+}
+
+
+/**
+ * A publicly available list of entities e.g. to indicate which entities perform a certain activity within a certain location or jurisdiction
+ */
+export interface DpvPublicRegisterOfEntities extends DpvConcept {
+}
+
+
+/**
+ * Purpose or (broader) Goal associated with data or technology
+ */
+export interface DpvPurpose extends DpvConcept {
 }
 
 
@@ -2590,5843 +1571,578 @@ export interface DpvRegion extends DpvCountry {
 
 
 /**
- * End User License Agreement is a contract entered into between a software
-(or service) developer or provider with the (end-)user
+ * Status associated with requests
  */
-export interface EULA extends LicenseAgreement, LegalBasis {
+export interface DpvRequestStatus extends DpvStatus {
 }
 
 
 /**
- * A political union of two or more countries based on economic or trade
-agreements
+ * Status indicating whether the specified context is compatible with another earlier context
  */
-export interface EconomicUnion extends DpvJurisdiction {
-}
-
-
-/**
- * A contract regarding employment between an employer and an employee
- */
-export interface EmploymentContract extends ContractByDomain, LegalBasis {
-}
-
-
-/**
- * Processing necessary to enter into contract
- */
-export interface EnterIntoContract extends Contract, LegalBasis {
-}
-
-
-/**
- * Location that is federated across multiple separate areas with
-designation of a primary or central location
- */
-export interface FederatedLocations extends LocationFixture {
-}
-
-
-/**
- * Location that is fixed i.e. known to occur at a specific place
- */
-export interface FixedLocation extends LocationFixture {
-}
-
-
-/**
- * Location that is fixed with multiple places e.g. multiple cities
- */
-export interface FixedMultipleLocations extends FixedLocation, LocationFixture {
-}
-
-
-/**
- * Location that is fixed at a specific place e.g. a city
- */
-export interface FixedSingularLocation extends FixedLocation, LocationFixture {
-}
-
-
-/**
- * A contract between a government and a business
- */
-export interface G2BContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A contract between a government and consumers
- */
-export interface G2CContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A contract between two governments or government departments or units
- */
-export interface G2GContract extends ContractByEntityType, LegalBasis {
-}
-
-
-/**
- * A space that is a hybrid space i.e it has both public and private
-components - such as by having part of it be a private space or which is
-operated privately
- */
-export interface HybridPublicPrivateSpace extends PrivateSpace, DpvLocation, PublicSpace {
-}
-
-
-/**
- * An inverse jurisdiction for a specific jurisdiction is the set of all
-other jurisdictions that are not part of the specific jurisdiction
- */
-export interface InverseJurisdiction extends DpvJurisdiction {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
-between Controllers within a Joint Controllers relationship
- */
-export interface JointDataControllersAgreement extends DataControllerContract, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * A law is a set of rules created by government or authorities
- */
-export interface Law extends DpvThing {
-}
-
-
-/**
- * A legally binding agreement
- */
-export interface LegalAgreement extends LegalMeasure {
-}
-
-
-/**
- * Legal basis used to justify processing of data or use of technology in
-accordance with a law
- */
-export interface LegalBasis extends DpvThing {
-}
-
-
-/**
- * Legal Obligation to conduct the specified activities
- */
-export interface LegalObligation extends LegalBasis {
-}
-
-
-/**
- * Status where the legal obligation has been completed
- */
-export interface LegalObligationCompleted extends LegalObligationStatus {
-}
-
-
-/**
- * Status where the legal obligation is being fulfilled
- */
-export interface LegalObligationOngoing extends LegalObligationStatus {
-}
-
-
-/**
- * Status where the legal obligation has not been started
- */
-export interface LegalObligationPending extends LegalObligationStatus {
-}
-
-
-/**
- * Status associated with use of Legal Obligation as a legal basis
- */
-export interface LegalObligationStatus extends Status {
-}
-
-
-/**
- * Legitimate Interests of a Party as justification for specified
-activities
- */
-export interface LegitimateInterest extends LegalBasis {
-}
-
-
-/**
- * Status where the Legitimate Interest was informed to the data subject or
-other relevant entities
- */
-export interface LegitimateInterestInformed extends LegitimateInterestStatus {
-}
-
-
-/**
- * Status where the use of Legitimate Interest was not objected to
- */
-export interface LegitimateInterestNotObjected extends LegitimateInterestStatus {
-}
-
-
-/**
- * Status where the use of Legitimate Interest was objected to
- */
-export interface LegitimateInterestObjected extends LegitimateInterestStatus {
-}
-
-
-/**
- * Legitimate Interests of a Data Controller in conducting specified
-activities
- */
-export interface LegitimateInterestOfController extends LegitimateInterest, LegalBasis {
-}
-
-
-/**
- * Legitimate Interests of the Data Subject in conducting specified
-activities
- */
-export interface LegitimateInterestOfDataSubject extends LegitimateInterest, LegalBasis {
-}
-
-
-/**
- * Legitimate Interests of a Third Party in conducting specified activities
- */
-export interface LegitimateInterestOfThirdParty extends LegitimateInterest, LegalBasis {
-}
-
-
-/**
- * Status associated with use of Legitimate Interest as a legal basis
- */
-export interface LegitimateInterestStatus extends Status {
-}
-
-
-/**
- * Status where the Legitimate Interest was not informed to the data
-subject or other relevant entities
- */
-export interface LegitimateInterestUninformed extends LegitimateInterestStatus {
-}
-
-
-/**
- * A Legal Document providing permission to utilise data or resource and
-outlining the conditions under which such use is considered valid
- */
-export interface LicenseAgreement extends ContractByDomain, LegalBasis {
-}
-
-
-/**
- * Location is local
- */
-export interface LocalLocation extends LocationLocality, DpvLocation {
-}
-
-
-/**
- * The fixture of location refers to whether the location is fixed
- */
-export interface LocationFixture extends DpvThing {
-}
-
-
-/**
- * Locality refers to whether the specified location is local within some
-context, e.g. for the user
- */
-export interface LocationLocality extends DpvLocation {
-}
-
-
-/**
- * Non-disclosure Agreements e.g. preserving confidentiality of information
- */
-export interface NDA extends LegalAgreement, LegalMeasure {
-}
-
-
-/**
- * Control for negotiating a contract
- */
-export interface NegotiateContract extends ContractControl {
-}
-
-
-/**
- * A contract where the terms and conditions are determined with all
-parties having the ability to negotiate the terms and conditions
- */
-export interface NegotiatedContract extends ContractByNegotiationType, LegalBasis {
-}
-
-
-/**
- * Control for offering a contract
- */
-export interface OfferContract extends ContractControl {
-}
-
-
-/**
- * Status where the official authority has been exercised to completion
- */
-export interface OfficialAuthorityExerciseCompleted extends OfficialAuthorityExerciseStatus {
-}
-
-
-/**
- * Status where the official authority is being exercised
- */
-export interface OfficialAuthorityExerciseOngoing extends OfficialAuthorityExerciseStatus {
-}
-
-
-/**
- * Status where the official authority has not been exercised
- */
-export interface OfficialAuthorityExercisePending extends OfficialAuthorityExerciseStatus {
-}
-
-
-/**
- * Status associated with use of Official Authority as a legal basis
- */
-export interface OfficialAuthorityExerciseStatus extends Status {
-}
-
-
-/**
- * Activities are necessary or authorised through the official authority
-granted to or vested in the Data Controller
- */
-export interface OfficialAuthorityOfController extends LegalBasis {
-}
-
-
-/**
- * A private space associated with an individual in a personal capacity -
-such as their home or the space around their physical person e.g. my
-home or my room
- */
-export interface PersonalSpace extends PrivateSpace, DpvLocation {
-}
-
-
-/**
- * A space that is accessible to a group or a community within a private
-space and where members of the public do not have access to it e.g.
-society amenities such as gyms and pools
- */
-export interface PrivateCommunalSpace extends PrivateSpace, DpvLocation {
-}
-
-
-/**
- * Location that is not or cannot be accessed by the public and is
-controlled as a private space
- */
-export interface PrivateLocation extends LocalLocation, DpvLocation {
-}
-
-
-/**
- * A space that is owned or controlled by a private entity and where access
-to members of the public is restricted
- */
-export interface PrivateSpace extends DpvLocation {
-}
-
-
-/**
- * A space that is operated or managed by a private entity but which is
-accessible to the public e.g. a public bus station operated by a
-specific company
- */
-export interface PrivatelyOperatedPublicSpace extends HybridPublicPrivateSpace, DpvLocation, PubliclyAccessibleSpace {
-}
-
-
-/**
- * A space that is privately owned but which is accessible and usable by
-the public - whether freely or through a process which is open to all
-members of the public e.g. hotel lobby, shopping mall atriums
- */
-export interface PrivatelyOwnedPublicSpace extends HybridPublicPrivateSpace, DpvLocation, PrivatelyOwnedSpace {
-}
-
-
-/**
- * A place that is privately owned e.g. offices, malls
- */
-export interface PrivatelyOwnedSpace extends PrivateSpace, DpvLocation {
-}
-
-
-/**
- * A contract where the terms and conditions are determined by parties in
-the role of a 'provider', and the other parties have negligible or no
-ability to negotiate the terms and conditions
- */
-export interface ProviderStandardFormContract extends StandardFormContract, LegalBasis {
-}
-
-
-/**
- * Activities are necessary or beneficial for interest of the public or
-society at large
- */
-export interface PublicInterest extends LegalBasis {
-}
-
-
-/**
- * Status where the public interest activity has been completed
- */
-export interface PublicInterestCompleted extends PublicInterestStatus {
-}
-
-
-/**
- * Status where the public interest activity was objected to by the Data
-Subject or another relevant entity
- */
-export interface PublicInterestObjected extends PublicInterestStatus {
-}
-
-
-/**
- * Status where the public interest activity is ongoing
- */
-export interface PublicInterestOngoing extends PublicInterestStatus {
-}
-
-
-/**
- * Status where the public interest activity has not started
- */
-export interface PublicInterestPending extends PublicInterestStatus {
-}
-
-
-/**
- * Status associated with use of Public Interest as a legal basis
- */
-export interface PublicInterestStatus extends Status {
-}
-
-
-/**
- * Location that is or can be accessed by the public
- */
-export interface PublicLocation extends LocalLocation, DpvLocation {
-}
-
-
-/**
- * Any space that is accessible to the public or is owned by the public
- */
-export interface PublicSpace extends DpvLocation {
-}
-
-
-/**
- * A space that is accessible to all members of the public e.g. parks,
-malls, train stations
- */
-export interface PubliclyAccessibleSpace extends PublicSpace, DpvLocation {
-}
-
-
-/**
- * A space that is owned by the public e.g. national parks, forests
- */
-export interface PubliclyOwnedSpace extends PublicSpace, DpvLocation {
-}
-
-
-/**
- * Location that is random or unknown
- */
-export interface RandomLocation extends LocationFixture {
-}
-
-
-/**
- * Control for refusing a contract
- */
-export interface RefuseContract extends ContractControl {
-}
-
-
-/**
- * Location is remote i.e. not local
- */
-export interface RemoteLocation extends LocationLocality, DpvLocation {
-}
-
-
-/**
- * A private space that acts as a shared space with other entities but
-which is still essentially private for the individuals e.g. a
-semi-private hospital room shared with another patient
- */
-export interface SemiPrivateSpace extends PrivateSpace, DpvLocation {
-}
-
-
-/**
- * A contract regarding the provision of a service which outlines the
-acceptable metrics and performance of the service for the consumer
- */
-export interface ServiceLevelAgreement extends ContractByDomain, LegalBasis {
-}
-
-
-/**
- * A contract where the terms and conditions are determined by one or more
-of the parties, and the other parties have negligible or no ability to
-negotiate the terms and conditions
- */
-export interface StandardFormContract extends ContractByNegotiationType, LegalBasis {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for classification and management of
-'confidential data' based on a statistical framework
- */
-export interface StatisticalConfidentialityAgreement extends LegalAgreement, LegalMeasure {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
-between a Data Processor and a Data (Sub-)Processor
- */
-export interface SubProcessorAgreement extends DataProcessingAgreement, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * A political union of two or more countries with an establishment of
-common authority
- */
-export interface SupraNationalUnion extends DpvJurisdiction {
-}
-
-
-/**
- * Control for terminating a contract
- */
-export interface TerminateContract extends ContractControl {
-}
-
-
-/**
- * Contractual clauses outlining the terms and conditions regarding the
-provision of a service, typically between a service provider and a
-service consumer, also know as 'Terms of Use' and 'Terms and Conditions'
-and commonly abbreviated as TOS, ToS, ToU, or T&C
- */
-export interface TermsOfService extends ContractualClause {
-}
-
-
-/**
- * Represents a country outside applicable or compatible jurisdiction as
-outlined in law
- */
-export interface ThirdCountry extends DpvCountry {
-}
-
-
-/**
- * An agreement outlining conditions, criteria, obligations,
-responsibilities, and specifics for carrying out processing of data
-between a Data Controller or Processor and a Third Party
- */
-export interface ThirdPartyAgreement extends ThirdPartyContract, LegalBasis, LegalMeasure {
-}
-
-
-/**
- * Creation, completion, fulfilment, or performance of a contract, with the
-Data Controller and Third Party as parties, and involving specified
-processing of data or technologies. NOTE: This concept is being
-deprecated - use dpv:ThirdPartyAgreement which has a more explicit
-definition of the entities involved and the intent of the contract
- */
-export interface ThirdPartyContract extends DataProcessingAgreement, LegalBasis {
-}
-
-
-/**
- * Location that is known but is variable e.g. somewhere within a given
-area
- */
-export interface VariableLocation extends LocationFixture {
-}
-
-
-/**
- * Activities are necessary or required to protect vital interests of a
-data subject or other natural person
- */
-export interface VitalInterest extends LegalBasis {
-}
-
-
-/**
- * Status where the vital interest activity has been completed
- */
-export interface VitalInterestCompleted extends VitalInterestStatus {
-}
-
-
-/**
- * Status where the vital interest activity was objected to by the Data
-Subject or another relevant entity
- */
-export interface VitalInterestObjected extends VitalInterestStatus {
-}
-
-
-/**
- * Activities are necessary or required to protect vital interests of a
-data subject
- */
-export interface VitalInterestOfDataSubject extends VitalInterestOfNaturalPerson, LegalBasis {
-}
-
-
-/**
- * Activities are necessary or required to protect vital interests of a
-natural person
- */
-export interface VitalInterestOfNaturalPerson extends VitalInterest, LegalBasis {
-}
-
-
-/**
- * Status where the vital interest activity is ongoing
- */
-export interface VitalInterestOngoing extends VitalInterestStatus {
-}
-
-
-/**
- * Status where the vital interest activity has not started
- */
-export interface VitalInterestPending extends VitalInterestStatus {
-}
-
-
-/**
- * Status associated with use of Vital Interest as a legal basis
- */
-export interface VitalInterestStatus extends Status {
-}
-
-
-/**
- * Location is local and entirely within a device, such as a smartphone
- */
-export interface WithinDevice extends LocalLocation, DpvLocation {
-}
-
-
-/**
- * Location is local and entirely within a physical environment, such as a
-room
- */
-export interface WithinPhysicalEnvironment extends DpvLocation {
-}
-
-
-/**
- * Location is local and entirely within a virtual environment, such as a
-software system
- */
-export interface WithinVirtualEnvironment extends DpvLocation {
-}
-
-
-/**
- * Organisations related to academia or scientific pursuits e.g.
-Universities, Schools, Research Bodies
- */
-export interface AcademicScientificOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * A natural person that is not a child i.e. has attained some legally
-specified age of adulthood
- */
-export interface Adult extends HumanSubject {
-}
-
-
-/**
- * An organisation that that offers transportation and medical care to
-patients requiring urgent medical attention
- */
-export interface AmbulanceProvider extends EmergencyServiceProvider {
-}
-
-
-/**
- * Humans that are applicants in some context
- */
-export interface Applicant extends HumanSubject {
-}
-
-
-/**
- * Humans that are asylum seekers
- */
-export interface AsylumSeeker extends VulnerableHuman, HumanSubject {
-}
-
-
-/**
- * A nonprofit entity dedicated to providing assistance or raising funds
-for social, educational, religious, or other philanthropic purposes
- */
-export interface CharityOrganisation extends LegalEntity {
-}
-
-
-/**
- * A 'child' is a natural legal person who is below a certain legal age
-depending on the legal jurisdiction.
- */
-export interface Child extends VulnerableHuman, HumanSubject {
-}
-
-
-/**
- * Humans that are citizens (for a jurisdiction)
- */
-export interface Citizen extends HumanSubject {
-}
-
-
-/**
- * Humans that are clients or recipients of services
- */
-export interface Client extends DpvCustomer, HumanSubject {
-}
-
-
-/**
- * An organisation that is a smaller healthcare facility offering
-outpatient medical services for diagnosis and treatment
- */
-export interface Clinic extends DpvOrganisation {
-}
-
-
-/**
- * The individual or organisation that decides (or controls) the purpose(s)
-of processing personal data.
- */
-export interface DataController extends LegalEntity {
-}
-
-
-/**
- * An entity that 'exports' data where exporting is considered a form of
-data transfer
- */
-export interface DataExporter extends LegalEntity {
-}
-
-
-/**
- * An entity that 'imports' data where importing is considered a form of
-data transfer
- */
-export interface DataImporter extends DpvRecipient {
-}
-
-
-/**
- * A ‘processor’ means a natural or legal person, public authority, agency
-or other body which processes data on behalf of the controller.
- */
-export interface DataProcessor extends DpvRecipient {
-}
-
-
-/**
- * An authority tasked with overseeing legal compliance regarding privacy
-and data protection laws.
- */
-export interface DataProtectionAuthority extends DpvAuthority {
-}
-
-
-/**
- * An entity within or authorised by an organisation to monitor internal
-compliance, inform and advise on data protection obligations and act as
-a contact point for data subjects and the supervisory authority.
- */
-export interface DataProtectionOfficer extends Representative {
-}
-
-
-/**
- * A 'sub-processor' is a processor engaged by another processor
- */
-export interface DataSubProcessor extends DataProcessor {
-}
-
-
-/**
- * The individual (or category of individuals) whose personal data is being
-processed
- */
-export interface DataSubject extends HumanSubject {
-}
-
-
-/**
- * An Agent is a dpv:Entity that is (a) acting on behalf of another Entity;
-and (b) is authorised to do so by that Entity
- */
-export interface DpvAgent extends DpvEntity {
-}
-
-
-/**
- * An authority with the power to create or enforce laws, or determine
-their compliance.
- */
-export interface DpvAuthority extends GovernmentalOrganisation {
-}
-
-
-/**
- * Humans that consume goods or services for direct use
- */
-export interface DpvConsumer extends HumanSubject {
-}
-
-
-/**
- * Humans that purchase goods or services
- */
-export interface DpvCustomer extends HumanSubject {
-}
-
-
-/**
- * A human or non-human 'thing' that constitutes as an entity
- */
-export interface DpvEntity extends DpvThing {
-}
-
-
-/**
- * A general term reflecting a company or a business or a group acting as a
-unit
- */
-export interface DpvOrganisation extends LegalEntity {
-}
-
-
-/**
- * Entities that receive data or technologies
- */
-export interface DpvRecipient extends LegalEntity {
-}
-
-
-/**
- * Humans that use service(s)
- */
-export interface DpvUser extends HumanSubject {
-}
-
-
-/**
- * An organisation focused on delivering formal or informal education,
-training, or research
- */
-export interface EducationalOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * Data subjects that are considered elderly (i.e. based on age)
- */
-export interface ElderlyDataSubject extends VulnerableDataSubject, HumanSubject {
-}
-
-
-/**
- * Humans that are considered elderly (i.e. based on age)
- */
-export interface ElderlyHuman extends VulnerableHuman, HumanSubject {
-}
-
-
-/**
- * An organisation that is an emergency service provider focused on
-delivering immediate medical care to patients in critical or
-life-threatening situations
- */
-export interface EmergencyHealthcareProvider extends EmergencyServiceProvider {
-}
-
-
-/**
- * An organisation tasked with providing emergency services such as by
-responding rapidly to urgent situations to protect lives, property, and
-the environment
- */
-export interface EmergencyServiceProvider extends DpvOrganisation {
-}
-
-
-/**
- * Humans that are employees
- */
-export interface Employee extends HumanSubject {
-}
-
-
-/**
- * An organisation that is an emergency service provider for fire
-prevention, firefighting, and rescue services
- */
-export interface FireDepartment extends EmergencyServiceProvider {
-}
-
-
-/**
- * An organisation that aims to achieve profit as its primary goal
- */
-export interface ForProfitOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * An organisation managed or part of government
- */
-export interface GovernmentalOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * Guardian(s) of data subjects such as children
- */
-export interface GuardianOfDataSubject extends GuardianOfHuman, HumanSubject {
-}
-
-
-/**
- * Guardian(s) of humans
- */
-export interface GuardianOfHuman extends HumanSubject {
-}
-
-
-/**
- * An organisation that delivers medical services, promotes health, and
-provides care for individuals and communities
- */
-export interface HealthcareOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * An organisation that provides comprehensive medical treatment, including
-emergency care, surgeries, and inpatient services
- */
-export interface Hospital extends DpvOrganisation {
-}
-
-
-/**
- * The individual (or category of individuals) that is the subject within
-some context such as personal data (dpv:DataSubject) or technology
-(tech:Subject)
- */
-export interface HumanSubject extends LegalEntity {
-}
-
-
-/**
- * Humans that are immigrants (for a jurisdiction)
- */
-export interface Immigrant extends HumanSubject {
-}
-
-
-/**
- * A consortium established and comprising on industry organisations
- */
-export interface IndustryConsortium extends DpvOrganisation {
-}
-
-
-/**
- * An organisation and its subordinate bodies governed by public
-international law, or any other body which is set up by, or on the basis
-of, an agreement between two or more countries
- */
-export interface InternationalOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * Humans that apply for jobs or employments
- */
-export interface JobApplicant extends HumanSubject {
-}
-
-
-/**
- * A group of Data Controllers that jointly determine the purposes and
-means of processing
- */
-export interface JointDataControllers extends DataController {
-}
-
-
-/**
- * An organisation involved in interpreting and applying the law, resolving
-disputes, and administering justice as part of the judicial system
- */
-export interface JudicialOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * An organisation that is an agency responsible for enforcing laws,
-maintaining public order, and ensuring public safety
- */
-export interface LawEnforcementOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * A Legal Agent is a Legal Entity that is authorised to act on behalf of
-another entity
- */
-export interface LegalAgent extends DpvAgent, LegalEntity {
-}
-
-
-/**
- * A human or non-human 'thing' that constitutes as an entity and which is
-recognised and defined in law
- */
-export interface LegalEntity extends DpvEntity {
-}
-
-
-/**
- * Humans that are members of a group, organisation, or other collectives
- */
-export interface Member extends HumanSubject {
-}
-
-
-/**
- * Data subjects that are considered mentally vulnerable
- */
-export interface MentallyVulnerableDataSubject extends MentallyVulnerableHuman, HumanSubject, VulnerableDataSubject {
-}
-
-
-/**
- * Humans that are considered mentally vulnerable within the context
- */
-export interface MentallyVulnerableHuman extends VulnerableHuman, HumanSubject {
-}
-
-
-/**
- * An authority tasked with overseeing legal compliance for a nation
- */
-export interface NationalAuthority extends DpvAuthority {
-}
-
-
-/**
- * A human
- */
-export interface NaturalPerson extends DpvEntity {
-}
-
-
-/**
- * Humans that are not citizens (for a jurisdiction)
- */
-export interface NonCitizen extends HumanSubject {
-}
-
-
-/**
- * An organisation not part of or independent from the government
- */
-export interface NonGovernmentalOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * An organisation that does not aim to achieve profit as its primary goal
- */
-export interface NonProfitOrganisation extends DpvOrganisation {
-}
-
-
-/**
- * Entity within an organisation that does not constitute as a separate
-legal entity
- */
-export interface OrganisationalUnit extends DpvEntity {
-}
-
-
-/**
- * A legal entity that has one or more subsidiary entities operating under
-it
- */
-export interface ParentLegalEntity extends DpvOrganisation {
-}
-
-
-/**
- * Parent(s) of data subjects such as children
- */
-export interface ParentOfDataSubject extends ParentOfHuman, HumanSubject {
-}
-
-
-/**
- * Parent(s) of humans
- */
-export interface ParentOfHuman extends HumanSubject {
-}
-
-
-/**
- * Humans that participate in some context such as volunteers in a function
- */
-export interface Participant extends HumanSubject {
-}
-
-
-/**
- * Humans that receive medical attention, treatment, care, advice, or other
-health related services
- */
-export interface Patient extends HumanSubject {
-}
-
-
-/**
- * An organisation owned and operated by private individuals or companies
- */
-export interface PrivateSectorBody extends LegalEntity {
-}
-
-
-/**
- * A publicly available list of entities e.g. to indicate which entities
-perform a certain activity within a certain location or jurisdiction
- */
-export interface PublicRegisterOfEntities extends DpvThing {
-}
-
-
-/**
- * A government-controlled organisation that provides services or goods to
-the public
- */
-export interface PublicSectorBody extends LegalEntity {
-}
-
-
-/**
- * An authority tasked with overseeing legal compliance for a region
- */
-export interface RegionalAuthority extends DpvAuthority {
-}
-
-
-/**
- * An organisations that supports the practice, promotion, and management
-of religious activities and beliefs
- */
-export interface ReligiousAssociations extends DpvOrganisation {
-}
-
-
-/**
- * A representative of a legal entity
- */
-export interface Representative extends LegalEntity {
-}
-
-
-/**
- * An organisation that is characterised as a Small or Medium-sized
-Enterprise based on limited staff and revenue
- */
-export interface SMEOrganisation extends LegalEntity {
-}
-
-
-/**
- * The entity that consumes or receives the service
- */
-export interface ServiceConsumer extends LegalEntity {
-}
-
-
-/**
- * The entity that provides a service
- */
-export interface ServiceProvider extends LegalEntity {
-}
-
-
-/**
- * An organisation that is newly established and is nascent in terms of
-available resources
- */
-export interface StartupOrganisation extends LegalEntity {
-}
-
-
-/**
- * Humans that are students
- */
-export interface Student extends HumanSubject {
-}
-
-
-/**
- * Humans that subscribe to service(s)
- */
-export interface Subscriber extends HumanSubject {
-}
-
-
-/**
- * A legal entity that operates as a subsidiary of another legal entity
- */
-export interface SubsidiaryLegalEntity extends DpvOrganisation {
-}
-
-
-/**
- * An authority tasked with overseeing legal compliance for a
-supra-national union e.g. EU
- */
-export interface SupraNationalAuthority extends DpvAuthority {
-}
-
-
-/**
- * A ‘third party’ means any natural or legal person other than - the
-entities directly involved or operating under those directly involved in
-a process
- */
-export interface ThirdParty extends LegalEntity {
-}
-
-
-/**
- * Humans that are tourists i.e. not citizens and not immigrants
- */
-export interface Tourist extends HumanSubject {
-}
-
-
-/**
- * Humans that are temporary visitors
- */
-export interface Visitor extends HumanSubject {
-}
-
-
-/**
- * Humans which should be considered 'vulnerable' and therefore would
-require additional measures and safeguards
- */
-export interface VulnerableDataSubject extends VulnerableHuman, HumanSubject {
-}
-
-
-/**
- * Human(s) which should be considered 'vulnerable' within the context
- */
-export interface VulnerableHuman extends HumanSubject {
-}
-
-
-/**
- * Procedures related to governance of AI, including its procurement,
-development, deployment, and assessments
- */
-export interface AIGovernance extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Providing skills, knowledge, and understanding to enable reading,
-writing, analysing, reasoning, and communicating regarding AI
- */
-export interface AILiteracy extends DigitalLiteracy, OrganisationalMeasure {
-}
-
-
-/**
- * A notice providing information regarding the particulars of an AI system
-such as its intended purpose and proper use
- */
-export interface AINotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Acceptable Use Policy (AUP) refers to conditions, contexts, or uses
-which are considered acceptable with the implication that those not
-covered by such a policy are to be considered unacceptable
- */
-export interface AcceptableUsePolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * Methods which restrict access to a place or resource
- */
-export interface AccessControlMethod extends TechnicalMeasure {
-}
-
-
-/**
- * Monitoring of activities including assessing whether they have been
-successfully initiated and completed
- */
-export interface ActivityMonitoring extends TechnicalMeasure {
-}
-
-
-/**
- * Anonymisation is the process by which data is irreversibly altered in
-such a way that a data subject can no longer be identified directly or
-indirectly, either by the entity holding the data alone or in
-collaboration with other entities and information sources
- */
-export interface Anonymisation extends Deidentification, TechnicalMeasure {
-}
-
-
-/**
- * Personal Data that has been (fully and completely) anonymised so that it
-is no longer considered Personal Data
- */
-export interface AnonymisedData extends NonPersonalData {
-}
-
-
-/**
- * A procedure or process for determining and managing approvals for
-activities as part of governance
- */
-export interface ApprovalProcedure extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * The document, plan, or process for assessment or determination towards a
-purpose e.g. assessment of legality or impact assessments
- */
-export interface Assessment extends OrganisationalMeasure {
-}
-
-
-/**
- * Procedures related to management of assets
- */
-export interface AssetManagementProcedures extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Use of public-key cryptography or asymmetric cryptography involving a
-public and private pair of keys
- */
-export interface AsymmetricCryptography extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of asymmetric cryptography to encrypt data
- */
-export interface AsymmetricEncryption extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * An audit is a systematic examination or evaluation of records,
-processes, or systems towards a specific objective such as to assess
-accuracy, compliance, effectiveness, or performance
- */
-export interface Audit extends OrganisationalMeasure {
-}
-
-
-/**
- * Use of Attribute Based Credentials (ABC) to perform and manage
-authentication
- */
-export interface AuthenticationABC extends CryptographicAuthentication, TechnicalMeasure {
-}
-
-
-/**
- * Use of Privacy-enhancing Attribute Based Credentials (ABC) to perform
-and manage authentication
- */
-export interface AuthenticationPABC extends CryptographicAuthentication, TechnicalMeasure {
-}
-
-
-/**
- * Protocols involving validation of identity i.e. authentication of a
-person or information
- */
-export interface AuthenticationProtocols extends TechnicalMeasure {
-}
-
-
-/**
- * Procedures for determining authorisation through permission or authority
- */
-export interface AuthorisationProcedure extends SecurityProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Protocols involving authorisation of roles or profiles to determine
-permission, rights, or privileges
- */
-export interface AuthorisationProtocols extends TechnicalMeasure {
-}
-
-
-/**
- * Procedure where the background of an entity is assessed to identity
-vulnerabilities and threats due to their current or intended role
- */
-export interface BackgroundChecks extends SecurityProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Use of biometric data for authentication
- */
-export interface BiometricAuthentication extends AuthenticationProtocols, TechnicalMeasure {
-}
-
-
-/**
- * Certification mechanisms, seals, and marks for the purpose of
-demonstrating compliance
- */
-export interface Certification extends CertificationSeal, OrganisationalMeasure {
-}
-
-
-/**
- * Certifications, seals, and marks indicating compliance to regulations or
-practices
- */
-export interface CertificationSeal extends OrganisationalMeasure {
-}
-
-
-/**
- * A set of rules or procedures outlining the norms and practices for
-conducting activities
- */
-export interface CodeOfConduct extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Data that has been obtained by collecting it from a source
- */
-export interface CollectedData extends DpvData {
-}
-
-
-/**
- * Personal Data that has been collected from another source such as the
-Data Subject
- */
-export interface CollectedPersonalData extends CollectedData, PersonalData {
-}
-
-
-/**
- * Data that is considered confidential due to business/trade secrets,
-confidentiality agreements, or company secrets
- */
-export interface CommerciallyConfidentialData extends ConfidentialData {
-}
-
-
-/**
- * Assessment regarding compliance (e.g. internal policy, regulations)
- */
-export interface ComplianceAssessment extends Assessment, OrganisationalMeasure {
-}
-
-
-/**
- * Monitoring of compliance (e.g. internal policy, regulations)
- */
-export interface ComplianceMonitoring extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Data deemed confidential
- */
-export interface ConfidentialData extends DpvData {
-}
-
-
-/**
- * Assessment regarding conformance with standards or norms or guidelines
-or similar instruments
- */
-export interface ConformanceAssessment extends Assessment, OrganisationalMeasure {
-}
-
-
-/**
- * Methods to obtain, provide, modify, and withdraw consent along with
-maintaining a record of consent, retrieving records, and processing
-changes in consent states
- */
-export interface ConsentManagement extends PermissionManagement, OrganisationalMeasure {
-}
-
-
-/**
- * A record of consent or consent related activities that is provided to
-another entity
- */
-export interface ConsentReceipt extends ConsentRecord, OrganisationalMeasure {
-}
-
-
-/**
- * A Record of Consent or Consent related activities
- */
-export interface ConsentRecord extends DataProcessingRecord, OrganisationalMeasure {
-}
-
-
-/**
- * Consultation is a process of receiving feedback, advice, or opinion from
-an external agency
- */
-export interface Consultation extends OrganisationalMeasure {
-}
-
-
-/**
- * Consultation with an authority or authoritative entity
- */
-export interface ConsultationWithAuthority extends Consultation, OrganisationalMeasure {
-}
-
-
-/**
- * Consultation with Data Protection Officer(s)
- */
-export interface ConsultationWithDPO extends Consultation, OrganisationalMeasure {
-}
-
-
-/**
- * Consultation with data subject(s) or their representative(s)
- */
-export interface ConsultationWithDataSubject extends Consultation, OrganisationalMeasure {
-}
-
-
-/**
- * Consultation with representative of data subject(s)
- */
-export interface ConsultationWithDataSubjectRepresentative extends ConsultationWithDataSubject, OrganisationalMeasure {
-}
-
-
-/**
- * Data that can be considered as being fully anonymised within the context
-but in actuality is not fully anonymised and is still personal data as
-it can be de-anonymised outside that context
- */
-export interface ContextuallyAnonymisedData extends PseudonymisedData {
-}
-
-
-/**
- * Management of credentials and their use in authorisations
- */
-export interface CredentialManagement extends AuthorisationProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Use of cryptography for authentication
- */
-export interface CryptographicAuthentication extends AuthenticationProtocols, TechnicalMeasure, CryptographicMethods {
-}
-
-
-/**
- * Management of cryptographic keys, including their generation, storage,
-assessment, and safekeeping
- */
-export interface CryptographicKeyManagement extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods to perform tasks
- */
-export interface CryptographicMethods extends TechnicalMeasure {
-}
-
-
-/**
- * Training methods related to cybersecurity
- */
-export interface CybersecurityTraining extends StaffTraining, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with assessment of availability of data for specific
-task(s)
- */
-export interface DataAvailabilityAssessment extends DataGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Protocols or plans for backing up of data
- */
-export interface DataBackupProtocols extends TechnicalMeasure {
-}
-
-
-/**
- * Notification of information about data breach(es) i.e. unauthorised
-transfer, access, use, or modification of data
- */
-export interface DataBreachNotification extends SecurityIncidentNotification, OrganisationalMeasure {
-}
-
-
-/**
- * Record of a data breach incident
- */
-export interface DataBreachRecord extends RecordsOfActivities, OrganisationalMeasure {
-}
-
-
-/**
- * Policy regarding deletion of data
- */
-export interface DataDeletionPolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Policy regarding erasure of data
- */
-export interface DataErasurePolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with topics typically considered to be part of 'Data
-Governance'
- */
-export interface DataGovernance extends OrganisationGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with assessment of data interoperability
- */
-export interface DataInteroperabilityAssessment extends Assessment, OrganisationalMeasure, DataInteroperabilityManagement {
-}
-
-
-/**
- * Measures associated with improvement of data interoperability
- */
-export interface DataInteroperabilityImprovement extends DataInteroperabilityManagement, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with management of data interoperability
- */
-export interface DataInteroperabilityManagement extends DataGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with management of data inventory or a data asset
-list
- */
-export interface DataInventoryManagement extends DataGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Policy specifying jurisdictional requirements for data processing
- */
-export interface DataJurisdictionPolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Providing skills, knowledge, and understanding to enable reading,
-writing, analysing, reasoning, and communicating regarding data
- */
-export interface DataLiteracy extends DigitalLiteracy, OrganisationalMeasure {
-}
-
-
-/**
- * Policy regarding data processing activities
- */
-export interface DataProcessingPolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * Record of data processing, whether ex-ante or ex-post
- */
-export interface DataProcessingRecord extends RecordsOfActivities, OrganisationalMeasure {
-}
-
-
-/**
- * Training intended to increase knowledge regarding data protection
- */
-export interface DataProtectionTraining extends StaffTraining, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with assessment of data quality
- */
-export interface DataQualityAssessment extends Assessment, OrganisationalMeasure, DataQualityManagement {
-}
-
-
-/**
- * Measures associated with improvement of data quality
- */
-export interface DataQualityImprovement extends DataQualityManagement, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with management of data quality
- */
-export interface DataQualityManagement extends DataGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Removal of sensitive information from a data or document
- */
-export interface DataRedaction extends DataSanitisationTechnique, TechnicalMeasure {
-}
-
-
-/**
- * Policy regarding restoration of data
- */
-export interface DataRestorationPolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Policy regarding reuse of data i.e. using data for purposes other than
-its initial purpose
- */
-export interface DataReusePolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Cleaning or any removal or re-organisation of elements in data based on
-selective criteria
- */
-export interface DataSanitisationTechnique extends TechnicalMeasure {
-}
-
-
-/**
- * Measures associated with management of data security
- */
-export interface DataSecurityManagement extends DataGovernance, OrganisationalMeasure, SecurityProcedure {
-}
-
-
-/**
- * Policy regarding storage of data, including the manner, duration,
-location, and conditions for storage
- */
-export interface DataStoragePolicy extends DataProcessingPolicy, OrganisationalMeasure {
-}
-
-
-/**
- * Methods to provide, implement, and exercise data subjects' rights
- */
-export interface DataSubjectRightsManagement extends RightsManagement, OrganisationalMeasure {
-}
-
-
-/**
- * Measures associated with assessment of suitability of data for specific
-task(s)
- */
-export interface DataSuitabilityAssessment extends DataQualityAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * Record of data transfer activities
- */
-export interface DataTransferRecord extends DataProcessingRecord, OrganisationalMeasure {
-}
-
-
-/**
- * Removal of identity or information to reduce identifiability
- */
-export interface Deidentification extends DataSanitisationTechnique, TechnicalMeasure {
-}
-
-
-/**
- * Data that has been obtained through derivations of other data
- */
-export interface DerivedData extends DpvData {
-}
-
-
-/**
- * Personal Data that is obtained or derived from other data
- */
-export interface DerivedPersonalData extends DerivedData, PersonalData {
-}
-
-
-/**
- * A set of rules or guidelines outlining criterias for design
- */
-export interface DesignStandard extends Standard, OrganisationalMeasure {
-}
-
-
-/**
- * Pseudonymisation achieved through a deterministic function
- */
-export interface DeterministicPseudonymisation extends Pseudonymisation, TechnicalMeasure {
-}
-
-
-/**
- * Utilisation of differential privacy where information is shared as
-patterns or groups to withhold individual elements
- */
-export interface DifferentialPrivacy extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Providing skills, knowledge, and understanding to enable reading,
-writing, analysing, reasoning, and communicating regarding digital
-technologies and their implications
- */
-export interface DigitalLiteracy extends OrganisationalMeasure {
-}
-
-
-/**
- * Management of access, use, and other operations associated with digital
-content
- */
-export interface DigitalRightsManagement extends TechnicalMeasure {
-}
-
-
-/**
- * Expression and authentication of identity through digital information
-containing cryptographic signatures
- */
-export interface DigitalSignatures extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Procedures related to management of disasters and recovery
- */
-export interface DisasterRecoveryProcedures extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Security implementations provided using or over a distributed system
- */
-export interface DistributedSystemSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Use of randomised pseudonymisation where the same elements are assigned
-different values in the same document or database
- */
-export interface DocumentRandomisedPseudonymisation extends Pseudonymisation, TechnicalMeasure {
-}
-
-
-/**
- * Security measures enacted over documents to protect against tampering or
-restrict access
- */
-export interface DocumentSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * A broad concept representing 'data' or 'information'
- */
-export interface DpvData extends DpvThing {
-}
-
-
-/**
- * Training methods that are intended to provide education on topic(s)
- */
-export interface EducationalTraining extends StaffTraining, OrganisationalMeasure {
-}
-
-
-/**
- * Procedures intended to determine effectiveness of other measures
- */
-export interface EffectivenessDeterminationProcedures extends Assessment, OrganisationalMeasure {
-}
-
-
-/**
- * Technical measures consisting of encryption
- */
-export interface Encryption extends TechnicalMeasure {
-}
-
-
-/**
- * Encryption of data when being stored (persistent encryption)
- */
-export interface EncryptionAtRest extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * Encryption of data in transit e.g. when being transferred from one
-location to another, including sharing
- */
-export interface EncryptionInTransfer extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * Encryption of data when it is being used
- */
-export interface EncryptionInUse extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * Encrypted communications where data is encrypted by the sender and
-decrypted by the intended receiver to prevent access to any third party
- */
-export interface EndToEndEncryption extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * Physical protection against environmental threats such as fire, floods,
-storms, etc.
- */
-export interface EnvironmentalProtection extends PhysicalMeasure {
-}
-
-
-/**
- * Use of fail-safe measures and protocols
- */
-export interface FailSafeProtocols extends TechnicalMeasure {
-}
-
-
-/**
- * Security implemented over a file system
- */
-export interface FileSystemSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Use of randomised pseudonymisation where the same elements are assigned
-different values each time they occur
- */
-export interface FullyRandomisedPseudonymisation extends Pseudonymisation, TechnicalMeasure {
-}
-
-
-/**
- * Data that is generated or brought into existence without relation to
-existing data i.e. it is not derived or inferred from other data
- */
-export interface GeneratedData extends DpvData {
-}
-
-
-/**
- * Personal Data that is generated or brought into existence without
-relation to existing data i.e. it is not derived or inferred from other
-data
- */
-export interface GeneratedPersonalData extends PersonalData {
-}
-
-
-/**
- * Procedures related to governance (e.g. organisation, unit, team,
-process, system)
- */
-export interface GovernanceProcedures extends OrganisationalMeasure {
-}
-
-
-/**
- * Practices that specify how activities must be conducted
- */
-export interface Guideline extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Guidelines or Principles regarding processing and operational measures
- */
-export interface GuidelinesPrinciple extends OrganisationalMeasure {
-}
-
-
-/**
- * Security protocols implemented at or within hardware
- */
-export interface HardwareSecurityProtocols extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Use of hash functions to map information or to retrieve a prior
-categorisation
- */
-export interface HashFunctions extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of HMAC where message authentication code (MAC) utilise a
-cryptographic hash function and a secret cryptographic key
- */
-export interface HashMessageAuthenticationCode extends CryptographicAuthentication, TechnicalMeasure {
-}
-
-
-/**
- * Use of Homomorphic encryption that permits computations on encrypted
-data without decrypting it
- */
-export interface HomomorphicEncryption extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Procedures related to implementing and ensuring human oversight, which
-includes ability for humans to oversee, understand, control, and reverse
-processes, and to have sufficient monitoring capability to detect and
-address anomalies, dysfunctions, or unexpected performance
- */
-export interface HumanOversight extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Management of Intellectual Property Rights with a view to identify and
-safeguard and enforce them
- */
-export interface IPRManagement extends RightsManagement, OrganisationalMeasure {
-}
-
-
-/**
- * Personal Data that explicitly and by itself is sufficient to identify a
-person
- */
-export interface IdentifyingPersonalData extends PersonalData {
-}
-
-
-/**
- * Management of identity and identity-based processes
- */
-export interface IdentityManagementMethod extends AuthorisationProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Procedures related to management of incidents
- */
-export interface IncidentManagementProcedures extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Procedures related to management of incident reporting
- */
-export interface IncidentReportingCommunication extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Data that is known to be incorrect or inconsistent with some
-requirements
- */
-export interface IncorrectData extends DpvData {
-}
-
-
-/**
- * Data that has been obtained through inferences of other data
- */
-export interface InferredData extends DerivedData {
-}
-
-
-/**
- * Personal Data that is obtained through inference from other data
- */
-export interface InferredPersonalData extends DerivedPersonalData, InferredData {
-}
-
-
-/**
- * An audit that systematically examines the existence and use of
-information along with its associated resources (e.g. where it is
-stored) and flows (e.g. where it originates and with whom it is being
-shared)
- */
-export interface InformationAudit extends Audit, OrganisationalMeasure {
-}
-
-
-/**
- * Use of measures to control information flows
- */
-export interface InformationFlowControl extends TechnicalMeasure {
-}
-
-
-/**
- * Policy regarding security of information
- */
-export interface InformationSecurityPolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * Data protected by Intellectual Property rights and regulations
- */
-export interface IntellectualPropertyData extends ConfidentialData {
-}
-
-
-/**
- * Use of measures to detect intrusions and other unauthorised attempts to
-gain access to a system
- */
-export interface IntrusionDetectionSystem extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Assessment regarding legal compliance
- */
-export interface LegalComplianceAssessment extends ComplianceAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * An audit that systematically examines the state of legal compliance by
-reviewing policies and procedures related to obligations and compliance
-requirements for specific laws and regulations
- */
-export interface LegalComplianceAudit extends Audit, OrganisationalMeasure {
-}
-
-
-/**
- * Indicates an assessment regarding the use of legitimate interest as a
-lawful basis by the data controller
- */
-export interface LegitimateInterestAssessment extends Assessment, OrganisationalMeasure {
-}
-
-
-/**
- * Policy for logging of information
- */
-export interface LoggingPolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * A management standard is a standard that establishes norms or
-requirements regarding the management operations and processes e.g. in
-an organisation
- */
-export interface ManagementStandard extends Standard, OrganisationalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods to authenticate messages
- */
-export interface MessageAuthenticationCodes extends CryptographicAuthentication, TechnicalMeasure {
-}
-
-
-/**
- * Measures associated with management of metadata
- */
-export interface MetadataManagement extends DataGovernance, OrganisationalMeasure {
-}
-
-
-/**
- * Security implemented over a mobile platform
- */
-export interface MobilePlatformSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Policy for monitoring (e.g. progress, performance)
- */
-export interface MonitoringPolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * A simple pseudonymisation method where identifiers are substituted by a
-number chosen by a monotonic counter
- */
-export interface MonotonicCounterPseudonymisation extends Pseudonymisation, TechnicalMeasure {
-}
-
-
-/**
- * An authentication system that uses two or more methods to authenticate
- */
-export interface MultiFactorAuthentication extends AuthenticationProtocols, TechnicalMeasure {
-}
-
-
-/**
- * Use of network routing using proxy
- */
-export interface NetworkProxyRouting extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Security implemented at or over networks protocols
- */
-export interface NetworkSecurityProtocols extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Data that is not Personal Data
- */
-export interface NonPersonalData extends DpvData {
-}
-
-
-/**
- * Notification represents the provision of a notice i.e. notifying
- */
-export interface Notification extends OrganisationalMeasure {
-}
-
-
-/**
- * Data that has been obtained through observations of a source
- */
-export interface ObservedData extends CollectedData {
-}
-
-
-/**
- * Personal Data that has been collected through observation of the Data
-Subject(s)
- */
-export interface ObservedPersonalData extends CollectedPersonalData, ObservedData {
-}
-
-
-/**
- * Security implemented at or through operating systems
- */
-export interface OperatingSystemSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Use of passwords to perform authentication
- */
-export interface PasswordAuthentication extends AuthenticationProtocols, TechnicalMeasure {
-}
-
-
-/**
- * Use of penetration testing to identify weaknesses and vulnerabilities
-through simulations
- */
-export interface PenetrationTestingMethods extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Methods to obtain, provide, modify, and withdraw permissions along with
-maintaining a record of permissions, retrieving records, and processing
-changes in permission states
- */
-export interface PermissionManagement extends RightsManagement, OrganisationalMeasure {
-}
-
-
-/**
- * Data directly or indirectly associated or related to an individual
- */
-export interface PersonalData extends DpvData {
-}
-
-
-/**
- * An audit that systematically examines the existence and use of personal
-data along with its associated resources (e.g. where it is stored) and
-flows (e.g. where it originates and with whom it is being shared)
- */
-export interface PersonalDataAudit extends InformationAudit, OrganisationalMeasure {
-}
-
-
-/**
- * Access control applied for physical access e.g. premises or equipment
- */
-export interface PhysicalAccessControlMethod extends AccessControlMethod, PhysicalMeasure {
-}
-
-
-/**
- * Physical implementation of authentication e.g. by matching the person to
-their ID card
- */
-export interface PhysicalAuthentication extends PhysicalMeasure {
-}
-
-
-/**
- * Physical implementation of authorisation e.g. by stamping a visitor pass
- */
-export interface PhysicalAuthorisation extends PhysicalMeasure {
-}
-
-
-/**
- * Physical protection for devices and equipment
- */
-export interface PhysicalDeviceSecurity extends PhysicalMeasure {
-}
-
-
-/**
- * Physical protection against interception e.g. by posting a guard
- */
-export interface PhysicalInterceptionProtection extends PhysicalMeasure {
-}
-
-
-/**
- * Physical protection against interruptions e.g. electrical supply
-interruption
- */
-export interface PhysicalInterruptionProtection extends PhysicalMeasure {
-}
-
-
-/**
- * Physical protection for networks and networking related infrastructure
-e.g. by isolating networking equipments
- */
-export interface PhysicalNetworkSecurity extends PhysicalMeasure {
-}
-
-
-/**
- * Physical protection for storage of information or equipment e.g. secure
-storage for files
- */
-export interface PhysicalSecureStorage extends PhysicalMeasure {
-}
-
-
-/**
- * Physically securing the supply of resources
- */
-export interface PhysicalSupplySecurity extends PhysicalMeasure {
-}
-
-
-/**
- * Physically monitoring areas via surveillance
- */
-export interface PhysicalSurveillance extends PhysicalMeasure {
-}
-
-
-/**
- * A guidance document outlining any of: procedures, plans, principles,
-decisions, intent, or protocols.
- */
-export interface Policy extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Use of algorithms that are intended to be secure against cryptanalytic
-attack by a quantum computer
- */
-export interface PostQuantumCryptography extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * A representation of values or norms that must be taken into
-consideration when conducting activities
- */
-export interface Principle extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Practices regarding setting the default configurations of information
-and services to implement data protection and privacy (synonymous with
-Data Protection by Default)
- */
-export interface PrivacyByDefault extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Practices regarding incorporating data protection and privacy in the
-design of information and services (synonymous with Data Protection by
-Design)
- */
-export interface PrivacyByDesign extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Use of protocols designed with the intention of provided additional
-guarantees regarding privacy
- */
-export interface PrivacyPreservingProtocol extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods to retrieve a record from a system without
-revealing which record is retrieved
- */
-export interface PrivateInformationRetrieval extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Data protected by professional secrecy or confidentiality, including but
-not limited to data covered by professional privilege or secrecy
-obligations such as that covered by lawyer or doctor-patient
-confidentiality and other forms of recognised professional
-confidentiality obligations
- */
-export interface ProfessionalConfidentialData extends ConfidentialData {
-}
-
-
-/**
- * Training methods that are intended to provide professional knowledge and
-expertise
- */
-export interface ProfessionalTraining extends StaffTraining, OrganisationalMeasure {
-}
-
-
-/**
- * Data that has been provided by an entity
- */
-export interface ProvidedData extends CollectedData {
-}
-
-
-/**
- * Personal Data that has been provided by an entity such as the Data
-Subject
- */
-export interface ProvidedPersonalData extends CollectedPersonalData, ProvidedData {
-}
-
-
-/**
- * Pseudonymisation means the processing of personal data in such a manner
-that the personal data can no longer be attributed to a specific data
-subject without the use of additional information, provided that such
-additional information is kept separately and is subject to technical
-and organisational measures to ensure that the personal data are not
-attributed to an identified or identifiable natural person;
- */
-export interface Pseudonymisation extends Deidentification, TechnicalMeasure {
-}
-
-
-/**
- * Pseudonymised Data is data that has gone a partial or incomplete
-anonymisation process by replacing the identifiable information with
-artificial identifiers or 'pseudonyms', and is still considered as
-personal data
- */
-export interface PseudonymisedData extends PersonalData {
-}
-
-
-/**
- * Cryptographic methods that utilise quantum mechanical properties to
-perform cryptographic tasks
- */
-export interface QuantumCryptography extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * A pseudonymisation method where identifiers are substituted by a number
-chosen by a Random Number Generator (RNG)
- */
-export interface RNGPseudonymisation extends Pseudonymisation, TechnicalMeasure {
-}
-
-
-/**
- * A Record of Processing Activities (ROPA) is a document detailing
-processing activities
- */
-export interface ROPA extends DataProcessingRecord, OrganisationalMeasure {
-}
-
-
-/**
- * Policy regarding repetition or renewal of existing certification(s)
- */
-export interface RecertificationPolicy extends Policy, OrganisationalMeasure {
-}
-
-
-/**
- * Records of activities within some context such as maintenance tasks or
-governance functions
- */
-export interface RecordsOfActivities extends OrganisationalMeasure {
-}
-
-
-/**
- * Mechanism used by regulators and businesses for gauging the
-compatibility of regulations and innovative products, particularly in
-the context of digitalisation, in a controlled real-world environment
-with appropriate safeguards in place
- */
-export interface RegulatorySandbox extends Safeguard, OrganisationalMeasure {
-}
-
-
-/**
- * Procedures to review impact assessments in terms of continued validity,
-adequacy for intended purposes, and conformance of processes with
-findings
- */
-export interface ReviewImpactAssessment extends ImpactAssessment, OrganisationalMeasure, ReviewProcedure {
-}
-
-
-/**
- * A procedure or process that reviews the correctness and validity of
-other procedures and policies e.g. to ensure continued validity,
-adequacy for intended purposes, and conformance of processes with
-findings
- */
-export interface ReviewProcedure extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Methods associated with rights management where 'rights' refer to
-controlling who can do what with a resource
- */
-export interface RightsManagement extends OrganisationalMeasure {
-}
-
-
-/**
- * A safeguard is a precautionary measure for the protection against or
-mitigation of negative effects
- */
-export interface Safeguard extends OrganisationalMeasure {
-}
-
-
-/**
- * Represents a safeguard used for data transfer. Can include technical or
-organisational measures.
- */
-export interface SafeguardForDataTransfer extends Safeguard, OrganisationalMeasure {
-}
-
-
-/**
- * A seal or a mark indicating proof of certification to some certification
-or standard
- */
-export interface Seal extends CertificationSeal, OrganisationalMeasure {
-}
-
-
-/**
- * Use of secret sharing schemes where the secret can only be reconstructed
-through combination of sufficient number of individuals
- */
-export interface SecretSharingSchemes extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods for entities to jointly compute functions
-without revealing inputs
- */
-export interface SecureMultiPartyComputation extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * A physical or virtual environment supported by organisational means that
-integrates security and compliance requirements and allows supervising
-data processing actions
- */
-export interface SecureProcessingEnvironment extends SecurityProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * An audit that systematically examines the existence and use of security
-risks and measures within information systems, networks, and security
-policies to identify vulnerabilities, risks, and gaps
- */
-export interface SecurityAudit extends Audit, OrganisationalMeasure {
-}
-
-
-/**
- * Notification of information about security incident(s)
- */
-export interface SecurityIncidentNotification extends Notification, OrganisationalMeasure {
-}
-
-
-/**
- * Record of a security incident
- */
-export interface SecurityIncidentRecord extends RecordsOfActivities, OrganisationalMeasure {
-}
-
-
-/**
- * Training intended to increase knowledge regarding security
- */
-export interface SecurityKnowledgeTraining extends StaffTraining, OrganisationalMeasure {
-}
-
-
-/**
- * Methods that relate to creating and providing security
- */
-export interface SecurityMethod extends TechnicalMeasure {
-}
-
-
-/**
- * Procedures associated with assessing, implementing, and evaluating
-security
- */
-export interface SecurityProcedure extends OrganisationalMeasure {
-}
-
-
-/**
- * Procedures related to security roles
- */
-export interface SecurityRoleProcedures extends SecurityProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Data deemed sensitive
- */
-export interface SensitiveData extends DpvData {
-}
-
-
-/**
- * Non-personal data deemed sensitive
- */
-export interface SensitiveNonPersonalData extends SensitiveData {
-}
-
-
-/**
- * Personal data that is considered 'sensitive' in terms of privacy and/or
-impact, and therefore requires additional considerations and/or
-protection
- */
-export interface SensitivePersonalData extends PersonalData, SensitiveData {
-}
-
-
-/**
- * Use of credentials or processes that enable using one set of credentials
-to authenticate multiple contexts.
- */
-export interface SingleSignOn extends AuthenticationProtocols, TechnicalMeasure {
-}
-
-
-/**
- * Sensitive Personal Data whose use requires specific additional legal
-permission or justification
- */
-export interface SpecialCategoryPersonalData extends SensitivePersonalData {
-}
-
-
-/**
- * Practices and policies regarding training of staff members
- */
-export interface StaffTraining extends OrganisationalMeasure {
-}
-
-
-/**
- * A set of requirements or norms that are agreed upon i.e. they are
-considered a 'standard'
- */
-export interface Standard extends GuidelinesPrinciple, OrganisationalMeasure {
-}
-
-
-/**
- * Purposes associated with activities undertaken to ensure or achieve
-conformance with standards
- */
-export interface StandardsConformance extends GovernanceProcedures, OrganisationalMeasure {
-}
-
-
-/**
- * Data protected through Statistical Confidentiality regulations and
-agreements
- */
-export interface StatisticallyConfidentialData extends ConfidentialData {
-}
-
-
-/**
- * Supporting entities, including individuals, with negotiating a contract
-and its terms and conditions
- */
-export interface SupportContractNegotiation extends SupportEntityDecisionMaking, OrganisationalMeasure {
-}
-
-
-/**
- * Supporting entities, including individuals, in making decisions
- */
-export interface SupportEntityDecisionMaking extends OrganisationalMeasure {
-}
-
-
-/**
- * Supporting individuals and entities in exchanging views e.g. regarding
-data processing purposes for their best interests
- */
-export interface SupportExchangeOfViews extends SupportEntityDecisionMaking, OrganisationalMeasure {
-}
-
-
-/**
- * Supporting individuals with making a decision regarding their informed
-consent
- */
-export interface SupportInformedConsentDecision extends SupportEntityDecisionMaking, OrganisationalMeasure {
-}
-
-
-/**
- * Use of cryptography where the same keys are utilised for encryption and
-decryption of information
- */
-export interface SymmetricCryptography extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of symmetric cryptography to encrypt data
- */
-export interface SymmetricEncryption extends Encryption, TechnicalMeasure {
-}
-
-
-/**
- * Synthetic data refers to artificially created data such that it is
-intended to resemble real data (personal or non-personal), but does not
-refer to any specific identified or identifiable individual, or to the
-real measure of an observable parameter in the case of non-personal data
- */
-export interface SyntheticData extends GeneratedData {
-}
-
-
-/**
- * A technical standard is a standard that establishes norms or
-requirements regarding technology or technical processes
- */
-export interface TechnicalStandard extends Standard, OrganisationalMeasure {
-}
-
-
-/**
- * Procedures related to security associated with Third Parties
- */
-export interface ThirdPartySecurityProcedures extends SecurityProcedure, OrganisationalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods to restrict access and execution to trusted
-parties and code
- */
-export interface TrustedComputing extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Use of cryptographic methods to restrict access and execution to trusted
-parties and code within a dedicated execution environment
- */
-export interface TrustedExecutionEnvironment extends CryptographicMethods, TechnicalMeasure {
-}
-
-
-/**
- * Data whose categorisation is not known e.g. whether it is personal or
-non-personal data
- */
-export interface UncategorisedData extends DpvData {
-}
-
-
-/**
- * Data that is without a predefined data model or is not organised in a
-pre-defined manner
- */
-export interface UnstructuredData extends DpvData {
-}
-
-
-/**
- * Data that has not been verified in terms of accuracy, inconsistency, or
-quality
- */
-export interface UnverifiedData extends DpvData {
-}
-
-
-/**
- * Management of usage, which is intended to be broader than access control
-and may cover trust, digital rights, or other relevant controls
- */
-export interface UsageControl extends AccessControlMethod, TechnicalMeasure {
-}
-
-
-/**
- * Use of synthetic data to preserve privacy, security, or other effects
-and side-effects
- */
-export interface UseSyntheticData extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Data that has been verified in terms of accuracy, consistency, or
-quality
- */
-export interface VerifiedData extends DpvData {
-}
-
-
-/**
- * Security implemented at or through virtualised environments
- */
-export interface VirtualisationSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Methods that assess or discover vulnerabilities in a system
- */
-export interface VulnerabilityTestingMethods extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Security implemented at or over web browsers
- */
-export interface WebBrowserSecurity extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Security implemented at or over web-based protocols
- */
-export interface WebSecurityProtocols extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Security implemented at or over wireless communication protocols
- */
-export interface WirelessSecurityProtocols extends SecurityMethod, TechnicalMeasure {
-}
-
-
-/**
- * Authentication using Zero-Knowledge proofs
- */
-export interface ZeroKnowledgeAuthentication extends AuthenticationProtocols, TechnicalMeasure, CryptographicMethods {
-}
-
-
-/**
- * Purposes associated with conducting or assisting with research conducted
-in an academic context e.g. within universities
- */
-export interface AcademicResearch extends ResearchAndDevelopment, Purpose {
-}
-
-
-/**
- * to access data
- */
-export interface Access extends Use, Processing {
-}
-
-
-/**
- * Account Management refers to purposes associated with account
-management, such as to create, provide, maintain, and manage accounts
- */
-export interface AccountManagement extends Purpose {
-}
-
-
-/**
- * to come into possession or control of the data
- */
-export interface Acquire extends Obtain, Processing {
-}
-
-
-/**
- * to modify the data, often rewritten into a new form for a new use
- */
-export interface Adapt extends Transform, Processing {
-}
-
-
-/**
- * Purposes associated with conducting advertising i.e. process or artefact
-used to call attention to a product, service, etc. through
-announcements, notices, or other forms of communication
- */
-export interface Advertising extends Marketing, Purpose {
-}
-
-
-/**
- * Purposes associated with verifying or authenticating age or age related
-information as a form of security
- */
-export interface AgeVerification extends Verification, Purpose {
-}
-
-
-/**
- * to aggregate data
- */
-export interface Aggregate extends Alter, Processing {
-}
-
-
-/**
- * The algorithmic logic applied or used
- */
-export interface AlgorithmicLogic extends ProcessingContext {
-}
-
-
-/**
- * to adjust the data to be in relation to another data
- */
-export interface Align extends Transform, Processing {
-}
-
-
-/**
- * to change the data without changing it into something else
- */
-export interface Alter extends Transform, Processing {
-}
-
-
-/**
- * to study or examine the data in detail
- */
-export interface Analyse extends Use, Processing {
-}
-
-
-/**
- * to irreversibly alter personal data in such a way that an unique data
-subject can no longer be identified directly or indirectly or in
-combination with other data
- */
-export interface Anonymise extends Transform, Processing {
-}
-
-
-/**
- * to assess data for some criteria
- */
-export interface Assess extends Use, Processing {
-}
-
-
-/**
- * Level of automation corresponding to Level 1 in ISO/IEC 22989:2022 where
-automation is limited to parts of the system or a specific part of the
-system in a manner that does not change the control of the human in
-using/driving the system
- */
-export interface AssistiveAutomation extends AutomationLevel {
-}
-
-
-/**
- * Processing that involves automated decision making
- */
-export interface AutomatedDecisionMaking extends DecisionMaking {
-}
-
-
-/**
- * Processing that involves automated scoring of individuals
- */
-export interface AutomatedScoringOfIndividuals extends ScoringOfIndividuals {
-}
-
-
-/**
- * Indication of degree or level of automation associated with specified
-context
- */
-export interface AutomationLevel extends ProcessingContext {
-}
-
-
-/**
- * Level of automation corresponding to Level 6 in ISO/IEC 22989:2022 where
-the automation in system is capable of modifying its operation domain or
-its goals without external intervention, control or oversight
- */
-export interface Autonomous extends AutomationLevel {
-}
-
-
-/**
- * Involvement where entity cannot challenge the process of specified
-context
- */
-export interface CannotChallengeProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot challenge input of specified context
- */
-export interface CannotChallengeProcessInput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot challenge the output of specified
-context
- */
-export interface CannotChallengeProcessOutput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot correct the process of specified context
- */
-export interface CannotCorrectProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot correct input of specified context
- */
-export interface CannotCorrectProcessInput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot correct the output of specified context
- */
-export interface CannotCorrectProcessOutput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot object to process of specified context
- */
-export interface CannotObjectToProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot opt-in to specified context
- */
-export interface CannotOptInToProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot opt-out from specified context
- */
-export interface CannotOptOutFromProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot reverse effects of specified context
- */
-export interface CannotReverseProcessEffects extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot reverse input of specified context
- */
-export interface CannotReverseProcessInput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot reverse output of specified context
- */
-export interface CannotReverseProcessOutput extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity cannot withdraw a previously given assent from
-specified context
- */
-export interface CannotWithdrawFromProcess extends EntityNonPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can challenge the process of specified context
- */
-export interface ChallengingProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can challenge input of specified context
- */
-export interface ChallengingProcessInput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can challenge the output of specified context
- */
-export interface ChallengingProcessOutput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * to gather data from someone
- */
-export interface Collect extends Obtain, Processing {
-}
-
-
-/**
- * Purposes associated with combating the causes and consequences of
-climate change, including reducing gas emissions and fighting
-emergencies such as floods or wildfires
- */
-export interface CombatClimateChange extends PublicBenefit, Purpose {
-}
-
-
-/**
- * to join or merge data
- */
-export interface Combine extends Transform, Processing {
-}
-
-
-/**
- * Purposes associated with processing activities performed in a commercial
-setting or with intention to commercialise
- */
-export interface CommercialPurpose extends Purpose {
-}
-
-
-/**
- * Purposes associated with conducting research in a commercial setting or
-with intention to commercialise e.g. in a company or sponsored by a
-company
- */
-export interface CommercialResearch extends CommercialPurpose, Purpose, ResearchAndDevelopment {
-}
-
-
-/**
- * Customer Care Communication refers to purposes associated with
-communicating with customers for assisting them, resolving issues,
-ensuring satisfaction, etc. in relation to services provided
- */
-export interface CommunicationForCustomerCare extends CommunicationManagement, Purpose, CustomerCare {
-}
-
-
-/**
- * Communication Management refers to purposes associated with providing or
-managing communication activities e.g. to send an email for notifying
-some information
- */
-export interface CommunicationManagement extends Purpose {
-}
-
-
-/**
- * Level of automation corresponding to Level 3 in ISO/IEC 22989:2022 where
-the automation is sufficient to perform most tasks of the system with
-the human present to take over where necessary
- */
-export interface ConditionalAutomation extends AutomationLevel {
-}
-
-
-/**
- * to consult or query data
- */
-export interface Consult extends Use, Processing {
-}
-
-
-/**
- * to produce an exact reproduction of the data
- */
-export interface Copy extends Processing {
-}
-
-
-/**
- * Involvement where entity can correct the process of specified context
- */
-export interface CorrectingProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can correct input of specified context
- */
-export interface CorrectingProcessInput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can correct the output of specified context
- */
-export interface CorrectingProcessOutput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Purposes associated with detection, prevention, and mitigation of
-mitigate money laundering
- */
-export interface CounterMoneyLaundering extends FraudPreventionAndDetection, Purpose {
-}
-
-
-/**
- * Purposes associated with activities that detect, prevent, mitigate, or
-otherwise perform activities to combat or eliminate terrorism (also
-referred to as anti-terrorism)
- */
-export interface Counterterrorism extends PublicBenefit, Purpose {
-}
-
-
-/**
- * to move data from one jurisdiction (border) to another
- */
-export interface CrossBorderTransfer extends Transfer, Processing {
-}
-
-
-/**
- * Customer Care refers to purposes associated with purposes for providing
-assistance, resolving issues, ensuring satisfaction, etc. in relation to
-services provided
- */
-export interface CustomerCare extends CustomerManagement, Purpose {
-}
-
-
-/**
- * Customer Claims Management refers to purposes associated with managing
-claims, including repayment of monies owed
- */
-export interface CustomerClaimsManagement extends CustomerManagement, Purpose {
-}
-
-
-/**
- * Customer Management refers to purposes associated with managing
-activities related with past, current, and future customers
- */
-export interface CustomerManagement extends Purpose {
-}
-
-
-/**
- * Customer Order Management refers to purposes associated with managing
-customer orders i.e. processing of an order related to customer's
-purchase of good or services
- */
-export interface CustomerOrderManagement extends CustomerManagement, Purpose {
-}
-
-
-/**
- * Customer Relationship Management refers to purposes associated with
-managing and analysing interactions with past, current, and potential
-customers
- */
-export interface CustomerRelationshipManagement extends CustomerManagement, Purpose {
-}
-
-
-/**
- * Customer Solvency Monitoring refers to purposes associated with monitor
-solvency of customers for financial diligence
- */
-export interface CustomerSolvencyMonitoring extends CustomerManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with the voluntary sharing of data for the general
-interest of the public, such as healthcare or combating climate change
- */
-export interface DataAltruism extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Data Sourced from Data Controller(s), e.g. a Controller inferring data
-or generating data
- */
-export interface DataControllerDataSource extends DataSource {
-}
-
-
-/**
- * Data is published by the data subject
- */
-export interface DataPublishedByDataSubject extends DataSubjectDataSource {
-}
-
-
-/**
- * The source or origin of data
- */
-export interface DataSource extends ProcessingContext {
-}
-
-
-/**
- * Data Sourced from Data Subject(s), e.g. when data is collected via a
-form or observed from their activities
- */
-export interface DataSubjectDataSource extends DataSource {
-}
-
-
-/**
- * Scale of Data Subject(s)
- */
-export interface DataSubjectScale extends Scale {
-}
-
-
-/**
- * Volume or Scale of Data
- */
-export interface DataVolume extends Scale {
-}
-
-
-/**
- * Processing that involves decision making
- */
-export interface DecisionMaking extends ProcessingContext {
-}
-
-
-/**
- * to remove data in a logical fashion i.e. with the possibility of
-retrieval
- */
-export interface Delete extends Remove, Processing {
-}
-
-
-/**
- * Purposes associated with delivering goods and services requested or
-asked by consumer
- */
-export interface DeliveryOfGoods extends RequestedServiceProvision, Purpose {
-}
-
-
-/**
- * to create new derivative data from the original data
- */
-export interface Derive extends Obtain, Processing {
-}
-
-
-/**
- * to process data in a way it no longer exists or cannot be repaired
- */
-export interface Destruct extends Remove, Processing {
-}
-
-
-/**
- * Purposes associated with conducting direct marketing i.e. marketing
-communicated directly to the individual
- */
-export interface DirectMarketing extends Marketing, Purpose {
-}
-
-
-/**
- * to make data known
- */
-export interface Disclose extends Processing {
-}
-
-
-/**
- * to disclose data by means of transmission
- */
-export interface DiscloseByTransmission extends Disclose, Processing {
-}
-
-
-/**
- * to present or show data
- */
-export interface Display extends Disclose, Processing {
-}
-
-
-/**
- * Purposes associated with activities that manage disputes by natural
-persons, private bodies, or public authorities relevant to organisation
- */
-export interface DisputeManagement extends OrganisationGovernance, Purpose {
-}
-
-
-/**
- * to spread data throughout
- */
-export interface Disseminate extends Disclose, Processing {
-}
-
-
-/**
- * to provide a copy or to receive a copy of data over a network or
-internet
- */
-export interface Download extends Disclose, Processing {
-}
-
-
-/**
- * An action, activity, or method
- */
-export interface DpvProcess extends DpvThing {
-}
-
-
-/**
- * to make a record (especially media)
- */
-export interface DpvRecord extends Obtain, Processing {
-}
-
-
-/**
- * A service is a process where one entity provides some benefit or
-assistance to another entity
- */
-export interface DpvService extends DpvProcess {
-}
-
-
-/**
- * Purposes associated with conducting or enforcing access control as a
-form of security
- */
-export interface EnforceAccessControl extends EnforceSecurity, Purpose {
-}
-
-
-/**
- * Purposes associated with ensuring and enforcing security for data,
-personnel, or other related matters
- */
-export interface EnforceSecurity extends Purpose {
-}
-
-
-/**
- * Involvement where entity is 'actively' involved
- */
-export interface EntityActiveInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Status indicating the involvement of the entity is intended
- */
-export interface EntityIntendedInvolvement extends EntityInvolvement, EntityInvolvementStatus, Intended {
-}
-
-
-/**
- * Status indicating the entity is involved
- */
-export interface EntityInvolved extends EntityInvolvementStatus {
-}
-
-
-/**
- * Involvement of an entity in specific context
- */
-export interface EntityInvolvement extends ProcessingContext {
-}
-
-
-/**
- * Status indicating whether an entity is involved
- */
-export interface EntityInvolvementStatus extends EntityInvolvement, Status {
-}
-
-
-/**
- * Indicating entity is not involved
- */
-export interface EntityNonInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Involvement of an entity in specific context where it is not permitted
-or able to do something
- */
-export interface EntityNonPermissiveInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Status indicating the entity is not involved
- */
-export interface EntityNotInvolved extends EntityInvolvementStatus {
-}
-
-
-/**
- * Involvement where entity is 'passively' or 'not actively' involved
- */
-export interface EntityPassiveInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Involvement of an entity in specific context where it is permitted or
-able to do something
- */
-export interface EntityPermissiveInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Status indicating the involvement of the entity is not intended
- */
-export interface EntityUnintendedInvolvement extends EntityInvolvement, EntityInvolvementStatus, Unintended {
-}
-
-
-/**
- * to remove data from existence i.e. without the possibility of retrieval
- */
-export interface Erase extends Remove, Processing {
-}
-
-
-/**
- * Purposes associated with carrying out data processing to establish an
-agreement, such as for entering into a contract
- */
-export interface EstablishContractualAgreement extends Purpose {
-}
-
-
-/**
- * Processing that involves evaluation of individuals
- */
-export interface EvaluationOfIndividuals extends EvaluationScoring {
-}
-
-
-/**
- * Processing that involves evaluation and scoring of individuals
- */
-export interface EvaluationScoring extends ProcessingContext {
-}
-
-
-/**
- * to provide a copy of data from one system to another
- */
-export interface Export extends Disclose, Processing {
-}
-
-
-/**
- * to filter or keep data for some criteria
- */
-export interface Filter extends Transform, Processing {
-}
-
-
-/**
- * to arrange or structure data in a specific form
- */
-export interface Format extends Structure, Processing {
-}
-
-
-/**
- * Purposes associated with fraud detection, prevention, and mitigation
- */
-export interface FraudPreventionAndDetection extends MisusePreventionAndDetection, Purpose {
-}
-
-
-/**
- * Purposes associated with carrying out data processing to fulfill a
-contractual obligation
- */
-export interface FulfilmentOfContractualObligation extends FulfilmentOfObligation, Purpose {
-}
-
-
-/**
- * Purposes associated with carrying out data processing to fulfill an
-obligation
- */
-export interface FulfilmentOfObligation extends Purpose {
-}
-
-
-/**
- * Level of automation corresponding to Level 5 in ISO/IEC 22989:2022 where
-the automation in system is capable of performing all its tasks
-regardless of the conditions without human involvement
- */
-export interface FullAutomation extends AutomationLevel {
-}
-
-
-/**
- * to generate or create data
- */
-export interface Generate extends Obtain, Processing {
-}
-
-
-/**
- * Indicate of scale in terms of geographic coverage
- */
-export interface GeographicCoverage extends Scale {
-}
-
-
-/**
- * Geographic coverage spanning the entire globe
- */
-export interface GlobalScale extends GeographicCoverage {
-}
-
-
-/**
- * Level of automation corresponding to Level 4 in ISO/IEC 22989:2022 where
-the automation in system is capable of performing all its tasks within
-specific controlled conditions without human involvement
- */
-export interface HighAutomation extends AutomationLevel {
-}
-
-
-/**
- * Data volume that is considered huge or more than large within the
-context
- */
-export interface HugeDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered huge or more than large within the
-context
- */
-export interface HugeScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Humans are involved in the specified context
- */
-export interface HumanInvolved extends HumanInvolvement {
-}
-
-
-/**
- * The involvement of humans in specified context
- */
-export interface HumanInvolvement extends EntityInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of exercising control over the
-specified operations in context
- */
-export interface HumanInvolvementForControl extends HumanInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of exercising decisions over the
-specified operations in context
- */
-export interface HumanInvolvementForDecision extends HumanInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of providing inputs to the specified
-context
- */
-export interface HumanInvolvementForInput extends HumanInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of exercising interventions over the
-specified operations in context
- */
-export interface HumanInvolvementForIntervention extends HumanInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of having oversight over the
-specified context regarding its operations, inputs, or outputs
- */
-export interface HumanInvolvementForOversight extends HumanInvolvement {
-}
-
-
-/**
- * Human involvement for the purposes of verification of specified context
-to ensure its operations, inputs, or outputs are correct or are
-acceptable.
- */
-export interface HumanInvolvementForVerification extends HumanInvolvement {
-}
-
-
-/**
- * Humans are not involved in the specified context
- */
-export interface HumanNotInvolved extends HumanInvolvement {
-}
-
-
-/**
- * Purposes associated with managing humans and 'human resources' within
-the organisation for effective and efficient operations.
- */
-export interface HumanResourceManagement extends Purpose {
-}
-
-
-/**
- * Purposes associated with performing authentication based on identity as
-a form of security
- */
-export interface IdentityAuthentication extends EnforceSecurity, Purpose {
-}
-
-
-/**
- * Purposes associated with verifying or authenticating identity as a form
-of security
- */
-export interface IdentityVerification extends Verification, Purpose {
-}
-
-
-/**
- * Purposes associated with improving existing products and services
- */
-export interface ImproveExistingProductsAndServices extends OptimisationForController, Purpose {
-}
-
-
-/**
- * Purposes associated with improving healthcare systems such as for
-personalised treatments and curing chronic diseases
- */
-export interface ImproveHealthcare extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with improving customer-relationship management
-(CRM) processes
- */
-export interface ImproveInternalCRMProcesses extends CustomerRelationshipManagement, Purpose, OptimisationForController {
-}
-
-
-/**
- * Purposes associated with improving the provision of public services,
-such as public safety, education or law enforcement
- */
-export interface ImprovePublicServices extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with improving traffic, public transport systems or
-costs for drivers
- */
-export interface ImproveTransportMobility extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with improving robustness and resilience of services
- */
-export interface IncreaseServiceRobustness extends OptimisationForController, Purpose {
-}
-
-
-/**
- * to infer data from existing data
- */
-export interface Infer extends Derive, Processing {
-}
-
-
-/**
- * Involvement of existing technologies used in an innovative manner
- */
-export interface InnovativeUseOfExistingTechnology extends InnovativeUseOfTechnology {
-}
-
-
-/**
- * Involvement of a new (innovative) technologies
- */
-export interface InnovativeUseOfNewTechnologies extends InnovativeUseOfTechnology {
-}
-
-
-/**
- * Indicates that technology is being used in an innovative manner
- */
-export interface InnovativeUseOfTechnology extends ProcessingContext {
-}
-
-
-/**
- * Purposes associated with optimisation of internal resource availability
-and usage for organisation
- */
-export interface InternalResourceOptimisation extends OptimisationForController, Purpose {
-}
-
-
-/**
- * Data volume that is considered large within the context
- */
-export interface LargeDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered large within the context
- */
-export interface LargeScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Processing that takes place at large scales (as specified by some
-criteria)
- */
-export interface LargeScaleProcessing extends ProcessingScale {
-}
-
-
-/**
- * Purposes associated with carrying out data processing to fulfill a legal
-or statutory obligation
- */
-export interface LegalCompliance extends FulfilmentOfObligation, Purpose {
-}
-
-
-/**
- * Geographic coverage spanning a specific environment within the locality
- */
-export interface LocalEnvironmentScale extends GeographicCoverage {
-}
-
-
-/**
- * Geographic coverage spanning a specific locality
- */
-export interface LocalityScale extends GeographicCoverage {
-}
-
-
-/**
- * Purposes associated with maintaining a database related to identifying
-and identified fraud risks and fraud incidents
- */
-export interface MaintainFraudDatabase extends FraudPreventionAndDetection, Purpose {
-}
-
-
-/**
- * to transform or publish data to be used
- */
-export interface MakeAvailable extends Disclose, Processing {
-}
-
-
-/**
- * Purposes associated with conducting marketing in relation to
-organisation or products or services e.g. promoting, selling, and
-distributing
- */
-export interface Marketing extends Purpose {
-}
-
-
-/**
- * to combine, compare, or match data from different sources
- */
-export interface Match extends Use, Processing {
-}
-
-
-/**
- * Data volume that is considered medium i.e. neither large nor small
-within the context
- */
-export interface MediumDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered medium i.e. neither large nor small
-within the context
- */
-export interface MediumScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Processing that takes place at medium scales (as specified by some
-criteria)
- */
-export interface MediumScaleProcessing extends ProcessingScale {
-}
-
-
-/**
- * Purposes associated with maintaining a registry of shareholders,
-members, or partners for governance, administration, and management
-functions
- */
-export interface MemberPartnerManagement extends OrganisationGovernance, Purpose {
-}
-
-
-/**
- * Prevention and Detection of Misuse or Abuse of services
- */
-export interface MisusePreventionAndDetection extends EnforceSecurity, Purpose {
-}
-
-
-/**
- * to modify or change data
- */
-export interface Modify extends Alter, Processing {
-}
-
-
-/**
- * to monitor data for some criteria
- */
-export interface Monitor extends Consult, Processing {
-}
-
-
-/**
- * to move data from one location to another including deleting the
-original copy
- */
-export interface Move extends Transfer, Processing {
-}
-
-
-/**
- * Geographic coverage spanning multiple nations
- */
-export interface MultiNationalScale extends GeographicCoverage {
-}
-
-
-/**
- * Geographic coverage spanning a nation
- */
-export interface NationalScale extends GeographicCoverage {
-}
-
-
-/**
- * Geographic coverage nearly spanning the entire globe
- */
-export interface NearlyGlobalScale extends GeographicCoverage {
-}
-
-
-/**
- * Purposes associated with processing activities performed in a
-non-commercial setting or without intention to commercialise
- */
-export interface NonCommercialPurpose extends Purpose {
-}
-
-
-/**
- * Purposes associated with conducting research in a non-commercial setting
-e.g. for a non-profit-organisation (NGO)
- */
-export interface NonCommercialResearch extends NonCommercialPurpose, Purpose, ResearchAndDevelopment {
-}
-
-
-/**
- * An action, activity, or method involving non-personal data, and
-asserting that no personal data is involved
- */
-export interface NonPersonalDataProcess extends DpvProcess {
-}
-
-
-/**
- * A source of data that is not publicly accessible or available
- */
-export interface NonPublicDataSource extends DataSource {
-}
-
-
-/**
- * Level of automation corresponding to Level 0 in ISO/IEC 22989:2022 where
-there is no automation in the system
- */
-export interface NotAutomated extends AutomationLevel {
-}
-
-
-/**
- * Involvement where entity can object to process of specified context
- */
-export interface ObjectingToProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * to obtain data through observation
- */
-export interface Observe extends Obtain, Processing {
-}
-
-
-/**
- * to solicit or gather data from someone
- */
-export interface Obtain extends Processing {
-}
-
-
-/**
- * Purposes associated with optimisation of activities and services for
-consumer or user
- */
-export interface OptimisationForConsumer extends ServiceOptimisation, Purpose {
-}
-
-
-/**
- * Purposes associated with optimisation of activities and services for
-provider or controller
- */
-export interface OptimisationForController extends ServiceOptimisation, Purpose {
-}
-
-
-/**
- * Purposes associated with optimisation of interfaces presented to the
-user
- */
-export interface OptimiseUserInterface extends OptimisationForConsumer, Purpose {
-}
-
-
-/**
- * Involvement where entity can opt-in to specified context
- */
-export interface OptingInToProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can opt-out from specified context
- */
-export interface OptingOutFromProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Purposes associated with managing compliance for organisation in
-relation to internal policies
- */
-export interface OrganisationComplianceManagement extends OrganisationGovernance, Purpose {
-}
-
-
-/**
- * Purposes associated with conducting activities and functions for
-governance of an organisation
- */
-export interface OrganisationGovernance extends Purpose {
-}
-
-
-/**
- * Purposes associated with managing risk for organisation's activities
- */
-export interface OrganisationRiskManagement extends OrganisationGovernance, Purpose {
-}
-
-
-/**
- * to organize data for arranging or classifying
- */
-export interface Organise extends Processing {
-}
-
-
-/**
- * Level of automation corresponding to Level 2 in ISO/IEC 22989:2022 where
-the automation is present in multiple parts of the system or in a manner
-that does not require the human to control/use these parts while still
-retaining control over the system
- */
-export interface PartialAutomation extends AutomationLevel {
-}
-
-
-/**
- * Purposes associated with processing and managing payment in relation to
-service, including invoicing and records
- */
-export interface PaymentManagement extends ServiceManagement, Purpose {
-}
-
-
-/**
- * An abstract concept describing 'personal data handling'
- */
-export interface PersonalDataHandling extends DpvProcess {
-}
-
-
-/**
- * An action, activity, or method involving personal data
- */
-export interface PersonalDataProcess extends DpvProcess {
-}
-
-
-/**
- * Purposes associated with creating and providing customisation based on
-attributes and/or needs of person(s) or context(s).
- */
-export interface Personalisation extends Purpose {
-}
-
-
-/**
- * Purposes associated with creating and providing personalised advertising
- */
-export interface PersonalisedAdvertising extends Advertising, Purpose, Personalisation {
-}
-
-
-/**
- * Purposes associated with creating and providing personalised benefits
-for a service
- */
-export interface PersonalisedBenefits extends ServicePersonalisation, Purpose {
-}
-
-
-/**
- * Purposes associated with monitoring behaviour of personnel
- */
-export interface PersonnelBehaviourMonitoring extends PersonnelMonitoring, Purpose {
-}
-
-
-/**
- * Purposes associated with management and execution of hiring processes of
-personnel
- */
-export interface PersonnelHiring extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with management of personnel associated with the
-organisation e.g. evaluation and management of employees and
-intermediaries
- */
-export interface PersonnelManagement extends HumanResourceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with monitoring of personnel
- */
-export interface PersonnelMonitoring extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with offboarding of personnel i.e. activities and
-processes carried out when the person is exiting the company or role
- */
-export interface PersonnelOffboarding extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with onboarding and integration of personnel within
-an organisation
- */
-export interface PersonnelOnboarding extends PersonnelHiring, Purpose {
-}
-
-
-/**
- * Purposes associated with management and execution of payment of
-personnel
- */
-export interface PersonnelPayment extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with evaluation or assessment of performance of
-employees
- */
-export interface PersonnelPerformanceEvaluation extends PersonnelPerformanceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with management of performance of personnel
- */
-export interface PersonnelPerformanceManagement extends PersonnelManagement, Purpose, PersonnelMonitoring {
-}
-
-
-/**
- * Purposes associated with monitoring of performance of personnel
- */
-export interface PersonnelPerformanceMonitoring extends PersonnelMonitoring, Purpose, PersonnelPerformanceManagement {
-}
-
-
-/**
- * Purposes associated with prediction of performance of personnel
- */
-export interface PersonnelPerformancePrediction extends PersonnelPerformanceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with determination and management of promotion of
-personnel
- */
-export interface PersonnelPromotionManagement extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with determination and management of termination of
-personnel
- */
-export interface PersonnelTerminationManagement extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes assocaited with determination, scheduling, planning, and
-carrying out workload management of personnel
- */
-export interface PersonnelWorkloadManagement extends PersonnelManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with political campaign activities related to
-promotion and advertisement of positions and candidates in elections at
-local, state or regional, or national and international levels
- */
-export interface PoliticalCampaign extends Advertising, Purpose, Personalisation {
-}
-
-
-/**
- * Operations or 'processing' performed on data
- */
-export interface Processing extends DpvThing {
-}
-
-
-/**
- * Conditions required or followed regarding processing of data or use of
-technologies
- */
-export interface ProcessingCondition extends ProcessingContext {
-}
-
-
-/**
- * Context or conditions within which processing takes place
- */
-export interface ProcessingContext extends Context {
-}
-
-
-/**
- * Conditions regarding duration or temporal limitation for processing
- */
-export interface ProcessingDuration extends DpvDuration, ProcessingCondition {
-}
-
-
-/**
- * Conditions regarding location or geospatial scope where processing takes
-places
- */
-export interface ProcessingLocation extends DpvLocation, ProcessingCondition {
-}
-
-
-/**
- * Scale of Processing
- */
-export interface ProcessingScale extends Scale {
-}
-
-
-/**
- * to create a profile that describes or represents a person
- */
-export interface Profiling extends Use, Processing {
-}
-
-
-/**
- * Purposes associated with the protection of intellectual property rights
- */
-export interface ProtectionOfIPR extends FulfilmentOfObligation, Purpose {
-}
-
-
-/**
- * Purposes associated with the protection of national security
- */
-export interface ProtectionOfNationalSecurity extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with the protection of public security
- */
-export interface ProtectionOfPublicSecurity extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with creating and providing personalised
-recommendations for events
- */
-export interface ProvideEventRecommendations extends ProvidePersonalisedRecommendations, Purpose {
-}
-
-
-/**
- * Purposes associated with facilitating the development, production and
-dissemination of reliable official statistics
- */
-export interface ProvideOfficialStatistics extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with creating and providing personalised
-recommendations
- */
-export interface ProvidePersonalisedRecommendations extends ServicePersonalisation, Purpose {
-}
-
-
-/**
- * Purposes associated with creating and providing product recommendations
-e.g. suggest similar products
- */
-export interface ProvideProductRecommendations extends ProvidePersonalisedRecommendations, Purpose {
-}
-
-
-/**
- * to replace personal identifiable information by artificial identifiers
- */
-export interface Pseudonymise extends Transform, Processing {
-}
-
-
-/**
- * Purposes undertaken and intended to provide benefit to public or society
- */
-export interface PublicBenefit extends Purpose {
-}
-
-
-/**
- * A source of data that is publicly accessible or available
- */
-export interface PublicDataSource extends DataSource {
-}
-
-
-/**
- * Purposes associated with public policy making, such as the development
-of new laws
- */
-export interface PublicPolicyMaking extends PublicBenefit, Purpose {
-}
-
-
-/**
- * Purposes associated with managing and conducting public relations
-processes, including creating goodwill for the organisation
- */
-export interface PublicRelations extends Marketing, Purpose {
-}
-
-
-/**
- * Purpose or (broader) Goal associated with data or technology
- */
-export interface Purpose extends DpvThing {
-}
-
-
-/**
- * to query or make enquiries over data
- */
-export interface Query extends Consult, Processing {
-}
-
-
-/**
- * Purposes associated with manage creation, storage, and use of records
-relevant to operations, events, and processes e.g. to store logs or
-access requests
- */
-export interface RecordManagement extends Purpose {
-}
-
-
-/**
- * Purposes associated with advertisement for Recruitments and personnel
-hiring
- */
-export interface RecruitmentAdvertising extends Advertising, Purpose, PersonnelHiring {
-}
-
-
-/**
- * Purposes assocaited with conducting background checks for prospective
-and current job applicants for recruitment
- */
-export interface RecruitmentApplicantBackgroundCheck extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with conducting criminal background assessment for
-prospective and current job applicants for recruitment
- */
-export interface RecruitmentApplicantCriminalBackgroundCheck extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with authentication and verification of information
-as part of recruitment
- */
-export interface RecruitmentApplicantInformationAuthentication extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with determination or selection of candidates,
-whether for a specific job or job pool, or for a specific stage as part
-of recruitment
- */
-export interface RecruitmentApplicantSelection extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes assocaited with analysis of job applications or job candidates
-for recruitment
- */
-export interface RecruitmentApplicationAnalysis extends RecruitmentApplicationManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with managing job applications for recruitment
- */
-export interface RecruitmentApplicationManagement extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with screening and filtering of job applications or
-job candidates for recruitment
- */
-export interface RecruitmentApplicationScreening extends RecruitmentApplicationManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with analysis of interviews, including the people
-and involved, for recruitment
- */
-export interface RecruitmentInterviewAnalysis extends RecruitmentInterviewManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with assessment of interviews, including assessment
-of people and information, for recruitment
- */
-export interface RecruitmentInterviewAssessment extends RecruitmentInterviewManagement, Purpose {
-}
-
-
-/**
- * Purposes associated conducting and managing interviews for recruitment
- */
-export interface RecruitmentInterviewManagement extends RecruitmentManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with scheduling interviews for recruitment
- */
-export interface RecruitmentInterviewScheduling extends RecruitmentInterviewManagement, Purpose {
-}
-
-
-/**
- * Purposes assocaited with recruitment of personnel, which includes
-identifying, sourcing, screening, filtering, shortlisting, and
-interviewing candidates
- */
-export interface RecruitmentManagement extends PersonnelHiring, Purpose {
-}
-
-
-/**
- * Purposes associated with targeted advertisement for Recruitments and
-personnel hiring
- */
-export interface RecruitmentTargetedAdvertising extends RecruitmentAdvertising, Purpose, TargetedAdvertising {
-}
-
-
-/**
- * to rearrange or restructure data to change its form
- */
-export interface Reformat extends Format, Processing {
-}
-
-
-/**
- * Geographic coverage spanning a specific region or regions
- */
-export interface RegionalScale extends GeographicCoverage {
-}
-
-
-/**
- * to destruct or erase data
- */
-export interface Remove extends Processing {
-}
-
-
-/**
- * Purposes associated with identifying, rectifying, or otherwise
-undertaking activities intended to fix or repair impairments to existing
-functionalities
- */
-export interface RepairImpairments extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with delivering services as requested by user or
-consumer
- */
-export interface RequestedServiceProvision extends ServiceProvision, Purpose {
-}
-
-
-/**
- * Purposes associated with conducting research and development for new
-methods, products, or services
- */
-export interface ResearchAndDevelopment extends Purpose {
-}
-
-
-/**
- * to apply a restriction on the processing of specific records
- */
-export interface Restrict extends Transform, Processing {
-}
-
-
-/**
- * to retrieve data, often in an automated manner
- */
-export interface Retrieve extends Use, Processing {
-}
-
-
-/**
- * Involvement where entity can reverse effects of specified context
- */
-export interface ReversingProcessEffects extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can reverse input of specified context
- */
-export interface ReversingProcessInput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Involvement where entity can reverse output of specified context
- */
-export interface ReversingProcessOutput extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * Purposes associated with the fulfillment of rights specified in law
- */
-export interface RightsFulfilment extends LegalObligation, Purpose {
-}
-
-
-/**
- * A measurement along some dimension
- */
-export interface Scale extends ProcessingContext {
-}
-
-
-/**
- * Purposes associated with scientific research
- */
-export interface ScientificResearch extends ResearchAndDevelopment, Purpose {
-}
-
-
-/**
- * Processing that involves scoring of individuals
- */
-export interface ScoringOfIndividuals extends EvaluationScoring {
-}
-
-
-/**
- * to remove data for some criteria
- */
-export interface Screen extends Transform, Processing {
-}
-
-
-/**
- * Purposes associated with providing searching, querying, or other forms
-of information retrieval related functionalities
- */
-export interface SearchFunctionalities extends ServiceProvision, Purpose {
-}
-
-
-/**
- * Sector describes the area of application or domain that indicates or
-restricts scope for interpretation and application of purpose e.g.
-Agriculture, Banking
- */
-export interface Sector extends DpvThing {
-}
-
-
-/**
- * Purposes associated with selling or sharing data or information to third
-parties
- */
-export interface SellDataToThirdParties extends SellProducts, Purpose {
-}
-
-
-/**
- * Purposes associated with selling or sharing insights obtained from
-analysis of data
- */
-export interface SellInsightsFromData extends SellProducts, Purpose {
-}
-
-
-/**
- * Purposes associated with selling products or services
- */
-export interface SellProducts extends ServiceProvision, Purpose {
-}
-
-
-/**
- * Purposes associated with selling products or services to the user,
-consumer, or data subjects
- */
-export interface SellProductsToDataSubject extends SellProducts, Purpose {
-}
-
-
-/**
- * Purposes associated with the determination of whether specific
-conditions or criteria are met for accessing, using, or gaining access
-to a service
- */
-export interface ServiceAccessDetermination extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with the management of services or products
- */
-export interface ServiceManagement extends Purpose {
-}
-
-
-/**
- * Purposes associated with the monitoring of services or products to
-understand their performance and utilisation with a view to inform their
-management
- */
-export interface ServiceMonitoring extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with optimisation of services or activities
- */
-export interface ServiceOptimisation extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with providing personalisation within services or
-product or activities
- */
-export interface ServicePersonalisation extends Personalisation, Purpose, ServiceManagement {
-}
-
-
-/**
- * Purposes associated with providing service or product or activities
- */
-export interface ServiceProvision extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with registering users and collecting information
-required for providing a service
- */
-export interface ServiceRegistration extends ServiceManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with conducting analysis and reporting related to
-usage of services or products
- */
-export interface ServiceUsageAnalytics extends ServiceMonitoring, Purpose {
-}
-
-
-/**
- * to give data (or a portion of it) to others
- */
-export interface Share extends Disclose, Processing {
-}
-
-
-/**
- * Data volume that is considered singular i.e. a specific instance or
-single item
- */
-export interface SingularDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered singular i.e. a specific data subject
- */
-export interface SingularScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Data volume that is considered small or limited within the context
- */
-export interface SmallDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered small or limited within the context
- */
-export interface SmallScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Processing that takes place at small scales (as specified by some
-criteria)
- */
-export interface SmallScaleProcessing extends ProcessingScale {
-}
-
-
-/**
- * Purposes associated with conducting marketing through social media
- */
-export interface SocialMediaMarketing extends Marketing, Purpose {
-}
-
-
-/**
- * Data volume that is considered sporadic or sparse within the context
- */
-export interface SporadicDataVolume extends DataVolume {
-}
-
-
-/**
- * Scale of data subjects considered sporadic or sparse within the context
- */
-export interface SporadicScaleOfDataSubjects extends DataSubjectScale {
-}
-
-
-/**
- * Conditions required or followed regarding storage of data
- */
-export interface StorageCondition extends ProcessingCondition {
-}
-
-
-/**
- * Deletion or Erasure of data including any deletion guarantees
- */
-export interface StorageDeletion extends StorageCondition {
-}
-
-
-/**
- * Duration or temporal limitation on storage of data
- */
-export interface StorageDuration extends ProcessingDuration, StorageCondition {
-}
-
-
-/**
- * Location or geospatial scope where the data is stored
- */
-export interface StorageLocation extends ProcessingLocation, StorageCondition {
-}
-
-
-/**
- * Regularity and temporal span of data restoration/backup mechanisms that
-guarantee that data is preserved
- */
-export interface StorageRestoration extends StorageCondition {
-}
-
-
-/**
- * to keep data for future use
- */
-export interface Store extends Processing {
-}
-
-
-/**
- * to arrange data according to a structure
- */
-export interface Structure extends Organise, Processing {
-}
-
-
-/**
- * Processing that involves systematic monitoring of individuals
- */
-export interface SystematicMonitoring extends ProcessingContext {
-}
-
-
-/**
- * Purposes associated with creating and providing personalised
-advertisement where the personalisation is targeted to a specific
-individual or group of individuals
- */
-export interface TargetedAdvertising extends PersonalisedAdvertising, Purpose {
-}
-
-
-/**
- * Purposes associated with managing and providing technical processes and
-functions necessary for delivering services
- */
-export interface TechnicalServiceProvision extends ServiceProvision, Purpose {
-}
-
-
-/**
- * The technology, technological implementation, or any techniques, skills,
-methods, and processes used or applied
- */
-export interface Technology extends DpvThing {
-}
-
-
-/**
- * Data Sourced from a Third Party, e.g. when data is collected from an
-entity that is neither the Controller nor the Data Subject
- */
-export interface ThirdPartyDataSource extends DataSource {
-}
-
-
-/**
- * to use data to track a specific factor (e.g. a human or their
-activities) across multiple distinct contexts
- */
-export interface Tracking extends Use, Processing {
-}
-
-
-/**
- * to perform tracking where the performing entity is a first party within
-the context
- */
-export interface TrackingByFirstParty extends Tracking, Processing {
-}
-
-
-/**
- * to perform tracking where the performing entity is a third party within
-the context
- */
-export interface TrackingByThirdParty extends Tracking, Processing {
-}
-
-
-/**
- * to move data from one place to another
- */
-export interface Transfer extends Processing {
-}
-
-
-/**
- * to change the form or nature of data
- */
-export interface Transform extends Processing {
-}
-
-
-/**
- * to send out data
- */
-export interface Transmit extends Disclose, Processing {
-}
-
-
-/**
- * to use data
- */
-export interface Use extends Processing {
-}
-
-
-/**
- * Purposes associated with personalisation of interfaces presented to the
-user
- */
-export interface UserInterfacePersonalisation extends ServicePersonalisation, Purpose {
-}
-
-
-/**
- * Purposes associated with manage orders, payment, evaluation, and
-prospecting related to vendors
- */
-export interface VendorManagement extends Purpose {
-}
-
-
-/**
- * Purposes associated with managing payment of vendors
- */
-export interface VendorPayment extends VendorManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with managing records and orders related to vendors
- */
-export interface VendorRecordsManagement extends VendorManagement, Purpose {
-}
-
-
-/**
- * Purposes associated with managing selection, assessment, and evaluation
-related to vendors
- */
-export interface VendorSelectionAssessment extends VendorManagement, Purpose {
-}
-
-
-/**
- * Purposes association with verification e.g. information, identity,
-integrity
- */
-export interface Verification extends EnforceSecurity, Purpose {
-}
-
-
-/**
- * Involvement where entity can withdraw a previously given assent from
-specified context
- */
-export interface WithdrawingFromProcess extends EntityPermissiveInvolvement {
-}
-
-
-/**
- * A Notice for information provision associated with Consent
- */
-export interface ConsentNotice extends PrivacyNotice, OrganisationalMeasure {
-}
-
-
-/**
- * The consequence(s) possible or arising from specified context
- */
-export interface Consequence extends RiskConcept {
-}
-
-
-/**
- * The consequence(s) possible or arising as a side-effect of specified
-context
- */
-export interface ConsequenceAsSideEffect extends Consequence {
-}
-
-
-/**
- * The consequence(s) possible or arising from failure of specified context
- */
-export interface ConsequenceOfFailure extends Consequence {
-}
-
-
-/**
- * The consequence(s) possible or arising from success of specified context
- */
-export interface ConsequenceOfSuccess extends Consequence {
-}
-
-
-/**
- * Assessment of cybersecurity capabilities in terms of vulnerabilities and
-effectiveness of controls
- */
-export interface CybersecurityAssessment extends SecurityAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * Impact assessment determining the potential and actual impact of
-processing activities on individuals or groups of individuals and taking
-into account the impacts of activities on their rights and freedoms
- */
-export interface DPIA extends RightsImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that is provided within a dashboard also used for other
-purposes
- */
-export interface DashboardNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Impact Assessment concerning the consequences and impacts of a data
-breach
- */
-export interface DataBreachImpactAssessment extends RightsImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice providing information about data breach(es) i.e. unauthorised
-transfer, access, use, or modification of data
- */
-export interface DataBreachNotice extends SecurityIncidentNotice, OrganisationalMeasure {
-}
-
-
-/**
- * Impact Assessment for conducting data transfers
- */
-export interface DataTransferImpactAssessment extends ImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * Notice for the legal entity for the transfer of its data
- */
-export interface DataTransferNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * A notice provided using the functionality provided by a device e.g.
-using the popup or alert feature
- */
-export interface DeviceNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Impact assessment which assesses the potential and actual impact on
-fundamental rights occurring due to processing activities
- */
-export interface FRIA extends RightsImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that uses graphical elements such as visualisations and icons
- */
-export interface GraphicalNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * The impact(s) possible or arising as a consequence from specified
-context
- */
-export interface Impact extends Consequence {
-}
-
-
-/**
- * Calculating or determining the likelihood of impact of an existing or
-proposed process, which can involve risks or detriments.
- */
-export interface ImpactAssessment extends RiskAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that is provided "just in time" when collecting information or
-performing an activity
- */
-export interface JITNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that contains layered elements
- */
-export interface LayeredNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * The likelihood or probability or chance of something taking place or
-occurring
- */
-export interface Likelihood extends DpvThing {
-}
-
-
-/**
- * A notice is an artefact for providing information, choices, or controls
- */
-export interface Notice extends OrganisationalMeasure {
-}
-
-
-/**
- * Status indicating the notice has been communicated
- */
-export interface NoticeCommunicated extends NoticeStatus {
-}
-
-
-/**
- * Status indicating the notice has been generated
- */
-export interface NoticeGenerated extends NoticeStatus {
-}
-
-
-/**
- * An icon within a notice associated with specific information or elements
- */
-export interface NoticeIcon extends DpvThing {
-}
-
-
-/**
- * Status indicating the notice is currently at its latest iteration
- */
-export interface NoticeLatest extends NoticeStatus {
-}
-
-
-/**
- * A layer within a layered notice where the layer can be used for
-providing specific information or controls
- */
-export interface NoticeLayer extends DpvThing {
-}
-
-
-/**
- * Status indicating the notice is stale or not up to date or not the
-latest version
- */
-export interface NoticeStale extends NoticeStatus {
-}
-
-
-/**
- * Status associated with notice provision, use, and management
- */
-export interface NoticeStatus extends Status {
-}
-
-
-/**
- * Status indicating the notice has been communicated but has not yet been
-used e.g. the recipient has not acknowledged it or has not taken the
-intended action
- */
-export interface NoticeUnused extends NoticeStatus {
-}
-
-
-/**
- * Status indicating the notice has been updated and its contents or
-implications have changed
- */
-export interface NoticeUpdated extends NoticeStatus {
-}
-
-
-/**
- * Status indicating the notice has been communicated and has been used
-e.g. the recipient has acknowledged it or taken the intended action
- */
-export interface NoticeUsed extends NoticeStatus {
-}
-
-
-/**
- * A notice provided orally or verbally
- */
-export interface OralNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Impact assessment regarding privacy risks
- */
-export interface PIA extends ImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that is posted as a sign or banner
- */
-export interface PostedNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * A notice that is provided in a printed form on or along with a device
- */
-export interface PrintedNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Represents a notice or document outlining information regarding privacy
- */
-export interface PrivacyNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Risk remaining after treatment or mitigation
- */
-export interface ResidualRisk extends Risk {
-}
-
-
-/**
- * Impact assessment which involves determining the impact on rights and
-freedoms
- */
-export interface RightsImpactAssessment extends ImpactAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A risk or possibility or uncertainty of negative effects, impacts, or
-consequences
- */
-export interface Risk extends RiskConcept {
-}
-
-
-/**
- * Assessment involving identification, analysis, and evaluation of risk
- */
-export interface RiskAssessment extends Assessment, OrganisationalMeasure {
-}
-
-
-/**
- * Parent concept for combining concepts associated with risk assessment
-such as actual and potential Risk, Risk Source, Consequences, and
-Impacts
- */
-export interface RiskConcept extends DpvThing {
-}
-
-
-/**
- * The magnitude of a risk expressed as an indication to aid in its
-management
- */
-export interface RiskLevel extends DpvThing {
-}
-
-
-/**
- * Measures intended to mitigate, minimise, or prevent risk.
- */
-export interface RiskMitigationMeasure extends TechnicalOrganisationalMeasure {
-}
-
-
-/**
- * Assessment of security intended to identify gaps, vulnerabilities,
-risks, and effectiveness of controls
- */
-export interface SecurityAssessment extends RiskAssessment, OrganisationalMeasure {
-}
-
-
-/**
- * A notice providing information about security incident(s)
- */
-export interface SecurityIncidentNotice extends Notice, OrganisationalMeasure {
-}
-
-
-/**
- * Sensitivity' reflects the risk of impact if not secured or utilised with
-appropriate measures and controls e.g. for sensitive data
- */
-export interface SensitivityLevel extends Severity {
-}
-
-
-/**
- * The magnitude of being unwanted or having negative effects such as
-harmful impacts
- */
-export interface Severity extends DpvThing {
-}
-
-
-/**
- * The right(s) applicable, provided, or expected that need to be
-(actively) exercised
- */
-export interface ActiveRight extends Right {
-}
-
-
-/**
- * The rights applicable or provided to a Data Subject
- */
-export interface DataSubjectRight extends Right {
-}
-
-
-/**
- * The right(s) applicable, provided, or expected that are always
-(passively) applicable
- */
-export interface PassiveRight extends Right {
+export interface DpvReuseCompatibility extends DpvStatus {
 }
 
 
 /**
  * The right(s) applicable, provided, or expected
  */
-export interface Right extends DpvThing {
+export interface DpvRight extends DpvConcept {
 }
 
 
 /**
- * An activity representing an exercising of an active right
+ * Parent concept for combining concepts associated with risk assessment such as actual and potential Risk, Risk Source, Consequences, and Impacts
  */
-export interface RightExerciseActivity extends OrganisationalMeasure {
+export interface DpvRiskConcept extends DpvConcept {
 }
 
 
 /**
- * Information associated with exercising of an active right such as where
-and how to exercise the right, information required for it, or updates
-on an exercised rights request
+ * The magnitude of a risk expressed as an indication to aid in its management
  */
-export interface RightExerciseNotice extends RightNotice, OrganisationalMeasure {
+export interface DpvRiskLevel extends DpvConcept {
 }
 
 
 /**
- * Record of a Right being exercised
+ * A rule describing a process or control that directs or determines if and how an activity should be conducted
  */
-export interface RightExerciseRecord extends RecordsOfActivities, OrganisationalMeasure {
+export interface DpvRule extends DpvConcept {
 }
 
 
 /**
- * Notice provided regarding fulfilment of a right
+ * Status associated with a rule for indicating whether it is applicable, or has been utilised, and whether the requirements of the rule have been fulfilled or violated
  */
-export interface RightFulfilmentNotice extends RightExerciseNotice, OrganisationalMeasure {
+export interface DpvRuleFulfilmentStatus extends DpvStatus {
 }
 
 
 /**
- * Notice provided regarding non-fulfilment of a right
+ * Processing that involves scoring of individuals
  */
-export interface RightNonFulfilmentNotice extends RightExerciseNotice, OrganisationalMeasure {
+export interface DpvScoringOfIndividuals extends DpvEvaluationScoring {
 }
 
 
 /**
- * Information associated with rights, such as which rights exist, when and
-where they are applicable, and other relevant information
+ * Sector describes the area of application or domain that indicates or restricts scope for interpretation and application of purpose e.g. Agriculture, Banking
  */
-export interface RightNotice extends Notice, OrganisationalMeasure {
+export interface DpvSector extends DpvConcept {
 }
 
 
 /**
- * The control or activity associated with obtaining, providing,
-withdrawing, or reaffirming consent
+ * Personal data that is considered 'sensitive' in terms of privacy and/or impact, and therefore requires additional considerations and/or protection
  */
-export interface ConsentControl extends EntityInvolvement {
+export interface DpvSensitivePersonalData extends DpvPersonalData {
 }
 
 
 /**
- * The state where the temporal or contextual validity of consent has
-'expired'
+ * The magnitude of being unwanted or having negative effects such as harmful impacts
  */
-export interface ConsentExpired extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvSeverity extends DpvConcept {
 }
 
 
 /**
- * The state where consent has been given
+ * Sensitive Personal Data whose use requires specific additional legal permission or justification
  */
-export interface ConsentGiven extends ConsentStatusValidForProcessing, ConsentStatus {
+export interface DpvSpecialCategoryPersonalData extends DpvSensitivePersonalData {
 }
 
 
 /**
- * The state where consent has been deemed to be invalid
+ * The status or state of something
  */
-export interface ConsentInvalidated extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvStatus extends DpvConcept {
 }
 
 
 /**
- * The state where consent has been refused
+ * A political union of two or more countries with an establishment of common authority
  */
-export interface ConsentRefused extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvSupraNationalUnion extends DpvJurisdiction {
 }
 
 
 /**
- * State where a request for consent has been deferred without a decision
+ * Technical measures used to safeguard and ensure good practices in connection with data and technologies
  */
-export interface ConsentRequestDeferred extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvTechnicalMeasure extends DpvConcept {
 }
 
 
 /**
- * State where a request for consent has been made and is awaiting a
-decision
+ * The technology, technological implementation, or any techniques, skills, methods, and processes used or applied
  */
-export interface ConsentRequested extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvTechnology extends DpvConcept {
 }
 
 
 /**
- * The state where the consent is revoked by an entity other than the data
-subject and which prevents it from being further used as a valid state
+ * Status associated with use of Vital Interest as a legal basis
  */
-export interface ConsentRevoked extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvVitalInterestStatus extends DpvStatus {
 }
 
 
 /**
- * The state or status of 'consent' that provides information reflecting
-its operational status and validity for processing data
+ * A kind of term DPV names as pd:PersonalData and does not define.
  */
-export interface ConsentStatus extends Status {
+export interface DpvPdPersonalData extends DpvConcept {
 }
 
 
 /**
- * States of consent that cannot be used as valid justifications for
-processing data
+ * Actors and Entities involved in provision, use, and management of Technology
  */
-export interface ConsentStatusInvalidForProcessing extends ConsentStatus {
+export interface DpvActor extends DpvConcept {
 }
 
 
 /**
- * States of consent that can be used as valid justifications for
-processing data
+ * Communication mechanism used or provided by Technology
  */
-export interface ConsentStatusValidForProcessing extends ConsentStatus {
+export interface DpvCommunicationMechanism extends DpvTechnology {
 }
 
 
 /**
- * State where information about consent is not available or is unknown
+ * Information describing use, functionality, design, or other technical aspects of the Technology
  */
-export interface ConsentUnknown extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvDocumentation extends DpvConcept {
 }
 
 
 /**
- * The state where the consent is withdrawn or revoked specifically by the
-data subject and which prevents it from being further used as a valid
-state
+ * Method associated with provision or use of technology
  */
-export interface ConsentWithdrawn extends ConsentStatusInvalidForProcessing, ConsentStatus {
+export interface DpvProvisionMethod extends DpvTechnology {
 }
 
 
 /**
- * Consent that is expressed through an explicit action solely conveying a
-consenting decision
+ * Status indicating whether Technology has been provided
  */
-export interface ExplicitlyExpressedConsent extends ExpressedConsent, LegalBasis {
+export interface DpvProvisionStatus extends DpvStatus {
 }
 
 
 /**
- * Consent that is expressed through an action intended to convey a
-consenting decision
+ * Expression of what the technology is capable of achieving or providing
  */
-export interface ExpressedConsent extends InformedConsent, LegalBasis {
+export interface DpvTechCapability extends DpvConcept {
 }
 
 
 /**
- * Consent that is implied indirectly through an action not associated
-solely with conveying a consenting decision
+ * Status indicating whether Technology is available on the market
  */
-export interface ImpliedConsent extends InformedConsent, LegalBasis {
+export interface DpvTechMarketAvailabilityStatus extends DpvStatus {
 }
 
 
 /**
- * Consent that is informed i.e. with the requirement to provide sufficient
-information to make a consenting decision
+ * Capability or use of AI to achieve a technical goal or objective
  */
-export interface InformedConsent extends Consent, LegalBasis {
+export interface DpvAiCapability extends DpvTechnology {
 }
 
 
 /**
- * Control for managing a given consent in terms of providing, reaffirming,
-or withdrawing it
+ * A stage in the lifecycle of AI
  */
-export interface ManageConsent extends ProvideConsent, ReaffirmConsent, WithdrawConsent {
+export interface DpvLifecycleStage extends DpvConcept {
 }
 
 
 /**
- * Control for obtaining consent
+ * The underlying technological algorithm, method, or process that forms the technique for using or applying AI
  */
-export interface ObtainConsent extends ConsentControl {
+export interface DpvTechnique extends DpvTechnology {
 }
 
 
 /**
- * Control for providing consent
+ * Process to determine or to improve the parameters of a machine learning model based on a machine learning algorithm by using training data
  */
-export interface ProvideConsent extends ConsentControl, OptingInToProcess {
+export interface DpvTrainingTechnique extends DpvProcessing {
 }
 
 
 /**
- * Control for affirming consent
+ * Indicates a concept is relevant to 'Availability' in CIA InfoSec model
  */
-export interface ReaffirmConsent extends ConsentControl {
+export interface DpvAvailabilityConcept extends DpvRiskConcept {
 }
 
 
 /**
- * Control for refusing consent
+ * Indicates a concept is relevant to 'Confidentiality' in CIA InfoSec model
  */
-export interface RefuseConsent extends ConsentControl {
+export interface DpvConfidentialityConcept extends DpvRiskConcept {
 }
 
 
 /**
- * The state where a previously given consent has been 'renewed' or
-'refreshed' or 'reaffirmed' to form a new instance of given consent
+ * Status associated with investigation of an incident
  */
-export interface RenewedConsentGiven extends ConsentStatusValidForProcessing, ConsentStatus {
+export interface DpvIncidentInvestigationStatus extends DpvStatus {
 }
 
 
 /**
- * Consent that is uninformed i.e. without requirement to provide
-sufficient information to make a consenting decision
+ * Notice associated with an incident
  */
-export interface UninformedConsent extends Consent, LegalBasis {
+export interface DpvIncidentNotice extends DpvOrganisationalMeasure {
 }
 
 
 /**
- * Control for withdrawing consent
+ * Status associated with an incident
  */
-export interface WithdrawConsent extends ConsentControl, WithdrawingFromProcess {
+export interface DpvIncidentStatus extends DpvStatus {
+}
+
+
+/**
+ * Indicates a concept is relevant to 'Integrity' in CIA InfoSec model
+ */
+export interface DpvIntegrityConcept extends DpvRiskConcept {
+}
+
+
+/**
+ * Indicates a concept can potentially be a 'consequence concept within an use-case
+ */
+export interface DpvPotentialConsequence extends DpvRiskConcept {
+}
+
+
+/**
+ * Indicates a concept can potentially be a 'impact' concept within an use-case
+ */
+export interface DpvPotentialImpact extends DpvRiskConcept {
+}
+
+
+/**
+ * Indicates a concept can potentially be a 'risk' concept within an use-case
+ */
+export interface DpvPotentialRisk extends DpvRiskConcept {
+}
+
+
+/**
+ * Indicates a concept can potentially be a 'risk source' concept within an use-case
+ */
+export interface DpvPotentialRiskSource extends DpvRiskConcept {
+}
+
+
+/**
+ * A technique or method used to analyse and identify risk levels, sources, likelihoods, severities, and other necessary information required to conduct risk management procedures
+ */
+export interface DpvRiskAnalysis extends DpvConcept {
+}
+
+
+/**
+ * Control that modifies risk
+ */
+export interface DpvRiskControl extends DpvConcept {
+}
+
+
+/**
+ * A machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.
+ */
+export interface DpvAISystem extends DpvTechnology {
+}
+
+
+/**
+ * An adequacy decision as per GDPR Art.45(3) for the transfer of data to a third country or an international organisation
+ */
+export interface DpvAdequacyDecision extends DpvLegalBasis {
+}
+
+
+/**
+ * A categorisation of the change associated with the AI system
+ */
+export interface DpvChangeCategory extends DpvConcept {
+}
+
+
+/**
+ * Status reflecting the status of risk associated with a DBIA regarding rights and freedoms of natural persons
+ */
+export interface DpvDBIARiskStatus extends DpvAuditStatus {
+}
+
+
+/**
+ * Conformity of a process with a DPIA
+ */
+export interface DpvDPIAConformity extends DpvConformanceStatus {
+}
+
+
+/**
+ * Status reflecting whether a DPIA is necessary
+ */
+export interface DpvDPIANecessityStatus extends DpvAuditStatus {
+}
+
+
+/**
+ * Status reflecting the outcomes of a DPIA
+ */
+export interface DpvDPIAOutcomeStatus extends DpvAuditStatus {
+}
+
+
+/**
+ * Recommendation from the DPIA regarding processing
+ */
+export interface DpvDPIAProcessingRecommendation extends DpvAuditStatus {
+}
+
+
+/**
+ * Status reflecting the status of risk associated with a DPIA
+ */
+export interface DpvDPIARiskStatus extends DpvAuditStatus {
+}
+
+
+/**
+ * Notice associated with data breach providing information in compliance with GDPR
+ */
+export interface DpvDataBreachNotice extends DpvOrganisationalMeasure {
+}
+
+
+/**
+ * Whether a Data Breach notification is required
+ */
+export interface DpvDataBreachNoticeRequirement extends DpvAuditStatus {
+}
+
+
+/**
+ * Status associated with whether the AI system or GPAI Model is available for distribution or use on the market in the course of a commercial activity
+ */
+export interface DpvEuAiactMarketAvailabilityStatus extends DpvTechMarketAvailabilityStatus {
+}
+
+
+/**
+ * Enumeration of AI Act's risk-based categorisation which determines the prohibitions and obligations for AI systems
+ */
+export interface DpvEuAiactRiskLevel extends DpvRiskLevel {
+}
+
+
+/**
+ * ‘Supervisory Authority’ or 'Data Protection Authority' means an independent public authority which is established by a Member State pursuant to Article 51
+ */
+export interface DpvEuGdprDataProtectionAuthority extends DpvDataProtectionAuthority {
+}
+
+
+/**
+ * ‘Processing’ means any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction
+ */
+export interface DpvEuGdprProcessing extends DpvProcessing {
+}
+
+
+/**
+ * High-risk AI system according to the AI Act
+ */
+export interface DpvHighRiskAISystem extends DpvAISystem {
+}
+
+
+/**
+ * Status associated with whether the AI system or GPAI Model has been 'first' made available on the market
+ */
+export interface DpvMarketPlacementStatus extends DpvTechMarketAvailabilityStatus {
+}
+
+
+/**
+ * Prohibited AI system according to Article 5, AI Act
+ */
+export interface DpvProhibitedAISystem extends DpvAISystem {
+}
+
+
+/**
+ * Status indicating whether the specific activity or context is proportionate
+ */
+export interface DpvProportionalityStatus extends DpvStatus {
+}
+
+
+/**
+ * Solche datenhaltenden Stellen, die gesetzlich geregelt sind, wie das Forschungsdatenzentrum Gesundheit, das Zentrum für Krebregisterdaten beim RKI und die Plattform nach §64e Abs.9 des fünften Buches Sozialgesetzbuch
+ */
+export interface DpvRegulatedHealthDataHolder extends DpvConcept {
+}
+
+
+/**
+ * Status associated with whether the AI system has been supplied for use or put in to service or been recalled or withdrawn
+ */
+export interface DpvServiceSupplyStatus extends DpvProvisionStatus {
+}
+
+
+/**
+ * Status indicating whether the reuse of health data is compatible for given context
+ */
+export interface DpvSectorHealthReuseCompatibility extends DpvReuseCompatibility {
+}
+
+
+/**
+ * Term that indicates the behaviour of the Agent in relation to negotiations
+ */
+export interface DpvAgentNegotiationBehaviour extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates the behaviour of the Agent in relation to requests
+ */
+export interface DpvAgentRequestBehaviour extends DpvContractualClause {
+}
+
+
+/**
+ * A compound set of terms or clauses, proposed and offered before a formal contract between parties, and also referred to as a "proposal" pr "proposed agreement"
+ */
+export interface DpvAgreement extends DpvContractualClause {
+}
+
+
+/**
+ * Status associated with the Agreement Negotiation
+ */
+export interface DpvAgreementNegotiationStatus extends DpvStatus {
+}
+
+
+/**
+ * Term related to resolving conflicts in Term(s)
+ */
+export interface DpvConflictResolutionTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates deletion regarding data as an obligation
+ */
+export interface DpvDataDeletionTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term related to Data Sharing
+ */
+export interface DpvDataSharingTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates transparency regarding data involved and its source as an obligation
+ */
+export interface DpvDataTransparencyTerm extends DpvTransparencyTerm {
+}
+
+
+/**
+ * Term related to interpretation of the Term(s) using deontic logic
+ */
+export interface DpvDeonticInterpretationTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates transparency regarding identities and involvement of parties in specific roles as an obligation
+ */
+export interface DpvPartyTransparencyTerm extends DpvTransparencyTerm {
+}
+
+
+/**
+ * Term that indicates portability of data from service provider to individual
+ */
+export interface DpvPortabilityTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates the applicability of Privacy Preference(s)
+ */
+export interface DpvPreferenceApplicability extends DpvContractualClause {
+}
+
+
+/**
+ * Term related to Profiling
+ */
+export interface DpvProfilingTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates transparency regarding purposes involved for processing of data and technologies as an obligation
+ */
+export interface DpvPurposeTransparencyTerm extends DpvTransparencyTerm {
+}
+
+
+/**
+ * Term related to Tracking
+ */
+export interface DpvTrackingTerm extends DpvContractualClause {
+}
+
+
+/**
+ * Term that indicates transparency as an obligation
+ */
+export interface DpvTransparencyTerm extends DpvContractualClause {
+}
+
+
+/**
+ * One part of a DPV release: one namespace family's vocabularies and terms, its contributors or its examples.
+ */
+export interface DpvCatalogue {
+    /** The family's concepts, each a record of its kinds. */
+    concepts?: DpvConcept[],
+    /** The DPV release the part belongs to. */
+    edition: string,
+    /** Which part of the release this is. */
+    family: string,
+    /** The family's vocabularies, as each one's Turtle file describes it. */
+    vocabularies?: DpvVocabulary[],
+    /** The lists of terms the family's vocabularies keep. */
+    concept_schemes?: DpvConceptScheme[],
+    /** The family's properties. */
+    properties?: DpvProperty[],
+    /** The people and organizations DPV names as contributors. */
+    agents?: DpvAgent[],
+    /** DPV's examples. */
+    examples?: DpvExample[],
 }
 
 

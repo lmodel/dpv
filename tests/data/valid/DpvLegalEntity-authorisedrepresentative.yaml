@@ -1,0 +1,20 @@
+---
+id: eu-ehds:AuthorisedRepresentative
+rdf_type:
+  - dpv:LegalEntity
+prefLabel: Authorised Representative
+definition: Legal representative established in the EU of a manufacturer of an EHR system established
+  outside of the EU
+broader:
+  - dpv:Representative
+inScheme:
+  - eu-ehds:entities-classes
+isDefinedBy:
+  - 'eu-ehds:'
+term_status: accepted
+created:
+  - '2026-02-04'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+source:
+  - EHDS Art.31

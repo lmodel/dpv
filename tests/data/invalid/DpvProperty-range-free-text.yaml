@@ -1,0 +1,5 @@
+---
+# Fails at: /rangeIncludes/0
+id: dpv:hasExample
+rangeIncludes:
+  - a process

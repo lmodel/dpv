@@ -1,0 +1,8 @@
+---
+# Fails at: /resources/0
+id: dex:E0001
+title: x
+resources:
+  - id: ex:P
+    hasPurposes:
+      - dpv:Marketing

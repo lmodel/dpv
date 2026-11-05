@@ -1,0 +1,21 @@
+---
+id: dpv:PrimaryImportance
+rdf_type:
+  - dpv:Importance
+prefLabel: Primary Importance
+definition: Indication of 'primary' or 'main' or 'core' importance
+broader:
+  - dpv:Importance
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-02-10'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake
+  - dpv_agent:person-paul-ryan

@@ -1,0 +1,20 @@
+---
+id: legal-at:DPA-AT
+rdf_type:
+  - eu-gdpr:DataProtectionAuthority
+prefLabel: Data Protection Authority (DSB)
+broader:
+  - dpv:Law
+  - eu-gdpr:DataProtectionAuthority
+inScheme:
+  - legal-at:at-classes
+isDefinedBy:
+  - 'legal-at:'
+term_status: accepted
+created:
+  - '2024-08-02'
+homepage: http://www.dsb.gv.at/
+hasApplicableLaw:
+  - legal-eu:law-GDPR
+hasJurisdiction:
+  - loc:AT

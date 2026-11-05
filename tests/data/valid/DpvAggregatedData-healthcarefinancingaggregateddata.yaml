@@ -1,0 +1,19 @@
+---
+id: eu-ehds:HealthcareFinancingAggregatedData
+rdf_type:
+  - dpv:AggregatedData
+prefLabel: Healthcare Financing Aggregated Data
+definition: Information about aggregated data on healthcare expenditure and financing
+broader:
+  - sector-health:HealthAggregatedData
+inScheme:
+  - eu-ehds:data-classes
+isDefinedBy:
+  - 'eu-ehds:'
+term_status: accepted
+created:
+  - '2026-02-04'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+source:
+  - EHDS Art.51.1(c)

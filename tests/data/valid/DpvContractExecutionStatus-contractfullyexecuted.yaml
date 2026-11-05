@@ -1,0 +1,20 @@
+---
+id: dpv:ContractFullyExecuted
+rdf_type:
+  - dpv:ContractExecutionStatus
+prefLabel: Contract Fully Executed
+definition: Status representing contract has been fully executed i.e. it has been signed by all parties
+  and all other procedural aspects such as exchange of signed contract copies have been completed
+broader:
+  - dpv:ContractExecutionStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2025-01-09'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

@@ -1,0 +1,21 @@
+---
+id: eu-aiact:AsylumSector
+rdf_type:
+  - dpv:Sector
+prefLabel: Asylum Sector
+definition: Sector related to asylum management
+broader:
+  - dpv:Sector
+inScheme:
+  - eu-aiact:sector-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+  - dpv_agent:person-harshvardhan-j-pandit
+source:
+  - ' Annex III'
+  - EU AI Act

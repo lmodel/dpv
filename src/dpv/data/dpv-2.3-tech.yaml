@@ -1,0 +1,3301 @@
+---
+# DPV 2.3: technology. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: tech
+vocabularies:
+  - id: https://w3id.org/dpv/tech
+    bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram
+      Golpayegani, Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G.,
+      et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer,
+      Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+    description: Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing information
+      about technologies and its provision
+    identifier: https://w3id.org/dpv/tech
+    title: Technology Concepts
+    doi: 10.5281/zenodo.12505841
+    bibo_status: http://purl.org/ontology/bibo/status/published
+    preferredNamespacePrefix: tech
+    preferredNamespaceUri: https://w3id.org/dpv/tech#
+    rdfs_Label: TECH
+    versionInfo: '2.3'
+    schema_version: '2.3'
+    created:
+      - '2024-05-31'
+    issued: '2024-05-31'
+    modified: '2026-02-25'
+    conformsTo:
+      - http://www.w3.org/2000/01/rdf-schema
+      - http://www.w3.org/2004/02/skos/core
+    source:
+      - https://www.w3.org/groups/cg/dpvcg/
+    license: https://www.w3.org/copyright/document-license-2023/
+    publisher: https://www.w3.org/
+    versionIRI: https://w3id.org/dpv/2.3/tech
+    isProfileOf:
+      - http://www.w3.org/2000/01/rdf-schema#
+      - http://www.w3.org/2004/02/skos/core#
+      - https://w3id.org/dpv
+    logo: https://w3id.org/dpv/media/logo.png
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+      - dpv_agent:person-tek-raj-chhetri
+    creator:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+concept_schemes:
+  - id: tech:actors-classes
+  - id: tech:actors-properties
+  - id: tech:comms-classes
+  - id: tech:core-classes
+  - id: tech:core-properties
+  - id: tech:docs-classes
+  - id: tech:io-classes
+  - id: tech:provision-classes
+  - id: tech:status-classes
+  - id: tech:status-properties
+  - id: tech:tools-classes
+  - id: tech:tools-properties
+concepts:
+  - id: tech:API
+    rdf_type:
+      - dpv:Technology
+    prefLabel: API
+    definition: A set of rules and protocols to communicate and exchange data between applications
+    broader:
+      - tech:Algorithm
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Action
+    prefLabel: Action
+    definition: A process or activity, which could be physical or virtual
+    scopeNote:
+      - Action is a concept referring to activities or tasks in the context of technologies producing
+        or using them as inputs or outputs
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Actor
+    prefLabel: Actor
+    definition: Actors and Entities involved in provision, use, and management of Technology
+    broader:
+      - dpv:Entity
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Entity
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Algorithm
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Algorithm
+    definition: A step-by-step set of instructions used to solve a problem or perform a computation
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Android
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Android
+    definition: Android operating system
+    broader:
+      - tech:OS
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:AppStore
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Application Store
+    definition: An application or platform for distribution of other applications
+    broader:
+      - tech:Application
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Application
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Application
+    definition: Application or Application Software
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ApplicationSpecificIntegratedCircuit
+    rdf_type:
+      - dpv:Technology
+    prefLabel: ApplicationSpecificIntegratedCircuit
+    definition: A custom-designed integrated circuit optimised for a specific task
+    broader:
+      - tech:IntegratedCircuit
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:AudioContent
+    prefLabel: Audio Content
+    definition: Content that is or has an audio component
+    broader:
+      - tech:Content
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Content
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Auditor
+    rdf_type:
+      - tech:Actor
+    prefLabel: Auditor
+    definition: Actor that audits Technology for conformance to policies, standards, or legal requirements
+    broader:
+      - tech:Partner
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:Bluetooth
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: Bluetooth
+    definition: Technology utilising bluetooth
+    broader:
+      - tech:Networking
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Capability
+    prefLabel: Capability
+    definition: Expression of what the technology is capable of achieving or providing
+    scopeNote:
+      - Examples of capabilities are image recognition, sentiment analysis, machine translation
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    example:
+      - dex:E0064
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:CellularNetwork
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: Cellular Network
+    definition: Technology utilising cellular networking
+    broader:
+      - tech:Networking
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:CloudService
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Cloud Service Provision
+    definition: A remotely accessible service delivered over the internet for providing resources, software,
+      or infrastructure
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:CloudStorage
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Cloud Storage
+    definition: Storage utilising cloud technologies
+    broader:
+      - dpv:CloudLocation
+      - dpv:ProcessingLocation
+      - dpv:StorageLocation
+      - tech:DataStorage
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:CommunicationMechanism
+    prefLabel: Communication Mechanism
+    definition: Communication mechanism used or provided by Technology
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Technology
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Component
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Component
+    definition: A self-contained part of a system that performs a specific function and interacts with
+      other components
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Content
+    prefLabel: Content
+    definition: Data or information in a particular form and structure
+    scopeNote:
+      - Content is a concept referring to information used in the context of technologies producing or
+        using them as inputs or outputs
+    broader:
+      - dpv:Data
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Data
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Cookie
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Cookie
+    definition: A HTTP or web or internet cookie
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:LocalStorage
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Customer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Customer
+    definition: Actor that uses Technology directly or indirectly by providing it to Users
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:DataStorage
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Data Storage
+    definition: Technology associated with storage of data
+    broader:
+      - dpv:ProcessingLocation
+      - dpv:StorageLocation
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Database
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Database
+    definition: A database, database management system (DBMS), or application database
+    broader:
+      - dpv:ProcessingLocation
+      - dpv:StorageLocation
+      - tech:DataStorage
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Decision
+    prefLabel: Decision
+    definition: A conclusion or determination of an action or choice in the context of technologies
+    scopeNote:
+      - Decision is a concept referring to activities or tasks in the context of technologies producing
+        or using them as inputs or outputs
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Deployer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Deployer
+    definition: Actor that deploys Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - AI Act
+  - id: tech:DeploymentLocation
+    prefLabel: Deployment Location
+    definition: Location for where technology is deployed and used
+    broader:
+      - dpv:Location
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Location
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Designer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Designer
+    definition: Actor that designs Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:DesktopPC
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Desktop PC
+    definition: A non-portable or fixed personal computer
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:PersonalComputer
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Developer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Developer
+    definition: Actor that develops Technology
+    broader:
+      - tech:Producer
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:DevelopmentPlan
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Development Plan
+    definition: Plan associated with developing technology
+    broader:
+      - tech:Plan
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Device
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Device
+    definition: Device or computing device
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Hardware
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Distributor
+    rdf_type:
+      - tech:Actor
+    prefLabel: Distributor
+    definition: Actor that distributes the Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Documentation
+    prefLabel: Documentation
+    definition: Information describing use, functionality, design, or other technical aspects of the Technology
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Evaluator
+    rdf_type:
+      - tech:Actor
+    prefLabel: Evaluator
+    definition: Actor that evaluates the performance of Technology
+    broader:
+      - tech:Partner
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:Function
+    prefLabel: Function
+    definition: Expression of what goals or purposes the technology's capabilities are being used towards
+      or developed for
+    scopeNote:
+      - Function is a broad concept that can include purposes such as identify verification, capability
+        such as image recognition, or specific security measures such as encryption
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:GNULinux
+    rdf_type:
+      - dpv:Technology
+    prefLabel: GNU/Linux
+    definition: GNU/Linux operating system
+    broader:
+      - tech:OS
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:GPS
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: GPS
+    definition: Technology utilising GPS
+    scopeNote:
+      - This concept models GPS as a networking technology. For representing use of GPS to get current
+        location, see pd:GPSCoordinate and pd:CurrentLocation concepts in PD extension
+    broader:
+      - tech:CommunicationMechanism
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Guide
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Guide
+    definition: Documentation that provides guidance regarding the technology
+    broader:
+      - tech:Documentation
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Hardware
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Hardware
+    definition: Physical parts or components of the technology
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ImageContent
+    prefLabel: Image Content
+    definition: Content that is or has an image component
+    broader:
+      - tech:Content
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Content
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Importer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Importer
+    definition: Actor that imports the Technology within a jurisdiction
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Infrastructure
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Infrastructure as a Service (IaaS) Provision
+    definition: The foundational hardware, software, and other resources to support the operation of systems
+      or services
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Input
+    prefLabel: Input
+    definition: Input to a technology
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:InputAction
+    prefLabel: Input Action
+    definition: Action provided as an input to a technology
+    scopeNote:
+      - Action can mean a physical action, such as the movements involved in robotics
+    broader:
+      - tech:Action
+      - tech:Input
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Action
+      - tech:Input
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:InputData
+    prefLabel: Input Data
+    definition: Data that is provided an input to a technology
+    broader:
+      - dpv:Data
+      - tech:Input
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Data
+      - tech:Input
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:InputOutput
+    prefLabel: Input/Output
+    definition: Forms of inputs and outputs associated with a technology
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Installer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Installer
+    definition: Actor that installs Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:Instructions
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Instructions
+    definition: Instructions related to technology
+    broader:
+      - tech:Documentation
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:IntegratedCircuit
+    rdf_type:
+      - dpv:Technology
+    prefLabel: IntegratedCircuit
+    definition: A integrated electronic chip containing interconnected components to perform specific
+      functions
+    broader:
+      - tech:Hardware
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:IntendedUse
+    prefLabel: Intended Use
+    definition: Describes the 'intended' use of the technology
+    scopeNote:
+      - Intended use can be used to describe how the developer or provider of technology intends it to
+        be used e.g. use a database to store data, and to describe the plan or 'intent' to use the technology
+        by a user or operator e.g. use a database to store and analyse data. Intended Use can involve
+        any concept e.g. DPV's purpose, processing, tech/org measures, and can be low-level purely technical
+        uses such as store data or high-level goals such as legal compliance. Intended Use only describes
+        the intent or ex-ante intention, and may be different from how the technology is being actually
+        used - which is indicated by using isImplementedUsingTechnology in a process or other relevant
+        context.
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2024-05-22'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Internet
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: Internet
+    definition: Technology utilising internet
+    broader:
+      - tech:Networking
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:IoT
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Internet of Things (IoT)
+    definition: IoT is the infrastructure of interconnected entities, people, systems and information
+      resources together with services that process and react to information from the physical world and
+      virtual world
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Hardware
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:IoTDevice
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: IoT Device
+    definition: An entity of an IoT system that interacts and communicates with the physical world through
+      sensing or actuating
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Device
+      - tech:IoT
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:IoTSystem
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: IoT System
+    definition: A specific system that is an implementation or application of the IoT framework and contains
+      interconnected IoT devices and their communication network along with other hardware and software
+      required for providing functionalities
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:IoT
+      - tech:System
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:LaptopPC
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Laptop PC
+    definition: A portal personal computer
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:PersonalComputer
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:License
+    prefLabel: License
+    definition: A legal agreement that allows or provides a license for the use or other operations involving
+      a technology
+    scopeNote:
+      - This concept is derived from license agreements and contracts which are legal bases, and therefore
+        can also be used as a legal basis
+    broader:
+      - dpv:LicenseAgreement
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:LicenseAgreement
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:LifecycleStage
+    prefLabel: Lifecycle Stage
+    definition: A stage within the lifecycle of technology
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:LocalNetwork
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: Local Network
+    definition: Technology utilising local networking
+    broader:
+      - tech:Networking
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:LocalStorage
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Local Storage
+    definition: Storage that is local (e.g. on device)
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:DataStorage
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:MSWindows
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Microsoft Windows
+    definition: Microsoft Windows operating system
+    broader:
+      - tech:OS
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Maintainer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Maintainer
+    definition: Actor that maintains Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:Manual
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Manual
+    definition: Documentation that provides instructions for using, maintaining, developing, or performing
+      other activities regarding the technology
+    broader:
+      - tech:Documentation
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Manufacturer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Manufacturer
+    definition: Actor that manufactures Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:MarketAvailabilityStatus
+    prefLabel: Market Availability Status
+    definition: Status indicating whether Technology is available on the market
+    broader:
+      - tech:TechnologyStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:TechnologyStatus
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:MarketAvailable
+    rdf_type:
+      - tech:MarketAvailabilityStatus
+    prefLabel: Market Available
+    definition: Status indicating Technology is available on the market
+    broader:
+      - tech:MarketAvailabilityStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:MarketUnavailable
+    rdf_type:
+      - tech:MarketAvailabilityStatus
+    prefLabel: Market Unavailable
+    definition: Status indicating Technology is unavailable on the market
+    broader:
+      - tech:MarketAvailabilityStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:MobilePhone
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Mobile Phone
+    definition: Mobile telephone
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Telephone
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Model
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Model
+    definition: A simplified representation or abstraction of a system, process, or concept
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Networking
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: Networking
+    definition: Technology utilising networking
+    broader:
+      - tech:CommunicationMechanism
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:NotProvided
+    rdf_type:
+      - tech:ProvisionStatus
+    prefLabel: Not Provided
+    definition: Status indicating Technology has not been provided
+    broader:
+      - tech:ProvisionStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:OS
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Operating System (OS)
+    definition: Software for managing hardware and other software
+    broader:
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:OperatingEnvironment
+    prefLabel: Operating Environment
+    definition: The environment within which the technology operates
+    scopeNote:
+      - Environment here is a broad term used to refer to the immediate surroundings and parts of it that
+        form the context of where the technology operates, for example a room or in open air where specific
+        machines are set up. This helps describe the expectations and set up of systems and, to specify
+        and compare them against ideal conditions or environments
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2025-05-29'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+    source:
+      - Model Cards by Mitchell et al. (2019)
+  - id: tech:OperatingFactor
+    prefLabel: Operating Factor
+    definition: A 'factor' affecting the operation and outcomes of the technology
+    scopeNote:
+      - Examples of operating factor could be equipment characteristics, lighting conditions for camera
+        operations, connectivity for communications. This helps indicate whether specific factors are
+        ideal i.e. they will give the best performance, or are problematic i.e. they will cause issues
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - rdfs:Class
+    term_status: accepted
+    created:
+      - '2025-05-29'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+    source:
+      - Model Cards by Mitchell et al. (2019)
+  - id: tech:Operator
+    rdf_type:
+      - tech:Actor
+    prefLabel: Operator
+    definition: Actor that operates the Technology
+    scopeNote:
+      - Operator and User are similar concepts but may refer to different actors, for example in the scenario
+        where the user determines what actions to perform on the technology and the operator executes
+        these actions by operating the technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Output
+    prefLabel: Output
+    definition: Output from a technology
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:OutputAction
+    prefLabel: Output Action
+    definition: Action produced as an output from a technology
+    scopeNote:
+      - Action can mean a physical action, such as the movements involved in robotics
+    broader:
+      - tech:Action
+      - tech:Output
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Action
+      - tech:Output
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:OutputData
+    prefLabel: Output Data
+    definition: Data that is produced as an output from a technology
+    broader:
+      - dpv:Data
+      - tech:Output
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Data
+      - tech:Output
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Owner
+    rdf_type:
+      - tech:Actor
+    prefLabel: Owner
+    definition: Actor that owns Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:Partner
+    rdf_type:
+      - tech:Actor
+    prefLabel: Partner
+    definition: Actor that provides services in the context of Technology
+    scopeNote:
+      - '"Partner" is a vague term and should not be used - instead the more specific terms provided in
+        this vocabulary should be used. Partner refers to entities that provide services for the technology
+        (as opposed to for using the technology) - for example to further develop or refine it, or to
+        test or audit it.'
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:PersonalComputer
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Personal Computer (PC)
+    definition: A computing device intended for individual use
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Device
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Plan
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Plan
+    definition: Plan associated with using, maintaining, developing, or performing other activities associated
+      with technology
+    broader:
+      - tech:Documentation
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Platform
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Platform
+    definition: A digital environment that provides tools, infrastructure, and services for developing,
+      deploying, and running applications
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Prediction
+    prefLabel: Prediction
+    definition: An inference or prediction of an action or data or decision in the context of technologies
+    scopeNote:
+      - Prediction is a concept referring to activities or tasks in the context of technologies producing
+        or using them as inputs or outputs
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Producer
+    rdf_type:
+      - tech:Actor
+    prefLabel: Producer
+    definition: Actor that produces Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:Provided
+    rdf_type:
+      - tech:ProvisionStatus
+    prefLabel: Provided
+    definition: Status indicating Technology has been provided
+    broader:
+      - tech:ProvisionStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:ProvidedAsAlgorithmic
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as AlgorithmicProvision
+    definition: Technology provided as an algorithm or method
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsCaaS
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Compute as a Service (CaaS)Provision
+    definition: Technology provided as a cloud service consisting of managed compute resources
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsCloudService
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Cloud ServiceProvision
+    definition: Technology provided as a cloud service
+    broader:
+      - tech:ProvidedAsService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsComponent
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as ComponentProvision
+    definition: Technology provided as a component
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsFixedUse
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Fixed UseProvision
+    definition: Technology provided for using a fixed number of times
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsGoods
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as GoodsProvision
+    definition: Technology provided or used as goods
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsHybridCloudService
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Hybrid Cloud ServiceProvision
+    definition: Technology provided as a cloud service that is both private and public in parts
+    broader:
+      - tech:ProvidedAsPrivateCloudService
+      - tech:ProvidedAsPublicCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-tek-raj-chhetri
+  - id: tech:ProvidedAsIaaS
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Infrastructure as a Service (IaaS)Provision
+    definition: Technology provided as a cloud service consisting of managed infrastructure resources
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsMBaaS
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Mobile backend as a ServiceProvision
+    definition: Technology provided as a cloud service consisting of managed 'backend' services for mobile
+      users
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsPaaS
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Platform as a Service (PaaS)Provision
+    definition: Technology provided as a cloud service consisting of managed platform resources
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsPrivateCloudService
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Private Cloud ServiceProvision
+    definition: Technology provided as a cloud service that is private
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-tek-raj-chhetri
+  - id: tech:ProvidedAsProduct
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as ProductProvision
+    definition: Technology provided as a product
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsPublicCloudService
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Public Cloud ServiceProvision
+    definition: Technology provided as a cloud service that is public
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-tek-raj-chhetri
+  - id: tech:ProvidedAsSaaS
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Software as a Service (SaaS)Provision
+    definition: Technology provided as a cloud service consisting of managed software resources
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsServerlessComputing
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as Serverless ComputingProvision
+    definition: Technology provided as a cloud service consisting of fully managed servers for executing
+      functions
+    broader:
+      - tech:ProvidedAsCloudService
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2024-05-09'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsService
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as ServiceProvision
+    definition: Technology provided or used as service(s)
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsSubscription
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as SubscriptionProvision
+    definition: Technology that is provided or used as a periodic subscription
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvidedAsSystem
+    rdf_type:
+      - tech:ProvisionMethod
+    prefLabel: Provided as SystemProvision
+    definition: Technology provided as a system
+    broader:
+      - tech:ProvisionMethod
+    inScheme:
+      - tech:provision-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: modified
+    created:
+      - '2022-06-15'
+    modified: '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Provider
+    rdf_type:
+      - tech:Actor
+    prefLabel: Provider
+    definition: Actor that provides Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:ProvisionMethod
+    prefLabel: Provision Method
+    definition: Method associated with provision or use of technology
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:core-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Technology
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    modified: '2024-05-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:ProvisionStatus
+    prefLabel: Provision Status
+    definition: Status indicating whether Technology has been provided
+    broader:
+      - tech:TechnologyStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:TechnologyStatus
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Purchaser
+    rdf_type:
+      - tech:Actor
+    prefLabel: Purchaser
+    definition: Actor that purchases Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:Recommendation
+    prefLabel: Recommendation
+    definition: A recommendation or suggestion of an action or decision or choice in the context of technologies
+    scopeNote:
+      - Recommendation is a concept referring to activities or tasks in the context of technologies producing
+        or using them as inputs or outputs
+    broader:
+      - tech:InputOutput
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Service
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Service
+    definition: The carrying out of a specific task or set of tasks as a service
+    scopeNote:
+      - This concept is distinct from dpv:Service as it represents the notion of a technical service whereas
+        dpv:Service can also refer to organisational, legal, social, and other meanings of service
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Smartphone
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Smartphone
+    definition: A combination of a mobile phone with computing capabilities similar to a PC
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:MobilePhone
+      - tech:PersonalComputer
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:SmartphoneApplication
+    rdf_type:
+      - dpv:Location
+      - dpv:Technology
+    prefLabel: Smartphone Application
+    definition: A computing or digital program on a smartphone device
+    broader:
+      - dpv:LocalLocation
+      - dpv:ProcessingLocation
+      - tech:Application
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Software
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Software
+    definition: Virtual parts or components of the technology such as programs and data
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:SoftwareAgent
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Software Agent
+    definition: A software that acts on behalf of another Entity or technology
+    broader:
+      - dpv:Agent
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:SoftwareFramework
+    rdf_type:
+      - dpv:Technology
+    prefLabel: SoftwareFramework
+    definition: An opinionated collection of functions and architecture design choices for building applications
+    broader:
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:SoftwareLibrary
+    rdf_type:
+      - dpv:Technology
+    prefLabel: SoftwareLibrary
+    definition: A collection of pre-built and reusable functions for use in development and management
+      of software
+    broader:
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:Specification
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Specification
+    definition: Documentation that specifies requirements that must be satisfied by the technology
+    broader:
+      - tech:Documentation
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:Subject
+    rdf_type:
+      - tech:Actor
+    prefLabel: Subject
+    definition: Actor that is subjected to the use or impact of Technology
+    scopeNote:
+      - Subject can be a human or non-human entity. To explicitly indicate that the subject is a human,
+        and to reuse DPV's human subject taxonomy, the tech:Subject should also be defined as an instance
+        or category of dpv:HumanSubject
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:Supplier
+    rdf_type:
+      - tech:Actor
+    prefLabel: Supplier
+    definition: Actor that supplies Technology
+    broader:
+      - tech:Actor
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - DGA 26.3
+  - id: tech:System
+    rdf_type:
+      - dpv:Technology
+    prefLabel: System
+    definition: A collection of components that interact to achieve a specific goal or function
+    broader:
+      - dpv:Technology
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:SystemIntegrator
+    rdf_type:
+      - tech:Actor
+    prefLabel: System Integrator
+    definition: Actor that integrates Technology in to (larger) systems
+    broader:
+      - tech:Partner
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:TechnologyReadinessLevel
+    prefLabel: Technology Readiness Level (TRL)
+    definition: Indication of maturity of Technology (ISO 16290:2013)
+    broader:
+      - tech:TechnologyStatus
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:TechnologyStatus
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:TechnologyStatus
+    prefLabel: Technology Status
+    definition: Status associated with development, deployment, and use of technology
+    broader:
+      - dpv:Status
+    inScheme:
+      - tech:status-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - dpv:Status
+    term_status: accepted
+    created:
+      - '2024-05-31'
+  - id: tech:Telephone
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Telephone
+    definition: Telephone
+    broader:
+      - tech:Device
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:TestingPlan
+    rdf_type:
+      - tech:Documentation
+    prefLabel: Testing Plan
+    definition: Plan associated with testing technology
+    broader:
+      - tech:Plan
+    inScheme:
+      - tech:docs-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:TextualContent
+    prefLabel: Textual Content
+    definition: Content that is or has a textual component
+    broader:
+      - tech:Content
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Content
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:User
+    rdf_type:
+      - tech:Actor
+    prefLabel: User
+    definition: Actor that uses Technology
+    broader:
+      - tech:Customer
+    inScheme:
+      - tech:actors-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: tech:UserAgent
+    rdf_type:
+      - dpv:Technology
+    prefLabel: User-Agent
+    definition: A software agent that represents a person (i.e. a human)
+    scopeNote:
+      - User Agent as defined here specifically represents software agents that represent humans, whether
+        directly or indirectly, based on the well-defined use of this term in Web interactions. Software
+        that is not representing a human but which acts or declares itself as a user agent is termed as
+        'user agent spoofing' (see https://developer.mozilla.org/en-US/docs/Glossary/User_agent)
+    broader:
+      - tech:SoftwareAgent
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:VideoContent
+    prefLabel: Video Content
+    definition: Content that is or has a video component
+    broader:
+      - tech:Content
+    inScheme:
+      - tech:io-classes
+    isDefinedBy:
+      - 'tech:'
+    subClassOf:
+      - tech:Content
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:WebScraper
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Web Scraper
+    definition: Software that extracts data from websites to implement collection practices colloquially
+      called "web scraping"
+    broader:
+      - tech:Software
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: tech:WiFi
+    rdf_type:
+      - tech:CommunicationMechanism
+    prefLabel: WiFi
+    definition: Technology utilising Wi-Fi wireless networking
+    broader:
+      - tech:Networking
+    inScheme:
+      - tech:comms-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:iOS
+    rdf_type:
+      - dpv:Technology
+    prefLabel: iOS
+    definition: iOS operating system
+    broader:
+      - tech:OS
+    inScheme:
+      - tech:tools-classes
+    isDefinedBy:
+      - 'tech:'
+    term_status: accepted
+    created:
+      - '2022-06-15'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+properties:
+  - id: tech:hasAPI
+    prefLabel: has api
+    definition: Indicates the technology has or uses the associated api
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:API
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasActor
+    prefLabel: has actor
+    definition: Indicates an actor associated with technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:TechnologyActor
+    term_status: accepted
+    created:
+      - '2022-10-21'
+    modified: '2024-05-17'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasAlgorithm
+    prefLabel: has algorithm
+    definition: Indicates the technology has or uses the associated algorithm
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Algorithm
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasApplication
+    prefLabel: has application
+    definition: Indicates the technology has or uses the associated application
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Application
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasAuditor
+    prefLabel: has auditor
+    definition: Indicates technology auditor
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Auditor
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasCapability
+    prefLabel: has capability
+    definition: Indicates the capability of the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    example:
+      - dex:E0064
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Capability
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:hasCommunicationMechanism
+    prefLabel: has communication mechanism
+    definition: Indicates communication mechanisms used or provided by technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:CommunicationMechanism
+    term_status: accepted
+    created:
+      - '2022-07-02'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasComponent
+    prefLabel: has component
+    definition: Indicates the system has or uses the associated component
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:System
+    rangeIncludes:
+      - tech:Component
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasCustomer
+    prefLabel: has customer
+    definition: Indicates technology customer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Customer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDeployer
+    prefLabel: has deployer
+    definition: Indicates technology deployer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Deployer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDeploymentLocation
+    prefLabel: has deployment location
+    definition: Specifies the location of technology deployment and use
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:DeploymentLocation
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDesigner
+    prefLabel: has designer
+    definition: Indicates technology designer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Designer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDeveloper
+    prefLabel: has developer
+    definition: Indicates technology developer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Developer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDevice
+    prefLabel: has device
+    definition: Indicates the technology has or uses the associated device
+    broader:
+      - tech:hasHardware
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasHardware
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Device
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasDocumentation
+    prefLabel: has documentation
+    definition: Indicates documentation associated with technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Documentation
+    term_status: accepted
+    created:
+      - '2024-06-29'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasEvaluator
+    prefLabel: has evaluator
+    definition: Indicates technology evaluator
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Evaluator
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasFunction
+    prefLabel: has function
+    definition: Indicates the function of the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Function
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:hasHardware
+    prefLabel: has hardware
+    definition: Indicates the technology has or uses the associated hardware
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Hardware
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasInfrastructure
+    prefLabel: has infrastructure
+    definition: Indicates the technology has or uses the associated infrastructure
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Infrastructure
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasInput
+    prefLabel: has input
+    definition: Indicates the input associated with the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Input
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasInputAction
+    prefLabel: has input action
+    definition: Indicates the input action associated with the technology
+    broader:
+      - tech:hasInput
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasInput
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Action
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasInputData
+    prefLabel: has input data
+    definition: Indicates the input data associated with the technology
+    broader:
+      - dpv:hasData
+      - tech:hasInput
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasData
+      - tech:hasInput
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:InputData
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasInstaller
+    prefLabel: has installer
+    definition: Indicates technology installer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Installer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasIntendedUse
+    prefLabel: has intended use
+    definition: Indicates the intended use of technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:IntendedUse
+    term_status: accepted
+    created:
+      - '2024-05-22'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasLicense
+    prefLabel: has license
+    definition: Indicates the license associated with the technology
+    broader:
+      - dpv:hasLegalBasis
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasLegalBasis
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:License
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasLifecycleStage
+    prefLabel: has lifecycle stage
+    definition: Indicates the lifecycle stage associated with the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:LifecycleStage
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasMaintainer
+    prefLabel: has maintainer
+    definition: Indicates technology maintainer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Maintainer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasManufacturer
+    prefLabel: has manufacturer
+    definition: Indicates technology manufacturer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Manufacturer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasMarketAvailabilityStatus
+    prefLabel: has market availability status
+    definition: Indicates whether the technology is available on the market
+    broader:
+      - dpv:hasStatus
+    inScheme:
+      - tech:status-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasStatus
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:MarketAvailabilityStatus
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:hasModel
+    prefLabel: has model
+    definition: Indicates the technology has or uses the associated model
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Model
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasOperatingEnvironment
+    prefLabel: has operating environment
+    definition: Indicates the operating environment for the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    rangeIncludes:
+      - tech:OperatingEnvironment
+    term_status: accepted
+    created:
+      - '2025-05-29'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+  - id: tech:hasOperatingFactor
+    prefLabel: has operating factor
+    definition: Indicates the operating factor for the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:OperatingFactor
+    term_status: accepted
+    created:
+      - '2025-05-29'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-paul-ryan
+  - id: tech:hasOutput
+    prefLabel: has output
+    definition: Indicates the output associated with the technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Output
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasOutputAction
+    prefLabel: has output action
+    definition: Indicates the output action associated with the technology
+    broader:
+      - tech:hasOutput
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasOutput
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Action
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasOutputData
+    prefLabel: has output data
+    definition: Indicates the output data associated with the technology
+    broader:
+      - dpv:hasData
+      - tech:hasOutput
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasData
+      - tech:hasOutput
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:OutputData
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasOwner
+    prefLabel: has owner
+    definition: Indicates technology owner
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Owner
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasPartner
+    prefLabel: has partner
+    definition: Indicates technology partner
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Partner
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasPlatform
+    prefLabel: has platform
+    definition: Indicates the technology has or uses the associated platform
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Platform
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasProducer
+    prefLabel: has producer
+    definition: Indicates technology producer
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Producer
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasProvider
+    prefLabel: has provider
+    definition: Indicates technology provider
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Provider
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasProvisionMethod
+    prefLabel: has provision method
+    definition: Specifies the provision or usage method of technology
+    inScheme:
+      - tech:core-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:ProvisionMethod
+    term_status: accepted
+    created:
+      - '2022-07-02'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasProvisionStatus
+    prefLabel: has provision status
+    definition: Indicates whether the technology has been provided
+    broader:
+      - dpv:hasStatus
+    inScheme:
+      - tech:status-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasStatus
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:ProvisionStatus
+    term_status: accepted
+    created:
+      - '2024-05-09'
+  - id: tech:hasPurchaser
+    prefLabel: has purchaser
+    definition: Indicates technology purchaser
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Purchaser
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasService
+    prefLabel: has service
+    definition: Indicates the technology has or uses the associated service
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Service
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasSoftware
+    prefLabel: has software
+    definition: Indicates the technology has or uses the associated software
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Software
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasSubject
+    prefLabel: has subject
+    definition: Indicates technology subject
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Subject
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasSupplier
+    prefLabel: has supplier
+    definition: Indicates technology supplier
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:Supplier
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasSystem
+    prefLabel: has system
+    definition: Indicates the technology has or uses the associated system
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:System
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasSystemIntegrator
+    prefLabel: has system integrator
+    definition: Indicates technology system integrator
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:SystemIntegrator
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasTRL
+    prefLabel: has TRL
+    definition: Indicates technology maturity level
+    broader:
+      - dpv:hasStatus
+    inScheme:
+      - tech:status-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - dpv:hasStatus
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:TechnologyReadinessLevel
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:hasUser
+    prefLabel: has user
+    definition: Indicates technology user
+    broader:
+      - tech:hasActor
+    inScheme:
+      - tech:actors-properties
+    isDefinedBy:
+      - 'tech:'
+    subPropertyOf:
+      - tech:hasActor
+    domainIncludes:
+      - dpv:Technology
+    rangeIncludes:
+      - tech:User
+    term_status: accepted
+    created:
+      - '2024-05-09'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: tech:isComponentOf
+    prefLabel: is component of
+    definition: Indicates the component is part of the associated system
+    inScheme:
+      - tech:tools-properties
+    isDefinedBy:
+      - 'tech:'
+    domainIncludes:
+      - tech:Component
+    rangeIncludes:
+      - dpv:System
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit

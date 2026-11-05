@@ -1,0 +1,17 @@
+---
+id: dpv:GlobalScale
+rdf_type:
+  - dpv:GeographicCoverage
+prefLabel: Global Scale
+definition: Geographic coverage spanning the entire globe
+broader:
+  - dpv:GeographicCoverage
+inScheme:
+  - dpv:processing-scale-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

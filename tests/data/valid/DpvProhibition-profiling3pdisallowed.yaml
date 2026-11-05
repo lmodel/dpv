@@ -1,0 +1,16 @@
+---
+id: ieee-7012:Profiling3PDisallowed
+rdf_type:
+  - dpv:Prohibition
+  - ieee-7012:ProfilingTerm
+prefLabel: Profiling Disallowed For Third Party
+definition: Term that indicates Profiling is not allowed by 3rd Parties
+broader:
+  - ieee-7012:ProfilingDisallowed
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

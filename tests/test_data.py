@@ -1,153 +1,169 @@
-"""Data test.
+"""Data tests: every example against the JSON Schema the validator generates, and the rules
+on DPV's data that no generator carries."""
 
-Validates example YAML fixtures against the dpv LinkML schema using
-``linkml.validator.Validator`` (JSON-Schema based, open-world) rather
-than instantiating generated dataclasses. The dpv schema deliberately
-declares DPV properties as domainless (open-world) on ``DpvThing``, so
-the generated Pydantic / dataclass ``__init__`` would reject any DPV
-property that is not explicitly modelled on a concrete subclass. The
-LinkML validator honours the schema's open-world intent and matches
-what ``just _test-examples`` (``linkml-run-examples``) does at the CLI.
-"""
-
-import glob
-import os
+import json
+from functools import cache
 from pathlib import Path
 
+import jsonschema
 import pytest
-from linkml.validator import Validator
-from linkml.validator.loaders import YamlLoader
-from linkml.validator.plugins import JsonschemaValidationPlugin
-from linkml_runtime.utils.schemaview import SchemaView
+import yaml
+from linkml.generators.jsonschemagen import JsonSchemaGenerator
+from linkml.validator import validate
+from linkml_runtime import SchemaView
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-DATA_ROOT = Path(__file__).parent / "data"
-# Use the pre-merged, self-contained schema produced by `just _merged-schema`
-# (see `scripts/linkml_import_tools.py merge`). The source `src/dpv/schema/dpv.yaml`
-# imports `dpv:schema/dpv_core` via a URI-style CURIE; resolving that
-# import requires the build-time import map, and `SchemaView` falls back
-# to fetching the URI over HTTP without it (404 on the w3id IRI - see
-# ISSUE.md §8/§9). The merged YAML has `imports:` already flattened, so
-# no import resolution is needed at test time.
-SCHEMA_PATH = REPO_ROOT / "tmp" / "dpv.yaml"
+from tests import conversion
+from tests.dpv_rules import rule_errors
 
-# Recursively pick up every YAML example under tests/data/**/valid/ and
-# tests/data/**/invalid/ so that subordinate corpora (e.g. dpvcg/) are
-# exercised alongside the top-level valid/ and invalid/ directories.
-VALID_EXAMPLE_FILES = sorted(
-    glob.glob(os.path.join(DATA_ROOT, "**", "valid", "*.yaml"), recursive=True)
-)
-INVALID_EXAMPLE_FILES = sorted(
-    glob.glob(os.path.join(DATA_ROOT, "**", "invalid", "*.yaml"), recursive=True)
-)
+SCHEMA = conversion.SCHEMA
+DATA = Path(__file__).parent / "data"
+VALID = sorted((DATA / "valid").glob("*.yaml"))
+INVALID = sorted((DATA / "invalid").glob("*.yaml"))
+PROBLEM_INVALID = sorted((DATA / "problem" / "invalid").glob("*.yaml"))
 
 
-@pytest.fixture(scope="session")
-def schema_view() -> SchemaView:
-    if not SCHEMA_PATH.exists():
-        pytest.skip(
-            f"Merged schema not found at {SCHEMA_PATH}. "
-            "Run `just _merged-schema` first (or `just gen-project`)."
-        )
-    return SchemaView(str(SCHEMA_PATH))
+@cache
+def definitions():
+    """The class definitions of the JSON Schema that linkml-validate generates. Generating
+    it once keeps the run short; test_validator_agrees checks that linkml-validate gives the
+    same answers."""
+    return json.loads(JsonSchemaGenerator(str(SCHEMA), mergeimports=True).serialize())[
+        "$defs"
+    ]
 
 
-@pytest.fixture(scope="session")
-def validator(schema_view: SchemaView) -> Validator:
-    """Build a single ``Validator`` over the merged dpv schema.
-
-    Uses the pre-merged, self-contained YAML at ``tmp/dpv.yaml`` so
-    there are no URI imports left for ``SchemaView`` to (mis-)resolve.
-    """
-    return Validator(schema_view.schema, validation_plugins=[JsonschemaValidationPlugin()])
+def errors(instance, class_name):
+    schema = {"$ref": f"#/$defs/{class_name}", "$defs": definitions()}
+    validator = jsonschema.validators.validator_for(schema)(schema)
+    return list(validator.iter_errors(instance))
 
 
-def _target_class_for(filepath: str) -> str:
-    """Filename convention: ``<TargetClass>-...yaml``."""
-    return Path(filepath).stem.split("-")[0]
+def pointer(error):
+    return "/" + "/".join(str(part) for part in error.absolute_path)
 
 
-def _normalize_target(value: str) -> str:
-    return "".join(ch.lower() for ch in value if ch.isalnum())
+def class_of(path):
+    return path.stem.split("-")[0]
 
 
-def _iter_candidate_names(value: str) -> list[str]:
-    candidates = {value}
-    if ":" in value:
-        candidates.add(value.split(":", 1)[1])
-    if "#" in value:
-        candidates.add(value.rsplit("#", 1)[1])
-    if "/" in value:
-        candidates.add(value.rstrip("/").rsplit("/", 1)[1])
-    return [c for c in candidates if c]
-
-
-def _build_target_index(sv: SchemaView) -> dict[str, str]:
-    index: dict[str, str] = {}
-    for class_name, class_def in sv.schema.classes.items():
-        raw_names: list[str] = [class_name]
-        if getattr(class_def, "name", None):
-            raw_names.append(class_def.name)
-        if getattr(class_def, "class_uri", None):
-            raw_names.append(class_def.class_uri)
-        raw_names.extend(getattr(class_def, "aliases", []) or [])
-        for raw in raw_names:
-            for candidate in _iter_candidate_names(str(raw)):
-                index.setdefault(_normalize_target(candidate), class_name)
-    return index
-
-
-@pytest.fixture(scope="session")
-def target_index(schema_view: SchemaView) -> dict[str, str]:
-    return _build_target_index(schema_view)
-
-
-def _resolve_target_class(
-    requested: str,
-    schema_view: SchemaView,
-    target_index: dict[str, str],
-    fallback_class: str = "DpvThing",
-) -> str:
-    classes = schema_view.schema.classes
-    if requested in classes:
-        return requested
-    resolved = target_index.get(_normalize_target(requested))
-    if resolved:
-        return resolved
-    if fallback_class in classes:
-        return fallback_class
-    return requested
-
-
-@pytest.mark.parametrize("filepath", VALID_EXAMPLE_FILES)
-def test_valid_data_files(filepath, validator, schema_view, target_index):
-    """Each valid fixture must validate against its target class."""
-    target_class = _resolve_target_class(
-        _target_class_for(filepath),
-        schema_view,
-        target_index,
+def fails_at(path):
+    lines = path.read_text(encoding="utf-8").splitlines()
+    assert lines[1].startswith("# Fails at: "), (
+        f"{path.name}: the second line says where"
     )
-    report = validator.validate_source(
-        YamlLoader(filepath), target_class=target_class
-    )
-    assert not report.results, (
-        f"{Path(filepath).name} (target={target_class}) failed validation:\n"
-        + "\n".join(f"  - {r.severity}: {r.message}" for r in report.results)
-    )
+    return lines[1].removeprefix("# Fails at: ").strip()
 
 
-@pytest.mark.parametrize("filepath", INVALID_EXAMPLE_FILES)
-def test_invalid_data_files(filepath, validator, schema_view, target_index):
-    """Each invalid fixture must fail validation against its target class."""
-    target_class = _resolve_target_class(
-        _target_class_for(filepath),
-        schema_view,
-        target_index,
-    )
-    report = validator.validate_source(
-        YamlLoader(filepath), target_class=target_class
-    )
-    assert report.results, (
-        f"{Path(filepath).name} (target={target_class}) was expected to fail "
-        "validation but no validation errors were reported."
-    )
+def places(error):
+    """Where an error points: its own place, or, for an anyOf that no branch met, the place
+    inside the branch that could have been meant. An optional value's branches are the value
+    and null, so its error points inside the value."""
+    if error.validator != "anyOf" or not error.context:
+        return {pointer(error)}
+    branches = {}
+    for sub in error.context:
+        branches.setdefault(sub.relative_schema_path[0], []).append(sub)
+    real = [
+        subs
+        for subs in branches.values()
+        if not any(s.validator == "type" and s.validator_value == "null" for s in subs)
+    ]
+    if len(real) != 1:
+        return {pointer(error)}
+    found = set()
+    for sub in real[0]:
+        found |= places(sub)
+    return found or {pointer(error)}
+
+
+def test_the_example_folders_hold_examples():
+    """The parametrized tests below pass on an empty folder, so this one does not."""
+    assert len(VALID) >= 160, len(VALID)
+    assert len(INVALID) >= 50, len(INVALID)
+    assert len(PROBLEM_INVALID) >= 14, len(PROBLEM_INVALID)
+
+
+@pytest.mark.parametrize("path", VALID, ids=lambda p: p.stem)
+def test_valid_examples_validate(path):
+    instance = yaml.safe_load(path.read_text(encoding="utf-8"))
+    found = errors(instance, class_of(path))
+    assert not found, [f"{pointer(e)}: {e.message[:200]}" for e in found]
+
+
+def test_the_small_catalogue_keeps_the_rules():
+    """The valid tree root breaks none of the rules, resolving only against itself."""
+    instance = yaml.safe_load((DATA / "valid" / "DpvCatalogue-small.yaml").read_text())
+    found = rule_errors(instance, whole_edition=False)
+    assert not found, found
+
+
+@pytest.mark.parametrize("path", INVALID, ids=lambda p: p.stem)
+def test_counter_examples_fail_where_they_say(path):
+    """Every counter-example fails at the place its first comment names, and nowhere else but
+    on the way to it, so a file that starts failing for another reason fails this test."""
+    where = fails_at(path)
+    found = errors(yaml.safe_load(path.read_text(encoding="utf-8")), class_of(path))
+    assert found, "it validates"
+    reached = set().union(*(places(e) for e in found))
+    report = [f"{pointer(e)}: {e.message[:200]}" for e in found]
+    assert where in reached, (sorted(reached), report)
+    on_the_way = {
+        p for p in reached if where == p or where.startswith(p.rstrip("/") + "/")
+    }
+    assert reached == on_the_way, (sorted(reached - on_the_way), report)
+
+
+@pytest.mark.parametrize("path", PROBLEM_INVALID, ids=lambda p: p.stem)
+def test_rule_counter_examples_fail_where_they_say(path):
+    """A counter-example under problem/invalid/ passes the JSON Schema, which cannot state
+    its rule, and fails only the rule its first comment points to."""
+    where = fails_at(path)
+    instance = yaml.safe_load(path.read_text(encoding="utf-8"))
+    found = errors(instance, class_of(path))
+    assert not found, [f"{pointer(e)}: {e.message[:200]}" for e in found]
+    assert [p for p, _ in rule_errors(instance)] == [where]
+
+
+def test_validator_agrees():
+    """linkml-validate, which the docs tell a user to run, accepts a valid example and
+    rejects a counter-example at the same place."""
+    good = DATA / "valid" / "DpvCatalogue-small.yaml"
+    report = validate(yaml.safe_load(good.read_text()), SCHEMA, "DpvCatalogue")
+    assert not report.results, [r.message for r in report.results]
+    bad = DATA / "invalid" / "DpvResource-value-free-text.yaml"
+    report = validate(yaml.safe_load(bad.read_text()), SCHEMA, "DpvResource")
+    assert any("to market things" in r.message for r in report.results), [
+        r.message for r in report.results
+    ]
+
+
+def test_every_concrete_class_has_an_example():
+    """Each class a record can take has a valid example, and so does the root."""
+    view = SchemaView(str(SCHEMA))
+    concrete = {
+        name
+        for name, cls in view.all_classes().items()
+        if not cls.abstract and not cls.mixin
+    }
+    examples = {class_of(path) for path in VALID}
+    assert concrete == examples, sorted(concrete ^ examples)
+
+
+def test_each_kinds_example_is_a_real_record():
+    """A kind's example is a copy of a term of the kind, so nothing is made up."""
+    terms = conversion.terms()
+    classes = conversion.all_classes()
+    checked = 0
+    for path in VALID:
+        name = class_of(path)
+        cls = classes[name]
+        if "dpv_kinds" not in str(cls.get("is_a", "")) and cls.get("is_a") is None:
+            continue
+        instance = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if instance.get("id") not in terms or name in ("DpvResource",):
+            continue
+        assert instance == terms[instance["id"]], path.name
+        if "class_uri" in cls and name not in ("DpvConcept", "DpvProperty"):
+            assert cls["class_uri"] in instance["rdf_type"], path.name
+        checked += 1
+    assert checked >= 150

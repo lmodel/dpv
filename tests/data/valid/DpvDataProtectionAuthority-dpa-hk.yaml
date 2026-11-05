@@ -1,0 +1,23 @@
+---
+id: legal-hk:DPA-HK
+rdf_type:
+  - dpv:DataProtectionAuthority
+prefLabel: Office of the Privacy Commissioner for Personal Data (PCPD)
+broader:
+  - dpv:DataProtectionAuthority
+  - dpv:Law
+inScheme:
+  - legal-hk:hk-classes
+isDefinedBy:
+  - 'legal-hk:'
+term_status: accepted
+created:
+  - '2025-03-19'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-arthit-suriyawongkul
+homepage: https://www.pcpd.org.hk/
+hasApplicableLaw:
+  - legal-hk:law-PDPO
+hasJurisdiction:
+  - loc:HK

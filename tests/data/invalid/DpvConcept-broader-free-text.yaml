@@ -1,0 +1,6 @@
+---
+# Fails at: /broader/0
+id: dpv:Example
+prefLabel: An example
+broader:
+  - a free text value

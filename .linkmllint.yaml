@@ -1,0 +1,18 @@
+# linkml-lint reads this file from the directory `just lint` runs in. The recommended rules
+# apply, with the naming rule fitted to DPV's names. Slots keep the local names of the DPV,
+# SKOS and Dublin Core properties they render, so a record's keys are the terms a DPV
+# description in RDF uses. Those names are lowerCamelCase (hasPurpose, prefLabel), and a
+# German label adds a _de suffix. Where two DPV namespaces define one name, all but the
+# core's take the namespace and an underscore first (eu_aiact_hasRiskLevel). Class names
+# keep the rule's usual form.
+#
+# canonical_prefixes is off because a DPV document's prefixes are DPV's own. The rule's
+# registry gives loc:, legal:, sw:, spl:, ex: and profile: to other namespaces, and renaming
+# them here would make a record's CURIEs differ from DPV's.
+extends: recommended
+rules:
+  canonical_prefixes:
+    level: disabled
+  standard_naming:
+    level: error
+    slot_pattern: "^([a-z0-9]+(_[a-z0-9]+)*_)?[A-Za-z][A-Za-z0-9]*(_de)?$"

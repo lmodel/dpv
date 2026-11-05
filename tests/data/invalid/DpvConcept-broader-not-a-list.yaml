@@ -1,0 +1,5 @@
+---
+# Fails at: /broader
+id: dpv:Example
+prefLabel: An example
+broader: dpv:Purpose

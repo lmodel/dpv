@@ -1,0 +1,17 @@
+---
+id: eu-gdpr:DPIAOutcomeDPAConsultation
+rdf_type:
+  - eu-gdpr:DPIAOutcomeStatus
+prefLabel: DPIA Outcome DPA Consultation
+definition: DPIA outcome status indicating a DPA consultation is required
+broader:
+  - eu-gdpr:DPIAOutcomeStatus
+inScheme:
+  - eu-gdpr:dpia-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2022-06-22'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

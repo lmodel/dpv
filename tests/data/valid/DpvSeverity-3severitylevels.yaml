@@ -1,0 +1,17 @@
+---
+id: risk:3SeverityLevels
+rdf_type:
+  - dpv:Severity
+prefLabel: 3 Severity Levels
+definition: Scale with 3 Severity Levels from High to Low
+broader:
+  - dpv:Severity
+inScheme:
+  - risk:risk-levels-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2022-08-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

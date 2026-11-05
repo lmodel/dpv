@@ -1,0 +1,18 @@
+---
+id: dpv:NoticeCommunicated
+rdf_type:
+  - dpv:NoticeStatus
+prefLabel: Notice Communicated
+definition: Status indicating the notice has been communicated
+broader:
+  - dpv:NoticeStatus
+inScheme:
+  - dpv:notice-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,17 @@
+---
+id: dpv:AuditApproved
+rdf_type:
+  - dpv:AuditStatus
+prefLabel: Audit Approved
+definition: State of being approved through the audit
+broader:
+  - dpv:AuditStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-05-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

@@ -1,0 +1,19 @@
+---
+id: dpv:FeeNotRequired
+rdf_type:
+  - dpv:FeeRequirement
+prefLabel: Fee Not Required
+definition: Concept indicating a fee is not required. This is distinct from a Fee of zero as it indicates
+  a fee is not applicable in the context
+broader:
+  - dpv:FeeRequirement
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'
+contributor:
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

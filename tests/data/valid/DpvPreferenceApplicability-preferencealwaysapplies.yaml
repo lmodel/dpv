@@ -1,0 +1,16 @@
+---
+id: ieee-7012:PreferenceAlwaysApplies
+rdf_type:
+  - ieee-7012:PreferenceApplicability
+prefLabel: Preference Always Applies
+definition: Term that indicates the privacy preference always applies in all contexts and should always
+  be used in agreements and negotiations
+broader:
+  - ieee-7012:PreferenceApplicability
+inScheme:
+  - ieee-7012:privacy-term-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

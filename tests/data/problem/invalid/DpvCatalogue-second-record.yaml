@@ -1,0 +1,8 @@
+---
+# Fails at: /concepts/1/id
+edition: '2.3'
+family: core
+concepts:
+  - &id001
+    id: dpv:Purpose
+  - *id001

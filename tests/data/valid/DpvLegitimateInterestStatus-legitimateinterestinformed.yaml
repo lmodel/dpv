@@ -1,0 +1,15 @@
+---
+id: dpv:LegitimateInterestInformed
+rdf_type:
+  - dpv:LegitimateInterestStatus
+prefLabel: Legitimate InterestInformed
+definition: Status where the Legitimate Interest was informed to the data subject or other relevant entities
+broader:
+  - dpv:LegitimateInterestStatus
+inScheme:
+  - dpv:legal-basis-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

@@ -1,0 +1,9 @@
+---
+# Fails at: /agents/0/memberOf/0
+edition: '2.3'
+family: core
+agents:
+  - id: dpv_agent:person-a
+    name: A
+    memberOf:
+      - dpv_agent:org-nobody

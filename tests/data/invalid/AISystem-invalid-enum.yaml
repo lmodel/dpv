@@ -1,4 +1,0 @@
-# id is required but missing — 'id' is a required property
-# (original intent: ai_type enum validation — not enforced by open-world JSON Schema)
-name: "Bad AI"
-ai_type: INVALID_AI_TYPE

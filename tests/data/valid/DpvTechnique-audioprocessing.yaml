@@ -1,0 +1,22 @@
+---
+id: ai:AudioProcessing
+rdf_type:
+  - ai:Technique
+prefLabel: Audio Processing
+definition: Technique involving processing audio
+broader:
+  - ai:Technique
+inScheme:
+  - ai:techniques-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source_page:
+  - page_name: AI Watch
+    url: https://ai-watch.ec.europa.eu/
+  - page_name: Defining Artificial Intelligence 2.0
+    url: https://publications.jrc.ec.europa.eu/repository/handle/JRC126426

@@ -1,0 +1,21 @@
+---
+id: dpv:NotRequired
+rdf_type:
+  - dpv:Necessity
+prefLabel: Not Required
+definition: Indication of neither being required nor optional i.e. not relevant or needed
+broader:
+  - dpv:Necessity
+inScheme:
+  - dpv:context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-02-15'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake
+  - dpv_agent:person-paul-ryan

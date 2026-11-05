@@ -1,0 +1,19 @@
+---
+id: eu-gdpr:DataBreachJustification
+rdf_type:
+  - dpv:Justification
+prefLabel: Data Breach Justification
+definition: A Justification used in the context of data breach related processes and communications
+broader:
+  - dpv:Justification
+inScheme:
+  - eu-gdpr:data-breach-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2024-12-17'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit

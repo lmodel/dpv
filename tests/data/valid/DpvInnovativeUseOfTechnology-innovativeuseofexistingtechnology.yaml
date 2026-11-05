@@ -1,0 +1,15 @@
+---
+id: dpv:InnovativeUseOfExistingTechnology
+rdf_type:
+  - dpv:InnovativeUseOfTechnology
+prefLabel: Innovative Use of Existing Technologies
+definition: Involvement of existing technologies used in an innovative manner
+broader:
+  - dpv:InnovativeUseOfTechnology
+inScheme:
+  - dpv:processing-context-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2023-12-10'

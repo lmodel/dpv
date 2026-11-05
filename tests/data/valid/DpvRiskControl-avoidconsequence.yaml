@@ -1,0 +1,19 @@
+---
+id: risk:AvoidConsequence
+rdf_type:
+  - risk:RiskControl
+prefLabel: Avoid Consequence
+definition: Control that proactively avoids the consequence such that it has a reduced exposure or applicability
+  in the context
+broader:
+  - risk:AvoidanceControl
+  - risk:ConsequenceControl
+inScheme:
+  - risk:risk-controls-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2025-01-06'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

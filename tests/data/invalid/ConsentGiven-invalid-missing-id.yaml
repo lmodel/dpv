@@ -1,4 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for ConsentGiven
-# (original intent: Consent-invalid-missing-id — missing required id for consent entities)
-has_consent_status: dpv:ConsentGiven
-has_data_subject: ex:ds-001

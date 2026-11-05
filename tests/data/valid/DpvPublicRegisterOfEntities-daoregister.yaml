@@ -1,0 +1,19 @@
+---
+id: eu-dga:DAORegister
+rdf_type:
+  - dpv:PublicRegisterOfEntities
+prefLabel: Public Register of Data Altruism Organisations
+definition: Registry containing list of recognised data altruism organisations
+broader:
+  - dpv:PublicRegisterOfEntities
+inScheme:
+  - eu-dga:registers-classes
+isDefinedBy:
+  - 'eu-dga:'
+term_status: accepted
+created:
+  - '2024-02-14'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+source:
+  - DGA 19.5

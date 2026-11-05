@@ -1,0 +1,19 @@
+---
+id: risk:AvailabilityBreach
+rdf_type:
+  - dpv:RiskConcept
+  - risk:AvailabilityConcept
+  - risk:PotentialConsequence
+  - risk:PotentialRisk
+  - risk:PotentialRiskSource
+prefLabel: Availability Breach
+definition: Concept representing a breach of availability
+broader:
+  - risk:DataBreach
+inScheme:
+  - risk:risk-taxonomy-classes
+isDefinedBy:
+  - 'risk:'
+term_status: accepted
+created:
+  - '2024-12-17'

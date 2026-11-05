@@ -1,3 +1,0 @@
-# id is required but missing — 'id' is a required property
-# (original intent: missing right_holder rule — not enforced by open-world JSON Schema)
-right: dpv:A15

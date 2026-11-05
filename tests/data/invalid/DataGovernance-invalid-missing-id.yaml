@@ -1,3 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for DataGovernance
-# (original intent: DPVThing-invalid-abstract — abstract class instantiation not enforced by open-world JSON Schema)
-name: "Abstract Thing Without ID"

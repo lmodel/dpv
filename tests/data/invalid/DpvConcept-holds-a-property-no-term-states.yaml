@@ -1,0 +1,6 @@
+---
+# Fails at: /
+id: dpv:Example
+prefLabel: An example
+hasPurpose:
+  - dpv:Marketing

@@ -1,0 +1,42 @@
+---
+id: legal-de:law-BDSG
+rdf_type:
+  - dpv:Law
+prefLabel: Federal Data Protection Act (BDSG)
+broader:
+  - dpv:Law
+inScheme:
+  - legal-de:de-classes
+isDefinedBy:
+  - 'legal-de:'
+term_status: accepted
+created:
+  - '2022-03-30'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake
+  - dpv_agent:person-julian-flake
+homepage: https://www.gesetze-im-internet.de/bdsg_2018/
+temporal:
+  hasBeginning: '2019-11-20'
+hasAuthority:
+  - legal-de:DPA-DE
+  - legal-de:DPA-DE-BB
+  - legal-de:DPA-DE-BE
+  - legal-de:DPA-DE-BY-non-public
+  - legal-de:DPA-DE-BY-public
+  - legal-de:DPA-DE-HB
+  - legal-de:DPA-DE-HE
+  - legal-de:DPA-DE-HH
+  - legal-de:DPA-DE-MV
+  - legal-de:DPA-DE-NI
+  - legal-de:DPA-DE-NW
+  - legal-de:DPA-DE-RP
+  - legal-de:DPA-DE-SH
+  - legal-de:DPA-DE-SL
+  - legal-de:DPA-DE-SN
+  - legal-de:DPA-DE-ST
+  - legal-de:DPA-DE-TH
+hasJurisdiction:
+  - loc:DE

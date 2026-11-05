@@ -1,0 +1,16 @@
+---
+id: dpv:ContractAmendmentClause
+rdf_type:
+  - dpv:ContractualClause
+prefLabel: Contract Amendment Clause
+definition: A provision describing how changes or modifications to the contract can be made and the process
+  for implementing them
+broader:
+  - dpv:ContractualClause
+inScheme:
+  - dpv:contract-clause-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

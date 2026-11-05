@@ -1,0 +1,24 @@
+---
+id: ai:ModelInversion
+rdf_type:
+  - dpv:RiskConcept
+  - risk:ConfidentialityConcept
+  - risk:PotentialConsequence
+  - risk:PotentialRisk
+  - risk:PotentialRiskSource
+prefLabel: Model Inversion
+definition: A type of attack to AI models, in which the access to a model is abused to infer information
+  about the training data
+scopeNote:
+  - (HLEG Assessment List for Trustworthy Artificial Intelligence (ALTAI),https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment)
+broader:
+  - ai:SecurityAttack
+inScheme:
+  - ai:risks-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani

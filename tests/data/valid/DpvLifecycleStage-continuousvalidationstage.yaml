@@ -1,0 +1,20 @@
+---
+id: ai:ContinuousValidationStage
+rdf_type:
+  - ai:LifecycleStage
+prefLabel: Continuous Validation Stage
+definition: The stage in the lifecycle where there is continuous learning within the AI system by incremental
+  training on an ongoing basis while the system is running in production
+broader:
+  - ai:LifecycleStage
+inScheme:
+  - ai:lifecycle-classes
+isDefinedBy:
+  - 'ai:'
+term_status: accepted
+created:
+  - '2024-12-01'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - ISO/IEC 22989:2022

@@ -1,0 +1,15 @@
+---
+id: dpv:OfficialAuthorityExerciseCompleted
+rdf_type:
+  - dpv:OfficialAuthorityExerciseStatus
+prefLabel: Official Authority Exercise Completed
+definition: Status where the official authority has been exercised to completion
+broader:
+  - dpv:OfficialAuthorityExerciseStatus
+inScheme:
+  - dpv:legal-basis-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'

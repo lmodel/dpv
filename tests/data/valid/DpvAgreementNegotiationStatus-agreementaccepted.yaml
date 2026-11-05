@@ -1,0 +1,16 @@
+---
+id: ieee-7012:AgreementAccepted
+rdf_type:
+  - ieee-7012:AgreementNegotiationStatus
+prefLabel: Agreement Accepted
+definition: Status indicating the Agreement Negotiation is completed and the parties have accepted the
+  relevant terms
+broader:
+  - ieee-7012:AgreementNegotiationStatus
+inScheme:
+  - ieee-7012:status-classes
+isDefinedBy:
+  - 'ieee-7012:'
+term_status: accepted
+created:
+  - '2024-12-17'

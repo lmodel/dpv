@@ -1,0 +1,31 @@
+---
+id: loc:AD
+rdf_type:
+  - dpv:Country
+prefLabel: Andorra
+definition: Concept representing Country of Andorra
+broader:
+  - dpv:Country
+inScheme:
+  - loc:inverse-classes
+  - loc:locations-classes
+isDefinedBy:
+  - 'loc:'
+exactMatch:
+  - https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/country/AND
+  - https://www.iso.org/obp/ui/#iso:code:3166:AD
+term_status: accepted
+created:
+  - '2022-03-30'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
+hasInverseJurisdiction:
+  - loc:non-AD
+iso_alpha2:
+  - AD
+iso_alpha3:
+  - AND
+iso_numeric:
+  - '20'
+un_m49:
+  - '20'

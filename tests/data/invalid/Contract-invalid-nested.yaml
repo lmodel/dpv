@@ -1,3 +1,0 @@
-id:  # null id fails type check (id must be a uri_or_curie string)
-has_contract_clause: 
-  invalid_field: value

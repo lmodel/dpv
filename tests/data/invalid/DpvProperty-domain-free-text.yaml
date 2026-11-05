@@ -1,0 +1,5 @@
+---
+# Fails at: /domainIncludes/0
+id: dpv:hasExample
+domainIncludes:
+  - a process

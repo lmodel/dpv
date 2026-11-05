@@ -1,3 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for DataProcessingPolicy
-# (original intent: GDPRPrinciple-invalid-principle — principle enum validation not enforced by open-world JSON Schema)
-principle: INVALID_PRINCIPLE

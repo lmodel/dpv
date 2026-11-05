@@ -1,4 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: DataProcessor-invalid-type — processor_type enum validation not enforced by open-world JSON Schema)
-id: 12345
-processor_type: INVALID_TYPE

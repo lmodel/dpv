@@ -1,0 +1,1250 @@
+---
+# DPV 2.3: justifications. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: justifications
+vocabularies:
+  - id: https://w3id.org/dpv/justifications
+    bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram
+      Golpayegani, Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G.,
+      et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer,
+      Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+    description: Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing information
+      about justifications
+    identifier: https://w3id.org/dpv/justifications
+    title: Justification Concepts
+    doi: 10.5281/zenodo.12505841
+    bibo_status: http://purl.org/ontology/bibo/status/published
+    preferredNamespacePrefix: justifications
+    preferredNamespaceUri: https://w3id.org/dpv/justifications#
+    rdfs_Label: JUSTIFICATIONS
+    versionInfo: '2.3'
+    schema_version: '2.3'
+    created:
+      - '2024-04-21'
+    issued: '2024-04-21'
+    modified: '2026-02-25'
+    conformsTo:
+      - http://www.w3.org/2000/01/rdf-schema
+      - http://www.w3.org/2004/02/skos/core
+    source:
+      - https://www.w3.org/groups/cg/dpvcg/
+    license: https://www.w3.org/copyright/document-license-2023/
+    publisher: https://www.w3.org/
+    versionIRI: https://w3id.org/dpv/2.3/justifications
+    isProfileOf:
+      - http://www.w3.org/2000/01/rdf-schema#
+      - http://www.w3.org/2004/02/skos/core#
+      - https://w3id.org/dpv
+    logo: https://w3id.org/dpv/media/logo.png
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+    creator:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-paul-ryan
+concept_schemes:
+  - id: justifications:justifications-delay-classes
+  - id: justifications:justifications-exercise-classes
+  - id: justifications:justifications-nonfulfilment-classes
+  - id: justifications:justifications-notrequired-classes
+concepts:
+  - id: justifications:CivilLawEnforcementImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Civil Law Enforcement Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the enforcement of civil laws, including civil claims
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ComplexityOfProcess
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Complexity Of Process
+    definition: Justification that the process is delayed due to complexity in fulfilling it
+    broader:
+      - justifications:DelayJustification
+    inScheme:
+      - justifications:justifications-delay-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ConfidentialityObligationCompromised
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Confidentiality Obligation Compromised
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would compromise a confidentiality obligation
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ConsentProvided
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Consent Provided
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      is based on (a previously given) consent
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ContestAccuracy
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Contest Accuracy
+    definition: Justification that the process should be carried out due it being an objection to the
+      accuracy e.g. of system, outputs, data
+    broader:
+      - justifications:Objection
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ContractEstablishmentNecessity
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Contract Establishment Necessity
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      is necessary for entering into a contract
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ContractPerformanceNecessity
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Contract Performance Necessity
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      is necessary for the performance of a contract
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:CrimeDetectionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Crime Detection Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the detection of criminal offences
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:CrimeInvestigationImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Crime Investigation Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the investigation of criminal offences
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:CrimePenaltyExecutionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Crime Penalty Execution Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the execution of criminal penalties
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:CrimePreventionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Crime Prevention Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the prevention of criminal offences
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:CrimeProsecutionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Crime Prosecution Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the prosecution of criminal offences
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:DataSubjectProtectionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Data Subject Protection Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the protection of the data subject
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:DefenceImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Defence Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with necessary tasks to safeguard defence
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:DelayJustification
+    prefLabel: Delay Justification
+    definition: Justification to delay a process
+    broader:
+      - dpv:Justification
+    inScheme:
+      - justifications:justifications-delay-classes
+    isDefinedBy:
+      - 'justifications:'
+    subClassOf:
+      - dpv:Justification
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:DisproportionateEffortRequired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Disproportionate Effort Required
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      requires a disproportionate effort
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EntityAlreadyInformed
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Entity Already Informed
+    definition: Justification that the process could not be fulfilled or was not successful because the
+      entity already has the information
+    broader:
+      - justifications:DisproportionateEffortRequired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EthicsBreachDetectionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Ethics Breach Detection Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the detection of breaches of ethics for regulated professions
+    broader:
+      - justifications:EthicsProcedureImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EthicsBreachInvestigationImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Ethics Breach Investigation Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the investigation of breaches of ethics for regulated professions
+    broader:
+      - justifications:EthicsProcedureImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EthicsBreachPreventionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Ethics Breach Prevention Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the prevention of breaches of ethics for regulated professions
+    broader:
+      - justifications:EthicsProcedureImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EthicsBreachProsecutionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Ethics Breach Prosecution Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the prosecution of breaches of ethics for regulated professions
+    broader:
+      - justifications:EthicsProcedureImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:EthicsProcedureImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Ethics Procedure Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would compromise ethics or ethics procedures
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ExerciseJustification
+    prefLabel: Exercise Justification
+    definition: Justification for why the process should be carried out
+    broader:
+      - dpv:Justification
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    subClassOf:
+      - dpv:Justification
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:FreedomOfExpressionImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Freedom Of Expression Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the right of freedom of expression and information of others
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:FulfilmentImpossible
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Fulfilment Impossible
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      is impossible to fulfil
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:HighVolumeOfProcesses
+    rdf_type:
+      - dpv:Justification
+    prefLabel: High Volume Of Processes
+    definition: Justification that the process is delayed due to high volume of similar processes required
+      to be fulfilled
+    broader:
+      - justifications:DelayJustification
+    inScheme:
+      - justifications:justifications-delay-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:IdentityVerificationFailure
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Identity Verification Failure
+    definition: Justification that the process could not be fulfilled or was not successful because identity
+      verification failed
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:IdentityVerificationRequired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Identity Verification Required
+    definition: Justification that the process could not be fulfilled or was not successful because identity
+      verification is required
+    broader:
+      - justifications:DelayJustification
+    inScheme:
+      - justifications:justifications-delay-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:InformationRequired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Information Required
+    definition: Justification that the process is delayed due to additional information being required
+    broader:
+      - justifications:DelayJustification
+    inScheme:
+      - justifications:justifications-delay-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:InformationSocietyServicesOffer
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Information Society Services Offer
+    definition: Justification that the process should be carried out due to it being related to the offer
+      of information society services
+    broader:
+      - justifications:ExerciseJustification
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:JudicialProceedingsImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Judicial Proceedings Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the protection of judicial independence and proceedings
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LackOfIntent
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Lack of Intent
+    definition: Justification that the process could not be fulfilled as the requestor or initiator did
+      not have a sufficient intent to complete it
+    scopeNote:
+      - An example of such intent is where the individual makes a request but then offers to withdraw
+        it in return for some form of benefit from the organisation - see https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/right-of-access/when-can-we-refuse-to-comply-with-a-request/#refuse2
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalClaimDefenceImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Claim Defence Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the defence of legal claims
+    broader:
+      - justifications:LegalClaimImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: modified
+    created:
+      - '2024-04-21'
+    modified: '2024-12-17'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalClaimEstablishmentImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Claim Establishment Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the establishment of legal claims
+    broader:
+      - justifications:LegalClaimImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: modified
+    created:
+      - '2024-04-21'
+    modified: '2024-12-17'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalClaimExerciseImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Claim Exercise Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the exercise of legal claims
+    broader:
+      - justifications:LegalClaimImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: modified
+    created:
+      - '2024-04-21'
+    modified: '2024-12-17'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalClaimImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Claim Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would impair the establishment, exercise, or defence of a legal claim
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalObligation
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Obligation
+    definition: Justification that the process should be carried out due to it being a legal obligation
+    broader:
+      - justifications:ExerciseJustification
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalObligationImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Required for Legal Obligation
+    definition: Justification that the process could not be fulfilled as it would impair or conflict with
+      a legal obligation
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalProcessImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legal Process Impaired
+    definition: Justification that the process could not be fulfilled as it impairs or interferes with
+      a legal or official process or procedure
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegalityLackingObjection
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legality Lacking Objection
+    definition: Justification that the process should be carried out due to it being an objection to the
+      lack of further legality or legal basis of specified context
+    broader:
+      - justifications:Objection
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegallyExempted
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legally Exempted
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      falls under legal exemption i.e. a law allows the non-fulfilment
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:LegitimateInterestOverride
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Legitimate Interest Override
+    definition: Justification that the process could not be fulfilled or was not successful because the
+      legitimate interest of the controller overrides the interests or rights of the data subject
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:NationalSecurityImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: National Security Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with necessary tasks to safeguard national security
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:NonFulfilmentJustification
+    prefLabel: Non-Fulfilment Justification
+    definition: Justification for not fulfilling a process or requirement or obligation
+    broader:
+      - dpv:Justification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    subClassOf:
+      - dpv:Justification
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:NonNecessityObjection
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Non Necessity Objection
+    definition: Justification that the process should be carried out due to it being an objection to the
+      non-necessity of specified context
+    broader:
+      - justifications:Objection
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:NotRequiredJustification
+    prefLabel: Not Required Justification
+    definition: Justification to reject or not complete a process as it is not required or isn't applicable
+    broader:
+      - dpv:Justification
+    inScheme:
+      - justifications:justifications-notrequired-classes
+    isDefinedBy:
+      - 'justifications:'
+    subClassOf:
+      - dpv:Justification
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:Objection
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Objection
+    definition: Justification that the process should be carried out due to specified objection(s)
+    broader:
+      - justifications:ExerciseJustification
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ObjectivesImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Objectives Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      impairs the objectives of associated context
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:OfficialAuthorityExerciseImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Official Authority Exercise Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with the exercise of official authorities
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:OfficialStatisticsImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Official Statistics Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with official statistics
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessExcessive
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Excessive
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      was found to be excessive in nature
+    broader:
+      - justifications:ProcessRejected
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessFrivolous
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Frivolous
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      was found to be based on frivolous reasons
+    broader:
+      - justifications:ProcessRejected
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessMalicious
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Malicious
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      was found to be malicious e.g. with intent to cause disruption or harassment
+    broader:
+      - justifications:ProcessRejected
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessRejected
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Rejected
+    definition: Justification that the process could not be fulfilled because of one of more reasons associated
+      with the process itself e.g. it was excessive, malicious, etc.
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessSafeguarded
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Safeguarded
+    definition: Justification that the process is not required as it is safeguarded by appropriate technical
+      and organisational measures
+    broader:
+      - justifications:NotRequiredJustification
+    inScheme:
+      - justifications:justifications-notrequired-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ProcessUnfounded
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Process Unfounded
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      was found to be based on manifestly unfounded reasons
+    broader:
+      - justifications:ProcessRejected
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:PublicHealthCompromised
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Public Health Compromised
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with necessary tasks carried out for public health reasons
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:PublicInterestArchivingImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Public Interest Archiving Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      impairs archiving for public interest
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:PublicInterestCompromised
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Public Interest Compromised
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with necessary tasks carried out for public interest
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:PublicSecurityImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Public Security Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with necessary tasks to safeguard public security
+    broader:
+      - justifications:LegalProcessImpaired
+      - justifications:SecurityImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:RightsFreedomsImpactUnlikely
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Rights Freedoms Impact Unlikely
+    definition: Justification that the process is not required as it is considered to be an unlikely impact
+      on rights and freedoms
+    broader:
+      - justifications:NotRequiredJustification
+    inScheme:
+      - justifications:justifications-notrequired-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:RiskMitigated
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Risk Mitigated
+    definition: Justification that the process is not required as the risks have been effectively mitigated
+      by technical and organisational measures
+    broader:
+      - justifications:NotRequiredJustification
+    inScheme:
+      - justifications:justifications-notrequired-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ScientificHistoricalResearchImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Scientific Historical Research Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      impairs scientific or historical research
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:SecurityImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Security Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would interfere with tasks required for maintaining security
+    broader:
+      - justifications:NonFulfilmentJustification
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:ThirdPartyRightsImpaired
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Third Party Rights Impaired
+    definition: Justification that the process could not be fulfilled or was not successful because it
+      would affect the rights and freedoms of others
+    broader:
+      - justifications:LegalProcessImpaired
+    inScheme:
+      - justifications:justifications-nonfulfilment-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: justifications:UnlawfulActivityObjection
+    rdf_type:
+      - dpv:Justification
+    prefLabel: Unlawful Activity Objection
+    definition: Justification that the process should be carried out due to it being an objection of unlawful
+      activity
+    broader:
+      - justifications:Objection
+    inScheme:
+      - justifications:justifications-exercise-classes
+    isDefinedBy:
+      - 'justifications:'
+    term_status: accepted
+    created:
+      - '2024-04-21'
+    contributor:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit

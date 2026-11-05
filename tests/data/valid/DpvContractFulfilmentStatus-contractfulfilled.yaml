@@ -1,0 +1,22 @@
+---
+id: dpv:ContractFulfilled
+rdf_type:
+  - dpv:ContractFulfilmentStatus
+prefLabel: Contract Fulfilled
+definition: Status representing contract where all its terms have been fulfilled in a manner that does
+  not constitute a violation or breach of the contract
+broader:
+  - dpv:ContractFulfilmentStatus
+inScheme:
+  - dpv:contract-status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: modified
+created:
+  - '2025-01-09'
+modified: '2025-08-06'
+contributor:
+  - dpv_agent:person-arthit-suriyawongkul
+  - dpv_agent:person-georg-p-krog
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-julian-flake

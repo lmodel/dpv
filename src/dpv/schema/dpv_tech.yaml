@@ -1,0 +1,60 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_tech
+name: dpv_tech
+title: 'DPV kinds: technology'
+description: 'The kinds of term DPV''s vocabularies of technology state: each a concept that terms are
+  instances of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+  tech: https://w3id.org/dpv/tech#
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+classes:
+  DpvActor:
+    title: Actor
+    is_a: DpvConcept
+    description: Actors and Entities involved in provision, use, and management of Technology
+    class_uri: tech:Actor
+  DpvCommunicationMechanism:
+    title: Communication Mechanism
+    is_a: DpvTechnology
+    description: Communication mechanism used or provided by Technology
+    class_uri: tech:CommunicationMechanism
+  DpvDocumentation:
+    title: Documentation
+    is_a: DpvConcept
+    description: Information describing use, functionality, design, or other technical aspects of the
+      Technology
+    class_uri: tech:Documentation
+  DpvProvisionMethod:
+    title: Provision Method
+    is_a: DpvTechnology
+    description: Method associated with provision or use of technology
+    class_uri: tech:ProvisionMethod
+  DpvProvisionStatus:
+    title: Provision Status
+    is_a: DpvStatus
+    description: Status indicating whether Technology has been provided
+    class_uri: tech:ProvisionStatus
+  DpvTechCapability:
+    title: Capability
+    is_a: DpvConcept
+    description: Expression of what the technology is capable of achieving or providing
+    class_uri: tech:Capability
+  DpvTechMarketAvailabilityStatus:
+    title: Market Availability Status
+    is_a: DpvStatus
+    description: Status indicating whether Technology is available on the market
+    class_uri: tech:MarketAvailabilityStatus

@@ -1,0 +1,17 @@
+---
+id: dpv:HugeScaleOfDataSubjects
+rdf_type:
+  - dpv:DataSubjectScale
+prefLabel: Huge Scale Of Data Subjects
+definition: Scale of data subjects considered huge or more than large within the context
+broader:
+  - dpv:DataSubjectScale
+inScheme:
+  - dpv:processing-scale-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-06-15'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

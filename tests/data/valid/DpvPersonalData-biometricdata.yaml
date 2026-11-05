@@ -1,0 +1,21 @@
+---
+id: eu-aiact:BiometricData
+rdf_type:
+  - dpv:PersonalData
+prefLabel: Biometric Data
+definition: Personal data resulting from specific technical processing relating to the physical, physiological
+  or behavioural characteristics of a natural person, such as facial images or dactyloscopic data
+broader:
+  - pd:Biometric
+inScheme:
+  - eu-aiact:data-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2024-04-10'
+modified: '2025-07-30'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA(Art. 3(34))

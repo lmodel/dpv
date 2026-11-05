@@ -1,4 +1,0 @@
-# Integer id fails type check (id must be a uri_or_curie string)
-# (original intent: Location-invalid-iso-code — invalid ISO 3166 country code pattern not yet in schema)
-id: 12345
-name: "Fictional Land"

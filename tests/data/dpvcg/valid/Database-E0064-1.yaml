@@ -1,4 +1,0 @@
-# __unmapped__:
-#   https://w3id.org/lmodel/dpvhasTechnicalMeasure: https://w3id.org/lmodel/dpvAccessControlMethod
-id: ex:CorpDataBase
-tech_has_capability: https://w3id.org/lmodel/dpvAccessControlMethod

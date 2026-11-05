@@ -1,0 +1,4 @@
+---
+# Fails at: /hasPurpose
+id: ex:P
+hasPurpose: dpv:Marketing

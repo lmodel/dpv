@@ -1,0 +1,8 @@
+---
+# Fails at: /concepts/0/isDefinedBy/0
+edition: '2.3'
+family: core
+concepts:
+  - id: dpv:Purpose
+    isDefinedBy:
+      - loc:Nowhere

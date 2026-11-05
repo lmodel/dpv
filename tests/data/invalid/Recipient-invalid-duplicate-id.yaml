@@ -1,4 +1,0 @@
-# id is required but missing — 'id' is a required property
-# (original intent: duplicate id keys — YAML parsers keep last value, so
-# the constraint must be expressed as a missing id to trigger schema failure)
-recipient_type: dpv:ThirdParty

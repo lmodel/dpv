@@ -1,3 +1,0 @@
-# Missing required 'id' field
-has_consent_status: dpv:ConsentGiven
-has_data_subject: ex:ds-001

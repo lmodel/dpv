@@ -1,0 +1,17 @@
+---
+id: eu-gdpr:ControllerBreachNotice
+rdf_type:
+  - eu-gdpr:DataBreachNotice
+prefLabel: Controller Breach Notice
+definition: Notice regarding a data breach to the Controller
+broader:
+  - eu-gdpr:DataBreachNotice
+inScheme:
+  - eu-gdpr:data-breach-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2024-05-19'
+source:
+  - GDPR Article 33

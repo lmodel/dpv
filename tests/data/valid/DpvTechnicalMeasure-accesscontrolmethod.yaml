@@ -1,0 +1,22 @@
+---
+id: dpv:AccessControlMethod
+rdf_type:
+  - dpv:TechnicalMeasure
+prefLabel: Access Control Method
+definition: Methods which restrict access to a place or resource
+broader:
+  - dpv:TechnicalMeasure
+inScheme:
+  - dpv:technical-measures-classes
+isDefinedBy:
+  - 'dpv:'
+example:
+  - dex:E0020
+term_status: accepted
+created:
+  - '2019-04-05'
+contributor:
+  - dpv_agent:person-axel-polleres
+  - dpv_agent:person-harshvardhan-j-pandit
+  - dpv_agent:person-mark-lizar
+  - dpv_agent:person-rob-brennan

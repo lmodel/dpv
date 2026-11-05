@@ -1,0 +1,18 @@
+---
+id: dpv:Adult
+rdf_type:
+  - dpv:HumanSubject
+prefLabel: Adult
+definition: A natural person that is not a child i.e. has attained some legally specified age of adulthood
+broader:
+  - dpv:HumanSubject
+inScheme:
+  - dpv:entities-datasubject-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: modified
+created:
+  - '2022-03-30'
+modified: '2024-12-17'
+contributor:
+  - dpv_agent:person-georg-p-krog

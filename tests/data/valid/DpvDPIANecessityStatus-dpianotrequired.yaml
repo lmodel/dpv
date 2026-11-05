@@ -1,0 +1,17 @@
+---
+id: eu-gdpr:DPIANotRequired
+rdf_type:
+  - eu-gdpr:DPIANecessityStatus
+prefLabel: DPIA Not Required
+definition: Condition where a DPIA is not required
+broader:
+  - eu-gdpr:DPIANecessityStatus
+inScheme:
+  - eu-gdpr:dpia-classes
+isDefinedBy:
+  - 'eu-gdpr:'
+term_status: accepted
+created:
+  - '2022-06-22'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit

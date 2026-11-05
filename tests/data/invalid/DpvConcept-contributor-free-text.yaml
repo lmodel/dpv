@@ -1,0 +1,6 @@
+---
+# Fails at: /contributor/0
+id: dpv:Example
+prefLabel: An example
+contributor:
+  - a person

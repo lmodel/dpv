@@ -1,4 +1,0 @@
-id:  # null id fails type check (id must be a uri_or_curie string)
-# (original intent: missing related processing/consent — referential constraint not in schema)
-provided_at_time: '2024-06-01T09:00:00Z'
-has_content: "Privacy Notice"

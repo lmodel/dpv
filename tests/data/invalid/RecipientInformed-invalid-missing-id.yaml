@@ -1,3 +1,0 @@
-# Missing required 'id' field — 'id' is a required property for RecipientInformed
-# (original intent: Recipient-invalid-duplicate-id — duplicate id detection not possible in YAML schema validation)
-recipient_type: dpv:ThirdParty

@@ -1,0 +1,19 @@
+---
+id: dpv:B2B2CContract
+rdf_type:
+  - dpv:LegalBasis
+prefLabel: Business-to-Business-to-Consumer Contract
+definition: A contract between two businesses who partner together to provide services to a consumer
+broader:
+  - dpv:B2BContract
+  - dpv:B2CContract
+inScheme:
+  - dpv:contract-types-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2024-08-27'
+contributor:
+  - dpv_agent:person-beatriz-esteves
+  - dpv_agent:person-georg-p-krog

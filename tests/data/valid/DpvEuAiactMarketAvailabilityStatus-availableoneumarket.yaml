@@ -1,0 +1,21 @@
+---
+id: eu-aiact:AvailableOnEUMarket
+rdf_type:
+  - eu-aiact:MarketAvailabilityStatus
+prefLabel: Available on EU Market
+definition: Status associated with supply of an AI system or a general purpose AI model for distribution
+  or use on the Union market in the course of a commercial activity, whether in return for payment or
+  free of charge
+broader:
+  - eu-aiact:AvailableOnMarket
+inScheme:
+  - eu-aiact:status-classes
+isDefinedBy:
+  - 'eu-aiact:'
+term_status: accepted
+created:
+  - '2024-05-17'
+contributor:
+  - dpv_agent:person-delaram-golpayegani
+source:
+  - AIA (Art. 3(10))

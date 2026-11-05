@@ -1,0 +1,17 @@
+---
+id: dpv:ActivityCompleted
+rdf_type:
+  - dpv:ActivityStatus
+prefLabel: Activity Completed
+definition: State of an activity that has completed i.e. is fully in the past
+broader:
+  - dpv:ActivityStatus
+inScheme:
+  - dpv:status-classes
+isDefinedBy:
+  - 'dpv:'
+term_status: accepted
+created:
+  - '2022-05-18'
+contributor:
+  - dpv_agent:person-harshvardhan-j-pandit
