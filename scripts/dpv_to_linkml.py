@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run --quiet --script
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["rdflib>=7", "pyyaml>=6"]
+# dependencies = ["rdflib==7.6.0", "pyyaml>=6"]
 # ///
 """Turn the DPV 2.3 Turtle files under upstream/ into this project's schema and catalogue.
 
