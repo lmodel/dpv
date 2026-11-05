@@ -1,0 +1,243 @@
+---
+# DPV 2.3: the contributors. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: agents
+agents:
+  - id: dpv_agent:org-adapt-centre-dublin-city-university
+    name: ADAPT Centre, Dublin City University
+  - id: dpv_agent:org-adapt-centre-trinity-college-dublin
+    name: ADAPT Centre, Trinity College Dublin
+  - id: dpv_agent:org-ai-accountability-lab-aial-trinity-college-dublin
+    name: AI Accountability Lab (AIAL), Trinity College Dublin
+  - id: dpv_agent:org-danish-agency-for-digitisation
+    name: Danish Agency for Digitisation
+  - id: dpv_agent:org-dublin-city-university
+    name: Dublin City University
+  - id: dpv_agent:org-epistimis-llc
+    name: Epistimis LLC
+  - id: dpv_agent:org-hankuk-university-of-foreign-studies
+    name: Hankuk University of Foreign Studies
+  - id: dpv_agent:org-idlab-imec-ghent-university
+    name: IDLab, IMEC, Ghent University
+  - id: dpv_agent:org-jlinc-labs
+    name: JLINC Labs
+  - id: dpv_agent:org-macao-university-of-tourism
+    name: Macao University of Tourism
+  - id: dpv_agent:org-no-affiliation-provided
+    name: No affiliation provided
+  - id: dpv_agent:org-openconsent-kantara-initiative
+    name: OpenConsent/Kantara Initiative
+  - id: dpv_agent:org-proximus
+    name: Proximus
+  - id: dpv_agent:org-siemens
+    name: Siemens
+  - id: dpv_agent:org-signatu-as
+    name: Signatu AS
+  - id: dpv_agent:org-thammasat-university
+    name: Thammasat University
+  - id: dpv_agent:org-trinity-college-dublin
+    name: Trinity College Dublin
+  - id: dpv_agent:org-typetura
+    name: Typetura
+  - id: dpv_agent:org-unabhangige-landeszentrum-fur-datenschutz-schleswig-holstein
+    name: Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein
+  - id: dpv_agent:org-uniphar-plc
+    name: Uniphar PLC
+  - id: dpv_agent:org-universidad-politecnica-de-madrid
+    name: Universidad Politécnica de Madrid
+  - id: dpv_agent:org-universita-di-napoli-federico-ii
+    name: Università di Napoli Federico II
+  - id: dpv_agent:org-university-college-dublin
+    name: University College Dublin
+  - id: dpv_agent:org-university-medical-center-gottingen
+    name: University Medical Center Göttingen
+  - id: dpv_agent:org-university-of-athens
+    name: University of Athens
+  - id: dpv_agent:org-university-of-koblenz
+    name: University of Koblenz
+  - id: dpv_agent:org-university-of-leipzig
+    name: University of Leipzig
+  - id: dpv_agent:org-university-of-luxembourg
+    name: University of Luxembourg
+  - id: dpv_agent:org-vienna-university-of-economics-and-business
+    name: Vienna University of Economics and Business
+  - id: dpv_agent:org-vienna-university-of-technology
+    name: Vienna University of Technology
+  - id: dpv_agent:org-w3c-ercim
+    name: W3C/ERCIM
+  - id: dpv_agent:person-arthit-suriyawongkul
+    name: Arthit Suriyawongkul
+    hasORCID: 0000-0002-9698-1899
+    memberOf:
+      - dpv_agent:org-adapt-centre-trinity-college-dublin
+  - id: dpv_agent:person-ashley-kuong-ka-man
+    name: Ashley Kuong Ka Man
+    memberOf:
+      - dpv_agent:org-macao-university-of-tourism
+  - id: dpv_agent:person-axel-polleres
+    name: Axel Polleres
+    memberOf:
+      - dpv_agent:org-vienna-university-of-economics-and-business
+  - id: dpv_agent:person-beatriz-esteves
+    name: Beatriz Esteves
+    hasORCID: 0000-0003-0259-7560
+    homepage: https://w3id.org/people/besteves
+    memberOf:
+      - dpv_agent:org-idlab-imec-ghent-university
+  - id: dpv_agent:person-bud-bruegger
+    name: Bud Bruegger
+    memberOf:
+      - dpv_agent:org-unabhangige-landeszentrum-fur-datenschutz-schleswig-holstein
+  - id: dpv_agent:person-christian-draeger
+    name: Christian Draeger
+    hasORCID: 0000-0001-8835-4548
+    memberOf:
+      - dpv_agent:org-university-of-leipzig
+  - id: dpv_agent:person-christian-henke
+    name: Christian Henke
+    hasORCID: 0000-0002-4541-4018
+    memberOf:
+      - dpv_agent:org-university-medical-center-gottingen
+  - id: dpv_agent:person-damien-desfontaines
+    name: Damien Desfontaines
+    memberOf:
+      - dpv_agent:org-no-affiliation-provided
+  - id: dpv_agent:person-daniel-doherty
+    name: Daniel Doherty
+    memberOf:
+      - dpv_agent:org-trinity-college-dublin
+  - id: dpv_agent:person-danielle-welter
+    name: Danielle Welter
+    memberOf:
+      - dpv_agent:org-university-of-luxembourg
+  - id: dpv_agent:person-david-hickey
+    name: David Hickey
+    memberOf:
+      - dpv_agent:org-dublin-city-university
+  - id: dpv_agent:person-delaram-golpayegani
+    name: Delaram Golpayegani
+    hasORCID: 0000-0002-1208-186X
+    memberOf:
+      - dpv_agent:org-adapt-centre-trinity-college-dublin
+  - id: dpv_agent:person-efstratios-koulierakis
+    name: Efstratios Koulierakis
+    memberOf:
+      - dpv_agent:org-university-of-athens
+  - id: dpv_agent:person-elmar-kiesling
+    name: Elmar Kiesling
+    memberOf:
+      - dpv_agent:org-vienna-university-of-technology
+  - id: dpv_agent:person-eva-schlehahn
+    name: Eva Schlehahn
+    memberOf:
+      - dpv_agent:org-unabhangige-landeszentrum-fur-datenschutz-schleswig-holstein
+  - id: dpv_agent:person-fajar-ekaputra
+    name: Fajar Ekaputra
+    memberOf:
+      - dpv_agent:org-vienna-university-of-technology
+  - id: dpv_agent:person-georg-p-krog
+    name: Georg P. Krog
+    homepage: https://www.linkedin.com/in/georg-philip-krog-a2a278104/
+    memberOf:
+      - dpv_agent:org-signatu-as
+  - id: dpv_agent:person-harshvardhan-j-pandit
+    name: Harshvardhan J. Pandit
+    hasORCID: 0000-0002-5068-3714
+    homepage: https://harshp.com/
+    memberOf:
+      - dpv_agent:org-ai-accountability-lab-aial-trinity-college-dublin
+  - id: dpv_agent:person-iain-henderson
+    name: Iain Henderson
+    memberOf:
+      - dpv_agent:org-jlinc-labs
+  - id: dpv_agent:person-javier-fernandez
+    name: Javier Fernández
+    memberOf:
+      - dpv_agent:org-vienna-university-of-economics-and-business
+  - id: dpv_agent:person-jompon-pitaksantayothin
+    name: Jompon Pitaksantayothin
+    hasORCID: 0000-0001-7092-3634
+    memberOf:
+      - dpv_agent:org-hankuk-university-of-foreign-studies
+  - id: dpv_agent:person-jonathan-bowker
+    name: Jonathan Bowker
+    memberOf:
+      - dpv_agent:org-no-affiliation-provided
+  - id: dpv_agent:person-julian-flake
+    name: Julian Flake
+    hasORCID: 0009-0006-4623-1463
+    memberOf:
+      - dpv_agent:org-university-of-koblenz
+  - id: dpv_agent:person-julio-hernandez
+    name: Julio Hernandez
+    memberOf:
+      - dpv_agent:org-dublin-city-university
+  - id: dpv_agent:person-mark-lizar
+    name: Mark Lizar
+    memberOf:
+      - dpv_agent:org-openconsent-kantara-initiative
+  - id: dpv_agent:person-matthias-lobe
+    name: Matthias Löbe
+    hasORCID: 0000-0002-2344-0426
+    memberOf:
+      - dpv_agent:org-university-of-leipzig
+  - id: dpv_agent:person-maya-borges
+    name: Maya Borges
+    memberOf:
+      - dpv_agent:org-danish-agency-for-digitisation
+  - id: dpv_agent:person-paul-ryan
+    name: Paul Ryan
+    hasORCID: 0000-0003-0770-2737
+    memberOf:
+      - dpv_agent:org-uniphar-plc
+  - id: dpv_agent:person-piero-bonatti
+    name: Piero Bonatti
+    memberOf:
+      - dpv_agent:org-universita-di-napoli-federico-ii
+  - id: dpv_agent:person-rana-saniei
+    name: Rana Saniei
+    memberOf:
+      - dpv_agent:org-universidad-politecnica-de-madrid
+  - id: dpv_agent:person-rigo-wenning
+    name: Rigo Wenning
+    memberOf:
+      - dpv_agent:org-w3c-ercim
+  - id: dpv_agent:person-rob-brennan
+    name: Rob Brennan
+    hasORCID: 0000-0001-8236-362X
+    memberOf:
+      - dpv_agent:org-university-college-dublin
+  - id: dpv_agent:person-rudy-jacob
+    name: Rudy Jacob
+    memberOf:
+      - dpv_agent:org-proximus
+  - id: dpv_agent:person-scott-kellum
+    name: Scott Kellum
+    memberOf:
+      - dpv_agent:org-typetura
+  - id: dpv_agent:person-simon-steyskal
+    name: Simon Steyskal
+    memberOf:
+      - dpv_agent:org-siemens
+  - id: dpv_agent:person-steve-hickman
+    name: Steve Hickman
+    memberOf:
+      - dpv_agent:org-epistimis-llc
+  - id: dpv_agent:person-tek-raj-chhetri
+    name: Tek Raj Chhetri
+    memberOf:
+      - dpv_agent:org-no-affiliation-provided
+  - id: dpv_agent:person-thitirat-thipsamritkul
+    name: Thitirat Thipsamritkul
+    memberOf:
+      - dpv_agent:org-thammasat-university
+  - id: dpv_agent:person-tytti-rintamaki
+    name: Tytti Rintamaki
+    memberOf:
+      - dpv_agent:org-adapt-centre-dublin-city-university

@@ -1,0 +1,4681 @@
+---
+# DPV 2.3: artificial intelligence. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: ai
+vocabularies:
+  - id: https://w3id.org/dpv/ai
+    bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram
+      Golpayegani, Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G.,
+      et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer,
+      Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+    description: Extension to the Data Privacy Vocabulary (DPV) providing concepts for representing information
+      about AI technologies
+    identifier: https://w3id.org/dpv/ai
+    title: AI Technology Concepts
+    doi: 10.5281/zenodo.12505841
+    bibo_status: http://purl.org/ontology/bibo/status/published
+    preferredNamespacePrefix: ai
+    preferredNamespaceUri: https://w3id.org/dpv/ai#
+    rdfs_Label: AI
+    versionInfo: '2.3'
+    schema_version: '2.3'
+    created:
+      - '2024-05-31'
+    issued: '2024-05-31'
+    modified: '2026-02-25'
+    conformsTo:
+      - http://www.w3.org/2000/01/rdf-schema
+      - http://www.w3.org/2004/02/skos/core
+    source:
+      - https://www.w3.org/groups/cg/dpvcg/
+    license: https://www.w3.org/copyright/document-license-2023/
+    publisher: https://www.w3.org/
+    versionIRI: https://w3id.org/dpv/2.3/ai
+    isProfileOf:
+      - http://www.w3.org/2000/01/rdf-schema#
+      - http://www.w3.org/2004/02/skos/core#
+      - https://w3id.org/dpv/tech
+    logo: https://w3id.org/dpv/media/logo.png
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-scott-kellum
+    creator:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+concept_schemes:
+  - id: ai:capabilities-classes
+  - id: ai:core-classes
+  - id: ai:core-properties
+  - id: ai:data-classes
+  - id: ai:data-properties
+  - id: ai:development-classes
+  - id: ai:lifecycle-classes
+  - id: ai:measures-classes
+  - id: ai:risks-classes
+  - id: ai:systems-classes
+  - id: ai:techniques-classes
+concepts:
+  - id: ai:AGI
+    prefLabel: Artificial General Intelligence (AGI)
+    definition: Type of AI system that addresses a broad range of tasks with a satisfactory level of performance
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:AI
+    prefLabel: Artificial Intelligence (AI)
+    definition: A technical and scientific field devoted to the engineered system that generates outputs
+      such as content, forecasts, recommendations or decisions for a given set of human-defined objectives
+    broader:
+      - dpv:Technology
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - dpv:Technology
+    term_status: accepted
+    created:
+      - '2024-04-28'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:AIAgent
+    prefLabel: AI Agent
+    definition: An AI Agent, also known as an 'intelligent agent', is a software agent that utilises AI
+      technologies
+    scopeNote:
+      - Other definitions of AI Agents may include the perception of environment as some capacity to incorporate
+        the environment through sensors (e.g. computer vision) or data (e.g. web environments), and to
+        produce changes in outputs through some degree of autonomy (i.e. without human intervention).
+        The definition of 'AI Agent' provided in this extension relaxes such requirements and instead
+        focuses on classifying these agents based solely on their use of AI technologies to allow compatibility
+        with the evolving definitions
+    broader:
+      - ai:AI
+      - tech:SoftwareAgent
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+      - tech:SoftwareAgent
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:AIBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: AI Bias
+    definition: Bias associated with development, use, or other activities involving an AI technology
+      or system
+    broader:
+      - ai:RiskConcept
+      - risk:Bias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-18'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:AIProcess
+    prefLabel: AI Process
+    definition: A process involving AI technologies
+    scopeNote:
+      - This concept provides a convenient method to indicate AI is involved (somewhere) within the Process
+    broader:
+      - dpv:Process
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - dpv:Process
+    term_status: accepted
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:AISystem
+    prefLabel: AI System
+    definition: An engineered system that generates outputs such as content, forecasts, recommendations
+      or decisions for a given set of human-defined objectives (ISO/IEC 22989:2022 definition); or A machine-based
+      system that, for explicit or implicit objectives, infers, from the input it receives, how to generate
+      outputs such as predictions, content, recommendations, or decisions that can influence physical
+      or virtual environments. Different AI systems vary in their levels of autonomy and adaptiveness
+      after deployment (OECD 2024 definition); or A machine-based system demonstrating varying degrees
+      of autonomy and adaptiveness after deployment, generating outputs such as predictions, content,
+      recommendations, or decisions to influence physical or virtual environments (EU Vocabularies' AI
+      Taxonomy definition)
+    broader:
+      - ai:AI
+      - tech:System
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+      - tech:System
+    term_status: accepted
+    created:
+      - '2024-05-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' ISO/IEC 22989:2022'
+      - OECD.AI
+  - id: ai:AISystemRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: AI System Risk
+    definition: Risks associated with AI Systems
+    broader:
+      - ai:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ActionRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Action Recognition
+    definition: Capability to recognise actions
+    broader:
+      - ai:BiometricCapability
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:AdversarialAttack
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:IntegrityConcept
+      - risk:PotentialConsequence
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Adversarial Attack
+    definition: Inputs designed to cause the model to make a mistake
+    broader:
+      - ai:SecurityAttack
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:AlgorithmSelectionBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Algorithm Selection Bias
+    definition: Bias that occurs from the selection of machine learning algorithms built into the AI system
+      which introduce unwanted bias in predictions made by the system because the type of algorithm used
+      introduces a variation in the performance of the ML model
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:AudioCapability
+    rdf_type:
+      - ai:Capability
+    prefLabel: Audio Capability
+    definition: Capabilities related to the processing and generation of audio
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:AudioGeneration
+    rdf_type:
+      - ai:Capability
+    prefLabel: Audio Generation
+    definition: Capability to generate audio
+    broader:
+      - ai:AudioCapability
+      - ai:ContentGeneration
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:AudioProcessing
+    rdf_type:
+      - ai:Technique
+    prefLabel: Audio Processing
+    definition: Technique involving processing audio
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source_page:
+      - page_name: AI Watch
+        url: https://ai-watch.ec.europa.eu/
+      - page_name: Defining Artificial Intelligence 2.0
+        url: https://publications.jrc.ec.europa.eu/repository/handle/JRC126426
+  - id: ai:AutomaticSummarisation
+    rdf_type:
+      - ai:Capability
+    prefLabel: Automatic Summarisation
+    definition: Capability for shortening a portion of content such as text while retaining important
+      semantic information
+    broader:
+      - ai:InformationRetrieval
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.1
+  - id: ai:AutomationBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Automation Bias
+    definition: Bias that occurs due to propensity for humans to favour suggestions from automated decision-making
+      systems and to ignore contradictory information made without automation, even if it is correct
+    broader:
+      - ai:AIBias
+      - risk:CognitiveBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-09-13'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:BayesianEstimation
+    rdf_type:
+      - ai:Technique
+    prefLabel: Bayesian Estimation
+    definition: Refers to Bayesian estimation approach
+    broader:
+      - ai:StatisticalTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BayesianNetwork
+    rdf_type:
+      - ai:Technique
+    prefLabel: Bayesian Network
+    definition: Probabilistic technique that uses Bayesian inference for probability computations using
+      a directed acyclic graph
+    broader:
+      - ai:StatisticalTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.1
+  - id: ai:BayesianOptimisation
+    rdf_type:
+      - ai:Technique
+    prefLabel: Bayesian Optimisation
+    definition: Refers to Bayesian optimisation technique
+    broader:
+      - ai:StatisticalTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BehaviourAnalysis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Behaviour Analysis
+    definition: Capability of a system in analysing people's behaviour
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:Benchmarking
+    rdf_type:
+      - dpv:OrganisationalMeasure
+    prefLabel: Benchmarking
+    definition: Measure where performance and outputs are compared to best practices, gold standards,
+      or other forms of desired quality
+    broader:
+      - dpv:DataQualityAssessment
+    inScheme:
+      - ai:measures-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:BiasAssessment
+    rdf_type:
+      - dpv:OrganisationalMeasure
+    prefLabel: Bias Assessment
+    definition: Examination of a data set, model, or AI system for bias
+    broader:
+      - dpv:DataQualityAssessment
+    inScheme:
+      - ai:measures-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiasDetection
+    rdf_type:
+      - dpv:OrganisationalMeasure
+    prefLabel: Bias Detection
+    definition: Indicates measures to detect bias
+    broader:
+      - ai:BiasAssessment
+    inScheme:
+      - ai:measures-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-10'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiasMitigation
+    rdf_type:
+      - dpv:OrganisationalMeasure
+    prefLabel: Bias Mitigation
+    definition: Indicates measures to mitigate bias
+    broader:
+      - ai:BiasAssessment
+    inScheme:
+      - ai:measures-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-12'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiasPrevention
+    rdf_type:
+      - dpv:OrganisationalMeasure
+    prefLabel: Bias Prevention
+    definition: Indicates measures to prevent bias
+    broader:
+      - ai:BiasAssessment
+    inScheme:
+      - ai:measures-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-11'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiometricCapability
+    rdf_type:
+      - ai:Capability
+    prefLabel: Biometric Capability
+    definition: Capability involving processing of biometric data or related to biometrics
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiometricCategorisation
+    rdf_type:
+      - ai:Capability
+    prefLabel: Biometric Categorisation
+    definition: Capability involving assigning natural persons to specific categories based on their biometric
+      data
+    broader:
+      - ai:BiometricCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiometricEmotionRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Biometric Emotion Recognition
+    definition: Capability for recognising emotions based on biometrics information
+    broader:
+      - ai:EmotionRecognition
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:BiometricIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Biometric Identification
+    definition: Capability involving automated recognition of physical, physiological and behavioural
+      human features such as the face, eye movement, body shape, voice, prosody, gait, posture, heart
+      rate, blood pressure, odour, keystrokes characteristics, for the purpose of establishing an individual’s
+      identity by comparing biometric data of that individual to stored biometric data of individuals
+      in a reference database, irrespective of whether the individual has given its consent or not
+    broader:
+      - ai:BiometricCapability
+      - ai:HumanIdentification
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source_page:
+      - page_name: The AI Act Recital 15
+        url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#rct_15
+  - id: ai:Capability
+    prefLabel: Capability
+    definition: Capability or use of AI to achieve a technical goal or objective
+    scopeNote:
+      - This concept refers to the application of an AI technique to achieve a technical goal or function,
+        and is necessary to distinguish the 'algorithm' (ai:Technique) from the 'application' (ai:Capability)
+        and 'goal' (dpv:Purpose)
+    broader:
+      - ai:AI
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+    term_status: accepted
+    created:
+      - '2024-04-28'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ChatbotCapability
+    rdf_type:
+      - ai:Capability
+    prefLabel: Chatbot Capability
+    definition: Capability to simulate human-like conversation with a user through messaging platforms,
+      websites, mobile apps, or telephone systems, often employing natural language processing and machine
+      learning to engage in conversation mimicking human interaction
+    broader:
+      - ai:NaturalLanguageProcessing
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:CognitiveComputing
+    prefLabel: Cognitive Computing
+    definition: Category of AI systems that enables people and machines to interact more naturally
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.1.8
+  - id: ai:ComputationalCreativity
+    rdf_type:
+      - ai:Capability
+    prefLabel: Computational Creativity
+    definition: computer systems that emulate human creative processes and produce artistic, design output
+      that simulates innovation and originality
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:ComputerVision
+    rdf_type:
+      - ai:Capability
+    prefLabel: Computer Vision
+    definition: Capability of a functional unit to acquire, process and interpret data representing images
+      or video
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.7.1
+  - id: ai:ContentBasedRetrieval
+    rdf_type:
+      - ai:Capability
+    prefLabel: Content-based Retrieval
+    definition: Capability for retrieval of information using the actual content to identify, select,
+      filter, and provide results
+    broader:
+      - ai:InformationRetrieval
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:ContentGeneration
+    rdf_type:
+      - ai:Capability
+    prefLabel: Content Generation
+    definition: Capability to generate new content that is distinct from merely deriving or transforming
+      existing content
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:ContextAwareRetrieval
+    rdf_type:
+      - ai:Capability
+    prefLabel: Context-aware Retrieval
+    definition: Capability for retrieval of information that takes into account the user's context such
+      as e.g., location, time, device, or activity to provide more relevant results
+    broader:
+      - ai:InformationRetrieval
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:ContinuousValidationStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Continuous Validation Stage
+    definition: The stage in the lifecycle where there is continuous learning within the AI system by
+      incremental training on an ongoing basis while the system is running in production
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:ConvolutionalNeuralNetwork
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Convolutional Neural Network (CNN)
+    definition: Feed forward neural network using convolution in at least one of its layers
+    broader:
+      - ai:NeuralNetwork
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.2
+  - id: ai:CyberphysicalSystem
+    prefLabel: Cyber-physical System
+    definition: Engineered system built from, and depending upon, the seamless integration of computation
+      and physical components
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-23'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:Data
+    prefLabel: AI Data
+    definition: Data involved in the development and use of an AI system or model
+    broader:
+      - dpv:Data
+      - tech:InputOutput
+    inScheme:
+      - ai:data-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - dpv:Data
+      - tech:InputOutput
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:DataAggregation
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Aggregation
+    definition: Processing operation where data is aggregated, e.g. by combining multiple records into
+      one
+    broader:
+      - ai:DataPreparation
+      - dpv:Transform
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-11-05'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataAggregationBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Data Aggregation Bias
+    definition: Bias that occurs from aggregating data covering different groups of objects that might
+      have different statistical distributions which introduce bias into the data used to train AI systems
+    broader:
+      - ai:DataBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:DataAnnotation
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Annotation
+    definition: Processing operation where data is annoated, e.g. by adding additional metadata or context
+      to make it useful
+    broader:
+      - ai:DataPreparation
+      - dpv:Obtain
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-10-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Data Bias
+    definition: Bias that occurs due to unaddressed data properties that lead to AI systems that perform
+      better or worse for different groups
+    broader:
+      - ai:AIBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:DataCleaning
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Cleaning
+    definition: Processing operation where data is cleaned, e.g. by detecting and removing errors or unwanted
+      records
+    broader:
+      - ai:DataPreparation
+      - dpv:Transform
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-11-02'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataCollection
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Collection
+    definition: Processing operation where data is collected, e.g. in a raw or unrefined form
+    broader:
+      - ai:DataOperation
+      - dpv:Collect
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-10-29'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataEnrichment
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Enrichment
+    definition: Processing operation where data is enriced, e.g. by adding additional data that increases
+      its value or usefulness
+    broader:
+      - ai:DataPreparation
+      - dpv:Obtain
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-11-04'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataLabelling
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Labelling
+    definition: Processing operation where data annotation is carried out through labelling, e.g. by assigning
+      tags or categories
+    broader:
+      - ai:DataAnnotation
+      - dpv:Obtain
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-11-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataLabellingProcessBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Data Labelling Process Bias
+    definition: Bias that occurs due to the labelling process itself introducing societal or cognitive
+      biases
+    broader:
+      - ai:DataBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-09-13'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:DataOperation
+    rdf_type:
+      - dpv:Processing
+    prefLabel: DataOperation
+    definition: Processing of data for the development or use of AI models
+    broader:
+      - dpv:Processing
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataPoisoning
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:IntegrityConcept
+      - risk:PotentialConsequence
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Data Poisoning
+    definition: Attack trying to manipulate the training dataset
+    broader:
+      - ai:SecurityAttack
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:DataPreparation
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Preparation
+    definition: Processing operation where data is prepared, e.g. organising and transforming it to make
+      it ready for use
+    broader:
+      - ai:DataOperation
+      - dpv:Organise
+      - dpv:Transform
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-10-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DataRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Data Risk
+    definition: Risk associated with data used or produced or otherwise involved in the context of AI
+    broader:
+      - ai:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:DataUpdating
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Data Updating
+    definition: Processing operation where data is updated, e.g. by adding the latest records
+    broader:
+      - ai:DataPreparation
+      - dpv:Obtain
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-11-03'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:DecisionTree
+    rdf_type:
+      - ai:Technique
+    prefLabel: Decision Tree
+    definition: Technique for which inference is encoded as paths from the root to a leaf node in a tree
+      structure
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.2
+  - id: ai:DecommissionStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Decommission Stage
+    definition: The stage in the lifecycle where the AI system is being decommissioned as part of retirement
+    broader:
+      - ai:RetirementStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-arthit-suriyawongkul
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:DeepLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Deep Learning
+    definition: Approach to creating rich hierarchical representations through the training of neural
+      networks with many hidden layers
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.4
+  - id: ai:DeploymentStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Deployment Stage
+    definition: The stage in the lifecycle where the AI system is installed, released or configured for
+      deployment and operation in a target environment
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:DesignStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Design Stage
+    definition: The stage in the lifecycle where designs are created for the AI system
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:DevelopmentStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Development Stage
+    definition: The stage in the lifecycle where the development and creation of the system occurs, signalling
+      upon completion that it is ready for verification and validation
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:DialogueManagement
+    rdf_type:
+      - ai:Capability
+    prefLabel: Dialogue Management
+    definition: Capability for shortening a portion of content such as text while retaining important
+      semantic information
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.14
+  - id: ai:DiscardStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Discard Stage
+    definition: The stage in the lifecycle where the AI system is being discarded as part of retirement
+    broader:
+      - ai:RetirementStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:DistributedTrainingBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Distributed Training Bias
+    definition: Bias that occurs due to distributed machine having different sources of data that do not
+      have the same distribution of feature space
+    broader:
+      - ai:DataBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:EdgeAI
+    prefLabel: Edge AI
+    definition: The deployment and execution of AI and ML models on Edge devices, including smartphones,
+      IoT sensors, industrial controllers, and other resource-constrained devices located at the Edge
+      of the network and closer to the data sources
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-22'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:EmotionRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Emotion Recognition
+    definition: Capability for identifying and categorising emotions expressed in a piece of text, speech,
+      video or image or combination thereof
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.3
+  - id: ai:EngineeringDecisionBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Engineering Decision Bias
+    definition: Bias that occurs due to machine learning model architectures - encompassing all model
+      specifications, parameters and manually designed features
+    scopeNote:
+      - Data bias and human cognitive bias can contribute to such bias
+    broader:
+      - ai:AIBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ExpertSystem
+    prefLabel: Expert System
+    definition: 'AI system that accumulates, combines and encapsulates knowledge provided by a human expert
+      or experts in a specific domain to infer solutions to problems (ISO/IEC 22989:2022 definition);
+      Artificial intelligence system emulating human expert decision-making abilities, addressing complex
+      problems through reasoning across knowledge bases primarily represented as if-then rules, and comprising
+      two sub-systems: an inference engine for applying rules to known facts and deducing new facts, and
+      a knowledge base containing facts and rules; potentially featuring explanation and debugging capabilities
+      (EU Vocabularies'' AI Taxonomy definition)'
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2026-02-07'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+      - page_name: ISO/IEC 22989:2022
+        url: https://www.iso.org/standard/74296.html
+  - id: ai:ExplainabilityRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Explainability Risk
+    definition: Risk that an AI's decisions or behaviors cannot be adequately understood, interpreted,
+      or justified by relevant stakeholders.
+    broader:
+      - dpv:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:FaceRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Face Recognition
+    definition: Capability involving automatic pattern recognition for comparing stored images of human
+      faces with the image of an actual face, indicating any matching, if it exists, and any data, if
+      they exist, identifying the person to whom the face belongs
+    scopeNote:
+      - EU Vocabularies' AI taxonomy defines 'Facial Recognition as "computer vision technology employing
+        biometric analysis and mapping of facial characteristics for facial identification purposes, recognising
+        and verifying an individual's identity", which not only refers to the capability for face recognition
+        but also indicates the *purposes* for which this is being used. In DPV, such purposes are defined
+        separately within the main DPV
+    broader:
+      - ai:BiometricCapability
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.7.2
+  - id: ai:FeatureEngineeringBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Feature Engineering Bias
+    definition: Bias that occurs from steps such as encoding, data type conversion, dimensionality reduction
+      and feature selection which are subject to choices made by the AI developer and introduce bias in
+      the ML model
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:FeedForwardNeuralNetwork
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Feed Forward Neural Network
+    definition: Neural network where information is fed from the input layer to the output layer in one
+      direction only
+    broader:
+      - ai:NeuralNetwork
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.6
+  - id: ai:FineTunedModel
+    prefLabel: Fine-tuned Model
+    definition: Model resulting from fine-tuning of a pre-trained model
+    broader:
+      - ai:TrainedModel
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:TrainedModel
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:FrugalAISystem
+    prefLabel: Frugal AI System
+    definition: AI systems intended to be more efficient, cost-effective, and accessible while maintaining
+      or even improving their performance
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:FrugalMachineLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Frugal Machine Learning
+    definition: Machine learning techniques that aim to make models more efficient, cost-effective, and
+      accessible while maintaining or even improving their performance
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:GPAI
+    prefLabel: General-Purpose AI System (GPAI)
+    definition: Artificial intelligence system based on a general-purpose model and capable of serving
+      a variety of purposes, either in direct use or integrated with other AI systems
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:GPAIModel
+    prefLabel: General Purpose AI Model
+    definition: A model that displays generality in terms of capabilities and potential applications
+    broader:
+      - ai:Model
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Model
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - EU AI Act
+  - id: ai:GenAI
+    prefLabel: Generative AI
+    definition: Use of artificial intelligence models that can learn from and mimic large amounts of data
+      to create content such as text, images, music, videos, code, and more, based on inputs or prompts
+    broader:
+      - ai:AI
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:GeneticAlgorithm
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Genetic Algorithm
+    definition: Algorithm which simulates natural selection by creating and evolving a population of individuals
+      (solutions) for optimization problems
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.1.15
+  - id: ai:GestureRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Gesture Recognition
+    definition: Capability for recognising human gestures
+    broader:
+      - ai:BiometricCapability
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:HeuristicProgramming
+    rdf_type:
+      - ai:Technique
+    prefLabel: Heuristic Programming
+    definition: Programming approach designed to tackle problems for which there lacks a systematic or
+      optimized approach, frequently used in expert systems
+    broader:
+      - ai:RuleBasedTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:HumanIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Human Identification
+    definition: Capability of a system that identifies a human whether at an individual or group level
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:HumanOrientedCapability
+    rdf_type:
+      - ai:Capability
+    prefLabel: Human-Oriented Capability
+    definition: Capabilities that are inherently about humans or oriented towards human characteristics
+      and activities
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:HyperparameterTuningBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Hyperparameter Tuning Bias
+    definition: Bias that occurs from hyperparameters defining how the model is structured and which cannot
+      be directly trained from the data like model parameters, where hyperparameters affect the model
+      functioning and accuracy of the model
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ImageClassification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Image Classification
+    definition: Capability of categorising and labelling groups of pixels or vectors within an image based
+      on particular rules, involving the assignment of images to predefined classes or categories
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:ImageGeneration
+    rdf_type:
+      - ai:Capability
+    prefLabel: Image Generation
+    definition: Capability to generate image
+    broader:
+      - ai:ContentGeneration
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:ImageRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Image Recognition
+    definition: Capability for image classification process that classifies object(s), pattern(s) or concept(s)
+      in an image
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.7.4
+  - id: ai:InceptionStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Inception Stage
+    definition: The stage in the lifecycle where inception regarding AI occurs and one or more stakeholders
+      decide to turn an idea into a tangible system
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:IncidentMonitoringStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Incident Monitoring Stage
+    definition: The stage in the lifecycle where an AI system is actively being monitored for incidents
+    broader:
+      - ai:OperationStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:InductiveProgramming
+    rdf_type:
+      - ai:Technique
+    prefLabel: Inductive Programming
+    definition: An algorithm or program featuring recursive calls or repetition control structures
+    broader:
+      - ai:KnowledgeTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:IndustrialRobot
+    prefLabel: Industrial Robot
+    definition: A robot or robotic system for use in industrial automation applications
+    broader:
+      - ai:Robot
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Robot
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.1.29
+  - id: ai:InformationRetrieval
+    rdf_type:
+      - ai:Capability
+    prefLabel: Information Retrieval (IR)
+    definition: Capability for retrieving relevant documents or parts of documents from a dataset, typically
+      based on keyword or natural language queries
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.4
+  - id: ai:InformativenessBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Informativeness Bias
+    definition: Bias that occurs or some groups, the mapping between inputs present in the data and outputs
+      are more difficult to learn and where a model that only has one feature set available, can be biased
+      against the group whose relationships are difficult to learn from available data
+    scopeNote:
+      - This can happen when some features are highly informative about one group, while a different set
+        of features is highly informative about another group. If this is the case, then a model that
+        only has one feature set available, can be biased against the group whose relationships are difficult
+        to learn from available data
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:InputDataBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Bias
+    definition: Concept representing input data containing or potentially containing bias
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataInaccurate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Inaccurate
+    definition: Concept representing input data being inaccurate
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataInappropriate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Inappropriate
+    definition: Concept representing input data being inappropriate
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataIncomplete
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Incomplete
+    definition: Concept representing input data being incomplete
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataInconsistent
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Inconsistent
+    definition: Concept representing input data being inconsistent
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataMisclassified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Misclassified
+    definition: Concept representing input data being misclassified
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataMisinterpretation
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Misinterpretation
+    definition: Concept representing input data being misinterpreted
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataNoise
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Noise
+    definition: Concept representing input data being noisy
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataOutdated
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Outdated
+    definition: Concept representing input data being outdated
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Risk
+    definition: Risks and risk concepts related to input data
+    broader:
+      - ai:DataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataSelectionError
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Selection Error
+    definition: Concept representing an error in input data selection
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataSparse
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Sparse
+    definition: Concept representing input data being sparse
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataUnrepresentative
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Unrepresentative
+    definition: Concept representing input data being unrepresentative
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataUnstructured
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Unstructured
+    definition: Concept representing input data being unstructured
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:InputDataUnverified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Input Data Unverified
+    definition: Concept representing input data being unverified
+    broader:
+      - ai:InputDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:IntelligentControlSystem
+    prefLabel: Intelligent Control System
+    definition: Category of AI systems which implement intelligent control principles for real-world applications
+      by using AI capabilities and techniques
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:KnowledgeRepresentation
+    rdf_type:
+      - ai:Technique
+    prefLabel: Knowledge Representation
+    definition: Encoding knowledge in a formal language or in a form that can be used for computer-based
+      problem solving
+    broader:
+      - ai:KnowledgeTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:KnowledgeTechnique
+    rdf_type:
+      - ai:Technique
+    prefLabel: Knowledge Technique
+    definition: Techniques based on the use of knowledge bases
+    scopeNote:
+      - Also known as Knowledge-based AI in the EU Vocabularies' AI Taxonomy http://data.europa.eu/8s8/ai-taxonomy
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:LLM
+    prefLabel: Large Language Model (LLM)
+    definition: Deep learning model that uses artificial neural networks trained on vast amounts of data
+      to understand and generate natural language and other types of content to perform a wide range of
+      tasks
+    broader:
+      - ai:Model
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Model
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:LanguageCapability
+    rdf_type:
+      - ai:Capability
+    prefLabel: Language Capability
+    definition: Capabilities related to languages
+    broader:
+      - ai:Capability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:LieDetection
+    rdf_type:
+      - ai:Capability
+    prefLabel: Lie Detection
+    definition: Capability to detect lies in the context of human speech, behaviour, information, or activities
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:LifecycleStage
+    prefLabel: Lifecycle Stage
+    definition: A stage in the lifecycle of AI
+    broader:
+      - tech:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - tech:LifecycleStage
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:LocalBiometricIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Local Biometric Identification
+    definition: Capability involving biometric identification carried out locally
+    broader:
+      - ai:BiometricIdentification
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:LogicTechnique
+    rdf_type:
+      - ai:Technique
+    prefLabel: Logic Technique
+    definition: Refers to logic based techniques
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:LongShortTermMemory
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Long Short-Term Memory (LSTM)
+    definition: Type of recurrent neural network that processes sequential data with a satisfactory performance
+      for both long and short span dependencies
+    broader:
+      - ai:NeuralNetwork
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.7
+  - id: ai:MachineLearning
+    rdf_type:
+      - ai:Technique
+    prefLabel: Machine Learning
+    definition: Process of optimising model parameters through computational techniques, such that the
+      model's behaviour reflects the data or experience
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.5
+  - id: ai:MachineLearningModel
+    prefLabel: Machine Learning Model
+    definition: Mathematical construct that generates an inference or prediction based on input data or
+      information
+    broader:
+      - ai:Model
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Model
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.7
+  - id: ai:MachineLearningPlatform
+    rdf_type:
+      - dpv:Technology
+    prefLabel: Machine Learning Platform
+    definition: Technology platform for developing, deploying, and managing machine learning models and
+      resources
+    broader:
+      - tech:Platform
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:MachineTranslation
+    rdf_type:
+      - ai:Capability
+    prefLabel: Machine Translation
+    definition: Capability for automated translation of text or speech from one natural language to another
+      using a computer system
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.5
+  - id: ai:MissingFeaturesBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Missing Features Bias
+    definition: Bias that occurs when features are missing from individual training samples
+    scopeNote:
+      - If the frequency of missing features is higher for one group than another then this presents another
+        vector for bias
+    broader:
+      - ai:DataBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-09-13'
+    modified: '2025-08-06'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:Model
+    prefLabel: Model
+    definition: Physical, mathematical or otherwise logical representation of a system, entity, phenomenon,
+      process or data involving the use of AI techniques
+    broader:
+      - ai:AI
+      - tech:Model
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+      - tech:Model
+    term_status: modified
+    created:
+      - '2024-05-17'
+    modified: '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' ISO/IEC 22989:2022'
+      - OECD.AI
+  - id: ai:ModelBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Bias
+    definition: Bias that occurs when ML uses functions like a maximum likelihood estimator to determine
+      parameters, and there is data skew or under-representation present in the data, where the maximum
+      likelihood estimation tends to amplify any underlying bias in the distribution
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ModelEvasion
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:IntegrityConcept
+      - risk:PotentialConsequence
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Evasion
+    definition: An input, which seems normal for a human but is wrongly classified by ML models
+    scopeNote:
+      - (The EU Assessment List for Trustworthy AI (ALTAI),https://data.europa.eu/doi/10.2759/002360)
+    broader:
+      - ai:SecurityAttack
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ModelExpressivenessBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Expressiveness Bias
+    definition: Bias that occurs from the number and nature of parameters in a model as well as the neural
+      network topology which affect the expressiveness of the model and any feature that affects model
+      expressiveness differently across groups
+    broader:
+      - ai:ModelInteractionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ModelFineTuning
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Model Fine-Tuning
+    definition: Process where a pre-trained model is further refined through the use of a smaller training
+      dataset
+    broader:
+      - ai:ModelTraining
+      - dpv:Transform
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-10-28'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:ModelInteractionBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Interaction Bias
+    definition: Bias that occurs from the structure of a model to create biased predictions
+    broader:
+      - ai:EngineeringDecisionBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ModelInversion
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:ConfidentialityConcept
+      - risk:PotentialConsequence
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Inversion
+    definition: A type of attack to AI models, in which the access to a model is abused to infer information
+      about the training data
+    scopeNote:
+      - (HLEG Assessment List for Trustworthy Artificial Intelligence (ALTAI),https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment)
+    broader:
+      - ai:SecurityAttack
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ModelRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Model Risk
+    definition: Risks associated with AI Models
+    broader:
+      - ai:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ModelTraining
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Model Training
+    definition: Process to determine or to improve the parameters of a machine learning model based on
+      a machine learning technique by using training data
+    broader:
+      - dpv:Transform
+    inScheme:
+      - ai:development-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2025-04-24'
+    modified: '2026-02-03'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-georg-p-krog
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-julian-flake
+      - dpv_agent:person-scott-kellum
+  - id: ai:MotionAnalysis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Motion Analysis
+    definition: Capability of deriving meaningful information about motion from visual data, including
+      tracking objects across frames, analysing trajectories, estimating velocity and acceleration, and
+      interpreting the meaning of motion patterns
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:MultiModalRetrieval
+    rdf_type:
+      - ai:Capability
+    prefLabel: Multi-modal Retrieval
+    definition: Capability for retrieval of information using multiple modalities such as text, images,
+      audio, and video and supporting cross-modal queries such as taking text as input to search images
+    broader:
+      - ai:InformationRetrieval
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:MusicInformationRetrieval
+    rdf_type:
+      - ai:Capability
+    prefLabel: Music Information Retrieval (MIR)
+    definition: Capability for retrieving, analysing, and categorising music-related information such
+      as audio files, melodies, or lyrics using audio features, metadata, and user queries
+    broader:
+      - ai:InformationRetrieval
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:NamedEntityRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Named Entity Recognition
+    definition: Capability for recognising and labelling the denotational names of entities and their
+      categories for sequences of words in a stream of text or speech
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.6
+  - id: ai:NarrowAI
+    prefLabel: Narrow AI
+    definition: Type of AI system that is focused on defined tasks to address a specific problem i.e.
+      it addresses a narrow scope of tasks and problems
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.1.24
+  - id: ai:NaturalLanguageGeneration
+    rdf_type:
+      - ai:Capability
+    prefLabel: Natural Language Generation
+    definition: Converting data carrying semantics into natural language
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.8
+  - id: ai:NaturalLanguageProcessing
+    rdf_type:
+      - ai:Capability
+    prefLabel: Natural Language Processing
+    definition: Capability enabling computers to understand and communicate with human language
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:NeuralNetwork
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Neural Network
+    definition: Network of one or more layers of neurons connected by weighted links with adjustable weights,
+      which takes input data and produces an output
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.8
+  - id: ai:NonRepresentativeSamplingBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Non-Representative Sampling Bias
+    definition: Bias that occurs if a dataset is not representative of the intended deployment environment,
+      where the model learns biases based on the ways in which the data is non-representative
+    broader:
+      - ai:DataBias
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-09-13'
+    contributor:
+      - dpv_agent:person-daniel-doherty
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 24027:2021
+  - id: ai:ObjectDetection
+    rdf_type:
+      - ai:Capability
+    prefLabel: Object Detection
+    definition: computer vision technology that detects instances of semantic objects in digital images
+      and videos, covering domains like face detection and pedestrian detection, with applications spanning
+      image retrieval and video surveillance
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:ObjectRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Object Recognition
+    definition: Capability to recognise objects
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:OperationStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Operation Stage
+    definition: The stage in the lifecycle where an AI system is running and generally available for operations
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:OptimisationMethod
+    rdf_type:
+      - ai:Technique
+    prefLabel: Optimisation Method
+    definition: Refers to optimisation Method
+    broader:
+      - ai:StatisticalTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:PartOfSpeechTagging
+    rdf_type:
+      - ai:Capability
+    prefLabel: Part Of Speech Tagging
+    definition: Capability for assigning a category (e.g. verb, noun, adjective) to a word based on its
+      grammatical properties
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.13
+  - id: ai:PatternRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Pattern Recognition
+    definition: Capability for automated identification of patterns and regularities in data, utilising
+      algorithms to detect patterns or regularities for categorising data into distinct groups, encompassing
+      diverse applications such as image analysis, speech processing, and biometric authentication
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:PerceptionBasedAI
+    rdf_type:
+      - ai:Capability
+    prefLabel: Perception-based AI
+    definition: Capability of using agents to interpret and understand information from their environment
+      through sensory inputs
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:PersonalityTraitAnalysis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Personality Trait Analysis
+    definition: Capability for determining and analysing people's personality traits
+    broader:
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:PostTimeBiometricIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Post-Time Biometric Identification
+    definition: Capability involving biometric identification carried out later or not in real-time or
+      non-instantaneously
+    broader:
+      - ai:BiometricIdentification
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:Profiling
+    rdf_type:
+      - ai:Capability
+    prefLabel: Profiling
+    definition: Capability where AI is used to construct a profile of an individual (human) or a group
+      of individuals
+    broader:
+      - ai:HumanOrientedCapability
+      - dpv:Profiling
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:QuestionAnswering
+    rdf_type:
+      - ai:Capability
+    prefLabel: Question Answering
+    definition: Capability for determining the most appropriate answer to a question provided in natural
+      language
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.14
+  - id: ai:RealTimeBiometricIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Real-Time Biometric Identification
+    definition: Capability involving biometric identification carried out in real-time or instantaneously
+    broader:
+      - ai:BiometricIdentification
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ReasoningSystem
+    prefLabel: Reasoning System
+    definition: Artificial intelligence systems that uses available information to generate predictions,
+      make inferences and draw conclusions, involving the representation of data in machine-processable
+      form and application of logic to arrive at decisions
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-18'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:ReasoningTechnique
+    rdf_type:
+      - ai:Technique
+    prefLabel: Reasoning Technique
+    definition: Refers to reasoning techniques
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:RecurrentNeuralNetwork
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Recurrent Neural Network (RNN)
+    definition: Neural network in which outputs from both the previous layer and the previous processing
+      step are fed into the current layer
+    broader:
+      - ai:NeuralNetwork
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.4.10
+  - id: ai:ReevaluationStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Reevaluation Stage
+    definition: The stage in the lifecycle where the AI system is reevaluated after the operation and
+      monitoring stage based on the operations of the AI system
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:ReinforcementLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Reinforcement Learning
+    definition: Learning of an optimal sequence of actions to maximise a reward through interaction with
+      an environment
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.9
+  - id: ai:RelationshipExtraction
+    rdf_type:
+      - ai:Capability
+    prefLabel: Relationship Extraction
+    definition: Capability for identifying relationships among entities mentioned in a text
+    broader:
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.15
+  - id: ai:RemoteBiometricIdentification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Remote Biometric Identification
+    definition: Capability involving biometric identification carried out remotely
+    broader:
+      - ai:BiometricIdentification
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:RemoteSensing
+    rdf_type:
+      - ai:Capability
+    prefLabel: Remote Sensing
+    definition: Capability for acquisition of information about an object or phenomenon without physical
+      contact, typically using aerial sensor technologies
+    broader:
+      - ai:PerceptionBasedAI
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:RepairStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Repair Stage
+    definition: The stage in the lifecycle where an AI system is being repaired due to suspected or occurred
+      incidents
+    broader:
+      - ai:OperationStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:ReplaceStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Replace Stage
+    definition: The stage in the lifecycle where the AI system is being replaced as part of retirement
+    broader:
+      - ai:RetirementStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:RetirementStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Retirement Stage
+    definition: The stage in the lifecycle where the AI system is retired and becomes obsolete
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:RiskConcept
+    rdf_type:
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: RiskConcept
+    definition: Risk concepts such as risk sources, risks, consequences, and impacts associated specifically
+      with development, use, or operation of AI
+    broader:
+      - dpv:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - dpv:RiskConcept
+    term_status: accepted
+    created:
+      - '2024-04-28'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:Robot
+    prefLabel: Robot
+    definition: An automation system with actuators that performs intended tasks in the physical world,
+      by means of sensing its environment and a software control system
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.1.29
+  - id: ai:RoboticProcessAutomation
+    prefLabel: Robotic Process Automation
+    definition: Technology focused on automation of repetitive, routine, rule-based human tasks
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-20'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:Robotics
+    prefLabel: Robotics
+    definition: The science of designing, engineering and using robots, i.e. machines controlled by computers
+      which perform jobs automatically
+    broader:
+      - ai:AISystem
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2025-12-21'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:RuleBasedTechnique
+    rdf_type:
+      - ai:Technique
+    prefLabel: Rule Technique
+    definition: Artificial intelligence approach governed by human-defined rules that explicitly dictate
+      behaviour, relying on logical statements (rules) to determine actions in specific situations
+    broader:
+      - ai:KnowledgeTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:SearchMethod
+    rdf_type:
+      - ai:Technique
+    prefLabel: Search Method
+    definition: Refers to statistical-based search Methods
+    broader:
+      - ai:StatisticalTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:SecurityAttack
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Security Attack
+    definition: Risks or issues associated with security attacks related to AI technologies, models, and
+      systems
+    broader:
+      - ai:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:SelfSupervisedLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Self-Supervised Learning
+    definition: Machine learning approach that uses unsupervised learning for tasks that typically require
+      supervision, generating implicit labels from unstructured data, where models are trained on a task
+      using the data itself to provide supervisory signals, often used in neural networks to exploit inherent
+      structures or relationships within input data to generate training signals
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:SemiSupervisedLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Semi Supervised Learning
+    definition: Machine learning that makes use of both labelled and unlabelled data during training
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.11
+  - id: ai:SentimentAnalysis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Sentiment Analysis
+    definition: Capability for computationally identifying and categorising opinions expressed in a piece
+      of text, speech or image, to determine a range of feeling such as from positive to negative
+    broader:
+      - ai:HumanOrientedCapability
+      - ai:LanguageCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.16
+  - id: ai:ServiceRobot
+    prefLabel: Service Robot
+    definition: A robot or robotic system in personal use or professional use that performs useful tasks
+      for humans or equipment
+    broader:
+      - ai:Robot
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Robot
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' ISO 8373:2021 3.7'
+      - ISO/IEC 22989:2022 3.1.29
+  - id: ai:SocialRobot
+    prefLabel: Social Robot
+    definition: A robot or robotic system with social interaction functions
+    broader:
+      - ai:Robot
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Robot
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:SoundSourceSeparation
+    rdf_type:
+      - ai:Capability
+    prefLabel: Sound Source Separation
+    definition: Capability for extracting individual sound from audio recordings
+    broader:
+      - ai:AudioCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:SoundSynthesis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Sound Synthesis
+    definition: Capability for generation of artificial sound
+    broader:
+      - ai:AudioCapability
+      - ai:ContentGeneration
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:SpeakerRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Speaker Recognition
+    definition: Capability of recognising speaker(s) in audio recordings
+    broader:
+      - ai:AudioProcessing
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' Defining Artificial Intelligence 2.0'
+      - AI Watch
+  - id: ai:SpeechRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Speech Recognition
+    definition: Capability of converting a speech signal to a representation of the content of the speech
+    broader:
+      - ai:AudioProcessing
+      - ai:HumanOrientedCapability
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.17
+  - id: ai:SpeechSynthesis
+    rdf_type:
+      - ai:Capability
+    prefLabel: Speech Synthesis
+    definition: Capability for generation of artificial speech
+    broader:
+      - ai:AudioCapability
+      - ai:ContentGeneration
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.6.18
+  - id: ai:StatisticalTechnique
+    rdf_type:
+      - ai:Technique
+    prefLabel: Statistical Technique
+    definition: Refers to techniques that are based on statistics
+    broader:
+      - ai:Technique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:SupervisedLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Supervised Learning
+    definition: Machine learning that makes only use of labelled data during training
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.11
+  - id: ai:SupportVectorMachine
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Support Vector Machine
+    definition: A machine learning algorithm that finds decision boundaries with maximal margins
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.13
+  - id: ai:SymbolicReasoning
+    rdf_type:
+      - ai:Technique
+    prefLabel: Symbolic Reasoning
+    definition: Reasoning based on the knowledge encoded in a formal language
+    broader:
+      - ai:KnowledgeTechnique
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:Technique
+    prefLabel: Technique
+    definition: The underlying technological algorithm, method, or process that forms the technique for
+      using or applying AI
+    scopeNote:
+      - This concept refers to the foundational computational implementation and is necessary to distinguish
+        the 'algorithm' (ai:Technique) from the 'application' (ai:Capability) and 'goal' (dpv:Purpose)
+    broader:
+      - ai:AI
+    inScheme:
+      - ai:core-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:AI
+    term_status: accepted
+    created:
+      - '2024-04-28'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingData
+    prefLabel: Testing Data
+    definition: Data involved in the testing of an AI system or model
+    broader:
+      - ai:Data
+    inScheme:
+      - ai:data-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Data
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Bias
+    definition: Concept representing testing data containing or potentially containing bias
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataInaccurate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Inaccurate
+    definition: Concept representing testing data being inaccurate
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataInappropriate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Inappropriate
+    definition: Concept representing testing data being inappropriate
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataIncomplete
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Incomplete
+    definition: Concept representing testing data being incomplete
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataInconsistent
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Inconsistent
+    definition: Concept representing testing data being inconsistent
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataMisclassified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Misclassified
+    definition: Concept representing testing data being misclassified
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataMisinterpretation
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Misinterpretation
+    definition: Concept representing testing data being misinterpreted
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataNoise
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Noise
+    definition: Concept representing testing data being noisy
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataOutdated
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Outdated
+    definition: Concept representing testing data being outdated
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Risk
+    definition: Risks and risk concepts related to testing data
+    broader:
+      - ai:DataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataSelectionError
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Selection Error
+    definition: Concept representing an error in testing data selection
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataSparse
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Sparse
+    definition: Concept representing testing data being sparse
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataUnrepresentative
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Unrepresentative
+    definition: Concept representing testing data being unrepresentative
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataUnstructured
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Unstructured
+    definition: Concept representing testing data being unstructured
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TestingDataUnverified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Testing Data Unverified
+    definition: Concept representing testing data being unverified
+    broader:
+      - ai:TestingDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TextClassification
+    rdf_type:
+      - ai:Capability
+    prefLabel: Text Classification
+    definition: Capability of assigning predefined labels to text data in order to automatically categorise
+      it into groups
+    broader:
+      - ai:NaturalLanguageProcessing
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:TextDataMining
+    rdf_type:
+      - ai:Capability
+    prefLabel: Text and Data Mining
+    definition: Capability of selecting and analysing large amounts of text or data resources to discover
+      patterns, relationships, and semantic insights that provide valuable information for research and
+      decision-making
+    broader:
+      - ai:NaturalLanguageProcessing
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:TrainedModel
+    prefLabel: Trained Model
+    definition: Model resulted from model training
+    broader:
+      - ai:Model
+    inScheme:
+      - ai:systems-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Model
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ' ISO 8373:2021 3.7'
+      - ISO/IEC 22989:2022 3.1.29
+  - id: ai:TrainingData
+    prefLabel: Training Data
+    definition: Data involved in the training of an AI system or model
+    broader:
+      - ai:Data
+    inScheme:
+      - ai:data-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Data
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:TrainingTechnique
+    rdf_type:
+      - dpv:Processing
+    prefLabel: Training Technique
+    definition: Process to determine or to improve the parameters of a machine learning model based on
+      a machine learning algorithm by using training data
+    broader:
+      - dpv:Use
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-07-31'
+    source:
+      - ISO/IEC 22989:2022 3.3.15
+  - id: ai:TransferLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: TransferLearning
+    definition: a technique in machine learning in which knowledge learned from a task is re-used in order
+      to boost performance on a related task
+    broader:
+      - ai:DeepLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+  - id: ai:TransparencyRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Transparency Risk
+    definition: Risk that an AI's design, performance, outputs, or other characteristics are not sufficiently
+      transparent
+    broader:
+      - dpv:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2026-02-09'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:UnsupervisedLearning
+    rdf_type:
+      - ai:TrainingTechnique
+    prefLabel: Unsupervised Learning
+    definition: Machine learning that makes only use of unlabelled data during training
+    broader:
+      - ai:MachineLearning
+    inScheme:
+      - ai:techniques-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-31'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022 3.3.17
+  - id: ai:UpdateStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Update Stage
+    definition: The stage in the lifecycle where an AI system is being or has been updated
+    broader:
+      - ai:OperationStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:UserRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: User Risk
+    definition: Risks associated with Users of AI Systems
+    broader:
+      - ai:RiskConcept
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationData
+    prefLabel: Validation Data
+    definition: Data involved in the validation of an AI system or model
+    broader:
+      - ai:Data
+    inScheme:
+      - ai:data-classes
+    isDefinedBy:
+      - 'ai:'
+    subClassOf:
+      - ai:Data
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataBias
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Bias
+    definition: Concept representing validation data containing or potentially containing bias
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataInaccurate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Inaccurate
+    definition: Concept representing validation data being inaccurate
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataInappropriate
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Inappropriate
+    definition: Concept representing validation data being inappropriate
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataIncomplete
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Incomplete
+    definition: Concept representing validation data being incomplete
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataInconsistent
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Inconsistent
+    definition: Concept representing validation data being inconsistent
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataMisclassified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Misclassified
+    definition: Concept representing validation data being misclassified
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataMisinterpretation
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Misinterpretation
+    definition: Concept representing validation data being misinterpreted
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataNoise
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Noise
+    definition: Concept representing validation data being noisy
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: modified
+    created:
+      - '2024-12-01'
+    modified: '2025-07-30'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataOutdated
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Outdated
+    definition: Concept representing validation data being outdated
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataRisk
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Risk
+    definition: Risks and risk concepts related to validation data
+    broader:
+      - ai:DataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataSelectionError
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Selection Error
+    definition: Concept representing an error in validation data selection
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataSparse
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Sparse
+    definition: Concept representing validation data being sparse
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataUnrepresentative
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Unrepresentative
+    definition: Concept representing validation data being unrepresentative
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataUnstructured
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Unstructured
+    definition: Concept representing validation data being unstructured
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationDataUnverified
+    rdf_type:
+      - dpv:RiskConcept
+      - risk:PotentialRisk
+      - risk:PotentialRiskSource
+    prefLabel: Validation Data Unverified
+    definition: Concept representing validation data being unverified
+    broader:
+      - ai:ValidationDataRisk
+    inScheme:
+      - ai:risks-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:ValidationStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Validation Stage
+    definition: The stage in the lifecycle where the AI system is validated for requirements and objectives
+      for an intended use or application
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:VerificationStage
+    rdf_type:
+      - ai:LifecycleStage
+    prefLabel: Verification Stage
+    definition: The stage in the lifecycle where the AI system is being verified to satisfy requirements
+      and meet objectives
+    broader:
+      - ai:LifecycleStage
+    inScheme:
+      - ai:lifecycle-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+    source:
+      - ISO/IEC 22989:2022
+  - id: ai:VideoGeneration
+    rdf_type:
+      - ai:Capability
+    prefLabel: Video Generation
+    definition: Capability to generate video
+    broader:
+      - ai:ContentGeneration
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:VisualRecognition
+    rdf_type:
+      - ai:Capability
+    prefLabel: Visual Recognition
+    definition: Capability that identifies and categorises objects, scenes, activities, and other visual
+      elements in images or video, and includes image classification, object detection, scene understanding,
+      and visual pattern recognition
+    broader:
+      - ai:ComputerVision
+    inScheme:
+      - ai:capabilities-classes
+    isDefinedBy:
+      - 'ai:'
+    term_status: accepted
+    created:
+      - '2025-12-17'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+      - dpv_agent:person-harshvardhan-j-pandit
+    source_page:
+      - page_name: AI Taxonomy - EU Vocabularies
+        url: http://data.europa.eu/8s8/ai-taxonomy
+properties:
+  - id: ai:hasAI
+    prefLabel: has AI
+    definition: Indicates the use of AI for the associated context
+    broader:
+      - dpv:isImplementedUsingTechnology
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - dpv:isImplementedUsingTechnology
+    rangeIncludes:
+      - ai:AI
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasAISystem
+    prefLabel: has AI system
+    definition: Indicates the use of AI system for the associated context
+    broader:
+      - ai:hasAI
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasAI
+    rangeIncludes:
+      - ai:AISystem
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasCapability
+    prefLabel: has capability
+    definition: Indicates the use of AI capability for the associated context
+    broader:
+      - ai:hasAI
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasAI
+    rangeIncludes:
+      - ai:Capability
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasData
+    prefLabel: has data
+    definition: Associates data with an AI system or model or implementation
+    broader:
+      - dpv:hasData
+    inScheme:
+      - ai:data-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - dpv:hasData
+    domainIncludes:
+      - ai:AI
+    rangeIncludes:
+      - ai:Data
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-harshvardhan-j-pandit
+  - id: ai:hasGPAIModel
+    prefLabel: has GPAI model
+    definition: Indicates the use of an GPAI model for the associated context
+    broader:
+      - ai:hasModel
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasModel
+    rangeIncludes:
+      - ai:GPAIModel
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasModel
+    prefLabel: has model
+    definition: Indicates the use of an AI model for the associated context
+    broader:
+      - ai:hasAI
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasAI
+    rangeIncludes:
+      - ai:Model
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasTechnique
+    prefLabel: has technique
+    definition: Indicates the use of AI technique for the associated context
+    broader:
+      - ai:hasAI
+    inScheme:
+      - ai:core-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasAI
+    rangeIncludes:
+      - ai:Technique
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasTestingData
+    prefLabel: has testing data
+    definition: Associates the data used for testing AI
+    broader:
+      - ai:hasData
+      - tech:hasInputData
+    inScheme:
+      - ai:data-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasData
+      - tech:hasInputData
+    domainIncludes:
+      - ai:AI
+    rangeIncludes:
+      - ai:ValidationData
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasTrainingData
+    prefLabel: has training data
+    definition: Associates the data used for training AI
+    broader:
+      - ai:hasData
+      - tech:hasInputData
+    inScheme:
+      - ai:data-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasData
+      - tech:hasInputData
+    domainIncludes:
+      - ai:AI
+    rangeIncludes:
+      - ai:TestingData
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani
+  - id: ai:hasValidationData
+    prefLabel: has validation data
+    definition: Associates the data used for validating AI
+    broader:
+      - ai:hasData
+      - tech:hasInputData
+    inScheme:
+      - ai:data-properties
+    isDefinedBy:
+      - 'ai:'
+    subPropertyOf:
+      - ai:hasData
+      - tech:hasInputData
+    domainIncludes:
+      - ai:AI
+    rangeIncludes:
+      - ai:TrainingData
+    term_status: accepted
+    created:
+      - '2024-12-01'
+    contributor:
+      - dpv_agent:person-delaram-golpayegani

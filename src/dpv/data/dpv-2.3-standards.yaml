@@ -1,0 +1,2501 @@
+---
+# DPV 2.3: standards. scripts/dpv_to_linkml.py writes this file from upstream/, so regenerate it,
+# never edit it.
+#
+# Copyright (c) the Contributors to the Data Privacy Vocabulary (DPV), under the W3C Software
+# and Document License (https://www.w3.org/copyright/software-license-2023/). This file
+# includes material copied from and derived from https://w3id.org/dpv/2.3. It restates the
+# material as records, and NOTICE says what else changed.
+edition: '2.3'
+family: standards
+vocabularies:
+  - id: https://w3id.org/dpv/standards/ieee/7012
+    bibliographicCitation: 'Harshvardhan J. Pandit, Beatriz Esteves, Georg P. Krog, Paul Ryan, Delaram
+      Golpayegani, Julian Flake (2025) Data Privacy Vocabulary (DPV) – Version 2.0. In: Demartini, G.,
+      et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer,
+      Cham. https://doi.org/10.1007/978-3-031-77847-6_10'
+    description: Extension to the Data Privacy Vocabulary (DPV) providing concepts for implementing IEEE
+      7012
+    identifier: https://w3id.org/dpv/standards/ieee/7012
+    title: Extension for IEEE 7012
+    doi: 10.5281/zenodo.12505841
+    bibo_status: http://purl.org/ontology/bibo/status/draft
+    preferredNamespacePrefix: ieee-7012
+    preferredNamespaceUri: https://w3id.org/dpv/standards/ieee/7012#
+    rdfs_Label: IEEE-7012
+    versionInfo: '2.3'
+    schema_version: '2.3'
+    created:
+      - '2025-01-12'
+    issued: '2025-01-12'
+    modified: '2026-02-25'
+    conformsTo:
+      - http://www.w3.org/2000/01/rdf-schema
+      - http://www.w3.org/2004/02/skos/core
+    source:
+      - https://www.w3.org/groups/cg/dpvcg/
+    license: https://www.w3.org/copyright/document-license-2023/
+    publisher: https://www.w3.org/
+    versionIRI: https://w3id.org/dpv/2.3/standards/ieee/7012
+    isProfileOf:
+      - http://www.w3.org/2000/01/rdf-schema#
+      - http://www.w3.org/2004/02/skos/core#
+      - https://w3id.org/dpv
+    logo: https://w3id.org/dpv/media/logo.png
+    creator:
+      - dpv_agent:person-beatriz-esteves
+      - dpv_agent:person-harshvardhan-j-pandit
+      - dpv_agent:person-iain-henderson
+concept_schemes:
+  - id: ieee-7012:agreement-classes
+  - id: ieee-7012:data-classes
+  - id: ieee-7012:entities-classes
+  - id: ieee-7012:entities-properties
+  - id: ieee-7012:privacy-term-classes
+  - id: ieee-7012:privacy-term-properties
+  - id: ieee-7012:process-classes
+  - id: ieee-7012:process-properties
+  - id: ieee-7012:purpose-classes
+  - id: ieee-7012:status-classes
+concepts:
+  - id: ieee-7012:Agent
+    prefLabel: Agent
+    definition: An Agent is any software or a combination of software and hardware that works exclusively
+      for its party, and which may be provided by a third party but must be controlled and be responsible
+      to the party it represents
+    broader:
+      - dpv:Entity
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Entity
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsNegotiation
+    rdf_type:
+      - ieee-7012:AgentNegotiationBehaviour
+    prefLabel: Agent Allows Negotiation
+    definition: Term that indicates the Agent should allow negotiations
+    broader:
+      - ieee-7012:AgentNegotiationBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsNegotiationOnlyKnownParty
+    rdf_type:
+      - ieee-7012:AgentNegotiationBehaviour
+    prefLabel: Agent Allows Negotiation Only Known Party
+    definition: Term that indicates the Agent should allow negotiations but only from known parties
+    broader:
+      - ieee-7012:AgentAllowsNegotiation
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsNegotiationOnlyPriorAgreementParty
+    rdf_type:
+      - ieee-7012:AgentNegotiationBehaviour
+    prefLabel: Agent Allows Negotiation Only Prior Agreement Party
+    definition: Term that indicates the Agent should allow negotiations but only from known parties with
+      whom an agreement was established in the past
+    broader:
+      - ieee-7012:AgentAllowsNegotiationOnlyKnownParty
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsRequests
+    rdf_type:
+      - ieee-7012:AgentRequestBehaviour
+    prefLabel: Agent Allows Requests
+    definition: Term that indicates the Agent should allow requests to be made
+    broader:
+      - ieee-7012:AgentRequestBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsRequestsOnlyKnownParty
+    rdf_type:
+      - ieee-7012:AgentRequestBehaviour
+    prefLabel: Agent Allows Requests Only Known Party
+    definition: Term that indicates the Agent should allow requests to be made but only from prior known
+      parties
+    broader:
+      - ieee-7012:AgentAllowsRequests
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentAllowsRequestsOnlyPriorAgreementParty
+    rdf_type:
+      - ieee-7012:AgentRequestBehaviour
+    prefLabel: Agent Allows Requests Only Prior Agreement Party
+    definition: Term that indicates the Agent should allow requests to be made but only from prior known
+      parties with whom an agreement was established in the past
+    broader:
+      - ieee-7012:AgentAllowsRequestsOnlyKnownParty
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentBehaviour
+    prefLabel: Agent Behaviour
+    definition: Term that indicates the behaviour of the Agent
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentDisallowsNegotiation
+    rdf_type:
+      - ieee-7012:AgentNegotiationBehaviour
+    prefLabel: Agent Disallows Negotiation
+    definition: Term that indicates the Agent should not allow any negotiations
+    broader:
+      - ieee-7012:AgentNegotiationBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentDisallowsRequests
+    rdf_type:
+      - ieee-7012:AgentRequestBehaviour
+    prefLabel: Agent Disallows Requests
+    definition: Term that indicates the Agent should not allow any requests to be made
+    broader:
+      - ieee-7012:AgentRequestBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentNegotiationBehaviour
+    prefLabel: Agent Negotiation Behaviour
+    definition: Term that indicates the behaviour of the Agent in relation to negotiations
+    broader:
+      - ieee-7012:AgentBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:AgentBehaviour
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgentRequestBehaviour
+    prefLabel: Agent Request Behaviour
+    definition: Term that indicates the behaviour of the Agent in relation to requests
+    broader:
+      - ieee-7012:AgentBehaviour
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:AgentBehaviour
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Agreement
+    prefLabel: Agreement
+    definition: A compound set of terms or clauses, proposed and offered before a formal contract between
+      parties, and also referred to as a "proposal" pr "proposed agreement"
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementAccepted
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Accepted
+    definition: Status indicating the Agreement Negotiation is completed and the parties have accepted
+      the relevant terms
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementInteractionRecord
+    prefLabel: Agreement Interaction Record
+    definition: A record of a interactions conducted in the course of establishing and negotiating agreements,
+      including failed attempts, creation of contracts, and subsequent interactions
+    broader:
+      - dpv:RecordsOfActivities
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:RecordsOfActivities
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiation
+    prefLabel: Agreement Negotiation
+    definition: A negotiation between parties regarding an agreement
+    broader:
+      - dpv:Process
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Process
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationClarificationRequired
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Clarification Required
+    definition: Status indicating the Agreement Negotiation requires a clarification from the other party
+      regarding the relevant context
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationConfirmationRequired
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Confirmation Required
+    definition: Status indicating the Agreement Negotiation requires a confirmation by a human before
+      it can proceed
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationCounterOfferMade
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Counter Offer Made
+    definition: Status indicating the terms involved in Agreement Negotiation were not accepted and a
+      counter-offer has been made with a different set of terms
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationExpired
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Expired
+    definition: Status indicating the Agreement Negotiation has expired due to inactivity by a party or
+      due to other reasons
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationInitiated
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Initiated
+    definition: Status indicating the Agreement Negotiation process has been initiated
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationInvalid
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Invalid
+    definition: Status indicating the Agreement Negotiation is deemed to be invalid and therefore cannot
+      continue
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationPaused
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Paused
+    definition: Status indicating the Agreement Negotiation has been paused i.e. halted or put on hold
+      without a specific decision
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationPendingResponse
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Pending Response
+    definition: Status indicating the Agreement Negotiation process is underway and is awaiting a response
+      from the other party
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationRefused
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Refused
+    definition: Status indicating the Agreement Negotiation has been refused to be initiated or continued
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationRequest
+    prefLabel: Agreement Negotiation Request
+    definition: A request to initiate negotiation with the goal of finding an acceptable agreement
+    broader:
+      - dpv:Process
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Process
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationRequested
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Requested
+    definition: Status indicating the Agreement Negotiation has been requested to be initiated
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Status
+    definition: Status associated with the Agreement Negotiation
+    broader:
+      - dpv:Status
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Status
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationTerminated
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Terminated
+    definition: Status indicating the Agreement Negotiation has been terminated by one or more parties
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementNegotiationUnknown
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Negotiation Unknown
+    definition: Status indicating the state of Agreement Negotiation is unknown
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementPreference
+    prefLabel: Agreement Preference
+    definition: A preference regarding agreements, such as to indicate which terms are acceptable or unacceptable
+    broader:
+      - dpv:Rule
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Rule
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementRefused
+    rdf_type:
+      - ieee-7012:AgreementNegotiationStatus
+    prefLabel: Agreement Refused
+    definition: Status indicating the Agreement Negotiation is completed and the parties have refused
+      the relevant terms
+    broader:
+      - ieee-7012:AgreementNegotiationStatus
+    inScheme:
+      - ieee-7012:status-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:AgreementRegistry
+    prefLabel: Agreement Term Registry
+    definition: A registry hosting agreements that acts as a common repository for parties to utilise
+      as a reference within requests and for negotiating acceptable terms
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ConflictResolutionTerm
+    prefLabel: Conflict Resolution Term
+    definition: Term related to resolving conflicts in Term(s)
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataDeletionNotRequired
+    rdf_type:
+      - ieee-7012:DataDeletionTerm
+    prefLabel: Data Deletion Not Required
+    definition: Term that indicates deletion of data is not required as an obligation
+    broader:
+      - ieee-7012:DataDeletionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+  - id: ieee-7012:DataDeletionOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataDeletionTerm
+    prefLabel: Data Deletion on Request
+    definition: Term that indicates deletion of data is required upon request
+    broader:
+      - dpv:Obligation
+      - ieee-7012:DataDeletionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+  - id: ieee-7012:DataDeletionRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataDeletionTerm
+    prefLabel: Data Deletion Required
+    definition: Term that indicates deletion of data is required after all associated (approved) processing
+      is completed
+    broader:
+      - dpv:Obligation
+      - ieee-7012:DataDeletionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+  - id: ieee-7012:DataDeletionTerm
+    prefLabel: Data Deletion Term
+    definition: Term that indicates deletion regarding data as an obligation
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2025-04-09'
+  - id: ieee-7012:DataSharingTerm
+    prefLabel: Data Sharing Term
+    definition: Term related to Data Sharing
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyExAnte
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency Ex Ante
+    definition: Term that indicates transparency regarding data involved and its source is obligated ahead
+      of intended process i.e. ex-ante transparency regarding data involved and its source
+    broader:
+      - ieee-7012:DataTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyExPost
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency Ex Post
+    definition: Term that indicates transparency regarding data involved and its source is obligated after
+      intended process i.e. ex-post transparency regarding data involved and its source
+    broader:
+      - ieee-7012:DataTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyNotRequired
+    rdf_type:
+      - ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency Not Required
+    definition: Term that indicates transparency regarding data involved and its source is not required
+      to be provided
+    broader:
+      - ieee-7012:DataTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency On Request
+    definition: Term that indicates transparency regarding data involved and its source is obligated upon
+      request
+    broader:
+      - ieee-7012:DataTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency Required
+    definition: Term that indicates transparency regarding data involved and its source is obligated
+    broader:
+      - dpv:Obligation
+      - ieee-7012:DataTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DataTransparencyTerm
+    prefLabel: Data Transparency Term
+    definition: Term that indicates transparency regarding data involved and its source as an obligation
+    broader:
+      - ieee-7012:TransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:TransparencyTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:DeonticInterpretationTerm
+    prefLabel: Deontic Interpretation Term
+    definition: Term related to interpretation of the Term(s) using deontic logic
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Endpoint
+    prefLabel: Endpoint
+    definition: A location that acts as an endpoint, such as a URL, for carrying out communications and
+      interactions between parties as defined in IEEE 7012
+    broader:
+      - dpv:Location
+    inScheme:
+      - ieee-7012:process-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Location
+    term_status: modified
+    created:
+      - '2024-12-17'
+    modified: '2026-02-03'
+  - id: ieee-7012:Entity
+    prefLabel: Entity
+    definition: An entity is any organisation with which a person makes or intends to make a contractual
+      agreement, and which is the second party in a contract
+    broader:
+      - dpv:Organisation
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:Organisation
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:EntityAgent
+    prefLabel: Entity Agent
+    definition: An Agent that represents the Entity
+    broader:
+      - ieee-7012:Agent
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:Agent
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:NonServiceData
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Non-Service Data
+    definition: Data other than what is collected, produced, or otherwise generated in the context of
+      a Service
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - ieee-7012:data-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PDC
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Personal Data Contribution
+    definition: Term that indicates access is proactively provided by the person
+    broader:
+      - ieee-7012:Agreement
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PDC-AI
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Personal Data Contribution for AI Training and Development
+    definition: Term that indicates access to data is being provided for the purposes of Training and
+      Operating AI technologies
+    broader:
+      - ieee-7012:PDC
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PDC-GOOD
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Personal Data Contribution for Public Good
+    definition: Term that indicates access to data is being provided for the purposes of Public Good
+    broader:
+      - ieee-7012:PDC
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PDC-INTENT
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Personal Data Contribution for Intent Casting
+    definition: Term that indicates access to data is being provided for the purposes of Intent Casting
+    broader:
+      - ieee-7012:PDC
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyExAnte
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency Ex Ante
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles is obligated ahead of intended process i.e. ex-ante transparency regarding identities and
+      involvement of parties in specific roles
+    broader:
+      - ieee-7012:PartyTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyExPost
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency Ex Post
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles is obligated after intended process i.e. ex-post transparency regarding identities and involvement
+      of parties in specific roles
+    broader:
+      - ieee-7012:PartyTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyNotRequired
+    rdf_type:
+      - ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency Not Required
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles is not required to be provided
+    broader:
+      - ieee-7012:PartyTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency On Request
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles is obligated upon request
+    broader:
+      - ieee-7012:PartyTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency Required
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles is obligated
+    broader:
+      - dpv:Obligation
+      - ieee-7012:PartyTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PartyTransparencyTerm
+    prefLabel: Party Transparency Term
+    definition: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles as an obligation
+    broader:
+      - ieee-7012:TransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:TransparencyTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PermissiveInterpretation
+    rdf_type:
+      - ieee-7012:DeonticInterpretationTerm
+    prefLabel: Permissive Interpretation
+    definition: Term that indicates a permissive interpretation where if something is not prohibited or
+      if there are no rules governing it, then it is assumed to be permitted
+    broader:
+      - ieee-7012:DeonticInterpretationTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Person
+    prefLabel: Person
+    definition: The human individual or person whose personal data or privacy is involved, and which is
+      the first party in a contract
+    broader:
+      - dpv:NaturalPerson
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:NaturalPerson
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PersonAgent
+    prefLabel: Person Agent
+    definition: An Agent that represents the Person
+    broader:
+      - ieee-7012:Agent
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:Agent
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PortabilityNotRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    prefLabel: Portability Not Required
+    definition: Term that indicates data portability is not required to be provided
+    broader:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PortabilityRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    prefLabel: Portability Required
+    definition: Term that indicates data portability is required to be provided
+    broader:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PortabilityRequiredImmediately
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    prefLabel: Portability Required Immediately
+    definition: Term that indicates data should be ported or made available immediately without delay
+    broader:
+      - ieee-7012:PortabilityRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PortabilityRequiredOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    prefLabel: Portability Required On Request
+    definition: Term that indicates data should be ported or made available on request
+    broader:
+      - ieee-7012:PortabilityRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PortabilityTerm
+    prefLabel: Portability Term
+    definition: Term that indicates portability of data from service provider to individual
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasHumanDescription:
+      - Data portability means that you are entitled to ask organisations that hold records about you
+        (your personal data) to be sent in a modern, useful format either to you directly, or to another
+        organisation/ app that you nominate. Examples of that might be your bank transactions (via Open
+        Banking or similar), your home energy use, your vehicle use and many more.
+  - id: ieee-7012:PortabilityToThirdParty
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PortabilityTerm
+    prefLabel: Portability To Third Party
+    definition: Term that indicates data should be ported or made available to third party
+    broader:
+      - ieee-7012:PortabilityRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PreferenceAlwaysApplies
+    rdf_type:
+      - ieee-7012:PreferenceApplicability
+    prefLabel: Preference Always Applies
+    definition: Term that indicates the privacy preference always applies in all contexts and should always
+      be used in agreements and negotiations
+    broader:
+      - ieee-7012:PreferenceApplicability
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PreferenceApplicability
+    prefLabel: Privacy Preference Applicability
+    definition: Term that indicates the applicability of Privacy Preference(s)
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PreferenceConditionallyApplies
+    rdf_type:
+      - ieee-7012:PreferenceApplicability
+    prefLabel: Preference Conditionally Applies
+    definition: Term that indicates the privacy preference conditionally applies i.e. it should only be
+      used in agreements and negotiations if the associated condition is satisfied within the context
+    broader:
+      - ieee-7012:PreferenceApplicability
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PreferenceNeverApplies
+    rdf_type:
+      - ieee-7012:PreferenceApplicability
+    prefLabel: Preference Never Applies
+    definition: Term that indicates the privacy preference never applies in any context and should never
+      be used in agreements or negotiations
+    broader:
+      - ieee-7012:PreferenceApplicability
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Profiling2PAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Allowed Only First Party
+    definition: Term that indicates Profiling is allowed but only by the 1st Party
+    broader:
+      - ieee-7012:ProfilingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Profiling3PDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Disallowed For Third Party
+    definition: Term that indicates Profiling is not allowed by 3rd Parties
+    broader:
+      - ieee-7012:ProfilingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Allowed
+    definition: Term that indicates Profiling is allowed
+    broader:
+      - dpv:Permission
+      - ieee-7012:ProfilingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Disallowed
+    definition: Term that indicates Profiling is not allowed
+    broader:
+      - dpv:Prohibition
+      - ieee-7012:ProfilingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingTerm
+    prefLabel: Profiling Term
+    definition: Term related to Profiling
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingWithFPDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Disallowed FP
+    definition: Term that indicates Profiling involving use of Fingerprinting is not allowed
+    broader:
+      - ieee-7012:ProfilingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingWithPIIDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Disallowed PII
+    definition: Term that indicates Profiling involving use of PII is not allowed
+    broader:
+      - ieee-7012:ProfilingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingWithoutFPAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Allowed No FP
+    definition: Term that indicates Profiling is allowed but only if it does not involve Fingerprinting
+    broader:
+      - ieee-7012:ProfilingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProfilingWithoutPIIAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:ProfilingTerm
+    prefLabel: Profiling Allowed Only Non PII
+    definition: Term that indicates Profiling is allowed but only if it uses non-PII
+    broader:
+      - ieee-7012:ProfilingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ProhibitiveInterpretation
+    rdf_type:
+      - ieee-7012:DeonticInterpretationTerm
+    prefLabel: Prohibitive Interpretation
+    definition: Term that indicates a prohibitive interpretation where if something is not permitted or
+      if there are no rules governing it, then it is assumed to be prohibited
+    broader:
+      - ieee-7012:DeonticInterpretationTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyExAnte
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency Ex Ante
+    definition: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies is obligated ahead of intended process i.e. ex-ante transparency regarding purposes
+      involved for processing of data and technologies
+    broader:
+      - ieee-7012:PurposeTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyExPost
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency Ex Post
+    definition: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies is obligated after intended process i.e. ex-post transparency regarding purposes involved
+      for processing of data and technologies
+    broader:
+      - ieee-7012:PurposeTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyNotRequired
+    rdf_type:
+      - ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency Not Required
+    definition: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies is not required to be provided
+    broader:
+      - ieee-7012:PurposeTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency On Request
+    definition: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies is obligated upon request
+    broader:
+      - ieee-7012:PurposeTransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency Required
+    definition: Term that indicates transparency regarding purposes is obligated
+    broader:
+      - dpv:Obligation
+      - ieee-7012:PurposeTransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:PurposeTransparencyTerm
+    prefLabel: Purpose Transparency Term
+    definition: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies as an obligation
+    broader:
+      - ieee-7012:TransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - ieee-7012:TransparencyTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ResolveAcrossContexts
+    rdf_type:
+      - ieee-7012:ConflictResolutionTerm
+    prefLabel: Resolve Across Contexts
+    definition: Term that indicates this conflict method should be used to resolve all conflicts across
+      contexts i.e. other contexts that have their own conflict resolution method should be overridden
+    broader:
+      - ieee-7012:ConflictResolutionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ResolveByDiscarding
+    rdf_type:
+      - ieee-7012:ConflictResolutionTerm
+    prefLabel: Resolve By Discarding
+    definition: Term that indicates a conflict should be resolved by discarding the conflicting terms
+      i.e. removing all terms that are in conflict
+    broader:
+      - ieee-7012:ConflictResolutionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ResolveOnlyWithinContext
+    rdf_type:
+      - ieee-7012:ConflictResolutionTerm
+    prefLabel: Resolve Only Within Context
+    definition: Term that indicates a conflict should be resolved using the specified method but only
+      for this context i.e. other contexts that have their own conflict resolution method should not be
+      overridden
+    broader:
+      - ieee-7012:ConflictResolutionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ResolvePreferringPermission
+    rdf_type:
+      - ieee-7012:ConflictResolutionTerm
+    prefLabel: Resolve Preferring Permission
+    definition: Term that indicates a conflict should be resolved by preferring the permission over the
+      prohibition i.e. if something is both prohibited and permitted, it is assumed to be permitted
+    broader:
+      - ieee-7012:ConflictResolutionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ResolvePreferringProhibition
+    rdf_type:
+      - ieee-7012:ConflictResolutionTerm
+    prefLabel: Resolve Preferring Prohibition
+    definition: Term that indicates a conflict should be resolved by preferring the prohibition over the
+      permission i.e. if something is both prohibited and permitted, it is assumed to be prohibited
+    broader:
+      - ieee-7012:ConflictResolutionTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SD-BASE
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD-BASE
+    definition: Term that requires Service Delivery, and prohibits Analytics, Tracking, or Profiling by
+      2nd and 3rd Party, and prohibits sharing any data with 3rd Party
+    broader:
+      - ieee-7012:Agreement
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasProhibition:
+      - ieee-7012:AnalyticsDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:TrackingDisallowed
+  - id: ieee-7012:SD-BASE-A
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-A
+    definition: Term that requires Service Delivery and permits Analytics, and prohibits Analytics by
+      3rd Party, prohibits Tracking, or Profiling by 2nd and 3rd Party, and prohibits sharing any data
+      with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:TrackingDisallowed
+  - id: ieee-7012:SD-BASE-A-DP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-A-DP
+    definition: Term that requires Service Delivery and permits Analytics, with an obligation for Data
+      Portability, and prohibits Analytics by 3rd Party, prohibits Tracking or Profiling by 2nd and 3rd
+      Party, and prohibits sharing any data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-A
+      - ieee-7012:SD-BASE-DP
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:PortabilityRequired
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:TrackingDisallowed
+  - id: ieee-7012:SD-BASE-AT
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-AT
+    definition: Term that requires Service Delivery, and permits Analytics and Tracking by the 2nd Party,
+      and prohibits Analytics, or Tracking by 3rd Party, prohibits Profiling by 2nd and 3rd Party, and
+      prohibits sharing any data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-A
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-AT-DP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-AT-DP
+    definition: Term that requires Service Delivery, and permits Analytics and Tracking by the 2nd Party,
+      with an obligation for Data Portability, and prohibits Analytics or Tracking by 3rd Party, prohibits
+      Profiling by 2nd and 3rd Party, and prohibits sharing any data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-AT
+      - ieee-7012:SD-BASE-DP
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:PortabilityRequired
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-ATP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-ATP
+    definition: Term that requires Service Delivery, and permits Analytics, Tracking, or Profiling by
+      the 2nd party, and prohibits Analytics, Tracking, or Profiling by 3rd Party, and prohibits sharing
+      any data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-AT
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:Profiling2PAllowed
+      - |
+        ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:Profiling3PDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-ATP-DP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-ATP-DP
+    definition: Term that requires Service Delivery, and permits Analytics, Tracking, or Profiling by
+      the 2nd Party, with an obligation for Data Portability, and prohibits Analytics, Tracking, or Profiling
+      by 3rd Party, and prohibits sharing any data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-ATP
+      - ieee-7012:SD-BASE-DP
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:PortabilityRequired
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:Profiling2PAllowed
+      - |
+        ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:Profiling3PDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-ATP-S3P
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-ATP-S3P
+    definition: Term that requires Service Delivery, and permits Analytics, Tracking, or Profiling by
+      the 2nd Party, and permits sharing data that has been fully anonymised with 3rd Party, and prohibits
+      Analytics, Tracking, or Profiling by 3rd Party, and prohibits sharing on non-anonymised data with
+      3rd Party
+    broader:
+      - ieee-7012:SD-BASE-ATP
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:DataSharingAnonymised3PAllowed
+      - ieee-7012:Profiling2PAllowed
+      - |
+        ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:Profiling3PDisallowed
+      - ieee-7012:SharingDataNonAnonymised3PDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-ATP-S3P-DP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-ATP-S3P-DP
+    definition: Term that requires Service Delivery, and permits Analytics, Tracking, or Profiling by
+      the 2nd Party, and permits sharing data that has been fully anonymised with 3rd Party, with an obligation
+      for Data Portability, and prohibits Analytics, Tracking, Profiling by 3rd Party, and prohibits sharing
+      on non-anonymised data with 3rd Party
+    broader:
+      - ieee-7012:SD-BASE-ATP-S3P
+      - ieee-7012:SD-BASE-DP
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:PortabilityRequired
+      - ieee-7012:ServiceDeliveryRequired
+    hasPermission:
+      - ieee-7012:Analytics2PAllowed
+      - ieee-7012:DataSharingAnonymised3PAllowed
+      - ieee-7012:Profiling2PAllowed
+      - |
+        ieee-7012:Tracking2PAllowed
+    hasProhibition:
+      - ieee-7012:Analytics3PDisallowed
+      - ieee-7012:Profiling3PDisallowed
+      - ieee-7012:SharingDataNonAnonymised3PDisallowed
+      - ieee-7012:Tracking3PDisallowed
+  - id: ieee-7012:SD-BASE-DP
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: SD BASE-DP
+    definition: Term that requires Service Delivery, with an obligation for Data Portability, and prohibits
+      Analytics, Tracking, or Profiling by 2nd and 3rd Party, and prohibits sharing any data with 3rd
+      Party
+    broader:
+      - ieee-7012:SD-BASE
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+    hasObligation:
+      - ieee-7012:PortabilityRequired
+      - ieee-7012:ServiceDeliveryRequired
+    hasProhibition:
+      - ieee-7012:AnalyticsDisallowed
+      - ieee-7012:DataSharingDisallowed
+      - ieee-7012:ProfilingDisallowed
+      - ieee-7012:TrackingDisallowed
+  - id: ieee-7012:ServiceAnalytics
+    rdf_type:
+      - dpv:Purpose
+    prefLabel: Service Analytics
+    definition: Purposes associated with analysing the usage, delivery, and provisioning metrics of a
+      service
+    broader:
+      - dpv:ServiceUsageAnalytics
+    inScheme:
+      - ieee-7012:purpose-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ServiceAnalyticsData
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Service Analytics Data
+    definition: Data collected, produced, or otherwise generated in the context of analysing the usage
+      and provision of a Service
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - ieee-7012:data-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ServiceData
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Service Data
+    definition: Data collected, produced, or otherwise generated in the context of a Service
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - ieee-7012:data-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ServiceDelivery
+    rdf_type:
+      - dpv:Purpose
+    prefLabel: Service Delivery
+    definition: Purposes associated with delivery of a service
+    broader:
+      - dpv:RequestedServiceProvision
+    inScheme:
+      - ieee-7012:purpose-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ServiceImprovement
+    rdf_type:
+      - dpv:Purpose
+    prefLabel: Service Improvement
+    definition: Purposes associated with identifying and implementing improvements to a service
+    broader:
+      - dpv:ServiceOptimisation
+    inScheme:
+      - ieee-7012:purpose-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:ServiceUsageData
+    rdf_type:
+      - dpv:PersonalData
+    prefLabel: Service Usage Data
+    definition: Data collected, produced, or otherwise generated in the context of using a Service
+    broader:
+      - dpv:PersonalData
+    inScheme:
+      - ieee-7012:data-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingData3PAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Data with 3rd Party Allowed
+    definition: Term that indicates data sharing with third party is allowed
+    broader:
+      - ieee-7012:SharingDataAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingData3PDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Data with 3rd Party Disallowed
+    definition: Term that indicates data sharing with third party is disallowed
+    broader:
+      - ieee-7012:SharingDataDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Data Allowed
+    definition: Term that indicates Data Sharing is allowed
+    broader:
+      - dpv:Permission
+      - ieee-7012:DataSharingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataAnonymised3PAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Anonymised Data with 3rd Party Allowed
+    definition: Term that indicates data sharing only of anonymised data with third party is allowed
+    broader:
+      - ieee-7012:SharingDataAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataAnonymised3PDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Anonymised Data with 3rd Party Disallowed
+    definition: Term that indicates data sharing of full anonymised data with third party is disallowed
+    broader:
+      - ieee-7012:SharingDataDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Data Disallowed
+    definition: Term that indicates Data Sharing is not allowed
+    broader:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataNonAnonymised3PDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Non-Anonymised Data with 3rd Party Disallowed
+    definition: Term that indicates data sharing of non-anonymised data with third party is disallowed
+    broader:
+      - ieee-7012:SharingDataDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:SharingDataNonAnonymisedDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:DataSharingTerm
+    prefLabel: Sharing Non-Anonymised Data Disallowed
+    definition: Term that indicates Data Sharing for fully anonymised data is not allowed
+    broader:
+      - ieee-7012:SharingDataDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TPR
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Trusted Personal Relationship
+    definition: Term that indicates the agreement is between two individual humans regarding services,
+      communication, or other activities as mutually agreed within the agreement
+    broader:
+      - ieee-7012:Agreement
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+    hasObligation:
+      - ieee-7012:ServiceDeliveryRequired
+    hasProhibition:
+      - ieee-7012:DataSharingDisallowed
+  - id: ieee-7012:TPR-IDENTITY-REF
+    rdf_type:
+      - ieee-7012:Agreement
+    prefLabel: Trusted Personal Relationship - Identity Reference
+    definition: Term that indicates an agreement that establishes the identity of a person through an
+      agreement with another human who validates or vouches for the stated identity as belonging to the
+      associated human
+    broader:
+      - ieee-7012:TPR
+    inScheme:
+      - ieee-7012:agreement-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+    hasObligation:
+      - dpv:IdentityVerification
+  - id: ieee-7012:ThirdParty
+    prefLabel: Third Party
+    definition: A party other than the Person and Entity as first and second parties respectively in the
+      contractual interaction
+    broader:
+      - dpv:LegalEntity
+    inScheme:
+      - ieee-7012:entities-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:LegalEntity
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Tracking2PAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking by 2nd Party Allowed
+    definition: Term that indicates Tracking 2nd Party is allowed
+    broader:
+      - ieee-7012:TrackingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:Tracking3PDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking by 3rd Party Disallowed
+    definition: Term that indicates Tracking 3rd Party is disallowed
+    broader:
+      - ieee-7012:TrackingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking Allowed
+    definition: Term that indicates Tracking by 2nd and 3rd parties is allowed
+    broader:
+      - dpv:Permission
+      - ieee-7012:TrackingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking Disallowed
+    definition: Term that indicates Tracking by 2nd and 3rd parties is disallowed
+    broader:
+      - dpv:Prohibition
+      - ieee-7012:TrackingTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingTerm
+    prefLabel: Tracking Term
+    definition: Term related to Tracking
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingWithFPDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking With FP Disallowed
+    definition: Term that indicates Tracking involving use of Fingerprinting is not allowed
+    broader:
+      - ieee-7012:TrackingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingWithPIIDisallowed
+    rdf_type:
+      - dpv:Prohibition
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking With PII Disallowed
+    definition: Term that indicates Tracking involving use of PII is not allowed
+    broader:
+      - ieee-7012:TrackingDisallowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingWithoutFPAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking Without FP Allowed
+    definition: Term that indicates Tracking is allowed but only if it does not involve Fingerprinting
+    broader:
+      - ieee-7012:TrackingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TrackingWithoutPIIAllowed
+    rdf_type:
+      - dpv:Permission
+      - ieee-7012:TrackingTerm
+    prefLabel: Tracking Without PII Allowed
+    definition: Term that indicates Tracking is allowed but only if it does not use any PII
+    broader:
+      - ieee-7012:TrackingAllowed
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyExAnte
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:TransparencyTerm
+    prefLabel: Transparency Ex Ante
+    definition: Term that indicates transparency is obligated ahead of intended process i.e. ex-ante transparency
+    broader:
+      - ieee-7012:TransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyExPost
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:TransparencyTerm
+    prefLabel: Transparency Ex Post
+    definition: Term that indicates transparency is obligated after intended process i.e. ex-post transparency
+    broader:
+      - ieee-7012:TransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyNotRequired
+    rdf_type:
+      - ieee-7012:TransparencyTerm
+    prefLabel: Transparency Not Required
+    definition: Term that indicates transparency is not required to be provided
+    broader:
+      - ieee-7012:TransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyOnRequest
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:TransparencyTerm
+    prefLabel: Transparency On Request
+    definition: Term that indicates transparency is obligated upon request
+    broader:
+      - ieee-7012:TransparencyRequired
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyRequired
+    rdf_type:
+      - dpv:Obligation
+      - ieee-7012:TransparencyTerm
+    prefLabel: Transparency Required
+    definition: Term that indicates transparency is obligated
+    broader:
+      - dpv:Obligation
+      - ieee-7012:TransparencyTerm
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:TransparencyTerm
+    prefLabel: Transparency Term
+    definition: Term that indicates transparency as an obligation
+    broader:
+      - dpv:ContractualClause
+    inScheme:
+      - ieee-7012:privacy-term-classes
+    isDefinedBy:
+      - 'ieee-7012:'
+    subClassOf:
+      - dpv:ContractualClause
+    term_status: accepted
+    created:
+      - '2024-12-17'
+properties:
+  - id: ieee-7012:hasAgent
+    prefLabel: has agent
+    definition: Specifies the agent that represents a party and can act on behalf
+    broader:
+      - dpv:hasEntity
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    subPropertyOf:
+      - dpv:hasEntity
+    rangeIncludes:
+      - ieee-7012:Agent
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasAgentBehaviour
+    prefLabel: has agent behaviour
+    definition: Relation that indicates the behaviour of Privacy Agents
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:AgentBehaviour
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasAgreement
+    prefLabel: has agreement
+    definition: Indicates the inclusion or applicability of the specified Privacy Term
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:Agreement
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasAgreementPreference
+    prefLabel: has privacy preference
+    definition: Indicates the inclusion or applicability of the specified Privacy Preference
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:AgreementPreference
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasAgreementRegistry
+    prefLabel: has agreement registry
+    definition: Indicates the inclusion or applicability of the specified Privacy Term Registry
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:AgreementRegistry
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasConflictResolution
+    prefLabel: has conflict resolution
+    definition: Relation that indicates the Conflict Resolution Term that should be used
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:ConflictResolutionTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasDataSharingTerm
+    prefLabel: has data sharing term
+    definition: Relation that associates a Data Sharing Term
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:DataSharingTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasDeonticInterpretation
+    prefLabel: has deontic interpretation
+    definition: Relation that indicates the Deontic Interpretation Term that should be used
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:DeonticInterpretationTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasEndpoint
+    prefLabel: has endpoint
+    definition: Indicates the endpoint, such as a URL or an address, where 7012 related communications
+      and interactions can be made
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:Endpoint
+    term_status: modified
+    created:
+      - '2024-12-17'
+    modified: '2026-02-03'
+  - id: ieee-7012:hasFirstParty
+    prefLabel: has first party
+    definition: Specifies the human individual or Person involved as the first party
+    broader:
+      - dpv:hasEntity
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    subPropertyOf:
+      - dpv:hasEntity
+    rangeIncludes:
+      - ieee-7012:Person
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasHumanDescription
+    prefLabel: has human description
+    definition: A description intended for humans
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    term_status: accepted
+    created:
+      - '2025-04-09'
+  - id: ieee-7012:hasHumanReadableFormat
+    prefLabel: has human readable format
+    definition: Indicates the specified resource is a human readable format of the subject
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - xsd:anyURI
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasMachineReadableFormat
+    prefLabel: has machine readable format
+    definition: Indicates the specified resource is a machine readable format of the subject
+    scopeNote:
+      - To assist in interpreting the resource, we strongly suggest using dct:conformsTo with an appropriate
+        URI to indicate the specific standard or specification used to express the resource
+    inScheme:
+      - ieee-7012:process-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - xsd:anyURI
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasParty
+    prefLabel: has party
+    definition: Specifies that an entity is a party to the context i.e. it has decision making abilities
+      or has obligations and responsibilities
+    broader:
+      - dpv:hasEntity
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    subPropertyOf:
+      - dpv:hasEntity
+    rangeIncludes:
+      - ieee-7012:Party
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasPortabilityTerm
+    prefLabel: has portability term
+    definition: Relation that associates a Portability Term
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:PortabilityTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasPreferenceApplicability
+    prefLabel: has preference applicability
+    definition: Relation that indicates the applicability of Privacy Preference(s)
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:PreferenceApplicability
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasProfilingTerm
+    prefLabel: has profiling term
+    definition: Relation that associates a Profiling Term
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:ProfilingTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasSecondParty
+    prefLabel: has second party
+    definition: Specifies the entity organisation involved as the second party
+    broader:
+      - dpv:hasEntity
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    subPropertyOf:
+      - dpv:hasEntity
+    rangeIncludes:
+      - ieee-7012:Entity
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasThirdParty
+    prefLabel: has third party
+    definition: Specifies the a party other than the person or Entity that is involved
+    broader:
+      - dpv:hasThirdParty
+    inScheme:
+      - ieee-7012:entities-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    subPropertyOf:
+      - dpv:hasThirdParty
+    rangeIncludes:
+      - ieee-7012:ThirdParty
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasTrackingTerm
+    prefLabel: has tracking term
+    definition: Relation that associates a Tracking Term
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:TrackingTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
+  - id: ieee-7012:hasTransparencyTerm
+    prefLabel: has transparency term
+    definition: Relation that associates a Transparency Term
+    inScheme:
+      - ieee-7012:privacy-term-properties
+    isDefinedBy:
+      - 'ieee-7012:'
+    rangeIncludes:
+      - ieee-7012:TransparencyTerm
+    term_status: accepted
+    created:
+      - '2024-12-17'
