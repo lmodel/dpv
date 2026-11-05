@@ -40,7 +40,7 @@ A statement the slots cannot hold, such as a literal under `hasLocation` or a pr
 
 - `skos:narrower`, which only the locations state, 68,032 times. 4,959 are the inverse of `skos:broader`. The other 63,073 list what each `loc:non-X` holds: every country but X, and but X's member countries when X is a union. `tests/test_coverage.py` regenerates every pair.
 - `schema:domainIncludes` and `schema:rangeIncludes`, which repeat the `dcam:` pair on every property.
-- What says how DPV's site publishes a file: `prof:hasResource` and the 337 resource descriptors.
+- The statements of how DPV's site publishes a file: `prof:hasResource` and the 337 resource descriptors.
 - `dpv-27560`, DPV's schema for consent records. Its Turtle file names four classes and states nothing about them, so there is nothing to render.
 
 ## What the data shows

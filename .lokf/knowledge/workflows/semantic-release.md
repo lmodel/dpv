@@ -22,6 +22,6 @@ status: draft
 
 # Semantic release (semantic-release.yml)
 
-It runs on a push to `main`, in the `release` Environment, and installs its pinned tools with `--ignore-scripts`.[^security.md]
+The workflow runs on a push to `main`, in the `release` Environment, and installs its pinned tools with `--ignore-scripts`.[^security.md]
 
 [^security.md]: SECURITY.md, What executes here

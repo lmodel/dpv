@@ -19,6 +19,6 @@ status: draft
 
 # Knowledge release (knowledge-release.yaml)
 
-It stays inert until dispatched, and only its `attach` job, which runs no third-party packages, can write.[^security.md]
+The workflow stays inert until dispatched, and only its `attach` job, which runs no third-party packages, can write.[^security.md]
 
 [^security.md]: SECURITY.md, What this repository releases and What executes here

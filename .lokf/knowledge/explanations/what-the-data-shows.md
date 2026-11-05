@@ -31,7 +31,7 @@ Three example files do not parse: `E0030`, `E0059` and `E0061`.[^about.md]
 
 `dcat:Resource` states two creation dates, and five terms name two vocabularies under `rdfs:isDefinedBy`. 153 terms have no definition, nearly all laws and authorities.[^test_catalogue.py]
 
-These tests fail when a later edition fixes one, so each is looked at again then.[^test_catalogue.py]
+A test fails when a later edition fixes one of these, so each is looked at again then.[^test_catalogue.py]
 
 [^about.md]: docs/about.md, What the data shows
 [^test_catalogue.py]: tests/test_catalogue.py, test_what_the_data_shows_and_the_vocabulary_does_not_say

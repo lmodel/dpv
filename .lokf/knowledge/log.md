@@ -2,6 +2,7 @@
 
 ## 2026-11-05
 
+* **Prose**: reworded 10 concept bodies in plain English. No fact, link, number or frontmatter changed.
 * **Changed**: the note on the contributor rule names it in words.
 * **Changed**: the example data names the catalogue and the schema it exercises.
 * **Changed**: the covenant names the schema it governs and the vocabulary it renders.

@@ -31,7 +31,7 @@ DPV states `dpv:Marketing a rdfs:Class, skos:Concept, dpv:Purpose`. A LinkML cla
 
 So the concepts that terms are instances of are classes, and every term is a record. A term and its kind's class can be the same thing seen two ways: `dpv:Purpose` is a record, and `DpvPurpose` is the class a host names as a concept's `type`.[^about.md]
 
-It follows that `project/owl/` describes this schema, and `upstream/2.3/` is DPV's ontology.[^readme.md]
+So `project/owl/` describes this schema, and `upstream/2.3/` is DPV's ontology.[^readme.md]
 
 The schema it replaced held 973 classes with no slots of their own, and enforced only `id`.[^changelog]
 

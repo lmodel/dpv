@@ -1,10 +1,12 @@
 """Checks DPV's own examples, the one instance data DPV publishes, against the catalogue.
 
 Each example's Turtle file is in the data as records. These tests hold the records to the
-file, say what the validator refuses, and read the one thing it cannot state: DPV's
-rangeIncludes and domainIncludes say what a property usually joins, so a value outside them
-is not wrong in RDF, but the examples are DPV's own account of how to use a property, so
-tests/example_departures.yaml lists each place they leave those classes, and a new one fails.
+file, say what the validator refuses, and read the one thing it cannot state.
+
+DPV's rangeIncludes and domainIncludes say what a property usually joins, so a value outside
+them is not wrong in RDF. The examples are still DPV's own account of how to use a property,
+so tests/example_departures.yaml lists each place they leave those classes, and a new one
+fails.
 """
 
 import collections

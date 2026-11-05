@@ -18,6 +18,6 @@ status: draft
 
 # Resource
 
-DPV's examples are written this way. A resource names the term it is an instance of in `rdf_type`, such as `dpv:Process`.[^index.md]
+A resource names the term it is an instance of in `rdf_type`, such as `dpv:Process`. DPV's examples are written this way.[^index.md]
 
 [^index.md]: docs/index.md, Describing a use case

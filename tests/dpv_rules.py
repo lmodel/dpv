@@ -53,7 +53,7 @@ TERM_REFERENCES = (
 
 @cache
 def dpv_prefixes():
-    """The prefixes of the namespaces DPV itself mints."""
+    """The prefixes of the namespaces DPV itself defines."""
     return frozenset(
         name
         for name, namespace in C.prefixes().items()

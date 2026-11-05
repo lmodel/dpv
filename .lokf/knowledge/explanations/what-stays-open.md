@@ -25,7 +25,7 @@ status: draft
 
 DPV uses `dcam:domainIncludes` and `dcam:rangeIncludes`. They say what a property usually joins, not what it must. So `DpvResource` holds any property, and the validator refuses no value for leaving those classes.[^about.md]
 
-What the validator does refuse is an unknown key and a value that does not look like a reference. `tests/dpv_rules.py` then holds a value to a term that exists.[^about.md]
+The validator refuses an unknown key and a value that does not look like a reference. `tests/dpv_rules.py` then holds a value to a term that exists.[^about.md]
 
 A kind adds no slot of its own, so every kind's class has one shape, and a list of concepts does not try each kind in turn.[^test_generated_json_schema.py]
 

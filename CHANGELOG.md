@@ -29,4 +29,4 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 - **The per-module and per-extension schema trees**, the `dpv_<group>` modules and the import map. An address such as `dpv:schema/dpv_common` no longer answers.
 - **`dpv-27560`**, whose Turtle file names four classes and states nothing about them.
 - **`upstream-releases/`**, which `upstream/` replaces, with the OWL serialisations and the module copies.
-- **The mkdocs site**, with redirects from its landing pages to the new site.
+- **The mkdocs site**, with redirects from its main pages to the new site.

@@ -19,6 +19,6 @@ status: draft
 
 # Knowledge website (knowledge-website.yaml)
 
-It builds without a write token. Only its deploy job holds `pages: write` and `id-token: write`, and it runs only from `main`.[^security.md]
+The workflow builds without a write token. Only its deploy job holds `pages: write` and `id-token: write`, and it runs only from `main`.[^security.md]
 
 [^security.md]: SECURITY.md, What executes here

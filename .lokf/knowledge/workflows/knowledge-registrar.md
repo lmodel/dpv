@@ -19,6 +19,6 @@ references:
 
 # Knowledge registrar (knowledge-registrar.yaml)
 
-It runs on any pull request that touches `.lokf/`.[^contributing.md]
+The workflow runs on any pull request that touches `.lokf/`.[^contributing.md]
 
 [^contributing.md]: CONTRIBUTING.md, Before opening a pull request

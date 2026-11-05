@@ -43,7 +43,7 @@ The converter writes each file from `upstream/`. Each file is a `DpvCatalogue`, 
 | `dpv-2.3-standards.yaml` | 136 | 21 |
 | `dpv-2.3-examples.yaml` | 1 | 0 |
 
-Every file passes the committed JSON Schema, `linkml-validate` and the rules in `tests/dpv_rules.py`, and its JSON-LD projection gives back every triple the Turtle states about a term, but for what `explanations/what-the-records-leave-out` lists.[^test_catalogue.py]
+Every file passes the committed JSON Schema, `linkml-validate` and the rules in `tests/dpv_rules.py`, and its JSON-LD projection gives back every triple the Turtle states about a term, except what `explanations/what-the-records-leave-out` lists.[^test_catalogue.py]
 
 [^about.md]: docs/about.md, The parts of a release
 [^test_catalogue.py]: tests/test_catalogue.py, the module's tests

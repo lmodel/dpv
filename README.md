@@ -14,7 +14,7 @@ Data Privacy Vocabulary (DPV) 2.3 (LinkML)
 
 ## What it models
 
-The schema renders the [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) 2.3 of 28 February 2026, from the W3C Data Privacy Vocabularies and Controls Community Group: the core vocabulary and its extensions for personal data, technology, artificial intelligence, risk, justifications, locations, laws, sectors and standards. DPV states each concept as a class and as an instance of a broader concept, so each kind of concept is a class here, each property a slot under its own IRI, and every term a record.
+The schema renders the [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) 2.3 of 28 February 2026, from the W3C Data Privacy Vocabularies and Controls Community Group. DPV is the core vocabulary and its extensions for personal data, technology, artificial intelligence, risk, justifications, locations, laws, sectors and standards. DPV states each concept as a class and as an instance of a broader concept, so each kind of concept is a class here, each property a slot under its own IRI, and every term a record.
 
 `src/dpv/data/` holds the terms and DPV's examples as records, `upstream/` holds DPV's files, pinned by hash, and `scripts/dpv_to_linkml.py` writes the first from the second. `project/owl/` describes this schema, and `upstream/2.3/` is DPV's ontology. [docs/about.md](docs/about.md) says what the records leave out and what stays open.
 

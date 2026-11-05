@@ -23,7 +23,7 @@ status: draft
 
 # Documentation site
 
-The site replaces the mkdocs site. Its options send the old landing pages, such as `/about` and `/extensions/ai`, to the new ones. The old pages of each class do not move, because the classes they described are gone.[^site.config.mjs]
+The site replaces the mkdocs site. Its options redirect the old main pages, such as `/about` and `/extensions/ai`, to the new ones. The old pages of each class have no redirect, because the classes they described are gone.[^site.config.mjs]
 
 `website/README.md` says how to build it.[^website-readme.md]
 
