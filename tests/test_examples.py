@@ -202,6 +202,15 @@ def test_the_departures_are_the_listed_ones():
     assert departures() == listed
 
 
+def test_the_docs_give_the_departures_numbers():
+    about = (Path(__file__).parent.parent / "docs" / "about.md").read_text(encoding="utf-8")
+    found = departures()
+    assert (
+        f"{len(found['range'])} values, {len(found['domain'])} subjects and "
+        f"{len(found['literal'])} literals" in about
+    )
+
+
 def test_a_real_process_reads_as_dpv_says():
     """The first example's process names a purpose, and that purpose is DPV's."""
     example = next(e for e in _examples() if e["id"] == "dex:E0026")

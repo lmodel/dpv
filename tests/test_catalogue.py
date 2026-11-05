@@ -13,12 +13,13 @@ from pathlib import Path
 import jsonschema
 import pytest
 import rdflib
+import yaml
 from linkml.validator import validate
 from rdflib import RDF, RDFS, SKOS, BNode, Literal, URIRef
 
 from tests import conversion
 from tests.conversion import ROOT
-from tests.dpv_rules import rule_errors
+from tests.dpv_rules import DANGLING, rule_errors
 
 JSON_SCHEMA = ROOT / "project" / "jsonschema" / "dpv.schema.json"
 CONTEXT = ROOT / "project" / "jsonld" / "dpv.context.jsonld"
@@ -232,6 +233,35 @@ def test_a_term_with_a_date_projects_it_typed():
     assert isinstance(created, Literal)
     assert created.datatype == C.XSD.date
     assert str(created) == "2020-11-04"
+
+
+def test_the_docs_give_the_catalogues_numbers():
+    """docs/index.md's table and docs/about.md's counts follow the files."""
+    index = (ROOT / "docs" / "index.md").read_text(encoding="utf-8")
+    for family, document in conversion.documents().items():
+        concepts = len(document.get("concepts", ()))
+        properties = len(document.get("properties", ()))
+        if family == "agents":
+            continue
+        row = f"| `dpv-2.3-{family}.yaml` | {concepts:,} | {properties} |"
+        assert row in index, row
+    assert f"{len(conversion.records('agents'))} contributors" in index
+    assert f"the {len(conversion.records('examples'))} examples" in index
+    about = (ROOT / "docs" / "about.md").read_text(encoding="utf-8")
+    assert "68,032 times" in about
+    assert "4,959 are the inverse" in about
+    assert "The other 63,073" in about
+    assert f"{len(DANGLING)} names under DPV's namespaces" in about
+
+
+def test_the_docs_example_validates():
+    """The record docs/index.md shows is a resource whose values are real terms."""
+    index = (ROOT / "docs" / "index.md").read_text(encoding="utf-8")
+    block = index.split("```yaml")[1].split("```")[0]
+    record = yaml.safe_load(block)
+    report = validate(record, conversion.SCHEMA, "DpvResource")
+    assert not report.results, [r.message for r in report.results]
+    assert not rule_errors({"examples": [{"id": "dex:E0", "title": "x", "resources": [record]}]})
 
 
 def test_what_the_data_shows_and_the_vocabulary_does_not_say():
