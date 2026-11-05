@@ -1,0 +1,37 @@
+# mapping_set_id: https://w3id.org/lmodel/dpv/mappings/dpv-odrl
+# mapping_set_title: DPV's own ODRL mappings
+# mapping_set_description: ODRL terms DPV's editors align with DPV 2.3.
+# mapping_set_version: "2.3"
+# mapping_set_source: https://w3id.org/dpv/mappings/odrl
+# license: https://www.w3.org/copyright/software-license-2023/
+# curie_map:
+#   dpv: https://w3id.org/dpv#
+#   odrl: http://www.w3.org/ns/odrl/2/
+#   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	comment
+dpv:Data	Data	skos:broadMatch	odrl:Asset		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:Entity	Entity	skos:broadMatch	odrl:Party		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:LegalAgreement	Legal Agreement	skos:broadMatch	odrl:Policy		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:PersonalData	Personal Data	skos:broadMatch	odrl:Asset		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:Processing	Processing	skos:broadMatch	odrl:Action		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:Purpose	Purpose	skos:broadMatch	odrl:Purpose		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasApplicableLaw	has applicable law	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasContext	has context	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasData	has data	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasDataController	has data controller	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasDataProcessor	has data processor	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasDataSubject	has data subject	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasHumanSubject	has human subject	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasJurisdiction	has jurisdiction	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasLegalBasis	has legal basis	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasLocation	has location	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasOrganisationalMeasure	has organisational measure	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasPersonalData	has personal data	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasRecipient	has recipient	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasRight	has right	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasRisk	has risk	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasTechnicalMeasure	has technical measure	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasTechnicalOrganisationalMeasure	has technical and organisational measure	rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	
+dpv:hasTechnology		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	W3C Data Privacy Vocabularies and Controls Community Group	

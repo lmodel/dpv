@@ -1380,7 +1380,7 @@ MAPPING_COLUMNS = (
     "object_label",
     "mapping_justification",
     "author_label",
-    "object_source",
+    "comment",
 )
 MAPPING_AUTHOR = "W3C Data Privacy Vocabularies and Controls Community Group"
 
@@ -1399,12 +1399,12 @@ def _mapping_rows(graph: Graph, name: str) -> list[dict]:
         if name == "iso":
             external = f"dpv-iso:{row['ExternalConcept']}"
             predicate = ISO_PREDICATES[kind]
-            source = row["Source"]
+            source = f"DPV names the source as {row['Source']}."
             external_label = row["Label"]
         else:
             external = row["ExternalConcept"]
             predicate = ODRL_PREDICATES[kind]
-            source = "https://www.w3.org/TR/odrl-vocab/"
+            source = ""
             external_label = ""
         out.append(
             {
@@ -1415,7 +1415,7 @@ def _mapping_rows(graph: Graph, name: str) -> list[dict]:
                 "object_label": external_label,
                 "mapping_justification": "semapv:ManualMappingCuration",
                 "author_label": MAPPING_AUTHOR,
-                "object_source": source,
+                "comment": source,
             }
         )
     return sorted(out, key=lambda r: (r["subject_id"], r["object_id"]))
