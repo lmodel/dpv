@@ -18,5 +18,3 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for dpv. Every Markdown 
 
 # Services
 
-* [Example Service A](services/example-service-a.md) - Placeholder service; replace with a real service of dpv.
-* [Example Service B](services/example-service-b.md) - Placeholder service; replace with a real service of dpv.
