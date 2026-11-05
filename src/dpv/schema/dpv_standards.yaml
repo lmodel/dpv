@@ -1,0 +1,107 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_standards
+name: dpv_standards
+title: 'DPV kinds: standards'
+description: 'The kinds of term DPV''s vocabularies of standards state: each a concept that terms are
+  instances of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  ieee-7012: https://w3id.org/dpv/standards/ieee/7012#
+  linkml: https://w3id.org/linkml/
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+classes:
+  DpvAgentNegotiationBehaviour:
+    title: Agent Negotiation Behaviour
+    is_a: DpvContractualClause
+    description: Term that indicates the behaviour of the Agent in relation to negotiations
+    class_uri: ieee-7012:AgentNegotiationBehaviour
+  DpvAgentRequestBehaviour:
+    title: Agent Request Behaviour
+    is_a: DpvContractualClause
+    description: Term that indicates the behaviour of the Agent in relation to requests
+    class_uri: ieee-7012:AgentRequestBehaviour
+  DpvAgreement:
+    title: Agreement
+    is_a: DpvContractualClause
+    description: A compound set of terms or clauses, proposed and offered before a formal contract between
+      parties, and also referred to as a "proposal" pr "proposed agreement"
+    class_uri: ieee-7012:Agreement
+  DpvAgreementNegotiationStatus:
+    title: Agreement Negotiation Status
+    is_a: DpvStatus
+    description: Status associated with the Agreement Negotiation
+    class_uri: ieee-7012:AgreementNegotiationStatus
+  DpvConflictResolutionTerm:
+    title: Conflict Resolution Term
+    is_a: DpvContractualClause
+    description: Term related to resolving conflicts in Term(s)
+    class_uri: ieee-7012:ConflictResolutionTerm
+  DpvDataDeletionTerm:
+    title: Data Deletion Term
+    is_a: DpvContractualClause
+    description: Term that indicates deletion regarding data as an obligation
+    class_uri: ieee-7012:DataDeletionTerm
+  DpvDataSharingTerm:
+    title: Data Sharing Term
+    is_a: DpvContractualClause
+    description: Term related to Data Sharing
+    class_uri: ieee-7012:DataSharingTerm
+  DpvDataTransparencyTerm:
+    title: Data Transparency Term
+    is_a: DpvTransparencyTerm
+    description: Term that indicates transparency regarding data involved and its source as an obligation
+    class_uri: ieee-7012:DataTransparencyTerm
+  DpvDeonticInterpretationTerm:
+    title: Deontic Interpretation Term
+    is_a: DpvContractualClause
+    description: Term related to interpretation of the Term(s) using deontic logic
+    class_uri: ieee-7012:DeonticInterpretationTerm
+  DpvPartyTransparencyTerm:
+    title: Party Transparency Term
+    is_a: DpvTransparencyTerm
+    description: Term that indicates transparency regarding identities and involvement of parties in specific
+      roles as an obligation
+    class_uri: ieee-7012:PartyTransparencyTerm
+  DpvPortabilityTerm:
+    title: Portability Term
+    is_a: DpvContractualClause
+    description: Term that indicates portability of data from service provider to individual
+    class_uri: ieee-7012:PortabilityTerm
+  DpvPreferenceApplicability:
+    title: Privacy Preference Applicability
+    is_a: DpvContractualClause
+    description: Term that indicates the applicability of Privacy Preference(s)
+    class_uri: ieee-7012:PreferenceApplicability
+  DpvProfilingTerm:
+    title: Profiling Term
+    is_a: DpvContractualClause
+    description: Term related to Profiling
+    class_uri: ieee-7012:ProfilingTerm
+  DpvPurposeTransparencyTerm:
+    title: Purpose Transparency Term
+    is_a: DpvTransparencyTerm
+    description: Term that indicates transparency regarding purposes involved for processing of data and
+      technologies as an obligation
+    class_uri: ieee-7012:PurposeTransparencyTerm
+  DpvTrackingTerm:
+    title: Tracking Term
+    is_a: DpvContractualClause
+    description: Term related to Tracking
+    class_uri: ieee-7012:TrackingTerm
+  DpvTransparencyTerm:
+    title: Transparency Term
+    is_a: DpvContractualClause
+    description: Term that indicates transparency as an obligation
+    class_uri: ieee-7012:TransparencyTerm

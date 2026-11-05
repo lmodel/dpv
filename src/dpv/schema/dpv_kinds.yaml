@@ -1,0 +1,485 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_kinds
+name: dpv_kinds
+title: 'DPV kinds: the core'
+description: 'The kinds of term DPV''s vocabularies of the core state: each a concept that terms are instances
+  of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv: https://w3id.org/dpv#
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+classes:
+  DpvActivityStatus:
+    title: Activity Status
+    is_a: DpvStatus
+    description: Status associated with activity operations and lifecycles
+    class_uri: dpv:ActivityStatus
+  DpvAggregatedData:
+    title: AggregatedData
+    is_a: DpvConcept
+    description: A kind of term DPV names as dpv:AggregatedData and does not define.
+    class_uri: dpv:AggregatedData
+  DpvApplicability:
+    title: Applicability
+    is_a: DpvConcept
+    description: Concept provided to represent indication of cases where the information or context is
+      not applicable (N/A) or not available or this is not known or determined yet. If the information
+      is applicable and available, this concept should not be used.
+    class_uri: dpv:Applicability
+  DpvAuditStatus:
+    title: Audit Status
+    is_a: DpvStatus
+    description: Status associated with Auditing or Investigation
+    class_uri: dpv:AuditStatus
+  DpvAuthority:
+    title: Authority
+    is_a: DpvLegalEntity
+    description: An authority with the power to create or enforce laws, or determine their compliance.
+    class_uri: dpv:Authority
+  DpvAutomationLevel:
+    title: Automation Level
+    is_a: DpvProcessingContext
+    description: Indication of degree or level of automation associated with specified context
+    class_uri: dpv:AutomationLevel
+  DpvComplianceStatus:
+    title: Compliance Status
+    is_a: DpvStatus
+    description: Status associated with Compliance with some norms, objectives, or requirements
+    class_uri: dpv:ComplianceStatus
+  DpvConformanceStatus:
+    title: Conformance Status
+    is_a: DpvStatus
+    description: Status associated with conformance to a standard, guideline, code, or recommendation
+    class_uri: dpv:ConformanceStatus
+  DpvConsentStatus:
+    title: Consent Status
+    is_a: DpvStatus
+    description: The state or status of 'consent' that provides information reflecting its operational
+      status and validity for processing data
+    class_uri: dpv:ConsentStatus
+  DpvContractActivationStatus:
+    title: Contract Activation Status
+    is_a: DpvStatus
+    description: Status associated with activation of a contract i.e. whether its terms are active and
+      are required to be performed
+    class_uri: dpv:ContractActivationStatus
+  DpvContractExecutionStatus:
+    title: Contract Execution Status
+    is_a: DpvStatus
+    description: Status associated with execution of a contract (i.e. signing and procedural aspects before
+      the contract terms come in to effect)
+    class_uri: dpv:ContractExecutionStatus
+  DpvContractFulfilmentStatus:
+    title: Contract Fulfilment Status
+    is_a: DpvStatus
+    description: Status associated with fulfilment of a contract
+    class_uri: dpv:ContractFulfilmentStatus
+  DpvContractPerformanceStatus:
+    title: Contract Performance Status
+    is_a: DpvStatus
+    description: Status associated with performance of a contract
+    class_uri: dpv:ContractPerformanceStatus
+  DpvContractPreparationStatus:
+    title: Contract Preparation Status
+    is_a: DpvStatus
+    description: Status associated with preparation of contracts before they are signed or accepted or
+      executed
+    class_uri: dpv:ContractPreparationStatus
+  DpvContractTerminationStatus:
+    title: Contract Termination Status
+    is_a: DpvStatus
+    description: Status associated with termination of a contract
+    class_uri: dpv:ContractTerminationStatus
+  DpvContractualClause:
+    title: Contractual Clause
+    is_a: DpvConcept
+    description: A part or component within a contract that outlines its specifics
+    class_uri: dpv:ContractualClause
+  DpvContractualClauseFulfilmentStatus:
+    title: Contractual Clause Fulfilment Status
+    is_a: DpvStatus
+    description: Status associated with fulfilment of a contractual clause
+    class_uri: dpv:ContractualClauseFulfilmentStatus
+  DpvCountry:
+    title: Country
+    is_a: DpvJurisdiction
+    description: A political entity indicative of a sovereign or non-sovereign territorial state comprising
+      of distinct geographical areas
+    class_uri: dpv:Country
+  DpvDataProtectionAuthority:
+    title: Data Protection Authority
+    is_a: DpvAuthority
+    description: An authority tasked with overseeing legal compliance regarding privacy and data protection
+      laws.
+    class_uri: dpv:DataProtectionAuthority
+  DpvDataSource:
+    title: Data Source
+    is_a: DpvProcessingContext
+    description: The source or origin of data
+    class_uri: dpv:DataSource
+  DpvDataSubjectDataSource:
+    title: Data Subject as Data Source
+    is_a: DpvDataSource
+    description: Data Sourced from Data Subject(s), e.g. when data is collected via a form or observed
+      from their activities
+    class_uri: dpv:DataSubjectDataSource
+  DpvDataSubjectScale:
+    title: Data Subject Scale
+    is_a: DpvProcessingContext
+    description: Scale of Data Subject(s)
+    class_uri: dpv:DataSubjectScale
+  DpvDataVolume:
+    title: Data Volume
+    is_a: DpvProcessingContext
+    description: Volume or Scale of Data
+    class_uri: dpv:DataVolume
+  DpvDuration:
+    title: Duration
+    is_a: DpvConcept
+    description: The duration or temporal limitation
+    class_uri: dpv:Duration
+  DpvEntityInformedStatus:
+    title: Entity Informed Status
+    is_a: DpvStatus
+    description: Status indicating whether an entity is informed or uninformed about specified context
+    class_uri: dpv:EntityInformedStatus
+  DpvEntityInvolvementStatus:
+    title: Entity Involvement Status
+    is_a: DpvStatus
+    description: Status indicating whether an entity is involved
+    class_uri: dpv:EntityInvolvementStatus
+  DpvEntityNonPermissiveInvolvement:
+    title: Entity Non-Permissive Involvement
+    is_a: DpvProcessingContext
+    description: Involvement of an entity in specific context where it is not permitted or able to do
+      something
+    class_uri: dpv:EntityNonPermissiveInvolvement
+  DpvEntityPermissiveInvolvement:
+    title: Entity Permissive Involvement
+    is_a: DpvProcessingContext
+    description: Involvement of an entity in specific context where it is permitted or able to do something
+    class_uri: dpv:EntityPermissiveInvolvement
+  DpvEvaluationScoring:
+    title: Evaluation and Scoring
+    is_a: DpvProcessingContext
+    description: Processing that involves evaluation and scoring of individuals
+    class_uri: dpv:EvaluationScoring
+  DpvExpectationStatus:
+    title: Expectation Status
+    is_a: DpvConcept
+    description: Status indicating whether the specified context was intended or unintended
+    class_uri: dpv:ExpectationStatus
+  DpvFeeRequirement:
+    title: Fee Requirement
+    is_a: DpvConcept
+    description: Concept indicating whether a fee is required
+    class_uri: dpv:FeeRequirement
+  DpvFrequency:
+    title: Frequency
+    is_a: DpvConcept
+    description: The frequency or information about periods and repetitions in terms of recurrence.
+    class_uri: dpv:Frequency
+  DpvGeographicCoverage:
+    title: Geographic Coverage
+    is_a: DpvProcessingContext
+    description: Indicate of scale in terms of geographic coverage
+    class_uri: dpv:GeographicCoverage
+  DpvHumanInvolvement:
+    title: Human Involvement
+    is_a: DpvProcessingContext
+    description: The involvement of humans in specified context
+    class_uri: dpv:HumanInvolvement
+  DpvHumanSubject:
+    title: Human Subject
+    is_a: DpvLegalEntity
+    description: The individual (or category of individuals) that is the subject within some context such
+      as personal data (dpv:DataSubject) or technology (tech:Subject)
+    class_uri: dpv:HumanSubject
+  DpvImportance:
+    title: Importance
+    is_a: DpvConcept
+    description: An indication of 'importance' within a context
+    class_uri: dpv:Importance
+  DpvInnovativeUseOfTechnology:
+    title: Innovative use of Technology
+    is_a: DpvProcessingContext
+    description: Indicates that technology is being used in an innovative manner
+    class_uri: dpv:InnovativeUseOfTechnology
+  DpvIntentionStatus:
+    title: Intention Status
+    is_a: DpvStatus
+    description: Status indicating whether the specified context was intended or unintended
+    class_uri: dpv:IntentionStatus
+  DpvInverseJurisdiction:
+    title: Inverse Jurisdiction
+    is_a: DpvJurisdiction
+    description: An inverse jurisdiction for a specific jurisdiction is the set of all other jurisdictions
+      that are not part of the specific jurisdiction
+    class_uri: dpv:InverseJurisdiction
+  DpvInvolvementStatus:
+    title: Involvement Status
+    is_a: DpvStatus
+    description: Status indicating whether the involvement of specified context
+    class_uri: dpv:InvolvementStatus
+  DpvJurisdiction:
+    title: Jurisdiction
+    is_a: DpvLocation
+    description: A jurisdiction represents the locations that define the extent of authority (or control)
+      claimed, granted, or asserted by a legal entity (in particular a legal authority) to govern or enforce
+      rules
+    class_uri: dpv:Jurisdiction
+  DpvJustification:
+    title: Justification
+    is_a: DpvConcept
+    description: A form of documentation providing reasons, explanations, or justifications
+    class_uri: dpv:Justification
+  DpvLaw:
+    title: Law
+    is_a: DpvConcept
+    description: A law is a set of rules created by government or authorities
+    class_uri: dpv:Law
+  DpvLawfulness:
+    title: Lawfulness
+    is_a: DpvComplianceStatus
+    description: Status associated with expressing lawfulness or legal compliance
+    class_uri: dpv:Lawfulness
+  DpvLegalBasis:
+    title: Legal Basis
+    is_a: DpvConcept
+    description: Legal basis used to justify processing of data or use of technology in accordance with
+      a law
+    class_uri: dpv:LegalBasis
+  DpvLegalEntity:
+    title: Legal Entity
+    is_a: DpvConcept
+    description: A human or non-human 'thing' that constitutes as an entity and which is recognised and
+      defined in law
+    class_uri: dpv:LegalEntity
+  DpvLegalMeasure:
+    title: Legal Measure
+    is_a: DpvConcept
+    description: Legal measures used to safeguard and ensure good practices in connection with data and
+      technologies
+    class_uri: dpv:LegalMeasure
+  DpvLegalObligationStatus:
+    title: Legal ObligationStatus
+    is_a: DpvStatus
+    description: Status associated with use of Legal Obligation as a legal basis
+    class_uri: dpv:LegalObligationStatus
+  DpvLegitimateInterestStatus:
+    title: Legitimate InterestStatus
+    is_a: DpvStatus
+    description: Status associated with use of Legitimate Interest as a legal basis
+    class_uri: dpv:LegitimateInterestStatus
+  DpvLikelihood:
+    title: Likelihood
+    is_a: DpvConcept
+    description: The likelihood or probability or chance of something taking place or occurring
+    class_uri: dpv:Likelihood
+  DpvLocation:
+    title: Location
+    is_a: DpvConcept
+    description: A location is a position, site, or area where something is located
+    class_uri: dpv:Location
+  DpvLocationFixture:
+    title: Location Fixture
+    is_a: DpvConcept
+    description: The fixture of location refers to whether the location is fixed
+    class_uri: dpv:LocationFixture
+  DpvNecessity:
+    title: Necessity
+    is_a: DpvConcept
+    description: An indication of 'necessity' within a context
+    class_uri: dpv:Necessity
+  DpvNonPersonalData:
+    title: Non-Personal Data
+    is_a: DpvConcept
+    description: Data that is not Personal Data
+    class_uri: dpv:NonPersonalData
+  DpvNoticeStatus:
+    title: Notice Status
+    is_a: DpvStatus
+    description: Status associated with notice provision, use, and management
+    class_uri: dpv:NoticeStatus
+  DpvNotificationStatus:
+    title: Notification Status
+    is_a: DpvStatus
+    description: Status indicating whether notification(s) are planned, completed, or failed
+    class_uri: dpv:NotificationStatus
+  DpvObligation:
+    title: Obligation
+    is_a: DpvRule
+    description: A rule describing an obligation for performing an activity
+    class_uri: dpv:Obligation
+  DpvOfficialAuthorityExerciseStatus:
+    title: Official Authority Exercise Status
+    is_a: DpvStatus
+    description: Status associated with use of Official Authority as a legal basis
+    class_uri: dpv:OfficialAuthorityExerciseStatus
+  DpvOrganisationalMeasure:
+    title: Organisational Measure
+    is_a: DpvConcept
+    description: Organisational measures used to safeguard and ensure good practices in connection with
+      data and technologies
+    class_uri: dpv:OrganisationalMeasure
+  DpvPermission:
+    title: Permission
+    is_a: DpvRule
+    description: A rule describing a permission to perform an activity
+    class_uri: dpv:Permission
+  DpvPersonalData:
+    title: Personal Data
+    is_a: DpvConcept
+    description: Data directly or indirectly associated or related to an individual
+    class_uri: dpv:PersonalData
+  DpvPhysicalMeasure:
+    title: Physical Measure
+    is_a: DpvConcept
+    description: Physical measures used to safeguard and ensure good practices in connection with data
+      and technologies
+    class_uri: dpv:PhysicalMeasure
+  DpvProcessing:
+    title: Processing
+    is_a: DpvConcept
+    description: Operations or 'processing' performed on data
+    class_uri: dpv:Processing
+  DpvProcessingContext:
+    title: Processing Context
+    is_a: DpvConcept
+    description: Context or conditions within which processing takes place
+    class_uri: dpv:ProcessingContext
+  DpvProcessingScale:
+    title: Processing Scale
+    is_a: DpvProcessingContext
+    description: Scale of Processing
+    class_uri: dpv:ProcessingScale
+  DpvProhibition:
+    title: Prohibition
+    is_a: DpvRule
+    description: A rule describing a prohibition to perform an activity
+    class_uri: dpv:Prohibition
+  DpvPublicInterestStatus:
+    title: Public Interest Status
+    is_a: DpvStatus
+    description: Status associated with use of Public Interest as a legal basis
+    class_uri: dpv:PublicInterestStatus
+  DpvPublicRegisterOfEntities:
+    title: Public Register of Entities
+    is_a: DpvConcept
+    description: A publicly available list of entities e.g. to indicate which entities perform a certain
+      activity within a certain location or jurisdiction
+    class_uri: dpv:PublicRegisterOfEntities
+  DpvPurpose:
+    title: Purpose
+    is_a: DpvConcept
+    description: Purpose or (broader) Goal associated with data or technology
+    class_uri: dpv:Purpose
+  DpvRegion:
+    title: Region
+    is_a: DpvCountry
+    description: A region is an area or site that is considered a location
+    class_uri: dpv:Region
+  DpvRequestStatus:
+    title: Request Status
+    is_a: DpvStatus
+    description: Status associated with requests
+    class_uri: dpv:RequestStatus
+  DpvReuseCompatibility:
+    title: ReuseCompatibility
+    is_a: DpvStatus
+    description: Status indicating whether the specified context is compatible with another earlier context
+    class_uri: dpv:ReuseCompatibility
+  DpvRight:
+    title: Right
+    is_a: DpvConcept
+    description: The right(s) applicable, provided, or expected
+    class_uri: dpv:Right
+  DpvRiskConcept:
+    title: Risk Concept
+    is_a: DpvConcept
+    description: Parent concept for combining concepts associated with risk assessment such as actual
+      and potential Risk, Risk Source, Consequences, and Impacts
+    class_uri: dpv:RiskConcept
+  DpvRiskLevel:
+    title: Risk Level
+    is_a: DpvConcept
+    description: The magnitude of a risk expressed as an indication to aid in its management
+    class_uri: dpv:RiskLevel
+  DpvRule:
+    title: Rule
+    is_a: DpvConcept
+    description: A rule describing a process or control that directs or determines if and how an activity
+      should be conducted
+    class_uri: dpv:Rule
+  DpvRuleFulfilmentStatus:
+    title: Rule Fulfilment Status
+    is_a: DpvStatus
+    description: Status associated with a rule for indicating whether it is applicable, or has been utilised,
+      and whether the requirements of the rule have been fulfilled or violated
+    class_uri: dpv:RuleFulfilmentStatus
+  DpvScoringOfIndividuals:
+    title: Scoring of Individuals
+    is_a: DpvEvaluationScoring
+    description: Processing that involves scoring of individuals
+    class_uri: dpv:ScoringOfIndividuals
+  DpvSector:
+    title: Sector
+    is_a: DpvConcept
+    description: Sector describes the area of application or domain that indicates or restricts scope
+      for interpretation and application of purpose e.g. Agriculture, Banking
+    class_uri: dpv:Sector
+  DpvSensitivePersonalData:
+    title: Sensitive Personal Data
+    is_a: DpvPersonalData
+    description: Personal data that is considered 'sensitive' in terms of privacy and/or impact, and therefore
+      requires additional considerations and/or protection
+    class_uri: dpv:SensitivePersonalData
+  DpvSeverity:
+    title: Severity
+    is_a: DpvConcept
+    description: The magnitude of being unwanted or having negative effects such as harmful impacts
+    class_uri: dpv:Severity
+  DpvSpecialCategoryPersonalData:
+    title: Special Category Personal Data
+    is_a: DpvSensitivePersonalData
+    description: Sensitive Personal Data whose use requires specific additional legal permission or justification
+    class_uri: dpv:SpecialCategoryPersonalData
+  DpvStatus:
+    title: Status
+    is_a: DpvConcept
+    description: The status or state of something
+    class_uri: dpv:Status
+  DpvSupraNationalUnion:
+    title: Supranational Union
+    is_a: DpvJurisdiction
+    description: A political union of two or more countries with an establishment of common authority
+    class_uri: dpv:SupraNationalUnion
+  DpvTechnicalMeasure:
+    title: Technical Measure
+    is_a: DpvConcept
+    description: Technical measures used to safeguard and ensure good practices in connection with data
+      and technologies
+    class_uri: dpv:TechnicalMeasure
+  DpvTechnology:
+    title: Technology
+    is_a: DpvConcept
+    description: The technology, technological implementation, or any techniques, skills, methods, and
+      processes used or applied
+    class_uri: dpv:Technology
+  DpvVitalInterestStatus:
+    title: Vital Interest Status
+    is_a: DpvStatus
+    description: Status associated with use of Vital Interest as a legal basis
+    class_uri: dpv:VitalInterestStatus

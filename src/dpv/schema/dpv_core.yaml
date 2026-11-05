@@ -1,0 +1,296 @@
+---
+id: https://w3id.org/lmodel/dpv/dpv_core
+name: dpv_core
+title: DPV core
+description: >-
+  The value classes, the one list and the shared slots this project's schema of DPV uses across its
+  modules.
+version: "2.3"
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  bibo: http://purl.org/ontology/bibo/
+  dcterms: http://purl.org/dc/terms/
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  foaf: http://xmlns.com/foaf/0.1/
+  linkml: https://w3id.org/linkml/
+  org: http://www.w3.org/ns/org#
+  owl: http://www.w3.org/2002/07/owl#
+  prof: http://www.w3.org/ns/dx/prof/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sdo: https://schema.org/
+  scoro: http://purl.org/spar/scoro/
+  skos: http://www.w3.org/2004/02/skos/core#
+  sw: http://www.w3.org/2003/06/sw-vocab-status/ns#
+  time: http://www.w3.org/2006/time#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  vann: http://purl.org/vocab/vann/
+default_prefix: dpv_linkml
+default_range: string
+
+imports:
+  - linkml:types
+
+types:
+
+  dpv_date:
+    title: Date
+    description: A date as DPV writes it, year first.
+    typeof: string
+    uri: xsd:date
+    pattern: ^[0-9]{4}-[0-9]{2}-[0-9]{2}$
+    comments:
+      - LinkML's date type asks a JSON Schema format checker, which many validators leave off.
+
+  dpv_uri:
+    title: Address
+    description: An address as DPV writes it, typed xsd:anyURI.
+    typeof: string
+    uri: xsd:anyURI
+    pattern: ^[A-Za-z][A-Za-z0-9+.-]*:\S*$
+    comments:
+      - LinkML's uri type asks a JSON Schema format checker, which many validators leave off.
+
+enums:
+
+  DpvTermStatus:
+    title: Term Status
+    description: How DPV's editors mark a term's standing.
+    permissible_values:
+      accepted:
+        title: Accepted
+        description: The Community Group has accepted the term.
+      modified:
+        title: Modified
+        description: The term changed in a recent release.
+      sunset:
+        title: Sunset
+        description: The term is on its way out of the vocabulary.
+
+classes:
+
+  DpvVocabulary:
+    title: Vocabulary
+    description: One of DPV's vocabularies, as its own Turtle file's header describes it.
+    class_uri: owl:Ontology
+    slots:
+      - id
+      - title
+      - description
+      - identifier
+      - bibliographicCitation
+      - conformsTo
+      - created
+      - issued
+      - modified
+      - creator
+      - contributor
+      - publisher
+      - license
+      - source
+      - doi
+      - bibo_status
+      - preferredNamespacePrefix
+      - preferredNamespaceUri
+      - rdfs_Label
+      - versionIRI
+      - versionInfo
+      - schema_version
+      - isProfileOf
+      - logo
+
+  DpvConceptScheme:
+    title: Concept Scheme
+    description: A list of terms DPV keeps within a vocabulary. DPV states nothing else about one.
+    class_uri: skos:ConceptScheme
+    slots:
+      - id
+
+  DpvAgent:
+    title: Agent
+    description: A person or an organization DPV names as a contributor, as DPV's files describe them.
+    class_uri: dcterms:Agent
+    slots:
+      - id
+      - homepage
+    attributes:
+      name:
+        title: Name
+        description: The agent's name.
+        slot_uri: foaf:name
+        required: true
+      hasORCID:
+        title: ORCID
+        description: The person's ORCID identifier.
+        slot_uri: scoro:hasORCID
+      memberOf:
+        title: Member Of
+        description: The organizations the person belongs to.
+        slot_uri: org:memberOf
+        range: DpvAgent
+        multivalued: true
+        inlined: false
+        pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
+    slot_usage:
+      id:
+        pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
+
+  DpvWebPage:
+    title: Web Page
+    description: A web page DPV names as a term's source.
+    class_uri: sdo:WebPage
+    attributes:
+      page_name:
+        title: Page Name
+        description: The page's title.
+        slot_uri: sdo:name
+        required: true
+      url:
+        title: URL
+        description: The page's address.
+        slot_uri: sdo:url
+
+  DpvInterval:
+    title: Interval
+    description: A period of time, with the dates that start and end it.
+    class_uri: time:ProperInterval
+    attributes:
+      hasBeginning:
+        title: Has Beginning
+        description: The date the period starts.
+        slot_uri: time:hasBeginning
+        range: dpv_date
+      hasEnd:
+        title: Has End
+        description: The date the period ends.
+        slot_uri: time:hasEnd
+        range: dpv_date
+
+slots:
+
+  id:
+    title: ID
+    description: The element's IRI as a CURIE or whole, or a blank node's label in an example.
+    identifier: true
+    range: uriorcurie
+    pattern: ^[A-Za-z_][A-Za-z0-9_+.-]*:\S*$
+  title:
+    title: Title
+    description: The element's name.
+    slot_uri: dcterms:title
+  description:
+    title: Description
+    description: What the element says about itself, as DPV writes it.
+    slot_uri: dcterms:description
+  identifier:
+    title: Identifier
+    description: The identifier DPV gives the element.
+    slot_uri: dcterms:identifier
+  bibliographicCitation:
+    title: Bibliographic Citation
+    description: How DPV asks to be cited.
+    slot_uri: dcterms:bibliographicCitation
+  conformsTo:
+    title: Conforms To
+    description: What the element conforms to, as DPV writes it.
+    slot_uri: dcterms:conformsTo
+    multivalued: true
+  created:
+    title: Created
+    description: The dates DPV gives for the element's creation.
+    slot_uri: dcterms:created
+    range: dpv_date
+    multivalued: true
+  issued:
+    title: Issued
+    description: The date of the element's publication.
+    slot_uri: dcterms:issued
+    range: dpv_date
+  modified:
+    title: Modified
+    description: The date of the element's last change.
+    slot_uri: dcterms:modified
+    range: dpv_date
+  creator:
+    title: Creator
+    description: The people DPV names as the element's editors.
+    slot_uri: dcterms:creator
+    range: DpvAgent
+    multivalued: true
+    inlined: false
+    pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
+  contributor:
+    title: Contributor
+    description: The people DPV names as contributors to the element.
+    slot_uri: dcterms:contributor
+    range: DpvAgent
+    multivalued: true
+    inlined: false
+    pattern: ^dpv_agent:(person|org)-[a-z0-9-]+$
+  publisher:
+    title: Publisher
+    description: The element's publisher.
+    slot_uri: dcterms:publisher
+    range: dpv_uri
+  license:
+    title: License
+    description: The address of the element's licence.
+    slot_uri: dcterms:license
+    range: dpv_uri
+  source:
+    title: Source
+    description: Where the element comes from, as text or as an address.
+    slot_uri: dcterms:source
+    multivalued: true
+  homepage:
+    title: Homepage
+    description: The element's home page, as DPV writes its address.
+    slot_uri: foaf:homepage
+  doi:
+    title: DOI
+    description: The vocabulary's digital object identifier.
+    slot_uri: bibo:doi
+  bibo_status:
+    title: Status
+    description: The vocabulary's publication status.
+    slot_uri: bibo:status
+  preferredNamespacePrefix:
+    title: Preferred Namespace Prefix
+    description: The prefix DPV uses for the vocabulary's namespace.
+    slot_uri: vann:preferredNamespacePrefix
+  preferredNamespaceUri:
+    title: Preferred Namespace URI
+    description: The vocabulary's namespace.
+    slot_uri: vann:preferredNamespaceUri
+  rdfs_Label:
+    title: RDFS Label
+    description: A short label, under rdfs:Label as DPV writes it, which is not the term rdfs:label.
+    slot_uri: rdfs:Label
+  versionIRI:
+    title: Version IRI
+    description: The IRI of this edition of the vocabulary.
+    slot_uri: owl:versionIRI
+    range: dpv_uri
+  versionInfo:
+    title: Version
+    description: The edition of the vocabulary.
+    slot_uri: owl:versionInfo
+    required: true
+  schema_version:
+    title: Schema.org Version
+    description: The edition of the vocabulary, under schema.org's term.
+    slot_uri: sdo:version
+  isProfileOf:
+    title: Is Profile Of
+    description: The specifications the vocabulary profiles.
+    slot_uri: prof:isProfileOf
+    range: dpv_uri
+    multivalued: true
+  logo:
+    title: Logo
+    description: The address of the vocabulary's logo.
+    slot_uri: foaf:logo
+    range: dpv_uri

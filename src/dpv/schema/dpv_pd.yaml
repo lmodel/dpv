@@ -1,0 +1,28 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_pd
+name: dpv_pd
+title: 'DPV kinds: personal data'
+description: 'The kinds of term DPV''s vocabularies of personal data state: each a concept that terms
+  are instances of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+  pd: https://w3id.org/dpv/pd#
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+classes:
+  DpvPdPersonalData:
+    title: PersonalData
+    is_a: DpvConcept
+    description: A kind of term DPV names as pd:PersonalData and does not define.
+    class_uri: pd:PersonalData

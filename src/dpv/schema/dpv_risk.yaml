@@ -1,0 +1,85 @@
+---
+# Written by scripts/dpv_to_linkml.py from upstream/. Edit the script, not this file. A title
+# and a description are DPV's own label and definition. NOTICE gives the licence they carry.
+id: https://w3id.org/lmodel/dpv/dpv_risk
+name: dpv_risk
+title: 'DPV kinds: risk'
+description: 'The kinds of term DPV''s vocabularies of risk state: each a concept that terms are instances
+  of, under its own IRI.'
+version: '2.3'
+source: https://w3id.org/dpv/2.3
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/dpv
+  - https://w3id.org/dpv
+prefixes:
+  dpv_linkml: https://w3id.org/lmodel/dpv/
+  linkml: https://w3id.org/linkml/
+  risk: https://w3id.org/dpv/risk#
+default_prefix: dpv_linkml
+default_range: string
+imports:
+  - ./dpv_terms
+  - ./dpv_kinds
+classes:
+  DpvAvailabilityConcept:
+    title: Availability Concept
+    is_a: DpvRiskConcept
+    description: Indicates a concept is relevant to 'Availability' in CIA InfoSec model
+    class_uri: risk:AvailabilityConcept
+  DpvConfidentialityConcept:
+    title: Confidentiality Concept
+    is_a: DpvRiskConcept
+    description: Indicates a concept is relevant to 'Confidentiality' in CIA InfoSec model
+    class_uri: risk:ConfidentialityConcept
+  DpvIncidentInvestigationStatus:
+    title: Incident Investigation Status
+    is_a: DpvStatus
+    description: Status associated with investigation of an incident
+    class_uri: risk:IncidentInvestigationStatus
+  DpvIncidentNotice:
+    title: Incident Notice
+    is_a: DpvOrganisationalMeasure
+    description: Notice associated with an incident
+    class_uri: risk:IncidentNotice
+  DpvIncidentStatus:
+    title: Incident Status
+    is_a: DpvStatus
+    description: Status associated with an incident
+    class_uri: risk:IncidentStatus
+  DpvIntegrityConcept:
+    title: Integrity Concept
+    is_a: DpvRiskConcept
+    description: Indicates a concept is relevant to 'Integrity' in CIA InfoSec model
+    class_uri: risk:IntegrityConcept
+  DpvPotentialConsequence:
+    title: Potential Consequence
+    is_a: DpvRiskConcept
+    description: Indicates a concept can potentially be a 'consequence concept within an use-case
+    class_uri: risk:PotentialConsequence
+  DpvPotentialImpact:
+    title: Potential Impact
+    is_a: DpvRiskConcept
+    description: Indicates a concept can potentially be a 'impact' concept within an use-case
+    class_uri: risk:PotentialImpact
+  DpvPotentialRisk:
+    title: Potential Risk
+    is_a: DpvRiskConcept
+    description: Indicates a concept can potentially be a 'risk' concept within an use-case
+    class_uri: risk:PotentialRisk
+  DpvPotentialRiskSource:
+    title: Potential RiskSource
+    is_a: DpvRiskConcept
+    description: Indicates a concept can potentially be a 'risk source' concept within an use-case
+    class_uri: risk:PotentialRiskSource
+  DpvRiskAnalysis:
+    title: Risk Analysis
+    is_a: DpvConcept
+    description: A technique or method used to analyse and identify risk levels, sources, likelihoods,
+      severities, and other necessary information required to conduct risk management procedures
+    class_uri: risk:RiskAnalysis
+  DpvRiskControl:
+    title: Risk Control
+    is_a: DpvConcept
+    description: Control that modifies risk
+    class_uri: risk:RiskControl

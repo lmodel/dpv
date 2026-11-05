@@ -1,0 +1,2026 @@
+{
+   "@context": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ai": "https://w3id.org/dpv/ai#",
+      "bibo": "http://purl.org/ontology/bibo/",
+      "dcam": "http://purl.org/dc/dcam/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "de-gdng": "https://w3id.org/dpv/legal/de/gdng#",
+      "dex": "https://w3id.org/dpv/examples#",
+      "dpv": "https://w3id.org/dpv#",
+      "dpv_agent": "https://w3id.org/lmodel/dpv/agents/",
+      "dpv_linkml": "https://w3id.org/lmodel/dpv/",
+      "eu-aiact": "https://w3id.org/dpv/legal/eu/aiact#",
+      "eu-dga": "https://w3id.org/dpv/legal/eu/dga#",
+      "eu-ehds": "https://w3id.org/dpv/legal/eu/ehds#",
+      "eu-gdpr": "https://w3id.org/dpv/legal/eu/gdpr#",
+      "eu-nis2": "https://w3id.org/dpv/legal/eu/nis2#",
+      "eu-rights": "https://w3id.org/dpv/rights/eu#",
+      "ex": "http://example.com#",
+      "exA": "http://example.com/exA#",
+      "exB": "http://example.com/exB#",
+      "exd": "http://example.com/default#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ieee-7012": "https://w3id.org/dpv/standards/ieee/7012#",
+      "justifications": "https://w3id.org/dpv/justifications#",
+      "legal": "https://w3id.org/dpv/legal#",
+      "legal-at": "https://w3id.org/dpv/legal/at#",
+      "legal-be": "https://w3id.org/dpv/legal/be#",
+      "legal-bg": "https://w3id.org/dpv/legal/bg#",
+      "legal-cy": "https://w3id.org/dpv/legal/cy#",
+      "legal-cz": "https://w3id.org/dpv/legal/cz#",
+      "legal-de": "https://w3id.org/dpv/legal/de#",
+      "legal-dk": "https://w3id.org/dpv/legal/dk#",
+      "legal-ee": "https://w3id.org/dpv/legal/ee#",
+      "legal-es": "https://w3id.org/dpv/legal/es#",
+      "legal-eu": "https://w3id.org/dpv/legal/eu#",
+      "legal-fi": "https://w3id.org/dpv/legal/fi#",
+      "legal-fr": "https://w3id.org/dpv/legal/fr#",
+      "legal-gb": "https://w3id.org/dpv/legal/gb#",
+      "legal-gr": "https://w3id.org/dpv/legal/gr#",
+      "legal-hk": "https://w3id.org/dpv/legal/hk#",
+      "legal-hr": "https://w3id.org/dpv/legal/hr#",
+      "legal-hu": "https://w3id.org/dpv/legal/hu#",
+      "legal-ie": "https://w3id.org/dpv/legal/ie#",
+      "legal-in": "https://w3id.org/dpv/legal/in#",
+      "legal-is": "https://w3id.org/dpv/legal/is#",
+      "legal-it": "https://w3id.org/dpv/legal/it#",
+      "legal-jp": "https://w3id.org/dpv/legal/jp#",
+      "legal-kr": "https://w3id.org/dpv/legal/kr#",
+      "legal-li": "https://w3id.org/dpv/legal/li#",
+      "legal-lt": "https://w3id.org/dpv/legal/lt#",
+      "legal-lu": "https://w3id.org/dpv/legal/lu#",
+      "legal-lv": "https://w3id.org/dpv/legal/lv#",
+      "legal-mo": "https://w3id.org/dpv/legal/mo#",
+      "legal-mt": "https://w3id.org/dpv/legal/mt#",
+      "legal-my": "https://w3id.org/dpv/legal/my#",
+      "legal-nl": "https://w3id.org/dpv/legal/nl#",
+      "legal-no": "https://w3id.org/dpv/legal/no#",
+      "legal-ph": "https://w3id.org/dpv/legal/ph#",
+      "legal-pl": "https://w3id.org/dpv/legal/pl#",
+      "legal-pt": "https://w3id.org/dpv/legal/pt#",
+      "legal-ro": "https://w3id.org/dpv/legal/ro#",
+      "legal-se": "https://w3id.org/dpv/legal/se#",
+      "legal-sg": "https://w3id.org/dpv/legal/sg#",
+      "legal-si": "https://w3id.org/dpv/legal/si#",
+      "legal-sk": "https://w3id.org/dpv/legal/sk#",
+      "legal-th": "https://w3id.org/dpv/legal/th#",
+      "legal-tw": "https://w3id.org/dpv/legal/tw#",
+      "legal-us": "https://w3id.org/dpv/legal/us#",
+      "linkml": "https://w3id.org/linkml/",
+      "loc": "https://w3id.org/dpv/loc#",
+      "nace": "http://data.europa.eu/ux2/nace2.1/",
+      "odrl": "http://www.w3.org/ns/odrl/2/",
+      "org": "http://www.w3.org/ns/org#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "pd": "https://w3id.org/dpv/pd#",
+      "prof": "http://www.w3.org/ns/dx/prof/",
+      "profile": "http://www.w3.org/ns/dx/prof/",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "risk": "https://w3id.org/dpv/risk#",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "scoro": "http://purl.org/spar/scoro/",
+      "sdo": "https://schema.org/",
+      "sector": "https://w3id.org/dpv/sector#",
+      "sector-education": "https://w3id.org/dpv/sector/education#",
+      "sector-finance": "https://w3id.org/dpv/sector/finance#",
+      "sector-health": "https://w3id.org/dpv/sector/health#",
+      "sector-infra": "https://w3id.org/dpv/sector/infra#",
+      "sector-law": "https://w3id.org/dpv/sector/law#",
+      "sector-publicservices": "https://w3id.org/dpv/sector/publicservices#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "spl": "https://specialprivacy.ercim.eu/langs/usage-policy#",
+      "svd": "https://specialprivacy.ercim.eu/vocabs/data#",
+      "svpr": "https://specialprivacy.ercim.eu/vocabs/processing#",
+      "svpu": "https://specialprivacy.ercim.eu/vocabs/purposes#",
+      "sw": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+      "tech": "https://w3id.org/dpv/tech#",
+      "time": "http://www.w3.org/2006/time#",
+      "vann": "http://purl.org/vocab/vann/",
+      "@vocab": "https://w3id.org/lmodel/dpv/",
+      "accessRights": {
+         "@type": "@id",
+         "@id": "dcterms:accessRights"
+      },
+      "ai_hasCapability": {
+         "@type": "@id",
+         "@id": "ai:hasCapability"
+      },
+      "ai_hasData": {
+         "@type": "@id",
+         "@id": "ai:hasData"
+      },
+      "ai_hasModel": {
+         "@type": "@id",
+         "@id": "ai:hasModel"
+      },
+      "avoids": {
+         "@type": "@id",
+         "@id": "risk:avoids"
+      },
+      "bibliographicCitation": {
+         "@id": "dcterms:bibliographicCitation"
+      },
+      "bibo_status": {
+         "@id": "bibo:status"
+      },
+      "broader": {
+         "@type": "@id",
+         "@id": "skos:broader"
+      },
+      "causedByThreat": {
+         "@type": "@id",
+         "@id": "risk:causedByThreat"
+      },
+      "causedByVulnerability": {
+         "@type": "@id",
+         "@id": "risk:causedByVulnerability"
+      },
+      "conformsTo": {
+         "@id": "dcterms:conformsTo"
+      },
+      "contains": {
+         "@type": "@id",
+         "@id": "risk:contains"
+      },
+      "contributor": {
+         "@type": "@id",
+         "@id": "dcterms:contributor"
+      },
+      "controls": {
+         "@type": "@id",
+         "@id": "risk:controls"
+      },
+      "coverage": {
+         "@type": "@id",
+         "@id": "dcterms:coverage"
+      },
+      "created": {
+         "@type": "xsd:date",
+         "@id": "dcterms:created"
+      },
+      "creator": {
+         "@type": "@id",
+         "@id": "dcterms:creator"
+      },
+      "dateAccepted": {
+         "@id": "dcterms:dateAccepted"
+      },
+      "dateSubmitted": {
+         "@id": "dcterms:dateSubmitted"
+      },
+      "de_gdng_hasDataHolder": {
+         "@type": "@id",
+         "@id": "de-gdng:hasDataHolder"
+      },
+      "definition": {
+         "@id": "skos:definition"
+      },
+      "definition_de": {
+         "@id": "skos:definition"
+      },
+      "description": {
+         "@id": "dcterms:description"
+      },
+      "detects": {
+         "@type": "@id",
+         "@id": "risk:detects"
+      },
+      "doi": {
+         "@id": "bibo:doi"
+      },
+      "domainIncludes": {
+         "@type": "@id",
+         "@id": "dcam:domainIncludes"
+      },
+      "hasORCID": {
+         "@id": "scoro:hasORCID"
+      },
+      "memberOf": {
+         "@type": "@id",
+         "@id": "org:memberOf"
+      },
+      "name": {
+         "@id": "foaf:name"
+      },
+      "id": "@id",
+      "agents": {
+         "@type": "@id",
+         "@id": "agents"
+      },
+      "concept_schemes": {
+         "@type": "@id",
+         "@id": "concept_schemes"
+      },
+      "concepts": {
+         "@type": "@id",
+         "@id": "concepts"
+      },
+      "edition": {
+         "@id": "dcterms:isVersionOf"
+      },
+      "examples": {
+         "@type": "@id",
+         "@id": "examples"
+      },
+      "family": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "family"
+      },
+      "properties": {
+         "@type": "@id",
+         "@id": "properties"
+      },
+      "vocabularies": {
+         "@type": "@id",
+         "@id": "vocabularies"
+      },
+      "resources": {
+         "@type": "@id",
+         "@id": "resources"
+      },
+      "turtle_fault": {
+         "@id": "turtle_fault"
+      },
+      "hasBeginning": {
+         "@type": "xsd:date",
+         "@id": "time:hasBeginning"
+      },
+      "hasEnd": {
+         "@type": "xsd:date",
+         "@id": "time:hasEnd"
+      },
+      "datatype": {
+         "@type": "xsd:anyURI",
+         "@id": "datatype"
+      },
+      "language": {
+         "@id": "language"
+      },
+      "literal": {
+         "@id": "rdf:value"
+      },
+      "predicate": {
+         "@type": "xsd:anyURI",
+         "@id": "rdf:predicate"
+      },
+      "reference": {
+         "@type": "xsd:anyURI",
+         "@id": "rdf:object"
+      },
+      "page_name": {
+         "@id": "sdo:name"
+      },
+      "url": {
+         "@id": "sdo:url"
+      },
+      "eliminates": {
+         "@type": "@id",
+         "@id": "risk:eliminates"
+      },
+      "eu_aiact_hasRiskLevel": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasRiskLevel"
+      },
+      "eu_dga_hasDataHolder": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataHolder"
+      },
+      "exactMatch": {
+         "@type": "xsd:anyURI",
+         "@id": "skos:exactMatch"
+      },
+      "example": {
+         "@type": "@id",
+         "@id": "vann:example"
+      },
+      "exploitsVulnerability": {
+         "@type": "@id",
+         "@id": "risk:exploitsVulnerability"
+      },
+      "format": {
+         "@id": "dcterms:format"
+      },
+      "hasActiveEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasActiveEntity"
+      },
+      "hasActivityStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasActivityStatus"
+      },
+      "hasActor": {
+         "@type": "@id",
+         "@id": "tech:hasActor"
+      },
+      "hasAddress": {
+         "@id": "dpv:hasAddress"
+      },
+      "hasAgent": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgent"
+      },
+      "hasAgentBehaviour": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgentBehaviour"
+      },
+      "hasAgreement": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreement"
+      },
+      "hasAgreementPreference": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreementPreference"
+      },
+      "hasAgreementRegistry": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasAgreementRegistry"
+      },
+      "hasAI": {
+         "@type": "@id",
+         "@id": "ai:hasAI"
+      },
+      "hasAISystem": {
+         "@type": "@id",
+         "@id": "ai:hasAISystem"
+      },
+      "hasAlgorithm": {
+         "@type": "@id",
+         "@id": "tech:hasAlgorithm"
+      },
+      "hasAlgorithmicLogic": {
+         "@type": "@id",
+         "@id": "dpv:hasAlgorithmicLogic"
+      },
+      "hasAPI": {
+         "@type": "@id",
+         "@id": "tech:hasAPI"
+      },
+      "hasApplicability": {
+         "@type": "@id",
+         "@id": "dpv:hasApplicability"
+      },
+      "hasApplicableLaw": {
+         "@type": "@id",
+         "@id": "dpv:hasApplicableLaw"
+      },
+      "hasApplication": {
+         "@type": "@id",
+         "@id": "tech:hasApplication"
+      },
+      "hasAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasAssessment"
+      },
+      "hasAuditor": {
+         "@type": "@id",
+         "@id": "tech:hasAuditor"
+      },
+      "hasAuditStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasAuditStatus"
+      },
+      "hasAuthority": {
+         "@type": "@id",
+         "@id": "dpv:hasAuthority"
+      },
+      "hasAutomationLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasAutomationLevel"
+      },
+      "hasChangeCategory": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasChangeCategory"
+      },
+      "hasChangeDescription": {
+         "@type": "@id",
+         "@id": "eu-aiact:hasChangeDescription"
+      },
+      "hasCommunicationMechanism": {
+         "@type": "@id",
+         "@id": "tech:hasCommunicationMechanism"
+      },
+      "hasComplianceStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasComplianceStatus"
+      },
+      "hasComponent": {
+         "@type": "@id",
+         "@id": "tech:hasComponent"
+      },
+      "hasConcernedSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasConcernedSA"
+      },
+      "hasConflictResolution": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasConflictResolution"
+      },
+      "hasConformanceStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasConformanceStatus"
+      },
+      "hasConsentControl": {
+         "@type": "@id",
+         "@id": "dpv:hasConsentControl"
+      },
+      "hasConsentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasConsentStatus"
+      },
+      "hasConsequence": {
+         "@type": "@id",
+         "@id": "dpv:hasConsequence"
+      },
+      "hasConsequenceOn": {
+         "@type": "@id",
+         "@id": "dpv:hasConsequenceOn"
+      },
+      "hasContact": {
+         "@id": "dpv:hasContact"
+      },
+      "hasContext": {
+         "@type": "@id",
+         "@id": "dpv:hasContext"
+      },
+      "hasContractControl": {
+         "@type": "@id",
+         "@id": "dpv:hasContractControl"
+      },
+      "hasContractStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasContractStatus"
+      },
+      "hasContractualClause": {
+         "@type": "@id",
+         "@id": "dpv:hasContractualClause"
+      },
+      "hasContractualFulfilmentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasContractualFulfilmentStatus"
+      },
+      "hasControl": {
+         "@type": "@id",
+         "@id": "risk:hasControl"
+      },
+      "hasCountry": {
+         "@type": "@id",
+         "@id": "dpv:hasCountry"
+      },
+      "hasCustomer": {
+         "@type": "@id",
+         "@id": "tech:hasCustomer"
+      },
+      "hasDAO": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDAO"
+      },
+      "hasData": {
+         "@type": "@id",
+         "@id": "dpv:hasData"
+      },
+      "hasDataController": {
+         "@type": "@id",
+         "@id": "dpv:hasDataController"
+      },
+      "hasDataExporter": {
+         "@type": "@id",
+         "@id": "dpv:hasDataExporter"
+      },
+      "hasDataImporter": {
+         "@type": "@id",
+         "@id": "dpv:hasDataImporter"
+      },
+      "hasDataProcessor": {
+         "@type": "@id",
+         "@id": "dpv:hasDataProcessor"
+      },
+      "hasDataProtectionOfficer": {
+         "@type": "@id",
+         "@id": "dpv:hasDataProtectionOfficer"
+      },
+      "hasDataReuseAssistant": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataReuseAssistant"
+      },
+      "hasDataSharingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasDataSharingTerm"
+      },
+      "hasDataSource": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSource"
+      },
+      "hasDataSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSubject"
+      },
+      "hasDataSubjectScale": {
+         "@type": "@id",
+         "@id": "dpv:hasDataSubjectScale"
+      },
+      "hasDataUser": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDataUser"
+      },
+      "hasDataVolume": {
+         "@type": "@id",
+         "@id": "dpv:hasDataVolume"
+      },
+      "hasDeonticInterpretation": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasDeonticInterpretation"
+      },
+      "hasDeployer": {
+         "@type": "@id",
+         "@id": "tech:hasDeployer"
+      },
+      "hasDeploymentLocation": {
+         "@type": "@id",
+         "@id": "tech:hasDeploymentLocation"
+      },
+      "hasDesigner": {
+         "@type": "@id",
+         "@id": "tech:hasDesigner"
+      },
+      "hasDeterrence": {
+         "@type": "@id",
+         "@id": "dpv:hasDeterrence"
+      },
+      "hasDeveloper": {
+         "@type": "@id",
+         "@id": "tech:hasDeveloper"
+      },
+      "hasDevice": {
+         "@type": "@id",
+         "@id": "tech:hasDevice"
+      },
+      "hasDISP": {
+         "@type": "@id",
+         "@id": "eu-dga:hasDISP"
+      },
+      "hasDocumentation": {
+         "@type": "@id",
+         "@id": "tech:hasDocumentation"
+      },
+      "hasDuration": {
+         "@type": "@id",
+         "@id": "dpv:hasDuration"
+      },
+      "hasEndpoint": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasEndpoint"
+      },
+      "hasEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasEntity"
+      },
+      "hasEntityControl": {
+         "@type": "@id",
+         "@id": "dpv:hasEntityControl"
+      },
+      "hasEntityInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasEntityInvolvement"
+      },
+      "hasEstablishment": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasEstablishment"
+      },
+      "hasEvaluator": {
+         "@type": "@id",
+         "@id": "tech:hasEvaluator"
+      },
+      "hasExpectation": {
+         "@type": "@id",
+         "@id": "dpv:hasExpectation"
+      },
+      "hasFee": {
+         "@type": "@id",
+         "@id": "dpv:hasFee"
+      },
+      "hasFirstParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasFirstParty"
+      },
+      "hasFrequency": {
+         "@type": "@id",
+         "@id": "dpv:hasFrequency"
+      },
+      "hasFulfilmentStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasFulfilmentStatus"
+      },
+      "hasFunction": {
+         "@type": "@id",
+         "@id": "tech:hasFunction"
+      },
+      "hasGeographicCoverage": {
+         "@type": "@id",
+         "@id": "dpv:hasGeographicCoverage"
+      },
+      "hasGPAIModel": {
+         "@type": "@id",
+         "@id": "ai:hasGPAIModel"
+      },
+      "hasHardware": {
+         "@type": "@id",
+         "@id": "tech:hasHardware"
+      },
+      "hasHumanDescription": {
+         "@id": "ieee-7012:hasHumanDescription"
+      },
+      "hasHumanInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasHumanInvolvement"
+      },
+      "hasHumanReadableFormat": {
+         "@id": "ieee-7012:hasHumanReadableFormat"
+      },
+      "hasHumanSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasHumanSubject"
+      },
+      "hasIdentifier": {
+         "@id": "dpv:hasIdentifier"
+      },
+      "hasImpact": {
+         "@type": "@id",
+         "@id": "dpv:hasImpact"
+      },
+      "hasImpactAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasImpactAssessment"
+      },
+      "hasImpactOn": {
+         "@type": "@id",
+         "@id": "dpv:hasImpactOn"
+      },
+      "hasImportance": {
+         "@type": "@id",
+         "@id": "dpv:hasImportance"
+      },
+      "hasIncident": {
+         "@type": "@id",
+         "@id": "risk:hasIncident"
+      },
+      "hasIndicationMethod": {
+         "@type": "@id",
+         "@id": "dpv:hasIndicationMethod"
+      },
+      "hasInformedStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasInformedStatus"
+      },
+      "hasInfrastructure": {
+         "@type": "@id",
+         "@id": "tech:hasInfrastructure"
+      },
+      "hasInput": {
+         "@type": "@id",
+         "@id": "tech:hasInput"
+      },
+      "hasInputAction": {
+         "@type": "@id",
+         "@id": "tech:hasInputAction"
+      },
+      "hasInputData": {
+         "@type": "@id",
+         "@id": "tech:hasInputData"
+      },
+      "hasInstaller": {
+         "@type": "@id",
+         "@id": "tech:hasInstaller"
+      },
+      "hasIntendedUse": {
+         "@type": "@id",
+         "@id": "tech:hasIntendedUse"
+      },
+      "hasIntention": {
+         "@type": "@id",
+         "@id": "dpv:hasIntention"
+      },
+      "hasInverseJurisdiction": {
+         "@type": "@id",
+         "@id": "dpv:hasInverseJurisdiction"
+      },
+      "hasInvolvement": {
+         "@type": "@id",
+         "@id": "dpv:hasInvolvement"
+      },
+      "hasJointDataControllers": {
+         "@type": "@id",
+         "@id": "dpv:hasJointDataControllers"
+      },
+      "hasJurisdiction": {
+         "@type": "@id",
+         "@id": "dpv:hasJurisdiction"
+      },
+      "hasJustification": {
+         "@type": "@id",
+         "@id": "dpv:hasJustification"
+      },
+      "hasLawfulness": {
+         "@type": "@id",
+         "@id": "dpv:hasLawfulness"
+      },
+      "hasLeadSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasLeadSA"
+      },
+      "hasLegalBasis": {
+         "@type": "@id",
+         "@id": "dpv:hasLegalBasis"
+      },
+      "hasLegalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasLegalMeasure"
+      },
+      "hasLicense": {
+         "@type": "@id",
+         "@id": "tech:hasLicense"
+      },
+      "hasLifecycleStage": {
+         "@type": "@id",
+         "@id": "tech:hasLifecycleStage"
+      },
+      "hasLikelihood": {
+         "@type": "@id",
+         "@id": "dpv:hasLikelihood"
+      },
+      "hasLocalSA": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasLocalSA"
+      },
+      "hasLocation": {
+         "@type": "@id",
+         "@id": "dpv:hasLocation"
+      },
+      "hasMachineReadableFormat": {
+         "@id": "ieee-7012:hasMachineReadableFormat"
+      },
+      "hasMainEstablishment": {
+         "@type": "@id",
+         "@id": "eu-gdpr:hasMainEstablishment"
+      },
+      "hasMaintainer": {
+         "@type": "@id",
+         "@id": "tech:hasMaintainer"
+      },
+      "hasManufacturer": {
+         "@type": "@id",
+         "@id": "tech:hasManufacturer"
+      },
+      "hasMarketAvailabilityStatus": {
+         "@type": "@id",
+         "@id": "tech:hasMarketAvailabilityStatus"
+      },
+      "hasName": {
+         "@id": "dpv:hasName"
+      },
+      "hasNecessity": {
+         "@type": "@id",
+         "@id": "dpv:hasNecessity"
+      },
+      "hasNonInvolvedEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasNonInvolvedEntity"
+      },
+      "hasNonPersonalDataProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasNonPersonalDataProcess"
+      },
+      "hasNotice": {
+         "@type": "@id",
+         "@id": "dpv:hasNotice"
+      },
+      "hasNoticeIcon": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeIcon"
+      },
+      "hasNoticeLayer": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeLayer"
+      },
+      "hasNoticeStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasNoticeStatus"
+      },
+      "hasNotificationStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasNotificationStatus"
+      },
+      "hasObligation": {
+         "@type": "@id",
+         "@id": "dpv:hasObligation"
+      },
+      "hasOperatingEnvironment": {
+         "@type": "@id",
+         "@id": "tech:hasOperatingEnvironment"
+      },
+      "hasOperatingFactor": {
+         "@type": "@id",
+         "@id": "tech:hasOperatingFactor"
+      },
+      "hasOrganisationalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasOrganisationalMeasure"
+      },
+      "hasOrganisationalUnit": {
+         "@type": "@id",
+         "@id": "dpv:hasOrganisationalUnit"
+      },
+      "hasOutcome": {
+         "@type": "@id",
+         "@id": "dpv:hasOutcome"
+      },
+      "hasOutput": {
+         "@type": "@id",
+         "@id": "tech:hasOutput"
+      },
+      "hasOutputAction": {
+         "@type": "@id",
+         "@id": "tech:hasOutputAction"
+      },
+      "hasOutputData": {
+         "@type": "@id",
+         "@id": "tech:hasOutputData"
+      },
+      "hasOwner": {
+         "@type": "@id",
+         "@id": "tech:hasOwner"
+      },
+      "hasPart": {
+         "@type": "@id",
+         "@id": "dcterms:hasPart"
+      },
+      "hasPartner": {
+         "@type": "@id",
+         "@id": "tech:hasPartner"
+      },
+      "hasParty": {
+         "@type": "@id",
+         "@id": "dpv:hasParty"
+      },
+      "hasPassiveEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasPassiveEntity"
+      },
+      "hasPermission": {
+         "@type": "@id",
+         "@id": "dpv:hasPermission"
+      },
+      "hasPersonalData": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalData"
+      },
+      "hasPersonalDataHandling": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalDataHandling"
+      },
+      "hasPersonalDataProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasPersonalDataProcess"
+      },
+      "hasPhysicalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasPhysicalMeasure"
+      },
+      "hasPlatform": {
+         "@type": "@id",
+         "@id": "tech:hasPlatform"
+      },
+      "hasPolicy": {
+         "@type": "@id",
+         "@id": "dpv:hasPolicy"
+      },
+      "hasPortabilityTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasPortabilityTerm"
+      },
+      "hasPreferenceApplicability": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasPreferenceApplicability"
+      },
+      "hasProcess": {
+         "@type": "@id",
+         "@id": "dpv:hasProcess"
+      },
+      "hasProcessing": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessing"
+      },
+      "hasProcessingCondition": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessingCondition"
+      },
+      "hasProcessingScale": {
+         "@type": "@id",
+         "@id": "dpv:hasProcessingScale"
+      },
+      "hasProducer": {
+         "@type": "@id",
+         "@id": "tech:hasProducer"
+      },
+      "hasProfilingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasProfilingTerm"
+      },
+      "hasProhibition": {
+         "@type": "@id",
+         "@id": "dpv:hasProhibition"
+      },
+      "hasProvider": {
+         "@type": "@id",
+         "@id": "tech:hasProvider"
+      },
+      "hasProvisionMethod": {
+         "@type": "@id",
+         "@id": "tech:hasProvisionMethod"
+      },
+      "hasProvisionStatus": {
+         "@type": "@id",
+         "@id": "tech:hasProvisionStatus"
+      },
+      "hasPurchaser": {
+         "@type": "@id",
+         "@id": "tech:hasPurchaser"
+      },
+      "hasPurpose": {
+         "@type": "@id",
+         "@id": "dpv:hasPurpose"
+      },
+      "hasRecipient": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipient"
+      },
+      "hasRecipientDataController": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipientDataController"
+      },
+      "hasRecipientThirdParty": {
+         "@type": "@id",
+         "@id": "dpv:hasRecipientThirdParty"
+      },
+      "hasRecommendation": {
+         "@type": "@id",
+         "@id": "dpv:hasRecommendation"
+      },
+      "hasRecordOfActivity": {
+         "@type": "@id",
+         "@id": "dpv:hasRecordOfActivity"
+      },
+      "hasRelationWithDataSubject": {
+         "@type": "@id",
+         "@id": "dpv:hasRelationWithDataSubject"
+      },
+      "hasRepresentative": {
+         "@type": "@id",
+         "@id": "dpv:hasRepresentative"
+      },
+      "hasRequestStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasRequestStatus"
+      },
+      "hasResidualRisk": {
+         "@type": "@id",
+         "@id": "dpv:hasResidualRisk"
+      },
+      "hasResponsibleEntity": {
+         "@type": "@id",
+         "@id": "dpv:hasResponsibleEntity"
+      },
+      "hasReuseCompatibility": {
+         "@type": "@id",
+         "@id": "dpv:hasReuseCompatibility"
+      },
+      "hasRight": {
+         "@type": "@id",
+         "@id": "dpv:hasRight"
+      },
+      "hasRisk": {
+         "@type": "@id",
+         "@id": "dpv:hasRisk"
+      },
+      "hasRiskAcceptance": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAcceptance"
+      },
+      "hasRiskAnalysis": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAnalysis"
+      },
+      "hasRiskAssessment": {
+         "@type": "@id",
+         "@id": "dpv:hasRiskAssessment"
+      },
+      "hasRiskCriteria": {
+         "@type": "@id",
+         "@id": "risk:hasRiskCriteria"
+      },
+      "hasRiskEvaluation": {
+         "@type": "@id",
+         "@id": "risk:hasRiskEvaluation"
+      },
+      "hasRiskIdentification": {
+         "@type": "@id",
+         "@id": "risk:hasRiskIdentification"
+      },
+      "hasRiskLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasRiskLevel"
+      },
+      "hasRiskManagement": {
+         "@type": "@id",
+         "@id": "risk:hasRiskManagement"
+      },
+      "hasRiskOwner": {
+         "@type": "@id",
+         "@id": "risk:hasRiskOwner"
+      },
+      "hasRiskPerception": {
+         "@type": "@id",
+         "@id": "risk:hasRiskPerception"
+      },
+      "hasRiskSource": {
+         "@type": "@id",
+         "@id": "risk:hasRiskSource"
+      },
+      "hasRiskTreatment": {
+         "@type": "@id",
+         "@id": "risk:hasRiskTreatment"
+      },
+      "hasRule": {
+         "@type": "@id",
+         "@id": "dpv:hasRule"
+      },
+      "hasScale": {
+         "@type": "@id",
+         "@id": "dpv:hasScale"
+      },
+      "hasScope": {
+         "@type": "@id",
+         "@id": "dpv:hasScope"
+      },
+      "hasSecondParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasSecondParty"
+      },
+      "hasSector": {
+         "@type": "@id",
+         "@id": "dpv:hasSector"
+      },
+      "hasSensitivityLevel": {
+         "@type": "@id",
+         "@id": "dpv:hasSensitivityLevel"
+      },
+      "hasService": {
+         "@type": "@id",
+         "@id": "dpv:hasService"
+      },
+      "hasServiceConsumer": {
+         "@type": "@id",
+         "@id": "dpv:hasServiceConsumer"
+      },
+      "hasServiceProvider": {
+         "@type": "@id",
+         "@id": "dpv:hasServiceProvider"
+      },
+      "hasSeverity": {
+         "@type": "@id",
+         "@id": "dpv:hasSeverity"
+      },
+      "hasSoftware": {
+         "@type": "@id",
+         "@id": "tech:hasSoftware"
+      },
+      "hasStatus": {
+         "@type": "@id",
+         "@id": "dpv:hasStatus"
+      },
+      "hasStorageCondition": {
+         "@type": "@id",
+         "@id": "dpv:hasStorageCondition"
+      },
+      "hasSubject": {
+         "@type": "@id",
+         "@id": "tech:hasSubject"
+      },
+      "hasSubsidiary": {
+         "@type": "@id",
+         "@id": "dpv:hasSubsidiary"
+      },
+      "hasSupplier": {
+         "@type": "@id",
+         "@id": "tech:hasSupplier"
+      },
+      "hasSystem": {
+         "@type": "@id",
+         "@id": "tech:hasSystem"
+      },
+      "hasSystemIntegrator": {
+         "@type": "@id",
+         "@id": "tech:hasSystemIntegrator"
+      },
+      "hasTechnicalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasTechnicalMeasure"
+      },
+      "hasTechnicalOrganisationalMeasure": {
+         "@type": "@id",
+         "@id": "dpv:hasTechnicalOrganisationalMeasure"
+      },
+      "hasTechnique": {
+         "@type": "@id",
+         "@id": "ai:hasTechnique"
+      },
+      "hasTestingData": {
+         "@type": "@id",
+         "@id": "ai:hasTestingData"
+      },
+      "hasThirdCountry": {
+         "@type": "@id",
+         "@id": "dpv:hasThirdCountry"
+      },
+      "hasThirdParty": {
+         "@type": "@id",
+         "@id": "dpv:hasThirdParty"
+      },
+      "hasThreatSource": {
+         "@type": "@id",
+         "@id": "risk:hasThreatSource"
+      },
+      "hasTrackingTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasTrackingTerm"
+      },
+      "hasTrainingData": {
+         "@type": "@id",
+         "@id": "ai:hasTrainingData"
+      },
+      "hasTransparencyTerm": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasTransparencyTerm"
+      },
+      "hasTRL": {
+         "@type": "@id",
+         "@id": "tech:hasTRL"
+      },
+      "hasUncategorisedData": {
+         "@type": "@id",
+         "@id": "dpv:hasUncategorisedData"
+      },
+      "hasUnstructuredData": {
+         "@type": "@id",
+         "@id": "dpv:hasUnstructuredData"
+      },
+      "hasUser": {
+         "@type": "@id",
+         "@id": "tech:hasUser"
+      },
+      "hasValidationData": {
+         "@type": "@id",
+         "@id": "ai:hasValidationData"
+      },
+      "hasVulnerability": {
+         "@type": "@id",
+         "@id": "risk:hasVulnerability"
+      },
+      "homepage": {
+         "@id": "foaf:homepage"
+      },
+      "identifier": {
+         "@id": "dcterms:identifier"
+      },
+      "identifies": {
+         "@type": "@id",
+         "@id": "risk:identifies"
+      },
+      "ieee_7012_hasParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasParty"
+      },
+      "ieee_7012_hasThirdParty": {
+         "@type": "@id",
+         "@id": "ieee-7012:hasThirdParty"
+      },
+      "inScheme": {
+         "@type": "@id",
+         "@id": "skos:inScheme"
+      },
+      "interrupts": {
+         "@type": "@id",
+         "@id": "risk:interrupts"
+      },
+      "intervenes": {
+         "@type": "@id",
+         "@id": "risk:intervenes"
+      },
+      "investigates": {
+         "@type": "@id",
+         "@id": "risk:investigates"
+      },
+      "isAfter": {
+         "@type": "@id",
+         "@id": "dpv:isAfter"
+      },
+      "isApplicableFor": {
+         "@type": "@id",
+         "@id": "dpv:isApplicableFor"
+      },
+      "isAuthorityFor": {
+         "@type": "@id",
+         "@id": "dpv:isAuthorityFor"
+      },
+      "isBefore": {
+         "@type": "@id",
+         "@id": "dpv:isBefore"
+      },
+      "isComponentOf": {
+         "@type": "@id",
+         "@id": "tech:isComponentOf"
+      },
+      "isDefinedBy": {
+         "@type": "@id",
+         "@id": "rdfs:isDefinedBy"
+      },
+      "isDeterminedByEntity": {
+         "@type": "@id",
+         "@id": "dpv:isDeterminedByEntity"
+      },
+      "isDuring": {
+         "@type": "@id",
+         "@id": "dpv:isDuring"
+      },
+      "isExercisedAt": {
+         "@type": "@id",
+         "@id": "dpv:isExercisedAt"
+      },
+      "isExploitedBy": {
+         "@type": "@id",
+         "@id": "risk:isExploitedBy"
+      },
+      "isImplementedByEntity": {
+         "@type": "@id",
+         "@id": "dpv:isImplementedByEntity"
+      },
+      "isImplementedUsingTechnology": {
+         "@type": "@id",
+         "@id": "dpv:isImplementedUsingTechnology"
+      },
+      "isIndicatedAtTime": {
+         "@id": "dpv:isIndicatedAtTime"
+      },
+      "isIndicatedBy": {
+         "@type": "@id",
+         "@id": "dpv:isIndicatedBy"
+      },
+      "isMainEstablishmentFor": {
+         "@type": "@id",
+         "@id": "eu-gdpr:isMainEstablishmentFor"
+      },
+      "isMitigatedByMeasure": {
+         "@type": "@id",
+         "@id": "dpv:isMitigatedByMeasure"
+      },
+      "isNotApplicableFor": {
+         "@type": "@id",
+         "@id": "dpv:isNotApplicableFor"
+      },
+      "iso_alpha2": {
+         "@id": "loc:iso_alpha2"
+      },
+      "iso_alpha3": {
+         "@id": "loc:iso_alpha3"
+      },
+      "iso_numeric": {
+         "@id": "loc:iso_numeric"
+      },
+      "isOrganisationalUnitOf": {
+         "@type": "@id",
+         "@id": "dpv:isOrganisationalUnitOf"
+      },
+      "isOutsideOfLocation": {
+         "@type": "@id",
+         "@id": "dpv:isOutsideOfLocation"
+      },
+      "isPartOf": {
+         "@type": "@id",
+         "@id": "dcterms:isPartOf"
+      },
+      "isPolicyFor": {
+         "@type": "@id",
+         "@id": "dpv:isPolicyFor"
+      },
+      "isProfileOf": {
+         "@type": "xsd:anyURI",
+         "@id": "prof:isProfileOf"
+      },
+      "isRepresentativeFor": {
+         "@type": "@id",
+         "@id": "dpv:isRepresentativeFor"
+      },
+      "isResidualRiskOf": {
+         "@type": "@id",
+         "@id": "dpv:isResidualRiskOf"
+      },
+      "isSubsidiaryOf": {
+         "@type": "@id",
+         "@id": "dpv:isSubsidiaryOf"
+      },
+      "issued": {
+         "@type": "xsd:date",
+         "@id": "dcterms:issued"
+      },
+      "isVersionOf": {
+         "@type": "@id",
+         "@id": "dcterms:isVersionOf"
+      },
+      "isVulnerabilityOf": {
+         "@type": "@id",
+         "@id": "risk:isVulnerabilityOf"
+      },
+      "license": {
+         "@type": "xsd:anyURI",
+         "@id": "dcterms:license"
+      },
+      "logo": {
+         "@type": "xsd:anyURI",
+         "@id": "foaf:logo"
+      },
+      "logs": {
+         "@type": "@id",
+         "@id": "risk:logs"
+      },
+      "mitigates": {
+         "@type": "@id",
+         "@id": "risk:mitigates"
+      },
+      "mitigatesRisk": {
+         "@type": "@id",
+         "@id": "dpv:mitigatesRisk"
+      },
+      "modified": {
+         "@type": "xsd:date",
+         "@id": "dcterms:modified"
+      },
+      "modifies": {
+         "@type": "@id",
+         "@id": "risk:modifies"
+      },
+      "monitors": {
+         "@type": "@id",
+         "@id": "risk:monitors"
+      },
+      "overrides": {
+         "@type": "@id",
+         "@id": "risk:overrides"
+      },
+      "page": {
+         "@type": "@id",
+         "@id": "foaf:page"
+      },
+      "preferredNamespacePrefix": {
+         "@id": "vann:preferredNamespacePrefix"
+      },
+      "preferredNamespaceUri": {
+         "@id": "vann:preferredNamespaceUri"
+      },
+      "prefLabel": {
+         "@id": "skos:prefLabel"
+      },
+      "prefLabel_de": {
+         "@id": "skos:prefLabel"
+      },
+      "publisher": {
+         "@type": "xsd:anyURI",
+         "@id": "dcterms:publisher"
+      },
+      "rangeIncludes": {
+         "@type": "@id",
+         "@id": "dcam:rangeIncludes"
+      },
+      "rdf_type": {
+         "@type": "@id",
+         "@id": "rdf:type"
+      },
+      "rdfs_Label": {
+         "@id": "rdfs:Label"
+      },
+      "recovers": {
+         "@type": "@id",
+         "@id": "risk:recovers"
+      },
+      "reduces": {
+         "@type": "@id",
+         "@id": "risk:reduces"
+      },
+      "refersToRisk": {
+         "@type": "@id",
+         "@id": "risk:refersToRisk"
+      },
+      "related": {
+         "@type": "@id",
+         "@id": "skos:related"
+      },
+      "remedies": {
+         "@type": "@id",
+         "@id": "risk:remedies"
+      },
+      "resolves": {
+         "@type": "@id",
+         "@id": "risk:resolves"
+      },
+      "reverses": {
+         "@type": "@id",
+         "@id": "risk:reverses"
+      },
+      "risk_hasRiskAssessment": {
+         "@type": "@id",
+         "@id": "risk:hasRiskAssessment"
+      },
+      "sameAs": {
+         "@type": "@id",
+         "@id": "skos:sameAs"
+      },
+      "schema_version": {
+         "@id": "sdo:version"
+      },
+      "scopeNote": {
+         "@id": "skos:scopeNote"
+      },
+      "shares": {
+         "@type": "@id",
+         "@id": "risk:shares"
+      },
+      "source": {
+         "@id": "dcterms:source"
+      },
+      "source_page": {
+         "@type": "@id",
+         "@id": "dcterms:source"
+      },
+      "statements": {
+         "@type": "@id",
+         "@id": "statements"
+      },
+      "subClassOf": {
+         "@type": "@id",
+         "@id": "rdfs:subClassOf"
+      },
+      "subject": {
+         "@type": "@id",
+         "@id": "dcterms:subject"
+      },
+      "subPropertyOf": {
+         "@type": "@id",
+         "@id": "rdfs:subPropertyOf"
+      },
+      "substitutes": {
+         "@type": "@id",
+         "@id": "risk:substitutes"
+      },
+      "supportsComplianceWith": {
+         "@type": "@id",
+         "@id": "dpv:supportsComplianceWith"
+      },
+      "tech_hasCapability": {
+         "@type": "@id",
+         "@id": "tech:hasCapability"
+      },
+      "tech_hasModel": {
+         "@type": "@id",
+         "@id": "tech:hasModel"
+      },
+      "tech_hasService": {
+         "@type": "@id",
+         "@id": "tech:hasService"
+      },
+      "temporal": {
+         "@type": "@id",
+         "@id": "dcterms:temporal"
+      },
+      "term_status": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "sw:term_status"
+      },
+      "title": {
+         "@id": "dcterms:title"
+      },
+      "transfers": {
+         "@type": "@id",
+         "@id": "risk:transfers"
+      },
+      "un_m49": {
+         "@id": "loc:un_m49"
+      },
+      "valid": {
+         "@id": "dcterms:valid"
+      },
+      "value": {
+         "@type": "xsd:decimal",
+         "@id": "rdf:value"
+      },
+      "versionInfo": {
+         "@id": "owl:versionInfo"
+      },
+      "versionIRI": {
+         "@type": "xsd:anyURI",
+         "@id": "owl:versionIRI"
+      },
+      "DpvActivityStatus": {
+         "@id": "dpv:ActivityStatus"
+      },
+      "DpvActor": {
+         "@id": "tech:Actor"
+      },
+      "DpvAdequacyDecision": {
+         "@id": "eu-gdpr:AdequacyDecision"
+      },
+      "DpvAgent": {
+         "@id": "dcterms:Agent"
+      },
+      "DpvAgentNegotiationBehaviour": {
+         "@id": "ieee-7012:AgentNegotiationBehaviour"
+      },
+      "DpvAgentRequestBehaviour": {
+         "@id": "ieee-7012:AgentRequestBehaviour"
+      },
+      "DpvAggregatedData": {
+         "@id": "dpv:AggregatedData"
+      },
+      "DpvAgreement": {
+         "@id": "ieee-7012:Agreement"
+      },
+      "DpvAgreementNegotiationStatus": {
+         "@id": "ieee-7012:AgreementNegotiationStatus"
+      },
+      "DpvAiCapability": {
+         "@id": "ai:Capability"
+      },
+      "DpvAISystem": {
+         "@id": "eu-aiact:AISystem"
+      },
+      "DpvApplicability": {
+         "@id": "dpv:Applicability"
+      },
+      "DpvAuditStatus": {
+         "@id": "dpv:AuditStatus"
+      },
+      "DpvAuthority": {
+         "@id": "dpv:Authority"
+      },
+      "DpvAutomationLevel": {
+         "@id": "dpv:AutomationLevel"
+      },
+      "DpvAvailabilityConcept": {
+         "@id": "risk:AvailabilityConcept"
+      },
+      "DpvCatalogue": {
+         "@id": "DpvCatalogue"
+      },
+      "DpvChangeCategory": {
+         "@id": "eu-aiact:ChangeCategory"
+      },
+      "DpvCommunicationMechanism": {
+         "@id": "tech:CommunicationMechanism"
+      },
+      "DpvComplianceStatus": {
+         "@id": "dpv:ComplianceStatus"
+      },
+      "DpvConcept": {
+         "@id": "skos:Concept"
+      },
+      "DpvConceptScheme": {
+         "@id": "skos:ConceptScheme"
+      },
+      "DpvConfidentialityConcept": {
+         "@id": "risk:ConfidentialityConcept"
+      },
+      "DpvConflictResolutionTerm": {
+         "@id": "ieee-7012:ConflictResolutionTerm"
+      },
+      "DpvConformanceStatus": {
+         "@id": "dpv:ConformanceStatus"
+      },
+      "DpvConsentStatus": {
+         "@id": "dpv:ConsentStatus"
+      },
+      "DpvContractActivationStatus": {
+         "@id": "dpv:ContractActivationStatus"
+      },
+      "DpvContractExecutionStatus": {
+         "@id": "dpv:ContractExecutionStatus"
+      },
+      "DpvContractFulfilmentStatus": {
+         "@id": "dpv:ContractFulfilmentStatus"
+      },
+      "DpvContractPerformanceStatus": {
+         "@id": "dpv:ContractPerformanceStatus"
+      },
+      "DpvContractPreparationStatus": {
+         "@id": "dpv:ContractPreparationStatus"
+      },
+      "DpvContractTerminationStatus": {
+         "@id": "dpv:ContractTerminationStatus"
+      },
+      "DpvContractualClause": {
+         "@id": "dpv:ContractualClause"
+      },
+      "DpvContractualClauseFulfilmentStatus": {
+         "@id": "dpv:ContractualClauseFulfilmentStatus"
+      },
+      "DpvCountry": {
+         "@id": "dpv:Country"
+      },
+      "DpvDataBreachNotice": {
+         "@id": "eu-gdpr:DataBreachNotice"
+      },
+      "DpvDataBreachNoticeRequirement": {
+         "@id": "eu-gdpr:DataBreachNoticeRequirement"
+      },
+      "DpvDataDeletionTerm": {
+         "@id": "ieee-7012:DataDeletionTerm"
+      },
+      "DpvDataProtectionAuthority": {
+         "@id": "dpv:DataProtectionAuthority"
+      },
+      "DpvDataSharingTerm": {
+         "@id": "ieee-7012:DataSharingTerm"
+      },
+      "DpvDataSource": {
+         "@id": "dpv:DataSource"
+      },
+      "DpvDataSubjectDataSource": {
+         "@id": "dpv:DataSubjectDataSource"
+      },
+      "DpvDataSubjectScale": {
+         "@id": "dpv:DataSubjectScale"
+      },
+      "DpvDataTransparencyTerm": {
+         "@id": "ieee-7012:DataTransparencyTerm"
+      },
+      "DpvDataVolume": {
+         "@id": "dpv:DataVolume"
+      },
+      "DpvDBIARiskStatus": {
+         "@id": "eu-gdpr:DBIARiskStatus"
+      },
+      "DpvDeonticInterpretationTerm": {
+         "@id": "ieee-7012:DeonticInterpretationTerm"
+      },
+      "DpvDocumentation": {
+         "@id": "tech:Documentation"
+      },
+      "DpvDPIAConformity": {
+         "@id": "eu-gdpr:DPIAConformity"
+      },
+      "DpvDPIANecessityStatus": {
+         "@id": "eu-gdpr:DPIANecessityStatus"
+      },
+      "DpvDPIAOutcomeStatus": {
+         "@id": "eu-gdpr:DPIAOutcomeStatus"
+      },
+      "DpvDPIAProcessingRecommendation": {
+         "@id": "eu-gdpr:DPIAProcessingRecommendation"
+      },
+      "DpvDPIARiskStatus": {
+         "@id": "eu-gdpr:DPIARiskStatus"
+      },
+      "DpvDuration": {
+         "@id": "dpv:Duration"
+      },
+      "DpvEntityInformedStatus": {
+         "@id": "dpv:EntityInformedStatus"
+      },
+      "DpvEntityInvolvementStatus": {
+         "@id": "dpv:EntityInvolvementStatus"
+      },
+      "DpvEntityNonPermissiveInvolvement": {
+         "@id": "dpv:EntityNonPermissiveInvolvement"
+      },
+      "DpvEntityPermissiveInvolvement": {
+         "@id": "dpv:EntityPermissiveInvolvement"
+      },
+      "DpvEuAiactMarketAvailabilityStatus": {
+         "@id": "eu-aiact:MarketAvailabilityStatus"
+      },
+      "DpvEuAiactRiskLevel": {
+         "@id": "eu-aiact:RiskLevel"
+      },
+      "DpvEuGdprDataProtectionAuthority": {
+         "@id": "eu-gdpr:DataProtectionAuthority"
+      },
+      "DpvEuGdprProcessing": {
+         "@id": "eu-gdpr:Processing"
+      },
+      "DpvEvaluationScoring": {
+         "@id": "dpv:EvaluationScoring"
+      },
+      "DpvExample": {
+         "@id": "dex:Example"
+      },
+      "DpvExpectationStatus": {
+         "@id": "dpv:ExpectationStatus"
+      },
+      "DpvFeeRequirement": {
+         "@id": "dpv:FeeRequirement"
+      },
+      "DpvFrequency": {
+         "@id": "dpv:Frequency"
+      },
+      "DpvGeographicCoverage": {
+         "@id": "dpv:GeographicCoverage"
+      },
+      "DpvHighRiskAISystem": {
+         "@id": "eu-aiact:HighRiskAISystem"
+      },
+      "DpvHumanInvolvement": {
+         "@id": "dpv:HumanInvolvement"
+      },
+      "DpvHumanSubject": {
+         "@id": "dpv:HumanSubject"
+      },
+      "DpvImportance": {
+         "@id": "dpv:Importance"
+      },
+      "DpvIncidentInvestigationStatus": {
+         "@id": "risk:IncidentInvestigationStatus"
+      },
+      "DpvIncidentNotice": {
+         "@id": "risk:IncidentNotice"
+      },
+      "DpvIncidentStatus": {
+         "@id": "risk:IncidentStatus"
+      },
+      "DpvInnovativeUseOfTechnology": {
+         "@id": "dpv:InnovativeUseOfTechnology"
+      },
+      "DpvIntegrityConcept": {
+         "@id": "risk:IntegrityConcept"
+      },
+      "DpvIntentionStatus": {
+         "@id": "dpv:IntentionStatus"
+      },
+      "DpvInterval": {
+         "@id": "time:ProperInterval"
+      },
+      "DpvInverseJurisdiction": {
+         "@id": "dpv:InverseJurisdiction"
+      },
+      "DpvInvolvementStatus": {
+         "@id": "dpv:InvolvementStatus"
+      },
+      "DpvJurisdiction": {
+         "@id": "dpv:Jurisdiction"
+      },
+      "DpvJustification": {
+         "@id": "dpv:Justification"
+      },
+      "DpvLaw": {
+         "@id": "dpv:Law"
+      },
+      "DpvLawfulness": {
+         "@id": "dpv:Lawfulness"
+      },
+      "DpvLegalBasis": {
+         "@id": "dpv:LegalBasis"
+      },
+      "DpvLegalEntity": {
+         "@id": "dpv:LegalEntity"
+      },
+      "DpvLegalMeasure": {
+         "@id": "dpv:LegalMeasure"
+      },
+      "DpvLegalObligationStatus": {
+         "@id": "dpv:LegalObligationStatus"
+      },
+      "DpvLegitimateInterestStatus": {
+         "@id": "dpv:LegitimateInterestStatus"
+      },
+      "DpvLifecycleStage": {
+         "@id": "ai:LifecycleStage"
+      },
+      "DpvLikelihood": {
+         "@id": "dpv:Likelihood"
+      },
+      "DpvLocation": {
+         "@id": "dpv:Location"
+      },
+      "DpvLocationFixture": {
+         "@id": "dpv:LocationFixture"
+      },
+      "DpvMarketPlacementStatus": {
+         "@id": "eu-aiact:MarketPlacementStatus"
+      },
+      "DpvNecessity": {
+         "@id": "dpv:Necessity"
+      },
+      "DpvNonPersonalData": {
+         "@id": "dpv:NonPersonalData"
+      },
+      "DpvNoticeStatus": {
+         "@id": "dpv:NoticeStatus"
+      },
+      "DpvNotificationStatus": {
+         "@id": "dpv:NotificationStatus"
+      },
+      "DpvObligation": {
+         "@id": "dpv:Obligation"
+      },
+      "DpvOfficialAuthorityExerciseStatus": {
+         "@id": "dpv:OfficialAuthorityExerciseStatus"
+      },
+      "DpvOrganisationalMeasure": {
+         "@id": "dpv:OrganisationalMeasure"
+      },
+      "DpvPartyTransparencyTerm": {
+         "@id": "ieee-7012:PartyTransparencyTerm"
+      },
+      "DpvPdPersonalData": {
+         "@id": "pd:PersonalData"
+      },
+      "DpvPermission": {
+         "@id": "dpv:Permission"
+      },
+      "DpvPersonalData": {
+         "@id": "dpv:PersonalData"
+      },
+      "DpvPhysicalMeasure": {
+         "@id": "dpv:PhysicalMeasure"
+      },
+      "DpvPortabilityTerm": {
+         "@id": "ieee-7012:PortabilityTerm"
+      },
+      "DpvPotentialConsequence": {
+         "@id": "risk:PotentialConsequence"
+      },
+      "DpvPotentialImpact": {
+         "@id": "risk:PotentialImpact"
+      },
+      "DpvPotentialRisk": {
+         "@id": "risk:PotentialRisk"
+      },
+      "DpvPotentialRiskSource": {
+         "@id": "risk:PotentialRiskSource"
+      },
+      "DpvPreferenceApplicability": {
+         "@id": "ieee-7012:PreferenceApplicability"
+      },
+      "DpvProcessing": {
+         "@id": "dpv:Processing"
+      },
+      "DpvProcessingContext": {
+         "@id": "dpv:ProcessingContext"
+      },
+      "DpvProcessingScale": {
+         "@id": "dpv:ProcessingScale"
+      },
+      "DpvProfilingTerm": {
+         "@id": "ieee-7012:ProfilingTerm"
+      },
+      "DpvProhibitedAISystem": {
+         "@id": "eu-aiact:ProhibitedAISystem"
+      },
+      "DpvProhibition": {
+         "@id": "dpv:Prohibition"
+      },
+      "DpvProperty": {
+         "@id": "rdf:Property"
+      },
+      "DpvProportionalityStatus": {
+         "@id": "eu-gdpr:ProportionalityStatus"
+      },
+      "DpvProvisionMethod": {
+         "@id": "tech:ProvisionMethod"
+      },
+      "DpvProvisionStatus": {
+         "@id": "tech:ProvisionStatus"
+      },
+      "DpvPublicInterestStatus": {
+         "@id": "dpv:PublicInterestStatus"
+      },
+      "DpvPublicRegisterOfEntities": {
+         "@id": "dpv:PublicRegisterOfEntities"
+      },
+      "DpvPurpose": {
+         "@id": "dpv:Purpose"
+      },
+      "DpvPurposeTransparencyTerm": {
+         "@id": "ieee-7012:PurposeTransparencyTerm"
+      },
+      "DpvRegion": {
+         "@id": "dpv:Region"
+      },
+      "DpvRegulatedHealthDataHolder": {
+         "@id": "de-gdng:RegulatedHealthDataHolder"
+      },
+      "DpvRequestStatus": {
+         "@id": "dpv:RequestStatus"
+      },
+      "DpvResource": {
+         "@id": "rdfs:Resource"
+      },
+      "DpvReuseCompatibility": {
+         "@id": "dpv:ReuseCompatibility"
+      },
+      "DpvRight": {
+         "@id": "dpv:Right"
+      },
+      "DpvRiskAnalysis": {
+         "@id": "risk:RiskAnalysis"
+      },
+      "DpvRiskConcept": {
+         "@id": "dpv:RiskConcept"
+      },
+      "DpvRiskControl": {
+         "@id": "risk:RiskControl"
+      },
+      "DpvRiskLevel": {
+         "@id": "dpv:RiskLevel"
+      },
+      "DpvRule": {
+         "@id": "dpv:Rule"
+      },
+      "DpvRuleFulfilmentStatus": {
+         "@id": "dpv:RuleFulfilmentStatus"
+      },
+      "DpvScoringOfIndividuals": {
+         "@id": "dpv:ScoringOfIndividuals"
+      },
+      "DpvSector": {
+         "@id": "dpv:Sector"
+      },
+      "DpvSectorHealthReuseCompatibility": {
+         "@id": "sector-health:ReuseCompatibility"
+      },
+      "DpvSensitivePersonalData": {
+         "@id": "dpv:SensitivePersonalData"
+      },
+      "DpvServiceSupplyStatus": {
+         "@id": "eu-aiact:ServiceSupplyStatus"
+      },
+      "DpvSeverity": {
+         "@id": "dpv:Severity"
+      },
+      "DpvSpecialCategoryPersonalData": {
+         "@id": "dpv:SpecialCategoryPersonalData"
+      },
+      "DpvStatement": {
+         "@id": "DpvStatement"
+      },
+      "DpvStatus": {
+         "@id": "dpv:Status"
+      },
+      "DpvSupraNationalUnion": {
+         "@id": "dpv:SupraNationalUnion"
+      },
+      "DpvTechCapability": {
+         "@id": "tech:Capability"
+      },
+      "DpvTechMarketAvailabilityStatus": {
+         "@id": "tech:MarketAvailabilityStatus"
+      },
+      "DpvTechnicalMeasure": {
+         "@id": "dpv:TechnicalMeasure"
+      },
+      "DpvTechnique": {
+         "@id": "ai:Technique"
+      },
+      "DpvTechnology": {
+         "@id": "dpv:Technology"
+      },
+      "DpvTerm": {
+         "@id": "DpvTerm"
+      },
+      "DpvTrackingTerm": {
+         "@id": "ieee-7012:TrackingTerm"
+      },
+      "DpvTrainingTechnique": {
+         "@id": "ai:TrainingTechnique"
+      },
+      "DpvTransparencyTerm": {
+         "@id": "ieee-7012:TransparencyTerm"
+      },
+      "DpvVitalInterestStatus": {
+         "@id": "dpv:VitalInterestStatus"
+      },
+      "DpvVocabulary": {
+         "@id": "owl:Ontology"
+      },
+      "DpvWebPage": {
+         "@id": "sdo:WebPage"
+      }
+   }
+}

@@ -1,0 +1,1841 @@
+# metamodel_version: 1.12.0
+# version: 2.3
+BASE <https://w3id.org/lmodel/dpv/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcam: <http://purl.org/dc/dcam/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ai: <https://w3id.org/dpv/ai#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX de-gdng: <https://w3id.org/dpv/legal/de/gdng#>
+PREFIX dex: <https://w3id.org/dpv/examples#>
+PREFIX dpv: <https://w3id.org/dpv#>
+PREFIX eu-aiact: <https://w3id.org/dpv/legal/eu/aiact#>
+PREFIX eu-dga: <https://w3id.org/dpv/legal/eu/dga#>
+PREFIX eu-gdpr: <https://w3id.org/dpv/legal/eu/gdpr#>
+PREFIX ieee-7012: <https://w3id.org/dpv/standards/ieee/7012#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX loc: <https://w3id.org/dpv/loc#>
+PREFIX pd: <https://w3id.org/dpv/pd#>
+PREFIX risk: <https://w3id.org/dpv/risk#>
+PREFIX scoro: <http://purl.org/spar/scoro/>
+PREFIX sdo: <https://schema.org/>
+PREFIX sector-health: <https://w3id.org/dpv/sector/health#>
+PREFIX sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX tech: <https://w3id.org/dpv/tech#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<DpvDate> xsd:date
+
+<DpvUri> IRI
+
+<DpvActivityStatus> CLOSED {
+    (  $<DpvActivityStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ActivityStatus ]
+    )
+}
+
+<DpvActor> CLOSED {
+    (  $<DpvActor_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ tech:Actor ]
+    )
+}
+
+<DpvAdequacyDecision> CLOSED {
+    (  $<DpvAdequacyDecision_tes> (  &<DpvLegalBasis_tes> ;
+          rdf:type [ dpv:LegalBasis ] ?
+       ) ;
+       rdf:type [ eu-gdpr:AdequacyDecision ]
+    )
+}
+
+<DpvAgent> CLOSED {
+    (  $<DpvAgent_tes> (  foaf:homepage @linkml:String ? ;
+          foaf:name @linkml:String ;
+          scoro:hasORCID @linkml:String ? ;
+          org:memberOf @<DpvAgent> *
+       ) ;
+       rdf:type [ dcterms:Agent ]
+    )
+}
+
+<DpvAgentNegotiationBehaviour> CLOSED {
+    (  $<DpvAgentNegotiationBehaviour_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:AgentNegotiationBehaviour ]
+    )
+}
+
+<DpvAgentRequestBehaviour> CLOSED {
+    (  $<DpvAgentRequestBehaviour_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:AgentRequestBehaviour ]
+    )
+}
+
+<DpvAggregatedData> CLOSED {
+    (  $<DpvAggregatedData_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:AggregatedData ]
+    )
+}
+
+<DpvAgreement> CLOSED {
+    (  $<DpvAgreement_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:Agreement ]
+    )
+}
+
+<DpvAgreementNegotiationStatus> CLOSED {
+    (  $<DpvAgreementNegotiationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ ieee-7012:AgreementNegotiationStatus ]
+    )
+}
+
+<DpvAiCapability> CLOSED {
+    (  $<DpvAiCapability_tes> (  &<DpvTechnology_tes> ;
+          rdf:type [ dpv:Technology ] ?
+       ) ;
+       rdf:type [ ai:Capability ]
+    )
+}
+
+<DpvAISystem>  (
+    CLOSED {
+       (  $<DpvAISystem_tes> (  &<DpvTechnology_tes> ;
+             rdf:type [ dpv:Technology ] ?
+          ) ;
+          rdf:type [ eu-aiact:AISystem ]
+       )
+    } OR @<DpvHighRiskAISystem> OR @<DpvProhibitedAISystem>
+)
+
+<DpvApplicability> CLOSED {
+    (  $<DpvApplicability_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Applicability ]
+    )
+}
+
+<DpvAuditStatus>  (
+    CLOSED {
+       (  $<DpvAuditStatus_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ dpv:AuditStatus ]
+       )
+    } OR @<DpvDBIARiskStatus> OR @<DpvDPIANecessityStatus> OR @<DpvDPIAOutcomeStatus> OR @<DpvDPIAProcessingRecommendation> OR
+    @<DpvDPIARiskStatus> OR @<DpvDataBreachNoticeRequirement>
+)
+
+<DpvAuthority>  (
+    CLOSED {
+       (  $<DpvAuthority_tes> (  &<DpvLegalEntity_tes> ;
+             rdf:type [ dpv:LegalEntity ] ?
+          ) ;
+          rdf:type [ dpv:Authority ]
+       )
+    } OR @<DpvDataProtectionAuthority>
+)
+
+<DpvAutomationLevel> CLOSED {
+    (  $<DpvAutomationLevel_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:AutomationLevel ]
+    )
+}
+
+<DpvAvailabilityConcept> CLOSED {
+    (  $<DpvAvailabilityConcept_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:AvailabilityConcept ]
+    )
+}
+
+<DpvCatalogue> CLOSED {
+    (  $<DpvCatalogue_tes> (  dcterms:isVersionOf @linkml:String ;
+          <family> [ <https://w3id.org/lmodel/dpv/DpvFamily#core> <https://w3id.org/lmodel/dpv/DpvFamily#pd>
+             <https://w3id.org/lmodel/dpv/DpvFamily#tech> <https://w3id.org/lmodel/dpv/DpvFamily#ai>
+             <https://w3id.org/lmodel/dpv/DpvFamily#risk> <https://w3id.org/lmodel/dpv/DpvFamily#justifications>
+             <https://w3id.org/lmodel/dpv/DpvFamily#loc> <https://w3id.org/lmodel/dpv/DpvFamily#legal>
+             <https://w3id.org/lmodel/dpv/DpvFamily#sector> <https://w3id.org/lmodel/dpv/DpvFamily#standards>
+             <https://w3id.org/lmodel/dpv/DpvFamily#agents> <https://w3id.org/lmodel/dpv/DpvFamily#examples> ] ;
+          <vocabularies> @<DpvVocabulary> * ;
+          <concept_schemes> @<DpvConceptScheme> * ;
+          <concepts> @<DpvConcept> * ;
+          <properties> @<DpvProperty> * ;
+          <agents> @<DpvAgent> * ;
+          <examples> @<DpvExample> *
+       ) ;
+       rdf:type [ <DpvCatalogue> ] ?
+    )
+}
+
+<DpvChangeCategory> CLOSED {
+    (  $<DpvChangeCategory_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ eu-aiact:ChangeCategory ]
+    )
+}
+
+<DpvCommunicationMechanism> CLOSED {
+    (  $<DpvCommunicationMechanism_tes> (  &<DpvTechnology_tes> ;
+          rdf:type [ dpv:Technology ] ?
+       ) ;
+       rdf:type [ tech:CommunicationMechanism ]
+    )
+}
+
+<DpvComplianceStatus>  (
+    CLOSED {
+       (  $<DpvComplianceStatus_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ dpv:ComplianceStatus ]
+       )
+    } OR @<DpvLawfulness>
+)
+
+<DpvConcept>  (
+    CLOSED {
+       (  $<DpvConcept_tes> (  &<DpvTerm_tes> ;
+             rdf:type [ <DpvTerm> ] ? ;
+             eu-aiact:hasRiskLevel @<DpvTerm> * ;
+             dpv:hasApplicableLaw @<DpvTerm> * ;
+             dpv:hasAuthority @<DpvTerm> * ;
+             ieee-7012:hasHumanDescription @linkml:String * ;
+             dpv:hasInverseJurisdiction @<DpvTerm> * ;
+             dpv:hasJurisdiction @<DpvTerm> * ;
+             dpv:hasJustification @<DpvTerm> * ;
+             dpv:hasLikelihood @<DpvTerm> * ;
+             dpv:hasObligation @<DpvTerm> * ;
+             dpv:hasPermission @<DpvTerm> * ;
+             dpv:hasProhibition @<DpvTerm> * ;
+             dpv:hasRight @<DpvTerm> * ;
+             dpv:hasRiskLevel @<DpvTerm> * ;
+             dpv:hasSeverity @<DpvTerm> * ;
+             loc:iso_alpha2 @linkml:String * ;
+             loc:iso_alpha3 @linkml:String * ;
+             loc:iso_numeric @linkml:String * ;
+             loc:un_m49 @linkml:String *
+          ) ;
+          rdf:type [ skos:Concept ]
+       )
+    } OR @<DpvActor> OR @<DpvAggregatedData> OR @<DpvApplicability> OR @<DpvChangeCategory> OR @<DpvContractualClause> OR
+    @<DpvDocumentation> OR @<DpvDuration> OR @<DpvExpectationStatus> OR @<DpvFeeRequirement> OR @<DpvFrequency> OR @<DpvImportance>
+    OR @<DpvJustification> OR @<DpvLaw> OR @<DpvLegalBasis> OR @<DpvLegalEntity> OR @<DpvLegalMeasure> OR @<DpvLifecycleStage> OR
+    @<DpvLikelihood> OR @<DpvLocation> OR @<DpvLocationFixture> OR @<DpvNecessity> OR @<DpvNonPersonalData> OR
+    @<DpvOrganisationalMeasure> OR @<DpvPdPersonalData> OR @<DpvPersonalData> OR @<DpvPhysicalMeasure> OR @<DpvProcessing> OR
+    @<DpvProcessingContext> OR @<DpvPublicRegisterOfEntities> OR @<DpvPurpose> OR @<DpvRegulatedHealthDataHolder> OR @<DpvRight> OR
+    @<DpvRiskAnalysis> OR @<DpvRiskConcept> OR @<DpvRiskControl> OR @<DpvRiskLevel> OR @<DpvRule> OR @<DpvSector> OR @<DpvSeverity>
+    OR @<DpvStatus> OR @<DpvTechCapability> OR @<DpvTechnicalMeasure> OR @<DpvTechnology>
+)
+
+<DpvConceptScheme> CLOSED {
+    (  $<DpvConceptScheme_tes> rdf:type . * ;
+       rdf:type [ skos:ConceptScheme ]
+    )
+}
+
+<DpvConfidentialityConcept> CLOSED {
+    (  $<DpvConfidentialityConcept_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:ConfidentialityConcept ]
+    )
+}
+
+<DpvConflictResolutionTerm> CLOSED {
+    (  $<DpvConflictResolutionTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:ConflictResolutionTerm ]
+    )
+}
+
+<DpvConformanceStatus>  (
+    CLOSED {
+       (  $<DpvConformanceStatus_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ dpv:ConformanceStatus ]
+       )
+    } OR @<DpvDPIAConformity>
+)
+
+<DpvConsentStatus> CLOSED {
+    (  $<DpvConsentStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ConsentStatus ]
+    )
+}
+
+<DpvContractActivationStatus> CLOSED {
+    (  $<DpvContractActivationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractActivationStatus ]
+    )
+}
+
+<DpvContractExecutionStatus> CLOSED {
+    (  $<DpvContractExecutionStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractExecutionStatus ]
+    )
+}
+
+<DpvContractFulfilmentStatus> CLOSED {
+    (  $<DpvContractFulfilmentStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractFulfilmentStatus ]
+    )
+}
+
+<DpvContractPerformanceStatus> CLOSED {
+    (  $<DpvContractPerformanceStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractPerformanceStatus ]
+    )
+}
+
+<DpvContractPreparationStatus> CLOSED {
+    (  $<DpvContractPreparationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractPreparationStatus ]
+    )
+}
+
+<DpvContractTerminationStatus> CLOSED {
+    (  $<DpvContractTerminationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractTerminationStatus ]
+    )
+}
+
+<DpvContractualClause>  (
+    CLOSED {
+       (  $<DpvContractualClause_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:ContractualClause ]
+       )
+    } OR @<DpvAgentNegotiationBehaviour> OR @<DpvAgentRequestBehaviour> OR @<DpvAgreement> OR @<DpvConflictResolutionTerm> OR
+    @<DpvDataDeletionTerm> OR @<DpvDataSharingTerm> OR @<DpvDeonticInterpretationTerm> OR @<DpvPortabilityTerm> OR
+    @<DpvPreferenceApplicability> OR @<DpvProfilingTerm> OR @<DpvTrackingTerm> OR @<DpvTransparencyTerm>
+)
+
+<DpvContractualClauseFulfilmentStatus> CLOSED {
+    (  $<DpvContractualClauseFulfilmentStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:ContractualClauseFulfilmentStatus ]
+    )
+}
+
+<DpvCountry>  (
+    CLOSED {
+       (  $<DpvCountry_tes> (  &<DpvJurisdiction_tes> ;
+             rdf:type [ dpv:Jurisdiction ] ?
+          ) ;
+          rdf:type [ dpv:Country ]
+       )
+    } OR @<DpvRegion>
+)
+
+<DpvDataBreachNotice> CLOSED {
+    (  $<DpvDataBreachNotice_tes> (  &<DpvOrganisationalMeasure_tes> ;
+          rdf:type [ dpv:OrganisationalMeasure ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DataBreachNotice ]
+    )
+}
+
+<DpvDataBreachNoticeRequirement> CLOSED {
+    (  $<DpvDataBreachNoticeRequirement_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DataBreachNoticeRequirement ]
+    )
+}
+
+<DpvDataDeletionTerm> CLOSED {
+    (  $<DpvDataDeletionTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:DataDeletionTerm ]
+    )
+}
+
+<DpvDataProtectionAuthority>  (
+    CLOSED {
+       (  $<DpvDataProtectionAuthority_tes> (  &<DpvAuthority_tes> ;
+             rdf:type [ dpv:Authority ] ?
+          ) ;
+          rdf:type [ dpv:DataProtectionAuthority ]
+       )
+    } OR @<DpvEuGdprDataProtectionAuthority>
+)
+
+<DpvDataSharingTerm> CLOSED {
+    (  $<DpvDataSharingTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:DataSharingTerm ]
+    )
+}
+
+<DpvDataSource>  (
+    CLOSED {
+       (  $<DpvDataSource_tes> (  &<DpvProcessingContext_tes> ;
+             rdf:type [ dpv:ProcessingContext ] ?
+          ) ;
+          rdf:type [ dpv:DataSource ]
+       )
+    } OR @<DpvDataSubjectDataSource>
+)
+
+<DpvDataSubjectDataSource> CLOSED {
+    (  $<DpvDataSubjectDataSource_tes> (  &<DpvDataSource_tes> ;
+          rdf:type [ dpv:DataSource ] ?
+       ) ;
+       rdf:type [ dpv:DataSubjectDataSource ]
+    )
+}
+
+<DpvDataSubjectScale> CLOSED {
+    (  $<DpvDataSubjectScale_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:DataSubjectScale ]
+    )
+}
+
+<DpvDataTransparencyTerm> CLOSED {
+    (  $<DpvDataTransparencyTerm_tes> (  &<DpvTransparencyTerm_tes> ;
+          rdf:type [ ieee-7012:TransparencyTerm ] ?
+       ) ;
+       rdf:type [ ieee-7012:DataTransparencyTerm ]
+    )
+}
+
+<DpvDataVolume> CLOSED {
+    (  $<DpvDataVolume_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:DataVolume ]
+    )
+}
+
+<DpvDBIARiskStatus> CLOSED {
+    (  $<DpvDBIARiskStatus_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DBIARiskStatus ]
+    )
+}
+
+<DpvDeonticInterpretationTerm> CLOSED {
+    (  $<DpvDeonticInterpretationTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:DeonticInterpretationTerm ]
+    )
+}
+
+<DpvDocumentation> CLOSED {
+    (  $<DpvDocumentation_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ tech:Documentation ]
+    )
+}
+
+<DpvDPIAConformity> CLOSED {
+    (  $<DpvDPIAConformity_tes> (  &<DpvConformanceStatus_tes> ;
+          rdf:type [ dpv:ConformanceStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DPIAConformity ]
+    )
+}
+
+<DpvDPIANecessityStatus> CLOSED {
+    (  $<DpvDPIANecessityStatus_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DPIANecessityStatus ]
+    )
+}
+
+<DpvDPIAOutcomeStatus> CLOSED {
+    (  $<DpvDPIAOutcomeStatus_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DPIAOutcomeStatus ]
+    )
+}
+
+<DpvDPIAProcessingRecommendation> CLOSED {
+    (  $<DpvDPIAProcessingRecommendation_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DPIAProcessingRecommendation ]
+    )
+}
+
+<DpvDPIARiskStatus> CLOSED {
+    (  $<DpvDPIARiskStatus_tes> (  &<DpvAuditStatus_tes> ;
+          rdf:type [ dpv:AuditStatus ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DPIARiskStatus ]
+    )
+}
+
+<DpvDuration> CLOSED {
+    (  $<DpvDuration_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Duration ]
+    )
+}
+
+<DpvEntityInformedStatus> CLOSED {
+    (  $<DpvEntityInformedStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:EntityInformedStatus ]
+    )
+}
+
+<DpvEntityInvolvementStatus> CLOSED {
+    (  $<DpvEntityInvolvementStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:EntityInvolvementStatus ]
+    )
+}
+
+<DpvEntityNonPermissiveInvolvement> CLOSED {
+    (  $<DpvEntityNonPermissiveInvolvement_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:EntityNonPermissiveInvolvement ]
+    )
+}
+
+<DpvEntityPermissiveInvolvement> CLOSED {
+    (  $<DpvEntityPermissiveInvolvement_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:EntityPermissiveInvolvement ]
+    )
+}
+
+<DpvEuAiactMarketAvailabilityStatus> CLOSED {
+    (  $<DpvEuAiactMarketAvailabilityStatus_tes> (  &<DpvTechMarketAvailabilityStatus_tes> ;
+          rdf:type [ tech:MarketAvailabilityStatus ] ?
+       ) ;
+       rdf:type [ eu-aiact:MarketAvailabilityStatus ]
+    )
+}
+
+<DpvEuAiactRiskLevel> CLOSED {
+    (  $<DpvEuAiactRiskLevel_tes> (  &<DpvRiskLevel_tes> ;
+          rdf:type [ dpv:RiskLevel ] ?
+       ) ;
+       rdf:type [ eu-aiact:RiskLevel ]
+    )
+}
+
+<DpvEuGdprDataProtectionAuthority> CLOSED {
+    (  $<DpvEuGdprDataProtectionAuthority_tes> (  &<DpvDataProtectionAuthority_tes> ;
+          rdf:type [ dpv:DataProtectionAuthority ] ?
+       ) ;
+       rdf:type [ eu-gdpr:DataProtectionAuthority ]
+    )
+}
+
+<DpvEuGdprProcessing> CLOSED {
+    (  $<DpvEuGdprProcessing_tes> (  &<DpvProcessing_tes> ;
+          rdf:type [ dpv:Processing ] ?
+       ) ;
+       rdf:type [ eu-gdpr:Processing ]
+    )
+}
+
+<DpvEvaluationScoring>  (
+    CLOSED {
+       (  $<DpvEvaluationScoring_tes> (  &<DpvProcessingContext_tes> ;
+             rdf:type [ dpv:ProcessingContext ] ?
+          ) ;
+          rdf:type [ dpv:EvaluationScoring ]
+       )
+    } OR @<DpvScoringOfIndividuals>
+)
+
+<DpvExample> CLOSED {
+    (  $<DpvExample_tes> (  dcterms:title @linkml:String ;
+          dcterms:description @linkml:String ? ;
+          dcterms:format @linkml:String * ;
+          dcterms:source @linkml:String * ;
+          dcterms:subject @<DpvTerm> * ;
+          dcterms:created @<DpvDate> * ;
+          dcterms:modified @<DpvDate> ? ;
+          dcterms:temporal @<DpvInterval> ? ;
+          dcterms:contributor @<DpvAgent> * ;
+          sw:term_status [ <https://w3id.org/lmodel/dpv/DpvTermStatus#accepted>
+             <https://w3id.org/lmodel/dpv/DpvTermStatus#modified> <https://w3id.org/lmodel/dpv/DpvTermStatus#sunset> ] ? ;
+          <turtle_fault> @linkml:String ? ;
+          <resources> @<DpvResource> *
+       ) ;
+       rdf:type [ dex:Example ]
+    )
+}
+
+<DpvExpectationStatus> CLOSED {
+    (  $<DpvExpectationStatus_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:ExpectationStatus ]
+    )
+}
+
+<DpvFeeRequirement> CLOSED {
+    (  $<DpvFeeRequirement_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:FeeRequirement ]
+    )
+}
+
+<DpvFrequency> CLOSED {
+    (  $<DpvFrequency_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Frequency ]
+    )
+}
+
+<DpvGeographicCoverage> CLOSED {
+    (  $<DpvGeographicCoverage_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:GeographicCoverage ]
+    )
+}
+
+<DpvHighRiskAISystem> CLOSED {
+    (  $<DpvHighRiskAISystem_tes> (  &<DpvAISystem_tes> ;
+          rdf:type [ eu-aiact:AISystem ] ?
+       ) ;
+       rdf:type [ eu-aiact:HighRiskAISystem ]
+    )
+}
+
+<DpvHumanInvolvement> CLOSED {
+    (  $<DpvHumanInvolvement_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:HumanInvolvement ]
+    )
+}
+
+<DpvHumanSubject> CLOSED {
+    (  $<DpvHumanSubject_tes> (  &<DpvLegalEntity_tes> ;
+          rdf:type [ dpv:LegalEntity ] ?
+       ) ;
+       rdf:type [ dpv:HumanSubject ]
+    )
+}
+
+<DpvImportance> CLOSED {
+    (  $<DpvImportance_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Importance ]
+    )
+}
+
+<DpvIncidentInvestigationStatus> CLOSED {
+    (  $<DpvIncidentInvestigationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ risk:IncidentInvestigationStatus ]
+    )
+}
+
+<DpvIncidentNotice> CLOSED {
+    (  $<DpvIncidentNotice_tes> (  &<DpvOrganisationalMeasure_tes> ;
+          rdf:type [ dpv:OrganisationalMeasure ] ?
+       ) ;
+       rdf:type [ risk:IncidentNotice ]
+    )
+}
+
+<DpvIncidentStatus> CLOSED {
+    (  $<DpvIncidentStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ risk:IncidentStatus ]
+    )
+}
+
+<DpvInnovativeUseOfTechnology> CLOSED {
+    (  $<DpvInnovativeUseOfTechnology_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:InnovativeUseOfTechnology ]
+    )
+}
+
+<DpvIntegrityConcept> CLOSED {
+    (  $<DpvIntegrityConcept_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:IntegrityConcept ]
+    )
+}
+
+<DpvIntentionStatus> CLOSED {
+    (  $<DpvIntentionStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:IntentionStatus ]
+    )
+}
+
+<DpvInterval> CLOSED {
+    (  $<DpvInterval_tes> (  time:hasBeginning @<DpvDate> ? ;
+          time:hasEnd @<DpvDate> ?
+       ) ;
+       rdf:type [ time:ProperInterval ] ?
+    )
+}
+
+<DpvInverseJurisdiction> CLOSED {
+    (  $<DpvInverseJurisdiction_tes> (  &<DpvJurisdiction_tes> ;
+          rdf:type [ dpv:Jurisdiction ] ?
+       ) ;
+       rdf:type [ dpv:InverseJurisdiction ]
+    )
+}
+
+<DpvInvolvementStatus> CLOSED {
+    (  $<DpvInvolvementStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:InvolvementStatus ]
+    )
+}
+
+<DpvJurisdiction>  (
+    CLOSED {
+       (  $<DpvJurisdiction_tes> (  &<DpvLocation_tes> ;
+             rdf:type [ dpv:Location ] ?
+          ) ;
+          rdf:type [ dpv:Jurisdiction ]
+       )
+    } OR @<DpvCountry> OR @<DpvInverseJurisdiction> OR @<DpvSupraNationalUnion>
+)
+
+<DpvJustification> CLOSED {
+    (  $<DpvJustification_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Justification ]
+    )
+}
+
+<DpvLaw> CLOSED {
+    (  $<DpvLaw_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Law ]
+    )
+}
+
+<DpvLawfulness> CLOSED {
+    (  $<DpvLawfulness_tes> (  &<DpvComplianceStatus_tes> ;
+          rdf:type [ dpv:ComplianceStatus ] ?
+       ) ;
+       rdf:type [ dpv:Lawfulness ]
+    )
+}
+
+<DpvLegalBasis>  (
+    CLOSED {
+       (  $<DpvLegalBasis_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:LegalBasis ]
+       )
+    } OR @<DpvAdequacyDecision>
+)
+
+<DpvLegalEntity>  (
+    CLOSED {
+       (  $<DpvLegalEntity_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:LegalEntity ]
+       )
+    } OR @<DpvAuthority> OR @<DpvHumanSubject>
+)
+
+<DpvLegalMeasure> CLOSED {
+    (  $<DpvLegalMeasure_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:LegalMeasure ]
+    )
+}
+
+<DpvLegalObligationStatus> CLOSED {
+    (  $<DpvLegalObligationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:LegalObligationStatus ]
+    )
+}
+
+<DpvLegitimateInterestStatus> CLOSED {
+    (  $<DpvLegitimateInterestStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:LegitimateInterestStatus ]
+    )
+}
+
+<DpvLifecycleStage> CLOSED {
+    (  $<DpvLifecycleStage_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ ai:LifecycleStage ]
+    )
+}
+
+<DpvLikelihood> CLOSED {
+    (  $<DpvLikelihood_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Likelihood ]
+    )
+}
+
+<DpvLocation>  (
+    CLOSED {
+       (  $<DpvLocation_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:Location ]
+       )
+    } OR @<DpvJurisdiction>
+)
+
+<DpvLocationFixture> CLOSED {
+    (  $<DpvLocationFixture_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:LocationFixture ]
+    )
+}
+
+<DpvMarketPlacementStatus> CLOSED {
+    (  $<DpvMarketPlacementStatus_tes> (  &<DpvTechMarketAvailabilityStatus_tes> ;
+          rdf:type [ tech:MarketAvailabilityStatus ] ?
+       ) ;
+       rdf:type [ eu-aiact:MarketPlacementStatus ]
+    )
+}
+
+<DpvNecessity> CLOSED {
+    (  $<DpvNecessity_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Necessity ]
+    )
+}
+
+<DpvNonPersonalData> CLOSED {
+    (  $<DpvNonPersonalData_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:NonPersonalData ]
+    )
+}
+
+<DpvNoticeStatus> CLOSED {
+    (  $<DpvNoticeStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:NoticeStatus ]
+    )
+}
+
+<DpvNotificationStatus> CLOSED {
+    (  $<DpvNotificationStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:NotificationStatus ]
+    )
+}
+
+<DpvObligation> CLOSED {
+    (  $<DpvObligation_tes> (  &<DpvRule_tes> ;
+          rdf:type [ dpv:Rule ] ?
+       ) ;
+       rdf:type [ dpv:Obligation ]
+    )
+}
+
+<DpvOfficialAuthorityExerciseStatus> CLOSED {
+    (  $<DpvOfficialAuthorityExerciseStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:OfficialAuthorityExerciseStatus ]
+    )
+}
+
+<DpvOrganisationalMeasure>  (
+    CLOSED {
+       (  $<DpvOrganisationalMeasure_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:OrganisationalMeasure ]
+       )
+    } OR @<DpvDataBreachNotice> OR @<DpvIncidentNotice>
+)
+
+<DpvPartyTransparencyTerm> CLOSED {
+    (  $<DpvPartyTransparencyTerm_tes> (  &<DpvTransparencyTerm_tes> ;
+          rdf:type [ ieee-7012:TransparencyTerm ] ?
+       ) ;
+       rdf:type [ ieee-7012:PartyTransparencyTerm ]
+    )
+}
+
+<DpvPdPersonalData> CLOSED {
+    (  $<DpvPdPersonalData_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ pd:PersonalData ]
+    )
+}
+
+<DpvPermission> CLOSED {
+    (  $<DpvPermission_tes> (  &<DpvRule_tes> ;
+          rdf:type [ dpv:Rule ] ?
+       ) ;
+       rdf:type [ dpv:Permission ]
+    )
+}
+
+<DpvPersonalData>  (
+    CLOSED {
+       (  $<DpvPersonalData_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:PersonalData ]
+       )
+    } OR @<DpvSensitivePersonalData>
+)
+
+<DpvPhysicalMeasure> CLOSED {
+    (  $<DpvPhysicalMeasure_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:PhysicalMeasure ]
+    )
+}
+
+<DpvPortabilityTerm> CLOSED {
+    (  $<DpvPortabilityTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:PortabilityTerm ]
+    )
+}
+
+<DpvPotentialConsequence> CLOSED {
+    (  $<DpvPotentialConsequence_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:PotentialConsequence ]
+    )
+}
+
+<DpvPotentialImpact> CLOSED {
+    (  $<DpvPotentialImpact_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:PotentialImpact ]
+    )
+}
+
+<DpvPotentialRisk> CLOSED {
+    (  $<DpvPotentialRisk_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:PotentialRisk ]
+    )
+}
+
+<DpvPotentialRiskSource> CLOSED {
+    (  $<DpvPotentialRiskSource_tes> (  &<DpvRiskConcept_tes> ;
+          rdf:type [ dpv:RiskConcept ] ?
+       ) ;
+       rdf:type [ risk:PotentialRiskSource ]
+    )
+}
+
+<DpvPreferenceApplicability> CLOSED {
+    (  $<DpvPreferenceApplicability_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:PreferenceApplicability ]
+    )
+}
+
+<DpvProcessing>  (
+    CLOSED {
+       (  $<DpvProcessing_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:Processing ]
+       )
+    } OR @<DpvEuGdprProcessing> OR @<DpvTrainingTechnique>
+)
+
+<DpvProcessingContext>  (
+    CLOSED {
+       (  $<DpvProcessingContext_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:ProcessingContext ]
+       )
+    } OR @<DpvAutomationLevel> OR @<DpvDataSource> OR @<DpvDataSubjectScale> OR @<DpvDataVolume> OR
+    @<DpvEntityNonPermissiveInvolvement> OR @<DpvEntityPermissiveInvolvement> OR @<DpvEvaluationScoring> OR
+    @<DpvGeographicCoverage> OR @<DpvHumanInvolvement> OR @<DpvInnovativeUseOfTechnology> OR @<DpvProcessingScale>
+)
+
+<DpvProcessingScale> CLOSED {
+    (  $<DpvProcessingScale_tes> (  &<DpvProcessingContext_tes> ;
+          rdf:type [ dpv:ProcessingContext ] ?
+       ) ;
+       rdf:type [ dpv:ProcessingScale ]
+    )
+}
+
+<DpvProfilingTerm> CLOSED {
+    (  $<DpvProfilingTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:ProfilingTerm ]
+    )
+}
+
+<DpvProhibitedAISystem> CLOSED {
+    (  $<DpvProhibitedAISystem_tes> (  &<DpvAISystem_tes> ;
+          rdf:type [ eu-aiact:AISystem ] ?
+       ) ;
+       rdf:type [ eu-aiact:ProhibitedAISystem ]
+    )
+}
+
+<DpvProhibition> CLOSED {
+    (  $<DpvProhibition_tes> (  &<DpvRule_tes> ;
+          rdf:type [ dpv:Rule ] ?
+       ) ;
+       rdf:type [ dpv:Prohibition ]
+    )
+}
+
+<DpvProperty> CLOSED {
+    (  $<DpvProperty_tes> (  &<DpvTerm_tes> ;
+          rdf:type [ <DpvTerm> ] ? ;
+          rdfs:subPropertyOf @<DpvTerm> * ;
+          dcam:domainIncludes @<DpvTerm> * ;
+          dcam:rangeIncludes @<DpvTerm> *
+       ) ;
+       rdf:type [ rdf:Property ]
+    )
+}
+
+<DpvProportionalityStatus> CLOSED {
+    (  $<DpvProportionalityStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ eu-gdpr:ProportionalityStatus ]
+    )
+}
+
+<DpvProvisionMethod> CLOSED {
+    (  $<DpvProvisionMethod_tes> (  &<DpvTechnology_tes> ;
+          rdf:type [ dpv:Technology ] ?
+       ) ;
+       rdf:type [ tech:ProvisionMethod ]
+    )
+}
+
+<DpvProvisionStatus>  (
+    CLOSED {
+       (  $<DpvProvisionStatus_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ tech:ProvisionStatus ]
+       )
+    } OR @<DpvServiceSupplyStatus>
+)
+
+<DpvPublicInterestStatus> CLOSED {
+    (  $<DpvPublicInterestStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:PublicInterestStatus ]
+    )
+}
+
+<DpvPublicRegisterOfEntities> CLOSED {
+    (  $<DpvPublicRegisterOfEntities_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:PublicRegisterOfEntities ]
+    )
+}
+
+<DpvPurpose> CLOSED {
+    (  $<DpvPurpose_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Purpose ]
+    )
+}
+
+<DpvPurposeTransparencyTerm> CLOSED {
+    (  $<DpvPurposeTransparencyTerm_tes> (  &<DpvTransparencyTerm_tes> ;
+          rdf:type [ ieee-7012:TransparencyTerm ] ?
+       ) ;
+       rdf:type [ ieee-7012:PurposeTransparencyTerm ]
+    )
+}
+
+<DpvRegion> CLOSED {
+    (  $<DpvRegion_tes> (  &<DpvCountry_tes> ;
+          rdf:type [ dpv:Country ] ?
+       ) ;
+       rdf:type [ dpv:Region ]
+    )
+}
+
+<DpvRegulatedHealthDataHolder> CLOSED {
+    (  $<DpvRegulatedHealthDataHolder_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ de-gdng:RegulatedHealthDataHolder ]
+    )
+}
+
+<DpvRequestStatus> CLOSED {
+    (  $<DpvRequestStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:RequestStatus ]
+    )
+}
+
+<DpvResource> CLOSED {
+    (  $<DpvResource_tes> (  &<DpvTerm_tes> ;
+          rdf:type [ <DpvTerm> ] ? ;
+          dcterms:accessRights @<DpvTerm> * ;
+          ai:hasCapability @<DpvTerm> * ;
+          ai:hasData @<DpvTerm> * ;
+          ai:hasModel @<DpvTerm> * ;
+          risk:avoids @<DpvTerm> * ;
+          risk:causedByThreat @<DpvTerm> * ;
+          risk:causedByVulnerability @<DpvTerm> * ;
+          dcterms:conformsTo @linkml:String * ;
+          risk:contains @<DpvTerm> * ;
+          risk:controls @<DpvTerm> * ;
+          dcterms:coverage @<DpvTerm> * ;
+          dcterms:dateAccepted @linkml:String * ;
+          dcterms:dateSubmitted @linkml:String * ;
+          de-gdng:hasDataHolder @<DpvTerm> * ;
+          dcterms:description @linkml:String ? ;
+          risk:detects @<DpvTerm> * ;
+          risk:eliminates @<DpvTerm> * ;
+          eu-aiact:hasRiskLevel @<DpvTerm> * ;
+          eu-dga:hasDataHolder @<DpvTerm> * ;
+          risk:exploitsVulnerability @<DpvTerm> * ;
+          dcterms:format @linkml:String * ;
+          ai:hasAI @<DpvTerm> * ;
+          ai:hasAISystem @<DpvTerm> * ;
+          tech:hasAPI @<DpvTerm> * ;
+          dpv:hasActiveEntity @<DpvTerm> * ;
+          dpv:hasActivityStatus @<DpvTerm> * ;
+          tech:hasActor @<DpvTerm> * ;
+          dpv:hasAddress @linkml:String * ;
+          ieee-7012:hasAgent @<DpvTerm> * ;
+          ieee-7012:hasAgentBehaviour @<DpvTerm> * ;
+          ieee-7012:hasAgreement @<DpvTerm> * ;
+          ieee-7012:hasAgreementPreference @<DpvTerm> * ;
+          ieee-7012:hasAgreementRegistry @<DpvTerm> * ;
+          tech:hasAlgorithm @<DpvTerm> * ;
+          dpv:hasAlgorithmicLogic @<DpvTerm> * ;
+          dpv:hasApplicability @<DpvTerm> * ;
+          dpv:hasApplicableLaw @<DpvTerm> * ;
+          tech:hasApplication @<DpvTerm> * ;
+          dpv:hasAssessment @<DpvTerm> * ;
+          dpv:hasAuditStatus @<DpvTerm> * ;
+          tech:hasAuditor @<DpvTerm> * ;
+          dpv:hasAuthority @<DpvTerm> * ;
+          dpv:hasAutomationLevel @<DpvTerm> * ;
+          eu-aiact:hasChangeCategory @<DpvTerm> * ;
+          eu-aiact:hasChangeDescription @<DpvTerm> * ;
+          tech:hasCommunicationMechanism @<DpvTerm> * ;
+          dpv:hasComplianceStatus @<DpvTerm> * ;
+          tech:hasComponent @<DpvTerm> * ;
+          eu-gdpr:hasConcernedSA @<DpvTerm> * ;
+          ieee-7012:hasConflictResolution @<DpvTerm> * ;
+          dpv:hasConformanceStatus @<DpvTerm> * ;
+          dpv:hasConsentControl @<DpvTerm> * ;
+          dpv:hasConsentStatus @<DpvTerm> * ;
+          dpv:hasConsequence @<DpvTerm> * ;
+          dpv:hasConsequenceOn @<DpvTerm> * ;
+          dpv:hasContact @linkml:String * ;
+          dpv:hasContext @<DpvTerm> * ;
+          dpv:hasContractControl @<DpvTerm> * ;
+          dpv:hasContractStatus @<DpvTerm> * ;
+          dpv:hasContractualClause @<DpvTerm> * ;
+          dpv:hasContractualFulfilmentStatus @<DpvTerm> * ;
+          risk:hasControl @<DpvTerm> * ;
+          dpv:hasCountry @<DpvTerm> * ;
+          tech:hasCustomer @<DpvTerm> * ;
+          eu-dga:hasDAO @<DpvTerm> * ;
+          eu-dga:hasDISP @<DpvTerm> * ;
+          dpv:hasData @<DpvTerm> * ;
+          dpv:hasDataController @<DpvTerm> * ;
+          dpv:hasDataExporter @<DpvTerm> * ;
+          dpv:hasDataImporter @<DpvTerm> * ;
+          dpv:hasDataProcessor @<DpvTerm> * ;
+          dpv:hasDataProtectionOfficer @<DpvTerm> * ;
+          eu-dga:hasDataReuseAssistant @<DpvTerm> * ;
+          ieee-7012:hasDataSharingTerm @<DpvTerm> * ;
+          dpv:hasDataSource @<DpvTerm> * ;
+          dpv:hasDataSubject @<DpvTerm> * ;
+          dpv:hasDataSubjectScale @<DpvTerm> * ;
+          eu-dga:hasDataUser @<DpvTerm> * ;
+          dpv:hasDataVolume @<DpvTerm> * ;
+          ieee-7012:hasDeonticInterpretation @<DpvTerm> * ;
+          tech:hasDeployer @<DpvTerm> * ;
+          tech:hasDeploymentLocation @<DpvTerm> * ;
+          tech:hasDesigner @<DpvTerm> * ;
+          dpv:hasDeterrence @<DpvTerm> * ;
+          tech:hasDeveloper @<DpvTerm> * ;
+          tech:hasDevice @<DpvTerm> * ;
+          tech:hasDocumentation @<DpvTerm> * ;
+          dpv:hasDuration @<DpvTerm> * ;
+          ieee-7012:hasEndpoint @<DpvTerm> * ;
+          dpv:hasEntity @<DpvTerm> * ;
+          dpv:hasEntityControl @<DpvTerm> * ;
+          dpv:hasEntityInvolvement @<DpvTerm> * ;
+          eu-gdpr:hasEstablishment @<DpvTerm> * ;
+          tech:hasEvaluator @<DpvTerm> * ;
+          dpv:hasExpectation @<DpvTerm> * ;
+          dpv:hasFee @<DpvTerm> * ;
+          ieee-7012:hasFirstParty @<DpvTerm> * ;
+          dpv:hasFrequency @<DpvTerm> * ;
+          dpv:hasFulfilmentStatus @<DpvTerm> * ;
+          tech:hasFunction @<DpvTerm> * ;
+          ai:hasGPAIModel @<DpvTerm> * ;
+          dpv:hasGeographicCoverage @<DpvTerm> * ;
+          tech:hasHardware @<DpvTerm> * ;
+          ieee-7012:hasHumanDescription @linkml:String * ;
+          dpv:hasHumanInvolvement @<DpvTerm> * ;
+          ieee-7012:hasHumanReadableFormat @linkml:String * ;
+          dpv:hasHumanSubject @<DpvTerm> * ;
+          dpv:hasIdentifier @linkml:String * ;
+          dpv:hasImpact @<DpvTerm> * ;
+          dpv:hasImpactAssessment @<DpvTerm> * ;
+          dpv:hasImpactOn @<DpvTerm> * ;
+          dpv:hasImportance @<DpvTerm> * ;
+          risk:hasIncident @<DpvTerm> * ;
+          dpv:hasIndicationMethod @<DpvTerm> * ;
+          dpv:hasInformedStatus @<DpvTerm> * ;
+          tech:hasInfrastructure @<DpvTerm> * ;
+          tech:hasInput @<DpvTerm> * ;
+          tech:hasInputAction @<DpvTerm> * ;
+          tech:hasInputData @<DpvTerm> * ;
+          tech:hasInstaller @<DpvTerm> * ;
+          tech:hasIntendedUse @<DpvTerm> * ;
+          dpv:hasIntention @<DpvTerm> * ;
+          dpv:hasInverseJurisdiction @<DpvTerm> * ;
+          dpv:hasInvolvement @<DpvTerm> * ;
+          dpv:hasJointDataControllers @<DpvTerm> * ;
+          dpv:hasJurisdiction @<DpvTerm> * ;
+          dpv:hasJustification @<DpvTerm> * ;
+          dpv:hasLawfulness @<DpvTerm> * ;
+          eu-gdpr:hasLeadSA @<DpvTerm> * ;
+          dpv:hasLegalBasis @<DpvTerm> * ;
+          dpv:hasLegalMeasure @<DpvTerm> * ;
+          tech:hasLicense @<DpvTerm> * ;
+          tech:hasLifecycleStage @<DpvTerm> * ;
+          dpv:hasLikelihood @<DpvTerm> * ;
+          eu-gdpr:hasLocalSA @<DpvTerm> * ;
+          dpv:hasLocation @<DpvTerm> * ;
+          ieee-7012:hasMachineReadableFormat @linkml:String * ;
+          eu-gdpr:hasMainEstablishment @<DpvTerm> * ;
+          tech:hasMaintainer @<DpvTerm> * ;
+          tech:hasManufacturer @<DpvTerm> * ;
+          tech:hasMarketAvailabilityStatus @<DpvTerm> * ;
+          dpv:hasName @linkml:String * ;
+          dpv:hasNecessity @<DpvTerm> * ;
+          dpv:hasNonInvolvedEntity @<DpvTerm> * ;
+          dpv:hasNonPersonalDataProcess @<DpvTerm> * ;
+          dpv:hasNotice @<DpvTerm> * ;
+          dpv:hasNoticeIcon @<DpvTerm> * ;
+          dpv:hasNoticeLayer @<DpvTerm> * ;
+          dpv:hasNoticeStatus @<DpvTerm> * ;
+          dpv:hasNotificationStatus @<DpvTerm> * ;
+          dpv:hasObligation @<DpvTerm> * ;
+          tech:hasOperatingEnvironment @<DpvTerm> * ;
+          tech:hasOperatingFactor @<DpvTerm> * ;
+          dpv:hasOrganisationalMeasure @<DpvTerm> * ;
+          dpv:hasOrganisationalUnit @<DpvTerm> * ;
+          dpv:hasOutcome @<DpvTerm> * ;
+          tech:hasOutput @<DpvTerm> * ;
+          tech:hasOutputAction @<DpvTerm> * ;
+          tech:hasOutputData @<DpvTerm> * ;
+          tech:hasOwner @<DpvTerm> * ;
+          dcterms:hasPart @<DpvTerm> * ;
+          tech:hasPartner @<DpvTerm> * ;
+          dpv:hasParty @<DpvTerm> * ;
+          dpv:hasPassiveEntity @<DpvTerm> * ;
+          dpv:hasPermission @<DpvTerm> * ;
+          dpv:hasPersonalData @<DpvTerm> * ;
+          dpv:hasPersonalDataHandling @<DpvTerm> * ;
+          dpv:hasPersonalDataProcess @<DpvTerm> * ;
+          dpv:hasPhysicalMeasure @<DpvTerm> * ;
+          tech:hasPlatform @<DpvTerm> * ;
+          dpv:hasPolicy @<DpvTerm> * ;
+          ieee-7012:hasPortabilityTerm @<DpvTerm> * ;
+          ieee-7012:hasPreferenceApplicability @<DpvTerm> * ;
+          dpv:hasProcess @<DpvTerm> * ;
+          dpv:hasProcessing @<DpvTerm> * ;
+          dpv:hasProcessingCondition @<DpvTerm> * ;
+          dpv:hasProcessingScale @<DpvTerm> * ;
+          tech:hasProducer @<DpvTerm> * ;
+          ieee-7012:hasProfilingTerm @<DpvTerm> * ;
+          dpv:hasProhibition @<DpvTerm> * ;
+          tech:hasProvider @<DpvTerm> * ;
+          tech:hasProvisionMethod @<DpvTerm> * ;
+          tech:hasProvisionStatus @<DpvTerm> * ;
+          tech:hasPurchaser @<DpvTerm> * ;
+          dpv:hasPurpose @<DpvTerm> * ;
+          dpv:hasRecipient @<DpvTerm> * ;
+          dpv:hasRecipientDataController @<DpvTerm> * ;
+          dpv:hasRecipientThirdParty @<DpvTerm> * ;
+          dpv:hasRecommendation @<DpvTerm> * ;
+          dpv:hasRecordOfActivity @<DpvTerm> * ;
+          dpv:hasRelationWithDataSubject @<DpvTerm> * ;
+          dpv:hasRepresentative @<DpvTerm> * ;
+          dpv:hasRequestStatus @<DpvTerm> * ;
+          dpv:hasResidualRisk @<DpvTerm> * ;
+          dpv:hasResponsibleEntity @<DpvTerm> * ;
+          dpv:hasReuseCompatibility @<DpvTerm> * ;
+          dpv:hasRight @<DpvTerm> * ;
+          dpv:hasRisk @<DpvTerm> * ;
+          risk:hasRiskAcceptance @<DpvTerm> * ;
+          risk:hasRiskAnalysis @<DpvTerm> * ;
+          dpv:hasRiskAssessment @<DpvTerm> * ;
+          risk:hasRiskCriteria @<DpvTerm> * ;
+          risk:hasRiskEvaluation @<DpvTerm> * ;
+          risk:hasRiskIdentification @<DpvTerm> * ;
+          dpv:hasRiskLevel @<DpvTerm> * ;
+          risk:hasRiskManagement @<DpvTerm> * ;
+          risk:hasRiskOwner @<DpvTerm> * ;
+          risk:hasRiskPerception @<DpvTerm> * ;
+          risk:hasRiskSource @<DpvTerm> * ;
+          risk:hasRiskTreatment @<DpvTerm> * ;
+          dpv:hasRule @<DpvTerm> * ;
+          dpv:hasScale @<DpvTerm> * ;
+          dpv:hasScope @<DpvTerm> * ;
+          ieee-7012:hasSecondParty @<DpvTerm> * ;
+          dpv:hasSector @<DpvTerm> * ;
+          dpv:hasSensitivityLevel @<DpvTerm> * ;
+          dpv:hasService @<DpvTerm> * ;
+          dpv:hasServiceConsumer @<DpvTerm> * ;
+          dpv:hasServiceProvider @<DpvTerm> * ;
+          dpv:hasSeverity @<DpvTerm> * ;
+          tech:hasSoftware @<DpvTerm> * ;
+          dpv:hasStatus @<DpvTerm> * ;
+          dpv:hasStorageCondition @<DpvTerm> * ;
+          tech:hasSubject @<DpvTerm> * ;
+          dpv:hasSubsidiary @<DpvTerm> * ;
+          tech:hasSupplier @<DpvTerm> * ;
+          tech:hasSystem @<DpvTerm> * ;
+          tech:hasSystemIntegrator @<DpvTerm> * ;
+          tech:hasTRL @<DpvTerm> * ;
+          dpv:hasTechnicalMeasure @<DpvTerm> * ;
+          dpv:hasTechnicalOrganisationalMeasure @<DpvTerm> * ;
+          ai:hasTechnique @<DpvTerm> * ;
+          ai:hasTestingData @<DpvTerm> * ;
+          dpv:hasThirdCountry @<DpvTerm> * ;
+          dpv:hasThirdParty @<DpvTerm> * ;
+          risk:hasThreatSource @<DpvTerm> * ;
+          ieee-7012:hasTrackingTerm @<DpvTerm> * ;
+          ai:hasTrainingData @<DpvTerm> * ;
+          ieee-7012:hasTransparencyTerm @<DpvTerm> * ;
+          dpv:hasUncategorisedData @<DpvTerm> * ;
+          dpv:hasUnstructuredData @<DpvTerm> * ;
+          tech:hasUser @<DpvTerm> * ;
+          ai:hasValidationData @<DpvTerm> * ;
+          risk:hasVulnerability @<DpvTerm> * ;
+          dcterms:identifier @linkml:String ? ;
+          risk:identifies @<DpvTerm> * ;
+          ieee-7012:hasParty @<DpvTerm> * ;
+          ieee-7012:hasThirdParty @<DpvTerm> * ;
+          risk:interrupts @<DpvTerm> * ;
+          risk:intervenes @<DpvTerm> * ;
+          risk:investigates @<DpvTerm> * ;
+          dpv:isAfter @<DpvTerm> * ;
+          dpv:isApplicableFor @<DpvTerm> * ;
+          dpv:isAuthorityFor @<DpvTerm> * ;
+          dpv:isBefore @<DpvTerm> * ;
+          tech:isComponentOf @<DpvTerm> * ;
+          dpv:isDeterminedByEntity @<DpvTerm> * ;
+          dpv:isDuring @<DpvTerm> * ;
+          dpv:isExercisedAt @<DpvTerm> * ;
+          risk:isExploitedBy @<DpvTerm> * ;
+          dpv:isImplementedByEntity @<DpvTerm> * ;
+          dpv:isImplementedUsingTechnology @<DpvTerm> * ;
+          dpv:isIndicatedAtTime @linkml:String * ;
+          dpv:isIndicatedBy @<DpvTerm> * ;
+          eu-gdpr:isMainEstablishmentFor @<DpvTerm> * ;
+          dpv:isMitigatedByMeasure @<DpvTerm> * ;
+          dpv:isNotApplicableFor @<DpvTerm> * ;
+          dpv:isOrganisationalUnitOf @<DpvTerm> * ;
+          dpv:isOutsideOfLocation @<DpvTerm> * ;
+          dcterms:isPartOf @<DpvTerm> * ;
+          dpv:isPolicyFor @<DpvTerm> * ;
+          dpv:isRepresentativeFor @<DpvTerm> * ;
+          dpv:isResidualRiskOf @<DpvTerm> * ;
+          dpv:isSubsidiaryOf @<DpvTerm> * ;
+          dcterms:isVersionOf @<DpvTerm> * ;
+          risk:isVulnerabilityOf @<DpvTerm> * ;
+          loc:iso_alpha2 @linkml:String * ;
+          loc:iso_alpha3 @linkml:String * ;
+          loc:iso_numeric @linkml:String * ;
+          risk:logs @<DpvTerm> * ;
+          risk:mitigates @<DpvTerm> * ;
+          dpv:mitigatesRisk @<DpvTerm> * ;
+          risk:modifies @<DpvTerm> * ;
+          risk:monitors @<DpvTerm> * ;
+          risk:overrides @<DpvTerm> * ;
+          foaf:page @<DpvTerm> * ;
+          risk:recovers @<DpvTerm> * ;
+          risk:reduces @<DpvTerm> * ;
+          risk:refersToRisk @<DpvTerm> * ;
+          risk:remedies @<DpvTerm> * ;
+          risk:resolves @<DpvTerm> * ;
+          risk:reverses @<DpvTerm> * ;
+          risk:hasRiskAssessment @<DpvTerm> * ;
+          risk:shares @<DpvTerm> * ;
+          dcterms:subject @<DpvTerm> * ;
+          risk:substitutes @<DpvTerm> * ;
+          dpv:supportsComplianceWith @<DpvTerm> * ;
+          tech:hasCapability @<DpvTerm> * ;
+          tech:hasModel @<DpvTerm> * ;
+          tech:hasService @<DpvTerm> * ;
+          dcterms:title @linkml:String ? ;
+          risk:transfers @<DpvTerm> * ;
+          loc:un_m49 @linkml:String * ;
+          dcterms:valid @linkml:String * ;
+          <statements> @<DpvStatement> *
+       ) ;
+       rdf:type [ rdfs:Resource ]
+    )
+}
+
+<DpvReuseCompatibility>  (
+    CLOSED {
+       (  $<DpvReuseCompatibility_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ dpv:ReuseCompatibility ]
+       )
+    } OR @<DpvSectorHealthReuseCompatibility>
+)
+
+<DpvRight> CLOSED {
+    (  $<DpvRight_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Right ]
+    )
+}
+
+<DpvRiskAnalysis> CLOSED {
+    (  $<DpvRiskAnalysis_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ risk:RiskAnalysis ]
+    )
+}
+
+<DpvRiskConcept>  (
+    CLOSED {
+       (  $<DpvRiskConcept_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:RiskConcept ]
+       )
+    } OR @<DpvAvailabilityConcept> OR @<DpvConfidentialityConcept> OR @<DpvIntegrityConcept> OR @<DpvPotentialConsequence> OR
+    @<DpvPotentialImpact> OR @<DpvPotentialRisk> OR @<DpvPotentialRiskSource>
+)
+
+<DpvRiskControl> CLOSED {
+    (  $<DpvRiskControl_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ risk:RiskControl ]
+    )
+}
+
+<DpvRiskLevel>  (
+    CLOSED {
+       (  $<DpvRiskLevel_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:RiskLevel ]
+       )
+    } OR @<DpvEuAiactRiskLevel>
+)
+
+<DpvRule>  (
+    CLOSED {
+       (  $<DpvRule_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:Rule ]
+       )
+    } OR @<DpvObligation> OR @<DpvPermission> OR @<DpvProhibition>
+)
+
+<DpvRuleFulfilmentStatus> CLOSED {
+    (  $<DpvRuleFulfilmentStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:RuleFulfilmentStatus ]
+    )
+}
+
+<DpvScoringOfIndividuals> CLOSED {
+    (  $<DpvScoringOfIndividuals_tes> (  &<DpvEvaluationScoring_tes> ;
+          rdf:type [ dpv:EvaluationScoring ] ?
+       ) ;
+       rdf:type [ dpv:ScoringOfIndividuals ]
+    )
+}
+
+<DpvSector> CLOSED {
+    (  $<DpvSector_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Sector ]
+    )
+}
+
+<DpvSectorHealthReuseCompatibility> CLOSED {
+    (  $<DpvSectorHealthReuseCompatibility_tes> (  &<DpvReuseCompatibility_tes> ;
+          rdf:type [ dpv:ReuseCompatibility ] ?
+       ) ;
+       rdf:type [ sector-health:ReuseCompatibility ]
+    )
+}
+
+<DpvSensitivePersonalData>  (
+    CLOSED {
+       (  $<DpvSensitivePersonalData_tes> (  &<DpvPersonalData_tes> ;
+             rdf:type [ dpv:PersonalData ] ?
+          ) ;
+          rdf:type [ dpv:SensitivePersonalData ]
+       )
+    } OR @<DpvSpecialCategoryPersonalData>
+)
+
+<DpvServiceSupplyStatus> CLOSED {
+    (  $<DpvServiceSupplyStatus_tes> (  &<DpvProvisionStatus_tes> ;
+          rdf:type [ tech:ProvisionStatus ] ?
+       ) ;
+       rdf:type [ eu-aiact:ServiceSupplyStatus ]
+    )
+}
+
+<DpvSeverity> CLOSED {
+    (  $<DpvSeverity_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:Severity ]
+    )
+}
+
+<DpvSpecialCategoryPersonalData> CLOSED {
+    (  $<DpvSpecialCategoryPersonalData_tes> (  &<DpvSensitivePersonalData_tes> ;
+          rdf:type [ dpv:SensitivePersonalData ] ?
+       ) ;
+       rdf:type [ dpv:SpecialCategoryPersonalData ]
+    )
+}
+
+<DpvStatement> CLOSED {
+    (  $<DpvStatement_tes> (  rdf:predicate @linkml:Uriorcurie ;
+          rdf:object @linkml:Uriorcurie ? ;
+          rdf:value @linkml:String ? ;
+          <datatype> @linkml:Uriorcurie ? ;
+          <language> @linkml:String ?
+       ) ;
+       rdf:type [ <DpvStatement> ] ?
+    )
+}
+
+<DpvStatus>  (
+    CLOSED {
+       (  $<DpvStatus_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:Status ]
+       )
+    } OR @<DpvActivityStatus> OR @<DpvAgreementNegotiationStatus> OR @<DpvAuditStatus> OR @<DpvComplianceStatus> OR
+    @<DpvConformanceStatus> OR @<DpvConsentStatus> OR @<DpvContractActivationStatus> OR @<DpvContractExecutionStatus> OR
+    @<DpvContractFulfilmentStatus> OR @<DpvContractPerformanceStatus> OR @<DpvContractPreparationStatus> OR
+    @<DpvContractTerminationStatus> OR @<DpvContractualClauseFulfilmentStatus> OR @<DpvEntityInformedStatus> OR
+    @<DpvEntityInvolvementStatus> OR @<DpvIncidentInvestigationStatus> OR @<DpvIncidentStatus> OR @<DpvIntentionStatus> OR
+    @<DpvInvolvementStatus> OR @<DpvLegalObligationStatus> OR @<DpvLegitimateInterestStatus> OR @<DpvNoticeStatus> OR
+    @<DpvNotificationStatus> OR @<DpvOfficialAuthorityExerciseStatus> OR @<DpvProportionalityStatus> OR @<DpvProvisionStatus> OR
+    @<DpvPublicInterestStatus> OR @<DpvRequestStatus> OR @<DpvReuseCompatibility> OR @<DpvRuleFulfilmentStatus> OR
+    @<DpvTechMarketAvailabilityStatus> OR @<DpvVitalInterestStatus>
+)
+
+<DpvSupraNationalUnion> CLOSED {
+    (  $<DpvSupraNationalUnion_tes> (  &<DpvJurisdiction_tes> ;
+          rdf:type [ dpv:Jurisdiction ] ?
+       ) ;
+       rdf:type [ dpv:SupraNationalUnion ]
+    )
+}
+
+<DpvTechCapability> CLOSED {
+    (  $<DpvTechCapability_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ tech:Capability ]
+    )
+}
+
+<DpvTechMarketAvailabilityStatus>  (
+    CLOSED {
+       (  $<DpvTechMarketAvailabilityStatus_tes> (  &<DpvStatus_tes> ;
+             rdf:type [ dpv:Status ] ?
+          ) ;
+          rdf:type [ tech:MarketAvailabilityStatus ]
+       )
+    } OR @<DpvEuAiactMarketAvailabilityStatus> OR @<DpvMarketPlacementStatus>
+)
+
+<DpvTechnicalMeasure> CLOSED {
+    (  $<DpvTechnicalMeasure_tes> (  &<DpvConcept_tes> ;
+          rdf:type [ skos:Concept ] ?
+       ) ;
+       rdf:type [ dpv:TechnicalMeasure ]
+    )
+}
+
+<DpvTechnique> CLOSED {
+    (  $<DpvTechnique_tes> (  &<DpvTechnology_tes> ;
+          rdf:type [ dpv:Technology ] ?
+       ) ;
+       rdf:type [ ai:Technique ]
+    )
+}
+
+<DpvTechnology>  (
+    CLOSED {
+       (  $<DpvTechnology_tes> (  &<DpvConcept_tes> ;
+             rdf:type [ skos:Concept ] ?
+          ) ;
+          rdf:type [ dpv:Technology ]
+       )
+    } OR @<DpvAISystem> OR @<DpvAiCapability> OR @<DpvCommunicationMechanism> OR @<DpvProvisionMethod> OR @<DpvTechnique>
+)
+
+<DpvTerm>  (
+    @<DpvConcept> OR @<DpvProperty> OR @<DpvResource>
+)
+
+<DpvTerm_struct> {
+    (  $<DpvTerm_tes> (  rdf:type @<DpvTerm> * ;
+          skos:prefLabel @linkml:String ? ;
+          skos:prefLabel @linkml:String ? ;
+          skos:definition @linkml:String ? ;
+          skos:definition @linkml:String ? ;
+          skos:scopeNote @linkml:String * ;
+          skos:broader @<DpvTerm> * ;
+          skos:related @<DpvTerm> * ;
+          skos:inScheme @<DpvConceptScheme> * ;
+          skos:sameAs @<DpvTerm> * ;
+          rdfs:isDefinedBy @<DpvVocabulary> * ;
+          rdfs:subClassOf @<DpvTerm> * ;
+          vann:example @<DpvExample> * ;
+          skos:exactMatch @<DpvUri> * ;
+          sw:term_status [ <https://w3id.org/lmodel/dpv/DpvTermStatus#accepted>
+             <https://w3id.org/lmodel/dpv/DpvTermStatus#modified> <https://w3id.org/lmodel/dpv/DpvTermStatus#sunset> ] ? ;
+          dcterms:created @<DpvDate> * ;
+          dcterms:modified @<DpvDate> ? ;
+          dcterms:contributor @<DpvAgent> * ;
+          dcterms:source @linkml:String * ;
+          dcterms:source @<DpvWebPage> * ;
+          foaf:homepage @linkml:String ? ;
+          rdf:value @linkml:Decimal ? ;
+          dcterms:temporal @<DpvInterval> ?
+       ) ;
+       rdf:type [ <DpvTerm> ]
+    )
+}
+
+<DpvTrackingTerm> CLOSED {
+    (  $<DpvTrackingTerm_tes> (  &<DpvContractualClause_tes> ;
+          rdf:type [ dpv:ContractualClause ] ?
+       ) ;
+       rdf:type [ ieee-7012:TrackingTerm ]
+    )
+}
+
+<DpvTrainingTechnique> CLOSED {
+    (  $<DpvTrainingTechnique_tes> (  &<DpvProcessing_tes> ;
+          rdf:type [ dpv:Processing ] ?
+       ) ;
+       rdf:type [ ai:TrainingTechnique ]
+    )
+}
+
+<DpvTransparencyTerm>  (
+    CLOSED {
+       (  $<DpvTransparencyTerm_tes> (  &<DpvContractualClause_tes> ;
+             rdf:type [ dpv:ContractualClause ] ?
+          ) ;
+          rdf:type [ ieee-7012:TransparencyTerm ]
+       )
+    } OR @<DpvDataTransparencyTerm> OR @<DpvPartyTransparencyTerm> OR @<DpvPurposeTransparencyTerm>
+)
+
+<DpvVitalInterestStatus> CLOSED {
+    (  $<DpvVitalInterestStatus_tes> (  &<DpvStatus_tes> ;
+          rdf:type [ dpv:Status ] ?
+       ) ;
+       rdf:type [ dpv:VitalInterestStatus ]
+    )
+}
+
+<DpvVocabulary> CLOSED {
+    (  $<DpvVocabulary_tes> (  dcterms:title @linkml:String ? ;
+          dcterms:description @linkml:String ? ;
+          dcterms:identifier @linkml:String ? ;
+          dcterms:bibliographicCitation @linkml:String ? ;
+          dcterms:conformsTo @linkml:String * ;
+          dcterms:created @<DpvDate> * ;
+          dcterms:issued @<DpvDate> ? ;
+          dcterms:modified @<DpvDate> ? ;
+          dcterms:creator @<DpvAgent> * ;
+          dcterms:contributor @<DpvAgent> * ;
+          dcterms:publisher @<DpvUri> ? ;
+          dcterms:license @<DpvUri> ? ;
+          dcterms:source @linkml:String * ;
+          bibo:doi @linkml:String ? ;
+          bibo:status @linkml:String ? ;
+          vann:preferredNamespacePrefix @linkml:String ? ;
+          vann:preferredNamespaceUri @linkml:String ? ;
+          rdfs:Label @linkml:String ? ;
+          owl:versionIRI @<DpvUri> ? ;
+          owl:versionInfo @linkml:String ;
+          sdo:version @linkml:String ? ;
+          prof:isProfileOf @<DpvUri> * ;
+          foaf:logo @<DpvUri> ?
+       ) ;
+       rdf:type [ owl:Ontology ]
+    )
+}
+
+<DpvWebPage> CLOSED {
+    (  $<DpvWebPage_tes> (  sdo:name @linkml:String ;
+          sdo:url @linkml:String ?
+       ) ;
+       rdf:type [ sdo:WebPage ] ?
+    )
+}
