@@ -6,6 +6,8 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-05
+
 ### Added
 
 - **Every DPV 2.3 term as a record** in `src/dpv/data/`, one file per namespace family, with the contributors and DPV's 88 examples. `scripts/dpv_to_linkml.py` writes them from `upstream/`.
