@@ -91,7 +91,7 @@ def test_the_core_vocabulary_states_the_pinned_edition():
 def test_the_notice_carries_the_licence_the_upstream_requires():
     """DPV's LICENSE.md asks a copy for its notice, and a derivative for a statement of what
     changed, so NOTICE holds both."""
-    notice = (ROOT / "NOTICE").read_text(encoding="utf-8")
+    notice = " ".join((ROOT / "NOTICE").read_text(encoding="utf-8").split())
     assert "W3C Software and Document" in notice
     assert "https://www.w3.org/copyright/software-license-2023/" in notice
     assert "COPYRIGHT HOLDERS WILL NOT BE LIABLE" in notice
