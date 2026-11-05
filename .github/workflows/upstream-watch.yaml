@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  ai-rmf-sources:
+  dpv-sources:
     name: DPV's release, its files and its licence are the pinned ones
     runs-on: ubuntu-latest
     timeout-minutes: 10
