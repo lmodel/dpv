@@ -20,13 +20,13 @@ sources:
     title: test_a_record_holds_what_the_turtle_says
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-06T21:19:27Z"
 status: draft
 ---
 
 # Marketing
 
-This concept shows how a host writes a DPV term in its bundle: its `type` is a kind, and its relations name DPV's terms by their CURIEs. `lokf validate` checks it against `.lokf/dpv.yaml`.[^readme.md]
+This concept shows how a host writes a DPV term in its bundle: its `type` is a kind, and its relations name DPV's terms by their CURIEs. `lokf validate` checks it against `.lokf/schema/dpv.yaml`.[^readme.md]
 
 The catalogue's own record of `dpv:Marketing` holds the same label and the same broader term.[^test_catalogue.py]
 

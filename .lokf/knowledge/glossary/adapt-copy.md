@@ -2,7 +2,7 @@
 type: GlossaryTerm
 id: https://w3id.org/lmodel/dpv/knowledge/glossary/adapt-copy
 title: Adapt copy
-description: "An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/dpv.yaml`."
+description: "An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/schema/dpv.yaml`."
 relatedTo:
   - https://w3id.org/lmodel/dpv/knowledge/datasets/adapt-copy
 sources:
@@ -11,7 +11,7 @@ sources:
     title: Knowledge Trust Ladder (KTL)
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-06T21:19:27Z"
 status: draft
 ---
 
