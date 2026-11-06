@@ -19,8 +19,8 @@ ROOT = Path(__file__).parent.parent
 # schema asset of a release, downloaded and checked against the release's .sha256 and its
 # attestation, and pinned here by that checksum.
 SOURCE_DIR = ROOT / "src" / "dpv" / "schema"
-COPY = ROOT / ".lokf" / "dpv.yaml"
-LOKF = ROOT / ".lokf" / "lokf.yaml"
+COPY = ROOT / ".lokf" / "schema" / "dpv.yaml"
+LOKF = ROOT / ".lokf" / "schema" / "lokf.yaml"
 NEIGHBOURS = {
     # lmodel/slsa v0.10.0
     "slsa.yaml": "9eeb68decc918565886794fe4eb6e32e1fee0620688cc699961c227242a2f4c2",
