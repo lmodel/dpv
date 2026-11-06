@@ -43,7 +43,7 @@ Run `just` to list the project's [just](https://github.com/casey/just/) recipes.
 
 ## Knowledge Trust Ladder (KTL)
 
-`.lokf/` holds this project's [KTL](https://w3id.org/ktl/) knowledge bundle. Its domain schema, `.lokf/dpv.yaml`, is the copy `just lokf-adapt` writes from `src/dpv/schema/dpv.yaml`, and `just lokf-adapt-check` says when it is stale. Edit the source, never the copy. A release carries the copy as `schema-<tag>-dpv.yaml`.
+`.lokf/` holds this project's [KTL](https://w3id.org/ktl/) knowledge bundle. Its domain schema, `.lokf/schema/dpv.yaml`, is the copy `just lokf-adapt` writes from `src/dpv/schema/dpv.yaml`, and `just lokf-adapt-check` says when it is stale. Edit the source, never the copy. A release carries the copy as `schema-<tag>-dpv.yaml`.
 
 The copy roots `DpvTerm`, `DpvVocabulary`, `DpvConceptScheme`, `DpvAgent`, `DpvExample` and `DpvCatalogue` on `Concept`. A concept that describes a thing in a use case, such as a process, takes `DpvResource`, which holds any DPV property. In Obsidian, add these to the *Known LOKF types* setting of the KTL Registrar and KTL Curator plugins:
 

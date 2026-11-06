@@ -11,8 +11,8 @@ gen-schema:
 
 # ============ Knowledge bundle: the adapted domain schema ============
 
-# `.lokf/dpv.yaml` is the copy `lokf adapt` writes from the schema so that it can sit beside
-# `.lokf/lokf.yaml` (`lokf adapt --help` lists the moves). The roots are the classes that
+# `.lokf/schema/dpv.yaml` is the copy `lokf adapt` writes from the schema so that it can sit beside
+# `.lokf/schema/lokf.yaml` (`lokf adapt --help` lists the moves). The roots are the classes that
 # carry the schema's identifier: DpvTerm, with every kind of concept under it, and the
 # vocabulary, the concept scheme, the contributor and the example. A concept names one of
 # them as its `type`. Each --keep names a key under one of LOKF's IRIs that takes another kind
@@ -22,12 +22,12 @@ gen-schema:
 lokf_cmd := env_var_or_default("LOKF_CMD", "uv run --project .lokf lokf")
 lokf_adapt_roots := "--root DpvTerm --root DpvVocabulary --root DpvConceptScheme --root DpvAgent --root DpvExample --root DpvCatalogue --prefix dpv --keep source --keep source_page --keep isPartOf --keep isDefinedBy --keep DpvWebPage.page_name --keep url"
 
-# Rewrite .lokf/dpv.yaml from the schema (run after every schema change)
+# Rewrite .lokf/schema/dpv.yaml from the schema (run after every schema change)
 [group('knowledge bundle')]
 lokf-adapt:
-  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/lokf.yaml -o .lokf/dpv.yaml
+  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/schema/lokf.yaml -o .lokf/schema/dpv.yaml
 
-# Fail when .lokf/dpv.yaml is stale against the schema or .lokf/lokf.yaml
+# Fail when .lokf/schema/dpv.yaml is stale against the schema or .lokf/schema/lokf.yaml
 [group('knowledge bundle')]
 lokf-adapt-check:
-  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/lokf.yaml -o .lokf/dpv.yaml --check
+  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/schema/lokf.yaml -o .lokf/schema/dpv.yaml --check

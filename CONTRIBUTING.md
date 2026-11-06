@@ -39,7 +39,7 @@ npx skills add noelmcloughlin/knowledge-trust-ladder --skill ktl-curator --yes  
 
 ## Before opening a pull request
 
-- **Edit the converter or `dpv_core.yaml`, then regenerate.** Run `just gen-schema`, `just gen-project`, `just gen-doc` and `just lokf-adapt`, and commit the output. Everything but `dpv_core.yaml` and `dpv.yaml` under `src/dpv/schema/`, and `src/dpv/data/`, `src/dpv/mappings/`, `project/`, `src/dpv/datamodel/`, `docs/schema/` and `.lokf/dpv.yaml`, is generated.
+- **Edit the converter or `dpv_core.yaml`, then regenerate.** Run `just gen-schema`, `just gen-project`, `just gen-doc` and `just lokf-adapt`, and commit the output. Everything but `dpv_core.yaml` and `dpv.yaml` under `src/dpv/schema/`, and `src/dpv/data/`, `src/dpv/mappings/`, `project/`, `src/dpv/datamodel/`, `docs/schema/` and `.lokf/schema/dpv.yaml`, is generated.
 - **DPV's words stay in the data.** `tests/test_coverage.py` walks the Turtle both ways, and `tests/test_catalogue.py` compares the catalogue's JSON-LD projection with it triple by triple.
 - **A fact DPV leaves out stays out.** A dangling name goes in `tests/dpv_rules.py`, and an example that leaves a property's usual classes in `tests/example_departures.yaml`, each with a report to the Community Group.
 - **A mapping is DPV's own.** `tests/test_mappings.py` holds each row to the file it comes from. A term with no sure match stays unmapped.
