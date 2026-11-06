@@ -38,7 +38,7 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for dpv. Every Markdown 
 * [The contributors](datasets/contributors.md) - `src/dpv/data/dpv-2.3-agents.yaml`: the 70 people and organizations DPV's files name as contributors and creators, each with an id of the form `dpv_agent:person-<name>` or `dpv_agent:org-<name>`.
 * [DPV's own mappings as SSSOM](datasets/sssom-mappings.md) - `src/dpv/mappings/`: two SSSOM sets that render the mapping files DPV publishes, 5 rows for ISO/IEC 29100:2024 terms and 24 for ODRL, each row reading with DPV's term as its subject.
 * [The copy of DPV's files](datasets/upstream-copy.md) - `upstream/`: the Turtle of each vocabulary, the 88 examples, the ISO and ODRL mapping files and the licence, unchanged at the tag `dpv-2.3`. `scripts/upstream_pins.tsv` holds each of the 160 files' git object hashes.
-* [The adapt copy](datasets/adapt-copy.md) - `.lokf/dpv.yaml`, which `just lokf-adapt` writes from the schema so that it can sit beside LOKF's: the file this bundle validates against, and the file a release attaches as `schema-<tag>-dpv.yaml`.
+* [The adapt copy](datasets/adapt-copy.md) - `.lokf/schema/dpv.yaml`, which `just lokf-adapt` writes from the schema so that it can sit beside LOKF's: the file this bundle validates against, and the file a release attaches as `schema-<tag>-dpv.yaml`.
 * [The neighbours' copies](datasets/neighbour-copies.md) - `tests/neighbours/`: the adapt copies 27 other lmodel repositories release, each the release's schema asset, which tests use to hold this copy's names apart from theirs.
 * [The example data](datasets/example-data.md) - `tests/data/`: a valid example per class, each kind's a real record of the catalogue, a counter-example per constraint the validator can state, and one per rule it cannot, under `problem/invalid/`.
 * [The generated artefacts](datasets/generated-artefacts.md) - What the generators write from the schema: `project/`, `src/dpv/datamodel/` and `docs/schema/dpv.yaml`. They are committed and never edited, and the SQL generator is off.
@@ -61,7 +61,7 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for dpv. Every Markdown 
 * [Resource](glossary/resource.md) - A resource: a thing a use case describes with DPV, such as a process. `DpvResource` holds any DPV property, because DPV states none as limited to a class.
 * [Namespace family](glossary/namespace-family.md) - A namespace family: the vocabularies this project keeps in one data file, such as `legal`, which holds the law vocabulary of each jurisdiction and each EU law.
 * [Departure](glossary/departure.md) - A departure: a place DPV's own examples use a property beyond what its `rangeIncludes` or `domainIncludes` name, or give a literal where the range names a class. It breaks no rule of RDF.
-* [Adapt copy](glossary/adapt-copy.md) - An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/dpv.yaml`.
+* [Adapt copy](glossary/adapt-copy.md) - An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/schema/dpv.yaml`.
 
 # Playbooks
 

@@ -5,4 +5,4 @@
 * [Resource](resource.md) - A resource: a thing a use case describes with DPV, such as a process. `DpvResource` holds any DPV property, because DPV states none as limited to a class.
 * [Namespace family](namespace-family.md) - A namespace family: the vocabularies this project keeps in one data file, such as `legal`, which holds the law vocabulary of each jurisdiction and each EU law.
 * [Departure](departure.md) - A departure: a place DPV's own examples use a property beyond what its `rangeIncludes` or `domainIncludes` name, or give a literal where the range names a class. It breaks no rule of RDF.
-* [Adapt copy](adapt-copy.md) - An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/dpv.yaml`.
+* [Adapt copy](adapt-copy.md) - An adapt copy: the form of a schema `lokf adapt` writes so that it can sit beside LOKF's, in which concept classes descend from `Concept` and keys LOKF also has are renamed. Here it is `.lokf/schema/dpv.yaml`.

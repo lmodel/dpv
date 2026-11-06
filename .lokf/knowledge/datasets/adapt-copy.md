@@ -3,8 +3,8 @@ type: Dataset
 id: https://w3id.org/lmodel/dpv/knowledge/datasets/adapt-copy
 genre: reference
 title: The adapt copy
-description: "`.lokf/dpv.yaml`, which `just lokf-adapt` writes from the schema so that it can sit beside LOKF's: the file this bundle validates against, and the file a release attaches as `schema-<tag>-dpv.yaml`."
-resource: .lokf/dpv.yaml
+description: "`.lokf/schema/dpv.yaml`, which `just lokf-adapt` writes from the schema so that it can sit beside LOKF's: the file this bundle validates against, and the file a release attaches as `schema-<tag>-dpv.yaml`."
+resource: .lokf/schema/dpv.yaml
 derivedFrom:
   - https://w3id.org/lmodel/dpv/knowledge/datasets/dpv-linkml-schema
 about:
@@ -20,7 +20,7 @@ sources:
     title: lokf_adapt_roots
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:57:48Z"
+  at: "2026-11-06T21:19:27Z"
 status: draft
 ---
 
