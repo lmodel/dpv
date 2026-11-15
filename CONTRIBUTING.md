@@ -19,7 +19,7 @@ A LinkML schema of the Data Privacy Vocabulary (DPV) 2.3 of the W3C Data Privacy
 
 ## Development setup
 
-You need Python 3.10+, [uv](https://docs.astral.sh/uv/) and [just](https://github.com/casey/just).
+You need Python 3.11+, [uv](https://docs.astral.sh/uv/) and [just](https://github.com/casey/just).
 
 ```bash
 git clone https://github.com/lmodel/dpv.git
