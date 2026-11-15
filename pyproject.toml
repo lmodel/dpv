@@ -87,7 +87,7 @@ skip = [
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list.
-ignore-words-list = "linke,ehr"
+ignore-words-list = "linke,ehr,intoto"
 quiet-level = 3
 
 # Ref.: https://github.com/crate-ci/typos (spell checker)
