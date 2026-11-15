@@ -102,7 +102,7 @@ sources:
   - resource: pyproject.toml
 generated:
   by: process:ktl-librarian
-  at: "2026-11-06T21:19:27Z"
+  at: "2026-11-15T03:02:20Z"
 status: draft
 ---
 
@@ -120,4 +120,4 @@ The bundle derives its concepts from the paths under `sources`, each re-read whe
 | `docs/`, `README.md`, `CHANGELOG.md` | the explanations and the playbooks | read the page |
 | `.github/workflows/`, `.github/scripts/`, `.github/release/`, `.releaserc.json` | the workflows and the release playbook | read the file |
 | `NOTICE`, `LICENSE`, `SECURITY.md`, `AI_COVENANT.md` | the policies | read the file |
-| `website/` | the documentation site | `npm run build` |
+| `website/` | the documentation site | `scripts/build.sh` in `website/` |

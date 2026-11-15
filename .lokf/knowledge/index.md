@@ -19,7 +19,7 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for dpv. Every Markdown 
 # Services
 
 * [The converter](services/converter.md) - `scripts/dpv_to_linkml.py`: reads the Turtle under `upstream/` and writes the terms module, the kinds' modules, the catalogue, the examples and the SSSOM sets. `just gen-schema` runs it, and it stops on a predicate no table names.
-* [Documentation site](services/documentation-site.md) - The knowledge website in `website/`, an Astro Starlight site that the Knowledge website workflow publishes to GitHub Pages at `https://lmodel.github.io/dpv`, built from the README, `docs/`, the schema's pages and this bundle.
+* [Documentation site](services/documentation-site.md) - The knowledge website in `website/`, a Hugo site that the Knowledge website workflow publishes to GitHub Pages at `https://lmodel.github.io/dpv`, built from the README, `docs/`, the schema's pages and this bundle.
 
 # References
 
@@ -80,7 +80,7 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for dpv. Every Markdown 
 
 # Workflows
 
-* [Build and test (main.yaml)](workflows/main.md) - The Build and test workflow: on every pull request and push to `main`, it runs `just test` on Python 3.10 to 3.14, and lints the schema and checks the adapt copy on 3.13.
+* [Build and test (main.yaml)](workflows/main.md) - The Build and test workflow: on every pull request and push to `main`, it runs `just test` on Python 3.11 to 3.14, and lints the schema and checks the adapt copy on 3.13.
 * [Lint and docs (lint-and-docs.yaml)](workflows/lint-and-docs.md) - The static checks on pull requests and on `main`: ShellCheck, actionlint, the governance files' word budgets, markdownlint, lychee and codespell.
 * [Semantic release (semantic-release.yml)](workflows/semantic-release.md) - The workflow that computes the next version from Conventional Commits on `main`, promotes the changelog, tags and publishes the GitHub Release, and dispatches the knowledge release.
 * [Upstream watch (upstream-watch.yaml)](workflows/upstream-watch.md) - The weekly check that `scripts/check_upstream_release.py` runs: another release of DPV, a moved tag, a changed or missing pinned file, or a changed licence opens or updates an issue.
