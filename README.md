@@ -2,6 +2,11 @@
 
 # dpv
 
+[![Build and test](https://github.com/lmodel/dpv/actions/workflows/main.yaml/badge.svg)](https://github.com/lmodel/dpv/actions/workflows/main.yaml)
+[![Licence](https://img.shields.io/github/license/lmodel/dpv?label=licence)](LICENSE)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/lmodel/dpv/badge)](https://scorecard.dev/viewer/?uri=github.com/lmodel/dpv)
+[![KTL scorecard](https://img.shields.io/endpoint?url=https://lmodel.github.io/dpv/badge.json)](https://lmodel.github.io/dpv/health/)
+
 Data Privacy Vocabulary (DPV) 2.3 (LinkML)
 
 > **Only want to ask?** Install `ktl-docent` into any agent you use, by a route from [the install page](https://w3id.org/ktl/docs/install/), and ask it about this project. It answers from the bundle and says how far each answer has been checked.
