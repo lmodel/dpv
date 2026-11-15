@@ -83,7 +83,7 @@ skip = [
   "src/dpv/schema/dpv_terms.yaml",
   "tests/data/*",
   ".lokf/scripts/*",
-  "website/package-lock.json",
+  "website/uv.lock",
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list.
@@ -118,5 +118,5 @@ extend-exclude = [
   "src/dpv/schema/dpv_terms.yaml",
   "tests/data/*",
   ".lokf/scripts/*",
-  "website/package-lock.json",
+  "website/uv.lock",
 ]

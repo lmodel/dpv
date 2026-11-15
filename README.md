@@ -35,7 +35,7 @@ The 24 other SSSOM sets are gone: a matching tool wrote their rows, and many nam
 * [src/dpv/datamodel/](src/dpv/datamodel): the generated Python datamodel
 * [tests/](tests/): Python tests, with example data in [data/](tests/data) and the neighbours' adapt copies in [neighbours/](tests/neighbours)
 * [upstream/](upstream/): DPV's Turtle, examples, mapping files and licence, unchanged
-* [website/](website/): the Astro Starlight site built from the README, `docs/`, the schema's pages and the knowledge bundle
+* [website/](website/): the Hugo site built from the README, `docs/`, the schema's pages and the knowledge bundle
 
 ## Developer Tools
 
